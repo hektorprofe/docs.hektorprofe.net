@@ -17,18 +17,23 @@
         padding: 0;
         margin: 0;
         overflow-x: hidden;
+        background-color: #191a1d;
       }
       main {
         margin: 0;
-        padding: 0px 10px 15px 10px;
+        padding: 10px 10px 15px 10px;
         width: 893px;
         margin: 0 auto;
-        font-size: 108%;
+        font-size: 99%;
+        background: white;
       }
       ul {
         list-style: none;
         padding-left: 0;
-        margin-left: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding-top: 0px;
       }
 
       li {
@@ -53,8 +58,8 @@
         background-color: #191a1d;
         padding: 0;
         margin: 0;
-        box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1),
-          0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1),
+          0 0.4rem 0.8rem rgba(0, 0, 0, 0.2); */
         top: 0;
         right: 0;
         left: 0;
@@ -62,21 +67,35 @@
       nav div {
         width: 900px;
         margin: 0 auto;
-        height: 3rem;
+        height: 3.5rem;
       }
       nav div img {
-        margin-top: 5px;
+        margin-top: 8px;
         margin-left: 8px;
       }
 
       .wrapper {
         display: grid;
-        grid-template-columns: 3;
-        grid-gap: 0px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
         color: #444;
       }
 
-      .box {
+      @media (max-width: 874px) {
+        .wrapper {
+          grid-template-columns: 1fr;
+        }
+        main {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        font-size: 115%;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
     </style>
   </head>
@@ -98,59 +117,13 @@
     </header>
     <main>
       <div class="wrapper">
-        <div class="box">
+        <div class="one">
           <h2>Apuntes Udemy</h2>
           <ul>
             <li>[<a href="/python/">Curso de Python</a>]</li>
             <li>[<a href="/django/">Curso de Django</a>]</li>
           </ul>
-
-          <h2>GameMaker: Studio</h2>
-          <ul>
-            <li>
-              [<a
-                href="/escueladevideojuegos/academia-gamemaker/#tu-primer-videojuego"
-                >Tu primer videojuego</a
-              >]
-            </li>
-            <li>
-              [<a
-                href="/escueladevideojuegos/academia-gamemaker/#el-lenguaje-gml"
-                >Introducción a GML</a
-              >]
-            </li>
-            <li>
-              [<a href="/escueladevideojuegos/academia-gamemaker/#juego-pong"
-                >Juego Arcade PONG</a
-              >]
-            </li>
-            <li>
-              [<a
-                href="/escueladevideojuegos/academia-gamemaker/#juego-shooter-tds"
-                >Juego Shooter TDS</a
-              >]
-            </li>
-            <li>
-              [<a
-                href="/escueladevideojuegos/academia-gamemaker/#juego-action-rpg"
-                >Juego Action RPG</a
-              >]
-            </li>
-            <li>
-              [<a
-                href="/escueladevideojuegos/academia-gamemaker/#juego-beatem-up"
-                >Juego Beat'em Up</a
-              >]
-            </li>
-            <li>
-              [<a
-                href="/escueladevideojuegos/academia-gamemaker/#tutoriales-y-consejos"
-                >Tutoriales variados</a
-              >]
-            </li>
-          </ul>
-        </div>
-        <div class="box">
+          <br />
           <h2>GNU/Linux</h2>
           <ul>
             <li>
@@ -160,7 +133,29 @@
               >]
             </li>
           </ul>
+          <br />
+          <h2>Videojuegos</h2>
+          <ul>
+            <li>
+              [<a href="/escueladevideojuegos/articulos/que-es-un-videojuego/"
+                >Artículos destacados</a
+              >]
+            </li>
+            <li>
+              [<a href="/escueladevideojuegos/articulos/el-eje-de-coordenadas/"
+                >Matemáticas y geometría</a
+              >]
+            </li>
+            <li>
+              [<a
+                href="/escueladevideojuegos/articulos/frameworks-librerias-bibliotecas-recopilacion/"
+                >Recopilación de software</a
+              >]
+            </li>
+          </ul>
+        </div>
 
+        <div class="two">
           <h2>JavaScript</h2>
           <ul>
             <li>
@@ -200,8 +195,7 @@
               >]
             </li>
           </ul>
-        </div>
-        <div class="box">
+          <br />
           <h2>Python</h2>
           <ul>
             <li>
@@ -253,7 +247,54 @@
               >]
             </li>
           </ul>
+        </div>
 
+        <div class="three">
+          <h2>GameMaker: Studio</h2>
+          <ul>
+            <li>
+              [<a
+                href="/escueladevideojuegos/academia-gamemaker/#tu-primer-videojuego"
+                >Tu primer videojuego</a
+              >]
+            </li>
+            <li>
+              [<a
+                href="/escueladevideojuegos/academia-gamemaker/#el-lenguaje-gml"
+                >Introducción a GML</a
+              >]
+            </li>
+            <li>
+              [<a href="/escueladevideojuegos/academia-gamemaker/#juego-pong"
+                >Juego Arcade PONG</a
+              >]
+            </li>
+            <li>
+              [<a
+                href="/escueladevideojuegos/academia-gamemaker/#juego-shooter-tds"
+                >Juego Shooter TDS</a
+              >]
+            </li>
+            <li>
+              [<a
+                href="/escueladevideojuegos/academia-gamemaker/#juego-action-rpg"
+                >Juego Action RPG</a
+              >]
+            </li>
+            <li>
+              [<a
+                href="/escueladevideojuegos/academia-gamemaker/#juego-beatem-up"
+                >Juego Beat'em Up</a
+              >]
+            </li>
+            <li>
+              [<a
+                href="/escueladevideojuegos/academia-gamemaker/#tutoriales-y-consejos"
+                >Tutoriales variados</a
+              >]
+            </li>
+          </ul>
+          <br />
           <h2>Unity Engine</h2>
           <ul>
             <li>
@@ -290,26 +331,6 @@
               [<a
                 href="/escueladevideojuegos/academia-unity/#juego-rpg-2d-estilo-zelda"
                 >Juego RPG estilo Zelda</a
-              >]
-            </li>
-          </ul>
-
-          <h2>Videojuegos</h2>
-          <ul>
-            <li>
-              [<a href="/escueladevideojuegos/articulos/que-es-un-videojuego/"
-                >Artículos destacados</a
-              >]
-            </li>
-            <li>
-              [<a href="/escueladevideojuegos/articulos/el-eje-de-coordenadas/"
-                >Matemáticas y geometría</a
-              >]
-            </li>
-            <li>
-              [<a
-                href="/escueladevideojuegos/articulos/frameworks-librerias-bibliotecas-recopilacion/"
-                >Recopilación de software</a
               >]
             </li>
           </ul>
