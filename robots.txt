@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.hektorprofe.net/sitemap.xml.gz

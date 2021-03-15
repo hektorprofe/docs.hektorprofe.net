@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+      
+      
+        <link rel="canonical" href="https://docs.hektorprofe.net/escueladevideojuegos/academia-unity/">
+      
+      
+        <meta name="author" content="Héctor Costa Guzman">
+      
+      <link rel="shortcut icon" href="/favicon.ico">
+    
+    
+      
+        <title>Academia de Unity | Escuela de videojuegos | Hektor Profe</title>
+      
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/application.2.css">
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    
+    <link rel="stylesheet" href="/assets/stylesheets/tingle.min.css">
+<style>
+@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("/assets/fonts/specimen/MaterialIcons-Regular.woff2") format("woff2"),url("/assets/fonts/specimen/MaterialIcons-Regular.woff") format("woff"),url("/assets/fonts/specimen/MaterialIcons-Regular.ttf") format("truetype")}
+[data-md-color-primary="grey"] .md-header { background-color: #191A1D }
+[data-md-color-primary="grey"] .md-tabs { background-color: #222831 }
+.md-footer-nav { background-color: #222831; }
+.md-footer-meta { background-color: #191A1D }
+html [data-md-color-primary="grey"] .md-nav--primary .md-nav__title--site { background-color: #191A1D; }
+.mini{ display: none; } .maxi{ display: block; }
+.embed-container { position: relative; padding-bottom: 56.25%;height: 0; overflow: hidden; max-width: 100%; height: auto; margin-bottom: 0; } 
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.md-nav__link:focus, .md-nav__link:hover { color: #018dc5; }
+.headerlink{ color: #018dc5 !important; }
+.md-footer-links__highlight a{ color: #777 !important; }
+.md-footer-links__highlight a:hover{ color: #ddd !important; }
+.visible{ display: inherit !important; }
+/*.md-tabs { display: none !important; }*/
+.nav__btn, .nav__logo{ transition: 0.3s; }
+.nav__btn:hover{ color: #aaa; }
+.nav__logo:hover{ opacity:.7; }
+.nav__logo {max-width: 225px !important; }
+img:not([src]){visibility:hidden;}
+img.click{opacity: 0.96;box-shadow:rgb(79, 82, 92) -4px 4px}
+img.click:hover{opacity: 1;box-shadow:rgb(10, 172, 237) -4px 4px}
+.button { background-color: #36bf2d; border: none; color: white !important; padding: 20px 0px; text-align: center; text-decoration: none; display: block; font-size: 97%; width: 100%; font-weight: bold;}
+.button:hover { background-color: #4CAF50; color: white; }
+.animated.delay-1dot5s {animation-delay: 1.5s;}
+.md-icon--search { display:inline-block!important}
+a.headerlink{ display: none !important; }
+small.edited { display: block; text-align: right; }
+#cookie-bar { padding: 1.8rem 1.25rem !important; background: #191A1D  !important; box-shadow:rgba(0, 0, 0, 0.2) 4px 4px 8px 8px; }
+#cookie-bar-prompt-logo{ display: none !important; }
+div.my-img{text-align:center;margin-top:20px}
+@media (max-width: 76.1875em){ .mini{ display: block; } .maxi{ display: none;} /*.md-nav__link[for="nav-1"] { display: none; }*/ }
+@media (min-width: 1599.9px){ .md-header-nav__button.md-logo img { height: 37.5px !important; width: 220px; } }
+@media (min-width: 1999.9px){ .md-header-nav__button.md-logo img { height: 40px !important; width: 240px; } }
+@media only screen and (max-width: 959.9px) { .nav__logo { display: block !important; }} 
+@media only screen and (min-width: 960px) and (max-width: 76.1875em) { .nav__logo { display: block !important; }} 
+@media only screen and (min-width: 76.1875em) { .nav__logo { display: none !important; } } 
+@media only screen and (max-width: 76.1875em) { .md-sidebar--primary { left: -26.2rem;; width: 26.2rem; }  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary { -webkit-transform: translateX(26.2rem); transform: translateX(26.2rem); } [dir="rtl"] [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary { -webkit-transform: translateX(-26.2rem); transform: translateX(-26.2rem); } }
+@media (min-width: 1219.9px){ #home__btn { display: none !important; } #cursos__btn{ color: white !important; } [data-md-color-primary="grey"] .md-nav__link--active{ color: rgba(0, 0, 0, 0.87); text-decoration: underline !important; } }
+@media (min-width: 467.9px){ #discord__btn{ display: inline-block !important; } }
+@media only screen and (min-width: 60em){ .md-search__input { background-color: rgb(53, 54, 56); } .md-search__input:hover { background-color: rgb(84, 87, 93); color: white; }}
+@media (max-width: 1219.9px){ .md-header-nav__title{ padding: 0 1rem; } .nav__btn {display:none;} }
+@media (max-width: 875.9px){ #cookie-bar-button{ margin-top: 20px !important; }}
+@media (max-width: 719.9px){ #cookie-bar { padding: 3.25rem 1.25rem; }}
+@media (max-width: 512.9px){ #cookie-bar { padding: 2rem 1.25rem; }}
+</style>
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="grey">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#introduccion-al-lenguaje-c" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header" style="position: inherit !important;">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="/" title="Hektor Profe" class="md-header-nav__button md-logo" style="font-size:0px;">
+          <img src="/assets/images/logo.png" width="200px" height="35px" style="margin-top:-5px;" alt="Hektor Profe" title="Hektor Profe"/>
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title" style="text-align: right;">
+<!--           <a class="nav__btn" href="/" style="margin-left:0.25em;" title="Documentos">Indice de documentos</a> -->
+          <a href="/"><img class="nav__logo" src="/assets/images/logo.png" width="200px" height="35px" style="margin:6px auto 0;" alt="Hektor Profe" title="Hektor Profe"/></a>
+        </div>
+        <style>
+          .md-sidebar[data-md-state=lock] {
+            top: 0rem !important;
+        }
+
+           .topMsg{
+             color: white;
+                -webkit-animation: color-change 7s infinite;
+                -moz-animation: color-change 7s infinite;
+                -o-animation: color-change 7s infinite;
+                -ms-animation: color-change 7s infinite;
+                animation: color-change 7s infinite;
+            }
+
+            .topMsg:hover{
+              color: gray !important;
+            }
+
+            @-webkit-keyframes color-change {
+                0% { color: white; }
+                25% { color: white; }
+                50% { color: white; }
+                75% { color: rgb(255, 30, 0); }
+                100% { color: white; }
+            }
+            @-moz-keyframes color-change {
+                0% { color: white; }
+                25% { color: white; }
+                50% { color: white; }
+                75% { color: rgb(255, 30, 0); }
+                100% { color: white; }
+            }
+            @-ms-keyframes color-change {
+                0% { color: white; }
+                25% { color: white; }
+                50% { color: white; }
+                75% { color: rgb(255, 30, 0); }
+                100% { color: white; }
+            }
+            @-o-keyframes color-change {
+                0% { color: white; }
+                25% { color: white; }
+                50% { color: white; }
+                75% { color: rgb(255, 30, 0); }
+                100% { color: white; }
+            }
+            @keyframes color-change {
+                0% { color: white; }
+                25% { color: white; }
+                50% { color: white; }
+                75% { color: rgb(255, 30, 0); }
+                100% { color: white; }
+            }
+
+          .md-tabs {
+            display: none !important;
+          }
+
+          .announce {
+            background:#009bd6;
+            color: white;
+            text-align: center;
+          }
+          
+          .announce .content {
+            margin: 0 auto;
+            padding: 13.5px 5px;
+          }
+
+        .announce .content a {
+          display: inline-block;
+          text-decoration: none;
+          color: white;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
+          padding: 10px 9px;
+          margin: 0px 3px;
+          border-radius: 5px;
+          line-height: 15px;
+        }
+
+        .hde {
+          display: inline-block;
+        }
+
+        .announce .content a.twitter{
+          background: #006dd3;
+        }
+        .announce .content a.twitter:hover{
+          background: #005aad;
+        }
+
+        .announce .content a.youtube{
+          background: #ff0000;
+        }
+
+        .announce .content a.youtube:hover{
+          background: #b80000;
+        }
+
+        @media (max-width: 1030px){
+          .announce .content{
+            font-size: 15px !important;
+          }
+
+          .hde {
+            display: none;
+          }
+        }
+        .shakee {
+          animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+          animation-delay: 2s;
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+          perspective: 1000px;
+        }
+
+        @keyframes shake {
+          10%, 90% {
+            transform: translate3d(-1px, 0, 0);
+          }
+          
+          20%, 80% {
+            transform: translate3d(2px, 0, 0);
+          }
+
+          30%, 50%, 70% {
+            transform: translate3d(-4px, 0, 0);
+          }
+
+          40%, 60% {
+            transform: translate3d(4px, 0, 0);
+          }
+        }
+        </style>
+      </div>
+      <!--<div class="md-flex__cell md-flex__cell--shrink">
+        <a href="/buscador/" title="Buscador del sitio"><label class="md-icon md-icon--search md-header-nav__button"></label></a>
+    </div>-->
+  </nav>
+</header>
+    
+    <div class="md-container" style="padding-top: 0px !important;">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list" id="top__tabs">
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+      </ul>
+    </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container" style="padding-top: 8px !important;">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap" id="md__sidebar__scroll">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title" for="__drawer" style="padding:0 !important;max-height:5.5rem;"></label>
+  
+  <ul class="md-nav__list" id="main__list" data-md-scrollfix>
+    
+      
+    
+      
+    
+      
+    
+        <!-- comprobación extra -->
+         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Escuela de Videojuegos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Escuela de Videojuegos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Academia Unity
+      </label>
+    
+    <a href="./" title="Academia Unity" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Academia Unity
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-al-lenguaje-c" title="Introducción al lenguaje C#" class="md-nav__link toc__link">
+    Introducción al lenguaje C#
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriales-basicos-de-unity" title="Tutoriales básicos de Unity" class="md-nav__link toc__link">
+    Tutoriales básicos de Unity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primer-videojuego-2d" title="Primer videojuego 2D" class="md-nav__link toc__link">
+    Primer videojuego 2D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juego-de-plataformas-2d" title="Juego de plataformas 2D" class="md-nav__link toc__link">
+    Juego de plataformas 2D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriales-intermedios-de-unity" title="Tutoriales intermedios de Unity" class="md-nav__link toc__link">
+    Tutoriales intermedios de Unity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juego-rpg-2d-estilo-zelda" title="Juego RPG 2D estilo Zelda" class="md-nav__link toc__link">
+    Juego RPG 2D estilo Zelda
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../academia-gamemaker/" title="Academia GameMaker" class="md-nav__link">
+      Academia GameMaker
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Artículos destacados
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Artículos destacados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/que-es-un-videojuego/" title="¿Qué son los videojuegos?" class="md-nav__link">
+      ¿Qué son los videojuegos?
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/funciona-videojuego-fases-logicas/" title="¿Cómo funcionan?" class="md-nav__link">
+      ¿Cómo funcionan?
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/fases-del-desarrollo-de-videojuegos/" title="¿Cómo se crean?" class="md-nav__link">
+      ¿Cómo se crean?
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/trabajar-en-el-mundo-de-los-videojuegos/" title="¿Cómo trabajar en el sector?" class="md-nav__link">
+      ¿Cómo trabajar en el sector?
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/mejorar-la-jugabilidad-en-videojuegos-2d/" title="¿Cómo mejorar los juegos 2D?" class="md-nav__link">
+      ¿Cómo mejorar los juegos 2D?
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/que-es-el-motion-blur/" title="¿Qué es el Motion Blur?" class="md-nav__link">
+      ¿Qué es el Motion Blur?
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Matemáticas y geometría
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Matemáticas y geometría
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/el-eje-de-coordenadas/" title="El eje de coordenadas" class="md-nav__link">
+      El eje de coordenadas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/funciones-sistemas-puntos-teoria-matematicas/" title="Funciones, sistemas y puntos" class="md-nav__link">
+      Funciones, sistemas y puntos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/lineas-ecuaciones-lineales-teoria-matematicas/" title="Líneas (ecuaciones lineales)" class="md-nav__link">
+      Líneas (ecuaciones lineales)
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/deteccion-de-colisiones-entre-lineas/" title="Colisiones entre líneas" class="md-nav__link">
+      Colisiones entre líneas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/distancia-entre-dos-puntos-teoria/" title="Distancia entre dos puntos" class="md-nav__link">
+      Distancia entre dos puntos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/parabolas-teoria/" title="Parábolas (ecuaciones)" class="md-nav__link">
+      Parábolas (ecuaciones)
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/circulos-y-esferas-teoria/" title="Circulos y esferas (ecuaciones)" class="md-nav__link">
+      Circulos y esferas (ecuaciones)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Recopilaciones de software
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Recopilaciones de software
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/frameworks-librerias-bibliotecas-recopilacion/" title="12 frameworks y librerías" class="md-nav__link">
+      12 frameworks y librerías
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/engines-motores-recopilacion-programas/" title="10 engines y motores" class="md-nav__link">
+      10 engines y motores
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/audio-sfx-y-musica-recopilacion-de-programas/" title="10 programas para audio" class="md-nav__link">
+      10 programas para audio
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/edicion-graficos-2d-recopilacion-programas/" title="8 editores gráficos 2D" class="md-nav__link">
+      8 editores gráficos 2D
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/editores-de-mapas-y-generadores-de-fuentes-recopilacion-de-programas/" title="5 editores de mapas y fuentes" class="md-nav__link">
+      5 editores de mapas y fuentes
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../articulos/edicion-graficos-3d-recopilacion-programas/" title="3 editores de modelaje 3D" class="md-nav__link">
+      3 editores de modelaje 3D
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      
+    
+      
+    
+  </ul>
+</nav>
+
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-al-lenguaje-c" title="Introducción al lenguaje C#" class="md-nav__link toc__link">
+    Introducción al lenguaje C#
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriales-basicos-de-unity" title="Tutoriales básicos de Unity" class="md-nav__link toc__link">
+    Tutoriales básicos de Unity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primer-videojuego-2d" title="Primer videojuego 2D" class="md-nav__link toc__link">
+    Primer videojuego 2D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juego-de-plataformas-2d" title="Juego de plataformas 2D" class="md-nav__link toc__link">
+    Juego de plataformas 2D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriales-intermedios-de-unity" title="Tutoriales intermedios de Unity" class="md-nav__link toc__link">
+    Tutoriales intermedios de Unity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juego-rpg-2d-estilo-zelda" title="Juego RPG 2D estilo Zelda" class="md-nav__link toc__link">
+    Juego RPG 2D estilo Zelda
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Academia Unity</h1>
+                
+                <div class="admonition warning">
+<p class="admonition-title">Tutoriales obsoletos</p>
+<p>La mayoría de vídeos se realizaron con Unity 5 y algunos con Unity 2017. Estas versiones del programa ya están obsoletas, por lo que algunas cosas pueden no funcionar de la forma que explico.</p>
+</div>
+<h2 id="introduccion-al-lenguaje-c">Introducción al lenguaje C#<a class="headerlink" href="#introduccion-al-lenguaje-c" title="Permanent link">&para;</a></h2>
+<div style="text-align:center;margin-top:25px"><img src="/cdn/images/curso-unity-c-sharp.jpg"/></div>
+
+<p>¿Te estás planteando seriamente el desarrollo de videojuegos? Estoy seguro de que sí, porque si no lo fuera nunca hubieras elegido aprender el motor Unity. Sin embargo este programa abarca mucho, y si quieres llegar lejos lo más fundamental es aprender el lenguaje de programación más utilizado en Unity, el lenguaje C#  (pronunciado C Sharp). </p>
+<p>En esta pequeña serie repasaremos los fundamentos de la programación en C# , las variables, el control de flujo, estructuras y clases. Te aconsejo tener conocimientos de programación orientada a objetos antes de empezar.</p>
+<table>
+<thead>
+<tr>
+<th>Lección</th>
+<th>Ver en Youtube</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="https://www.youtube.com/watch?v=aXRN-m8wrTE&amp;list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk&amp;index=1">Instalación de Unity</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="https://www.youtube.com/watch?v=4jVmWWZZ4aY&amp;list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk&amp;index=2">Primer contacto</a></td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="https://www.youtube.com/watch?v=M1xw_T-FfI4&amp;list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk&amp;index=3">El control de flujo</a></td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="https://www.youtube.com/watch?v=dLFQkfskGEM&amp;list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk&amp;index=4">Los tipos compuestos</a></td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="https://www.youtube.com/watch?v=AJhXOlmAQrM&amp;list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk&amp;index=5">Las estructuras</a></td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="https://www.youtube.com/watch?v=THDbo0HZIZU&amp;list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk&amp;index=6">Las clases</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tutoriales-basicos-de-unity">Tutoriales básicos de Unity<a class="headerlink" href="#tutoriales-basicos-de-unity" title="Permanent link">&para;</a></h2>
+<div style="text-align:center;margin-top:25px"><img src="/cdn/images/curso-basico-unity.jpg"/></div>
+
+<p>Ahora que tenemos unas bases de C# ya podemos comenzar a aprender Unity 3D para desarrollar videojuegos de última generación. Sin embargo hay tantas cosas que es difícil saber por dónde empezar... Por suerte ahora en Escuela de Videojuegos puedes aprender a utilizar este poderoso programa en 10 vídeos, empezando por lo más básico, explorando poco a poco sus distintos componentes, practicando el lenguaje C# y forjando unas bases en el desarrollo de juegos 2D para dar definitivamente el salto a la tercera dimensión. </p>
+<p>Si ya cuentas con conocimientos de programación orientada a objetos y te interesa el tema esta es tu serie introductoria. ¡Aprendamos juntos desde cero!    </p>
+<div class="admonition info">
+<p class="admonition-title">Recursos</p>
+<p>Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=189xuYNVVB_azZwgmIFqS1zV5SWLCjTku" target="_blank">02_Tutoriales basicos.zip</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Lección</th>
+<th>Ver en Youtube</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="https://www.youtube.com/watch?v=IZ4eiIf3DBY&amp;index=1&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Instalación, GameObjects y Scripts</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="https://www.youtube.com/watch?v=vTXKe1ooOnk&amp;index=2&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Componentes de GUI</a></td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="https://www.youtube.com/watch?v=-TobfKcKzhs&amp;index=3&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Menús y Cambios de Escena</a></td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="https://www.youtube.com/watch?v=znzLA0OapcU&amp;index=4&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Físicas y Colisiones 2D</a></td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="https://www.youtube.com/watch?v=xfp4kpM3Asw&amp;index=5&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Sprites y Movimiento 2D</a></td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="https://www.youtube.com/watch?v=xAra3MrQ6iA&amp;index=6&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Objetos Dinámicos</a></td>
+</tr>
+<tr>
+<td>07</td>
+<td><a href="https://www.youtube.com/watch?v=wvTQKPkWkZs&amp;index=7&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Introducción al Animador</a></td>
+</tr>
+<tr>
+<td>08</td>
+<td><a href="https://www.youtube.com/watch?v=TxO8sR28TC0&amp;index=8&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Animaciones con Sprites</a></td>
+</tr>
+<tr>
+<td>09</td>
+<td><a href="https://www.youtube.com/watch?v=XWY0STsGa1c&amp;index=9&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Reproductor de Música</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.youtube.com/watch?v=0iZLwPfviRU&amp;index=10&amp;list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e">Sistemas de partículas</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="primer-videojuego-2d">Primer videojuego 2D<a class="headerlink" href="#primer-videojuego-2d" title="Permanent link">&para;</a></h2>
+<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="/cdn/images/curso-primer-juego-unity.jpg"/></div>
+
+<p>¿Te gustaría aprender a crear un videojuego completo en Unity 5?
+¿Quieres conectar todos esos conocimientos que tienes y finalizar un
+proyecto desde cero hasta la exportación en múltiples plataformas? Si es
+así, estás en el lugar adecuado. He creado este curso para todos mis
+alumnos y seguidores desde una perspectiva práctica, para demostraros
+que es posible aprender de verdad creando un simple pero interesante
+videojuego tomando sólo recursos gratuitos y programando con el lenguaje
+C#. </p>
+<p>No desaproveches esta oportunidad y aprende a crear este juego
+tanto en Windows, Web y Android gracias a este fantástico curso
+gratuito.</p>
+<div class="admonition info">
+<p class="admonition-title">Recursos</p>
+<p>Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/file/d/1TSzB35zu5FrY032IKKno03bgVbBGm8B8/view" target="_blank">03_Juego completo.zip</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Lección</th>
+<th>Ver en Youtube</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="https://www.youtube.com/watch?v=jJnjntqNeYM&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=2">Presentación</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="https://www.youtube.com/watch?v=DMqlexvLQgk&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=3">Recursos</a></td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="https://www.youtube.com/watch?v=J7d8WaYlM9Q&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=4">Diseño multiplataforma</a></td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="https://www.youtube.com/watch?v=8XesIhyLvzY&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=5">Creando la escena</a></td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="https://www.youtube.com/watch?v=8v489TBV5WQ&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=6">Efecto parallax</a></td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="https://www.youtube.com/watch?v=nbu1sno-MPY&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=7">Inicio de juego</a></td>
+</tr>
+<tr>
+<td>07</td>
+<td><a href="https://www.youtube.com/watch?v=4us1sxofv-A&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=8">Creando al jugador</a></td>
+</tr>
+<tr>
+<td>08</td>
+<td><a href="https://www.youtube.com/watch?v=Zw-9DWyz46g&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=9">Animación al correr</a></td>
+</tr>
+<tr>
+<td>09</td>
+<td><a href="https://www.youtube.com/watch?v=EfFGbiw7BXQ&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=10">Animación al saltar</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.youtube.com/watch?v=0KV-gC8M07c&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=11">Creando al enemigo</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://www.youtube.com/watch?v=QKmj2eS6mvE&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=12">Auto-destruir enemigos</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://www.youtube.com/watch?v=_K4Rm8HXzTU&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=13">Generador de enemigos</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="https://www.youtube.com/watch?v=0HRcAg_8fXo&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=14">Animación de muerte</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="https://www.youtube.com/watch?v=7F3wEyhsUVY&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=15">Reinicio de juego</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="https://www.youtube.com/watch?v=xGAWaH26VwE&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=16">Música y sonidos</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="https://www.youtube.com/watch?v=op_lKvOTQaU&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=17">Dificultad progresiva</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="https://www.youtube.com/watch?v=qnPrRAcX6lM&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=18">Efecto polvo con partículas</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="https://www.youtube.com/watch?v=maqZrl7M1Vk&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=19">Marcador de puntos</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td><a href="https://www.youtube.com/watch?v=34UMWWHOjlw&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=20">Guardar récord con PlayerPrefs</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="https://www.youtube.com/watch?v=BH1ibQElbbE&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=21">Exportación multiplataforma</a></td>
+</tr>
+<tr>
+<td>21</td>
+<td><a href="https://www.youtube.com/watch?v=-FhRT34iiJY&amp;list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&amp;index=22">Despedida</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="juego-de-plataformas-2d">Juego de plataformas 2D<a class="headerlink" href="#juego-de-plataformas-2d" title="Permanent link">&para;</a></h2>
+<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="/cdn/images/curso-plataformas-2d-unity.jpg"/></div>
+
+<p>Pronto hará casi medio año que empecé a publicar tutoriales de Unity.
+Desde entonces hemos practicado un montón con el lenguaje C#, hemos
+aprendido los fundamentos del programa e incluso hemos creado nuestro primer
+videojuego completo y multiplataforma. Ahora estoy muy contento porque
+es el momento de empezar con lo bueno, las mecánicas. ¿Y qué mejor que
+un juego de plataformas para practicarlas? </p>
+<p>A lo largo de esta serie
+practicaremos los aspectos más básicos de un plataformas, centrándonos
+en el entorno y en el personaje, y también añadiremos unos enemigos
+simples.</p>
+<div class="admonition info">
+<p class="admonition-title">Recursos</p>
+<p>Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1g6Pytql6h1gFt5WiMpdrV23jvrY2shtU" target="_blank">04_Juego plataformas.zip</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Lección</th>
+<th>Ver en Youtube</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="https://www.youtube.com/watch?v=Y_PKWr_1rDw&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=1">Tiles y Escenario</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="https://www.youtube.com/watch?v=NQVMPeOfZpc&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=2">Animaciones y Transiciones</a></td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="https://www.youtube.com/watch?v=cT4cR9PQMg8&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=3">Movimiento Básico</a></td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="https://www.youtube.com/watch?v=J-4o-8rr_po&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=4">Animaciones Dinámicas</a></td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="https://www.youtube.com/watch?v=ZRhWneXL3xo&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=5">Saltos y Detalles</a></td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="https://www.youtube.com/watch?v=QMQKGMsQQrg&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=6">Fricción y Plataformas Unidireccionales</a></td>
+</tr>
+<tr>
+<td>07</td>
+<td><a href="https://www.youtube.com/watch?v=Yy-fyoEk1Ao&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=7">Plataformas Móviles (Parte 1)</a></td>
+</tr>
+<tr>
+<td>08</td>
+<td><a href="https://www.youtube.com/watch?v=wdfDW3PMZQI&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=8">Plataformas Móviles (Parte 2)</a></td>
+</tr>
+<tr>
+<td>09</td>
+<td><a href="https://www.youtube.com/watch?v=K6qxV6txdzc&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=9">Doble salto y pendientes</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.youtube.com/watch?v=stR7zhqsASg&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=10">Plataformas que caen</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://www.youtube.com/watch?v=qHLfnHdpk7s&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=11">Cámara de seguimiento</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://www.youtube.com/watch?v=LS5zX7K7UGI&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=12">Enemigos simples</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="https://www.youtube.com/watch?v=NpbBCQu1Hpo&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=13">Colisiones contra enemigos</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="https://www.youtube.com/watch?v=euY0rtadFV0&amp;list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP&amp;index=14">Saltos y retrocesos contra enemigos</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tutoriales-intermedios-de-unity">Tutoriales intermedios de Unity<a class="headerlink" href="#tutoriales-intermedios-de-unity" title="Permanent link">&para;</a></h2>
+<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="/cdn/images/curso-intermedio-unity.jpg"/></div>
+
+<p>Durante este bloque vamos a tomarnos un descanso del desarrollo de
+juegos para aprender distintas mecánicas y técnicas. Veremos todo tipo
+de conceptos, desde guardar y cargar información tanto utilizando la API
+PlayerPrefs como ficheros JSON, creación de escenarios y su exportación
+de Tiled a Unity, menús sencillos, barras de vida, pausar nuestro juego,
+IA simple... Prepárate para aumentar drásticamente tu abanico de
+conocimientos.</p>
+<div class="admonition info">
+<p class="admonition-title">Recursos</p>
+<p>Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1jtL3CkzbG2tFSfAo0F2gmBVRy7QS1MLf" target="_blank">05_Tutoriales intermedios.zip</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Lección</th>
+<th>Ver en Youtube</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="https://www.youtube.com/watch?v=7JdoF4Y-6Uk&amp;index=1&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Diseñar y exportar escenarios 2D de Tiled a Unity</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="https://www.youtube.com/watch?v=gxLwdADJqZo&amp;index=2&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Pausa de juego fácil con mensaje</a></td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="https://www.youtube.com/watch?v=u1dLdXBTBB8&amp;index=3&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Acceder a variables y funciones entre Scripts</a></td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="https://www.youtube.com/watch?v=JH2HA6EJ56A&amp;index=4&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Guardar y cargar datos simples con PlayerPrefs</a></td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="https://www.youtube.com/watch?v=LCHnFlCTHgg&amp;index=5&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Barra de vida simple (1/2) Preparando el canvas</a></td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="https://www.youtube.com/watch?v=nsoygL0n5rQ&amp;index=6&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Barra de vida simple (2/2) Agregando funcionalidad</a></td>
+</tr>
+<tr>
+<td>07</td>
+<td><a href="https://www.youtube.com/watch?v=3tzoxfajCU8&amp;index=7&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Guardar objetos en ficheros JSON (1/2) Serializar Objetos</a></td>
+</tr>
+<tr>
+<td>08</td>
+<td><a href="https://www.youtube.com/watch?v=MyvbFXwwLww&amp;index=8&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Guardar objetos en ficheros JSON (2/2) Serializar Listas</a></td>
+</tr>
+<tr>
+<td>09</td>
+<td><a href="https://www.youtube.com/watch?v=EZ4TJg4ku9Y&amp;index=9&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Crea tus librerías de código C# reutilizable</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.youtube.com/watch?v=ttSfrh86BJo&amp;index=10&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Menú fácil pero resultón</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://www.youtube.com/watch?v=RtCOomI_txo&amp;index=11&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Objetos persistentes pero únicos (Singleton)</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://www.youtube.com/watch?v=OY1wiLvjikk&amp;index=12&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Mover objeto hasta el puntero al hacer clic</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="https://www.youtube.com/watch?v=G60le64vmM4&amp;index=13&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Enemigos que te persiguen (IA Simple)</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="https://www.youtube.com/watch?v=VwGG_3urMkc&amp;index=14&amp;list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf">Postal de Navidad Interactiva</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="juego-rpg-2d-estilo-zelda">Juego RPG 2D estilo Zelda<a class="headerlink" href="#juego-rpg-2d-estilo-zelda" title="Permanent link">&para;</a></h2>
+<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="/cdn/images/curso-rpg-2d-unity.jpg"/></div>
+
+<p>Ha pasado casi un año desde que empecé mi andadura en Unity y creo que estoy
+más que preparado para crear esta nueva serie tan ansiada por todos los
+seguidores de EDV.  Mi intención es ver cómo crear un juego RPG de estilo clásico como los primeros Zelda. Algo que podemos
+hacer gracias a los <a href="https://opengameart.org/content/zelda-like-tilesets-and-sprites">assets gratuitos</a>
+que encontré en OpenGameArt, sin duda todo un hallazgo.</p>
+<div class="admonition info">
+<p class="admonition-title">Recursos</p>
+<p>Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1rgcPM9mdHIX0TVdZl80C5Xs1TY7GXxnH" target="_blank">06_Juego rpg.zip</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Lección</th>
+<th>Ver en Youtube</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="https://www.youtube.com/watch?v=s81hQDAtvBE&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=1">Movimiento básico</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="https://www.youtube.com/watch?v=BDmjvBa-X9w&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=2">Colisiones Físicas</a></td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="https://www.youtube.com/watch?v=gG_goVY4uGs&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=3">Puntos de Teletransporte</a></td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="https://www.youtube.com/watch?v=0kQ5jeTHn6U&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=4">Detalles Maestros</a></td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="https://www.youtube.com/watch?v=5dyV73JQzbI&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=5">Ataque con Espada</a></td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="https://www.youtube.com/watch?v=0LgCaEMCoz8&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=6">Objetos Destruibles</a></td>
+</tr>
+<tr>
+<td>07</td>
+<td><a href="https://www.youtube.com/watch?v=q1Yvu-KrvLA&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=7">Rayo con Espada</a></td>
+</tr>
+<tr>
+<td>08</td>
+<td><a href="https://www.youtube.com/watch?v=wkYjVsQ40pk&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=8">Enemigos con Raycast</a></td>
+</tr>
+<tr>
+<td>09</td>
+<td><a href="https://www.youtube.com/watch?v=vdg550ZmFes&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=9">Ataques Enemigos</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.youtube.com/watch?v=xp33f2WhfrA&amp;list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5&amp;index=10">Vida en Enemigos</a></td>
+</tr>
+</tbody>
+</table>
+<style>
+@media (max-width: 1219.9px){
+    .md-nav__item:last-child {
+        display: inherit !important;
+    }
+}
+
+@media (max-width: 667.9px){
+
+    h2 {
+        width: 100%;
+    }
+
+    .md-typeset h2{
+        margin-top: 0;
+    }
+
+    .md-main__inner {
+        padding-top:0.4em;
+    }
+}
+
+@media (min-width: 1219.9px){
+    .md-nav__link--active {
+        padding-left:0 !important;
+    }
+}
+
+.md-typeset__table {
+    width: 100%;
+}
+</style>
+
+<script>
+window.onload = function(){
+    var a = document.querySelectorAll('table a')
+    for (var i=0; i<a.length; i++){
+        a[i].setAttribute('target', '_blank');
+    }
+}
+</script>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../django/web-empresarial/personalizando-panel-administrador-parte-3/" title="Personalizando el admin (3)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Personalizando el admin (3)
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../academia-gamemaker/" title="Academia GameMaker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Academia GameMaker
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        <!--<div class="md-footer-links__highlight">
+          <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
+        </div>-->
+        <div class="md-footer-copyright__highlight">
+          2018 - 2019 &copy; Héctor Costa (<u><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="nofollow">Licencia CC BY 4.0</a></u>)
+        </div>
+      </div>
+      
+        
+<style>.md-footer-social__link {transition: 0.3s;}</style>
+<div class="md-footer-social" style="font-size: 2.5rem; margin-top: -6px!important; padding: 0px!important; margin-bottom: -6px; overflow: hidden!important;">
+  <a href="https://www.youtube.com/c/HektorProfe" title="Youtube" target="_blank" class="md-footer-social__link fa fa-youtube-square"></a>
+  <a href="https://twitter.com/hektorprofe" title="Twitter" target="_blank" class="md-footer-social__link fa fa-twitter-square"></a>
+  <a href="https://github.com/hcosta" title="Github" target="_blank" class="md-footer-social__link fa fa-github-square"></a>
+  &nbsp;
+</div>
+
+      
+    </div>
+  </div>
+  <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-124845547-1', 'auto'); ga('send', 'pageview'); </script>
+</footer>
+      
+      <a id="anchorID" href="https://www.hektorprofe.net/" target="_blank"></a>
+    </div>
+  <script type='text/javascript' src="/assets/javascripts/application.a26c1c21.js"></script>
+  <script type='text/javascript'>
+    app.initialize({version:"1.0.4",url:{base:"../.."}})
+    var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
+    var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
+    const mdMenuItems = document.querySelectorAll('.md-nav__link');
+    function doNav(){ document.getElementById("main__list").innerHTML = '<li class="md-nav__item"><a class="md-nav__link" href="/cursos/">Cursos</a></li><li class="md-nav__item"><a class="md-nav__link" href="/blog/">Blog</a></li>';}
+    for (i = 0; i < mdMenuItems.length; i++) {  var item = mdMenuItems[i]; var htmlstring = item.innerHTML; htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/,''); if (htmlstring == 'Servidor de encuentro') { item.parentNode.removeChild(item);continue; }  if (htmlstring == 'Política de Cookies') { item.parentNode.removeChild(item);continue; } if (htmlstring == 'Buscador') { item.parentNode.removeChild(item); continue; } }
+    try { var topPos = document.querySelector('#md__active_link').offsetTop; document.querySelector('#md__sidebar__scroll').scrollTop = topPos - 60; } catch (err) {}
+  </script>
+  </body>
+</html>
