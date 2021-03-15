@@ -1,0 +1,12 @@
+mkdocs==1.0.4
+mkdocs-material==3.0.6
+mkdocs-markdownextradata-plugin==0.0.5
+pygments==2.2.0
+django-htmlmin
+
+# pip install rcssmin --install-option="--without-c-extensions"
+# pip install rjsmin --install-option="--without-c-extensions"
+# pip install django-compressor --upgrade
+
+# descar manualmente https://github.com/bmorgan21/jinja-inline-asset-compiler
+# npm install uglify-js -g

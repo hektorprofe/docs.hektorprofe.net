@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mkdocs = "==1.0.4"
+mkdocs-material = "==3.0.6"
+Pygments = "==2.2.0"
+mkdocs-markdownextradata-plugin = "==0.0.5"
+django-htmlmin = "*"
+rcssmin = "*"
+rjsmin = "*"
+django-compressor = "*"
+jiac = {editable = true, git = "https://github.com/bmorgan21/jinja-inline-asset-compiler.git"}
+
+[dev-packages]
+pylint = "*"
+
+[scripts]
+serve = "mkdocs serve"
+dirty = "mkdocs serve --dirtyreload"
+
+[requires]
+python_version = "3.9"
