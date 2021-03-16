@@ -1,0 +1,10 @@
+<br />
+<b>Fatal error</b>:  Uncaught exception 'Exception' with message 'SQLSTATE[08004] [1040] Too many connections' in /home/wpfcnet/public_html/api/lib/medoo.min.php:22
+Stack trace:
+#0 /home/wpfcnet/public_html/api/lib/user.php(62): medoo-&gt;__construct()
+#1 /home/wpfcnet/public_html/api/lib/user.php(17): User-&gt;set_database()
+#2 /home/wpfcnet/public_html/api/optimizer/image.php(88): User-&gt;__construct('beta.escueladev...', true)
+#3 /home/wpfcnet/public_html/api/router.php(39): Image_Optimizer-&gt;compress()
+#4 /home/wpfcnet/public_html/api/router.php(243): Router-&gt;__construct()
+#5 {main}
+  thrown in <b>/home/wpfcnet/public_html/api/lib/medoo.min.php</b> on line <b>22</b><br />
