@@ -161,6 +161,8 @@ nav:
       - Introducción:                     'python/manejo-de-ficheros/index.md'
       - Ficheros de texto:                'python/manejo-de-ficheros/ficheros-de-texto.md'
       - Módulo pickle:                    'python/manejo-de-ficheros/modulo-pickle.md'
+      - Ficheros CSV:                     'python/manejo-de-ficheros/ficheros-csv.md'
+      - Ficheros JSON:                    'python/manejo-de-ficheros/ficheros-json.md'
       - Ejercicios:                       'python/manejo-de-ficheros/ejercicios.md'
     - Interfaces gráficas Tkinter:
       - Introducción:                     'python/interfaces-graficas-con-tkinter/index.md'
