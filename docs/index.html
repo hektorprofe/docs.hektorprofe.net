@@ -21,8 +21,8 @@
       }
       main {
         margin: 0;
-        padding: 10px 10px 15px 10px;
-        width: 893px;
+        padding: 15px;
+        width: 928px;
         margin: 0 auto;
         font-size: 99%;
         background: white;
@@ -65,7 +65,7 @@
         left: 0;
       }
       nav div {
-        width: 900px;
+        width: 935px;
         margin: 0 auto;
         height: 3.5rem;
       }
@@ -77,11 +77,12 @@
       .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
+        grid-gap: 25px;
         color: #444;
+        text-align: left;
       }
 
-      @media (max-width: 874px) {
+      @media (max-width: 939px) {
         .wrapper {
           grid-template-columns: 1fr;
         }
@@ -116,10 +117,10 @@
     <main>
       <div class="wrapper">
         <div class="one">
-          <h2>Apuntes Udemy</h2>
+          <h2>Archivo</h2>
           <ul>
-            <li>[<a href="/python/">Curso de Python</a>]</li>
-            <li>[<a href="/django/">Curso de Django</a>]</li>
+            <li>[<a href="/python/">Apuntes curso Python</a>]</li>
+            <li>[<a href="/django/">Apuntes curso Django</a>]</li>
           </ul>
           <br />
           <h2>GNU/Linux</h2>
@@ -165,20 +166,7 @@
                 >Introducción a JavaScript</a
               >]
             </li>
-            <li>
-              [<a
-                target="_blank"
-                href="https://www.hektorprofe.net/curso/conversor-divisas-javascript"
-                >Conversor usando una API</a
-              >]
-            </li>
-            <li>
-              [<a
-                target="_blank"
-                href="https://www.hektorprofe.net/curso/programacion-artistas-disenadores-principiantes"
-                >Introducción a p5.js</a
-              >]
-            </li>
+            <li>[<a target="_blank" href="">Introducción a p5.js</a>]</li>
             <li>
               [<a
                 target="_blank"
@@ -189,15 +177,22 @@
             <li>
               [<a
                 target="_blank"
+                href="https://www.hektorprofe.net/curso/conversor-divisas-javascript"
+                >Proyecto conversor vía API</a
+              >]
+            </li>
+            <li>
+              [<a
+                target="_blank"
                 href="https://www.hektorprofe.net/curso/servidor-node-chat-heroku"
-                >Chat online en Heroku</a
+                >Proyecto chat online</a
               >]
             </li>
             <li>
               [<a
                 target="_blank"
                 href="https://www.hektorprofe.net/curso/spa-frontend-web-api-auth-vue-nuxt"
-                >Cliente API con Nuxt.js</a
+                >Proyecto cliente Nuxt.js</a
               >]
             </li>
           </ul>
@@ -205,66 +200,68 @@
           <h2>Python</h2>
           <ul>
             <li>
-              [<a
-                target="_blank"
-                href="https://www.hektorprofe.net/curso/python-para-principiantes"
+              [<a target="_blank" href="/academia/python/introduccion/"
                 >Introducción a Python</a
               >]
             </li>
             <li>
               [<a
                 target="_blank"
-                href="https://www.hektorprofe.net/curso/interfaces-graficas-gui-python"
-                >Fundamentos de POO</a
+                href="/academia/python/poo-para-interfaces-graficas/"
+                >Clases y objetos para GUI</a
               >]
             </li>
             <li>
-              [<a
-                target="_blank"
-                href="https://www.hektorprofe.net/curso/proyecto-gestor-clientes-python"
-                >Gestor de clientes</a
-              >]
-            </li>
-            <li>
-              [<a
-                target="_blank"
-                href="https://www.hektorprofe.net/curso/dibujo-grafico-python-modulo-turtle"
+              [<a target="_blank" href="/academia/python/modulo-grafico-turtle/"
                 >Introducción a Turtle</a
               >]
             </li>
             <li>
               [<a
                 target="_blank"
-                href="https://www.hektorprofe.net/curso/introduccion-analisis-datos-python-numpy"
+                href="/academia/python/modulo-analitico-numpy/"
                 >Introducción a Numpy</a
               >]
             </li>
             <li>
               [<a
                 target="_blank"
-                href="https://www.hektorprofe.net/curso/visualizacion-graficos-matplotlib-python"
+                href="/academia/python/modulo-grafico-matplotlib/"
                 >Introducción a Matplotlib</a
               >]
             </li>
             <li>
-              [<a
-                target="_blank"
-                href="https://www.hektorprofe.net/curso/curso-django-principiantes"
+              [<a target="_blank" href="/academia/django/introduccion/"
                 >Introducción a Django</a
               >]
             </li>
             <li>
               [<a
                 target="_blank"
-                href="https://www.hektorprofe.net/curso/proyecto-api-peliculas-django-rest-framework"
-                >API de películas con DRF</a
+                href="/academia/python/proyecto-gestor-clientes/"
+                >Proyecto gestor clientes</a
+              >]
+            </li>
+            <li>
+              [<a target="_blank" href="/academia/django/api-rest-framework/"
+                >Proyecto API con DRF</a
+              >]
+            </li>
+            <li>
+              [<a target="_blank" href="/academia/python/tutoriales/"
+                >Tutoriales sobre Python</a
+              >]
+            </li>
+            <li>
+              [<a target="_blank" href="/academia/django/tutoriales/"
+                >Tutoriales sobre Django</a
               >]
             </li>
           </ul>
         </div>
 
         <div class="three">
-          <h2>GameMaker: Studio</h2>
+          <h2>GameMaker</h2>
           <ul>
             <li>
               [<a
@@ -315,27 +312,13 @@
             </li>
           </ul>
           <br />
-          <h2>Unity Engine</h2>
+          <h2>Unity</h2>
           <ul>
             <li>
               [<a
                 target="_blank"
                 href="/escueladevideojuegos/academia-unity/#introduccion-al-lenguaje-c"
                 >Introducción a C#</a
-              >]
-            </li>
-            <li>
-              [<a
-                target="_blank"
-                href="/escueladevideojuegos/academia-unity/#tutoriales-basicos-de-unity"
-                >Tutoriales básicos</a
-              >]
-            </li>
-            <li>
-              [<a
-                target="_blank"
-                href="/escueladevideojuegos/academia-unity/#tutoriales-intermedios-de-unity"
-                >Tutoriales intermedios</a
               >]
             </li>
             <li>
@@ -357,6 +340,20 @@
                 target="_blank"
                 href="/escueladevideojuegos/academia-unity/#juego-rpg-2d-estilo-zelda"
                 >Juego RPG estilo Zelda</a
+              >]
+            </li>
+            <li>
+              [<a
+                target="_blank"
+                href="/escueladevideojuegos/academia-unity/#tutoriales-basicos-de-unity"
+                >Tutoriales básicos</a
+              >]
+            </li>
+            <li>
+              [<a
+                target="_blank"
+                href="/escueladevideojuegos/academia-unity/#tutoriales-intermedios-de-unity"
+                >Tutoriales intermedios</a
               >]
             </li>
           </ul>

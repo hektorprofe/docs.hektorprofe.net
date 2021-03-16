@@ -43,11 +43,34 @@ extra:
   cdn: "/cdn"
 nav:
 
-  # - Portada: 
-  #   - 'index.md'
-
-  - Cursos: 
+  - Menús: 
     - 'cursos.md'
+
+  - Documentos archivados:
+    - Lenguaje Python:
+      - Introducción a Python:            'academia/python/introduccion.md'
+      - POO para interfaces gráficas:     'academia/python/poo-para-interfaces-graficas.md'
+      - Proyecto gestor de clientes:      'academia/python/proyecto-gestor-clientes.md'
+      - Módulo gráfico Turtle:            'academia/python/modulo-grafico-turtle.md'
+      - Módulo analítico NumPy:           'academia/python/modulo-analitico-numpy.md'
+      - Módulo gráfico Matplotlib:        'academia/python/modulo-grafico-matplotlib.md'
+      - Tutoriales sobre Python:          'academia/python/tutoriales.md'
+    - Django Framework:
+      - Introducción a Django:            'academia/django/introduccion.md'
+      - Tutoriales sobre Django:          'academia/django/tutoriales.md'
+      - Proyecto API con DRF:             'academia/django/api-rest-framework.md'
+    # - Lenguaje JavaScript:
+    #   - Introducción a JavaScript:        'academia/javascript/index.md'
+    #   - Conversor de divisas:             'academia/javascript/conversor.md'
+    #   - Introducción a Node.js:           'academia/javascript/nodejs.md'
+    #   - Chat online en Heroku:            'academia/javascript/chat-nodejs-heroku.md'
+    #   - Cliente API con Nuxt.js:          'academia/javascript/api-nuxt.md'
+    # - Biblioteca visual P5.js:        
+    #   - Figuras, variables y objetos:   'academia/javascript/p5js.md'
+    #   - Flujo: Condiciones y bucles:    'academia/javascript/visual-p5js.md'
+    #   - Funciones, clases y arreglos:   'academia/javascript/visual-p5js.md'
+    # - GNU/Linux:
+    #   - Configurar Ubuntu Server:         'academia/gnu-linux/web-ubuntu-server.md'
 
   - Apuntes de Python:
     - Presentación:                       'python/index.md'
