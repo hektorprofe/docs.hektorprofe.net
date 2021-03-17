@@ -1,26 +1,6 @@
 title: Copia de objetos | Curso de Python | Hektor Profe
 description: En esta unidad veremos en qué consiste eso de la herencia y cómo aprovecharla para ahorrarnos muchísimas líneas de código.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Copia de objetos
 
 De la misma forma que las colecciones, los objetos se pasan a las funciones por referencia. Si modificamos sus valores dentro, éstos se verán reflejados fuera.

@@ -1,26 +1,6 @@
 title: Entrada por teclado | Curso de Python | Hektor Profe
 description: En esta sección aprenderemos sobre las distintas formas de leer y visualizar información.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Entrada por teclado
 
 Ya conocemos la función *input()* que lee una cadena por teclado. Su único inconveniente es que debemos transformar el valor a numérico si deseamos hacer operaciones con él:

@@ -1,26 +1,6 @@
 title: Funciones decoradoras | Curso de Python | Hektor Profe
 description: Operadores encadenados, comprensión de listas, funciones decoradoras, generadoras, iteradoras, lambda y expresiones regulares.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Funciones decoradoras
 
 No cabe duda de que Python es un lenguaje flexible, y cuando trabajamos con funciones no es una excepción.

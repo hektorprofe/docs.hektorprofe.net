@@ -1,21 +1,6 @@
 title: Introducción | Django | Academia | Hektor Profe
 description: Aprende los conceptos básicos de este potente framework de Python para desarrollar páginas web backend mientras creas un blog.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-.admonition.info{
-    font-size: 100%;
-}
-.admonition.info label{
-    font-size: 91%;
-}
-.admonition.note > .admonition-title {
-    display: none;
-}
-</style>
-
 # Introducción a Django
 
 * Django es un framework web creado en 2003, programado en Python, gratuito y libre. 

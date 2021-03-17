@@ -1,26 +1,6 @@
 title: Widget Text (Texto largo) | Curso de Python | Hektor Profe
 description: Las interfaces gráficas son medios visuales con los que nuestros usuarios pueden interactuar y realizar tareas gráficamente.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Widget Text (Texto largo)
 
 Por otro lado, si lo que necesitamos es trabajar con un campo de texto multilínea, podemos utilizar un Widget llamado Text:

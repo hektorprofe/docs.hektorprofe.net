@@ -1,26 +1,6 @@
 title: Función map() | Curso de Python | Hektor Profe
 description: Operadores encadenados, comprensión de listas, funciones decoradoras, generadoras, iteradoras, lambda y expresiones regulares.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Función map()
 
 Esta función trabaja de una forma muy similar a **filter()**, con la diferencia que en lugar de aplicar una condición a un elemento de una lista o secuencia, aplica una función sobre todos los elementos y como resultado se devuelve un iterable de tipo map:

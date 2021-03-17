@@ -1,26 +1,6 @@
 title: Salida por pantalla | Curso de Python | Hektor Profe
 description: En esta sección aprenderemos sobre las distintas formas de leer y visualizar información.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Salida por pantalla
 
 La función *print()* es la forma general de mostrar información por pantalla. Generalmente podemos mostrar texto y variables separándolos con comas:

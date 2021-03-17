@@ -1,26 +1,6 @@
 title: Widget Checkbutton (Seleccionable) | Curso de Python | Hektor Profe
 description: Las interfaces gráficas son medios visuales con los que nuestros usuarios pueden interactuar y realizar tareas gráficamente.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Widget Checkbutton (Seleccionable)
 
 Con los radiobutton vimos que el usuario puede marcar una opción de entre varias, pero si queremos simplemente proponer una única opción es mejor utilizar un botón de selección. Son bastante parecidos. Vamos a crear un par de checkbuttons para por ejemplo, pedir a un usuario como quiere que le sirvan un café, él tendrá que marcar si quiere leche, y también si quiere azúcar:

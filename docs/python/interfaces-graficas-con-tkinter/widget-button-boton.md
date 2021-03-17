@@ -1,26 +1,6 @@
 title: Widget Button (Botón) | Curso de Python | Hektor Profe
 description: Las interfaces gráficas son medios visuales con los que nuestros usuarios pueden interactuar y realizar tareas gráficamente.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Widget Button (Botón)
 
 Los botones son posiblemente los componentes más utilizados en el diseño de interfaces gráficas. Yo he llegado a crear una interfaz que únicamente tenía un botón, suena raro, pero uno de mis clientes, ya hace tiempo quería un programa con un botón para ejecutar una tarea con una flecha de esas de carga debajo girando para saber que estaba "en marcha". Y véis que hay gente para todo. 

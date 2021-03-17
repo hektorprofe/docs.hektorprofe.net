@@ -1,26 +1,6 @@
 title: Widget Entry (Texto corto) | Curso de Python | Hektor Profe
 description: Las interfaces gráficas son medios visuales con los que nuestros usuarios pueden interactuar y realizar tareas gráficamente.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Widget Entry (Texto corto)
 
 Los **campos de texto** sirven generalmente para que el usuario escriba un valor. Sería un puente que equivaldría a la función input() pero gráficamente. Lo bueno es que integra muchos métodos que le permiten desde borrar el texto a desactivar el campo.

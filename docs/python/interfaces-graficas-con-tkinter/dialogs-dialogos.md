@@ -1,26 +1,6 @@
 title: Dialogs (Diálogos) | Curso de Python | Hektor Profe
 description: Las interfaces gráficas son medios visuales con los que nuestros usuarios pueden interactuar y realizar tareas gráficamente.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Dialogs (Diálogos)
 
 !!! bug "Bug en Mac OS 10.13 o superior"

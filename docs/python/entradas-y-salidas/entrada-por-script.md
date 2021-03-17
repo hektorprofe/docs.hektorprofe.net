@@ -1,26 +1,6 @@
 title: Entrada por script | Curso de Python | Hektor Profe
 description: En esta sección aprenderemos sobre las distintas formas de leer y visualizar información.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Entrada por script
 
 Hasta ahora todo lo que hemos hecho ha sido escribir código en el intérprete, pero los programas informáticos no funcionan así. Se basan en escribir todas las instrucciones en ficheros llamados scripts (o guiones de instrucciones). Luego se envía este fichero al intérprete desde la terminal (si es un lenguaje interpretado como Python) y éste ejecutará todas las instrucciones en bloque.

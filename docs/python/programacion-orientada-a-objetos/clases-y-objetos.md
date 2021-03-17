@@ -1,26 +1,6 @@
 title: Clases y objetos | Curso de Python | Hektor Profe
 description: En esta unidad aprenderemos sobre un paradigma de programación distinto que cambió la forma de entender la programación.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Clases y objetos
 
 La base de la POO son los objetos. 

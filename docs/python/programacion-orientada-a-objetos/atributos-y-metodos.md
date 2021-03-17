@@ -1,26 +1,6 @@
 title: Atributos y métodos | Curso de Python | Hektor Profe
 description: En esta unidad aprenderemos sobre un paradigma de programación distinto que cambió la forma de entender la programación.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Atributos y métodos
 
 Si hay algo que ilustre el potencial de la POO esa es la capacidad de definir variables y funciones dentro de las clases, aunque aquí se conocen como atributos y métodos respectivamente.

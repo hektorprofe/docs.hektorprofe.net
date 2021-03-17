@@ -1,26 +1,6 @@
 title: Operadores relacionales | Curso de Python | Hektor Profe
 description: Sabemos que la programación gira en torno a la información, en torno a los datos, ¿pero con qué propósito?
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Operadores relacionales
 
 Sirven para comparar dos valores, dependiendo del resultado de la comparación se devolverá:

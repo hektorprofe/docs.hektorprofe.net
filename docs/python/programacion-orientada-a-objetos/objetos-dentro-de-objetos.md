@@ -1,26 +1,6 @@
 title: Objetos dentro de objetos | Curso de Python | Hektor Profe
 description: En esta unidad aprenderemos sobre un paradigma de programación distinto que cambió la forma de entender la programación.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Objetos dentro de objetos
 
 Hasta ahora no lo hemos comentado, pero al ser las clases un nuevo tipo de dato resulta más que obvio que se pueden poner en colecciones e incluso utilizarlos dentro de otras clases. 

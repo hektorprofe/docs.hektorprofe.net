@@ -1,26 +1,6 @@
 title: Setuptools | Curso de Python | Hektor Profe
 description: Se conoce como distribución a la etapa final del código, cuando éste se distribuye o comparte con otras personas.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Setuptools
 
 En Python todo el tema de empaquetar puede ser un poco lioso, ya que encontramos varios módulos desintados a ello. Nosotros vamos a centrarnos en **setuptools**, ya que es la forma más utilizada, nos proporciona todo lo necesario para distribuir nuestros propios módulos e incluso nos permite publicar paquetes en el respositorio público PyPI (Python Package Index) de forma directa desde la propia terminal.

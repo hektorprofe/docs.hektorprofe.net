@@ -1,26 +1,6 @@
 title: Pydoc | Curso de Python | Hektor Profe
 description: En esta sección repasamos los módulos Docstring, Pydoc, Doctest y Unittest de Python.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Pydoc
 
 En la lección anterior aprendimos que utilizando la función **help** podemos mostrar información formateada por la consola. Pues en realidad esta función hace uso del módulo **pydoc** para generar la documentación a partir de sus *docstrings*.

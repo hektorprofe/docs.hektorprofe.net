@@ -1,26 +1,6 @@
 title: Primer contacto con la POO | Curso de Python | Hektor Profe
 description: En esta unidad aprenderemos sobre un paradigma de programación distinto que cambió la forma de entender la programación.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Primer contacto con la POO
 
 Para entender en qué se basa este paradigma (modelo de solución de problemas), en lugar de empezar con teoría os propongo jugar un poco con dos códigos distintos. Ambos implementan una estructura de clientes y funciones para trabajar con ellos, pero uno está creado con programación estructurada (la clásica cuyas bases hemos estudiado hasta ahora) y la otra con programación orientada a objetos.

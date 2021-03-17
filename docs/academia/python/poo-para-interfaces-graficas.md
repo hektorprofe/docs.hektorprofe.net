@@ -1,21 +1,6 @@
 title: POO para interfaces | Python | Academia | Hektor Profe
 description: Aprende los conceptos básicos para empezar a crear interfaces gráficas: bucles infinitos, módulos y POO.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-.admonition.info{
-    font-size: 100%;
-}
-.admonition.info label{
-    font-size: 91%;
-}
-.admonition.note > .admonition-title {
-    display: none;
-}
-</style>
-
 # Fundamentos de POO para interfaces gráficas
 
 Dentro de la programación existe una especialidad enfocada al desarrollo de programas utilizando interfaces gráficas de usuario, también conocidas como Graphic User Interfaces o GUI.

@@ -1,26 +1,6 @@
 title: Paso por valor y referencia | Curso de Python | Hektor Profe
 description: Las funciones son fragmentos de código que se pueden ejecutar múltiples veces, pueden recibir y devolver información para comunicarse con el proceso principal.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Paso por valor y referencia
 
 Dependiendo del tipo de dato que enviemos a la función, podemos diferenciar dos comportamientos:

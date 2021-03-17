@@ -1,21 +1,6 @@
 title: Introducción | Python | Academia | Hektor Profe
 description: Aprende lo más básico para empezar con el lenguaje de moda en ciencia de datos, desarrollo web, hacking...
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-.admonition.info{
-    font-size: 100%;
-}
-.admonition.info label{
-    font-size: 91%;
-}
-.admonition.note > .admonition-title {
-    display: none;
-}
-</style>
-
 # Introducción a Python
 
 Si te interesa aprender este lenguaje pero no sabes muy bien por dónde empezar, en este pequeño curso comparto contigo los primeros pasos que debes seguir para configurar tu entorno de desarrollo, crear tus primeros scripts y los tipos de datos básicos del lenguaje.
@@ -28,7 +13,7 @@ Además haremos un breve repaso del uso que se le da profesionalmente para que n
 
 Sin entrar en demasiados detalles, Python es el lenguaje de programación que ha sufrido el mayor crecimiento durante los últimos años, en gran parte gracias a su filosofía de la simplicidad y la rápida curva de aprendizaje que ofrece. 
 
-**¿Quién lo utiliza?**
+### ¿Quién lo utiliza?
 
 * Ingenieros de software
 * Matemáticos
@@ -38,7 +23,7 @@ Sin entrar en demasiados detalles, Python es el lenguaje de programación que ha
 * Ingenieros de red
 * Incluso niños (es el más popular para empezar a programar)
 
-**¿Por qué es tan especial?**
+### ¿Por qué es tan especial?
 
 * Permite resolver problemas en menos tiempo y con menos código. Esta es precisamente una de las razones por las que empresas como Google, Spotify, Dropbox o Facebook lo utilizan. Un ejemplo para ilustrar su poder es, cómo haríamos en diferentes lenguajes para extraer la palabra “Hola” de una cadena de texto “Hola mundo”:
     * **C#**: str.Substring(0,4)
@@ -56,12 +41,10 @@ Sin entrar en demasiados detalles, Python es el lenguaje de programación que ha
 * Tiene una gran comunidad, literalmente puedes encontrar la solución a casi cualquier duda sólo buscando preguntas ya respondidas en Stack Overflow o mirando repositorios públicos de Github.
 * Su ecosistema es enorme, abarcando todo tipo de librerías, frameworks y herramientas. Algo debido en gran parte a que es un lenguaje bastante maduro con más de 20 años de edad.
 
-**¿Qué versiones encontramos?**
+### ¿Qué versiones encontramos?
 
 * **Python 2**: la versión antigua y que tendrá soporte oficial hasta 2020.
 * **Python 3**: la versión actual en constante mejora y que se tratará en el curso.
-
-
 
 ## Instalación
 

@@ -1,26 +1,6 @@
 title: Cadenas de texto | Curso de Python | Hektor Profe
 description: En la programación todo se resume a datos que representan información. Números, textos, fechas, imágenes, sonidos, vídeos... todo son datos.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Cadenas de texto
 
 Inmediatamente después de los números hay que echar un vistazo a las cadenas de texto, a fin de cuentas es la forma como las personas nos comunicamos de forma escrita. Las letras o caracteres son en definitiva símbolos de escritura y otro tipo de dato esencial. 

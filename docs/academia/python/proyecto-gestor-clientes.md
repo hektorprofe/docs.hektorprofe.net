@@ -1,21 +1,6 @@
 title: Proyecto gestor de clientes | Python | Academia | Hektor Profe
 description: Vamos a crear un proyecto utilizando los conceptos básicos: variables, colecciones, condiciones, bucles, funciones y módulos.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-.admonition.info{
-    font-size: 100%;
-}
-.admonition.info label{
-    font-size: 91%;
-}
-.admonition.note > .admonition-title {
-    display: none;
-}
-</style>
-
 # Proyecto gestor de clientes en Python
 
 Vamos a crear un programa poniendo a prueba lo básico de Python que mostrará un menú con estas opciones:

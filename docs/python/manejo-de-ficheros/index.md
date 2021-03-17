@@ -1,26 +1,6 @@
 title: Manejo de ficheros | Curso de Python | Hektor Profe
 description: Tradicionalmente existen dos tipos de persistencia básica: con ficheros o con bases de datos y en esta unidad vamos a centrarnos en la primera.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Manejo de ficheros
 
 Tradicionalmente existen dos tipos de persistencia básica: con ficheros o con bases de datos. En esta sección vamos a centrarnos en la primera.

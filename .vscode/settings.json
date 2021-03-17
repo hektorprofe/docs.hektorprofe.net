@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\hcost\\.virtualenvs\\hektorprofe.net-030W3dpx\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\hcost\\.virtualenvs\\hektorprofe.net-030W3dpx\\Scripts\\python.exe",
+    "editor.formatOnSave": false   
 }

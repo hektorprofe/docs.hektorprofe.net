@@ -1,26 +1,6 @@
 title: Unittest | Curso de Python | Hektor Profe
 description: En esta sección repasamos los módulos Docstring, Pydoc, Doctest y Unittest de Python.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Unittest
 
 El módulo **unittest**, a veces referido como **PyUnit**, forma parte de una serie de frameworks conocidos como *xUnit*. Estas librerías se encuentran en la mayoría de lenguajes y son casi un estándard a la hora de programar pruebas unitarias.

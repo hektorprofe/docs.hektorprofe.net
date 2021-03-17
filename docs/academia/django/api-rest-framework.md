@@ -1,21 +1,6 @@
 title: API con Django Rest Framework | Django | Academia | Hektor Profe
 description: Desarrolla paso a paso una API con Python y Django Rest Framework para manejar las películas favoritas de tus usuarios.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-.admonition.info{
-    font-size: 100%;
-}
-.admonition.info label{
-    font-size: 91%;
-}
-.admonition.note > .admonition-title {
-    display: none;
-}
-</style>
-
 # Proyecto API con Django Rest Framework
 
 En este curso haremos uso de algunas apps de Django para implementar una API totalmente funcional utilizando autenticación con Token, muy útil para utilizar en todo tipo de clientes, desde web a aplicaciones móviles, ya que se basa sobre una capa de peticiones con respuestas JSON.

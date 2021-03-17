@@ -46,33 +46,31 @@ nav:
   - Menús: 
     - 'cursos.md'
 
-  - Documentos archivados:
+  - Academia:
+    - Índice del archivo:                 'academia/index.md'
     - Lenguaje Python:
       - Introducción a Python:            'academia/python/introduccion.md'
       - POO para interfaces gráficas:     'academia/python/poo-para-interfaces-graficas.md'
-      - Proyecto gestor de clientes:      'academia/python/proyecto-gestor-clientes.md'
       - Módulo gráfico Turtle:            'academia/python/modulo-grafico-turtle.md'
       - Módulo analítico NumPy:           'academia/python/modulo-analitico-numpy.md'
       - Módulo gráfico Matplotlib:        'academia/python/modulo-grafico-matplotlib.md'
-      - Tutoriales sobre Python:          'academia/python/tutoriales.md'
-    - Django Framework:
-      - Introducción a Django:            'academia/django/introduccion.md'
-      - Tutoriales sobre Django:          'academia/django/tutoriales.md'
+      - Módulo web backend Django:        'academia/django/introduccion.md'
+      - Proyecto gestor de clientes:      'academia/python/proyecto-gestor-clientes.md'
       - Proyecto API con DRF:             'academia/django/api-rest-framework.md'
-    # - Lenguaje JavaScript:
-    #   - Introducción a JavaScript:        'academia/javascript/index.md'
-    #   - Conversor de divisas:             'academia/javascript/conversor.md'
-    #   - Introducción a Node.js:           'academia/javascript/nodejs.md'
-    #   - Chat online en Heroku:            'academia/javascript/chat-nodejs-heroku.md'
-    #   - Cliente API con Nuxt.js:          'academia/javascript/api-nuxt.md'
-    # - Biblioteca visual P5.js:        
-    #   - Figuras, variables y objetos:   'academia/javascript/p5js.md'
-    #   - Flujo: Condiciones y bucles:    'academia/javascript/visual-p5js.md'
-    #   - Funciones, clases y arreglos:   'academia/javascript/visual-p5js.md'
+      - Tutoriales sobre Python:          'academia/python/tutoriales.md'
+      - Tutoriales sobre Django:          'academia/django/tutoriales.md'
+    - Lenguaje JavaScript:
+      - Introducción a JavaScript:        'academia/javascript/introduccion.md'
+      - Introducción a P5.js:             'academia/javascript/biblioteca-p5js.md'
+      - Introducción a Node.js:           'academia/javascript/nodejs.md'  
+      - Proyecto conversor vía API:       'academia/javascript/conversor-divisas.md'
+      - Proyecto chat online:             'academia/javascript/chat-heroku.md'
+      - Proyecto cliente Nuxt.js:         'academia/javascript/cliente-nuxt.md'    
     - GNU/Linux:
       - Configurar Ubuntu Server:         'academia/gnu-linux/ubuntu-server-web.md'
 
-  - Apuntes de Python:
+  - Apuntes de Python:                    
+    - Índice del archivo:                 'python/index.md'
     - Introducción informal:                                    
       - Presentación:                     'python/introduccion-informal/index.md'
       - Números:                          'python/introduccion-informal/numeros.md'
@@ -200,7 +198,8 @@ nav:
       - Setuptools:                       'python/distribucion/setuptools.md'
       - Pyinstaller:                      'python/distribucion/pyinstaller.md'
 
-  - Apuntes de Django:
+  - Apuntes de Django:                    
+    - Índice del archivo:                 'django/index.md'
     - Proyecto Web Personal:
       - Introducción:                     'django/web-personal/index.md'
       - Creando el proyecto:              'django/web-personal/creando-proyecto.md'
@@ -241,6 +240,7 @@ nav:
       - Personalizando el admin (3):      'django/web-empresarial/personalizando-panel-administrador-parte-3.md'
 
   - Escuela de Videojuegos:
+    - Índice del archivo:                 'escueladevideojuegos/index.md'
     - Academia Unity:                     'escueladevideojuegos/academia-unity.md'
     - Academia GameMaker:                 'escueladevideojuegos/academia-gamemaker.md'
     - Artículos destacados:

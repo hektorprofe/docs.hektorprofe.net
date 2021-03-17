@@ -1,26 +1,6 @@
 title: Interfaces gráficas con Tkinter | Curso de Python | Hektor Profe
 description: Las interfaces gráficas son medios visuales con los que nuestros usuarios pueden interactuar y realizar tareas gráficamente.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Interfaces gráficas con Tkinter
 
 Las interfaces gráficas son medios visuales, mucho más cómodos que una terminal de texto, a través de las cuales nuestros usuarios pueden interactuar y realizar tareas gráficamente.

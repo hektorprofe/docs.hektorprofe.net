@@ -1,21 +1,6 @@
 title: Ficheros CSV | Curso de Python | Hektor Profe
 description: Veamos como almacenar y recuperar listas y diccionarios en ficheros CSV con Python.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-.admonition.info{
-    font-size: 100%;
-}
-.admonition.info label{
-    font-size: 91%;
-}
-.admonition.note > .admonition-title {
-    display: none;
-}
-</style>
-
 # Ficheros CSV
 
 **CSV**: Valores separados por comas (Comma Separated Values)

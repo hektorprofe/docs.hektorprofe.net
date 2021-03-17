@@ -1,26 +1,6 @@
 title: Doctest | Curso de Python | Hektor Profe
 description: En esta sección repasamos los módulos Docstring, Pydoc, Doctest y Unittest de Python.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Doctest
 
 Si por un lado las **docstrings** nos permitían describir documentación, los **doctest** nos permiten combinar pruebas en la propia documentación.

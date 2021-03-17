@@ -1,26 +1,6 @@
 title: Docstrings | Curso de Python | Hektor Profe
 description: En esta sección repasamos los módulos Docstring, Pydoc, Doctest y Unittest de Python.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 En Python todos los objetos cuentan con una variable especial llamada __doc__ gracias a la que podemos describir para qué sirven los y cómo se usan los objetos. Estas variables reciben el nombre de *docstrings*, cadenas de documentación.
 
 ## Funciones

@@ -1,26 +1,6 @@
 title: Lectura por teclado | Curso de Python | Hektor Profe
 description: En la programación todo se resume a datos que representan información. Números, textos, fechas, imágenes, sonidos, vídeos... todo son datos.
 
-<style>
-
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-
-.admonition.info{
-    font-size: 100%;
-}
-
-.admonition.info label{
-    font-size: 91%;
-}
-
-.admonition.note > .admonition-title {
-    display: none;
-}
-
-</style>
-
 # Lectura por teclado
 
 Una forma de trabajar con datos dinámicos es a través del teclado con la instrucción *input()* que lee y devuelve una cadena:
