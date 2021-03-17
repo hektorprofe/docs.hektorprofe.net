@@ -6,17 +6,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.hektorprofe.net/academia/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.hektorprofe.net/academia/python/introduccion/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.hektorprofe.net/academia/python/poo-para-interfaces-graficas/</loc>
-     <lastmod>2021-03-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.hektorprofe.net/academia/python/proyecto-gestor-clientes/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -36,12 +36,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.hektorprofe.net/academia/python/tutoriales/</loc>
+     <loc>https://docs.hektorprofe.net/academia/django/introduccion/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.hektorprofe.net/academia/django/introduccion/</loc>
+     <loc>https://docs.hektorprofe.net/academia/python/proyecto-gestor-clientes/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/academia/django/api-rest-framework/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/academia/python/tutoriales/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -51,7 +61,32 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.hektorprofe.net/academia/django/api-rest-framework/</loc>
+     <loc>https://docs.hektorprofe.net/academia/javascript/introduccion/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/academia/javascript/biblioteca-p5js/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/academia/javascript/nodejs/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/academia/javascript/conversor-divisas/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/academia/javascript/chat-heroku/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/academia/javascript/cliente-nuxt/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
