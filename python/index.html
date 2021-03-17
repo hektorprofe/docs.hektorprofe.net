@@ -18,7 +18,7 @@
     
     
       
-        <title>Curso de Python | Hektor Profe</title>
+        <title>Apuntes del curso de Python | Hektor Profe</title>
       
     
     <link rel="stylesheet" href="../assets/stylesheets/application.2.css">
@@ -93,160 +93,83 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
     
     
-      <header class="md-header" data-md-component="header" style="position: inherit !important;">
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/" title="Hektor Profe" class="md-header-nav__button md-logo" style="font-size:0px;">
-          <img src="/assets/images/logo.png" width="200px" height="35px" style="margin-top:-5px;" alt="Hektor Profe" title="Hektor Profe"/>
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title" style="text-align: right;">
-<!--           <a class="nav__btn" href="/" style="margin-left:0.25em;" title="Documentos">Indice de documentos</a> -->
-          <a href="/"><img class="nav__logo" src="/assets/images/logo.png" width="200px" height="35px" style="margin:6px auto 0;" alt="Hektor Profe" title="Hektor Profe"/></a>
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
         </div>
         <style>
-          .md-sidebar[data-md-state=lock] {
+          .md-sidebar[data-md-state="lock"] {
             top: 0rem !important;
-        }
-
-           .topMsg{
-             color: white;
-                -webkit-animation: color-change 7s infinite;
-                -moz-animation: color-change 7s infinite;
-                -o-animation: color-change 7s infinite;
-                -ms-animation: color-change 7s infinite;
-                animation: color-change 7s infinite;
-            }
-
-            .topMsg:hover{
-              color: gray !important;
-            }
-
-            @-webkit-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-moz-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-ms-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-o-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-
+          }
           .md-tabs {
             display: none !important;
           }
-
-          .announce {
-            background:#009bd6;
-            color: white;
-            text-align: center;
-          }
-          
-          .announce .content {
-            margin: 0 auto;
-            padding: 13.5px 5px;
-          }
-
-        .announce .content a {
-          display: inline-block;
-          text-decoration: none;
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
-          padding: 10px 9px;
-          margin: 0px 3px;
-          border-radius: 5px;
-          line-height: 15px;
-        }
-
-        .hde {
-          display: inline-block;
-        }
-
-        .announce .content a.twitter{
-          background: #006dd3;
-        }
-        .announce .content a.twitter:hover{
-          background: #005aad;
-        }
-
-        .announce .content a.youtube{
-          background: #ff0000;
-        }
-
-        .announce .content a.youtube:hover{
-          background: #b80000;
-        }
-
-        @media (max-width: 1030px){
-          .announce .content{
-            font-size: 15px !important;
-          }
-
           .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
             display: none;
           }
-        }
-        .shakee {
-          animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-          animation-delay: 2s;
-          transform: translate3d(0, 0, 0);
-          backface-visibility: hidden;
-          perspective: 1000px;
-        }
-
-        @keyframes shake {
-          10%, 90% {
-            transform: translate3d(-1px, 0, 0);
+          .image {
+            text-align: center;
+            margin-top: 25px;
           }
-          
-          20%, 80% {
-            transform: translate3d(2px, 0, 0);
-          }
-
-          30%, 50%, 70% {
-            transform: translate3d(-4px, 0, 0);
-          }
-
-          40%, 60% {
-            transform: translate3d(4px, 0, 0);
-          }
-        }
         </style>
       </div>
-      <!--<div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/buscador/" title="Buscador del sitio"><label class="md-icon md-icon--search md-header-nav__button"></label></a>
-    </div>-->
+    </div>
   </nav>
 </header>
     
@@ -332,38 +255,9 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Presentación
-      </label>
-    
-    <a href="./" title="Presentación" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Presentación
+    <a href="./" title="Índice del archivo" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Índice del archivo
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-python" title="Instalación de Python" class="md-nav__link toc__link">
-    Instalación de Python
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -393,8 +287,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="introduccion-informal/" title="Introducción" class="md-nav__link">
-      Introducción
+    <a href="introduccion-informal/" title="Presentación" class="md-nav__link">
+      Presentación
     </a>
   </li>
 
@@ -2115,22 +2009,6 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
-    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-python" title="Instalación de Python" class="md-nav__link toc__link">
-    Instalación de Python
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2142,37 +2020,12 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <style>
-.md-footer-nav__link--prev{ display: none; }
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note{ box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.info label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
-<h1 id="apuntes-del-curso-de-python">Apuntes del curso de Python<a class="headerlink" href="#apuntes-del-curso-de-python" title="Permanent link">&para;</a></h1>
-<p>Echa un vistazo al siguiente vídeo si te interesa saber qué temas se tratan en el curso:</p>
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/291016745' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-
-<h2 id="instalacion-de-python">Instalación de Python<a class="headerlink" href="#instalacion-de-python" title="Permanent link">&para;</a></h2>
-<p>Instalar Python puede resultar tedioso, mi recomendación es siempre utilizar la suite Anaconda.</p>
-<div class="admonition tip">
-<p class="admonition-title">Anaconda es la plataforma más popular para ciencia de datos</p>
-<p>La distribución Anaconda es utilizada por 6 millones de usuarios e incluye más de 250 paquetes de ciencia de datos válidos para Windows, Linux y MacOS. Cuenta con un administrador de paquetes llamado <em>conda</em> que facilita mucho la instalación del software de ciencia de datos y aprendizaje automático como Scikit-team, TensorFlow y SciPy.</p>
-</div>
-<p>Incluye las que son para mí las tres herramientas fundamentales del aprendiz:</p>
-<ul>
-<li><strong>Anaconda Prompt</strong>: Una terminal con un intérprete de Python aislado para que no entre en conflicto con otras versiones de Python, perfecta para ejecutar tus scripts.</li>
-<li><strong>Jupyter Notebook</strong>: Un entorno de aprendizaje y experimentación pensado que sea fácil compartir código y gráficos, imprescindible para estudiantes.</li>
-<li><strong>Spyder</strong>: Un editor de código simple pero eficaz, integrado con el intérprete aislado.</li>
-</ul>
-<p>Puedes descargar Anaconda con Python 3.7 <u><a href="https://www.anaconda.com/download/">desde este enlace</a></u>. </p>
-<div class="admonition bug">
-<p class="admonition-title">Aviso para usuarios de Windows</p>
-<p>Para evitar problemas de permisos a la hora de crear los accesos directos se recomienza ejecutar el instalador de Anaconda como Administrador (clic derecho).</p>
-</div>
+                <h1 id="apuntes-del-curso-de-python">Apuntes del curso de Python<a class="headerlink" href="#apuntes-del-curso-de-python" title="Permanent link">&para;</a></h1>
+<p>Este es un material de apoyo para los alumnos de <u><a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?referralCode=11428CACE5771408E4D5">mi curso de Python en Udemy</a></u> publicados bajo una <a href="https://creativecommons.org/licenses/by/4.0/deed.es">Licencia CC BY 4.0</a>. Si vas a compartirlos asegúrate de cumplir las normas de atribución.</p>
+<p>Los exámenes, ejercicios de codificación y soluciones son de acceso exclusivo para alumnos.</p>
+<p>Podéis navegar por estos apuntes utilizando el menú lateral.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 15 de Octubre de 2018</i></small></p>
+<p><small class="edited"><i>Última edición: 17 de Marzo de 2021</i></small></p>
                 
                   
                 
@@ -2194,8 +2047,8 @@ div.my-img{text-align:center;margin-top:20px}
     <nav class="md-footer-nav__inner md-grid">
       
       <a
-        href="../academia/django/api-rest-framework/"
-        title="Proyecto API con DRF"
+        href="../academia/gnu-linux/ubuntu-server-web/"
+        title="Configurar Ubuntu Server"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -2207,14 +2060,14 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Proyecto API con DRF
+            Configurar Ubuntu Server
           </span>
         </div>
       </a>
        
       <a
         href="introduccion-informal/"
-        title="Introducción"
+        title="Presentación"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -2223,7 +2076,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Introducción
+            Presentación
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">

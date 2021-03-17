@@ -93,160 +93,83 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
     
     
-      <header class="md-header" data-md-component="header" style="position: inherit !important;">
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/" title="Hektor Profe" class="md-header-nav__button md-logo" style="font-size:0px;">
-          <img src="/assets/images/logo.png" width="200px" height="35px" style="margin-top:-5px;" alt="Hektor Profe" title="Hektor Profe"/>
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title" style="text-align: right;">
-<!--           <a class="nav__btn" href="/" style="margin-left:0.25em;" title="Documentos">Indice de documentos</a> -->
-          <a href="/"><img class="nav__logo" src="/assets/images/logo.png" width="200px" height="35px" style="margin:6px auto 0;" alt="Hektor Profe" title="Hektor Profe"/></a>
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
         </div>
         <style>
-          .md-sidebar[data-md-state=lock] {
+          .md-sidebar[data-md-state="lock"] {
             top: 0rem !important;
-        }
-
-           .topMsg{
-             color: white;
-                -webkit-animation: color-change 7s infinite;
-                -moz-animation: color-change 7s infinite;
-                -o-animation: color-change 7s infinite;
-                -ms-animation: color-change 7s infinite;
-                animation: color-change 7s infinite;
-            }
-
-            .topMsg:hover{
-              color: gray !important;
-            }
-
-            @-webkit-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-moz-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-ms-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-o-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-
+          }
           .md-tabs {
             display: none !important;
           }
-
-          .announce {
-            background:#009bd6;
-            color: white;
-            text-align: center;
-          }
-          
-          .announce .content {
-            margin: 0 auto;
-            padding: 13.5px 5px;
-          }
-
-        .announce .content a {
-          display: inline-block;
-          text-decoration: none;
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
-          padding: 10px 9px;
-          margin: 0px 3px;
-          border-radius: 5px;
-          line-height: 15px;
-        }
-
-        .hde {
-          display: inline-block;
-        }
-
-        .announce .content a.twitter{
-          background: #006dd3;
-        }
-        .announce .content a.twitter:hover{
-          background: #005aad;
-        }
-
-        .announce .content a.youtube{
-          background: #ff0000;
-        }
-
-        .announce .content a.youtube:hover{
-          background: #b80000;
-        }
-
-        @media (max-width: 1030px){
-          .announce .content{
-            font-size: 15px !important;
-          }
-
           .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
             display: none;
           }
-        }
-        .shakee {
-          animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-          animation-delay: 2s;
-          transform: translate3d(0, 0, 0);
-          backface-visibility: hidden;
-          perspective: 1000px;
-        }
-
-        @keyframes shake {
-          10%, 90% {
-            transform: translate3d(-1px, 0, 0);
+          .image {
+            text-align: center;
+            margin-top: 25px;
           }
-          
-          20%, 80% {
-            transform: translate3d(2px, 0, 0);
-          }
-
-          30%, 50%, 70% {
-            transform: translate3d(-4px, 0, 0);
-          }
-
-          40%, 60% {
-            transform: translate3d(4px, 0, 0);
-          }
-        }
         </style>
       </div>
-      <!--<div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/buscador/" title="Buscador del sitio"><label class="md-icon md-icon--search md-header-nav__button"></label></a>
-    </div>-->
+    </div>
   </nav>
 </header>
     
@@ -326,20 +249,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../" title="Presentación" class="md-nav__link">
-      Presentación
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../que-es-django/" title="Qué es Django en 2 minutos" class="md-nav__link">
-      Qué es Django en 2 minutos
+    <a href="../../" title="Índice del archivo" class="md-nav__link">
+      Índice del archivo
     </a>
   </li>
 
@@ -353,13 +264,13 @@ div.my-img{text-align:center;margin-top:20px}
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
     
-    <label class="md-nav__link" for="nav-4-3">
+    <label class="md-nav__link" for="nav-4-2">
       Proyecto Web Personal
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
+      <label class="md-nav__title" for="nav-4-2">
         Proyecto Web Personal
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -464,8 +375,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../templates-about-portfolio-contact/" title="Templates about, portfolio, etc" class="md-nav__link">
-      Templates about, portfolio, etc
+    <a href="../templates-about-portfolio-contact/" title="Templates about y portfolio" class="md-nav__link">
+      Templates about y portfolio
     </a>
   </li>
 
@@ -476,8 +387,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../herencia-plantillas-templates/" title="Herencia en nuestras plantillas" class="md-nav__link">
-      Herencia en nuestras plantillas
+    <a href="../herencia-plantillas-templates/" title="Herencia en las plantillas" class="md-nav__link">
+      Herencia en las plantillas
     </a>
   </li>
 
@@ -488,8 +399,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../adaptar-plantillas-herencia/" title="Adaptar plantillas con herencia" class="md-nav__link">
-      Adaptar plantillas con herencia
+    <a href="../adaptar-plantillas-herencia/" title="Adaptar plantillas y herencia" class="md-nav__link">
+      Adaptar plantillas y herencia
     </a>
   </li>
 
@@ -512,8 +423,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../uniendo-frontend-backend/" title="Uniendo el frontend y backend" class="md-nav__link">
-      Uniendo el frontend y backend
+    <a href="../uniendo-frontend-backend/" title="Uniendo frontend y backend" class="md-nav__link">
+      Uniendo frontend y backend
     </a>
   </li>
 
@@ -524,8 +435,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../creando-cabecera-dinamica/" title="Creando la cabecera dinámica" class="md-nav__link">
-      Creando la cabecera dinámica
+    <a href="../creando-cabecera-dinamica/" title="Creando cabecera dinámica" class="md-nav__link">
+      Creando cabecera dinámica
     </a>
   </li>
 
@@ -584,8 +495,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../patron-mvt-modelo-vista-template/" title="Patrón Modelo-Vista-Template" class="md-nav__link">
-      Patrón Modelo-Vista-Template
+    <a href="../patron-mvt-modelo-vista-template/" title="Patrón MVC" class="md-nav__link">
+      Patrón MVC
     </a>
   </li>
 
@@ -614,13 +525,13 @@ div.my-img{text-align:center;margin-top:20px}
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
-    <label class="md-nav__link" for="nav-4-4">
+    <label class="md-nav__link" for="nav-4-3">
       Proyecto Web Empresarial
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
+      <label class="md-nav__title" for="nav-4-3">
         Proyecto Web Empresarial
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -740,8 +651,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-empresarial/crear-vistas-blog-1/" title="Creando las vistas del Blog (1)" class="md-nav__link">
-      Creando las vistas del Blog (1)
+    <a href="../../web-empresarial/crear-vistas-blog-1/" title="Creando vistas del Blog (1)" class="md-nav__link">
+      Creando vistas del Blog (1)
     </a>
   </li>
 
@@ -752,8 +663,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-empresarial/crear-vistas-blog-2/" title="Creando las vistas del Blog (2)" class="md-nav__link">
-      Creando las vistas del Blog (2)
+    <a href="../../web-empresarial/crear-vistas-blog-2/" title="Creando vistas del Blog (2)" class="md-nav__link">
+      Creando vistas del Blog (2)
     </a>
   </li>
 

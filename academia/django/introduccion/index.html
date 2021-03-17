@@ -93,160 +93,83 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
     
     
-      <header class="md-header" data-md-component="header" style="position: inherit !important;">
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/" title="Hektor Profe" class="md-header-nav__button md-logo" style="font-size:0px;">
-          <img src="/assets/images/logo.png" width="200px" height="35px" style="margin-top:-5px;" alt="Hektor Profe" title="Hektor Profe"/>
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title" style="text-align: right;">
-<!--           <a class="nav__btn" href="/" style="margin-left:0.25em;" title="Documentos">Indice de documentos</a> -->
-          <a href="/"><img class="nav__logo" src="/assets/images/logo.png" width="200px" height="35px" style="margin:6px auto 0;" alt="Hektor Profe" title="Hektor Profe"/></a>
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
         </div>
         <style>
-          .md-sidebar[data-md-state=lock] {
+          .md-sidebar[data-md-state="lock"] {
             top: 0rem !important;
-        }
-
-           .topMsg{
-             color: white;
-                -webkit-animation: color-change 7s infinite;
-                -moz-animation: color-change 7s infinite;
-                -o-animation: color-change 7s infinite;
-                -ms-animation: color-change 7s infinite;
-                animation: color-change 7s infinite;
-            }
-
-            .topMsg:hover{
-              color: gray !important;
-            }
-
-            @-webkit-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-moz-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-ms-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-o-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-
+          }
           .md-tabs {
             display: none !important;
           }
-
-          .announce {
-            background:#009bd6;
-            color: white;
-            text-align: center;
-          }
-          
-          .announce .content {
-            margin: 0 auto;
-            padding: 13.5px 5px;
-          }
-
-        .announce .content a {
-          display: inline-block;
-          text-decoration: none;
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
-          padding: 10px 9px;
-          margin: 0px 3px;
-          border-radius: 5px;
-          line-height: 15px;
-        }
-
-        .hde {
-          display: inline-block;
-        }
-
-        .announce .content a.twitter{
-          background: #006dd3;
-        }
-        .announce .content a.twitter:hover{
-          background: #005aad;
-        }
-
-        .announce .content a.youtube{
-          background: #ff0000;
-        }
-
-        .announce .content a.youtube:hover{
-          background: #b80000;
-        }
-
-        @media (max-width: 1030px){
-          .announce .content{
-            font-size: 15px !important;
-          }
-
           .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
             display: none;
           }
-        }
-        .shakee {
-          animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-          animation-delay: 2s;
-          transform: translate3d(0, 0, 0);
-          backface-visibility: hidden;
-          perspective: 1000px;
-        }
-
-        @keyframes shake {
-          10%, 90% {
-            transform: translate3d(-1px, 0, 0);
+          .image {
+            text-align: center;
+            margin-top: 25px;
           }
-          
-          20%, 80% {
-            transform: translate3d(2px, 0, 0);
-          }
-
-          30%, 50%, 70% {
-            transform: translate3d(-4px, 0, 0);
-          }
-
-          40%, 60% {
-            transform: translate3d(4px, 0, 0);
-          }
-        }
         </style>
       </div>
-      <!--<div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/buscador/" title="Buscador del sitio"><label class="md-icon md-icon--search md-header-nav__button"></label></a>
-    </div>-->
+    </div>
   </nav>
 </header>
     
@@ -587,6 +510,42 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      GNU/Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        GNU/Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../gnu-linux/ubuntu-server-web/" title="Configurar Ubuntu Server" class="md-nav__link">
+      Configurar Ubuntu Server
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -710,22 +669,7 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{
-    color: #018dc5 !important;
-}
-.admonition.info{
-    font-size: 100%;
-}
-.admonition.info label{
-    font-size: 91%;
-}
-.admonition.note > .admonition-title {
-    display: none;
-}
-</style>
-
-<h1 id="introduccion-a-django">Introducción a Django<a class="headerlink" href="#introduccion-a-django" title="Permanent link">&para;</a></h1>
+                <h1 id="introduccion-a-django">Introducción a Django<a class="headerlink" href="#introduccion-a-django" title="Permanent link">&para;</a></h1>
 <ul>
 <li>Django es un framework web creado en 2003, programado en Python, gratuito y libre. </li>
 <li>Fue liberado en 2005 y desde 2008 cuenta con su propia fundación para hacerse cargo de su desarrollo.</li>

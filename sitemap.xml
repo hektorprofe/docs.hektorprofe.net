@@ -56,6 +56,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.hektorprofe.net/academia/gnu-linux/ubuntu-server-web/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.hektorprofe.net/python/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
@@ -611,11 +616,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.hektorprofe.net/django/que-es-django/</loc>
-     <lastmod>2021-03-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://docs.hektorprofe.net/django/web-personal/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
@@ -792,6 +792,11 @@
     </url>
     <url>
      <loc>https://docs.hektorprofe.net/django/web-empresarial/personalizando-panel-administrador-parte-3/</loc>
+     <lastmod>2021-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/escueladevideojuegos/</loc>
      <lastmod>2021-03-17</lastmod>
      <changefreq>daily</changefreq>
     </url>

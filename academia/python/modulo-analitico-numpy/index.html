@@ -93,160 +93,83 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
     
     
-      <header class="md-header" data-md-component="header" style="position: inherit !important;">
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/" title="Hektor Profe" class="md-header-nav__button md-logo" style="font-size:0px;">
-          <img src="/assets/images/logo.png" width="200px" height="35px" style="margin-top:-5px;" alt="Hektor Profe" title="Hektor Profe"/>
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title" style="text-align: right;">
-<!--           <a class="nav__btn" href="/" style="margin-left:0.25em;" title="Documentos">Indice de documentos</a> -->
-          <a href="/"><img class="nav__logo" src="/assets/images/logo.png" width="200px" height="35px" style="margin:6px auto 0;" alt="Hektor Profe" title="Hektor Profe"/></a>
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
         </div>
         <style>
-          .md-sidebar[data-md-state=lock] {
+          .md-sidebar[data-md-state="lock"] {
             top: 0rem !important;
-        }
-
-           .topMsg{
-             color: white;
-                -webkit-animation: color-change 7s infinite;
-                -moz-animation: color-change 7s infinite;
-                -o-animation: color-change 7s infinite;
-                -ms-animation: color-change 7s infinite;
-                animation: color-change 7s infinite;
-            }
-
-            .topMsg:hover{
-              color: gray !important;
-            }
-
-            @-webkit-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-moz-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-ms-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-o-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-
+          }
           .md-tabs {
             display: none !important;
           }
-
-          .announce {
-            background:#009bd6;
-            color: white;
-            text-align: center;
-          }
-          
-          .announce .content {
-            margin: 0 auto;
-            padding: 13.5px 5px;
-          }
-
-        .announce .content a {
-          display: inline-block;
-          text-decoration: none;
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
-          padding: 10px 9px;
-          margin: 0px 3px;
-          border-radius: 5px;
-          line-height: 15px;
-        }
-
-        .hde {
-          display: inline-block;
-        }
-
-        .announce .content a.twitter{
-          background: #006dd3;
-        }
-        .announce .content a.twitter:hover{
-          background: #005aad;
-        }
-
-        .announce .content a.youtube{
-          background: #ff0000;
-        }
-
-        .announce .content a.youtube:hover{
-          background: #b80000;
-        }
-
-        @media (max-width: 1030px){
-          .announce .content{
-            font-size: 15px !important;
-          }
-
           .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
             display: none;
           }
-        }
-        .shakee {
-          animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-          animation-delay: 2s;
-          transform: translate3d(0, 0, 0);
-          backface-visibility: hidden;
-          perspective: 1000px;
-        }
-
-        @keyframes shake {
-          10%, 90% {
-            transform: translate3d(-1px, 0, 0);
+          .image {
+            text-align: center;
+            margin-top: 25px;
           }
-          
-          20%, 80% {
-            transform: translate3d(2px, 0, 0);
-          }
-
-          30%, 50%, 70% {
-            transform: translate3d(-4px, 0, 0);
-          }
-
-          40%, 60% {
-            transform: translate3d(4px, 0, 0);
-          }
-        }
         </style>
       </div>
-      <!--<div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/buscador/" title="Buscador del sitio"><label class="md-icon md-icon--search md-header-nav__button"></label></a>
-    </div>-->
+    </div>
   </nav>
 </header>
     
@@ -953,6 +876,42 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      GNU/Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        GNU/Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../gnu-linux/ubuntu-server-web/" title="Configurar Ubuntu Server" class="md-nav__link">
+      Configurar Ubuntu Server
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1442,16 +1401,7 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-.img-content{ text-align:center;margin-top:25px; }
-.lazy { max-width: 220px; }
-</style>
-
-<h1 id="introduccion-al-modulo-analitico-numpy">Introducción al módulo analítico NumPy<a class="headerlink" href="#introduccion-al-modulo-analitico-numpy" title="Permanent link">&para;</a></h1>
+                <h1 id="introduccion-al-modulo-analitico-numpy">Introducción al módulo analítico NumPy<a class="headerlink" href="#introduccion-al-modulo-analitico-numpy" title="Permanent link">&para;</a></h1>
 <p>El análisis de datos básico en Python se realiza utilizando tres bibliotecas que se complementan perfectamente entre ellas:</p>
 <ul>
 <li><strong>NumPy</strong>: Para manejar <strong>arrays</strong>.</li>
@@ -1496,7 +1446,7 @@ pipenv install jupyter numpy pandas matplotlib
 <span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
-<p>Veremos algo interesante, y es que el <strong>array</strong> se muestra como una tabla de 2 filas con 5 columnas, números que precisamente concuerdan con la forma <strong>(2, 5)</strong>. </p>
+<p>Veremos algo interesante, y es que el <strong>array</strong> se muestra como una tabla de 2 filas con 5 columnas, números que precisamente concuerdan con la forma <strong>(2, 5)</strong>.</p>
 <p>Estas estructuras formadas por filas y columnas parecidas a una tabla tienen dos dimensiones, anchura y altura (por eso nos dice que tiene 2 dimensiones). También se conocen como vectores multidimensionales, vectores 2D o matrices.</p>
 <p>Por acabar la lección otro concepto importante y es que podemos consultar el tipo de los <strong>arrays</strong>.</p>
 <h3 id="tipo-de-un-array">Tipo de un array<a class="headerlink" href="#tipo-de-un-array" title="Permanent link">&para;</a></h3>
@@ -1529,8 +1479,8 @@ pipenv install jupyter numpy pandas matplotlib
 <p>Cada bloc se estructura en celdas y para definir una usaremos la sintaxis:</p>
 <div class="highlight"><pre><span></span><span class="c1"># %%</span>
 </pre></div>
-<p>Todo lo que viene después hasta encontrar otra celda podemos ejecutarlo independientemente. </p>
-<p>Además una ventaja de usar las celdas es que no necesitamos usar <strong>print</strong> para mostrar el último dato, se muestra por defecto: </p>
+<p>Todo lo que viene después hasta encontrar otra celda podemos ejecutarlo independientemente.</p>
+<p>Además una ventaja de usar las celdas es que no necesitamos usar <strong>print</strong> para mostrar el último dato, se muestra por defecto:</p>
 <div class="highlight"><pre><span></span><span class="c1"># %%</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
@@ -1545,7 +1495,7 @@ pipenv install jupyter numpy pandas matplotlib
 <span class="n">array</span>
 </pre></div>
 <p>Sin embargo esto sólo funciona si préviamente hemos ejecutado la otra celda. Si reiniciamos el kernel (botón de flecha girando), al ejecutar de nuevo la segunda celda veremos que no encuentra la definición de nuestro <strong>array</strong>, tendremos que ejecutar la celda anterior que es donde tenemos definida esa variable para poder utilizarla.</p>
-<p>Podemos ver en todo momentos las variables que hay en la memoria del bloc desplegando el botón superior  <strong>variables</strong>. </p>
+<p>Podemos ver en todo momentos las variables que hay en la memoria del bloc desplegando el botón superior <strong>variables</strong>.</p>
 <h3 id="uso-de-markdown">Uso de markdown<a class="headerlink" href="#uso-de-markdown" title="Permanent link">&para;</a></h3>
 <p>Para realizar reportes podemos activar el uso de código <strong>markdown</strong> en las celdas, si no conocéis este lenguaje os animo a aprenderlo, es muy sencillo, hagamos un ejemplo:</p>
 <div class="highlight"><pre><span></span><span class="c1"># %% [markdown]</span>
@@ -1590,10 +1540,10 @@ pipenv install jupyter numpy pandas matplotlib
 <p>Pero no nos adelantemos...</p>
 <h3 id="exportando-un-bloc">Exportando un bloc<a class="headerlink" href="#exportando-un-bloc" title="Permanent link">&para;</a></h3>
 <p>Lo último que vamos a ver es cómo exportar un bloc para compartir nuestros reportes con todo el mundo.</p>
-<p>Para hacerlo solo tenemos que presionar el botón para guardar el bloc en formato <strong>ipynb</strong> en la parte superior del documento. </p>
+<p>Para hacerlo solo tenemos que presionar el botón para guardar el bloc en formato <strong>ipynb</strong> en la parte superior del documento.</p>
 <p>Plataformas como Google Drive y Github interpretarán automáticamente este formato para mostrar las celdas y sus contenidos, tablas y gráficos.</p>
 <h2 id="arrays-pregenerados">Arrays pregenerados<a class="headerlink" href="#arrays-pregenerados" title="Permanent link">&para;</a></h2>
-<p>Crear arrays siempre a partir de listas puede ser muy tedioso, por eso <strong>numpy</strong> integra varias funciones muy útiles para generar arrays de uso común en el álgebra de matrices.   </p>
+<p>Crear arrays siempre a partir de listas puede ser muy tedioso, por eso <strong>numpy</strong> integra varias funciones muy útiles para generar arrays de uso común en el álgebra de matrices.</p>
 <h3 id="array-de-ceros">Array de ceros<a class="headerlink" href="#array-de-ceros" title="Permanent link">&para;</a></h3>
 <p>Un array de ceros es cuando todos sus elementos son ceros. Podemos generarlos con el método <strong>zeros</strong> de Numpy:</p>
 <div class="highlight"><pre><span></span><span class="c1"># %%</span>
@@ -1650,9 +1600,9 @@ pipenv install jupyter numpy pandas matplotlib
 <div class="highlight"><pre><span></span><span class="n">arr_2</span> <span class="o">-</span> <span class="n">arr_1</span>
 </pre></div>
 <p>¿Qué ocurriría si restamos un array a si mismo?</p>
-<p><div class="highlight"><pre><span></span><span class="n">arr_1</span> <span class="o">-</span> <span class="n">arr_1</span>
+<div class="highlight"><pre><span></span><span class="n">arr_1</span> <span class="o">-</span> <span class="n">arr_1</span>
 </pre></div>
-Pues que obtenemos un array con todos los valores a cero.</p>
+<p>Pues que obtenemos un array con todos los valores a cero.</p>
 <h3 id="producto">Producto<a class="headerlink" href="#producto" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><span class="n">arr_1</span> <span class="o">*</span> <span class="n">arr_2</span>
 </pre></div>
@@ -1745,7 +1695,7 @@ Pues que obtenemos un array con todos los valores a cero.</p>
 <p>Si queremos saber el de la quinta posición, simplemente tomamos el 5 y le restamos 1, por tanto sería índice 4:</p>
 <div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
-<p>En Python el índice -1 hace referencia a la última posición de la colección, el -2 al penúltimo, etc. </p>
+<p>En Python el índice -1 hace referencia a la última posición de la colección, el -2 al penúltimo, etc.</p>
 <p>Así que también podemos utilizar índices negativos en arrays:</p>
 <div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
@@ -1775,11 +1725,11 @@ Pues que obtenemos un array con todos los valores a cero.</p>
 <span class="n">sub_arr</span>
 </pre></div>
 <p>Por ahora todo bien, pero vamos a modificar este subarray:</p>
-<p><div class="highlight"><pre><span></span><span class="n">sub_arr</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">50</span>
+<div class="highlight"><pre><span></span><span class="n">sub_arr</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">50</span>
 
 <span class="n">sub_arr</span>
 </pre></div>
-Ahora veamos qué ha ocurrido con el array original:</p>
+<p>Ahora veamos qué ha ocurrido con el array original:</p>
 <div class="highlight"><pre><span></span><span class="n">arr</span>
 </pre></div>
 <p>¡Pues que se también se ha actualizado!</p>
@@ -1800,7 +1750,7 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <div class="highlight"><pre><span></span><span class="n">arr</span>
 </pre></div>
 <h2 id="arrays-de-2-dimensiones">Arrays de 2 dimensiones<a class="headerlink" href="#arrays-de-2-dimensiones" title="Permanent link">&para;</a></h2>
-<p>En la lección anterior vimos como trabajar con arrays de una dimensión, ahora veremos como se trasladan esos conceptos a la segunda dimensión. </p>
+<p>En la lección anterior vimos como trabajar con arrays de una dimensión, ahora veremos como se trasladan esos conceptos a la segunda dimensión.</p>
 <p>Es extremadamente sencillo si nos imaginamos el array como una <strong>tabla</strong> con filas y columnas.</p>
 <div class="highlight"><pre><span></span><span class="c1"># %%</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -1847,7 +1797,7 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <p>Evidentemente los arrays de dos dimensiones también están referenciados en memoria, por lo que todos los cambios realizados en un subarray se verán reflejados en el original.</p>
 <p><strong>Recordad utilizar el método .copy() para crear copias por valor y no por referencia a la memoria.</strong></p>
 <h3 id="fancy-index">Fancy index<a class="headerlink" href="#fancy-index" title="Permanent link">&para;</a></h3>
-<p>El último concepto importante que veremos sobre los arrays 2d es el fancy index. Esta propiedad de los arrays nos permite trabajar muy cómodamente con las filas de estos arrays. </p>
+<p>El último concepto importante que veremos sobre los arrays 2d es el fancy index. Esta propiedad de los arrays nos permite trabajar muy cómodamente con las filas de estos arrays.</p>
 <p>Por ejemplo, vamos a crear una matriz 5x10 llena de ceros:</p>
 <div class="highlight"><pre><span></span><span class="n">arr_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
@@ -1863,7 +1813,7 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <p>Por ejemplo podemos modificar al vuelo la primera, tercera y última fila:</p>
 <div class="highlight"><pre><span></span><span class="n">arr_2d</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">99</span>
 
-<span class="n">arr_2d</span>   
+<span class="n">arr_2d</span>
 </pre></div>
 <p>Incluso podemos utilizarlo en cualquier orden o doblando índices:</p>
 <div class="highlight"><pre><span></span><span class="n">arr_2d</span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
@@ -1882,7 +1832,7 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <h2 id="arrays-de-3-dimensiones">Arrays de &gt;=3 dimensiones<a class="headerlink" href="#arrays-de-3-dimensiones" title="Permanent link">&para;</a></h2>
 <p>Hasta ahora hemos trabajado los arrays de 1 y 2 dimensiones, así que la pregunta es... ¿Será posible hacer lo mismo con 3 o más dimensiones? Pues sí. ¿Pero cómo se hace?</p>
 <h3 id="creacion-basica">Creación básica<a class="headerlink" href="#creacion-basica" title="Permanent link">&para;</a></h3>
-<p>De la misma forma que un array de 2 dimensiones, el truco para crear uno de 3 consiste en anidar listas a 3 niveles de profundidad. </p>
+<p>De la misma forma que un array de 2 dimensiones, el truco para crear uno de 3 consiste en anidar listas a 3 niveles de profundidad.</p>
 <p>Para entender bien el proceso vamos a recrear los 3 niveles de profundidad paso a paso para un array muy simple de 2x2x2</p>
 <div class="highlight"><pre><span></span><span class="c1"># %%</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -1896,45 +1846,45 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <span class="c1"># Segundo nivel, 2 elementos en ancho por 2 de alto,</span>
 <span class="c1"># 4 elementos en total</span>
 <span class="n">arr_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> 
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="p">])</span>
 <span class="n">arr_2d</span>
 
-<span class="c1"># Tercer nivel, 2 elementos en ancho por 2 de alto </span>
+<span class="c1"># Tercer nivel, 2 elementos en ancho por 2 de alto</span>
 <span class="c1"># por 2 de profundidad, 8 elementos en total</span>
 <span class="n">arr_3d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
     <span class="p">[</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> 
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
         <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-    <span class="p">],</span> 
+    <span class="p">],</span>
     <span class="p">[</span>
-        <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> 
+        <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
         <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
     <span class="p">]</span>
 <span class="p">])</span>
 <span class="n">arr_3d</span>
 </pre></div>
-<p>Con esto tenemos las 3 dimensiones, pero podemos añadir más. </p>
+<p>Con esto tenemos las 3 dimensiones, pero podemos añadir más.</p>
 <p>El concepto es difícil de imaginar, ya que nosotros únicamente percibimos 3 dimensiones, pero si lo entendemos como una ramificación en dónde por cada elemento ahora hay otra lista con dos elementos, entonces no es tan imposible hacernos una idea:</p>
-<div class="highlight"><pre><span></span><span class="c1"># Cuarto nivel, 2 elementos en ancho por 2 de alto </span>
+<div class="highlight"><pre><span></span><span class="c1"># Cuarto nivel, 2 elementos en ancho por 2 de alto</span>
 <span class="c1"># por 2 de profundidad por 2 más, 16 en total</span>
 <span class="n">arr_4d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
     <span class="p">[</span>
         <span class="p">[</span>
-            <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> 
+            <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-        <span class="p">],</span> 
+        <span class="p">],</span>
         <span class="p">[</span>
-            <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> 
+            <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
         <span class="p">]</span>
-    <span class="p">],</span> 
+    <span class="p">],</span>
     <span class="p">[</span>
         <span class="p">[</span>
-            <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> 
+            <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-        <span class="p">],</span> 
+        <span class="p">],</span>
         <span class="p">[</span>
             <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
@@ -1954,19 +1904,19 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <span class="n">arr_4d</span>
 </pre></div>
 <h3 id="creacion-con-reshape">Creación con reshape<a class="headerlink" href="#creacion-con-reshape" title="Permanent link">&para;</a></h3>
-<p>Reshape es una función que sirve para reformar las dimensiones y sus tamaños. </p>
+<p>Reshape es una función que sirve para reformar las dimensiones y sus tamaños.</p>
 <p>Por ejemplo podemos reformar una matriz de 3x3 a partir de un rango de 9 elementos:</p>
 <div class="highlight"><pre><span></span><span class="n">arr_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">arr_2d</span> 
+<span class="n">arr_2d</span>
 </pre></div>
 <p>Evidentemente tenemos que seguir un patrón lógico, y es que el número de elementos tiene que concordar con el tamaño de las dimensiones multiplicadas.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Esto no funcionará: 9 != 3x3x3</span>
 <span class="n">arr_3d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">arr_3d</span> 
+<span class="n">arr_3d</span>
 
 <span class="c1"># Esto sí que funcionará: 27 == 3x3x3</span>
 <span class="n">arr_3d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">arr_3d</span> 
+<span class="n">arr_3d</span>
 </pre></div>
 <h2 id="arrays-transpuestos">Arrays transpuestos<a class="headerlink" href="#arrays-transpuestos" title="Permanent link">&para;</a></h2>
 <p>Una matriz transpuesta es una matriz que refleja a otra, de manera que las columnas se vuelven filas y las filas columnas:</p>
@@ -2012,9 +1962,9 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <div class="highlight"><pre><span></span><span class="n">arr_3d</span><span class="o">.</span><span class="n">swapaxes</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 <h2 id="funciones-universales">Funciones universales<a class="headerlink" href="#funciones-universales" title="Permanent link">&para;</a></h2>
-<p>En esta lección vamos a ver algunas de las funciones universales de la clase array de Numpy.  Se llaman universales porque sirven para aplicar funciones matemáticas comunes a los elementos del array.</p>
-<p>Podemos encontrar <strong>operaciones matemáticas</strong>, <strong>trigonométricas</strong>, <strong>flotantes</strong>, <strong>comparativas</strong> y de cambios de bits. </p>
-<p><a href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html#available-ufuncs">En este enlace a la documentación oficial</a> encontraréis el listado completo con ejemplos de uso. </p>
+<p>En esta lección vamos a ver algunas de las funciones universales de la clase array de Numpy. Se llaman universales porque sirven para aplicar funciones matemáticas comunes a los elementos del array.</p>
+<p>Podemos encontrar <strong>operaciones matemáticas</strong>, <strong>trigonométricas</strong>, <strong>flotantes</strong>, <strong>comparativas</strong> y de cambios de bits.</p>
+<p><a href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html#available-ufuncs">En este enlace a la documentación oficial</a> encontraréis el listado completo con ejemplos de uso.</p>
 <p>Por ahora vamos a practicar algunas de las más comunes.</p>
 <h3 id="matematicas">Matemáticas<a class="headerlink" href="#matematicas" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><span class="c1"># %%</span>
@@ -2074,7 +2024,7 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 </pre></div>
 <h2 id="funciones-aleatorias">Funciones aleatorias<a class="headerlink" href="#funciones-aleatorias" title="Permanent link">&para;</a></h2>
 <p>Ya que estamos repasando funciones no podemos olvidar las funciones aleatorias de <strong>numpy</strong>, encontradas en el módulo random.</p>
-<p><a href="https://docs.scipy.org/doc/numpy-1.12.0/reference/routines.random.html">En este enlace a la documentación oficial</a> encontraréis el listado completo con ejemplos de uso. </p>
+<p><a href="https://docs.scipy.org/doc/numpy-1.12.0/reference/routines.random.html">En este enlace a la documentación oficial</a> encontraréis el listado completo con ejemplos de uso.</p>
 <p>Tenemos funciones para generar arrays con <strong>datos aleatorios</strong> y <strong>permutaciones</strong>. También hay muchas enfocadas a generar muestras de distribuciones de probabilidadpensadas para visualizar estadística.</p>
 <p>Vamos a practicar algunas de las dos primeras.</p>
 <h3 id="datos-aleatorios">Datos aleatorios<a class="headerlink" href="#datos-aleatorios" title="Permanent link">&para;</a></h3>
@@ -2120,7 +2070,7 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <span class="n">arr</span>
 </pre></div>
 <h2 id="filtrado-de-arrays">Filtrado de arrays<a class="headerlink" href="#filtrado-de-arrays" title="Permanent link">&para;</a></h2>
-<p>En esta lección vamos a repasar algunas funciones para filtrar nuestros arrays. </p>
+<p>En esta lección vamos a repasar algunas funciones para filtrar nuestros arrays.</p>
 <p>Si queréis más información sobre las funciones disponibles no olvidéis pasaros por <a href="https://docs.scipy.org/doc/numpy-1.12.0/reference/index.html">la documentación oficial en este enlace</a>.</p>
 <h3 id="filtro-unique">Filtro unique<a class="headerlink" href="#filtro-unique" title="Permanent link">&para;</a></h3>
 <p>Devuelve un array de una dimensión borrando todos los elementos duplicados.</p>
@@ -2272,12 +2222,12 @@ Ahora veamos qué ha ocurrido con el array original:</p>
 <div class="highlight"><pre><span></span><span class="c1"># Columnas con ,</span>
 <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;arr_3.txt&#39;</span><span class="p">,</span> <span class="n">arr_3</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 </pre></div>
-<p>Esto generaría algo como:
+<p>Esto generaría algo como:</p>
 <div class="highlight"><pre><span></span>-6.000000000000000000e+00,9.000000000000000000e+00,-8.000000000000000000e+00
 0.000000000000000000e+00,3.000000000000000000e+00,6.000000000000000000e+00
 4.000000000000000000e+00,0.000000000000000000e+00,4.000000000000000000e+00
 </pre></div>
-No importa cómo lo guardemos, lo importante es que a la hora de recuperarlos indiquemos los separadores si los hemos cambiado:</p>
+<p>No importa cómo lo guardemos, lo importante es que a la hora de recuperarlos indiquemos los separadores si los hemos cambiado:</p>
 <div class="highlight"><pre><span></span><span class="c1"># Lo borramos</span>
 <span class="k">del</span><span class="p">(</span><span class="n">arr_3</span><span class="p">)</span>
 

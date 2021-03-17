@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Recopilación de apuntes de mi curso de Django Framework para aprender desarrollar web backend.">
+        <meta name="description" content="Recopilación de apuntes de mi curso sobre el framework Django para aprender con proyectos.">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/django/">
@@ -18,7 +18,7 @@
     
     
       
-        <title>Curso Práctico de Django | Hektor Profe</title>
+        <title>Apuntes del curso de Django Framework | Hektor Profe</title>
       
     
     <link rel="stylesheet" href="../assets/stylesheets/application.2.css">
@@ -88,165 +88,88 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#apuntes-del-curso-de-django" tabindex="1" class="md-skip">
+      <a href="../#apuntes-del-curso-de-django-framework" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
     
-      <header class="md-header" data-md-component="header" style="position: inherit !important;">
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/" title="Hektor Profe" class="md-header-nav__button md-logo" style="font-size:0px;">
-          <img src="/assets/images/logo.png" width="200px" height="35px" style="margin-top:-5px;" alt="Hektor Profe" title="Hektor Profe"/>
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title" style="text-align: right;">
-<!--           <a class="nav__btn" href="/" style="margin-left:0.25em;" title="Documentos">Indice de documentos</a> -->
-          <a href="/"><img class="nav__logo" src="/assets/images/logo.png" width="200px" height="35px" style="margin:6px auto 0;" alt="Hektor Profe" title="Hektor Profe"/></a>
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
         </div>
         <style>
-          .md-sidebar[data-md-state=lock] {
+          .md-sidebar[data-md-state="lock"] {
             top: 0rem !important;
-        }
-
-           .topMsg{
-             color: white;
-                -webkit-animation: color-change 7s infinite;
-                -moz-animation: color-change 7s infinite;
-                -o-animation: color-change 7s infinite;
-                -ms-animation: color-change 7s infinite;
-                animation: color-change 7s infinite;
-            }
-
-            .topMsg:hover{
-              color: gray !important;
-            }
-
-            @-webkit-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-moz-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-ms-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-o-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-
+          }
           .md-tabs {
             display: none !important;
           }
-
-          .announce {
-            background:#009bd6;
-            color: white;
-            text-align: center;
-          }
-          
-          .announce .content {
-            margin: 0 auto;
-            padding: 13.5px 5px;
-          }
-
-        .announce .content a {
-          display: inline-block;
-          text-decoration: none;
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
-          padding: 10px 9px;
-          margin: 0px 3px;
-          border-radius: 5px;
-          line-height: 15px;
-        }
-
-        .hde {
-          display: inline-block;
-        }
-
-        .announce .content a.twitter{
-          background: #006dd3;
-        }
-        .announce .content a.twitter:hover{
-          background: #005aad;
-        }
-
-        .announce .content a.youtube{
-          background: #ff0000;
-        }
-
-        .announce .content a.youtube:hover{
-          background: #b80000;
-        }
-
-        @media (max-width: 1030px){
-          .announce .content{
-            font-size: 15px !important;
-          }
-
           .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
             display: none;
           }
-        }
-        .shakee {
-          animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-          animation-delay: 2s;
-          transform: translate3d(0, 0, 0);
-          backface-visibility: hidden;
-          perspective: 1000px;
-        }
-
-        @keyframes shake {
-          10%, 90% {
-            transform: translate3d(-1px, 0, 0);
+          .image {
+            text-align: center;
+            margin-top: 25px;
           }
-          
-          20%, 80% {
-            transform: translate3d(2px, 0, 0);
-          }
-
-          30%, 50%, 70% {
-            transform: translate3d(-4px, 0, 0);
-          }
-
-          40%, 60% {
-            transform: translate3d(4px, 0, 0);
-          }
-        }
         </style>
       </div>
-      <!--<div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/buscador/" title="Buscador del sitio"><label class="md-icon md-icon--search md-header-nav__button"></label></a>
-    </div>-->
+    </div>
   </nav>
 </header>
     
@@ -334,51 +257,10 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Presentación
-      </label>
-    
-    <a href="./" title="Presentación" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Presentación
+    <a href="./" title="Índice del archivo" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Índice del archivo
     </a>
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prueba-los-proyectos" title="Prueba los proyectos" class="md-nav__link toc__link">
-    Prueba los proyectos
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="que-es-django/" title="Qué es Django en 2 minutos" class="md-nav__link">
-      Qué es Django en 2 minutos
-    </a>
   </li>
 
         
@@ -389,13 +271,13 @@ div.my-img{text-align:center;margin-top:20px}
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
     
-    <label class="md-nav__link" for="nav-4-3">
+    <label class="md-nav__link" for="nav-4-2">
       Proyecto Web Personal
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
+      <label class="md-nav__title" for="nav-4-2">
         Proyecto Web Personal
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -491,8 +373,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-personal/templates-about-portfolio-contact/" title="Templates about, portfolio, etc" class="md-nav__link">
-      Templates about, portfolio, etc
+    <a href="web-personal/templates-about-portfolio-contact/" title="Templates about y portfolio" class="md-nav__link">
+      Templates about y portfolio
     </a>
   </li>
 
@@ -503,8 +385,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-personal/herencia-plantillas-templates/" title="Herencia en nuestras plantillas" class="md-nav__link">
-      Herencia en nuestras plantillas
+    <a href="web-personal/herencia-plantillas-templates/" title="Herencia en las plantillas" class="md-nav__link">
+      Herencia en las plantillas
     </a>
   </li>
 
@@ -515,8 +397,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-personal/adaptar-plantillas-herencia/" title="Adaptar plantillas con herencia" class="md-nav__link">
-      Adaptar plantillas con herencia
+    <a href="web-personal/adaptar-plantillas-herencia/" title="Adaptar plantillas y herencia" class="md-nav__link">
+      Adaptar plantillas y herencia
     </a>
   </li>
 
@@ -539,8 +421,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-personal/uniendo-frontend-backend/" title="Uniendo el frontend y backend" class="md-nav__link">
-      Uniendo el frontend y backend
+    <a href="web-personal/uniendo-frontend-backend/" title="Uniendo frontend y backend" class="md-nav__link">
+      Uniendo frontend y backend
     </a>
   </li>
 
@@ -551,8 +433,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-personal/creando-cabecera-dinamica/" title="Creando la cabecera dinámica" class="md-nav__link">
-      Creando la cabecera dinámica
+    <a href="web-personal/creando-cabecera-dinamica/" title="Creando cabecera dinámica" class="md-nav__link">
+      Creando cabecera dinámica
     </a>
   </li>
 
@@ -611,8 +493,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-personal/patron-mvt-modelo-vista-template/" title="Patrón Modelo-Vista-Template" class="md-nav__link">
-      Patrón Modelo-Vista-Template
+    <a href="web-personal/patron-mvt-modelo-vista-template/" title="Patrón MVC" class="md-nav__link">
+      Patrón MVC
     </a>
   </li>
 
@@ -641,13 +523,13 @@ div.my-img{text-align:center;margin-top:20px}
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
-    <label class="md-nav__link" for="nav-4-4">
+    <label class="md-nav__link" for="nav-4-3">
       Proyecto Web Empresarial
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
+      <label class="md-nav__title" for="nav-4-3">
         Proyecto Web Empresarial
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -767,8 +649,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-empresarial/crear-vistas-blog-1/" title="Creando las vistas del Blog (1)" class="md-nav__link">
-      Creando las vistas del Blog (1)
+    <a href="web-empresarial/crear-vistas-blog-1/" title="Creando vistas del Blog (1)" class="md-nav__link">
+      Creando vistas del Blog (1)
     </a>
   </li>
 
@@ -779,8 +661,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="web-empresarial/crear-vistas-blog-2/" title="Creando las vistas del Blog (2)" class="md-nav__link">
-      Creando las vistas del Blog (2)
+    <a href="web-empresarial/crear-vistas-blog-2/" title="Creando vistas del Blog (2)" class="md-nav__link">
+      Creando vistas del Blog (2)
     </a>
   </li>
 
@@ -891,22 +773,6 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
-    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prueba-los-proyectos" title="Prueba los proyectos" class="md-nav__link toc__link">
-    Prueba los proyectos
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -918,25 +784,12 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <style>
-.md-footer-nav__link--prev{ display: none; }
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
-<h1 id="apuntes-del-curso-de-django">Apuntes del curso de Django<a class="headerlink" href="#apuntes-del-curso-de-django" title="Permanent link">&para;</a></h1>
-<p>Echa un vistazo al siguiente vídeo si te interesa saber qué temas se tratan y los requisitos previos necesarios:</p>
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/295434524' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-
-<h2 id="prueba-los-proyectos">Prueba los proyectos<a class="headerlink" href="#prueba-los-proyectos" title="Permanent link">&para;</a></h2>
-<ul>
-<li><b>Web Personal</b>: <small><u><a href="http://webpersonal.pythonanywhere.com/" target="_blank">https://webpersonal.pythonanywhere.com/</a></u></small></li>
-<li><b>Web Empresarial</b>: <small><u><a href="http://webempresa.pythonanywhere.com/" target="_blank">https://webempresa.pythonanywhere.com/</a></u></small></li>
-</ul>
+                <h1 id="apuntes-del-curso-de-django-framework">Apuntes del curso de Django Framework<a class="headerlink" href="#apuntes-del-curso-de-django-framework" title="Permanent link">&para;</a></h1>
+<p>Este es un material de apoyo para los alumnos de <u><a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?referralCode=4299F3A993394B53F7A1">mi curso de Django en Udemy</a></u> publicados bajo una <a href="https://creativecommons.org/licenses/by/4.0/deed.es">Licencia CC BY 4.0</a>. Si vas a compartirlos asegúrate de cumplir las normas de atribución.</p>
+<p>Los exámenes, ejercicios de codificación y soluciones son de acceso exclusivo para alumnos.</p>
+<p>Podéis navegar por estos apuntes utilizando el menú lateral.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 16 de Octubre de 2018</i></small></p>
+<p><small class="edited"><i>Última edición: 17 de Marzo de 2021</i></small></p>
                 
                   
                 
@@ -977,8 +830,8 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
        
       <a
-        href="que-es-django/"
-        title="Qué es Django en 2 minutos"
+        href="web-personal/"
+        title="Introducción"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -987,7 +840,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Qué es Django en 2 minutos
+            Introducción
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">

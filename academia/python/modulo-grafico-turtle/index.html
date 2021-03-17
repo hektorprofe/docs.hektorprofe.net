@@ -93,160 +93,83 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
     
     
-      <header class="md-header" data-md-component="header" style="position: inherit !important;">
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/" title="Hektor Profe" class="md-header-nav__button md-logo" style="font-size:0px;">
-          <img src="/assets/images/logo.png" width="200px" height="35px" style="margin-top:-5px;" alt="Hektor Profe" title="Hektor Profe"/>
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title" style="text-align: right;">
-<!--           <a class="nav__btn" href="/" style="margin-left:0.25em;" title="Documentos">Indice de documentos</a> -->
-          <a href="/"><img class="nav__logo" src="/assets/images/logo.png" width="200px" height="35px" style="margin:6px auto 0;" alt="Hektor Profe" title="Hektor Profe"/></a>
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
         </div>
         <style>
-          .md-sidebar[data-md-state=lock] {
+          .md-sidebar[data-md-state="lock"] {
             top: 0rem !important;
-        }
-
-           .topMsg{
-             color: white;
-                -webkit-animation: color-change 7s infinite;
-                -moz-animation: color-change 7s infinite;
-                -o-animation: color-change 7s infinite;
-                -ms-animation: color-change 7s infinite;
-                animation: color-change 7s infinite;
-            }
-
-            .topMsg:hover{
-              color: gray !important;
-            }
-
-            @-webkit-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-moz-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-ms-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @-o-keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-            @keyframes color-change {
-                0% { color: white; }
-                25% { color: white; }
-                50% { color: white; }
-                75% { color: rgb(255, 30, 0); }
-                100% { color: white; }
-            }
-
+          }
           .md-tabs {
             display: none !important;
           }
-
-          .announce {
-            background:#009bd6;
-            color: white;
-            text-align: center;
-          }
-          
-          .announce .content {
-            margin: 0 auto;
-            padding: 13.5px 5px;
-          }
-
-        .announce .content a {
-          display: inline-block;
-          text-decoration: none;
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
-          padding: 10px 9px;
-          margin: 0px 3px;
-          border-radius: 5px;
-          line-height: 15px;
-        }
-
-        .hde {
-          display: inline-block;
-        }
-
-        .announce .content a.twitter{
-          background: #006dd3;
-        }
-        .announce .content a.twitter:hover{
-          background: #005aad;
-        }
-
-        .announce .content a.youtube{
-          background: #ff0000;
-        }
-
-        .announce .content a.youtube:hover{
-          background: #b80000;
-        }
-
-        @media (max-width: 1030px){
-          .announce .content{
-            font-size: 15px !important;
-          }
-
           .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
             display: none;
           }
-        }
-        .shakee {
-          animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
-          animation-delay: 2s;
-          transform: translate3d(0, 0, 0);
-          backface-visibility: hidden;
-          perspective: 1000px;
-        }
-
-        @keyframes shake {
-          10%, 90% {
-            transform: translate3d(-1px, 0, 0);
+          .image {
+            text-align: center;
+            margin-top: 25px;
           }
-          
-          20%, 80% {
-            transform: translate3d(2px, 0, 0);
-          }
-
-          30%, 50%, 70% {
-            transform: translate3d(-4px, 0, 0);
-          }
-
-          40%, 60% {
-            transform: translate3d(4px, 0, 0);
-          }
-        }
         </style>
       </div>
-      <!--<div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/buscador/" title="Buscador del sitio"><label class="md-icon md-icon--search md-header-nav__button"></label></a>
-    </div>-->
+    </div>
   </nav>
 </header>
     
@@ -573,6 +496,42 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      GNU/Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        GNU/Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../gnu-linux/ubuntu-server-web/" title="Configurar Ubuntu Server" class="md-nav__link">
+      Configurar Ubuntu Server
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -682,22 +641,13 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-.img-content{ text-align:center;margin-top:25px; }
-.lazy { max-width: 220px; }
-</style>
-
-<h1 id="introduccion-al-modulo-grafico-turtle">Introducción al módulo gráfico Turtle<a class="headerlink" href="#introduccion-al-modulo-grafico-turtle" title="Permanent link">&para;</a></h1>
-<p>El módulo de la tortuga es la herramienta educativa perfecta para aprender programación de forma visual dibujando sobre un lienzo. </p>
-<p>Se introdujo en el lenguaje Logo en 1966, sí, hace más de medio siglo, y si bien no es tan visual como programar con Scratch, permite trabajar directamente en un lenguaje como Python que la incorporó hace ya varios años. </p>
+                <h1 id="introduccion-al-modulo-grafico-turtle">Introducción al módulo gráfico Turtle<a class="headerlink" href="#introduccion-al-modulo-grafico-turtle" title="Permanent link">&para;</a></h1>
+<p>El módulo de la tortuga es la herramienta educativa perfecta para aprender programación de forma visual dibujando sobre un lienzo.</p>
+<p>Se introdujo en el lenguaje Logo en 1966, sí, hace más de medio siglo, y si bien no es tan visual como programar con Scratch, permite trabajar directamente en un lenguaje como Python que la incorporó hace ya varios años.</p>
 <p>En cierto modo se puede considerar una introducción a la programación de videojuegos, así que si te interesa el tema quédate hasta el final porque podrías aprender algunas cosas muy interesantes.</p>
 <p>Repositorio: <a href="https://github.com/hektorprofe/curso-python-turtle" target="_blank">https://github.com/hektorprofe/curso-python-turtle</a></p>
 <h2 id="estructura-base">Estructura base<a class="headerlink" href="#estructura-base" title="Permanent link">&para;</a></h2>
-<p>Normalmente partiremos de una estructura básica, con la importación de la librería, la creación de un  espacio de dibujo y al final las rutinas de cierre:</p>
+<p>Normalmente partiremos de una estructura básica, con la importación de la librería, la creación de un espacio de dibujo y al final las rutinas de cierre:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>            <span class="c1"># Cargamos el módulo de la tortuga</span>
 
 <span class="n">turtle</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>    <span class="c1"># Configuramos un espacio de dibujo</span>
@@ -713,10 +663,10 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="n">t</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
 
 <span class="n">t</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
-<span class="n">t</span><span class="o">.</span><span class="n">bye</span><span class="p">()</span> 
+<span class="n">t</span><span class="o">.</span><span class="n">bye</span><span class="p">()</span>
 </pre></div>
 <p>Ahora podemos añadir forma y color a la tortuga para que aparezca en nuestro espacio:</p>
-<div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;turtle&quot;</span><span class="p">)</span>        <span class="c1"># Le damos la forma de una tortuga </span>
+<div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;turtle&quot;</span><span class="p">)</span>        <span class="c1"># Le damos la forma de una tortuga</span>
 <span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>         <span class="c1"># Y un bonito color verde</span>
 </pre></div>
 <p>Perfecto.</p>
@@ -725,7 +675,7 @@ div.my-img{text-align:center;margin-top:20px}
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
 </pre></div>
 <p>Por defecto se encuentra en el punto o coordenada (0, 0). Este punto se conoce como el origen, y es un concepto clave para aprender a crear videojuegos.
-Si el punto de origen está en el centro, ¿qué valdrán las coordenadas de las esquinas de nuestro lienzo? 
+Si el punto de origen está en el centro, ¿qué valdrán las coordenadas de las esquinas de nuestro lienzo?
 Bueno, si tenemos en cuenta que el ancho es 500 píxeles, la mitad es 250. Así que si le decimos a la tortuga que se mueva hacia adelante 250 píxeles, debería posicionarse justo en el margen derecho.
 Para decirle que vaya adelante, llamaremos a su método forward:</p>
 <div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
@@ -784,7 +734,7 @@ Para decirle que vaya adelante, llamaremos a su método forward:</p>
 <h2 id="tercer-dibujo">Tercer dibujo<a class="headerlink" href="#tercer-dibujo" title="Permanent link">&para;</a></h2>
 <p>A partir de ahora el tema se pone interesante de verdad, vamos a incorporar algo de programación estructurada a nuestros dibujos para hacer cosas sorprendentes.</p>
 <p>Empecemos por una función.</p>
-<p>Crear un cuadrado o un rectángulo es algo bastante común, así que podemos crear una función rectangulo() con las instrucciones básicas a partir de una anchura, una altura y una coordenada para su centro. </p>
+<p>Crear un cuadrado o un rectángulo es algo bastante común, así que podemos crear una función rectangulo() con las instrucciones básicas a partir de una anchura, una altura y una coordenada para su centro.</p>
 <p>Para redondearlo introduciremos el uso de la acción goto(), que le indica a la tortuga que vaya a una coordenada en específico de forma automática, y la acción seth() que le establece una dirección en grados hacia dónde mirar, siendo 0 a la derecha, 90 arriba, 180 a la izquierda y 270 abajo.</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rectangulo</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">,</span> <span class="n">ancho</span><span class="p">,</span> <span class="n">alto</span><span class="p">):</span>
 
@@ -793,7 +743,7 @@ Para decirle que vaya adelante, llamaremos a su método forward:</p>
     <span class="c1"># y miramos hacia la izquierda para empezar siempre igual</span>
 
     <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span> <span class="o">+</span> <span class="n">ancho</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">py</span> <span class="o">+</span> <span class="n">alto</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  
+    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span> <span class="o">+</span> <span class="n">ancho</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">py</span> <span class="o">+</span> <span class="n">alto</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">seth</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
 
@@ -815,12 +765,12 @@ Para decirle que vaya adelante, llamaremos a su método forward:</p>
 </pre></div>
 <p>Fácil, rápido y para toda la família.</p>
 <h2 id="cuarto-dibujo">Cuarto dibujo<a class="headerlink" href="#cuarto-dibujo" title="Permanent link">&para;</a></h2>
-<p>¿Sabéis lo que son los poligonos regulares? Son polígonos cuyos lados y ángulos interiores son iguales entre sí. La magia que tienen es que cuantos más lados tienen más se parecen a un círculo, y de hecho dícese que un círculo perfecto sería un polígono de infinitos lados. De ahí que en geometría se trabaje tanto con límites. </p>
+<p>¿Sabéis lo que son los poligonos regulares? Son polígonos cuyos lados y ángulos interiores son iguales entre sí. La magia que tienen es que cuantos más lados tienen más se parecen a un círculo, y de hecho dícese que un círculo perfecto sería un polígono de infinitos lados. De ahí que en geometría se trabaje tanto con límites.</p>
 <p>Bueno, sea como sea creo que es interesante adaptar nuestra función para que no sólo dibuje cuadrados y rectángulos, sino cualquier tipo de polígono regular.</p>
 <p>Para ello le pasaremos un parámetro extra con el número de costados que queremos dibujar, y en lugar de un ancho y una altura simplemente utilizaremos un radio. Ese radio nos servirá para crear la circunferencia circunscrita que será la base del polígono regular, que por cierto, podemos crear utilizando la acción circle de la tortuga, que toma precisamente ese radio. Fijaros:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">poligono_regular</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">,</span> <span class="n">radio</span><span class="p">,</span> <span class="n">lados</span><span class="p">):</span>
     <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span> <span class="o">-</span> <span class="n">radio</span><span class="p">)</span>  
+    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span> <span class="o">-</span> <span class="n">radio</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
     <span class="n">t</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">radio</span><span class="p">)</span>
 
@@ -839,7 +789,7 @@ print(angulo)</p>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lados</span><span class="p">):</span>
     <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>           <span class="c1"># Nos posicionamos al centro</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">)</span>  
+    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
 
     <span class="n">t</span><span class="o">.</span><span class="n">seth</span><span class="p">(</span><span class="n">angulo</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Trazamos radios hacia afuera</span>
@@ -855,24 +805,24 @@ print(angulo)</p>
 <div class="highlight"><pre><span></span><span class="n">vertices</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># La declaramos</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lados</span><span class="p">):</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>          
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">)</span>  
+    <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
 
-    <span class="n">t</span><span class="o">.</span><span class="n">seth</span><span class="p">(</span><span class="n">angulo</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> 
+    <span class="n">t</span><span class="o">.</span><span class="n">seth</span><span class="p">(</span><span class="n">angulo</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">radio</span><span class="p">)</span>
     <span class="n">vertices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>  <span class="c1"># Los vamos añadiendo</span>
 </pre></div>
-<p>Y ahora viene la magia. 
+<p>Y ahora viene la magia.
 Vamos a hacer que la tortuga trace líneas entre esos vértices yendo de unos a otros utilizando la acción goto:</p>
 <div class="highlight"><pre><span></span><span class="c1"># Nos posicionamos en la coordenada del último vértice</span>
 <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
-<span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  
+<span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
 
 <span class="c1"># Y hacemos que la tortuga se mueva a cada uno de ellos</span>
 <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">:</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>  
+    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 </pre></div>
 <div class="img-content">
     <img class="lazy" data-src="/cdn/turtle/img07.jpg"/>
@@ -893,20 +843,20 @@ Vamos a hacer que la tortuga trace líneas entre esos vértices yendo de unos a 
     <span class="n">vertices</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lados</span><span class="p">):</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">)</span> 
+        <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">)</span>
         <span class="n">t</span><span class="o">.</span><span class="n">seth</span><span class="p">(</span><span class="n">angulo</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">radio</span><span class="p">)</span>
-        <span class="n">vertices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span> 
+        <span class="n">vertices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
 
     <span class="c1"># Nos posicionamos en la coordenada del último vértice</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  
+    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
     <span class="c1"># Empezamos a dibujar</span>
     <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
 
     <span class="c1"># Y hacemos que la tortuga se mueva a cada uno de ellos</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">:</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> 
+        <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 </pre></div>
 <div class="img-content">
     <img class="lazy" data-src="/cdn/turtle/img08.jpg"/>
@@ -931,7 +881,7 @@ Vamos a hacer que la tortuga trace líneas entre esos vértices yendo de unos a 
 <p>Finalmente un último experimento para añadir interactividad en tiempo real. Y es que nosotros podemos capturar por teclado un valor con el método textinput() de la tortuga y hacer que se mueva a nuestra voluntad a partir de varias condiciones:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ordenar</span><span class="p">():</span>
 
-    <span class="n">orden</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">textinput</span><span class="p">(</span><span class="s2">&quot;Orden requerida&quot;</span><span class="p">,</span> 
+    <span class="n">orden</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">textinput</span><span class="p">(</span><span class="s2">&quot;Orden requerida&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;Movimientos: a w s d - Salir: e&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">orden</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
@@ -966,7 +916,7 @@ Vamos a hacer que la tortuga trace líneas entre esos vértices yendo de unos a 
 
 <span class="n">t</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
 
-<span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;turtle&quot;</span><span class="p">)</span> 
+<span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;turtle&quot;</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
 
 <span class="c1"># Creamos funciones para cada acción</span>
@@ -1008,9 +958,9 @@ Vamos a hacer que la tortuga trace líneas entre esos vértices yendo de unos a 
 
 <h2 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
 <p>Durante estos pequeños experimentos he podido entender el gran potencial pedagógico que tiene el módulo de la tortuga.</p>
-<p>Se trata de una herramienta educativa que combinada con Python puede ofrecer infinitas posibilidades de aprendizaje para entender de forma visual qué hace la programación más allá del código. </p>
+<p>Se trata de una herramienta educativa que combinada con Python puede ofrecer infinitas posibilidades de aprendizaje para entender de forma visual qué hace la programación más allá del código.</p>
 <p>Incluso puede ser una buena forma de introducirse en la programación de videojuegos.</p>
-<p>Sea como sea este módulo me ha recordado cuando en mi infancia dibujaba con un juguete llamado Telesketch, y no sé porque me da la sensación de que debió inspirar a los creadores de la tortuga para hacer algo parecido a través de una computadora. </p>
+<p>Sea como sea este módulo me ha recordado cuando en mi infancia dibujaba con un juguete llamado Telesketch, y no sé porque me da la sensación de que debió inspirar a los creadores de la tortuga para hacer algo parecido a través de una computadora.</p>
 <h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://hourofpython.com/una-introduccion-visual-a-python/index.html">Introducción visual a Python</a>: Minicurso de Python gráfico 100% en español utilizando Turtle.</li>
