@@ -18,7 +18,7 @@ description: Veamos como almacenar y recuperar listas y diccionarios en ficheros
 
 # Ficheros CSV
 
-CSV significa: Valores separados por comas (comma-separated values)
+**CSV**: Valores separados por comas (Comma Separated Values)
 
 Documentación: [https://docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html)
 

@@ -1,15 +1,6 @@
 title: Módulo gráfico Matplotlib | Python | Academia | Hektor Profe
 description: Aprende a visualizar y personalizar tus gráficos de datos con esta potente biblioteca utilizada en conjunto con numpy y pandas.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-.img-content{ text-align:center;margin-top:25px; }
-.lazy { max-width: 220px; }
-</style>
-
 # Introducción al módulo gráfico Matplotlib
 
 ## Primer gráfico
@@ -699,5 +690,6 @@ Esta biblioteca nos ofrece muchísimos más tipos de gráficos, por eso os sugie
 
 Con esto acabamos el curso, espero que lo hayáis disfrutado tanto como yo creándolo.
 
-___
+---
+
 <small class="edited"><i>Última edición: 16 de Marzo de 2021</i></small>

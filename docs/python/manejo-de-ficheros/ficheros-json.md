@@ -18,7 +18,7 @@ description: Veamos como almacenar y recuperar listas y diccionarios en ficheros
 
 # Ficheros JSON
 
-JSON significa: Notación de objeto de JavaScript (javascript object notation)
+**JSON**: Notación de objeto de JavaScript (JavaScript Object Notation)
 
 Documentación: [https://docs.python.org/3/library/json.html](https://docs.python.org/3/library/json.html)
 

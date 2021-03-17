@@ -69,13 +69,12 @@ nav:
     #   - Figuras, variables y objetos:   'academia/javascript/p5js.md'
     #   - Flujo: Condiciones y bucles:    'academia/javascript/visual-p5js.md'
     #   - Funciones, clases y arreglos:   'academia/javascript/visual-p5js.md'
-    # - GNU/Linux:
-    #   - Configurar Ubuntu Server:         'academia/gnu-linux/web-ubuntu-server.md'
+    - GNU/Linux:
+      - Configurar Ubuntu Server:         'academia/gnu-linux/ubuntu-server-web.md'
 
   - Apuntes de Python:
-    - Presentación:                       'python/index.md'
     - Introducción informal:                                    
-      - Introducción:                     'python/introduccion-informal/index.md'
+      - Presentación:                     'python/introduccion-informal/index.md'
       - Números:                          'python/introduccion-informal/numeros.md'
       - Textos:                           'python/introduccion-informal/cadenas-de-texto.md'
       - Listas:                           'python/introduccion-informal/listas.md'
@@ -202,8 +201,6 @@ nav:
       - Pyinstaller:                      'python/distribucion/pyinstaller.md'
 
   - Apuntes de Django:
-    - Presentación:                       'django/index.md'
-    - Qué es Django en 2 minutos:         'django/que-es-django.md'
     - Proyecto Web Personal:
       - Introducción:                     'django/web-personal/index.md'
       - Creando el proyecto:              'django/web-personal/creando-proyecto.md'
@@ -212,17 +209,17 @@ nav:
       - Extendiendo la App [Core]:        'django/web-personal/extendiendo-app-core.md'
       - Páginas portafolio y contacto:    'django/web-personal/paginas-portafolio-contacto.md'
       - Introducción a los templates:     'django/web-personal/introduccion-plantillas-templates.md'
-      - Templates about, portfolio, etc:  'django/web-personal/templates-about-portfolio-contact.md'
-      - Herencia en nuestras plantillas:  'django/web-personal/herencia-plantillas-templates.md'
-      - Adaptar plantillas con herencia:  'django/web-personal/adaptar-plantillas-herencia.md'
+      - Templates about y portfolio:      'django/web-personal/templates-about-portfolio-contact.md'
+      - Herencia en las plantillas:       'django/web-personal/herencia-plantillas-templates.md'
+      - Adaptar plantillas y herencia:    'django/web-personal/adaptar-plantillas-herencia.md'
       - El template tag url:              'django/web-personal/template-tag-url.md'
-      - Uniendo el frontend y backend:    'django/web-personal/uniendo-frontend-backend.md'
-      - Creando la cabecera dinámica:     'django/web-personal/creando-cabecera-dinamica.md'
+      - Uniendo frontend y backend:       'django/web-personal/uniendo-frontend-backend.md'
+      - Creando cabecera dinámica:        'django/web-personal/creando-cabecera-dinamica.md'
       - Adaptar los demás templates:      'django/web-personal/adaptar-demas-templates.md'
       - App 2 [Portfolio] Modelos:        'django/web-personal/app-portfolio-modelos.md'
       - Panel de administrador:           'django/web-personal/panel-administrador.md'
       - Personalizando el admin (1):      'django/web-personal/personalizando-panel-administrador-parte-1.md'
-      - Patrón Modelo-Vista-Template:     'django/web-personal/patron-mvt-modelo-vista-template.md'
+      - Patrón MVC:                       'django/web-personal/patron-mvt-modelo-vista-template.md'
       - Añadir enlace a los proyectos:    'django/web-personal/anadir-enlace-proyectos.md'
     - Proyecto Web Empresarial:
       - Introducción:                     'django/web-empresarial/index.md'
@@ -234,8 +231,8 @@ nav:
       - App 3 [Services] Vistas:          'django/web-empresarial/app-services-vista-template.md'
       - App 4 [Blog] Relaciones:          'django/web-empresarial/app-blog-relaciones.md'
       - Personalizando el admin (2):      'django/web-empresarial/personalizando-panel-administrador-parte-2.md'
-      - Creando las vistas del Blog (1):  'django/web-empresarial/crear-vistas-blog-1.md'
-      - Creando las vistas del Blog (2):  'django/web-empresarial/crear-vistas-blog-2.md'
+      - Creando vistas del Blog (1):      'django/web-empresarial/crear-vistas-blog-1.md'
+      - Creando vistas del Blog (2):      'django/web-empresarial/crear-vistas-blog-2.md'
       - App 5 [Social] Redes sociales:    'django/web-empresarial/app-social-enlaces-redes.md'
       - Procesadores de contexto:         'django/web-empresarial/procesadores-contexto.md'
       - App 6 [Pages] Páginas:            'django/web-empresarial/app-pages-gestor-paginas.md'

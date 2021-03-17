@@ -1,22 +1,13 @@
 title: Módulo analítico NumPy | Python | Academia | Hektor Profe
 description: Aprende a trabajar con los arrays de NumPy, un tipo de dato para manejar vectores y matrices con muchísimas funcionalidades.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-.img-content{ text-align:center;margin-top:25px; }
-.lazy { max-width: 220px; }
-</style>
-
 # Introducción al módulo analítico NumPy
 
 El análisis de datos básico en Python se realiza utilizando tres bibliotecas que se complementan perfectamente entre ellas:
 
-* **NumPy**: Para manejar **arrays**.
-* **Pandas**: Para manejar **dataframes**.
-* **Matplotlib**: Para generar **gráficos**.
+- **NumPy**: Para manejar **arrays**.
+- **Pandas**: Para manejar **dataframes**.
+- **Matplotlib**: Para generar **gráficos**.
 
 Todas estas bibliotecas son externas a Python por lo que tenemos que instalarlas para poder utilizarlas, esa será nuestra primera tarea.
 
@@ -79,7 +70,7 @@ print(array.ndim)
 print(array.shape)
 ```
 
-Veremos algo interesante, y es que el **array** se muestra como una tabla de 2 filas con 5 columnas, números que precisamente concuerdan con la forma **(2, 5)**. 
+Veremos algo interesante, y es que el **array** se muestra como una tabla de 2 filas con 5 columnas, números que precisamente concuerdan con la forma **(2, 5)**.
 
 Estas estructuras formadas por filas y columnas parecidas a una tabla tienen dos dimensiones, anchura y altura (por eso nos dice que tiene 2 dimensiones). También se conocen como vectores multidimensionales, vectores 2D o matrices.
 
@@ -141,9 +132,9 @@ Cada bloc se estructura en celdas y para definir una usaremos la sintaxis:
 # %%
 ```
 
-Todo lo que viene después hasta encontrar otra celda podemos ejecutarlo independientemente. 
+Todo lo que viene después hasta encontrar otra celda podemos ejecutarlo independientemente.
 
-Además una ventaja de usar las celdas es que no necesitamos usar **print** para mostrar el último dato, se muestra por defecto: 
+Además una ventaja de usar las celdas es que no necesitamos usar **print** para mostrar el último dato, se muestra por defecto:
 
 ```python
 # %%
@@ -165,7 +156,7 @@ array
 
 Sin embargo esto sólo funciona si préviamente hemos ejecutado la otra celda. Si reiniciamos el kernel (botón de flecha girando), al ejecutar de nuevo la segunda celda veremos que no encuentra la definición de nuestro **array**, tendremos que ejecutar la celda anterior que es donde tenemos definida esa variable para poder utilizarla.
 
-Podemos ver en todo momentos las variables que hay en la memoria del bloc desplegando el botón superior  **variables**. 
+Podemos ver en todo momentos las variables que hay en la memoria del bloc desplegando el botón superior **variables**.
 
 ### Uso de markdown
 
@@ -228,13 +219,13 @@ Pero no nos adelantemos...
 
 Lo último que vamos a ver es cómo exportar un bloc para compartir nuestros reportes con todo el mundo.
 
-Para hacerlo solo tenemos que presionar el botón para guardar el bloc en formato **ipynb** en la parte superior del documento. 
+Para hacerlo solo tenemos que presionar el botón para guardar el bloc en formato **ipynb** en la parte superior del documento.
 
 Plataformas como Google Drive y Github interpretarán automáticamente este formato para mostrar las celdas y sus contenidos, tablas y gráficos.
 
 ## Arrays pregenerados
 
-Crear arrays siempre a partir de listas puede ser muy tedioso, por eso **numpy** integra varias funciones muy útiles para generar arrays de uso común en el álgebra de matrices.   
+Crear arrays siempre a partir de listas puede ser muy tedioso, por eso **numpy** integra varias funciones muy útiles para generar arrays de uso común en el álgebra de matrices.
 
 ### Array de ceros
 
@@ -329,6 +320,7 @@ arr_2 - arr_1
 ```python
 arr_1 - arr_1
 ```
+
 Pues que obtenemos un array con todos los valores a cero.
 
 ### Producto
@@ -339,10 +331,10 @@ arr_1 * arr_2
 
 El producto entre arrays se basa en multiplicar cada elemento de una array por el elemento en la misma posición del otro.
 
-* 1x5 = 5
-* 2x6 = 12
-* 3x7 = 21
-* 4x8 = 32
+- 1x5 = 5
+- 2x6 = 12
+- 3x7 = 21
+- 4x8 = 32
 
 También podemos multiplicar un array por un número:
 
@@ -365,10 +357,10 @@ arr_1 / arr_2
 
 Igual que el producto, la división entre arrays se basa en dividir cada elemento de un array por el elemento en la misma posición del otro.
 
-* 1/5 = 0.2
-* 2/6 = 0.33...
-* 3/7 = 0.42...
-* 4/8 = 0.5
+- 1/5 = 0.2
+- 2/6 = 0.33...
+- 3/7 = 0.42...
+- 4/8 = 0.5
 
 También podemos dividir todos sus elementos por un número:
 
@@ -376,10 +368,10 @@ También podemos dividir todos sus elementos por un número:
 arr_1 / 2
 ```
 
-* 1/2 = 0.5
-* 2/2 = 1
-* 3/2 = 1.5
-* 4/2 = 2
+- 1/2 = 0.5
+- 2/2 = 1
+- 3/2 = 1.5
+- 4/2 = 2
 
 Algo interesante que podemos hacer con la división es conseguir el arreglo inverso o recíproco dividiendo 1 entre el array:
 
@@ -409,10 +401,10 @@ arr_1 ** arr_2
 
 Como es normal, se basa en realizar la potencia entre los valores que comparten posición en los arrays:
 
-* 1**5 = 5
-* 2**6 = 64
-* 3**7 = 2187
-* 4**8 = 65536
+- 1\*\*5 = 5
+- 2\*\*6 = 64
+- 3\*\*7 = 2187
+- 4\*\*8 = 65536
 
 ### Operaciones en arrays de 2D
 
@@ -477,7 +469,7 @@ Si queremos saber el de la quinta posición, simplemente tomamos el 5 y le resta
 arr[4]
 ```
 
-En Python el índice -1 hace referencia a la última posición de la colección, el -2 al penúltimo, etc. 
+En Python el índice -1 hace referencia a la última posición de la colección, el -2 al penúltimo, etc.
 
 Así que también podemos utilizar índices negativos en arrays:
 
@@ -535,6 +527,7 @@ sub_arr[:] = 50
 
 sub_arr
 ```
+
 Ahora veamos qué ha ocurrido con el array original:
 
 ```python
@@ -571,7 +564,7 @@ arr
 
 ## Arrays de 2 dimensiones
 
-En la lección anterior vimos como trabajar con arrays de una dimensión, ahora veremos como se trasladan esos conceptos a la segunda dimensión. 
+En la lección anterior vimos como trabajar con arrays de una dimensión, ahora veremos como se trasladan esos conceptos a la segunda dimensión.
 
 Es extremadamente sencillo si nos imaginamos el array como una **tabla** con filas y columnas.
 
@@ -654,7 +647,7 @@ Evidentemente los arrays de dos dimensiones también están referenciados en mem
 
 ### Fancy index
 
-El último concepto importante que veremos sobre los arrays 2d es el fancy index. Esta propiedad de los arrays nos permite trabajar muy cómodamente con las filas de estos arrays. 
+El último concepto importante que veremos sobre los arrays 2d es el fancy index. Esta propiedad de los arrays nos permite trabajar muy cómodamente con las filas de estos arrays.
 
 Por ejemplo, vamos a crear una matriz 5x10 llena de ceros:
 
@@ -680,8 +673,8 @@ Por ejemplo podemos modificar al vuelo la primera, tercera y última fila:
 
 ```python
 arr_2d[[0,2,-1]] = 99
-       
-arr_2d   
+
+arr_2d
 ```
 
 Incluso podemos utilizarlo en cualquier orden o doblando índices:
@@ -704,7 +697,7 @@ De manera que si quisiéramos darle el mismo valor a cada fila no costaría much
 ```python
 for i, row in enumerate(arr_2d):
     arr_2d[i] = i
-    
+
 arr_2d
 ```
 
@@ -714,7 +707,7 @@ Hasta ahora hemos trabajado los arrays de 1 y 2 dimensiones, así que la pregunt
 
 ### Creación básica
 
-De la misma forma que un array de 2 dimensiones, el truco para crear uno de 3 consiste en anidar listas a 3 niveles de profundidad. 
+De la misma forma que un array de 2 dimensiones, el truco para crear uno de 3 consiste en anidar listas a 3 niveles de profundidad.
 
 Para entender bien el proceso vamos a recrear los 3 niveles de profundidad paso a paso para un array muy simple de 2x2x2
 
@@ -731,49 +724,49 @@ arr_1d
 # Segundo nivel, 2 elementos en ancho por 2 de alto,
 # 4 elementos en total
 arr_2d = np.array([
-    [1, 2], 
+    [1, 2],
     [3, 4]
 ])
 arr_2d
 
-# Tercer nivel, 2 elementos en ancho por 2 de alto 
+# Tercer nivel, 2 elementos en ancho por 2 de alto
 # por 2 de profundidad, 8 elementos en total
 arr_3d = np.array([
     [
-        [1, 2], 
+        [1, 2],
         [3, 4]
-    ], 
+    ],
     [
-        [5, 6], 
+        [5, 6],
         [7, 8]
     ]
 ])
 arr_3d
 ```
 
-Con esto tenemos las 3 dimensiones, pero podemos añadir más. 
+Con esto tenemos las 3 dimensiones, pero podemos añadir más.
 
 El concepto es difícil de imaginar, ya que nosotros únicamente percibimos 3 dimensiones, pero si lo entendemos como una ramificación en dónde por cada elemento ahora hay otra lista con dos elementos, entonces no es tan imposible hacernos una idea:
 
 ```python
-# Cuarto nivel, 2 elementos en ancho por 2 de alto 
+# Cuarto nivel, 2 elementos en ancho por 2 de alto
 # por 2 de profundidad por 2 más, 16 en total
 arr_4d = np.array([
     [
         [
-            [1, 2], 
+            [1, 2],
             [3, 4]
-        ], 
+        ],
         [
-            [5, 6], 
+            [5, 6],
             [7, 8]
         ]
-    ], 
+    ],
     [
         [
-            [9, 10], 
+            [9, 10],
             [11, 12]
-        ], 
+        ],
         [
             [13, 14],
             [15, 16]
@@ -799,13 +792,13 @@ arr_4d
 
 ### Creación con reshape
 
-Reshape es una función que sirve para reformar las dimensiones y sus tamaños. 
+Reshape es una función que sirve para reformar las dimensiones y sus tamaños.
 
 Por ejemplo podemos reformar una matriz de 3x3 a partir de un rango de 9 elementos:
 
 ```python
 arr_2d = np.arange(9).reshape(3,3)
-arr_2d 
+arr_2d
 ```
 
 Evidentemente tenemos que seguir un patrón lógico, y es que el número de elementos tiene que concordar con el tamaño de las dimensiones multiplicadas.
@@ -813,11 +806,11 @@ Evidentemente tenemos que seguir un patrón lógico, y es que el número de elem
 ```python
 # Esto no funcionará: 9 != 3x3x3
 arr_3d = np.arange(9).reshape(3,3,3)
-arr_3d 
+arr_3d
 
 # Esto sí que funcionará: 27 == 3x3x3
 arr_3d = np.arange(27).reshape(3,3,3)
-arr_3d 
+arr_3d
 ```
 
 ## Arrays transpuestos
@@ -883,11 +876,11 @@ arr_3d.swapaxes(0,1)
 
 ## Funciones universales
 
-En esta lección vamos a ver algunas de las funciones universales de la clase array de Numpy.  Se llaman universales porque sirven para aplicar funciones matemáticas comunes a los elementos del array.
+En esta lección vamos a ver algunas de las funciones universales de la clase array de Numpy. Se llaman universales porque sirven para aplicar funciones matemáticas comunes a los elementos del array.
 
-Podemos encontrar **operaciones matemáticas**, **trigonométricas**, **flotantes**, **comparativas** y de cambios de bits. 
+Podemos encontrar **operaciones matemáticas**, **trigonométricas**, **flotantes**, **comparativas** y de cambios de bits.
 
-[En este enlace a la documentación oficial](https://docs.scipy.org/doc/numpy/reference/ufuncs.html#available-ufuncs) encontraréis el listado completo con ejemplos de uso. 
+[En este enlace a la documentación oficial](https://docs.scipy.org/doc/numpy/reference/ufuncs.html#available-ufuncs) encontraréis el listado completo con ejemplos de uso.
 
 Por ahora vamos a practicar algunas de las más comunes.
 
@@ -963,7 +956,7 @@ np.floor(arr_3)
 
 Ya que estamos repasando funciones no podemos olvidar las funciones aleatorias de **numpy**, encontradas en el módulo random.
 
-[En este enlace a la documentación oficial](https://docs.scipy.org/doc/numpy-1.12.0/reference/routines.random.html) encontraréis el listado completo con ejemplos de uso. 
+[En este enlace a la documentación oficial](https://docs.scipy.org/doc/numpy-1.12.0/reference/routines.random.html) encontraréis el listado completo con ejemplos de uso.
 
 Tenemos funciones para generar arrays con **datos aleatorios** y **permutaciones**. También hay muchas enfocadas a generar muestras de distribuciones de probabilidadpensadas para visualizar estadística.
 
@@ -1019,7 +1012,7 @@ arr
 
 ## Filtrado de arrays
 
-En esta lección vamos a repasar algunas funciones para filtrar nuestros arrays. 
+En esta lección vamos a repasar algunas funciones para filtrar nuestros arrays.
 
 Si queréis más información sobre las funciones disponibles no olvidéis pasaros por [la documentación oficial en este enlace](https://docs.scipy.org/doc/numpy-1.12.0/reference/index.html).
 
@@ -1195,8 +1188,8 @@ arrays['arr_2']
 
 Básicamente se hace de la misma forma, pero las funciones cambian:
 
-* Para guardar de save -> savetxt
-* Para cargar de load -> loadtxt
+- Para guardar de save -> savetxt
+- Para cargar de load -> loadtxt
 
 ```python
 # Creamos un array de prueba
@@ -1223,12 +1216,14 @@ np.savetxt('arr_3.txt', arr_3, delimiter=',')
 ```
 
 Esto generaría algo como:
+
 ```
 -6.000000000000000000e+00,9.000000000000000000e+00,-8.000000000000000000e+00
 0.000000000000000000e+00,3.000000000000000000e+00,6.000000000000000000e+00
 4.000000000000000000e+00,0.000000000000000000e+00,4.000000000000000000e+00
 
 ```
+
 No importa cómo lo guardemos, lo importante es que a la hora de recuperarlos indiquemos los separadores si los hemos cambiado:
 
 ```python
@@ -1240,5 +1235,6 @@ arr_3 = np.loadtxt('arr_3.txt', delimiter=',')
 arr_3
 ```
 
-___
+---
+
 <small class="edited"><i>Última edición: 16 de Marzo de 2021</i></small>
