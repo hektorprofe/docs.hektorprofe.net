@@ -3,6 +3,10 @@ description: Aprende a visualizar y personalizar tus gráficos de datos con esta
 
 # Introducción al módulo gráfico Matplotlib
 
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/r0NBTtxUYrs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Primer gráfico
 
 Empezaremos nuestra andadura viendo el gráfico más simple, el de líneas.

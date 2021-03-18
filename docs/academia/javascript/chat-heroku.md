@@ -3,6 +3,14 @@ description: Desarrolla paso a paso tu propio chat online; el servidor con Node.
 
 # Chat online y despliegue en Heroku
 
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/2UD1y3xwUW4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+**Demo**: <a href="https://hektorchat.herokuapp.com" target="_blank">https://hektorchat.herokuapp.com</a>
+
+**Repositorio**: <a href="https://github.com/hektorprofe/chat-node-curso" target="_blank">https://github.com/hektorprofe/chat-node-curso</a>
+
 ## Preparando el servidor
 
 Vamos a empezar con este proyecto creando por ejemplo una carpeta **Chat-Node**, no le pongáis espacios ni caracteres especiales porque la vamos a iniciar como proyecto con Node, separad los espacios con guiones si lo necesitáis.

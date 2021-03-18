@@ -3,6 +3,10 @@ description: Aprende lo fundamental de este poderoso lenguaje utilizado tanto pa
 
 # Introducción a JavaScript
 
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/ONHuYw2QbfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 Si te interesa aprender este lenguaje pero no sabes muy bien por dónde empezar, en este pequeño curso comparto contigo los primeros pasos que debes seguir para configurar tu entorno de desarrollo, crear tus primeros scripts y los tipos de datos básicos del lenguaje.
 
 Independientemente del uso que quieras darle al lenguaje estos son los fundamentos que deben quedarte claros desde el principio, ya que estarás utilizándolos durante todo el tiempo.

@@ -3,6 +3,10 @@ description: Vamos a crear un proyecto utilizando los conceptos básicos: variab
 
 # Proyecto gestor de clientes en Python
 
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/LcGAfpQSkMU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 Vamos a crear un programa poniendo a prueba lo básico de Python que mostrará un menú con estas opciones:
 
 * Listar todos los clientes del gestor.
@@ -14,7 +18,7 @@ Vamos a crear un programa poniendo a prueba lo básico de Python que mostrará u
 
 No deberá guardar los datos en el disco duro, siempre partirá de unos clientes de prueba iniciales y no podrá haber dos clientes con el mismo **dni**.
 
-Repositorio: <a href="https://github.com/hektorprofe/curso-gestor-clientes-python" target="_blank">https://github.com/hektorprofe/curso-gestor-clientes-python</a>
+**Repositorio**: <a href="https://github.com/hektorprofe/curso-gestor-clientes-python" target="_blank">https://github.com/hektorprofe/curso-gestor-clientes-python</a>
 
 ## Organizando el proyecto
 

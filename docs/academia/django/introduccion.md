@@ -1,7 +1,15 @@
 title: Introducción | Django | Academia | Hektor Profe
 description: Aprende los conceptos básicos de este potente framework de Python para desarrollar páginas web backend mientras creas un blog.
 
-# Introducción a Django
+# Introducción a Django Framework
+
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/cui_REKfGJA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+**Repositorio**: <a href="https://github.com/hektorprofe/django-blog-curso" target="_blank">https://github.com/hektorprofe/django-blog-curso</a>
+
+## ¿Qué es Django?
 
 * Django es un framework web creado en 2003, programado en Python, gratuito y libre. 
 * Fue liberado en 2005 y desde 2008 cuenta con su propia fundación para hacerse cargo de su desarrollo.
@@ -55,7 +63,6 @@ http://127.0.0.1:8000/
 [scripts]
 server = "python manage.py runserver"
 ```
-!!!
 
 * Ahora podemos ejecutar el servidor con:
 
@@ -186,7 +193,6 @@ from .models import Post
 
 admin.site.register(Post)
 ```
-!!!
 
 Simplemente con este cambio ya nos aparecerá nuestra app y podremos empezar a crear, editar y borrar nuevos **Post**.
 
@@ -198,7 +204,6 @@ class Post(models.Model):
     title = models.CharField(max_length=200, verbose_name="Título")
     content = models.TextField(verbose_name="Contenido")
 ```
-!!!
 
 Con eso podemos mostrar un nombre diferente en los campos y si quisiéramos mostrar un nombre de modelo diferente lo haremos así:
 

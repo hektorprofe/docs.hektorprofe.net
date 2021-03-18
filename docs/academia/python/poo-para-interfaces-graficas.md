@@ -3,6 +3,10 @@ description: Aprende los conceptos básicos para empezar a crear interfaces grá
 
 # Fundamentos de POO para interfaces gráficas
 
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/HrdBO6lDldw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 Dentro de la programación existe una especialidad enfocada al desarrollo de programas utilizando interfaces gráficas de usuario, también conocidas como Graphic User Interfaces o GUI.
 
 En ella se dan cita algunos conceptos importantes de la programación, en especial de la programación orientada a objetos.

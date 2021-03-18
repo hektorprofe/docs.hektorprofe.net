@@ -1,13 +1,19 @@
 title: Cliente en Nuxt.js para API | JavaScript | Academia | Hektor Profe
 description: Desarrolla un cliente web sobre la API creada con Django para gestionar tus películas favoritas usando JavaScript y Nuxt.js.
 
-# Cliente en Nuxt.js para API
+# Cliente con Nuxt.js para API con DRF
 
-Este curso es una continuación del <a href="/academia/django/api-rest-framework/">Proyecto API con DRF</a>, en el que utilizando un framework JavaScript llamado Nuxt.js (basado en Vue.js), os enseñaré a crear un cliente web SPA.
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/CgXjkh9AM08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+Este curso es una continuación del <u><a href="/academia/django/api-rest-framework/">Proyecto API con DRF</a></u>, en el que utilizando un framework JavaScript llamado Nuxt.js (basado en Vue.js), os enseñaré a crear un cliente web SPA.
 
 El cliente nos ofrecerá tanto formularios de registro como de identificación y contará con dos páginas, una para visualizar el top de películas y realizar búsquedas, y otra para gestionar sus películas favoritas, ya que éstas se podrán marcar o desmarcar fácilmente y gestionarse en la propia sección.
 
 Por si fuera poco añadiremos también unas alertas <span style="font-weight:500">toast</span> asíncronas que quedan geniales.
+
+**Repositorio**: <a href="https://github.com/hektorprofe/spa-peliculas-nuxt-curso" target="_blank">https://github.com/hektorprofe/spa-peliculas-nuxt-curso</a>
 
 ## Creando nuestro proyecto
 

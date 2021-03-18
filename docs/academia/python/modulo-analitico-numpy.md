@@ -3,11 +3,17 @@ description: Aprende a trabajar con los arrays de NumPy, un tipo de dato para ma
 
 # Introducción al módulo analítico NumPy
 
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/tzeWOXeJM1I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Configuración previa
+
 El análisis de datos básico en Python se realiza utilizando tres bibliotecas que se complementan perfectamente entre ellas:
 
 - **NumPy**: Para manejar **arrays**.
 - **Pandas**: Para manejar **dataframes**.
-- **Matplotlib**: Para generar **gráficos**.
+- **Matplotlib**: Para visualizar **gráficos**.
 
 Todas estas bibliotecas son externas a Python por lo que tenemos que instalarlas para poder utilizarlas, esa será nuestra primera tarea.
 

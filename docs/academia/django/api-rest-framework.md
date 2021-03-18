@@ -3,11 +3,17 @@ description: Desarrolla paso a paso una API con Python y Django Rest Framework p
 
 # Proyecto API con Django Rest Framework
 
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/6tgobYpCFUw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 En este curso haremos uso de algunas apps de Django para implementar una API totalmente funcional utilizando autenticación con Token, muy útil para utilizar en todo tipo de clientes, desde web a aplicaciones móviles, ya que se basa sobre una capa de peticiones con respuestas JSON.
 
 Os enseñaré que no es necesario ser todo un experto para desarrollar la plataforma y en muy poco tiempo tendremos un genial sistema para gestionar películas.
 
 En él los usuarios que se registren e identifiquen podrán marcarlas como favoritas, así como ordenar y buscar en los viewsets gracias a las utilidades de Django Rest Framework.
+
+**Repositorio**: <a href="https://github.com/hektorprofe/curso-api-peliculas-django" target="_blank">https://github.com/hektorprofe/curso-api-peliculas-django</a>
 
 ## Creando nuestro proyecto
 

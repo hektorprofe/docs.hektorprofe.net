@@ -1,14 +1,6 @@
 title: Tutoriales | Django | Academia | Hektor Profe
 description: Recopilación de tutoriales interesantes sobre este framework web.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{color: #018dc5 !important;}
-.admonition.info{font-size: 100%;}
-.admonition.info label{font-size: 91%;}
-.admonition.note > .admonition-title {display: none;}
-.image { text-align:center;margin-top:25px; }
-</style>
-
 # Tutoriales sobre Django
 
 ## Utilizar Django en entornos virtuales con Pipenv

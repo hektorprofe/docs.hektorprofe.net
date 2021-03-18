@@ -46,7 +46,7 @@ nav:
   - Menús: 
     - 'cursos.md'
 
-  - Academia:
+  - Academia de programación:
     - Índice del archivo:                 'academia/index.md'
     - Lenguaje Python:
       - Introducción a Python:            'academia/python/introduccion.md'
@@ -55,7 +55,7 @@ nav:
       - Tutoriales sobre Python:          'academia/python/tutoriales.md'
       - Módulo analítico NumPy:           'academia/python/modulo-analitico-numpy.md'
       - Módulo gráfico Matplotlib:        'academia/python/modulo-grafico-matplotlib.md'
-      - Módulo web backend Django:        'academia/django/introduccion.md'
+      - Introducción a Django:            'academia/django/introduccion.md'
       - Proyecto API con DRF:             'academia/django/api-rest-framework.md'
       - Tutoriales sobre Django:          'academia/django/tutoriales.md'
     - Lenguaje JavaScript:

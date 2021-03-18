@@ -74,6 +74,25 @@
         margin-left: 8px;
       }
 
+      nav div .archivo {
+        color: white;
+        margin-left: 14px;
+        margin-right: 5px;
+        line-height: 56px;
+        vertical-align: top;
+        float: right;
+        font-size: 18px;
+      }
+
+      nav div .archivo a {
+        color: rgb(245, 245, 245);
+        text-decoration: none;
+      }
+
+      nav div .archivo a:hover {
+        color: #30a8d8;
+      }
+
       .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -82,12 +101,22 @@
         text-align: left;
       }
 
-      @media (max-width: 939px) {
+      @media (max-width: 949px) {
         .wrapper {
           grid-template-columns: 1fr;
         }
         main {
           width: 100%;
+        }
+
+        nav div {
+          width: 100%;
+          margin: 0 auto;
+          height: 3.5rem;
+        }
+
+        nav div .archivo {
+          margin-right: 15px;
         }
       }
 
@@ -97,6 +126,12 @@
         margin-top: 0;
         padding-bottom: 0;
         margin-bottom: 0;
+      }
+
+      @media (max-width: 380px) {
+        nav div .archivo {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -111,6 +146,7 @@
             alt="Documentos | Hektor Profe"
             title="Documentos | Hektor Profe"
           />
+          <span class="archivo"><a href="https://www.hektorprofe.net/">Portada</a></span>
         </div>
       </nav>
     </header>

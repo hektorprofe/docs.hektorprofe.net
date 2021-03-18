@@ -1,15 +1,13 @@
 title: Configurar Ubuntu Server para servicios web | GNU/Linux | Academia | Hektor Profe
 description: Aprende a configurar tu propio servidor Ubuntu Server para desplegar servicios web usando Nginx y certificados SSL.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{color: #018dc5 !important;}
-.admonition.info{font-size: 100%;}
-.admonition.info label{font-size: 91%;}
-.admonition.note > .admonition-title { display: none;}
-.image { text-align:center;margin-top:25px; }
-</style>
-
 # Configurar Ubuntu Server para servicios web
+
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/8lrncaVmbMk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Bienvenida
 
 Vamos a aprender a configurar un servidor GNU/Linux para desplegar diferentes servicios web utilizando la distribución Ubuntu Server. Pero... ¿por qué os debería interesar aprender esto? Porque si sois desarrolladores web podréis ahorraros muchísimo dinero.
 
