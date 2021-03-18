@@ -230,11 +230,11 @@ div.my-img{text-align:center;margin-top:20px}
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      Academia
+      Academia de programación
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Academia
+        Academia de programación
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -341,15 +341,15 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Ejemplo sencillo de Test Driven Development en Python" class="md-nav__link toc__link">
-    Ejemplo sencillo de Test Driven Development en Python
+  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
+    Introducción a los dibujos gráficos con Turtle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
-    Introducción a los dibujos gráficos con Turtle
+  <a href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Ejemplo sencillo de Test Driven Development en Python" class="md-nav__link toc__link">
+    Ejemplo sencillo de Test Driven Development en Python
   </a>
   
 </li>
@@ -395,8 +395,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../django/introduccion/" title="Módulo web backend Django" class="md-nav__link">
-      Módulo web backend Django
+    <a href="../../django/introduccion/" title="Introducción a Django" class="md-nav__link">
+      Introducción a Django
     </a>
   </li>
 
@@ -599,15 +599,15 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Ejemplo sencillo de Test Driven Development en Python" class="md-nav__link toc__link">
-    Ejemplo sencillo de Test Driven Development en Python
+  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
+    Introducción a los dibujos gráficos con Turtle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
-    Introducción a los dibujos gráficos con Turtle
+  <a href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Ejemplo sencillo de Test Driven Development en Python" class="md-nav__link toc__link">
+    Ejemplo sencillo de Test Driven Development en Python
   </a>
   
 </li>
@@ -630,182 +630,18 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="tutoriales-sobre-python">Tutoriales sobre Python<a class="headerlink" href="#tutoriales-sobre-python" title="Permanent link">&para;</a></h1>
-<h2 id="ejemplo-sencillo-de-test-driven-development-en-python">Ejemplo sencillo de Test Driven Development en Python<a class="headerlink" href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Permanent link">&para;</a></h2>
-<p>En este tutorial os voy a hablar un poco sobre el <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas">TDD: el desarrollo guiado por pruebas</a>.</p>
-<p>A diferencia de programar un proyecto y luego añadir pruebas, la idea del TDD es desarrollar el software a partir de las propias pruebas, dejando que éstas nos guíen durante el proceso.</p>
-<p>De esta forma cada funcionalidad ya es concebida desde el principio con la idea de superar un test y por tanto está monitorizada para su correcto funcionamiento en el futuro.</p>
-<p>Para hacer TDD hay que seguir un orden estricto:</p>
-<ol>
-<li><strong>Escribir una prueba</strong>, que recoja los requisitos de la funcionalidad que vamos a implementar.</li>
-<li><strong>Ejecutar la prueba y comprobar que falla</strong>, ya que todavía no habremos implementado la funcionalidad.</li>
-<li><strong>Implementar la funcionalidad</strong>, con el código mínimo necesario.</li>
-<li><strong>Volver a ejecutar la prueba</strong>, que en esta ocasión debería pasar correctamente, y si no es así corregir el código hasta que la pase.</li>
-<li><strong>Refactorizar el código</strong>, borrando redundancias e incongruencias, siempre comprobando que los tests siguen validando bien.</li>
-<li><strong>Volver a empezar</strong>, para implementar el siguiente requisito.</li>
-</ol>
-<p>Crear una calculadora simple es el ejemplo más fácil e ilustrativo del procedimiento, basado en crear una clase calculadora con métodos para diferentes operaciones (suma, resta, división…).</p>
-<p>Lo primero que vamos a hacer es crear un fichero llamado <strong>test_calculator.py</strong> en un directorio. Es importante que empiece con <strong>test_</strong> si queremos aprovechar la opción de autodescubrimiento de Python:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="c1"># Cargamos el módulo unittest</span>
-<span class="kn">import</span> <span class="nn">unittest</span>  
-
-<span class="c1"># Creamos una clase heredando de TestCase</span>
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="c1"># Creamos una prueba para probar un valor inicial</span>
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Como véis es un simple test para comprobar que el valor inicial de nuestra supuesta calculadora es 0 (es el valor que muestran por defecto todas las calculadoras).</p>
-<p>Por cierto, los tests también deben empezar con <strong>test_</strong>.</p>
-<p>Ahora, desde el directorio que contiene el fichero ejecutamos los tests de autodescubrimiento:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-E
-====================================================================
-ERROR: test_initial_value (test_calculator.TestMyCalculator)
---------------------------------------------------------------------
-Traceback (most recent call last):
-  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 9, in test_initial_value
-    calc = Calculator()
-NameError: name &#39;Calculator&#39; is not defined
---------------------------------------------------------------------
-Ran 1 test in 0.001s
-FAILED (errors=1)
-</pre></div>
-<p>Como era obvio se encontrará un test, se ejecutará y fallará.</p>
-<p>Para seguir correctamente la filosofía del TDD es esencial no implementar todo el código de golpe, sino simplemente resolver los errores de uno en uno para hacer que la prueba pase, <strong>de eso se trata que nos guíen las pruebas</strong>.</p>
-<p>El error que tenemos ahora nos dice:</p>
-<div class="highlight"><pre><span></span>NameError: name &#39;Calculator&#39; is not defined
-</pre></div>
-<p>Para solucionarlo creamos la clase <strong>Calculator</strong> con el mínimo código:</p>
-<p><code>calculator.py</code>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
-    <span class="k">pass</span>
-</pre></div></p>
-<p>Y hacemos uso de ella en nuestros módulo de pruebas:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
-
-<span class="c1"># Importamos la clase calculadora</span>
-<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
-
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Se supone que hemos resuelto el fallo, así que vamos a probar:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-E
-====================================================================
-ERROR: test_initial_value (test_calculator.TestMyCalculator)
---------------------------------------------------------------------
-Traceback (most recent call last):
-  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 11, in test_initial_value
-    self.assertEqual(0, calc.value)
-AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
---------------------------------------------------------------------
-Ran 1 test in 0.001s
-FAILED (errors=1)
-</pre></div>
-<p>¡Vaya qué sorpresa! Hemos arreglado un error y a aparecido otro diciéndonos que no tenemos el atributo value:</p>
-<div class="highlight"><pre><span></span>AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
-</pre></div>
-<p>Pues nada, tendremos que arreglarlo y añadir este atributo en el constructor de nuestra clase:</p>
-<p><code>calculator.py</code>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div></p>
-<p>Ejecutamos de nuevo:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-.
---------------------------------------------------------------------
-Ran 1 test in 0.000s
-OK
-</pre></div>
-<p>Nuestro código es muy sencillo, pero podemos mejorar un poco el test unitario añadiendo un método setUp() que se encargue de crear la instancia automáticamente:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
-<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
-
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Después de refactorizar volveremos a comprobar que el código pasa los tests, no vaya a ser que la hayamos liado:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-.
---------------------------------------------------------------------
-Ran 1 test in 0.001s
-OK
-</pre></div>
-<p>¡Perfecto! Ya hemos desarrollado nuestro primer requisito guiándonos de las pruebas mientras hemos resuelto 2 errores.</p>
-<p>Una calculadora sin operaciones no es una calculadora, así que vamos a añadirle por lo menos un método para sumar dos valores y guardar el resultado en el atributo value.</p>
-<p>Recordemos sin embargo que estamos haciendo TDD, así que no podemos escribir el método directamente, primero tendremos que hacer un test que falle:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
-<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
-
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-
-    <span class="c1"># Creamos un nuevo test para comprobar una suma</span>
-    <span class="k">def</span> <span class="nf">test_add_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Ejecutamos el método</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  
-        <span class="c1"># Comprobamos si el valor es el que esperamos</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Ejecutamos el test que fallará:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-E.
-====================================================================
-ERROR: test_add_method (test_calculator.TestMyCalculator)
---------------------------------------------------------------------
-Traceback (most recent call last):
-  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 15, in test_add_method
-    self.calc.add(1, 3)
-AttributeError: &#39;Calculator&#39; object has no attribute &#39;add&#39;
---------------------------------------------------------------------
-Ran 2 tests in 0.001s
-FAILED (errors=1)
-</pre></div>
-<p>Implementamos el método <strong>add</strong>:</p>
-<p><code>calculator.py</code>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</pre></div></p>
-<p>Probamos de nuevo el test:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-..
---------------------------------------------------------------------
-Ran 2 tests in 0.000s
-OK
-</pre></div>
-<p>¡Perfecto, ya tenemos implementada nuestra suma! Ahora sería cuestión de ir añadiendo la resta, el producto, la división, etc.</p>
 <h2 id="introduccion-a-los-dibujos-graficos-con-turtle">Introducción a los dibujos gráficos con Turtle<a class="headerlink" href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Permanent link">&para;</a></h2>
+<div class="contenedor_youtube">
+  <iframe width="838" height="470" src="https://www.youtube.com/embed/f0Y--fvUfs8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p><strong>Repositorio</strong>: <a href="https://github.com/hektorprofe/curso-python-turtle" target="_blank">https://github.com/hektorprofe/curso-python-turtle</a></p>
+<hr />
+
+<p><strong>¿Qué es Turtle?</strong></p>
 <p>El módulo de la tortuga es la herramienta educativa perfecta para aprender programación de forma visual dibujando sobre un lienzo.</p>
 <p>Se introdujo en el lenguaje Logo en 1966, sí, hace más de medio siglo, y si bien no es tan visual como programar con Scratch, permite trabajar directamente en un lenguaje como Python que la incorporó hace ya varios años.</p>
 <p>En cierto modo se puede considerar una introducción a la programación de videojuegos, así que si te interesa el tema quédate hasta el final porque podrías aprender algunas cosas muy interesantes.</p>
-<p>Repositorio: <a href="https://github.com/hektorprofe/curso-python-turtle" target="_blank">https://github.com/hektorprofe/curso-python-turtle</a></p>
 <p><strong>Estructura base</strong></p>
 <p>Normalmente partiremos de una estructura básica, con la importación de la librería, la creación de un espacio de dibujo y al final las rutinas de cierre:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>            <span class="c1"># Cargamos el módulo de la tortuga</span>
@@ -1121,6 +957,179 @@ Vamos a hacer que la tortuga trace líneas entre esos vértices yendo de unos a 
 <li><a href="https://hourofpython.com/una-introduccion-visual-a-python/index.html">Introducción visual a Python</a>: Minicurso de Python gráfico 100% en español utilizando Turtle.</li>
 <li><a href="https://docs.python.org/3.6/library/turtle.html">Documentación oficial</a>: El mejor lugar para aprender todas las funcionalidades de la tortuga.</li>
 </ul>
+<h2 id="ejemplo-sencillo-de-test-driven-development-en-python">Ejemplo sencillo de Test Driven Development en Python<a class="headerlink" href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Permanent link">&para;</a></h2>
+<p>En este tutorial os voy a hablar un poco sobre el <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas">TDD: el desarrollo guiado por pruebas</a>.</p>
+<p>A diferencia de programar un proyecto y luego añadir pruebas, la idea del TDD es desarrollar el software a partir de las propias pruebas, dejando que éstas nos guíen durante el proceso.</p>
+<p>De esta forma cada funcionalidad ya es concebida desde el principio con la idea de superar un test y por tanto está monitorizada para su correcto funcionamiento en el futuro.</p>
+<p>Para hacer TDD hay que seguir un orden estricto:</p>
+<ol>
+<li><strong>Escribir una prueba</strong>, que recoja los requisitos de la funcionalidad que vamos a implementar.</li>
+<li><strong>Ejecutar la prueba y comprobar que falla</strong>, ya que todavía no habremos implementado la funcionalidad.</li>
+<li><strong>Implementar la funcionalidad</strong>, con el código mínimo necesario.</li>
+<li><strong>Volver a ejecutar la prueba</strong>, que en esta ocasión debería pasar correctamente, y si no es así corregir el código hasta que la pase.</li>
+<li><strong>Refactorizar el código</strong>, borrando redundancias e incongruencias, siempre comprobando que los tests siguen validando bien.</li>
+<li><strong>Volver a empezar</strong>, para implementar el siguiente requisito.</li>
+</ol>
+<p>Crear una calculadora simple es el ejemplo más fácil e ilustrativo del procedimiento, basado en crear una clase calculadora con métodos para diferentes operaciones (suma, resta, división…).</p>
+<p>Lo primero que vamos a hacer es crear un fichero llamado <strong>test_calculator.py</strong> en un directorio. Es importante que empiece con <strong>test_</strong> si queremos aprovechar la opción de autodescubrimiento de Python:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="c1"># Cargamos el módulo unittest</span>
+<span class="kn">import</span> <span class="nn">unittest</span>  
+
+<span class="c1"># Creamos una clase heredando de TestCase</span>
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="c1"># Creamos una prueba para probar un valor inicial</span>
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Como véis es un simple test para comprobar que el valor inicial de nuestra supuesta calculadora es 0 (es el valor que muestran por defecto todas las calculadoras).</p>
+<p>Por cierto, los tests también deben empezar con <strong>test_</strong>.</p>
+<p>Ahora, desde el directorio que contiene el fichero ejecutamos los tests de autodescubrimiento:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+E
+====================================================================
+ERROR: test_initial_value (test_calculator.TestMyCalculator)
+--------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 9, in test_initial_value
+    calc = Calculator()
+NameError: name &#39;Calculator&#39; is not defined
+--------------------------------------------------------------------
+Ran 1 test in 0.001s
+FAILED (errors=1)
+</pre></div>
+<p>Como era obvio se encontrará un test, se ejecutará y fallará.</p>
+<p>Para seguir correctamente la filosofía del TDD es esencial no implementar todo el código de golpe, sino simplemente resolver los errores de uno en uno para hacer que la prueba pase, <strong>de eso se trata que nos guíen las pruebas</strong>.</p>
+<p>El error que tenemos ahora nos dice:</p>
+<div class="highlight"><pre><span></span>NameError: name &#39;Calculator&#39; is not defined
+</pre></div>
+<p>Para solucionarlo creamos la clase <strong>Calculator</strong> con el mínimo código:</p>
+<p><code>calculator.py</code>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div></p>
+<p>Y hacemos uso de ella en nuestros módulo de pruebas:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
+
+<span class="c1"># Importamos la clase calculadora</span>
+<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
+
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Se supone que hemos resuelto el fallo, así que vamos a probar:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+E
+====================================================================
+ERROR: test_initial_value (test_calculator.TestMyCalculator)
+--------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 11, in test_initial_value
+    self.assertEqual(0, calc.value)
+AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
+--------------------------------------------------------------------
+Ran 1 test in 0.001s
+FAILED (errors=1)
+</pre></div>
+<p>¡Vaya qué sorpresa! Hemos arreglado un error y a aparecido otro diciéndonos que no tenemos el atributo value:</p>
+<div class="highlight"><pre><span></span>AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
+</pre></div>
+<p>Pues nada, tendremos que arreglarlo y añadir este atributo en el constructor de nuestra clase:</p>
+<p><code>calculator.py</code>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div></p>
+<p>Ejecutamos de nuevo:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+.
+--------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK
+</pre></div>
+<p>Nuestro código es muy sencillo, pero podemos mejorar un poco el test unitario añadiendo un método setUp() que se encargue de crear la instancia automáticamente:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
+<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
+
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Después de refactorizar volveremos a comprobar que el código pasa los tests, no vaya a ser que la hayamos liado:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+.
+--------------------------------------------------------------------
+Ran 1 test in 0.001s
+OK
+</pre></div>
+<p>¡Perfecto! Ya hemos desarrollado nuestro primer requisito guiándonos de las pruebas mientras hemos resuelto 2 errores.</p>
+<p>Una calculadora sin operaciones no es una calculadora, así que vamos a añadirle por lo menos un método para sumar dos valores y guardar el resultado en el atributo value.</p>
+<p>Recordemos sin embargo que estamos haciendo TDD, así que no podemos escribir el método directamente, primero tendremos que hacer un test que falle:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
+<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
+
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="c1"># Creamos un nuevo test para comprobar una suma</span>
+    <span class="k">def</span> <span class="nf">test_add_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Ejecutamos el método</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  
+        <span class="c1"># Comprobamos si el valor es el que esperamos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Ejecutamos el test que fallará:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+E.
+====================================================================
+ERROR: test_add_method (test_calculator.TestMyCalculator)
+--------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 15, in test_add_method
+    self.calc.add(1, 3)
+AttributeError: &#39;Calculator&#39; object has no attribute &#39;add&#39;
+--------------------------------------------------------------------
+Ran 2 tests in 0.001s
+FAILED (errors=1)
+</pre></div>
+<p>Implementamos el método <strong>add</strong>:</p>
+<p><code>calculator.py</code>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div></p>
+<p>Probamos de nuevo el test:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+..
+--------------------------------------------------------------------
+Ran 2 tests in 0.000s
+OK
+</pre></div>
+<p>¡Perfecto, ya tenemos implementada nuestra suma! Ahora sería cuestión de ir añadiendo la resta, el producto, la división, etc.</p>
+<hr />
+<p><small class="edited"><i>Última edición: 18 de Marzo de 2021</i></small></p>
                 
                   
                 
