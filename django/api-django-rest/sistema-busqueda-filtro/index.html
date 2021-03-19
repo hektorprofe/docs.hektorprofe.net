@@ -1141,8 +1141,8 @@ pipenv install django-filter
 <li><code>next_link</code>: El enlace a la siguiente página</li>
 <li><code>previous_link</code>: El enlace a la anterior página</li>
 </ul>
-<p>Otra cosa que podemos hacer, y de hecho vamos a hacer por petición de Dani, es modificar estos campos a voluntad, concretamente los enlaces para navegar en la paginación.</p>
-<p>Dani me ha pedido si era posible dejar sólo los parámetros de la consulta, ya que el plugin de React que va a utilizar los requiere de esta forma, así que vamos a hacerlo:</p>
+<p>Otra cosa que podemos hacer, y de hecho vamos a hacer por petición de mi compañero, es modificar estos campos a voluntad, concretamente los enlaces para navegar en la paginación.</p>
+<p>Me han pedido si era posible dejar sólo los parámetros de la consulta, ya que el plugin de React que va a utilizar los requiere de esta forma, así que vamos a hacerlo:</p>
 <p><strong><code>films/views.py</code></strong></p>
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExtendedPagination</span><span class="p">(</span><span class="n">PageNumberPagination</span><span class="p">):</span>
     <span class="n">page_size</span> <span class="o">=</span> <span class="mi">8</span>
