@@ -356,13 +356,6 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
-    Introducción a los dibujos gráficos con Turtle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Ejemplo sencillo de Test Driven Development en Python" class="md-nav__link toc__link">
     Ejemplo sencillo de Test Driven Development en Python
   </a>
@@ -370,8 +363,15 @@ div.my-img{text-align:center;margin-top:20px}
 </li>
       
         <li class="md-nav__item">
-  <a href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Generar ejecutables utilizando Auto-py-to-exe" class="md-nav__link toc__link">
-    Generar ejecutables utilizando Auto-py-to-exe
+  <a href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Generar ejecutables utilizando auto-py-to-exe" class="md-nav__link toc__link">
+    Generar ejecutables utilizando auto-py-to-exe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
+    Introducción a los dibujos gráficos con Turtle
   </a>
   
 </li>
@@ -621,13 +621,6 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
-    Introducción a los dibujos gráficos con Turtle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Ejemplo sencillo de Test Driven Development en Python" class="md-nav__link toc__link">
     Ejemplo sencillo de Test Driven Development en Python
   </a>
@@ -635,8 +628,15 @@ div.my-img{text-align:center;margin-top:20px}
 </li>
       
         <li class="md-nav__item">
-  <a href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Generar ejecutables utilizando Auto-py-to-exe" class="md-nav__link toc__link">
-    Generar ejecutables utilizando Auto-py-to-exe
+  <a href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Generar ejecutables utilizando auto-py-to-exe" class="md-nav__link toc__link">
+    Generar ejecutables utilizando auto-py-to-exe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Introducción a los dibujos gráficos con Turtle" class="md-nav__link toc__link">
+    Introducción a los dibujos gráficos con Turtle
   </a>
   
 </li>
@@ -659,6 +659,252 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="tutoriales-sobre-python">Tutoriales sobre Python<a class="headerlink" href="#tutoriales-sobre-python" title="Permanent link">&para;</a></h1>
+<h2 id="ejemplo-sencillo-de-test-driven-development-en-python">Ejemplo sencillo de Test Driven Development en Python<a class="headerlink" href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Permanent link">&para;</a></h2>
+<p>En este tutorial os voy a hablar un poco sobre el <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas">TDD: el desarrollo guiado por pruebas</a>.</p>
+<p>A diferencia de programar un proyecto y luego añadir pruebas, la idea del TDD es desarrollar el software a partir de las propias pruebas, dejando que éstas nos guíen durante el proceso.</p>
+<p>De esta forma cada funcionalidad ya es concebida desde el principio con la idea de superar un test y por tanto está monitorizada para su correcto funcionamiento en el futuro.</p>
+<p>Para hacer TDD hay que seguir un orden estricto:</p>
+<ol>
+<li><strong>Escribir una prueba</strong>, que recoja los requisitos de la funcionalidad que vamos a implementar.</li>
+<li><strong>Ejecutar la prueba y comprobar que falla</strong>, ya que todavía no habremos implementado la funcionalidad.</li>
+<li><strong>Implementar la funcionalidad</strong>, con el código mínimo necesario.</li>
+<li><strong>Volver a ejecutar la prueba</strong>, que en esta ocasión debería pasar correctamente, y si no es así corregir el código hasta que la pase.</li>
+<li><strong>Refactorizar el código</strong>, borrando redundancias e incongruencias, siempre comprobando que los tests siguen validando bien.</li>
+<li><strong>Volver a empezar</strong>, para implementar el siguiente requisito.</li>
+</ol>
+<p>Crear una calculadora simple es el ejemplo más fácil e ilustrativo del procedimiento, basado en crear una clase calculadora con métodos para diferentes operaciones (suma, resta, división…).</p>
+<p>Lo primero que vamos a hacer es crear un fichero llamado <strong>test_calculator.py</strong> en un directorio. Es importante que empiece con <strong>test_</strong> si queremos aprovechar la opción de autodescubrimiento de Python:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="c1"># Cargamos el módulo unittest</span>
+<span class="kn">import</span> <span class="nn">unittest</span>  
+
+<span class="c1"># Creamos una clase heredando de TestCase</span>
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="c1"># Creamos una prueba para probar un valor inicial</span>
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Como véis es un simple test para comprobar que el valor inicial de nuestra supuesta calculadora es 0 (es el valor que muestran por defecto todas las calculadoras).</p>
+<p>Por cierto, los tests también deben empezar con <strong>test_</strong>.</p>
+<p>Ahora, desde el directorio que contiene el fichero ejecutamos los tests de autodescubrimiento:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+E
+====================================================================
+ERROR: test_initial_value (test_calculator.TestMyCalculator)
+--------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 9, in test_initial_value
+    calc = Calculator()
+NameError: name &#39;Calculator&#39; is not defined
+--------------------------------------------------------------------
+Ran 1 test in 0.001s
+FAILED (errors=1)
+</pre></div>
+<p>Como era obvio se encontrará un test, se ejecutará y fallará.</p>
+<p>Para seguir correctamente la filosofía del TDD es esencial no implementar todo el código de golpe, sino simplemente resolver los errores de uno en uno para hacer que la prueba pase, <strong>de eso se trata que nos guíen las pruebas</strong>.</p>
+<p>El error que tenemos ahora nos dice:</p>
+<div class="highlight"><pre><span></span>NameError: name &#39;Calculator&#39; is not defined
+</pre></div>
+<p>Para solucionarlo creamos la clase <strong>Calculator</strong> con el mínimo código:</p>
+<p><code>calculator.py</code>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div></p>
+<p>Y hacemos uso de ella en nuestros módulo de pruebas:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
+
+<span class="c1"># Importamos la clase calculadora</span>
+<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
+
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Se supone que hemos resuelto el fallo, así que vamos a probar:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+E
+====================================================================
+ERROR: test_initial_value (test_calculator.TestMyCalculator)
+--------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 11, in test_initial_value
+    self.assertEqual(0, calc.value)
+AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
+--------------------------------------------------------------------
+Ran 1 test in 0.001s
+FAILED (errors=1)
+</pre></div>
+<p>¡Vaya qué sorpresa! Hemos arreglado un error y a aparecido otro diciéndonos que no tenemos el atributo value:</p>
+<div class="highlight"><pre><span></span>AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
+</pre></div>
+<p>Pues nada, tendremos que arreglarlo y añadir este atributo en el constructor de nuestra clase:</p>
+<p><code>calculator.py</code>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div></p>
+<p>Ejecutamos de nuevo:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+.
+--------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK
+</pre></div>
+<p>Nuestro código es muy sencillo, pero podemos mejorar un poco el test unitario añadiendo un método setUp() que se encargue de crear la instancia automáticamente:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
+<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
+
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Después de refactorizar volveremos a comprobar que el código pasa los tests, no vaya a ser que la hayamos liado:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+.
+--------------------------------------------------------------------
+Ran 1 test in 0.001s
+OK
+</pre></div>
+<p>¡Perfecto! Ya hemos desarrollado nuestro primer requisito guiándonos de las pruebas mientras hemos resuelto 2 errores.</p>
+<p>Una calculadora sin operaciones no es una calculadora, así que vamos a añadirle por lo menos un método para sumar dos valores y guardar el resultado en el atributo value.</p>
+<p>Recordemos sin embargo que estamos haciendo TDD, así que no podemos escribir el método directamente, primero tendremos que hacer un test que falle:</p>
+<p><code>test_calculator.py</code>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
+<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
+
+<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="c1"># Creamos un nuevo test para comprobar una suma</span>
+    <span class="k">def</span> <span class="nf">test_add_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Ejecutamos el método</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  
+        <span class="c1"># Comprobamos si el valor es el que esperamos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div></p>
+<p>Ejecutamos el test que fallará:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+E.
+====================================================================
+ERROR: test_add_method (test_calculator.TestMyCalculator)
+--------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 15, in test_add_method
+    self.calc.add(1, 3)
+AttributeError: &#39;Calculator&#39; object has no attribute &#39;add&#39;
+--------------------------------------------------------------------
+Ran 2 tests in 0.001s
+FAILED (errors=1)
+</pre></div>
+<p>Implementamos el método <strong>add</strong>:</p>
+<p><code>calculator.py</code>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div></p>
+<p>Probamos de nuevo el test:</p>
+<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
+..
+--------------------------------------------------------------------
+Ran 2 tests in 0.000s
+OK
+</pre></div>
+<p>¡Perfecto, ya tenemos implementada nuestra suma! Ahora sería cuestión de ir añadiendo la resta, el producto, la división, etc.</p>
+<h2 id="generar-ejecutables-utilizando-auto-py-to-exe">Generar ejecutables utilizando auto-py-to-exe<a class="headerlink" href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Permanent link">&para;</a></h2>
+<p>Esta aplicación permite generar archivos .exe de tus proyectos, ya sea un archivo .py o varios. Tiene una interfaz gráfica de usuario que se se ve así:</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/01.png"/>
+</div>
+
+<p><strong>1) Instalación y ejecución</strong></p>
+<p>Instalación usando PyPI:</p>
+<div class="highlight"><pre><span></span>pip install auto-py-to-exe
+</pre></div>
+<p>Para abrir la aplicación:</p>
+<div class="highlight"><pre><span></span>auto-py-to-exe
+</pre></div>
+<p><strong>2) Conversión</strong></p>
+<p>Hay algunas opciones principales:</p>
+<ul>
+<li>Seleccionar el archivo principal .py</li>
+<li>Seleccionar la opción "Un directorio" o "Un archivo"</li>
+<li>Seleccionar los archivos adicionales</li>
+</ul>
+<p>2.1) Seleccionar el archivo principal .py</p>
+<p>Si tiene varios archivos, seleccionar el que inicie el programa.</p>
+<p>2.2) "One Directory"</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/02.JPG"/>
+</div>
+
+<p>Al elegir la opción <strong>"Un directorio",</strong> Auto PY to EXE colocará todas las dependencias en una carpeta. Puede elegir el directorio de salida en el menú "Avanzado". Si tiene archivos multimedia como iconos y fondos, no debería tener problemas para usarlos dentro de su .exe si coloca archivos / carpetas multimedia en el directorio de salida.</p>
+<p>2.3) "One File"</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/04.JPG"/>
+</div>
+
+<p>Al elegir la opción <strong>"Un archivo",</strong> Auto PY to EXE creará un archivo .exe que contiene todas las dependencias, pero <strong>NO LOS ARCHIVOS DE MEDIOS</strong>. Si tu programa solo tiene la interfaz gráfica de usuario predeterminada de Windows sin iconos, fondos, archivos multimedia o si prefieres colocar la carpeta con los recursos multimedia adjunta al archivo .exe omite la siguiente explicación. Para aquellos que quieran empaquetar archivos multimedia en el archivo .exe, continua con el paso 2.4.</p>
+<p>2.4) Elegir archivos adicionales</p>
+<p>Hay un menú en <strong>Auto PY to EXE </strong>llamado "Archivos adicionales" que permite agregar archivos. Sin embargo, hay un problema. "Auto PY to EXE" usa pyinstaller que descomprime los datos en una carpeta temporal y almacena esta ruta de directorio en la variable de entorno _MEIPASS. El proyecto no encontrará los archivos necesarios porque la ruta cambió y no verá la nueva. En otras palabras, si se eliges la opción "Un archivo", los archivos seleccionados en el menú "Archivos adicionales" no se agregarán al archivo .exe.</p>
+<p>Para solucionar este problema, debes utilizar este código proporcionado por el desarrollador de Auto PY to EXE:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">resource_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Get absolute path to resource, works for dev and for PyInstaller &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># PyInstaller creates a temp folder and stores path in _MEIPASS</span>
+        <span class="n">base_path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_MEIPASS</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">base_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</pre></div>
+<p>Para usar este código en su proyecto, reemplaza los enlaces al archivo multimedia que tienes ahora. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s1">&#39;media\icons\logo.png&#39;</span><span class="p">))</span>
+</pre></div>
+<p>Lo cambiaríamos por:</p>
+<div class="highlight"><pre><span></span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="n">resource_path</span><span class="p">(</span><span class="s1">&#39;logo.png&#39;</span><span class="p">))</span>
+</pre></div>
+<p>Ahora se hará referencia al enlace correctamente y los archivos elegidos se empaquetarán correctamente en un archivo .exe.</p>
+<p>A modo de comparación, como quedaría antes:</p>
+<div class="highlight"><pre><span></span>&quot;C:\Users\User\Project\media\icons\logo.png&quot;
+</pre></div>
+<p>Y después de usar la función <strong>resource_path()</strong>:</p>
+<div class="highlight"><pre><span></span>&quot;C:\Users\User\AppData\Local\Temp\\_MEI34121\logo.png&quot;
+</pre></div>
+<p>Ahora presiona <strong>CONVERT .PY TO .EXE</strong></p></p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/05.png"/>
+</div>
+
+<p>Espera:</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/06.png"/>
+</div>
+
+<p><strong>3) Ejecuta el programa</strong></p>
+<p>¡Ya está! Prueba el ejecutable y asegúrate de que todo funcione bien.</p></p>
+<ul>
+<li>Si creaste el ejecutable en un directorio cada archivo que necesita debe estar en un <strong>único directorio</strong>.</li>
+<li>Si creaste el ejecutable en un fichero deberías tener un solo archivo .exe. No necesitarás ningún archivo ni carpeta multimedia junto al ejecutable .exe para que se ejecute correctamente.</li>
+</ul>
 <h2 id="introduccion-a-los-dibujos-graficos-con-turtle">Introducción a los dibujos gráficos con Turtle<a class="headerlink" href="#introduccion-a-los-dibujos-graficos-con-turtle" title="Permanent link">&para;</a></h2>
 <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/f0Y--fvUfs8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -985,252 +1231,6 @@ Vamos a hacer que la tortuga trace líneas entre esos vértices yendo de unos a 
 <ul>
 <li><a href="https://hourofpython.com/una-introduccion-visual-a-python/index.html">Introducción visual a Python</a>: Minicurso de Python gráfico 100% en español utilizando Turtle.</li>
 <li><a href="https://docs.python.org/3.6/library/turtle.html">Documentación oficial</a>: El mejor lugar para aprender todas las funcionalidades de la tortuga.</li>
-</ul>
-<h2 id="ejemplo-sencillo-de-test-driven-development-en-python">Ejemplo sencillo de Test Driven Development en Python<a class="headerlink" href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Permanent link">&para;</a></h2>
-<p>En este tutorial os voy a hablar un poco sobre el <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas">TDD: el desarrollo guiado por pruebas</a>.</p>
-<p>A diferencia de programar un proyecto y luego añadir pruebas, la idea del TDD es desarrollar el software a partir de las propias pruebas, dejando que éstas nos guíen durante el proceso.</p>
-<p>De esta forma cada funcionalidad ya es concebida desde el principio con la idea de superar un test y por tanto está monitorizada para su correcto funcionamiento en el futuro.</p>
-<p>Para hacer TDD hay que seguir un orden estricto:</p>
-<ol>
-<li><strong>Escribir una prueba</strong>, que recoja los requisitos de la funcionalidad que vamos a implementar.</li>
-<li><strong>Ejecutar la prueba y comprobar que falla</strong>, ya que todavía no habremos implementado la funcionalidad.</li>
-<li><strong>Implementar la funcionalidad</strong>, con el código mínimo necesario.</li>
-<li><strong>Volver a ejecutar la prueba</strong>, que en esta ocasión debería pasar correctamente, y si no es así corregir el código hasta que la pase.</li>
-<li><strong>Refactorizar el código</strong>, borrando redundancias e incongruencias, siempre comprobando que los tests siguen validando bien.</li>
-<li><strong>Volver a empezar</strong>, para implementar el siguiente requisito.</li>
-</ol>
-<p>Crear una calculadora simple es el ejemplo más fácil e ilustrativo del procedimiento, basado en crear una clase calculadora con métodos para diferentes operaciones (suma, resta, división…).</p>
-<p>Lo primero que vamos a hacer es crear un fichero llamado <strong>test_calculator.py</strong> en un directorio. Es importante que empiece con <strong>test_</strong> si queremos aprovechar la opción de autodescubrimiento de Python:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="c1"># Cargamos el módulo unittest</span>
-<span class="kn">import</span> <span class="nn">unittest</span>  
-
-<span class="c1"># Creamos una clase heredando de TestCase</span>
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="c1"># Creamos una prueba para probar un valor inicial</span>
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Como véis es un simple test para comprobar que el valor inicial de nuestra supuesta calculadora es 0 (es el valor que muestran por defecto todas las calculadoras).</p>
-<p>Por cierto, los tests también deben empezar con <strong>test_</strong>.</p>
-<p>Ahora, desde el directorio que contiene el fichero ejecutamos los tests de autodescubrimiento:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-E
-====================================================================
-ERROR: test_initial_value (test_calculator.TestMyCalculator)
---------------------------------------------------------------------
-Traceback (most recent call last):
-  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 9, in test_initial_value
-    calc = Calculator()
-NameError: name &#39;Calculator&#39; is not defined
---------------------------------------------------------------------
-Ran 1 test in 0.001s
-FAILED (errors=1)
-</pre></div>
-<p>Como era obvio se encontrará un test, se ejecutará y fallará.</p>
-<p>Para seguir correctamente la filosofía del TDD es esencial no implementar todo el código de golpe, sino simplemente resolver los errores de uno en uno para hacer que la prueba pase, <strong>de eso se trata que nos guíen las pruebas</strong>.</p>
-<p>El error que tenemos ahora nos dice:</p>
-<div class="highlight"><pre><span></span>NameError: name &#39;Calculator&#39; is not defined
-</pre></div>
-<p>Para solucionarlo creamos la clase <strong>Calculator</strong> con el mínimo código:</p>
-<p><code>calculator.py</code>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
-    <span class="k">pass</span>
-</pre></div></p>
-<p>Y hacemos uso de ella en nuestros módulo de pruebas:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
-
-<span class="c1"># Importamos la clase calculadora</span>
-<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
-
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Se supone que hemos resuelto el fallo, así que vamos a probar:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-E
-====================================================================
-ERROR: test_initial_value (test_calculator.TestMyCalculator)
---------------------------------------------------------------------
-Traceback (most recent call last):
-  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 11, in test_initial_value
-    self.assertEqual(0, calc.value)
-AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
---------------------------------------------------------------------
-Ran 1 test in 0.001s
-FAILED (errors=1)
-</pre></div>
-<p>¡Vaya qué sorpresa! Hemos arreglado un error y a aparecido otro diciéndonos que no tenemos el atributo value:</p>
-<div class="highlight"><pre><span></span>AttributeError: &#39;Calculator&#39; object has no attribute &#39;value&#39;
-</pre></div>
-<p>Pues nada, tendremos que arreglarlo y añadir este atributo en el constructor de nuestra clase:</p>
-<p><code>calculator.py</code>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div></p>
-<p>Ejecutamos de nuevo:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-.
---------------------------------------------------------------------
-Ran 1 test in 0.000s
-OK
-</pre></div>
-<p>Nuestro código es muy sencillo, pero podemos mejorar un poco el test unitario añadiendo un método setUp() que se encargue de crear la instancia automáticamente:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
-<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
-
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Después de refactorizar volveremos a comprobar que el código pasa los tests, no vaya a ser que la hayamos liado:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-.
---------------------------------------------------------------------
-Ran 1 test in 0.001s
-OK
-</pre></div>
-<p>¡Perfecto! Ya hemos desarrollado nuestro primer requisito guiándonos de las pruebas mientras hemos resuelto 2 errores.</p>
-<p>Una calculadora sin operaciones no es una calculadora, así que vamos a añadirle por lo menos un método para sumar dos valores y guardar el resultado en el atributo value.</p>
-<p>Recordemos sin embargo que estamos haciendo TDD, así que no podemos escribir el método directamente, primero tendremos que hacer un test que falle:</p>
-<p><code>test_calculator.py</code>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>  
-<span class="kn">from</span> <span class="nn">calculator</span> <span class="kn">import</span> <span class="n">Calculator</span>
-
-<span class="k">class</span> <span class="nc">TestMyCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  
-
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">test_initial_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-
-    <span class="c1"># Creamos un nuevo test para comprobar una suma</span>
-    <span class="k">def</span> <span class="nf">test_add_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Ejecutamos el método</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  
-        <span class="c1"># Comprobamos si el valor es el que esperamos</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div></p>
-<p>Ejecutamos el test que fallará:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-E.
-====================================================================
-ERROR: test_add_method (test_calculator.TestMyCalculator)
---------------------------------------------------------------------
-Traceback (most recent call last):
-  File &quot;C:\python-tdd-example\test_calculator.py&quot;, line 15, in test_add_method
-    self.calc.add(1, 3)
-AttributeError: &#39;Calculator&#39; object has no attribute &#39;add&#39;
---------------------------------------------------------------------
-Ran 2 tests in 0.001s
-FAILED (errors=1)
-</pre></div>
-<p>Implementamos el método <strong>add</strong>:</p>
-<p><code>calculator.py</code>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</pre></div></p>
-<p>Probamos de nuevo el test:</p>
-<div class="highlight"><pre><span></span>C:\python-tdd-example&gt;python -m unittest discover
-..
---------------------------------------------------------------------
-Ran 2 tests in 0.000s
-OK
-</pre></div>
-<p>¡Perfecto, ya tenemos implementada nuestra suma! Ahora sería cuestión de ir añadiendo la resta, el producto, la división, etc.</p>
-<h2 id="generar-ejecutables-utilizando-auto-py-to-exe">Generar ejecutables utilizando Auto-py-to-exe<a class="headerlink" href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Permanent link">&para;</a></h2>
-<p>Esta aplicación permite generar archivos .exe de tus proyectos, ya sea un archivo .py o varios. Tiene una interfaz gráfica de usuario que se se ve así:</p>
-<div class="img-content">
-    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/01.png"/>
-</div>
-
-<p><strong>1) Instalación y ejecución</strong></p>
-<p>Instalación usando PyPI:</p>
-<div class="highlight"><pre><span></span>pip install auto-py-to-exe
-</pre></div>
-<p>Para abrir la aplicación:</p>
-<div class="highlight"><pre><span></span>auto-py-to-exe
-</pre></div>
-<p><strong>2) Conversión</strong></p>
-<p>Hay algunas opciones principales:</p>
-<ul>
-<li>Seleccionar el archivo principal .py</li>
-<li>Seleccionar la opción "Un directorio" o "Un archivo"</li>
-<li>Seleccionar los archivos adicionales</li>
-</ul>
-<p>2.1) Seleccionar el archivo principal .py</p>
-<p>Si tiene varios archivos, seleccionar el que inicie el programa.</p>
-<p>2.2) "One Directory"</p>
-<div class="img-content">
-    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/02.JPG"/>
-</div>
-
-<p>Al elegir la opción <strong>"Un directorio",</strong> Auto PY to EXE colocará todas las dependencias en una carpeta. Puede elegir el directorio de salida en el menú "Avanzado". Si tiene archivos multimedia como iconos y fondos, no debería tener problemas para usarlos dentro de su .exe si coloca archivos / carpetas multimedia en el directorio de salida.</p>
-<p>2.3) "One File"</p>
-<div class="img-content">
-    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/04.JPG"/>
-</div>
-
-<p>Al elegir la opción <strong>"Un archivo",</strong> Auto PY to EXE creará un archivo .exe que contiene todas las dependencias, pero <strong>NO LOS ARCHIVOS DE MEDIOS</strong>. Si tu programa solo tiene la interfaz gráfica de usuario predeterminada de Windows sin iconos, fondos, archivos multimedia o si prefieres colocar la carpeta con los recursos multimedia adjunta al archivo .exe omite la siguiente explicación. Para aquellos que quieran empaquetar archivos multimedia en el archivo .exe, continua con el paso 2.4.</p>
-<p>2.4) Elegir archivos adicionales</p>
-<p>Hay un menú en <strong>Auto PY to EXE </strong>llamado "Archivos adicionales" que permite agregar archivos. Sin embargo, hay un problema. "Auto PY to EXE" usa pyinstaller que descomprime los datos en una carpeta temporal y almacena esta ruta de directorio en la variable de entorno _MEIPASS. El proyecto no encontrará los archivos necesarios porque la ruta cambió y no verá la nueva. En otras palabras, si se eliges la opción "Un archivo", los archivos seleccionados en el menú "Archivos adicionales" no se agregarán al archivo .exe.</p>
-<p>Para solucionar este problema, debes utilizar este código proporcionado por el desarrollador de Auto PY to EXE:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">resource_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Get absolute path to resource, works for dev and for PyInstaller &quot;&quot;&quot;</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># PyInstaller creates a temp folder and stores path in _MEIPASS</span>
-        <span class="n">base_path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_MEIPASS</span>
-    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-        <span class="n">base_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</pre></div>
-<p>Para usar este código en su proyecto, reemplaza los enlaces al archivo multimedia que tienes ahora. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s1">&#39;media\icons\logo.png&#39;</span><span class="p">))</span>
-</pre></div>
-<p>Lo cambiaríamos por:</p>
-<div class="highlight"><pre><span></span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="n">resource_path</span><span class="p">(</span><span class="s1">&#39;logo.png&#39;</span><span class="p">))</span>
-</pre></div>
-<p>Ahora se hará referencia al enlace correctamente y los archivos elegidos se empaquetarán correctamente en un archivo .exe.</p>
-<p>A modo de comparación, como quedaría antes:</p>
-<div class="highlight"><pre><span></span>&quot;C:\Users\User\Project\media\icons\logo.png&quot;
-</pre></div>
-<p>Y después de usar la función <strong>resource_path()</strong>:</p>
-<div class="highlight"><pre><span></span>&quot;C:\Users\User\AppData\Local\Temp\\_MEI34121\logo.png&quot;
-</pre></div>
-<p>Ahora presiona <strong>CONVERT .PY TO .EXE</strong></p></p>
-<div class="img-content">
-    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/05.png"/>
-</div>
-
-<p>Espera:</p>
-<div class="img-content">
-    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/06.png"/>
-</div>
-
-<p><strong>3) Ejecuta el programa</strong></p>
-<p>¡Ya está! Prueba el ejecutable y asegúrate de que todo funcione bien.</p></p>
-<ul>
-<li>Si creaste el ejecutable en un directorio cada archivo que necesita debe estar en un <strong>único directorio</strong>.</li>
-<li>Si creaste el ejecutable en un fichero deberías tener un solo archivo .exe. No necesitarás ningún archivo ni carpeta multimedia junto al ejecutable .exe para que se ejecute correctamente.</li>
 </ul>
 <hr />
 <p><small class="edited"><i>Última edición: 19 de Marzo de 2021</i></small></p>
