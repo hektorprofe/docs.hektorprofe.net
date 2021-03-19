@@ -826,6 +826,31 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.hektorprofe.net/django/api-django-rest/</loc>
+     <lastmod>2021-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/django/api-django-rest/sistema-autenticacion-registro/</loc>
+     <lastmod>2021-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/django/api-django-rest/sistema-peliculas-generos/</loc>
+     <lastmod>2021-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/django/api-django-rest/sistema-busqueda-filtro/</loc>
+     <lastmod>2021-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.hektorprofe.net/django/api-django-rest/sistema-perfiles-usuario/</loc>
+     <lastmod>2021-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.hektorprofe.net/escueladevideojuegos/</loc>
      <lastmod>2021-03-19</lastmod>
      <changefreq>daily</changefreq>
