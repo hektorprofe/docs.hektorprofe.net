@@ -880,8 +880,8 @@ div.my-img{text-align:center;margin-top:20px}
 </li>
         
           <li class="md-nav__item">
-  <a href="#autenticacion-con-cookies" title="Autenticación con cookies" class="md-nav__link toc__link">
-    Autenticación con cookies
+  <a href="#el-mejor-sistema-de-autenticacion-para-api" title="El mejor sistema de autenticación para API" class="md-nav__link toc__link">
+    El mejor sistema de autenticación para API
   </a>
   
 </li>
@@ -1094,8 +1094,8 @@ div.my-img{text-align:center;margin-top:20px}
 </li>
         
           <li class="md-nav__item">
-  <a href="#autenticacion-con-cookies" title="Autenticación con cookies" class="md-nav__link toc__link">
-    Autenticación con cookies
+  <a href="#el-mejor-sistema-de-autenticacion-para-api" title="El mejor sistema de autenticación para API" class="md-nav__link toc__link">
+    El mejor sistema de autenticación para API
   </a>
   
 </li>
@@ -1354,7 +1354,7 @@ pipenv run createsuperuser
 <p>Este sistema de autenticación permite compartir información entre sitios sin compartir las credenciales del usuario. En lugar de generar el token en nuestro backend se delega este proceso una plataforma de terceros, de manera que no necesitamos almacenar el usuario y la contraseña en la base de datos. Oauth2 es muy cómodo, pero si tenemos interés en almacenar información del usuario en nuestra base de datos igualmente necesitaremos implementar un sistema de usuarios y pedirle la información a esas plataformas de terceros. Casi nunca se utiliza como sistema único de autenticación, sino como apoyo de nuestro propio sistema.</p>
 <div class="highlight"><pre><span></span>Authorization: Bearer &lt;Oauth2 token&gt;
 </pre></div>
-<h4 id="autenticacion-con-cookies">Autenticación con cookies<a class="headerlink" href="#autenticacion-con-cookies" title="Permanent link">&para;</a></h4>
+<h4 id="el-mejor-sistema-de-autenticacion-para-api">El mejor sistema de autenticación para API<a class="headerlink" href="#el-mejor-sistema-de-autenticacion-para-api" title="Permanent link">&para;</a></h4>
 <p>Con esto hemos cubierto prácticamente todos los sistemas de autenticación. ¿Cuál vamos a utilizar? Pues... ninguno de ellos.</p>
 <p>Veréis, la gracia de las APIs es que permiten separar la lógica del servidor y la del cliente. Sin embargo esto tiene un problema inherente y es que los clientes deben almacenar las credenciales de acceso en la memoria para poder enviarlas en las peticiones.</p>
 <p>Que la información se encuentre almacenada en el cliente implica un defecto de facto en un cliente web y es que esas credenciales SIEMPRE son accesibles a través de JavaScript y por tanto son vulnerables a ser accedidas utilizando ataques XSS (Cross-site Scripting), <a href="https://es.wikipedia.org/wiki/Cross-site_scripting">os dejo un enlace</a>.</p>
@@ -1362,6 +1362,13 @@ pipenv run createsuperuser
 <p>Espera espera Héctor... ¿Eso se puede hacer? ¿Cómo va a enviar las credenciales el cliente si no tiene acceso a ellas? La respuesta está en las <strong>cookies</strong>.</p>
 <p>Ya sé lo que estáis pensando algunos... las cookies también son accesibles desde Javascript y por tanto vulnerables a ataques XSS, así que no vamos a solucionar nada. Sin embargo, y por suerte para nosotros, existe una cláusula en las cookies llamada <strong>HttpOnly</strong> que Django activa automáticamente en las sesiones. Esta opción hace que las cookies sean inaccesibles desde JavaScript y que sea el propio navegador quien las gestiona.</p>
 <p>Con todo esto lograremos un sistema muy robusto, seguro y fácil de implementar.</p>
+<p>Solo debemos indicar en las peticiones de JavaScript que deseamos enviar las credenciales de la cookie de sesión. Por ejemplo usando <code>axios</code> podemos preconfigurarlo así:</p>
+<div class="highlight"><pre><span></span><span class="nx">axios</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">baseURL</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:8000/api&quot;</span><span class="p">;</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">withCredentials</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</pre></div>
+<p>O en cada petición enviar el campo de esta forma:</p>
+<div class="highlight"><pre><span></span><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;http://localhost:8000/api&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">withCredentials</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
+</pre></div>
 <p>¡Gracias Django!</p>
 <h2 id="login-y-logout">Login y logout<a class="headerlink" href="#login-y-logout" title="Permanent link">&para;</a></h2>
 <p>Vamos a empezar creando unas vistas básicas de <strong>login</strong> y <strong>logout</strong> usando una <strong>APIView</strong> básica de DRF. La forma de implementar la lógica es exactamente igual que con Django clásico, os dejo el enlace a la <a href="https://docs.djangoproject.com/en/3.1/topics/auth/default/#how-to-log-a-user-in">documentación oficial</a> por si queréis profundizar:</p>
