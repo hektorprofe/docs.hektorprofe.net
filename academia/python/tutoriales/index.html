@@ -369,6 +369,13 @@ div.my-img{text-align:center;margin-top:20px}
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Generar ejecutables utilizando Auto-py-to-exe" class="md-nav__link toc__link">
+    Generar ejecutables utilizando Auto-py-to-exe
+  </a>
+  
+</li>
+      
       
       
       
@@ -623,6 +630,13 @@ div.my-img{text-align:center;margin-top:20px}
         <li class="md-nav__item">
   <a href="#ejemplo-sencillo-de-test-driven-development-en-python" title="Ejemplo sencillo de Test Driven Development en Python" class="md-nav__link toc__link">
     Ejemplo sencillo de Test Driven Development en Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Generar ejecutables utilizando Auto-py-to-exe" class="md-nav__link toc__link">
+    Generar ejecutables utilizando Auto-py-to-exe
   </a>
   
 </li>
@@ -1143,8 +1157,83 @@ Ran 2 tests in 0.000s
 OK
 </pre></div>
 <p>¡Perfecto, ya tenemos implementada nuestra suma! Ahora sería cuestión de ir añadiendo la resta, el producto, la división, etc.</p>
+<h2 id="generar-ejecutables-utilizando-auto-py-to-exe">Generar ejecutables utilizando Auto-py-to-exe<a class="headerlink" href="#generar-ejecutables-utilizando-auto-py-to-exe" title="Permanent link">&para;</a></h2>
+<p>Esta aplicación permite generar archivos .exe de tus proyectos, ya sea un archivo .py o varios. Tiene una interfaz gráfica de usuario que se se ve así:</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/01.png"/>
+</div>
+
+<p><strong>1) Instalación y ejecución</strong></p>
+<p>Instalación usando PyPI:</p>
+<div class="highlight"><pre><span></span>pip install auto-py-to-exe
+</pre></div>
+<p>Para abrir la aplicación:</p>
+<div class="highlight"><pre><span></span>auto-py-to-exe
+</pre></div>
+<p><strong>2) Conversión</strong></p>
+<p>Hay algunas opciones principales:</p>
+<ul>
+<li>Seleccionar el archivo principal .py</li>
+<li>Seleccionar la opción "Un directorio" o "Un archivo"</li>
+<li>Seleccionar los archivos adicionales</li>
+</ul>
+<p>2.1) Seleccionar el archivo principal .py</p>
+<p>Si tiene varios archivos, seleccionar el que inicie el programa.</p>
+<p>2.2) "One Directory"</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/02.JPG"/>
+</div>
+
+<p>Al elegir la opción <strong>"Un directorio",</strong> Auto PY to EXE colocará todas las dependencias en una carpeta. Puede elegir el directorio de salida en el menú "Avanzado". Si tiene archivos multimedia como iconos y fondos, no debería tener problemas para usarlos dentro de su .exe si coloca archivos / carpetas multimedia en el directorio de salida.</p>
+<p>2.3) "One File"</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/04.JPG"/>
+</div>
+
+<p>Al elegir la opción <strong>"Un archivo",</strong> Auto PY to EXE creará un archivo .exe que contiene todas las dependencias, pero <strong>NO LOS ARCHIVOS DE MEDIOS</strong>. Si tu programa solo tiene la interfaz gráfica de usuario predeterminada de Windows sin iconos, fondos, archivos multimedia o si prefieres colocar la carpeta con los recursos multimedia adjunta al archivo .exe omite la siguiente explicación. Para aquellos que quieran empaquetar archivos multimedia en el archivo .exe, continua con el paso 2.4.</p>
+<p>2.4) Elegir archivos adicionales</p>
+<p>Hay un menú en <strong>Auto PY to EXE </strong>llamado "Archivos adicionales" que permite agregar archivos. Sin embargo, hay un problema. "Auto PY to EXE" usa pyinstaller que descomprime los datos en una carpeta temporal y almacena esta ruta de directorio en la variable de entorno _MEIPASS. El proyecto no encontrará los archivos necesarios porque la ruta cambió y no verá la nueva. En otras palabras, si se eliges la opción "Un archivo", los archivos seleccionados en el menú "Archivos adicionales" no se agregarán al archivo .exe.</p>
+<p>Para solucionar este problema, debes utilizar este código proporcionado por el desarrollador de Auto PY to EXE:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">resource_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Get absolute path to resource, works for dev and for PyInstaller &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># PyInstaller creates a temp folder and stores path in _MEIPASS</span>
+        <span class="n">base_path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_MEIPASS</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">base_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</pre></div>
+<p>Para usar este código en su proyecto, reemplaza los enlaces al archivo multimedia que tienes ahora. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s1">&#39;media\icons\logo.png&#39;</span><span class="p">))</span>
+</pre></div>
+<p>Lo cambiaríamos por:</p>
+<div class="highlight"><pre><span></span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="n">resource_path</span><span class="p">(</span><span class="s1">&#39;logo.png&#39;</span><span class="p">))</span>
+</pre></div>
+<p>Ahora se hará referencia al enlace correctamente y los archivos elegidos se empaquetarán correctamente en un archivo .exe.</p>
+<p>A modo de comparación, como quedaría antes:</p>
+<div class="highlight"><pre><span></span>&quot;C:\Users\User\Project\media\icons\logo.png&quot;
+</pre></div>
+<p>Y después de usar la función <strong>resource_path()</strong>:</p>
+<div class="highlight"><pre><span></span>&quot;C:\Users\User\AppData\Local\Temp\\_MEI34121\logo.png&quot;
+</pre></div>
+<p>Ahora presiona <strong>CONVERT .PY TO .EXE</strong></p></p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/05.png"/>
+</div>
+
+<p>Espera:</p>
+<div class="img-content">
+    <img class="lazy" data-src="/cdn/tutoriales/autopytoexe/06.png"/>
+</div>
+
+<p><strong>3) Ejecuta el programa</strong></p>
+<p>¡Ya está! Prueba el ejecutable y asegúrate de que todo funcione bien.</p></p>
+<ul>
+<li>Si creaste el ejecutable en un directorio cada archivo que necesita debe estar en un <strong>único directorio</strong>.</li>
+<li>Si creaste el ejecutable en un fichero deberías tener un solo archivo .exe. No necesitarás ningún archivo ni carpeta multimedia junto al ejecutable .exe para que se ejecute correctamente.</li>
+</ul>
 <hr />
-<p><small class="edited"><i>Última edición: 18 de Marzo de 2021</i></small></p>
+<p><small class="edited"><i>Última edición: 19 de Marzo de 2021</i></small></p>
                 
                   
                 
