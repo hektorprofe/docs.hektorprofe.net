@@ -834,11 +834,11 @@ div.my-img{text-align:center;margin-top:20px}
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Sistema de perfiles
+        Sistema de perfiles de usuario
       </label>
     
-    <a href="./" title="Sistema de perfiles" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Sistema de perfiles
+    <a href="./" title="Sistema de perfiles de usuario" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Sistema de perfiles de usuario
     </a>
     
       
@@ -880,6 +880,18 @@ div.my-img{text-align:center;margin-top:20px}
   
 </nav>
     
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../sistema-peliculas-usuario/" title="Sistema de películas de usuario" class="md-nav__link">
+      Sistema de películas de usuario
+    </a>
   </li>
 
         
@@ -1032,7 +1044,7 @@ Avatar: Imagen que queramos
          <span class="n">ProfileView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;user_profile&#39;</span><span class="p">),</span>
 <span class="p">]</span>
 </pre></div>
-<p>Si nos identificamos http://localhost:8000/api/auth/login/ y accdemos acceder al perfil http://localhost:8000/api/user/profile/ obtendremos un error:</p>
+<p>Si nos identificamos <code>http://localhost:8000/api/auth/login/</code> y accdemos acceder al perfil <code>http://localhost:8000/api/user/profile/</code> obtendremos un error:</p>
 <div class="highlight"><pre><span></span>&#39;ProfileView&#39; should either include a `queryset` attribute, or override the `get_queryset()` method.
 </pre></div>
 <p>Esto sucede porque la vista no sabe con qué información rellenar el serializador.</p>
@@ -1054,7 +1066,7 @@ Avatar: Imagen que queramos
 <div class="highlight"><pre><span></span><span class="n">avatar</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span>
     <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">allow_null</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># edited</span>
 </pre></div>
-<p>Ahora sí deberíamos ser capaces de editar los campos del perfil http://localhost:8000/api/user/profile/.</p>
+<p>Ahora sí deberíamos ser capaces de editar los campos del perfil <code>http://localhost:8000/api/user/profile/</code>.</p>
 <div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;test@test.com&quot;</span><span class="p">,</span>
   <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
@@ -1149,8 +1161,8 @@ Avatar: Imagen que queramos
       </a>
        
       <a
-        href="../../../escueladevideojuegos/"
-        title="Índice del archivo"
+        href="../sistema-peliculas-usuario/"
+        title="Sistema de películas de usuario"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -1159,7 +1171,7 @@ Avatar: Imagen que queramos
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Índice del archivo
+            Sistema de películas de usuario
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">

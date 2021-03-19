@@ -974,8 +974,20 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../sistema-perfiles-usuario/" title="Sistema de perfiles" class="md-nav__link">
-      Sistema de perfiles
+    <a href="../sistema-perfiles-usuario/" title="Sistema de perfiles de usuario" class="md-nav__link">
+      Sistema de perfiles de usuario
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../sistema-peliculas-usuario/" title="Sistema de películas de usuario" class="md-nav__link">
+      Sistema de películas de usuario
     </a>
   </li>
 
@@ -1181,7 +1193,7 @@ pipenv run django-admin startproject server
 <div class="highlight"><pre><span></span><span class="nb">cd</span> server
 pipenv run python manage.py runserver
 </pre></div>
-<p>Si todo funciona podremos acceder a http://127.0.0.1:8000/. Podemos cambiar el idioma del proyecto:</p>
+<p>Si todo funciona podremos acceder a <code>http://127.0.0.1:8000/</code>. Podemos cambiar el idioma del proyecto:</p>
 <p><strong><code>mispelis/server/settings.py</code></strong></p>
 <div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">&#39;es&#39;</span>
 </pre></div>
@@ -1299,7 +1311,7 @@ pipenv run createsuperuser
 &gt; Contraseña: <span class="m">1234</span>
 &gt; Superuser created successfully.
 </pre></div>
-<p>Perfecto, si ponemos en marcha el servidor deberíamos ser capaces de acceder al panel de administración: http://127.0.0.1:8000/admin/</p>
+<p>Perfecto, si ponemos en marcha el servidor deberíamos ser capaces de acceder al panel de administración <code>http://127.0.0.1:8000/admin/</code></p>
 <p>Al hacerlo notaremos no podemos gestionar usuarios automáticamente. Algo entendible al haber creado nuestro propio modelo.</p>
 <p>Para tener de el admin hay que configurarlo manualmente como un modelo cualquiera, la ventaja es que podemos heredar el del usuario por defecto.</p>
 <p>No entraremos en detalle porque asumo que la mayoría tenéis conocimientos básicos sobre el panel de administrador. Si no es el caso os recomiendo mi otro curso de introducción a Django.</p>
@@ -1426,13 +1438,13 @@ pipenv run createsuperuser
 <p>En la siguiente lección probaremos si funcionan correctamente.</p>
 <h2 id="probando-la-autenticacion">Probando la autenticación<a class="headerlink" href="#probando-la-autenticacion" title="Permanent link">&para;</a></h2>
 <p>Ha llegado la hora de probar la API, la forma más fácil es desde la interfaz que nos provee DRF.</p>
-<p>Acceded a la URL de <strong>login</strong> http://localhost:8000/api/auth/login/ y escribid las credenciales en crudo como si fuera un objeto JSON:</p>
+<p>Acceded a la URL de <strong>login</strong> <code>http://localhost:8000/api/auth/login/</code> y escribid las credenciales en crudo como si fuera un objeto JSON:</p>
 <div class="highlight"><pre><span></span><span class="p">{</span> <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@admin.com&quot;</span><span class="p">,</span> <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span> <span class="p">}</span>
 </pre></div>
 <p>Si todo funciona correctamente al enviar el formulario veréis la respuesta de la API y saldrá vuestro email arriba a la derecha indicando que efectivamente estamos identificados:</p>
 <div class="highlight"><pre><span></span><span class="p">{</span> <span class="nt">&quot;login&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span> <span class="p">}</span>
 </pre></div>
-<p>Para probar el <strong>logout</strong>, estando identificados, accedemos a la URL pertinente http://localhost:8000/api/auth/logout/ y al enviar el formulario vacío debería hacernos lo propio:</p>
+<p>Para probar el <strong>logout</strong>, estando identificados, accedemos a la URL pertinente <code>http://localhost:8000/api/auth/logout/</code> y al enviar el formulario vacío debería hacernos lo propio:</p>
 <div class="highlight"><pre><span></span><span class="p">{</span> <span class="nt">&quot;logout&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span> <span class="p">}</span>
 </pre></div>
 <p>Si nos logeamos ahora nos devolverá la información que hemos establecido en el serializador:</p>
@@ -1500,7 +1512,7 @@ pipenv run createsuperuser
          <span class="n">SignupView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;auth_signup&#39;</span><span class="p">),</span>
 <span class="p">]</span>
 </pre></div>
-<p>Ahora probamos el formulario de registro en el endpoint http://localhost:8000/api/auth/signup/ y...</p>
+<p>Ahora probamos el formulario de registro en el endpoint <code>http://localhost:8000/api/auth/signup/</code> y...</p>
 <div class="highlight"><pre><span></span>Email: test@test.com
 Username: test
 Password: 12345678
@@ -1573,7 +1585,7 @@ pipenv run migrate
                  <span class="n">namespace</span><span class="o">=</span><span class="s1">&#39;password_reset&#39;</span><span class="p">)),</span>
 <span class="p">]</span>
 </pre></div>
-<p>Con esto podemos acceder al endpoint de la API para recuperar una contraseña y probar si funciona http://localhost:8000/api/auth/reset/:</p>
+<p>Con esto podemos acceder al endpoint de la API para recuperar una contraseña y probar si funciona <code>http://localhost:8000/api/auth/reset/</code>:</p>
 <div class="highlight"><pre><span></span>test@test.com
 </pre></div>
 <p>Esta petición nos devolverá:</p>
@@ -1592,8 +1604,8 @@ pipenv run migrate
     <span class="k">print</span><span class="p">(</span>
         <span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Recupera la contraseña del correo &#39;{reset_password_token.user.email}&#39; usando el token &#39;{reset_password_token.key}&#39; desde la API http://localhost:8000/api/auth/reset/confirm/.&quot;&quot;)</span>
 </pre></div>
-<p>Con esto es suficiente para probar la funcionalidad, probad de nuevo a recuperar la contraseña http://localhost:8000/api/auth/reset/ y veréis el mensaje por la terminal del servidor:</p>
-<div class="highlight"><pre><span></span>Recupera la contraseña del correo test@test.com desde la API http://localhost:8000/api/auth/reset/confirm/ usando el token 73538969130d6e9d4a6299a343d512af15b8.
+<p>Con esto es suficiente para probar la funcionalidad, probad de nuevo a recuperar la contraseña <code>http://localhost:8000/api/auth/reset/</code> y veréis el mensaje por la terminal del servidor:</p>
+<div class="highlight"><pre><span></span>Recupera la contraseña del correo test@test.com desde la API `http://localhost:8000/api/auth/reset/confirm/` usando el token 73538969130d6e9d4a6299a343d512af15b8.
 </pre></div>
 <p>A través del enlace a la API podemos acceder al formulario, escribir el token con la nueva contraseña y debería hacernos el cambio. Eso sí, tened en cuenta que el validador de esta app es más exigente y si la contraseña no es bastante segura nos la tumbará devolviendo varios errores:</p>
 <div class="highlight"><pre><span></span>Contraseña: Test1234
