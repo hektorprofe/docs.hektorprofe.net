@@ -3,7 +3,7 @@ description: Recopilación de apuntes de mi curso sobre el framework Django para
 
 # Apuntes del curso de Django Framework
 
-Este es un material de apoyo para los alumnos de <u>[mi curso de Django en Udemy](https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?referralCode=4299F3A993394B53F7A1)</u> publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si vas a compartirlos asegúrate de cumplir las normas de atribución.
+Estos apuntes son un material de apoyo para los alumnos de <u>[mi curso de Django en Udemy](https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?referralCode=4299F3A993394B53F7A1)</u> publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
 
 Los exámenes, ejercicios de codificación y soluciones son de acceso exclusivo para alumnos.
 

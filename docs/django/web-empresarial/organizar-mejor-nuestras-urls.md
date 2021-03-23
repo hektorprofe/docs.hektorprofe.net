@@ -1,13 +1,6 @@
 title: Organizando mejor nuestras URLs | Curso de Django | Hektor Profe
 description: Quiero explicaros una forma de manejar mejor las URLs de nuestras apps.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Organizando mejor nuestras URLs
 
 Antes de continuar con la siguiente práctica vamos a hacer un inciso. Quiero explicaros una forma de manejar mejor las URLs de nuestras apps. 

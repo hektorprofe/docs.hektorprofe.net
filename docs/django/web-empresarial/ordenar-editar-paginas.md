@@ -1,13 +1,6 @@
 title: Ordenación y edición de páginas | Curso de Django | Hektor Profe
 description: Hay un par de funcionalidades que podemos añadir a nuestro sistema de páginas.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Ordenación y edición de páginas
 
 Si algo tiene el desarrollo de software es que nunca hay límite de mejora. Con eso en mente hay un par de funcionalidades que podemos añadir a nuestro sistema de páginas secundarias.

@@ -1,13 +1,6 @@
 title: Creando las vistas del Blog (1) | Curso de Django | Hektor Profe
 description: Ya tenemos los modelos listos así que nos toca desarrollar las vistas.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Creando las vistas del Blog (1)
 
 Bien, ya tenemos los modelos listos así que nos toca desarrollar las vistas. Vamos a crear vistas, una para mostrar todas las noticias, y otra para filtrar por categorías. En el próximo proyecto os enseñaré a crear paginadores y otras cosas interesantes, pero por ahora lo vamos a mantener lo más simple posible.

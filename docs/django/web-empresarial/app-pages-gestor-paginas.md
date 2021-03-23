@@ -1,13 +1,6 @@
 title: Sexta App [Pages] Gestor de Páginas | Curso de Django | Hektor Profe
 description: App para gestionar páginas de contenido secundario (políticas, avisos legales…).
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Sexta App [Pages] Gestor de Páginas
 
 En este punto tenemos nuestro proyecto bastante encaminado, sólo nos falta desarrollar la app para gestionar páginas de contenido secundario (políticas, avisos legales…) y la de contacto para manejar el formulario de contacto.

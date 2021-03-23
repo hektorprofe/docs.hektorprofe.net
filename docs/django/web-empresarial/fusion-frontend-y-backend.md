@@ -1,13 +1,6 @@
 title: Fusionar el Frontend y el Backend | Curso de Django | Hektor Profe
 description: Identifica las partes comunes en todas las maquetas HTML y crea una estructura con herencia.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Fusionar el Frontend y el Backend
 
 En esta lección deberás realizar la fusión. Identifica las partes comunes en todas las maquetas HTML y crea una estructura con herencia como hicimos con el primer proyecto (base.html, home.html...). Deberás lograr un menú funcional y que se carguen correctamente los ficheros estáticos (css, javascripts, imágenes) de todos los templates.

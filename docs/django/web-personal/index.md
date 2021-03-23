@@ -1,13 +1,6 @@
 title: Proyecto Web Personal | Curso de Django | Hektor Profe
 description: Bienvenidos a la sección del curso donde estaremos dando vida a una web personal para un potencial cliente.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Proyecto Web Personal
 
 Este primer proyecto es nuestro punto de partida e introducción a Django y en él aprenderemos sus fundamentos mientras damos vida a un diseño frontend completo.

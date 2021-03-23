@@ -34,12 +34,10 @@ markdown_extensions:
       permalink: true
 extra:
   social:
-    - type: 'youtube'
-      link: 'https://www.youtube.com/c/HektorProfe'
-    - type: 'twitter'
-      link: 'https://twitter.com/hektorprofe'
     - type: 'github'
       link: 'https://github.com/hcosta'
+    - type: 'youtube'
+      link: 'https://www.youtube.com/c/HektorProfe'
   cdn: "/cdn"
 nav:
 
@@ -237,7 +235,28 @@ nav:
       - Template tags propios:            'django/web-empresarial/template-tags-propios.md'
       - Ordenar y editar páginas:         'django/web-empresarial/ordenar-editar-paginas.md'
       - Personalizando el admin (3):      'django/web-empresarial/personalizando-panel-administrador-parte-3.md'
-
+    - Proyecto API Rest:
+      - Introducción:                     'django/api-django-rest/index.md'
+      - Sistema de autenticación:         'django/api-django-rest/sistema-autenticacion-registro.md'
+      - Sistema de películas:             'django/api-django-rest/sistema-peliculas-generos.md'
+      - Sistema de búsqueda:              'django/api-django-rest/sistema-busqueda-filtro.md'
+      - Sistema de perfiles de usuario:   'django/api-django-rest/sistema-perfiles-usuario.md'
+      - Sistema de películas de usuario:  'django/api-django-rest/sistema-peliculas-usuario.md'
+  
+  - Apuntes de PySide:
+    - Índice del archivo:                 'qt-pyside/index.md'
+    - Preparación prévia:                 'qt-pyside\preparacion-previa.md'
+    - Conceptos básicos:                  'qt-pyside\conceptos-basicos.md'
+    - Widgets de formularios:             'qt-pyside\widgets-formularios.md'
+    - Formas de organización:             'qt-pyside\formas-organizacion.md'
+    - Cuadros de diálogo:                 'qt-pyside\cuadros-dialogo.md'
+    - Ventana principal:                  'qt-pyside\ventana-principal.md'
+    - Control de subventanas:             'qt-pyside\control-subventanas.md'
+    - Tematización:                       'qt-pyside\tematizacion.md'
+    - Interfaces con Qt Designer:         'qt-pyside\interfaces-qt-designer.md'
+    - Ejecutables en Windows:             'qt-pyside\ejecutables-windows.md' 
+    - Desarrollo de proyectos:            'qt-pyside\desarrollo-proyectos.md' 
+    
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'
     - Academia Unity:                     'escueladevideojuegos/academia-unity.md'
@@ -260,7 +279,7 @@ nav:
     - Recopilaciones de software:
       - 12 frameworks y librerías:        'escueladevideojuegos/articulos/frameworks-librerias-bibliotecas-recopilacion.md'
       - 10 engines y motores:             'escueladevideojuegos/articulos/engines-motores-recopilacion-programas.md'
-      - 10 programas para audio:          'escueladevideojuegos/articulos/audio-sfx-y-musica-recopilacion-de-programas.md'
+      - 10 editores de audio:             'escueladevideojuegos/articulos/audio-sfx-y-musica-recopilacion-de-programas.md'
       - 8 editores gráficos 2D:           'escueladevideojuegos/articulos/edicion-graficos-2d-recopilacion-programas.md'
       - 5 editores de mapas y fuentes:    'escueladevideojuegos/articulos/editores-de-mapas-y-generadores-de-fuentes-recopilacion-de-programas.md'
       - 3 editores de modelaje 3D:        'escueladevideojuegos/articulos/edicion-graficos-3d-recopilacion-programas.md'

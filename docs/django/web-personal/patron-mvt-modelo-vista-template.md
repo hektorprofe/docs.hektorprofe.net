@@ -1,13 +1,6 @@
 title: Patrón MVT: Modelo-Vista-Template | Curso de Django | Hektor Profe
 description: Seguro que habéis oído hablar del famoso patrón MVC: Modelo-Vista-Controlador. Django lo redefine como MVT: Modelo-Vista-Template.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Patrón MVT: Modelo-Vista-Template
 
 Si tenéis experiencia en el mundo de la programación seguro que habéis oído hablar del famoso patrón MVC: Modelo-Vista-Controlador. Django redefine este modelo como MVT: Modelo-Vista-Template.

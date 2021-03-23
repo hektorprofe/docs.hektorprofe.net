@@ -11,28 +11,6 @@ Ten en cuenta que un engine es una herramienta de creación integral que
 te permite automatizar gran parte del desarrollo del juego utilizando
 sus bases.
 
-## GameMaker: Studio
-
-<div style="text-align:center;margin-top:25px"><img src="{{cdn}}/wp-content/uploads/2015/10/game-maker-8-logo.png" style="width:200px;" /></div>
-
-Es un motor enfocado al 2D aunque también
-incluye algunas funcionalidades para el desarrollo en 3D. Creado
-originalmente por Mark Overmars para ayudar a sus estudiantes allá en
-los años 90, liberado al público como herramienta para el desarrollo de
-videojuegos en el 1999. Ofrece un sistema muy sencillo de drag and drop,
-con objetos, eventos y acciones. Además incluye su propio lenguaje de
-programación GML, parecido a Delphi, con una sintaxis sencilla, además
-permite exportar a muchísimos sistemas gracias a los módulos de
-exportación y también monetización y análisis de estadísticas.
-
-Es uno de los mejores programas, por no decir el mejor, para aprender a
-crear videojuegos y entender la lógica de su funcionamiento, no por algo
-se creó con ese mismo fin, pero no por ello es menos potente, más bien
-al contrario, hay muchos ejemplos de juegos de éxito creados con esta
-plataforma.
-
-**Web y descarga:** <http://www.yoyogames.com/>
-
 ## Unity
 
 <div style="text-align:center;margin-top:25px"><img src="{{cdn}}/wp-content/uploads/2015/10/unity3d-logo.png" style="width:200px;" /></div>
@@ -46,6 +24,22 @@ aprendizaje es grande, pero si se aprende a utilizar puedes crear
 prácticamente cualquier juego imaginable.
 
 **Web y descarga:** <http://unity3d.com/>
+
+## GameMaker
+
+<div style="text-align:center;margin-top:25px"><img src="{{cdn}}/wp-content/uploads/2015/10/game-maker-8-logo.png" style="width:200px;" /></div>
+
+Es un motor enfocado al 2D aunque también
+incluye algunas funcionalidades para el desarrollo en 3D. Creado
+originalmente por Mark Overmars para ayudar a sus estudiantes allá en
+los años 90, liberado al público como herramienta para el desarrollo de
+videojuegos en el 1999. Ofrece un sistema muy sencillo de drag and drop,
+con objetos, eventos y acciones. Además incluye su propio lenguaje de
+programación GML, parecido a Delphi, con una sintaxis sencilla, además
+permite exportar a muchísimos sistemas gracias a los módulos de
+exportación y también monetización y análisis de estadísticas.
+
+**Web y descarga:** <http://www.yoyogames.com/>
 
 ## Construct
 

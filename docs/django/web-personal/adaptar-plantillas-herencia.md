@@ -1,13 +1,6 @@
 title: Adaptar las plantillas con herencia | Curso de Django | Hektor Profe
 description: En este ejercicio deberás adaptar las plantillas about, portfolio y contact para que extiendan de base.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Adaptar las plantillas con herencia
 
 Para este ejercicio deberás adaptar las plantillas *about, portfolio y contact* para que extiendan de *base*. También te reto a crear un nuevo bloque llamado *title* a través del cual debes lograr que cambie el título en cada página dentro de la etiqueta **&#60;title&#62;**. Las páginas deberán tener el título siguiendo este patrón:

@@ -1,13 +1,6 @@
 title: Configurando el proyecto | Curso de Django | Hektor Profe
 description: Con el proyecto creado, el siguiente paso es realizar la configuración inicial para ponernos en marcha.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Configurando el proyecto
 
 Con el proyecto creado, el siguiente paso es realizar la configuración inicial para ponernos en marcha, pero antes vamos a hablar brevemente de esta jerarquía de ficheros que se han creado automáticamente.

@@ -1,13 +1,6 @@
 title: Template tag &#123;% url %&#125; | Curso de Django | Hektor Profe
 description: Este tag nos permite hacer referencia directamente a una view desde nuestros templates.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Template tag &#123;% url %&#125;
 
 Antes de continuar no puedo evitar introducir una buena práctica para que en el futuro nunca cometáis mis errores del pasado. Me refiero al template tag **&#123;% url %&#125;**. 

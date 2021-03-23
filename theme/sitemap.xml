@@ -1,0 +1,32 @@
+{%- macro nav_item(item) -%}
+    {%- if item.children -%}
+        {%- for child in item.children -%}
+            {{ nav_item(child) }}
+        {%- endfor -%}
+    {%- else %}
+        {%- if item.abs_url -%}
+            <url>
+            <loc>{% if item.canonical_url %}{{ item.canonical_url }}{% else %}{{ item.abs_url }}{% endif %}</loc>
+            {% if item.update_date %}<lastmod>{{item.update_date}}</lastmod>{% endif %}
+            <changefreq>daily</changefreq>
+            </url>
+        {%- endif -%}
+    {%- endif -%}
+{%- endmacro -%}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://www.hektorprofe.net/</loc>
+<lastmod>2021-03-24</lastmod>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://docs.hektorprofe.net/</loc>
+<lastmod>2021-03-24</lastmod>
+<changefreq>monthly</changefreq>
+</url>
+{%- for item in nav -%}
+    {{ nav_item(item) }}
+{%- endfor %}
+</urlset>

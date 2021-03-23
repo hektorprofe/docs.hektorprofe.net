@@ -1,13 +1,6 @@
 title: Personalizando el administrador (3) | Curso de Django | Hektor Profe
 description: Añadir un editor WYSIWYG Ckeditor para los campos de texto.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Personalizando el administrador (3)
 
 Antes de ponernos la última app de contacto y acabar la web, voy a enseñaros cómo añadir un editor WYSIWYG para los campos de texto de nuestro modelos.

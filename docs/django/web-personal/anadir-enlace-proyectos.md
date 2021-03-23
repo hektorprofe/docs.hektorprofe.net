@@ -1,13 +1,6 @@
 title: Añadir enlace a los proyectos | Curso de Django | Hektor Profe
 description: Nuestro proyecto en principio debía tener un enlace optativo para mostrar más información, así que os toca crearlo.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Añadir enlace a los proyectos
 
 No sé si lo recordaréis, pero nuestro proyecto en principio debía tener un enlace optativo para mostrar más información, así que os toca crearlo. Tenéis que seguir los siguientes pasos:

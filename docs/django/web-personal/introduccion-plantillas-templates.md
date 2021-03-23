@@ -1,13 +1,6 @@
 title: Introducción a las plantillas: Templates | Curso de Django | Hektor Profe
 description: Hasta ahora hemos estado devolviendo HTML plano, por eso Django nos ofrece la posibilidad de utilizar plantillas HTML.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Introducción a las plantillas: Templates
 
 Hasta ahora hemos estado devolviendo HTML plano utilizando el método **HttpResponse**. Como podéis suponer esto no es muy práctico, por eso Django nos ofrece la posibilidad de utilizar plantillas HTML (en inglés templates) mucho más cómodas y repletas de funcionalidades.

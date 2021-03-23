@@ -1,13 +1,6 @@
 title: Preparar la app [Core] | Curso de Django | Hektor Profe
 description: Con el objetivo de practicar lo que hemos aprendido hasta ahora, tendrás que preparar el terreno para este segundo proyecto.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Preparar la app [Core]
 
 Con el objetivo de practicar lo que hemos aprendido hasta ahora, tendrás que preparar el terreno para este segundo proyecto.

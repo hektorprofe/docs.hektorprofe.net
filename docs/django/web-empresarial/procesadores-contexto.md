@@ -1,13 +1,6 @@
 title: Procesadores de contexto | Curso de Django | Hektor Profe
 description: Un procesador de contexto es una forma de extender el diccionario de contexto.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Procesadores de contexto
 
 Así que tenemos que recuperar los enlaces sociales para enviarlos a todas las páginas… ¿Habrá alguna forma que nos permita hacerlo una vez y que funcione en todos los templates? ¡Pues sí! De hecho hay más de una, pero para este caso la más óptima es crear un procesador de contexto. 

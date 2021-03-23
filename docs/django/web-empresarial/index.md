@@ -1,13 +1,6 @@
 title: Proyecto Web Empresarial | Curso de Django | Hektor Profe
 description: Empezamos el segundo proyecto del curso a lo largo del cual crearemos una web empresarial. 
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Proyecto Web Empresarial
 
 Empezamos el segundo proyecto del curso a lo largo del cual crearemos una web empresarial. Se trata de una página de presentación para un negocio, donde se muestra información de la empresa, su catálogo de servicios y otras funcionalidades.

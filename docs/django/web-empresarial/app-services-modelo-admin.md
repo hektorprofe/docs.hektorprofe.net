@@ -1,13 +1,6 @@
 title: Tercera App [Services] Modelo y admin | Curso de Django | Hektor Profe
 description: 
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Tercera App [Services] Modelo y admin
 
 La app Services es en esencia lo mismo que la app portafolio de la web personal así que estoy seguro de que podréis implementarla sin ayuda. Para hacerlo más llevadero la crearás en dos partes. Empezarás por crear el modelo y configurando el panel de administrador. Aquí tienes las indicaciones:

@@ -1,13 +1,6 @@
 title: Creando las vistas del Blog (2) | Curso de Django | Hektor Profe
 description: Para las categorías tenemos que aplicar una lógica diferente de la que hemos utilizado hasta ahora.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Creando las vistas del Blog (2)
 
 Para las categorías tenemos que aplicar una lógica diferente de la que hemos utilizado hasta ahora. Lo primero es idear una forma de mostrar cada categoría, digamos que cada una es independiente de las otras y tendrá sus propias entradas, así que tenemos que diferenciarlas en la vista. 

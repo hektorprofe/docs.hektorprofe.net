@@ -1,13 +1,6 @@
 title: Creando el proyecto | Curso de Django | Hektor Profe
 description: Antes de crear el proyecto vamos a comentar el plan de desarrollo oficial de Django Framework.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Creando el proyecto
 
 Antes de crear el proyecto vamos a comentar el plan de desarrollo oficial de Django Framework.

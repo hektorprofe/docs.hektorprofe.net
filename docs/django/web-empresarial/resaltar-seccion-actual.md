@@ -1,13 +1,6 @@
 title: Resaltando la sección actual | Curso de Django | Hektor Profe
 description: 
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Resaltando la sección actual
 
 Uno de esos detalles que quizá pasa desapercibido en nuestro frontend es que dependiendo de la sección que visitamos, ésta nos aparece resaltada en el menú. 

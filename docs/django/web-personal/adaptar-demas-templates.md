@@ -1,13 +1,6 @@
 title: Adaptar los demás templates | Curso de Django | Hektor Profe
 description: En este ejercicio deberás lograr que las secciones de nuestra web con Django se vean exactamente iguales. 
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Adaptar los demás templates
 
 En este ejercicio deberás tomar como referencia las maquetas *about.html, portfolio.html y contact.html* y lograr que las secciones de nuestra web con Django se vean exactamente iguales. 

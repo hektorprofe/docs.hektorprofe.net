@@ -1,13 +1,6 @@
 title: Templates about, portfolio y contact | Curso de Django | Hektor Profe
 description: Ahora es tu turno de crear los templates de las otras dos páginas.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Templates about, portfolio y contact
 
 Ahora es tu turno de crear los templates de las otras tres páginas. El resultado final será el mismo, pero ahora podrás dejar bien limpio el fichero **core/views.py** y borrar todo el código que ya no necesites.

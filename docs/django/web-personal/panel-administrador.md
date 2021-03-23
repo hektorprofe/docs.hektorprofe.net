@@ -1,13 +1,6 @@
 title: Panel de administrador | Curso de Django | Hektor Profe
 description: Nos quedamos en que había dos formas de añadir registros a nuestra base de datos.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Panel de administrador
 
 Bien, como recordaréis nos quedamos en que había dos formas de añadir registros a nuestra base de datos. Una era crear las instancias manualmente a través de formularios en vistas y la otra utilizar el panel de administrador. Evidentemente vamos a utilizar la segunda, la primera la reservaremos para más adelante.

@@ -1,13 +1,6 @@
 title: Cuarta App [Blog] Relaciones | Curso de Django | Hektor Profe
 description: 
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Cuarta App [Blog] Relaciones
 
 Con la sección de Servicios lista nos toca desarrollar la app blog para que nuestros clientes puedan publicar noticias.

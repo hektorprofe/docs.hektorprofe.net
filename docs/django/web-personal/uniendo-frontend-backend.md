@@ -1,13 +1,6 @@
 title: Uniendo el Frontend con el Backend | Curso de Django | Hektor Profe
 description: Cuando vayamos a fusionar un frontend y un backend, mi mejor consejo es tomarlo con calma.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Uniendo el Frontend con el Backend
 
 Con todo lo que hemos hecho hasta ahora hemos creado un backend funcional utilizando templates con herencia simple. Pero como recordaréis ya contamos con un frontend, así que vamos a utilizarlo ¿no?

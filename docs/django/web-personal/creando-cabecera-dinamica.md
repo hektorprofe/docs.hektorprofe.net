@@ -1,13 +1,6 @@
 title: Creando la cabecera dinámica | Curso de Django | Hektor Profe
 description: Ya tenemos bastante adaptado el template a falta de algunos pequeños ajustes.
 
-<style>
-.admonition.note > .superfences-tabs > label:hover, .headerlink{ color: #018dc5 !important; }
-.admonition.note { box-shadow: none; margin: 0; padding: 0; border-left: 0; border-radius: 0; font-size: 105%; }
-.admonition.note label{ font-size: 91%; }
-.admonition.note > .admonition-title { display: none; }
-</style>
-
 # Creando la cabecera dinámica
 
 Ya tenemos bastante adaptado el template a falta de algunos pequeños ajustes.
