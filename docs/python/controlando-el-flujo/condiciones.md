@@ -159,7 +159,7 @@ Es posible simular el funcionamiento de elif con if utilizando expresiones condi
 
 ## Instrucción pass
 
-Sirve para finalizar un bloque, se puede utilizar en un bloque vacío:
+Sirve para como instrucción de paso para utilizar en un bloque de código vacío, no finaliza el código. No tiene ningún efecto pero sirve para crear estructuras pendientes de ser programadas:
 
 !!! info "" 
     ```python
@@ -168,4 +168,4 @@ Sirve para finalizar un bloque, se puede utilizar en un bloque vacío:
     ```
 
 ___
-<small class="edited"><i>Última edición: 22 de Septiembre de 2018</i></small>
+<small class="edited"><i>Última edición: 24 de Marzo de 2021</i></small>
