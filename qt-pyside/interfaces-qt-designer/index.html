@@ -85,6 +85,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
 @media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
 
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
 </style>
   </head>
   
@@ -96,7 +100,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#interfaces-con-qt-designer" tabindex="1" class="md-skip">
+      <a href="#interfaces-con-qt-designer" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -151,7 +155,7 @@ div.my-img{text-align:center;margin-top:20px}
             onclick="modalButtonOnly.open()"
             style="margin-left:1.35em;" 
             title="Cursos de Hektor Profe">
-            <i class="fa fa-star" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Ofertas cursos Python en Udemy
+            <i class="fa fa-university" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Cursos en Udemy
           </a>
           <a href="/"
             ><img
@@ -536,6 +540,16 @@ div.my-img{text-align:center;margin-top:20px}
             
             
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                
+                  
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?couponCode=76E57A0B1FA3F4E30F80" target="_blank">
+                        <img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  
+                
+
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -623,8 +637,8 @@ div.my-img{text-align:center;margin-top:20px}
                 <h1 id="interfaces-con-qt-designer">Interfaces con Qt Designer<a class="headerlink" href="#interfaces-con-qt-designer" title="Permanent link">&para;</a></h1>
 <h2 id="nuestro-primer-diseno">Nuestro primer diseño<a class="headerlink" href="#nuestro-primer-diseno" title="Permanent link">&para;</a></h2>
 <p>Muy bien, pues vamos a diseñar nuestra primera interfaz. Si tenemos el directorio de PySide6 en el PATH del sistema podemos abrir el programa escribiendo:</p>
-<div class="highlight"><pre><span></span>designer
-</pre></div>
+<div class="highlight"><pre><span></span><code>designer
+</code></pre></div>
 <h3 id="primer-formulario">Primer formulario<a class="headerlink" href="#primer-formulario" title="Permanent link">&para;</a></h3>
 <p>Lo primero es seleccionar qué tipo de formulario crear, vamos a crear una ventana principal <code>Main Window</code>.</p>
 <ul>
@@ -698,32 +712,32 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Para importar nuestros diseños en Python debemos transformarlos a código Python, eso se consigue compilando los diseños.</p>
 <p>Para este fin se requiere de un programa intermediario de la Suite Qt llamado <code>uic</code>: User Interface Compiler.</p>
 <p>Si añadimos el directorio de <code>PySide6</code> al path deberíamos poder acceder a él desde la terminal:</p>
-<div class="highlight"><pre><span></span>uic -h
-</pre></div>
+<div class="highlight"><pre><span></span><code>uic -h
+</code></pre></div>
 <p>El comando para compilar un diseño es:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="m">1</span>-9-2/interfaces
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="m">1</span>-9-2/interfaces
 uic.exe -g python mainwindow.ui -o mainwindow.py
-</pre></div>
+</code></pre></div>
 <p>Así habremos generado un fichero <code>python</code> dentro de la carpeta interfaces.</p>
 <p>Este proceso se puede realizar directamente desde <code>Qt Designer</code> si se tiene configurado <code>uic.exe</code> tal como explico al principio del curso.</p>
 <p>Sea como sea, si analizamos el fichero generado encontraremos las importaciones y el código para generar la ventana:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="kn">import</span> <span class="nn">recursos_rc</span>
-</pre></div>
+</code></pre></div>
 <p>Quiero que os fijéis en la línea <code>import recursos_rc</code>.</p>
 <p>Esta importación es la que va a cargar los recursos compilados del diseño, que deberán estar en el módulo <code>recursos_rc</code> de la propia carpeta, así que necesitamos crearlos.</p>
 <p>Compilar los recursos es un proceso calcado a compilar los diseños, pero esta vez se utiliza otra herramienta de Qt llamada <code>rcc</code>: Resource Compiler.</p>
 <p>El comando para compilar los recursos es:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="m">1</span>-9-2
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="m">1</span>-9-2
 rcc.exe -g python resources.py -o resources.qrc  <span class="c1"># mismo directorio</span>
-</pre></div>
+</code></pre></div>
 <p>Esto tomará el fichero <code>resources.qrc</code> que habíamos creado en <code>Qt Designer</code> y lo compilará. Fijaros como el nombre debe concordar con el módulo que espera encontrar la ventana principal.</p>
 <p>Ahora los iconos del programa se encuentran compilados en el fichero <code>recursos_rc.py</code>. Nuestro programa los tomará de ahí en lugar de utilizar las imágenes del directorio <code>recursos/</code>.</p>
 <p>Llegados a este punto es hora de crear un programa con PySide e importar el diseño. La lógica de creación de la ventana principal es la siguiente:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span>
 <span class="kn">from</span> <span class="nn">interfaces.mainwindow</span> <span class="kn">import</span> <span class="n">Ui_MainWindow</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -744,7 +758,7 @@ rcc.exe -g python resources.py -o resources.qrc  <span class="c1"># mismo direct
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>Vamos a ejecutar el programa a ver si todo funciona bien:</p>
 <ul>
 <li><code>Widgets</code> -&gt; Ok</li>
@@ -757,7 +771,7 @@ rcc.exe -g python resources.py -o resources.qrc  <span class="c1"># mismo direct
 <h2 id="anadiendo-funcionalidades-al-diseno">Añadiendo funcionalidades al diseño<a class="headerlink" href="#anadiendo-funcionalidades-al-diseno" title="Permanent link">&para;</a></h2>
 <p>Para interactuar con los componentes de la interfaz debemos acceder a ellos a partir de sus nombres de objeto, que aparecen en el inspector de objetos de Qt Designer. Podemos cambiar los nombres haciendo doble clic en ellos o utilizar los que crean por defecto.</p>
 <p>Una vez tenemos los nombres es tan sencillo como manejar nuestras propias instancias:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QMessageBox</span>  <span class="c1"># edited</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QMessageBox</span>  <span class="c1"># edited</span>
 <span class="kn">from</span> <span class="nn">interfaces.mainwindow</span> <span class="kn">import</span> <span class="n">Ui_MainWindow</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -771,22 +785,22 @@ rcc.exe -g python resources.py -o resources.qrc  <span class="c1"># mismo direct
 
     <span class="k">def</span> <span class="nf">mostrar_mensaje</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;Diálogo&quot;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;El contenido del campo de de texto es:</span><span class="se">\n\n</span><span class="s2">{self.lineEdit.text()}&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;Diálogo&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;El contenido del campo de de texto es:</span><span class="se">\n\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="o">.</span><span class="n">text</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>En cuanto a la acción para salir del programa, podemos recuperarla y establecer su señal tal como aprendimos al manejar los menús:</p>
-<div class="highlight"><pre><span></span><span class="c1"># configuramos la señal de la acción para salir del programa</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># configuramos la señal de la acción para salir del programa</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">actionSalir</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Con esto podremos cerrar la aplicación también haciendo servir el acceso directo <code>Control+Q</code> que configuramos en el diseñador.</p>
 <p>Como véis los diseños compilados se utilizan como un programa normal, solo que la parte de generar la estructura se realiza en el fichero de diseño, un fichero que por cierto, nunca debemos editar, ya que tal como avisa en los comentarios superiores, si recompilamos la interfaz todos los cambios se perderán:</p>
-<div class="highlight"><pre><span></span><span class="c1"># WARNING! All changes made in this file will be lost when recompiling UI file!</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># WARNING! All changes made in this file will be lost when recompiling UI file!</span>
+</code></pre></div>
 <p>Además es buena idea tener la lógica del programa separada del diseño, esto se conoce más o menos como patrón Modelo-Vista, teniendo en el modelo la lógica del programa y en la vista el diseño del programa.</p>
 <p>Solo me falta mostraros cómo gestionar múltiples diseños, por ejemplo una ventana principal y una subventana ambas creadas con Qt Designer.</p>
 <p>Lo vemos en la próxima lección.</p>
@@ -795,11 +809,11 @@ rcc.exe -g python resources.py -o resources.qrc  <span class="c1"># mismo direct
 <p>Vamos a crear algo sencillo tomando como base la clase <code>QWidget</code>:</p>
 <p><img src="/cdn/pyside/09-docs/10.png"></p>
 <p>Compilamos el diseñode la subventana:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="m">1</span>-9-4/interfaces
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="m">1</span>-9-4/interfaces
 uic.exe -g python mainwindow.ui -o mainwindow.py
-</pre></div>
+</code></pre></div>
 <p>Vamos a partir del programa de antes sin la señal del botón:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span>
 <span class="kn">from</span> <span class="nn">interfaces.mainwindow</span> <span class="kn">import</span> <span class="n">Ui_MainWindow</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -814,9 +828,9 @@ uic.exe -g python mainwindow.ui -o mainwindow.py
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>Importamos la subventana, creamos un nuevo widget a nuestro gusto heredando de <code>QWidget</code> y su diseño para poder llamar a su método <code>setupUi</code>:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">interfaces.subventana</span> <span class="kn">import</span> <span class="n">Ui_Form</span>  <span class="c1"># el diseño de un widget es un form</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">interfaces.subventana</span> <span class="kn">import</span> <span class="n">Ui_Form</span>  <span class="c1"># el diseño de un widget es un form</span>
 
 <span class="k">class</span> <span class="nc">Subventana</span><span class="p">(</span><span class="n">QWidget</span><span class="p">,</span> <span class="n">Ui_Form</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -826,10 +840,10 @@ uic.exe -g python mainwindow.ui -o mainwindow.py
         <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="c1"># señal para cerrar la subventana</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Fijaros como la lógica es la misma, pero al heredar de <code>Qwidget</code> debemos llamar a su constructor explícitamente. Recordad que la diferencia entre una ventana principal y un widget es que los segundos no contienen componentes como los las barras de menus o de herramientas.</p>
 <p>Ahora, para manejar esta subventana lo haremos exactamente igual que aprendimos en las unidades anteriores, creando una instancia de la misma y mostrándola al presionar el botón de la ventana principal:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">,</span> <span class="n">Ui_MainWindow</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">,</span> <span class="n">Ui_MainWindow</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -845,7 +859,7 @@ uic.exe -g python mainwindow.ui -o mainwindow.py
         <span class="bp">self</span><span class="o">.</span><span class="n">subventana</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
         <span class="c1"># y mostramos la subventana</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">subventana</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 <p><img src="/cdn/pyside/09-docs/11.png"></p>
 <p>Y ya lo tenemos.</p>
 <p>Solo comentar algo, si hubiéramos creado un diálogo en Qt Designer deberíamos haber heredado de la clase <code>QDialog</code> en lugar de <code>QWidget</code>, tenedlo presento.</p>
@@ -994,7 +1008,7 @@ uic.exe -g python mainwindow.ui -o mainwindow.py
       modalButtonOnly.close();
     });
 
-    app.initialize({version:"1.0.4",url:{base:"../.."}})
+    app.initialize({version:"1.1.2",url:{base:"../.."}})
     var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
     var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
     const mdMenuItems = document.querySelectorAll('.md-nav__link');

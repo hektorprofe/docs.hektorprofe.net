@@ -85,6 +85,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
 @media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
 
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
 </style>
   </head>
   
@@ -96,7 +100,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#sistema-de-perfiles-de-usuario-en-drf" tabindex="1" class="md-skip">
+      <a href="#sistema-de-perfiles-de-usuario-en-drf" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -151,7 +155,7 @@ div.my-img{text-align:center;margin-top:20px}
             onclick="modalButtonOnly.open()"
             style="margin-left:1.35em;" 
             title="Cursos de Hektor Profe">
-            <i class="fa fa-star" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Ofertas cursos Python en Udemy
+            <i class="fa fa-university" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Cursos en Udemy
           </a>
           <a href="/"
             ><img
@@ -609,8 +613,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-empresarial/fusion-frontend-y-backend/" title="Fusión de frontend y backend" class="md-nav__link">
-      Fusión de frontend y backend
+    <a href="../../web-empresarial/fusion-frontend-y-backend/" title="Fusión frontend y backend" class="md-nav__link">
+      Fusión frontend y backend
     </a>
   </li>
 
@@ -789,8 +793,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-empresarial/formularios-procesado-validacion/" title="Procesar y validar formularios" class="md-nav__link">
-      Procesar y validar formularios
+    <a href="../../web-empresarial/formularios-procesado-validacion/" title="Procesar validar formularios" class="md-nav__link">
+      Procesar validar formularios
     </a>
   </li>
 
@@ -981,8 +985,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-playground/decoradores-identificacion/" title="Decoradores de identificación" class="md-nav__link">
-      Decoradores de identificación
+    <a href="../../web-playground/decoradores-identificacion/" title="Decorador identificación" class="md-nav__link">
+      Decorador identificación
     </a>
   </li>
 
@@ -1281,8 +1285,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-playground/programando-conversaciones/" title="Programando conversaciones" class="md-nav__link">
-      Programando conversaciones
+    <a href="../../web-playground/programando-conversaciones/" title="Programar conversaciones" class="md-nav__link">
+      Programar conversaciones
     </a>
   </li>
 
@@ -1548,6 +1552,16 @@ div.my-img{text-align:center;margin-top:20px}
             
             
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                
+                  
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?couponCode=DC947D53C7154BB1BB10" target="_blank">
+                        <img src="/cdn/assets/django.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  
+                
+
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1603,45 +1617,45 @@ div.my-img{text-align:center;margin-top:20px}
 <h2 id="campo-avatar">Campo avatar<a class="headerlink" href="#campo-avatar" title="Permanent link">&para;</a></h2>
 <p>Añadimos el avatar al modelo:</p>
 <p><strong><code>authentication/models.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">path_to_avatar</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>                   <span class="c1"># new</span>
-    <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;avatars/{instance.id}/{filename}&#39;</span>            <span class="c1"># new</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">path_to_avatar</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>                   <span class="c1"># new</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;avatars/</span><span class="si">{</span><span class="n">instance</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span>            <span class="c1"># new</span>
 
 
 <span class="k">class</span> <span class="nc">CustomUser</span><span class="p">(</span><span class="n">AbstractUser</span><span class="p">):</span>
     <span class="c1"># ...</span>
     <span class="n">avatar</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span>                           <span class="c1"># new</span>
-        <span class="n">upload_to</span><span class="o">=</span><span class="n">path_to_avatar</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># new</span>
-</pre></div>
+        <span class="n">upload_to</span><span class="o">=</span><span class="n">path_to_avatar</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># new</span>
+</code></pre></div>
 <p>Migramos la app:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> server
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> server
 pipenv run makemigrations authentication
 pipenv run migrate authentication
-</pre></div>
+</code></pre></div>
 <p>Añadimos el campo al serializador:</p>
 <p><strong><code>authentication/serializers.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UserSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UserSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
     <span class="n">email</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span>
-        <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">username</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
-        <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">password</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
-        <span class="n">min_length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">write_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">min_length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">write_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">avatar</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span>    <span class="c1"># new</span>
-        <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>                 <span class="c1"># new</span>
+        <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>                 <span class="c1"># new</span>
 
     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">get_user_model</span><span class="p">()</span>
         <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="s1">&#39;avatar&#39;</span><span class="p">)</span>  <span class="c1"># edited</span>
-</pre></div>
+</code></pre></div>
 <p>Con esto ya tenemos el campo <strong>avatar</strong>. Si vamos a la interfaz web de la API y registramos un nuevo usuario veréis que podemos adjuntar una imagen. Probad a registrar un usuario con un avatar:</p>
-<div class="highlight"><pre><span></span>Email: avatar@avatar.com
+<div class="highlight"><pre><span></span><code>Email: avatar@avatar.com
 Username: avatar
 Password: 12345678
 Avatar: Imagen que queramos
-</pre></div>
+</code></pre></div>
 <p>Veréis que funciona bien, el usuario se crea y la imagen se guarda. Pero hay algo interesante, y es que si comprobamos la ruta donde se almacena la imagen, en lugar del <strong>id</strong> tenemos <strong>None</strong>. Esto sucede porque el <strong>id</strong> del usuario no existe en el momento que se registra el usuario. Este escenario se menciona explícitamente en la <a href="https://docs.djangoproject.com/en/dev/ref/models/fields/#django.db.models.FileField.upload_to">documentación</a> del parámetro <strong>upload_to</strong>:</p>
-<div class="highlight"><pre><span></span>In most cases, this object will not have been saved to the database yet, so if it uses the default AutoField, it might not yet have a value for its primary key field.
-</pre></div>
+<div class="highlight"><pre><span></span><code>In most cases, this object will not have been saved to the database yet, so if it uses the default AutoField, it might not yet have a value for its primary key field.
+</code></pre></div>
 <p>Como la clase <strong>User</strong> utiliza efectivamente el <strong>AutoField</strong> incremental para almacenar el <strong>id</strong>, éste no existe. Esto explicaría también porque en el modelo película este error no sucede, pues allí utilizamos un <strong>UUIDField</strong> en lugar del <strong>AutoField</strong> por defecto.</p>
 <p>En cualquier caso en la práctica no es algo que deba preocuparnos, porque cuando el usuario quiera modificar su avatar deberá haberse registrado antes.</p>
 <h2 id="vista-de-perfil">Vista de perfil<a class="headerlink" href="#vista-de-perfil" title="Permanent link">&para;</a></h2>
@@ -1655,13 +1669,13 @@ Avatar: Imagen que queramos
 <p>Así que vamos a utilizar <strong>GET</strong> para devolver la información de lectura y <strong>PATCH</strong> para manejar la actualización parcial del usuario.</p>
 <p>Empezamos creando la vista, asignando el serializador y los métodos que queremos permitir, en nuestro caso manejaremos el usuario así que pasaremos <code>UserSerializer</code> y los métodos <code>GET</code> y <code>PATCH</code>:</p>
 <p><strong><code>authentication/views.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProfileView</span><span class="p">(</span><span class="n">generics</span><span class="o">.</span><span class="n">RetrieveUpdateAPIView</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ProfileView</span><span class="p">(</span><span class="n">generics</span><span class="o">.</span><span class="n">RetrieveUpdateAPIView</span><span class="p">):</span>
     <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">UserSerializer</span>
     <span class="n">http_method_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;patch&#39;</span><span class="p">]</span>
-</pre></div>
+</code></pre></div>
 <p>Añadimos la vista a las URL:</p>
 <p><strong><code>authentication/urls.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">LoginView</span><span class="p">,</span> <span class="n">LogoutView</span><span class="p">,</span> <span class="n">SignupView</span><span class="p">,</span> <span class="n">ProfileView</span>  <span class="c1"># edited</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">LoginView</span><span class="p">,</span> <span class="n">LogoutView</span><span class="p">,</span> <span class="n">SignupView</span><span class="p">,</span> <span class="n">ProfileView</span>  <span class="c1"># edited</span>
 
 <span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
 
@@ -1671,52 +1685,52 @@ Avatar: Imagen que queramos
     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;user/profile/&#39;</span><span class="p">,</span>
          <span class="n">ProfileView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;user_profile&#39;</span><span class="p">),</span>
 <span class="p">]</span>
-</pre></div>
+</code></pre></div>
 <p>Si nos identificamos <code>http://localhost:8000/api/auth/login/</code> y accdemos acceder al perfil <code>http://localhost:8000/api/user/profile/</code> obtendremos un error:</p>
-<div class="highlight"><pre><span></span>&#39;ProfileView&#39; should either include a `queryset` attribute, or override the `get_queryset()` method.
-</pre></div>
+<div class="highlight"><pre><span></span><code>&#39;ProfileView&#39; should either include a `queryset` attribute, or override the `get_queryset()` method.
+</code></pre></div>
 <p>Esto sucede porque la vista no sabe con qué información rellenar el serializador.</p>
 <p>Nosotros queremos rellenarlo con la información del usuario, así que podemos hacer uso del método <code>get_object</code>, la versión para un único objeto del <code>get_queryset</code> y que tome el usuario de la propia petición:</p>
 <p><strong><code>authentication/views.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProfileView</span><span class="p">(</span><span class="n">generics</span><span class="o">.</span><span class="n">RetrieveUpdateAPIView</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ProfileView</span><span class="p">(</span><span class="n">generics</span><span class="o">.</span><span class="n">RetrieveUpdateAPIView</span><span class="p">):</span>
     <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">UserSerializer</span>
     <span class="n">http_method_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="s1">&#39;patch&#39;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">get_object</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">user</span>
-</pre></div>
+</code></pre></div>
 <p>Si intentamos ahora acceder al perfil ya veremos la información del usuario, sin embargo al modificar algún dato y presionar <strong>PATCH</strong> nos devolverá un error:</p>
-<div class="highlight"><pre><span></span>&quot;avatar&quot;: [ &quot;Este campo no puede ser nulo.&quot;]
-</pre></div>
+<div class="highlight"><pre><span></span><code>&quot;avatar&quot;: [ &quot;Este campo no puede ser nulo.&quot;]
+</code></pre></div>
 <p>Al parecer que <code>required=False</code> no es suficiente para quee el avatar puede ser nulo y tenemos que especificarlo manualmente así:</p>
 <p><strong><code>authentication/serializers.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="n">avatar</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span>
-    <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">allow_null</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># edited</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">avatar</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span>
+    <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">allow_null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># edited</span>
+</code></pre></div>
 <p>Ahora sí deberíamos ser capaces de editar los campos del perfil <code>http://localhost:8000/api/user/profile/</code>.</p>
-<div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;test@test.com&quot;</span><span class="p">,</span>
   <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
   <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="kc">null</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 <p>Pero no vamos a dejarlo así, hay varias cosas que debemos arreglar.</p>
 <h2 id="puliendo-el-serializador">Puliendo el serializador<a class="headerlink" href="#puliendo-el-serializador" title="Permanent link">&para;</a></h2>
 <p>Como os decía debemos arreglar algunas cosas, empezando por el hecho de que podemos editar el email y eso no entra en mis planes. En esta API por ahora sólo quiero dar la opción de editar el nombre de usuario, que debe ser único, y el avatar.</p>
 <p>Una forma simple de bloquear la edición de un campo es sobreescribir el método <strong>update</strong> del serializador y borrarlo del diccionario de campos validados:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
-    <span class="n">validated_data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>               <span class="c1"># prevenimos el borrado</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
+    <span class="n">validated_data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>               <span class="c1"># prevenimos el borrado</span>
     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">)</span>  <span class="c1"># seguimos la ejecución</span>
-</pre></div>
+</code></pre></div>
 <p>Como dato el método <strong>create</strong> de un serializador se ejecuta una única vez durante la creación de la instancia, mientras que el <strong>update</strong> se ejecuta siempre que actualizamos algo.</p>
 <p>En cualquier caso siguamos mejorando nuestra API, por ejemplo editando el nombre de usuario y poniendo uno de un usuario que ya exista:</p>
-<div class="highlight"><pre><span></span>UNIQUE constraint failed: authentication_customuser.username
-</pre></div>
+<div class="highlight"><pre><span></span><code>UNIQUE constraint failed: authentication_customuser.username
+</code></pre></div>
 <p>Como vemos se devuelve un error muy feo. Si el <strong>DEBUG</strong> estubiera desactivado se devolvería un código 500 indicando un error interno del servidor.</p>
 <p>Podemos añadir nuestro propio validador para el campo <strong>username</strong> y devolver un error en condiciones sin que explote el servidor por el camino:</p>
 <p><strong><code>authentication/serializers.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="c1"># ...</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># ...</span>
 
 <span class="k">def</span> <span class="nf">validate_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">make_password</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
@@ -1731,13 +1745,13 @@ Avatar: Imagen que queramos
     <span class="k">except</span> <span class="n">get_user_model</span><span class="p">()</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">value</span>
     <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s2">&quot;Nombre de usuario en uso&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Con esta validación mucho más elegante el servidor devolverá un código <strong>400 Bad Request</strong> con información detallada del error:</p>
-<div class="highlight"><pre><span></span><span class="s2">&quot;username&quot;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&quot;Nombre de usuario en uso&quot;</span><span class="p">]</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Nombre de usuario en uso&quot;</span><span class="p">]</span>
+</code></pre></div>
 <p>En este punto no perdemos nada por agregar otra validación al email, ya que durante el registro si se utiliza un email en uso sucede lo mismo que antes y explota devolviendo un código 500 sin nada de información:</p>
 <p><strong><code>authentication/serializers.py</code></strong></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">validate_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">validate_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="c1"># Hay un usuario con este email ya registrado?</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">user</span> <span class="o">=</span> <span class="n">get_user_model</span><span class="p">()</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
@@ -1745,7 +1759,7 @@ Avatar: Imagen que queramos
         <span class="k">return</span> <span class="n">value</span>
     <span class="c1"># En cualquier otro caso la validación fallará</span>
     <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s2">&quot;Email en uso&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Con esto ya tenemos nuestro serializador está perfectamente validado y acabamos la unidad.</p>
 <hr />
 <p><small class="edited"><i>Última edición: 19 de Marzo de 2021</i></small></p>
@@ -1892,7 +1906,7 @@ Avatar: Imagen que queramos
       modalButtonOnly.close();
     });
 
-    app.initialize({version:"1.0.4",url:{base:"../../.."}})
+    app.initialize({version:"1.1.2",url:{base:"../../.."}})
     var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
     var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
     const mdMenuItems = document.querySelectorAll('.md-nav__link');

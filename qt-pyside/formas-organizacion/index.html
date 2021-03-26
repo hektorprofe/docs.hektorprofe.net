@@ -85,6 +85,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
 @media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
 
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
 </style>
   </head>
   
@@ -96,7 +100,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#formas-de-organizacion" tabindex="1" class="md-skip">
+      <a href="#formas-de-organizacion" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -151,7 +155,7 @@ div.my-img{text-align:center;margin-top:20px}
             onclick="modalButtonOnly.open()"
             style="margin-left:1.35em;" 
             title="Cursos de Hektor Profe">
-            <i class="fa fa-star" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Ofertas cursos Python en Udemy
+            <i class="fa fa-university" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Cursos en Udemy
           </a>
           <a href="/"
             ><img
@@ -530,6 +534,16 @@ div.my-img{text-align:center;margin-top:20px}
             
             
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                
+                  
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?couponCode=76E57A0B1FA3F4E30F80" target="_blank">
+                        <img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  
+                
+
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -613,24 +627,24 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Hasta ahora hemos trabajado ejemplos muy sencillos en una ventana principal con un solo widget, pero ahora vamos a dar un paso adelante y a implementar varios widgets en el mismo espacio. Si vamos a utilizar varios widgets necesitamos organizarlos y precisamente para eso existen los layouts, que se traducirían en español como disposiciones.</p>
 <p>Hace un tiempo encontré una forma excelente de ilustrar el funcionamiento de los layouts. Consiste en crear una clase base con un fondo coloreado, así veremos exactamente el espacio que ocupan los layouts de una forma muy visual.</p>
 <p>Así que vamos a preparar un widget personalizado para visualizar nuestros layouts, lo vamos a llamar <code>caja</code> y lo heredaremos de una simple label:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">class</span> <span class="nc">Caja</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;background-color:{color}&quot;</span><span class="p">)</span>
-</pre></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;background-color:</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
 <p>Me váis a permitir adelantarme un poco y utilizar una hoja de estilo para otorgar un color de fondo a nuestra caja mediante el método <code>setStyleSheet</code>. Este método lo estudiaremos a fondo en la unidad de tematización.</p>
 <p>Vamos a crear una ventana principal básica usando esta caja como widget central:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
 <span class="k">class</span> <span class="nc">Contenedor</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;background-color:{color}&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;background-color:</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -645,19 +659,19 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>Listo, en la siguiente lección vamos a experimentar creando contenedores y organizándolos en diferentes disposiciones.</p>
 <h2 id="layouts-basicos">Layouts básicos<a class="headerlink" href="#layouts-basicos" title="Permanent link">&para;</a></h2>
 <p>Existen dos tipos de disposición básica para organizar elementos vertical u horizontalmente.</p>
 <p>Empecemos por el primer tipo:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QVBoxLayout</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QVBoxLayout</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
 <span class="k">class</span> <span class="nc">Caja</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;background-color:{color}&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;background-color:</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -679,14 +693,14 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>Al ejecutarlo veremos que nos devuelve un error:</p>
-<div class="highlight"><pre><span></span>TypeError: &#39;PySide6.QtWidgets.QMainWindow.setCentralWidget&#39; called with wrong argument types:
+<div class="highlight"><pre><span></span><code>TypeError: &#39;PySide6.QtWidgets.QMainWindow.setCentralWidget&#39; called with wrong argument types:
 PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
-</pre></div>
+</code></pre></div>
 <p>Nos está indicando que no se permite utilizar un layout como widget central. Eso es porque los layouts no son widgets, no heredan de la clase <code>QWidget</code>.</p>
 <p>La forma de manejar esto es crear un <code>dummy widget</code> para asignarle el layout y usarlo como widget central:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="o">...</span><span class="p">,</span> <span class="n">QWidget</span>  <span class="c1"># edited</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="o">...</span><span class="p">,</span> <span class="n">QWidget</span>  <span class="c1"># edited</span>
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -703,14 +717,14 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
 
         <span class="c1"># establecemos el dummy widget como widget central</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Como podemos observar el layout contiene la caja verde, que a su vez se encuentra dentro del dummy widget asignado como widget principal. La diferencia más notable es que un layout tiene espacios y márgenes, por eso la caja no ocupa todo el espacio.</p>
 <p>Vamos a añadir más cajas para ver cómo organiza el espacio automáticamente:</p>
-<div class="highlight"><pre><span></span><span class="c1"># le añadimos unas cuantas cajas</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># le añadimos unas cuantas cajas</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">Caja</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">))</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">Caja</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">))</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">Caja</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">))</span>
-</pre></div>
+</code></pre></div>
 <p>¿Véis como el layout vertical reparte equitativamente el espacio entre los widgets que contiene?</p>
 <p>Vamos a cambiar a un layaout horizontal para ver cómo se reparten los objetos:</p>
 <ul>
@@ -719,17 +733,17 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
 </ul>
 <p>Es exactamente lo mismo, pero en esta ocasión todo se organiza horizontalmente.</p>
 <p>Para modificar los márgenes del layout se utiliza el método <code>setContentsMargins</code> pasándole por orden los píxeles a la izquierda, arriba, derecha y abajo:</p>
-<div class="highlight"><pre><span></span><span class="c1"># modificamos los márgenes</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># modificamos los márgenes</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Y para quitar el espaciado entre los widgets utilizaremos <code>setSpacing</code> con 0 píxeles:</p>
-<div class="highlight"><pre><span></span><span class="c1"># modificamos el espaciado</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># modificamos el espaciado</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Sobra decir que estamos usando nuestra caja para visualizar el espacio de cada widget, pero en la vida real estaríamos añadiendo etiquetas, campos de texto y otros widgets para diseñar formularios o lo que necesitemos.</p>
 <h2 id="layouts-anidados">Layouts anidados<a class="headerlink" href="#layouts-anidados" title="Permanent link">&para;</a></h2>
 <p>El potencial de los layaouts básicos se pone de manifiesto al mezclarlos, por ejemplo, partiendo de un layout horizontal que a su vez contiene layouts verticales:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
@@ -758,11 +772,11 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
         <span class="n">widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layoutHor</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <p>Esta técnica nos permite dividir el espacio a voluntad, sin embargo, si lo que necesitamos es un diseño en cuadrícula es mejor utilizar la disposición que veremos en la próxima lección.</p>
 <h2 id="layout-en-cuadricula">Layout en cuadrícula<a class="headerlink" href="#layout-en-cuadricula" title="Permanent link">&para;</a></h2>
 <p>El layout en cuadrícula se basa en crear un único layout compuesto de filas y columnas. Primero se crea la cuadrícula y luego se rellena cada hueco o celda haciendo referencia a ella con índices que empiezan valiendo cero:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -770,7 +784,7 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
 <span class="k">class</span> <span class="nc">Caja</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;background-color:{color}&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;background-color:</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -799,21 +813,21 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>El tamaño de la cuadrícula vendrá determinado automáticamente por los mayores índices con un widget, lo que generará huecos vacíos si no los rellenemos explícitamente.</p>
 <p>Vamos a hacer un experimento para generar dinámicamente una cuadrícula con cajas de colores aleatorios a partir de dos bucles for:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="c1"># bucles for para generar una cuadrícula</span>
 <span class="k">for</span> <span class="n">fila</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">columna</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
         <span class="c1"># añadimos una caja de color aleatorio</span>
         <span class="n">color</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16777215</span><span class="p">)))</span>  <span class="c1"># int(0xFFFFFF)</span>
-        <span class="n">cuadricula</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">Caja</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;#{color[2:]}&quot;</span><span class="p">),</span> <span class="n">fila</span><span class="p">,</span> <span class="n">columna</span><span class="p">)</span>
-</pre></div>
+        <span class="n">cuadricula</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">Caja</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;#</span><span class="si">{</span><span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">fila</span><span class="p">,</span> <span class="n">columna</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="layout-en-formulario">Layout en formulario<a class="headerlink" href="#layout-en-formulario" title="Permanent link">&para;</a></h2>
 <p>Si lo que necesitamos es una estructura para manejar un formulario podemos usar un <code>QFormLayout</code> que nos permite añadir etiquetas y widgets en fila de una forma más cómoda que las cuadrículas:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QFormLayout</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -821,7 +835,7 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
 <span class="k">class</span> <span class="nc">Caja</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;background-color:{color}&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;background-color:</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -850,15 +864,15 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>Dependiendo del sistema operativo el formulario se visualizará de forma diferente con el objetivo de respetar la integración, pero es posible cambiar la alineación de las etiquetas y los widgets manualmente:</p>
-<div class="highlight"><pre><span></span><span class="c1"># configuraciones extra</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># configuraciones extra</span>
 <span class="n">formulario</span><span class="o">.</span><span class="n">setLabelAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignRight</span><span class="p">)</span>
 <span class="n">formulario</span><span class="o">.</span><span class="n">setFormAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignHCenter</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">AlignVCenter</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 <h2 id="layout-apilado">Layout apilado<a class="headerlink" href="#layout-apilado" title="Permanent link">&para;</a></h2>
 <p>Otra disposición que da mucho juego es apilar los widgets usando un <code>QStackedLayout</code>:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QStackedLayout</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -866,7 +880,7 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
 <span class="k">class</span> <span class="nc">Caja</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;background-color:{color}&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;background-color:</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -894,23 +908,23 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>El problema de este layout es que necesita controladores.</p>
 <p>Vamos a definir un evento que capture cuando presionamos las flechas del teclado para poder alternar entre los widgets. Los eventos ya existen en el widget, lo que haremos es sobreescribir su comportamiento:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>  <span class="c1"># nuevo</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>  <span class="c1"># nuevo</span>
 
 <span class="k">def</span> <span class="nf">keyPressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
     <span class="c1"># detectamos la flecha presionada</span>
     <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Key_Right</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Flecha derecha presionada&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flecha derecha presionada&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Key_Left</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Flecha izquierda presionada&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flecha izquierda presionada&quot;</span><span class="p">)</span>
     <span class="c1"># continuamos con el evento por defecto</span>
     <span class="n">event</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 <p>Ahora utilizaremos el método <code>setCurrentIndex</code> del layout para controlar el widget que se muestra teniendo en cuenta que el índice empieza valiendo 0 y al tener 4 widgets su valor máximo será 3. Este numero máximo podemos conseguirlo contando los elementos del layout con su método <code>count</code>.</p>
 <p>Al presionar la flecha derecha incrementaremos el índice y con la izquierda lo decrementaremos. Para generar un efecto infinito si el índice es menor que cero lo estableceremos al máximo, si es mayor que el máximo lo estableceremos a cero:</p>
-<div class="highlight"><pre><span></span><span class="c1"># necesitamos crear un accesor para usar el layout desde el evento</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># necesitamos crear un accesor para usar el layout desde el evento</span>
 <span class="bp">self</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">layout</span>
 
 <span class="k">def</span> <span class="nf">keyPressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
@@ -936,11 +950,11 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
 
     <span class="c1"># continuamos con el evento por defecto</span>
     <span class="n">event</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 <p>En este experimento hemos introducido los <code>eventos</code>, pero podríamos haber utilizado unos botones para cambiar de índice sin problema.</p>
 <h2 id="layout-con-pestanas">Layout con pestañas<a class="headerlink" href="#layout-con-pestanas" title="Permanent link">&para;</a></h2>
 <p>El último tipo de disposición que veremos es con pestañas utilizando un <code>QTabWidget</code>, se trata de una variante del apilado con un control más visual. Esta variante sí hereda de la clase <code>QWidget</code> y por tanto no requiere un dummy widget:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QTabWidget</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -948,7 +962,7 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
 <span class="k">class</span> <span class="nc">Caja</span><span class="p">(</span><span class="n">QLabel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;background-color:{color}&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;background-color:</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -973,13 +987,13 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
     <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 <p>Algunas opciones interesantes de este widget es que podemos modificar la posición de las pestañas:</p>
-<div class="highlight"><pre><span></span><span class="n">tabs</span><span class="o">.</span><span class="n">setTabPosition</span><span class="p">(</span><span class="n">QTabWidget</span><span class="o">.</span><span class="n">West</span><span class="p">)</span>  <span class="c1"># West, East, North, South</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">tabs</span><span class="o">.</span><span class="n">setTabPosition</span><span class="p">(</span><span class="n">QTabWidget</span><span class="o">.</span><span class="n">West</span><span class="p">)</span>  <span class="c1"># West, East, North, South</span>
+</code></pre></div>
 <p>O hacer que las pestañas se puedan arrastrar para cambiar el orden:</p>
-<div class="highlight"><pre><span></span><span class="n">tabs</span><span class="o">.</span><span class="n">setMovable</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">tabs</span><span class="o">.</span><span class="n">setMovable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
 <p>Y con esto acabamos el repaso de los layouts esenciales de Qt.</p>
 <hr />
 <p><small class="edited"><i>Última edición: 22 de Marzo de 2021</i></small></p>
@@ -1126,7 +1140,7 @@ PySide6.QtWidgets.QMainWindow.setCentralWidget(QVBoxLayout)
       modalButtonOnly.close();
     });
 
-    app.initialize({version:"1.0.4",url:{base:"../.."}})
+    app.initialize({version:"1.1.2",url:{base:"../.."}})
     var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
     var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
     const mdMenuItems = document.querySelectorAll('.md-nav__link');

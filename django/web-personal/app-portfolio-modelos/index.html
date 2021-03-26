@@ -85,6 +85,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
 @media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
 
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
 </style>
   </head>
   
@@ -96,7 +100,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#segunda-app-portfolio-modelos" tabindex="1" class="md-skip">
+      <a href="#segunda-app-portfolio-modelos" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -151,7 +155,7 @@ div.my-img{text-align:center;margin-top:20px}
             onclick="modalButtonOnly.open()"
             style="margin-left:1.35em;" 
             title="Cursos de Hektor Profe">
-            <i class="fa fa-star" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Ofertas cursos Python en Udemy
+            <i class="fa fa-university" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Cursos en Udemy
           </a>
           <a href="/"
             ><img
@@ -620,8 +624,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-empresarial/fusion-frontend-y-backend/" title="Fusión de frontend y backend" class="md-nav__link">
-      Fusión de frontend y backend
+    <a href="../../web-empresarial/fusion-frontend-y-backend/" title="Fusión frontend y backend" class="md-nav__link">
+      Fusión frontend y backend
     </a>
   </li>
 
@@ -800,8 +804,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-empresarial/formularios-procesado-validacion/" title="Procesar y validar formularios" class="md-nav__link">
-      Procesar y validar formularios
+    <a href="../../web-empresarial/formularios-procesado-validacion/" title="Procesar validar formularios" class="md-nav__link">
+      Procesar validar formularios
     </a>
   </li>
 
@@ -992,8 +996,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-playground/decoradores-identificacion/" title="Decoradores de identificación" class="md-nav__link">
-      Decoradores de identificación
+    <a href="../../web-playground/decoradores-identificacion/" title="Decorador identificación" class="md-nav__link">
+      Decorador identificación
     </a>
   </li>
 
@@ -1292,8 +1296,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../web-playground/programando-conversaciones/" title="Programando conversaciones" class="md-nav__link">
-      Programando conversaciones
+    <a href="../../web-playground/programando-conversaciones/" title="Programar conversaciones" class="md-nav__link">
+      Programar conversaciones
     </a>
   </li>
 
@@ -1505,6 +1509,16 @@ div.my-img{text-align:center;margin-top:20px}
             
             
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                
+                  
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?couponCode=DC947D53C7154BB1BB10" target="_blank">
+                        <img src="/cdn/assets/django.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  
+                
+
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1530,25 +1544,25 @@ div.my-img{text-align:center;margin-top:20px}
 <p>En esta lección vamos a añadir dinamismo al portafolio haciendo que interactúe con una base de datos, para ello crearemos una nueva app llamada <strong>portfolio</strong>. Durante su creación aprenderemos a definir modelos y a utilizar el panel de administrador. Os aseguro que os va a gustar.</p>
 <p>Así que la pregunta es ¿qué gestiona el portafolio? ¿Proyectos no? ¿Y qué campos tiene un proyecto…? Un título, una descripción, un enlace y una imagen ¿verdad?.</p>
 <p>Para que Django pueda manipular imágenes necesita un módulo externo llamado Pillow, vamos a empezar instalándolo en nuestro entorno virtual:</p>
-<div class="highlight"><pre><span></span>(django2) pip install Pillow
-</pre></div>
+<div class="highlight"><pre><span></span><code>(django2) pip install Pillow
+</code></pre></div>
 <p>Una vez instalado Pillow vamos a definir la estructura de nuestros proyectos: aquí es donde entran en escena los modelos y el potente sistema de mapeado ORM modelo-objeto-relacional de Django. ¿Qué significa esto? </p>
 <p>Significa que si seguimos las pautas de Django podremos trabajar con objetos mapeados en la base de datos, de manera que al crear instancias de una clase específica, estas quedarán guardadas como registros de forma automática. </p>
 <p>En Django las clases que manejan estos objetos persistentes se conocen como Modelos. Lo vais a ver muy fácilmente con la práctica.</p>
 <p>Vamos a crear nuestro modelo para almacenar <em>Proyectos</em>, pero como vamos a hacerlo en una nueva app tenemos que crearla antes:</p>
-<div class="highlight"><pre><span></span>(django2) python manage.py startapp portfolio
-</pre></div>
+<div class="highlight"><pre><span></span><code>(django2) python manage.py startapp portfolio
+</code></pre></div>
 <p>Para definir un nuevo modelo <strong>Proyecto</strong> nos vamos a dirigir al fichero <strong>portfolio/models.py</strong>, pero no podemos hacerlo de cualquier forma, debemos seguir unas pautas.</p>
 <p>Crear un modelo es fácil, sólo tenemos que crear una clase heredando de una clase padre llamada <strong>models.Model</strong>. Es importante que el nombre de la clase siempre sea en singular, en nuestro caso sería <strong>Project</strong> (lo voy a poner en inglés para seguir un orden en todo el código):</p>
 <p><code>portfolio/models.py</code></p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">Project</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="k">pass</span>
-</pre></div>
+</code></pre></div>
 <p>Esta clase representará una tabla dentro de la base de datos. Lo siguiente será crear sus columnas, que no serán otra cosa que los atributos de la clase. Por ahora crearemos el título, la imagen y la descripción, además de dos campos especiales que nos servirán para almacenar automáticamente la fecha y hora de creación del registro, así como la fecha y hora de la última edición. No os preocupéis por el campo de la dirección web, lo dejaremos para más adelante:</p>
 <p><code>portfolio/models.py</code></p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">Project</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">title</span> <span class="o">=</span> 
@@ -1556,22 +1570,22 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="n">image</span> <span class="o">=</span> 
     <span class="n">created</span> <span class="o">=</span> 
     <span class="n">updated</span> <span class="o">=</span> 
-</pre></div>
+</code></pre></div>
 <p>Como podéis suponer con el nombre no basta. tenemos que indicarle a Django qué representarán cada uno de estos campos. Es decir, si son cadenas de texto, números, fechas, imágenes… Para hacerlo utilizaremos los modelos definidos dentro del módulo <strong>models</strong>.</p>
 <p><code>portfolio/models.py</code></p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">Project</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">()</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">()</span>
-    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">updated</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
+    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">updated</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
 <p>Hay muchos tipos de datos, pero por ahora prefiero no entrar en detalles, luego os pondré un ejercicio donde tendréis que investigar sobre los tipos de datos. Por ahora tenemos una cadena con un título (charfield), una imagen (imagefield), un texto largo con la descripción (textfield) y dos fechas con hora (datetimefield).</p>
 <p>Con esto ya tenemos nuestro modelo, pero todavía no podemos utilizarlo. Antes tenemos que añadir la app <strong>portfolio</strong> a las apps de nuestro proyecto y luego migrar el modelo a la base de datos.</p>
 <p><code>webpersonal/settings.py</code></p>
-<div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
     <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
     <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
@@ -1581,32 +1595,32 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="s1">&#39;core&#39;</span><span class="p">,</span>
     <span class="s1">&#39;portfolio&#39;</span><span class="p">,</span>  <span class="c1"># &lt;====</span>
 <span class="p">]</span>
-</pre></div>
+</code></pre></div>
 <p>Para migrar la app necesitaremos dos comandos:</p>
 <p>El primero es <strong>makemigrations</strong>, que sirve para indicarle a Django que hay cambios en algún modelo, de manera que creará un fichero de migraciones. Si en el futuro tenemos algún problema, siempre podremos restaurar una migración anterior.</p>
 <p>Vamos a crear la migración a ver qué sucede:</p>
-<div class="highlight"><pre><span></span>(django2) python manage.py makemigrations portfolio
-</pre></div>
+<div class="highlight"><pre><span></span><code>(django2) python manage.py makemigrations portfolio
+</code></pre></div>
 <p>Nos devuelve un error: "El campo CharField debe tener definido un atributo max_length". ¿Recordáis cuando os he dicho que los modelos están enlazados a la base de datos? Pues esa es una de esas restricciones que tienen los campos de una tabla SQL. Los campos de tipo cadena de caracter necesitan que les definamos una longitud máxima. Vamos a hacerlo:</p>
 <p><code>portfolio/models.py</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">Project</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">()</span>
-    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">updated</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
+    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">updated</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
 <p>Ahora creamos de nuevo la migración y ya debería funcionar:</p>
-<div class="highlight"><pre><span></span>(django2) python manage.py makemigrations portfolio
-</pre></div>
+<div class="highlight"><pre><span></span><code>(django2) python manage.py makemigrations portfolio
+</code></pre></div>
 <p>Sólo nos falta aplicarla a la base de datos, que lo haremos con el comando <strong>migrate</strong>:</p>
-<div class="highlight"><pre><span></span>(django2) python manage.py migrate portfolio
-</pre></div>
+<div class="highlight"><pre><span></span><code>(django2) python manage.py migrate portfolio
+</code></pre></div>
 <p><strong>Recordad</strong>, cada vez que hagamos un cambio en nuestro ficheros <strong>models.py</strong> ejecutaremos estos dos comandos para crear una migración y posteriormente aplicarla.</p>
 <p>Ahora que tenemos nuestro modelo ¿podríamos crear algún registro no? ¿Cómo lo hacemos? Hay dos formas:</p>
 <ul>
@@ -1759,7 +1773,7 @@ div.my-img{text-align:center;margin-top:20px}
       modalButtonOnly.close();
     });
 
-    app.initialize({version:"1.0.4",url:{base:"../../.."}})
+    app.initialize({version:"1.1.2",url:{base:"../../.."}})
     var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
     var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
     const mdMenuItems = document.querySelectorAll('.md-nav__link');

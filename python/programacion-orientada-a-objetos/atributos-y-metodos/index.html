@@ -85,6 +85,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
 @media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
 
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
 </style>
   </head>
   
@@ -96,7 +100,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#atributos-y-metodos" tabindex="1" class="md-skip">
+      <a href="#atributos-y-metodos" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -151,7 +155,7 @@ div.my-img{text-align:center;margin-top:20px}
             onclick="modalButtonOnly.open()"
             style="margin-left:1.35em;" 
             title="Cursos de Hektor Profe">
-            <i class="fa fa-star" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Ofertas cursos Python en Udemy
+            <i class="fa fa-university" aria-hidden="true" style="color:rgb(84, 199, 84)"></i> Cursos en Udemy
           </a>
           <a href="/"
             ><img
@@ -2155,6 +2159,16 @@ div.my-img{text-align:center;margin-top:20px}
             
             
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                
+                  
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?couponCode=266E0AAF1E3F0FAC358E" target="_blank">
+                        <img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  
+                
+
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2279,86 +2293,86 @@ div.my-img{text-align:center;margin-top:20px}
 <h3 id="atributos-dinamicos">Atributos dinámicos<a class="headerlink" href="#atributos-dinamicos" title="Permanent link">&para;</a></h3>
 <p>Dado que Python es muy flexible los atributos pueden manejarse de distintas formas, por ejemplo se pueden crear dinámicamente (al vuelo) en los objetos.</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
     <span class="k">pass</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 <span class="n">galleta</span><span class="o">.</span><span class="n">sabor</span> <span class="o">=</span> <span class="s2">&quot;salado&quot;</span>
 <span class="n">galleta</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;marrón&quot;</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;El sabor de esta galleta es {galleta.sabor} &quot;</span>
-      <span class="n">f</span><span class="s2">&quot;y el color {galleta.color}&quot;</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>El sabor de esta galleta es Salado y el color Marrón
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El sabor de esta galleta es </span><span class="si">{</span><span class="n">galleta</span><span class="o">.</span><span class="n">sabor</span><span class="si">}</span><span class="s2"> &quot;</span>
+      <span class="sa">f</span><span class="s2">&quot;y el color </span><span class="si">{</span><span class="n">galleta</span><span class="o">.</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>El sabor de esta galleta es Salado y el color Marrón
+</code></pre></div>
 </div>
 <h3 id="atributos-de-clase">Atributos de clase<a class="headerlink" href="#atributos-de-clase" title="Permanent link">&para;</a></h3>
 <p>Aunque la flexibilidad de los atributos dinámicos puede llegar a ser muy útil, tener que definir los atributos de esa forma es tedioso. Es más práctico definir unos atributos básicos en la clase. De esa manera todas las galletas podrían tener unos atributos por defecto:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 
 <span class="k">if</span> <span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta tiene chocolate&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta tiene chocolate&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta no tiene chocolate&quot;</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>La galleta no tiene chocolate
-</pre></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta no tiene chocolate&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>La galleta no tiene chocolate
+</code></pre></div>
 </div>
 <p>Luego podemos cambiar su valor en cualquier momento:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span> <span class="o">=</span> <span class="bp">True</span>
+<div class="highlight"><pre><span></span><code><span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">if</span> <span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta tiene chocolate&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta tiene chocolate&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta no tiene chocolate&quot;</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>La galleta tiene chocolate
-</pre></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta no tiene chocolate&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>La galleta tiene chocolate
+</code></pre></div>
 </div>
 <p>Por lo menos de esta forma nos aseguraremos de que el atributo chocolate existe en todas las galletas desde el principio. Además es posible consultar el valor por defecto que deben tener las galletas haciendo referencia al atributo en la definición de la clase:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">Galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>False
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">Galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>False
+</code></pre></div>
 </div>
 <p>Lo curioso es que si cambiamos ese atributo de clase (que no de objeto) a <em>True</em>, las siguientes galletas se crearán con chocolate, es decir, habremos modificado las instrucciones de creación de los objetos:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="n">Galleta</span><span class="o">.</span><span class="n">chocolate</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">Galleta</span><span class="o">.</span><span class="n">chocolate</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 
 <span class="k">if</span> <span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta tiene chocolate&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta tiene chocolate&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta no tiene chocolate&quot;</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>La galleta tiene chocolate
-</pre></div>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta no tiene chocolate&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>La galleta tiene chocolate
+</code></pre></div>
 </div>
 <p>Ya les gustaría a otros lenguajes ser tan flexibles. 😁😁😁</p>
 <h2 id="metodos">Métodos<a class="headerlink" href="#metodos" title="Permanent link">&para;</a></h2>
 <p>Si por un lado tenemos las "variables" de las clases, por otro tenemos sus "funciones", que evidentemente nos permiten definir funcionalidades para llamarlas desde las instancias.</p>
 <p>Definir un método es bastante simple, sólo tenemos que añadirlo en la clase y luego llamarlo desde el objeto con los paréntesis, como si de una función se tratase:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 <span class="n">galleta</span><span class="o">.</span><span class="n">saludar</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 &lt;ipython-input-27-74df06911b9b&gt; in &lt;module&gt;()
     6 
@@ -2366,91 +2380,91 @@ TypeError                                 Traceback (most recent call last)
 ----&gt; 8 galleta.saludar()
 
 TypeError: saludar() takes 0 positional arguments but 1 was given
-</pre></div>
+</code></pre></div>
 </div>
 <p>Sin embargo, al intentar ejecutar el código anterior desde una galleta veréis que no funciona. Nos indica que el método saludar() requiere 0 argumentos pero se está pasando uno.</p>
 <p>¿Cómo puede ser? Si en ningún momento hemos enviado ninguna información a al galleta...</p>
 <p>Lo que tenemos aquí, estimados alumnos, es la diferencia fundamental entre métodos de clase y métodos de instancia.</p>
 <p>Probad a ejecutar el método llamando a la clase en lugar del objeto:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">saludar</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
 
 <span class="n">Galleta</span><span class="o">.</span><span class="n">saludar</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><span></span>Hola, soy una galleta muy sabrosa
-</pre></div>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Hola, soy una galleta muy sabrosa
+</code></pre></div>
 </div>
 <p>¡Ahora sí ha funcionado! ¿Cómo es posible? Y más importante, ¿por qué al llamarlo desde el objeto dice que estamos enviando un argumento?</p>
 <h3 id="primer-argumento-self">Primer argumento self<a class="headerlink" href="#primer-argumento-self" title="Permanent link">&para;</a></h3>
 <p>Los objetos tienen una característica muy importante: son conscientes de que existen. Y no, no es broma.</p>
 <p>Cuando se ejecuta un método desde un objeto (que no desde una clase), se envía un primer argumento implícito que hace referencia al propio objeto. Si lo definimos en nuestro método podremos capturarlo y ver qué es:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">soy_el_propio_objeto</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">soy_el_propio_objeto</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">soy_el_propio_objeto</span><span class="p">)</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 <span class="n">galleta</span><span class="o">.</span><span class="n">saludar</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><span></span>Hola, soy una galleta muy sabrosa
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Hola, soy una galleta muy sabrosa
 &lt;__main__.Galleta object at 0x0000028E65476748&gt; 
-</pre></div>
+</code></pre></div>
 </div>
 <p>¿Curioso que haya funcionado verdad? Además ¿no os suena de algo ese resultado que muestra el parámetro que hemos definido? Se trata de la propia representación del objeto.</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">soy_el_propio_objeto</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">soy_el_propio_objeto</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy una galleta muy sabrosa&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">soy_el_propio_objeto</span><span class="p">)</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 <span class="n">galleta</span><span class="o">.</span><span class="n">saludar</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">galleta</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>Hola, soy una galleta muy sabrosa
+<span class="nb">print</span><span class="p">(</span><span class="n">galleta</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Hola, soy una galleta muy sabrosa
 &lt;__main__.Galleta object at 0x0000028E654769E8&gt;
 &lt;__main__.Galleta object at 0x0000028E654769E8&gt;
-</pre></div>
+</code></pre></div>
 </div>
 <p>Pues sí, podemos acceder al propio objeto desde el interior de sus métodos. Lo único que como este argumento hace referencia al objeto en sí mismo por convención se le llama <strong>self</strong>.</p>
 <p>Poder acceder al propio objeto desde un método es muy útil, ya que nos permite acceder a sus atributos. Fijaros, el siguiente código no funcionaría como esperamos:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">chocolatear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 <span class="n">galleta</span><span class="o">.</span><span class="n">chocolatear</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>False
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>False
+</code></pre></div>
 </div>
 <p>En cambio, si hacemos ver que <em>self</em> es el propio objeto...</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">chocolatear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">chocolate</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chocolate</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 <span class="n">galleta</span><span class="o">.</span><span class="n">chocolatear</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>True
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="n">galleta</span><span class="o">.</span><span class="n">chocolate</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>True
+</code></pre></div>
 </div>
 <p>¿No es interesante? Da la sensación como os decía antes de que las instancias tienen que saber quienes son porque sino no pueden acceder sus atributos internos y por eso tienen que enviarse asimismas a los métodos.</p>
 <p>Sea como sea con este ejemplo podemos entender que por defecto el valor de un atributo se busca en la clase, pero para modificarlo en la instancia es necesario hacer referencia al objeto.</p>
@@ -2460,94 +2474,94 @@ TypeError: saludar() takes 0 positional arguments but 1 was given
 <h3 id="constructor">Constructor<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h3>
 <p>El constructor es un método que se llama automáticamente al crear un objeto, se define con el nombre <em>init</em>:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Soy una galleta acabada de hornear!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Soy una galleta acabada de hornear!&quot;</span><span class="p">)</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><span></span>Soy una galleta acabada de hornear!
-</pre></div>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Soy una galleta acabada de hornear!
+</code></pre></div>
 </div>
 <p>La finalidad del constructor es, como su nombre indica, construir los objetos. Por esa razón permite sobreescribir el método que crea los objetos, permitiéndonos enviar datos desde el principio para construirlo:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
-    <span class="n">chocolate</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sabor</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sabor</span> <span class="o">=</span> <span class="n">sabor</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Se acaba de crear una galleta {self.color} y {self.sabor}.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Se acaba de crear una galleta </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="si">}</span><span class="s2"> y </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">sabor</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 
 <span class="n">galleta_1</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">(</span><span class="s2">&quot;marrón&quot;</span><span class="p">,</span> <span class="s2">&quot;amarga&quot;</span><span class="p">)</span>
 <span class="n">galleta_2</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">(</span><span class="s2">&quot;blanca&quot;</span><span class="p">,</span> <span class="s2">&quot;dulce&quot;</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>Se acaba de crear una galleta marrón y amarga.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Se acaba de crear una galleta marrón y amarga.
 Se acaba de crear una galleta blanca y dulce.
-</pre></div>
+</code></pre></div>
 </div>
 <p>Como los métodos se comportan como funciones tienen sus mismas características, permitiéndonos definir valores nulos, valores por posición y nombre, argumentos indeterminadas, etc.</p>
 <h3 id="destructor">Destructor<a class="headerlink" href="#destructor" title="Permanent link">&para;</a></h3>
 <p>Si existe un constructor también debe existir un destructor que se llame al eliminar el objeto para que encargue de las tareas de limpieza como vaciar la memoria. Ese es el papel del método especial <em>del</em>. Es muy raro sobreescribir este método porque se maneja automáticamente, pero es interesante saber que existe.</p>
 <p>Todos los objetos se borran automáticamente de la memoria al finalizar el programa, aunque también podemos eliminarlos automáticamente pasándolos a la función <em>del()</em>:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta se está borrando de la memoria&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta se está borrando de la memoria&quot;</span><span class="p">)</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 
 <span class="k">del</span><span class="p">(</span><span class="n">galleta</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span>La galleta se está borrando de la memoria
-</pre></div>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>La galleta se está borrando de la memoria
+</code></pre></div>
 </div>
 <p>En este punto vale comentar algo respecto a los métodos especiales como éste, y es que pese a que tienen accesores en forma de función para facilitar su llamada, es totalmente posible ejecutarlos directamente como si fueran métodos normales:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;La galleta se está borrando de la memoria&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La galleta se está borrando de la memoria&quot;</span><span class="p">)</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">()</span>
 
 <span class="n">galleta</span><span class="o">.</span><span class="fm">__del__</span><span class="p">()</span>
-</pre></div>
-<div class="highlight"><pre><span></span>La galleta se está borrando de la memoria
-</pre></div>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>La galleta se está borrando de la memoria
+</code></pre></div>
 </div>
 <p>Si tenéis memoria seguro que ahora mismo os estáis acordando de funciones como <em>str()</em> y <em>len()</em>, y es que en efecto, esas también son accesores de los métodos especiales <em>str</em> y <em>len</em> que tienen los objetos.</p>
 <h3 id="string">String<a class="headerlink" href="#string" title="Permanent link">&para;</a></h3>
 <p>El método <em>str</em> es el que devuelve la representación de un objeto en forma de cadena. Un momento en que se llama automáticamente es cuando imprimirmos una variable por pantalla.</p>
 <p>Por defecto los objetos imprimen su clase y una dirección de memoria, pero eso puede cambiarse sobreescribiendo el comportamiento:</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Galleta</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sabor</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sabor</span> <span class="o">=</span> <span class="n">sabor</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-       <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;Soy una galleta {self.color} y {self.sabor}.&quot;</span>
+       <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Soy una galleta </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="si">}</span><span class="s2"> y </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">sabor</span><span class="si">}</span><span class="s2">.&quot;</span>
 
 <span class="n">galleta</span> <span class="o">=</span> <span class="n">Galleta</span><span class="p">(</span><span class="s2">&quot;dulce&quot;</span><span class="p">,</span> <span class="s2">&quot;blanca&quot;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">galleta</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">galleta</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">galleta</span><span class="o">.</span><span class="fm">__str__</span><span class="p">())</span>
-</pre></div>
-<div class="highlight"><pre><span></span>Soy una galleta blanca y dulce.
+<span class="nb">print</span><span class="p">(</span><span class="n">galleta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">galleta</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">galleta</span><span class="o">.</span><span class="fm">__str__</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Soy una galleta blanca y dulce.
 Soy una galleta blanca y dulce.
 Soy una galleta blanca y dulce.
-</pre></div>
+</code></pre></div>
 </div>
 <p>Hay que tener en cuenta que este método debe devolver la cadena en lugar de mostrar algo por pantalla, ese es el funcionamiento que se espera de él.</p>
 <h3 id="length">Length<a class="headerlink" href="#length" title="Permanent link">&para;</a></h3>
 <p>Finalmente otro método especial interesante es el que devuelve la longitud. Normalmente está ligado a colecciones, pero nada impide definirlo en una clase. Y sí, digo definirlo y no redefinirlo porque por defecto no existe en los objetos aunque sea el que se ejecuta al pasarlos a la función <em>len()</em>.</p>
 <div class="admonition info">
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cancion</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Cancion</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">autor</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">duracion</span><span class="p">):</span>  <span class="c1"># en segundos</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">duracion</span> <span class="o">=</span> <span class="n">duracion</span>
@@ -2557,12 +2571,12 @@ Soy una galleta blanca y dulce.
 
 <span class="n">cancion</span> <span class="o">=</span> <span class="n">Cancion</span><span class="p">(</span><span class="s2">&quot;Queen&quot;</span><span class="p">,</span> <span class="s2">&quot;Don&#39;t Stop Me Now&quot;</span><span class="p">,</span> <span class="mi">210</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cancion</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">cancion</span><span class="o">.</span><span class="fm">__len__</span><span class="p">())</span>
-</pre></div>
-<div class="highlight"><pre><span></span>210
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cancion</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cancion</span><span class="o">.</span><span class="fm">__len__</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>210
 210
-</pre></div>
+</code></pre></div>
 </div>
 <p>Mientras devolvamos un número, este método no debería dar problemas.</p>
 <hr />
@@ -2710,7 +2724,7 @@ Soy una galleta blanca y dulce.
       modalButtonOnly.close();
     });
 
-    app.initialize({version:"1.0.4",url:{base:"../../.."}})
+    app.initialize({version:"1.1.2",url:{base:"../../.."}})
     var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
     var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
     const mdMenuItems = document.querySelectorAll('.md-nav__link');
