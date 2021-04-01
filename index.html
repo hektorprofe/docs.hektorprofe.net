@@ -166,6 +166,18 @@
       a {
         outline: 0;
       }
+
+    .audioMain {
+      margin: 20px auto 20px;
+      padding: 0px;
+      width: 958px;
+    }
+
+    @media (max-width: 949px) {
+      .audioMain {
+        width: 100%;
+      }
+    }
     </style>
   </head>
   <body>
@@ -225,6 +237,12 @@
         </div>
       </div>
     </main>
+
+    <div class="audioMain">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1020248557&color=%23009dff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+
     <script>
       (function (i, s, o, g, r, a, m) {
         i["GoogleAnalyticsObject"] = r;
