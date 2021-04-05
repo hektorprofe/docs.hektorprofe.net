@@ -1,4 +1,4 @@
-title: Interfaces con Qt Designer de GUI con Qt/PySide | Hektor Profe
+title: Interfaces con Qt Designer de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de interfaces con Qt Designer sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Interfaces con Qt Designer 

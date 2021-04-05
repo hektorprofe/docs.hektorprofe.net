@@ -1,4 +1,4 @@
-title: Ventana principal de GUI con Qt/PySide | Hektor Profe
+title: Ventana principal de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de ventana principal sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Ventana principal 

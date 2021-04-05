@@ -13,9 +13,9 @@ En esta unidad haremos servir algunos ficheros, básicamente imágenes. Las tend
 
 |  Fichero    | Enlace |
 |  --------   | -----: |
-|  hola.ico   | <a href="https://cdn.hektorprofe.net/images/tkinter/hola.ico" target="_blank">Guardar como</a> |
-|  hola.xbm   | <a href="https://cdn.hektorprofe.net/images/tkinter/hola.xbm" target="_blank">Guardar como</a>   |
-|  imagen.gif | <a href="https://cdn.hektorprofe.net/images/tkinter/imagen.gif" target="_blank">Guardar como</a>   |
+|  hola.ico   | <a href="/cdn/images/tkinter/hola.ico" target="_blank">Guardar como</a> |
+|  hola.xbm   | <a href="/cdn/images/tkinter/hola.xbm" target="_blank">Guardar como</a>   |
+|  imagen.gif | <a href="/cdn/images/tkinter/imagen.gif" target="_blank">Guardar como</a>   |
 
 ## Widgets
 

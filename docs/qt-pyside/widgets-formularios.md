@@ -1,4 +1,4 @@
-title: Widgets para formularios de GUI con Qt/PySide | Hektor Profe
+title: Widgets para formularios de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de widgets para formularios sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Widgets para formularios

@@ -13,6 +13,7 @@ rcssmin = "*"
 rjsmin = "*"
 django-compressor = "*"
 jiac = {editable = true, git = "https://github.com/bmorgan21/jinja-inline-asset-compiler.git"}
+mkdocs-macros-plugin = "*"
 
 [dev-packages]
 pylint = "*"

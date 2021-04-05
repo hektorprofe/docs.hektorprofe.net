@@ -3,7 +3,7 @@ description: Recopilación de cursos archivados de la academia de Hektor Profe.
 
 # Archivo de la academia 
 
-He recopilado todo el contenido publicado en mi cademia en forma de documentos. 
+He recopilado todo el contenido publicado en mi academia en forma de documentos. 
 
 En el menú lateral encontraréis todo mi trabajo durante ese período referente a los lenguajes Python y JavaScript.
 

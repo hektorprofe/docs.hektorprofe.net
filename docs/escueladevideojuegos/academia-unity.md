@@ -45,6 +45,7 @@ Si ya cuentas con conocimientos de programación orientada a objetos y te intere
 |  09 |  [Reproductor de Música](https://www.youtube.com/watch?v=XWY0STsGa1c&index=9&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e) |
 |  10 |  [Sistemas de partículas](https://www.youtube.com/watch?v=0iZLwPfviRU&index=10&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e) |
 
+<!--
 ## Primer videojuego 2D
 
 <div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-primer-juego-unity.jpg"/></div>
@@ -88,7 +89,7 @@ gratuito.
 |  19 |  [Guardar récord con PlayerPrefs](https://www.youtube.com/watch?v=34UMWWHOjlw&list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&index=20)|
 |  20 |  [Exportación multiplataforma](https://www.youtube.com/watch?v=BH1ibQElbbE&list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&index=21)|
 |  21 |  [Despedida](https://www.youtube.com/watch?v=-FhRT34iiJY&list=PLiplYDjUMttgeM7Py22guWh8WAP6MSWRH&index=22)|
-
+-->
 ## Juego de plataformas 2D
 
 <div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-plataformas-2d-unity.jpg"/></div>

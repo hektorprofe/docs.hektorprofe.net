@@ -1,4 +1,4 @@
-title: Tematización de GUI con Qt/PySide | Hektor Profe
+title: Tematización de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de tematización sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Tematización

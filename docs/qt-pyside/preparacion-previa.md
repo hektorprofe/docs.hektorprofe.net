@@ -1,4 +1,4 @@
-title: Preparación prévia de GUI con Qt/PySide | Hektor Profe
+title: Preparación prévia de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de preparación prévia sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Preparación prévia

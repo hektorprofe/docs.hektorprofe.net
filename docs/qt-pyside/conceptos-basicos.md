@@ -1,4 +1,4 @@
-title: Conceptos básicos de GUI con Qt/PySide | Hektor Profe
+title: Conceptos básicos de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de conceptos básicos sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Conceptos básicos

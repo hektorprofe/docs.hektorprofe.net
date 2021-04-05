@@ -1,4 +1,4 @@
-title: Desarrollo de proyectos de GUI con Qt/PySide | Hektor Profe
+title: Desarrollo de proyectos de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de desarrollo de proyectos con Qt/PySide para crear interfaces gráficas en Python.
 
 # Desarrollo de proyectos con Qt/PySide

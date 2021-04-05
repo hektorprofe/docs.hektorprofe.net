@@ -1,4 +1,4 @@
-title: Control subventanas de GUI con Qt/PySide | Hektor Profe
+title: Control subventanas de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de control subventanas sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Control subventanas

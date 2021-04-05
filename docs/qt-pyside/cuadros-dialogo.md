@@ -1,4 +1,4 @@
-title: Cuadros de diálogo de GUI con Qt/PySide | Hektor Profe
+title: Cuadros de diálogo de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de cuadros de diálogo sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Cuadros de diálogo

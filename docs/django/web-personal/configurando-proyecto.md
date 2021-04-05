@@ -50,7 +50,7 @@ Otra cosa interesante de Django que os va a gustar mucho, es su interfaz viene t
 `webpersonal/settings.py`
 
 ```python
-# Internationalization # https://docs.djangoproject.com/en/2.0/topics/i18n/
+# Internationalization # https://docs.djangoproject.com/en/dev/topics/i18n/
 LANGUAGE_CODE = 'es'
 ```
 
@@ -63,7 +63,7 @@ El siguiente paso que tenemos que llevar a cabo, justo después de crear un proy
 `webpersonal/settings.py`
 
 ```python
-# Database # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+# Database # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

@@ -1,4 +1,4 @@
-title: Apuntes del curso de GUI con Qt/PySide | Hektor Profe
+title: Apuntes del curso de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Recopilación de apuntes de mi curso sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Apuntes del curso de GUI con Qt/PySide

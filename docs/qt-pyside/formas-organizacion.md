@@ -1,4 +1,4 @@
-title: Formas de organización de GUI con Qt/PySide | Hektor Profe
+title: Formas de organización de GUI con Qt/PySide | Curso Python | Hektor Profe
 description: Unidad de formas de organización sobre Qt/PySide para crear interfaces gráficas en Python.
 
 # Formas de organización

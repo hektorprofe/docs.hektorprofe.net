@@ -96,6 +96,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
 @media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
 
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
 </style>
   </head>
   {% if palette.primary or palette.accent %}
@@ -139,6 +143,28 @@ div.my-img{text-align:center;margin-top:20px}
             {% endif %}
             {% if page.toc %}
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                {% if not page.is_homepage %}
+                  {% if "django" in page.canonical_url %}
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?couponCode=DC947D53C7154BB1BB10" target="_blank">
+                        <img src="/cdn/assets/django.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  {% elif "pyside" in page.canonical_url %}
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?couponCode=76E57A0B1FA3F4E30F80" target="_blank">
+                        <img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  {% else %}
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?couponCode=266E0AAF1E3F0FAC358E" target="_blank">
+                        <img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  {% endif %}
+                {% endif %}
+
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     {% include "partials/toc.html" %}
