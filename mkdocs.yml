@@ -304,7 +304,14 @@ nav:
     - Interfaces con Qt Designer:         'qt-pyside\interfaces-qt-designer.md'
     - Ejecutables en Windows:             'qt-pyside\ejecutables-windows.md' 
     - Desarrollo de proyectos:            'qt-pyside\desarrollo-proyectos.md' 
-    
+
+  - Apuntes de Unity:                    
+    - Índice del archivo:                 'unity/index.md'
+    - Presentación del curso:             'unity/presentacion-curso.md'
+    - Introducción a Unity:               'unity/introduccion-unity.md'
+    - Sandbox 3D:                         'unity/sandbox-3d.md'
+    - Visual Scripting:                   'unity/visual-scripting.md'
+
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'
     - Academia Unity:                     'escueladevideojuegos/academia-unity.md'
