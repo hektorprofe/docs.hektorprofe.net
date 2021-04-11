@@ -491,7 +491,7 @@ div.my-img{text-align:center;margin-top:20px}
 <h2 id="luces-camara-y-accion">Luces, cámara y acción<a class="headerlink" href="#luces-camara-y-accion" title="Permanent link">&para;</a></h2>
 <p>Muy bien pues vamos a dar nuestro primer pasito en el mundo del desarrollo de videojuegos, y qué mejor forma de hacerlo que experimentando de primera mano el potencial del motor Unity mientras aprendemos.</p>
 <p>Vamos a crear un nuevo proyecto <code>Universal Render Pipeline</code> con la versión <code>Unity 2021</code> o mayor, pues es a partir de ésta que encontramos Visual Scripting incluido y más adelante haremos uso de él, y le vamos a llamar <code>Sandbox 3D</code>.</p>
-<p><img src="/cdn/unity/Screenshot_1.png"/></p>
+<p>&lt;img src="/cdn/unity/Screenshot_1.png)</p>
 <p><em>Nota: En caso de que este proyecto se elimina en futuras versiones, dejaré una copia en los recursos de la lección. Se puede abrir desde <code>Unity Hub</code> usando el botón ADD.</em></p>
 <p>Unity está dividido en subventanas llamadas docks. Estas ventanitas se pueden arrastrar y posicionar donde nosotros queramos, podemos añadir de nuevas y quitarlas. Sin embargo existen disposiciones por defecto que nos facilitan el trabajo. Si os habéis hecho un lío, la disposición por defecto se puede recargar desde <code>Window &gt; Layouts &gt; Default</code>. Podemos guardar nuestras disposiciones con un nombre y reutilizarlas en otros proyectos.</p>
 <p>Usando la disposición por defecto, de izquierda a derecha y de arriba hacia abajo, encontramos las ventanas más importantes:</p>
@@ -502,76 +502,76 @@ div.my-img{text-align:center;margin-top:20px}
 <li>El explorador de recursos y la consola</li>
 </ul>
 <p>Estas ventanas son las más esenciales y prácticamente siempre las tendremos abiertas, hablaremos de ellas a medida que las utilicemos.</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_2.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_2.png" /></p>
 <p>Por lo pronto vemos una paqueña escena a lo lejos. Si presionamos el botón <code>Play</code>, aparecerá un pequeño escenario.</p>
 <p>Al presionar este botón entraremos en el modo de reproducción del juego y éste nos mostrará lo que ve la cámara de la escena.</p>
 <p>Lo primero que debéis recordad es que, cualquier cambio realizado en la escena durante el modo de reproducción, se revertirá al salir de él. Os aconsejo tintar la ventana durante este modo para nunca confundiros y luego perder el trabajo. A mi me gusta poner un color que se vea bien, como un azul chillón.</p>
 <p>Para hacerlo vamos a salir del modo de reproducción, iremos a <code>Edit &gt; Preferences &gt; General &gt; Playmode tint</code> y seleccionaremos nuestro color. Así al poner en marcha el juego, la interfaz se mostrará tintada, y creedme que este truco os ahorrará mucho tiempo:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_3.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_3.png" /></p>
 <p>Saliendo del modo de reproducción, vapodemos acercarnos un poco a la escena con la rueda del ratón:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_4.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_4.png" /></p>
 <p>¿Véis el escenario de atrezzo que tenemos? Es como si fuera una obra de teatro, podemos movernos por ella libremente utilizando la combinación <code>Clic derecho + AWSD</code>, como si fueramos el diretor de una película moviéndonos por el set de rodaje. Y es que en cierta forma los videojuegos en Unity se crean como una película. Tenemos el escenario, el atrezzo y la cámara enfocando justo el lugar que nos intersa mostrarle al jugador, un jugador que se convertirá en el protagonista del videojuego, como en una película.</p>
 <p>Si abrimos la jerarquía de objetos y hacemos doble clic en el objeto <code>Main Camera</code> nos posicionaremos sobre él. Utilizando las <code>flechas azul, roja y verde</code> podemos cambiar su posición. Cuando movemos un objeto por la escena estamos haciendo uso de la herramienta de movimiento, representada por una cruz con flechas en el menú superior. Podemos activar esta herramienta presionando la <code>tecla W</code> del teclado. Así mismo podemos volver a la herramienta de vista presionando la manita o la <code>tecla Q</code>. Si activamos la herramienta de rotación, con la <code>tecla E</code> podemos cambiar la dirección de la cámara. Tened en cuenta que tenemos tres rotaciones, una por cada dimensión: horizontal, vertical y profundidad:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_5.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_5.png" /></p>
 <p>Por cierto, si arrastramos la ventana <code>Game</code> a un lado, podemos editar la escena mientras vemos en grande el resultado del juego en funcionamiento. Me gusta posicionar la jeraquía abajo y dejar espacio arriba para las ventanas <code>Game</code> y <code>Scene</code>, esto me permite trabajar con más perspectiva:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_6.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_6.png" /></p>
 <p>De forma similar al objeto cámara, también tenemos las luces de la escena, que nos permite iluminar el escenario. Son fundamentales, sin ellas no veríamos ningún color en el videojuego.</p>
 <p>En esta escena tenemos dos fuentes de luz configuradas, la primera es una luz global en la parte superior. Se corresponde al objeto <code>Directional Light</code>, y si lo desactivamos básicamente veremos la escena mucho más oscura:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_7.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_7.png" /></p>
 <p>Luego tenemos un objeto foco, que podemos seleccionar desde la jerarquía <code>Example Assets &gt; Props &gt; Construction Light Low &gt; Spot Light</code>. A diferencia de una luz direccional que da luz de forma global a la escena, una spot light está dirigida a un punto concreto. Si la desactivamos apreciaremos mejor donde está enfocando:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_8.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_8.png" /></p>
 <p>Por ahora vamos a dejarlo aquí, pero antes activemos de nuevo las luces del escenario:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_9.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_9.png" /></p>
 <h2 id="objetos-recursos-y-prefabs">Objetos, recursos y prefabs<a class="headerlink" href="#objetos-recursos-y-prefabs" title="Permanent link">&para;</a></h2>
 <p>Antes hemos interactuado con algunos objetos como la cámara y las luces, pero esos no son los únicos objetos de la escena, la realidad es que todo lo que existe en la escena SON objetos.</p>
 <p>Fijémonos en la jeraquía, ¿véis el cubo a la izquierda de cada elemento? Eso nos indica que es un objeto de juego, en inglés <code>GameObject</code>:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_10.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_10.png" /></p>
 <p>¿Y véis que hay objetos que tienen varios niveles? Eso significa que son objetos compuestos de otros objetos, como un padre con muchos hijos enlazados a él:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_37.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_37.png" /></p>
 <p>Muy bien, pues para que estos objetos existan, debemos añadirlos de alguna forma y de algún sitio, ¿no? Pues ese sitio son los recursos del proyecto:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_11.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_11.png" /></p>
 <p>Los recursos, o assets en inglés, contienen todo tipo de información. Desde los modelos 3D de los objetos, los materiales, las texturas, los sonidos, los ficheros de configuración, las bases de datos y un larguísimo etcétera, que incluye incluso, la información de las propias escenas.</p>
 <p>Y es que en un proyecto poemos tener múltiples escenas. La escena actual se llama <code>SampleScene</code> y podemos guardarla con <code>Control+S</code>. El recurso de esta escena se encuentra en la carpeta <code>Assets/Scenes</code>. Otros recursos se encuentran en otras carpetas bien organizadas, como <code>ExampleAssets</code>, <code>Materials</code>, <code>Presets</code>, <code>Scripts</code>, etc.</p>
 <p>Vamos a acercarnos un poco a la mesa de trabajo de la escena, y utilizando la herramienta de movimiento (W), vamos a seleccionar ese casco amarillo. Si os aparecen unas bolas enormes es debido a los iconos de ayuda de la interfaz de Unity conocidos como Gizmos. Podemos hacerlos más pequeños:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_12.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_12.png" /></p>
 <p>Y desactivar esas líneas amarillos que tienen que ver con las luces desactivando los Gizmos de <code>LightProbeGroup</code>:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_13.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_13.png" /></p>
 <p>Así veremos simplemente el casco seleccionado con un borde naranja:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_14.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_14.png" /></p>
 <p>Este casco es, como os comenté al princpio, un <code>GameObject</code>, concretamente uno llamado <code>Safety Hat</code>, y también podemos moverlo mediante las flechas y el cuadrado (W) y rotarlo (E):</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_15.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_15.png" /></p>
 <p>Vamos a crear otro casco a partir de su recurso. Para hacerlo buscaremos en la ventana de recursos, en <code>Models</code> el modelo <code>safetyhat</code> y lo arrastraremos al suelo de la escena:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_16.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_16.png" /></p>
 <p>Como véis por defecto este casco es gris, eso es porque no tiene una textura. En el directorio <code>Textures\Props\HardHat</code> encontramos tres texturas para nuestro casco, vamos a arrastrar la azul al casco:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_17.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_17.png" /></p>
 <p>Como véis, en el momento en que arrastramos un recurso a la escena se crea un objeto para representarlo.</p>
 <p>Si quisiéramos crear otro casco azul, podríamos repetir el proceso o duplicarlo, seleccionando el objeto <code>safetyhat</code> en la jeraquía y presionando <code>Control+D</code>:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_18.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_18.png" /></p>
 <p>Pero quiero que tengáis presente una cosa, estos dos cascos son objetos independientes entre ellos. Si arrastramos la textura rosa a uno de ellos, los cambios no afectan al otro:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_19.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_19.png" /></p>
 <p>Sin embargo ese no es el caso de los <code>Prefabs</code>. ¿Véis en la jerarquía que hay algunos objetos cuyo cubo es de color azul? Eso significa que son <code>Prefabs</code>, plantillas para generar objetos iguales.</p>
 <p>Si navegamos al directorio <code>Assets/Prefabs</code> veremos algunos. Por ejemplo los botes de pintura. Vamos a arrastrar algunos a la escena:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_20.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_20.png" /></p>
 <p>La diferencia entre tener objetos independientes y prefabs, es que éstos últimos están enlazados a una plantilla común, o dicho de otra forma, a un objeto original.</p>
 <p>Si hacemos doble clic en el prefab de los botes de colores, se abrirá de forma independiente:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_21.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_21.png" /></p>
 <p>Si modificamos algún elemento de este Prefab, por ejemplo modificando el tamaño de los botes y la brocha (R), rotándolos un poco y moviéndolos de sitio...</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_22.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_22.png" /></p>
 <p>Si ahora volvemos a la escena haciendo clic en <code>Screnes &gt; Paint Supplies</code> de la parte superior, veremos que se han modificado todos los botes de pintura al modificar nosotros el original.</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_23.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_23.png" /></p>
 <p>Después de este experimento queda clara la idea de que los <code>objetos</code> se crean a partir de <code>recursos</code> y pueden ser independientes o estar vinculados a un <code>prefab</code>.</p>
 <p>Poco a poco ahondaremos en estos temas e incluso crearemos nuestros propios prefabs.</p>
 <h2 id="componentes-y-propiedades">Componentes y propiedades<a class="headerlink" href="#componentes-y-propiedades" title="Permanent link">&para;</a></h2>
 <p>Ahora que hemos aprendido sobre la escena y los objetos, vamos a profundizar en las partes que componen los objetos, me refiero a los componentes y sus propiedades.</p>
 <p>Vamos a empezar escondiendo el banco de trabajo <code>Workbench</code>, lo buscamos en la jeraquía con ese nombre, lo selecionamos y lo desacivamos en el inspector:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_24.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_24.png" /></p>
 <p>Vamos a centrarnos en nuestros cascos, así que nos los vamos a llevar un poco más al medio:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_25.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_25.png" /></p>
 <p>Vamos a fijarnos en el inspector un poco más a fondo al seleccionar uno de los cascos.</p>
 <p>Empezando por arriba tenemos una sección con el nombre del objeto, si está activo o no, la posibilidad de añadir tags (etiquetas) y layers (capas) y otras opciones. Los tags sirven para identificar conjuntos de objetos, mientras que las capas están relacionadas con el orden de renderiado:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_26.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_26.png" /></p>
 <p>A continuación encontramos una sección llamada <code>Transform</code>, este el primer componente de cualquier objeto, encargado de gestionar los vectores de transformación, a partir de los cuáles se basa el renderizado de gráficos. Existen tres transformaciones básicas:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_27.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_27.png" /></p>
 <ul>
 <li><strong>Traslación</strong>: Para mover un objeto en el espacio respecto a un punto de origen (0,0,0).</li>
 <li><strong>Rotación</strong>: Para mover rotar un objeto en el espacio respecto a una rotación de origen (0,0,0).</li>
@@ -579,13 +579,13 @@ div.my-img{text-align:center;margin-top:20px}
 </ul>
 <p>Las transformaciones son tan esenciales que se encuentran integradas en el propio editor y podemos ejecutarlas sobre los objetos seleccionados utilizando las herramientas de movimiento (W), rotación (E) y escalado (R). Siempre que realicemos un cambio en ellas, veremos los valores numéricos establecidos en los vectores del componente <code>Transform</code> mediante tres coordenadas X, Y, Z. Estos valores dentro de los componentes, que podemos modificar, se denominan propiedades.</p>
 <p>Podemos usar las herramientas gráficas o modificar directamente las propiedades para transformar los objetos, o incluso hacer clic en los tres puntitos del componente y reiniciar el componente con los valores iniciales de las propiedades, que para los vectores 3D es la coordenada origen (0,0,0):</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_28.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_28.png" /></p>
 <p>Un lugar que como vemos queda fuera y por debajo de la escena:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_29.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_29.png" /></p>
 <p>Con <code>Control+Z</code> podemos volver a como teníamos antes los valores, y ahora vamos a establecer la rotación del casco azul en (0,0,0):</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_30.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_30.png" /></p>
 <p>Para poner el casco en vertical podemos establecer la coordenada X en 90 o con 270, dependiendo de por qué lado queramos dejar el casco levantado:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_31.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_31.png" /></p>
 <p>Si bien el componente <code>Transform</code> es el más importante y común de todos los objetos, Unity incluye miles de componentes para realizar todo tipo de tareas. Nuestro casco contiene además:</p>
 <ul>
 <li><strong>Mesh Filter</strong>: Para establecer el modelo tridimensional del objeto.</li>
@@ -593,21 +593,21 @@ div.my-img{text-align:center;margin-top:20px}
 <li><strong>Shader</strong>: Un programita que añade efectos gráficos al modelo.</li>
 </ul>
 <p>En cambio el objeto <code>Main Camera</code> está formado por otros componentes diferentes, como uno llamado <code>Camera</code>, un <code>Audio Listener</code> y dos <code>Scripts</code>, además del tag <code>MainCamera</code> para poder identificarlo rápidamente:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_32.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_32.png" /></p>
 <p>Vamos a hacer un último experimento, seleccionando el casco azul, vamos a dejarlo flotando en el aire:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_33.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_33.png" /></p>
 <p>Si ponemos el juego en marcha (Control+P), el casco se mantiene en el aire porque no contiene ningún tipo de físicas.</p>
 <p>Vamos a añadir un componente de cuerpo rígido al casco, para ello presionaremos el botón <code>Add Component</code> y buscaremos uno llamado <code>RigidBody</code>:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_34.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_34.png" /></p>
 <p>Solo añadiendo este objetos, si ponemos el juego en marcha, el casco empezará a caer. Eso es porque ahora le afecta la gravedad:</p>
-<p><img class="lazy" data-src="/cdn/unity/Record_01.gif"/></p>
+<p><img alt="" src="/cdn/unity/Record_01.gif" /></p>
 <p>Sin embargo no chocará contra el suelo y eso es porque no tenemos colisiones configuradas.</p>
 <p>Si observamos el objeto <code>Ground</code> veremos que contiene un componente de tipo <code>Box Collider</code>, haciendo clic en la propiedad Edit Collider se mostrará el contorno de la colisión del suelo:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_35.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_35.png" /></p>
 <p>Como el suelo ya tiene un colisionador, nos falta añadir otro en el casco azul, así que volvamos a él y añadamos un <code>collider</code> de tipo <code>Mesh Collider</code>, activando la opción <code>Convex</code> para que establezca los vértices en el lugar de la malla del modelo:</p>
-<p><img class="lazy" data-src="/cdn/unity/Screenshot_36.png"/></p>
+<p><img alt="" src="/cdn/unity/Screenshot_36.png" /></p>
 <p>Si ahora probamos de nuevo el juego (Control+P):</p>
-<p><img class="lazy" data-src="/cdn/unity/Record_02.gif"/></p>
+<p><img alt="" src="/cdn/unity/Record_02.gif" /></p>
 <p>Y voalà, ahí tenemos un casco con físicas que colisiona contra el suelo.</p>
 <p>A lo largo de esta unidad hemos adquirido soltura para manejar el programa y unos fundamentos, sabemos movernos por el editor y manejar lo esencial. Entendemos como se compone una escena, los recursos, los objetos, los componentes y las propiedades.</p>
 <p>Estamos preparados para dar el siguiente paso, crear un sandbox 3D.</p>
