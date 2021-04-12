@@ -370,8 +370,22 @@ div.my-img{text-align:center;margin-top:20px}
 </li>
       
         <li class="md-nav__item">
-  <a href="#jugando-con-las-fisicas" title="Jugando con las físicas" class="md-nav__link toc__link">
-    Jugando con las físicas
+  <a href="#fisicas-y-materiales" title="Físicas y materiales" class="md-nav__link toc__link">
+    Físicas y materiales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-circuito" title="Creando un circuito" class="md-nav__link toc__link">
+    Creando un circuito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cinemachine" title="Cinemachine" class="md-nav__link toc__link">
+    Cinemachine
   </a>
   
 </li>
@@ -449,8 +463,22 @@ div.my-img{text-align:center;margin-top:20px}
 </li>
       
         <li class="md-nav__item">
-  <a href="#jugando-con-las-fisicas" title="Jugando con las físicas" class="md-nav__link toc__link">
-    Jugando con las físicas
+  <a href="#fisicas-y-materiales" title="Físicas y materiales" class="md-nav__link toc__link">
+    Físicas y materiales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-circuito" title="Creando un circuito" class="md-nav__link toc__link">
+    Creando un circuito
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cinemachine" title="Cinemachine" class="md-nav__link toc__link">
+    Cinemachine
   </a>
   
 </li>
@@ -473,16 +501,15 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="sandbox-3d-en-unity">Sandbox 3D en Unity<a class="headerlink" href="#sandbox-3d-en-unity" title="Permanent link">&para;</a></h1>
-<p>A lo largo de las próximas unidades vamos a crear un sandbox (o cajón de arena) con muchos objetos, físicas, interacciones, materiales, texturas, colisiones y un largo etcétera. </p>
-<p>Será el primer "videojuego" del curso entre comillas, ya que más que centrarnos en un producto final lo utilizaremos para experimentar y aprender. </p>
-<p>Si sois nuevos en Unity os va a resultar muy revelador y si ya tenéis experiencia os vendrá bien para repasar un poco todo.</p>
+<p>A lo largo de las próximas unidades vamos a crear un sandbox (o caja de arena), un entorno libre para experimentar con muchos objetos, físicas, materiales, texturas, luces, colisiones, interacciones y un largo etcétera. </p>
+<p>Si sois nuevos en Unity os va a resultar muy revelador y si ya tenéis experiencia os vendrá bien para repasar todo.</p>
 <h2 id="preparando-el-proyecto">Preparando el proyecto<a class="headerlink" href="#preparando-el-proyecto" title="Permanent link">&para;</a></h2>
 <p>Utilizando como base el proyecto del escenario, que por algo le pusimos <code>Sandbox 3D</code>, vamos a crear una nueva escena con una cámara y una luz en <code>File &gt; New Scene &gt; Basic (Built In)</code>:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_38.png" /></p>
 <p>Lo primero será guardar la escena (Control+S) con el nombre <code>Sandbox</code>, dentro del directorio <code>Scenes</code> del proyecto.</p>
 <p>Si hacemos clic en la <code>Main Camera</code> y desplegamos su componente <code>Camera</code> observaremos que por defecto se encuentra en la posición (0,1,-10). Ese -10 en el eje Z nos indica que está un poco por delante del punto de origen (0,0,0). En Unity cuanto más grande es el eje Z más profundo y cuanto más pequeño más cerca de nosotros, como si el objeto se saliera de la pantalla:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_39.png" /></p>
-<p>Vamos a añadir un cubo 3D a la escena <code>GameObject &gt; 3D Object &gt; Cube</code>. Al hacerlo un cubo enorme se creará en la escena:</p>
+<p>Vamos a añadir un cubo 3D a la escena <code>GameObject &gt; 3D Object &gt; Cube</code>. Al hacerlo un cubo enorme se creará:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_40.png" /></p>
 <p>En realidad no es tan grande, es solo que se ha añadido muy cerca de la cámara. Si reiniciamos su componente <code>Transform</code> volverá a la posición (0,0,0) y lo veremos con más perspectiva:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_41.png" /></p>
@@ -504,8 +531,158 @@ div.my-img{text-align:center;margin-top:20px}
 <p>En cuanto al cubo podemos crear un material de otro color y asignarlo, yo le llamaré <code>Cubo</code> y tendrá un color anaranjado:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_48.png" /></p>
 <p>Bien, con estos elementos tenemos algo básico para empezar a trabajar.</p>
-<h2 id="jugando-con-las-fisicas">Jugando con las físicas<a class="headerlink" href="#jugando-con-las-fisicas" title="Permanent link">&para;</a></h2>
-<p>TODO: Crear un bola, hacer que interactue con el entorno, rotar el plano, que los objetos se muevan usando rigidbodies, etc.</p>
+<h2 id="fisicas-y-materiales">Físicas y materiales<a class="headerlink" href="#fisicas-y-materiales" title="Permanent link">&para;</a></h2>
+<p>Muy bien, vamos a empear esta lección con un reto:</p>
+<div class="admonition warning">
+<p class="admonition-title">Ejercicio</p>
+<p>Crea una esfera de color rojo, reinicia su componente <code>Transform</code> y haz que flote encima del borde del cubo.</p>
+</div>
+<p>Más o menos así:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_49.png" /></p>
+<p>Venga, otro reto:</p>
+<div class="admonition warning">
+<p class="admonition-title">Ejercicio</p>
+<p>Añade un componente <code>RigidBody</code> a la esfera para activar sus físicas y luego prueba el juego para ver qué ocurre.</p>
+</div>
+<p>Tal que así:</p>
+<p><img alt="" src="/cdn/unity/Record_03.gif" /></p>
+<p>El caso es que la esfera choca contra el borde del cubo y empieza a rodar hasta caer y desaparecer.</p>
+<p>Tengo una idea, para evitar que la bola caiga por los bordes vamos a bordear el suelo para hacer un tope, pero antes haremos el suelo el doble de grande, escalando su tamaño a (2,2,2), así tendremos más espacio para jugar.</p>
+<p><img alt="" src="/cdn/unity/Screenshot_50.png" /></p>
+<p>Para crear los topes usaremos como base un cubo, que alargándolos y rotaremos hasta conseguir el tamaño deseado.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ejercicio</p>
+<p>Crea un cubo, estíralo y posiciónalo a los lados del suelo para evitar que la esfera caiga al vacío. Luego clónalo y bordea el suelo en sus cuatro lados.</p>
+</div>
+<p>Al final debería quedarnos algo así, con 4 cubos haciendo de topes:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_51.png" /></p>
+<p>Las propiedades de <code>Transformación</code> de cada cubo pueden establecerse manualmente para conseguir una alineación y tamaño perfectos:</p>
+<ul>
+<li>(0.0, 0.5, 0.0) (0,0,0) (20,1,1)</li>
+<li>(9.5, 0.5, 0.0) (0,90,0) (20,1,1)</li>
+<li>(0.0, 0.5, 9.5) (0,0,0) (20,1,1)</li>
+<li>(-9.5, 0.5, 0.0) (0,90,0) (20,1,1)</li>
+</ul>
+<p>Con esto conseguiremos que el cubo no caiga:</p>
+<p><img alt="" src="/cdn/unity/Record_04.gif" /></p>
+<p>Vamos a hacer algo interesante, demos al cubo la posición de origen y hagámoslo mucho más alto y el doble de grande, como si fuera una columna en medio del escenario:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_52.png" /></p>
+<p>Si dejamos caer la esfera desde el borde, ¿os habéis fijado que no rebota contra el suelo? Eso es porque si bien, tiene un material para manejar el aspecto, no tiene un material físico establecido.</p>
+<p><img alt="" src="/cdn/unity/Record_05.gif" /></p>
+<p>Para crear un material físico haremos clic derecho en <code>Assets/Materials &gt; Create &gt; Physic Material</code> y le daremos el nombre <code>Goma</code>.</p>
+<p>Arrastraremos el material a la esfera y se añadirá al componente <code>Sphere Collider</code> en su propiedad <code>Material</code> automáticamente:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_53.png" /></p>
+<p>Si bien este material está configurado para tener una fricción, tenemos que añadir un coheficiente de rebote. Este número debe establecerse entre 0 y 1, siendo 0 un rebote nulo y 1 el máximo, pongamos 1 para ver como queda:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_54.png" /></p>
+<p>Si probamos de nuevo, ahora la esfera rebotará contra el suelo como si fuera de goma:</p>
+<p><img alt="" src="/cdn/unity/Record_06.gif" /></p>
+<p>El problema es que ahora la "pelota" no frena hasta toparse de nuevo con el pilar. Para solucionarlo debemos indicarle a la "pelota" que debe tener en cuenta una resistencia al movimiento, esta se puede configurar en la propiedad <code>Angular Drag</code> del <code>RigidBody</code>. Un arrastre angular de 0.05 es muy pequeño, pero si lo subimos por ejemplo a 2.5, el resultado será algo diferente: </p>
+<p><img alt="" src="/cdn/unity/Screenshot_55.png" /></p>
+<p>Y este será el nuevo resutado:</p>
+<p><img alt="" src="/cdn/unity/Record_07.gif" /></p>
+<p>Con esto hemos visto cómo afectan los <code>materiales físicos</code> a los objetos y también cómo la propiedad <code>Angular Drag</code> resta aceleración a los cuerpos en movimiento.</p>
+<p>Poco a poco nos vamos intoduciendo en el sistema de físicas, en la siguiente lección vamos a profundizar un poco más.</p>
+<h2 id="creando-un-circuito">Creando un circuito<a class="headerlink" href="#creando-un-circuito" title="Permanent link">&para;</a></h2>
+<p>En esta clase váis a dar rienda suelta a nuestra imaganción, el objetivo es utilizar diferentes objetos tridimensionales, planos, cubos, esferas y lo que se os ocurra para crear un circuito que la pelota siga hasta llegar a una meta. Practicad y divertiros un rato con las colisiones, las físicas y los materiales.</p>
+<p>Os aconsejo crear un objeto vacío llamado <code>Circuito</code>, reiniciar su componente <code>Transform</code> e introducir dentro todos los elementos del escenario excepto la cámara, las luces y la esfera:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_56.png" /></p>
+<p>Esto os permitirá manejar todos los elementos del circuito de forma más cómoda:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_57.png" /></p>
+<p>Así que nada, sed creativos y adelante:</p>
+<div class="admonition warning">
+<p class="admonition-title">Ejercicio</p>
+<p>Crea un circuito 3D para la pelota, que mediante una inercia inicial sea capaz de llegar a una meta. Utiliza los atajos de las herramientas de transformación (W,E,R,T) para cambiar el tamaño de los objetos de forma cómoda en conjunto con la tecla <code>Control</code> y no dudes en crear conjuntos de objetos y duplicarlos con <code>Control+D</code> para ahorrarte trabajo. Experimenta con las propiedades de los materiales, los rebotes y el <code>Angular Drag</code> para conseguir completar el circuito. No tiene que quedar pulido, sino divertido.</p>
+</div>
+<p>Aquí tenéis una muestra de mi circuito para que os hagáis una idea, podéis hacer algo mucho más sencillo o complicarlo tanto como queráis, la cuestión es practicar lo aprendido hasta ahora:</p>
+<p><img alt="" src="/cdn/unity/Record_08.gif" /></p>
+<h2 id="cinemachine">Cinemachine<a class="headerlink" href="#cinemachine" title="Permanent link">&para;</a></h2>
+<p>Para acabar esta unidad vamos explorar un paquete de Unity que utilizaremos bastante de ahora en adelante, se trata de <code>Cinemachine</code>, una colección de scripts automatizados para controlar cámaras.</p>
+<p>Vamos a ir a <code>Window &gt; Package Manager</code>, desplegaremos el menú y seleccionaremos <code>Unity Registry</code>, buscaremos el paquete <code>Cinemachine</code> y lo instalaremos:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_60.png" /></p>
+<p>Una vez instalado, vamos a crear una cámara muy sencilla desde <code>GameObject &gt; Cinemachine &gt; Virtual Camera</code>. La configuraremos con la propiedad <code>Follow</code> siguiendo a nuestra esfera, y el <code>body</code> será de tipo <code>Framing Transposer</code>, un encuadre de trasposición:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_61.png" /></p>
+<p>Solo habiendo hecho esto tendremos un sistema de seguimiento para la esfera que nos mostrará en todo momento y de forma suavizada una vista en tercera persona.</p>
+<p>Si desactivamos la propiedad de la cámara virtual <code>Game Window Guides</code> este es el resultado:</p>
+<p><img alt="" src="/cdn/unity/Record_09.gif" /></p>
+<p>Como véis en poco tiempo se puede empezar a conseguir resultados muy interesantes, pero la verdad es que solo estamos rascando la superfície.</p>
+<p>En la próxima unidad daremos nuestros primeros pasos en el <strong>Visual Scripting</strong>, lo que nos permitirá modificar dinámicamente las propiedades de los objetos y transformar un escenario en un entorno interactivo.</p>
+<!-- 
+A todo esto, ¿que pasaría si mientras el juego está en marcha rotamos el suelo? Vamos a probar:
+
+![](/cdn/unity/Record_08.gif)
+
+Como véis la pelota se mueve en conjunto con el suelo, pero si rotamos demasiado rápido eventualmente la pelota lo atraviesa y cae, como si no pudiera seguir el ritmo de la colisión:
+
+![](/cdn/unity/Record_09.gif)
+
+En la siguiente lección vamos a arreglar este comportamiento.
+
+
+Cuando movemos demasiado rápido el suelo, su velocidad es tan alta que atraviesa la pelota. Esto sucede porque Unity no realiza cálculos físicos ni detección de colisiones contínuamente.
+
+En breve veremos como solucionarlo, pero antes vamos a unir todos los componentes del escenario menos la pelota en uno llamado `Tablero`.
+
+Lo creamos vacío y lo reiniciamos el `Transform`:
+
+![](/cdn/unity/Screenshot_57.png)
+
+Luego arrastramos los demás objetos dentro:
+
+![](/cdn/unity/Screenshot_56.png)
+
+Y así conseguiremos manejar todos los elementos del tablero en conjunto excepto la pelota:
+
+![](/cdn/unity/Record_10.gif)
+
+Así que... ¿Cómo arreglamos las colisiones y conseguimos que la pelota no atraviese el suelo? Para conseguir unas físicas perfectas entre dos objetos necesitamos que ambos tengan un componente `RigidBody`, pero resulta que el suelo no tiene uno, solo tiene un `Mesh Collider`.
+
+Así que vamos a añadir al suelo ese componente `rigidbody`, y si probamos el juego, al suelo le afectará la gravedad y caerá al vacío, justo igual que la pelota:
+
+![](/cdn/unity/Record_11.gif)
+
+Además veremos en la parte inferior un error:
+
+![](/cdn/unity/Screenshot_58.png)
+
+Nos está avisando de que un `MeshCollider` no convexo con cuerpos rígidos no cinemáticos no está soportado desde Unity 5.
+
+¿Sabéis qué es la `cinemática`? Para entenderla debemos recuperar antes las definiciones de `estática` y `dinámica`. Según la Wikipedia:
+
+    La estática es la rama de la física que analiza los cuerpos en reposo y
+    estudia el equilibrio de fuerzas en los sistemas físicos en equilibrio
+    estático, es decir, donde las posiciones relativas no varían con el tiempo.
+
+Por otro lado:
+
+    La dinámica es la rama de la física que describe la evolución en el tiempo
+    de un sistema físico en relación con los motivos o causas que provocan los
+    cambios de estado físico o estado de movimiento.
+
+Finalmente:
+
+    La cinemática es la rama de la mecánica que describe el movimiento de los
+    objetos sólidos sin considerar las causas que lo originan y se limita, 
+    principalmente, al estudio de la trayectoria en función del tiempo.
+
+En Unity todo esto se traduce en tres tipos de cuerpos:
+
+* `Estáticos`: Cuerpos sin `Rigidbody` que el motor de físicas considera sin movimiento. Se utilizan para colisionadores inamovibles como suelos y paredes.
+* `Dinámicos`: Cuerpos con `Rigidbody` y la propiedad `isKinematic` en falso, se mueven de acuerdo a las leyes físicas y el motor se encarga de simularlos.
+* `Cinemáticos`: Cuerpos con `Rigidbody` y la propiedad `isKinematic` en verdadero, tiene propiedades físicas y puede moverse, pero es el programador quién se encarga de gestionarlos.
+
+En definitiva, teníamos un suelo estático que no se movía y al añadirle un `Rigidbody` éste se ha vuelto dinámico y Unity lo está controlando por nosotros. Pero si queremos controlar nosotros el suelo conservando las propiedades físicas, entonces debemos indicarle que es cinemático:
+
+![](/cdn/unity/Screenshot_59.png)
+
+En el momento en que tenemos dos cuerpos físicos colisionando, podemos decirle a Unity cómo calcular las físicas entre ellos.
+ -->
+
+<!-- 
+TODO: Crear un bola, hacer que interactue con el entorno, rotar el plano, que los objetos se muevan usando rigidbodies, fricciones, rebotes, etc.
+
+https://learn.unity.com/tutorial/setting-up-the-game?uv=2020.2&projectId=5f158f1bedbc2a0020e51f0d#
+https://www.youtube.com/watch?v=9ZEu_I-ido4&list=PLPV2KyIb3jR53Jce9hP7G5xC4O9AgnOuL&index=3 
+-->
 <hr />
 <p><small class="edited"><i>Última edición: 12 de Abril de 2021</i></small></p>
                 
