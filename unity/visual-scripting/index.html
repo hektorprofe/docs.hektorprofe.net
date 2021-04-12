@@ -66,6 +66,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 76.1875em){ .mini{ display: block; } .maxi{ display: none;} /*.md-nav__link[for="nav-1"] { display: none; }*/ }
 @media (min-width: 1599.9px){ .md-header-nav__button.md-logo img { height: 37.5px !important; width: 220px; } }
 @media (min-width: 1999.9px){ .md-header-nav__button.md-logo img { height: 40px !important; width: 240px; } }
+/* Rectificación footer en paginas pequeñas de altura */
+@media (max-width: 1599.8px){ .md-container {height: calc(100% - 48px)} }
+@media (min-width: 1599.9px){ .md-container {height: calc(100% - 53px)} }
+@media (min-width: 1999.9px){ .md-container {height: calc(100% - 58px)} }
 @media only screen and (max-width: 959.9px) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 960px) and (max-width: 76.1875em) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 76.1875em) { .nav__logo { display: none !important; } } 
@@ -312,18 +316,6 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../presentacion-curso/" title="Presentación del curso" class="md-nav__link">
-      Presentación del curso
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
     <a href="../introduccion-unity/" title="Introducción a Unity" class="md-nav__link">
       Introducción a Unity
     </a>
@@ -459,7 +451,7 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="visual-scripting-en-unity">Visual Scripting en Unity<a class="headerlink" href="#visual-scripting-en-unity" title="Permanent link">&para;</a></h1>
-<p>En esta unidad vamos a aprender a desarrollar lógica de programación mediante el paquete Visual Scripting, que viene integrado en Unity desde la versión 2021. Introduciremos poco a poco los diferentes elementos que forman esta tecnología mediante experimentos y pruebas.</p>
+<p>En esta unidad vamos a aprender a desarrollar lógica de programación mediante el paquete <code>Visual Scripting</code> que viene integrado en Unity desde la versión 2021. Introduciremos poco a poco los diferentes elementos que componen esta tecnología mediante diferentes experimentos y pruebas.</p>
 <h2 id="logica-de-programacion">Lógica de programación<a class="headerlink" href="#logica-de-programacion" title="Permanent link">&para;</a></h2>
                 
                   
@@ -529,7 +521,7 @@ div.my-img{text-align:center;margin-top:20px}
           <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
         </div>-->
         <div class="md-footer-copyright__highlight">
-          2018 - 2021 &copy; Héctor Costa (<u
+          2018 - 2021 &copy; Héctor Costa Guzmán (<u
             ><a
               href="https://creativecommons.org/licenses/by/4.0/deed.es"
               target="_blank"

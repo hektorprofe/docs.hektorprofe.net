@@ -66,6 +66,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 76.1875em){ .mini{ display: block; } .maxi{ display: none;} /*.md-nav__link[for="nav-1"] { display: none; }*/ }
 @media (min-width: 1599.9px){ .md-header-nav__button.md-logo img { height: 37.5px !important; width: 220px; } }
 @media (min-width: 1999.9px){ .md-header-nav__button.md-logo img { height: 40px !important; width: 240px; } }
+/* Rectificación footer en paginas pequeñas de altura */
+@media (max-width: 1599.8px){ .md-container {height: calc(100% - 48px)} }
+@media (min-width: 1599.9px){ .md-container {height: calc(100% - 53px)} }
+@media (min-width: 1999.9px){ .md-container {height: calc(100% - 58px)} }
 @media only screen and (max-width: 959.9px) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 960px) and (max-width: 76.1875em) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 76.1875em) { .nav__logo { display: none !important; } } 
@@ -312,18 +316,6 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../presentacion-curso/" title="Presentación del curso" class="md-nav__link">
-      Presentación del curso
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
     <a href="../introduccion-unity/" title="Introducción a Unity" class="md-nav__link">
       Introducción a Unity
     </a>
@@ -515,7 +507,7 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="sandbox-3d-en-unity">Sandbox 3D en Unity<a class="headerlink" href="#sandbox-3d-en-unity" title="Permanent link">&para;</a></h1>
-<p>A lo largo de las próximas unidades vamos a crear un sandbox (o caja de arena), un entorno libre para experimentar con muchos objetos, físicas, materiales, texturas, luces, colisiones, interacciones y un largo etcétera. </p>
+<p>En esta unidad vamos a crear un sandbox (o caja de arena), un entorno para experimentar con muchos objetos, físicas, materiales y colisiones. </p>
 <p>Si sois nuevos en Unity os va a resultar muy revelador y si ya tenéis experiencia os vendrá bien para repasar todo.</p>
 <h2 id="preparando-el-proyecto">Preparando el proyecto<a class="headerlink" href="#preparando-el-proyecto" title="Permanent link">&para;</a></h2>
 <p>Utilizando como base el proyecto del escenario, que por algo le pusimos <code>Sandbox 3D</code>, vamos a crear una nueva escena con una cámara y una luz en <code>File &gt; New Scene &gt; Basic (Built In)</code>:</p>
@@ -779,7 +771,7 @@ https://www.youtube.com/watch?v=9ZEu_I-ido4&list=PLPV2KyIb3jR53Jce9hP7G5xC4O9Agn
           <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
         </div>-->
         <div class="md-footer-copyright__highlight">
-          2018 - 2021 &copy; Héctor Costa (<u
+          2018 - 2021 &copy; Héctor Costa Guzmán (<u
             ><a
               href="https://creativecommons.org/licenses/by/4.0/deed.es"
               target="_blank"

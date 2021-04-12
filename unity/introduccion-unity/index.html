@@ -66,6 +66,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 76.1875em){ .mini{ display: block; } .maxi{ display: none;} /*.md-nav__link[for="nav-1"] { display: none; }*/ }
 @media (min-width: 1599.9px){ .md-header-nav__button.md-logo img { height: 37.5px !important; width: 220px; } }
 @media (min-width: 1999.9px){ .md-header-nav__button.md-logo img { height: 40px !important; width: 240px; } }
+/* Rectificación footer en paginas pequeñas de altura */
+@media (max-width: 1599.8px){ .md-container {height: calc(100% - 48px)} }
+@media (min-width: 1599.9px){ .md-container {height: calc(100% - 53px)} }
+@media (min-width: 1999.9px){ .md-container {height: calc(100% - 58px)} }
 @media only screen and (max-width: 959.9px) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 960px) and (max-width: 76.1875em) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 76.1875em) { .nav__logo { display: none !important; } } 
@@ -310,18 +314,6 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
-
-  <li class="md-nav__item">
-    <a href="../presentacion-curso/" title="Presentación del curso" class="md-nav__link">
-      Presentación del curso
-    </a>
-  </li>
-
-        
-            
-            
-            
-
   
 
 
@@ -487,7 +479,7 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="introduccion-al-uso-del-motor">Introducción al uso del motor<a class="headerlink" href="#introduccion-al-uso-del-motor" title="Permanent link">&para;</a></h1>
-<p>El objetivo de esta unidad es familiarizarte con Unity y, aprender a moverte por la escena, a manipular objetos, moverlos, rotarlos, escalarlos... Qué son los recursos, los prefabs, los componentes y sus propiedades.</p>
+<p>El objetivo de esta unidad es familiarizarte con Unity y aprender a moverte por la escena, a manipular objetos, moverlos, rotarlos, escalarlos... Qué son los recursos, los prefabs, los componentes y sus propiedades.</p>
 <h2 id="luces-camara-y-accion">Luces, cámara y acción<a class="headerlink" href="#luces-camara-y-accion" title="Permanent link">&para;</a></h2>
 <p>Muy bien pues vamos a dar nuestro primer pasito en el mundo del desarrollo de videojuegos, y qué mejor forma de hacerlo que experimentando de primera mano el potencial del motor Unity mientras aprendemos.</p>
 <p>Vamos a crear un nuevo proyecto <code>Universal Render Pipeline</code> con la versión <code>Unity 2021</code> o mayor, pues es a partir de ésta que encontramos Visual Scripting incluido y más adelante haremos uso de él, y le vamos a llamar <code>Sandbox 3D</code>.</p>
@@ -635,8 +627,8 @@ div.my-img{text-align:center;margin-top:20px}
     <nav class="md-footer-nav__inner md-grid">
       
       <a
-        href="../presentacion-curso/"
-        title="Presentación del curso"
+        href="../"
+        title="Índice del archivo"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -648,7 +640,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Presentación del curso
+            Índice del archivo
           </span>
         </div>
       </a>
@@ -682,7 +674,7 @@ div.my-img{text-align:center;margin-top:20px}
           <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
         </div>-->
         <div class="md-footer-copyright__highlight">
-          2018 - 2021 &copy; Héctor Costa (<u
+          2018 - 2021 &copy; Héctor Costa Guzmán (<u
             ><a
               href="https://creativecommons.org/licenses/by/4.0/deed.es"
               target="_blank"

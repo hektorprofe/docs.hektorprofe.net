@@ -66,6 +66,10 @@ div.my-img{text-align:center;margin-top:20px}
 @media (max-width: 76.1875em){ .mini{ display: block; } .maxi{ display: none;} /*.md-nav__link[for="nav-1"] { display: none; }*/ }
 @media (min-width: 1599.9px){ .md-header-nav__button.md-logo img { height: 37.5px !important; width: 220px; } }
 @media (min-width: 1999.9px){ .md-header-nav__button.md-logo img { height: 40px !important; width: 240px; } }
+/* Rectificación footer en paginas pequeñas de altura */
+@media (max-width: 1599.8px){ .md-container {height: calc(100% - 48px)} }
+@media (min-width: 1599.9px){ .md-container {height: calc(100% - 53px)} }
+@media (min-width: 1999.9px){ .md-container {height: calc(100% - 58px)} }
 @media only screen and (max-width: 959.9px) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 960px) and (max-width: 76.1875em) { .nav__logo { display: block !important; }} 
 @media only screen and (min-width: 76.1875em) { .nav__logo { display: none !important; } } 
@@ -1669,7 +1673,7 @@ div.my-img{text-align:center;margin-top:20px}
           <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
         </div>-->
         <div class="md-footer-copyright__highlight">
-          2018 - 2021 &copy; Héctor Costa (<u
+          2018 - 2021 &copy; Héctor Costa Guzmán (<u
             ><a
               href="https://creativecommons.org/licenses/by/4.0/deed.es"
               target="_blank"
