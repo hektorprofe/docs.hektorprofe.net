@@ -307,7 +307,6 @@ nav:
 
   - Apuntes de Unity:                    
     - Índice del archivo:                 'unity/index.md'
-    - Presentación del curso:             'unity/presentacion-curso.md'
     - Introducción a Unity:               'unity/introduccion-unity.md'
     - Sandbox 3D:                         'unity/sandbox-3d.md'
     - Visual Scripting:                   'unity/visual-scripting.md'

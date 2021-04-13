@@ -2,7 +2,7 @@ title: Introducción al motor | Curso Unity | Hektor Profe
 
 # Introducción al uso del motor
 
-El objetivo de esta unidad es familiarizarte con Unity y, aprender a moverte por la escena, a manipular objetos, moverlos, rotarlos, escalarlos... Qué son los recursos, los prefabs, los componentes y sus propiedades.
+El objetivo de esta unidad es familiarizarte con Unity y aprender a moverte por la escena, a manipular objetos, moverlos, rotarlos, escalarlos... Qué son los recursos, los prefabs, los componentes y sus propiedades.
 
 ## Luces, cámara y acción
 
@@ -41,9 +41,11 @@ Saliendo del modo de reproducción, vapodemos acercarnos un poco a la escena con
 
 ![]({{cdn}}/unity/Screenshot_4.png)
 
-¿Véis el escenario de atrezzo que tenemos? Es como si fuera una obra de teatro, podemos movernos por ella libremente utilizando la combinación `Clic derecho + AWSD`, como si fueramos el diretor de una película moviéndonos por el set de rodaje. Y es que en cierta forma los videojuegos en Unity se crean como una película. Tenemos el escenario, el atrezzo y la cámara enfocando justo el lugar que nos intersa mostrarle al jugador, un jugador que se convertirá en el protagonista del videojuego, como en una película.
+¿Véis el escenario de atrezzo que tenemos? Es como el escenario de una película, podemos movernos por ahí libremente utilizando la combinación `Clic derecho + AWSD`, incluso podemos modificar la velocidad de movimiento con `Control + Ruedecita del ratón`. Como véis en cierta forma los videojuegos en Unity se crean como una película. Tenemos el escenario, el atrezzo y la cámara enfocando el lugar que mostraremos al jugador.
 
-Si abrimos la jerarquía de objetos y hacemos doble clic en el objeto `Main Camera` nos posicionaremos sobre él. Utilizando las `flechas azul, roja y verde` podemos cambiar su posición. Cuando movemos un objeto por la escena estamos haciendo uso de la herramienta de movimiento, representada por una cruz con flechas en el menú superior. Podemos activar esta herramienta presionando la `tecla W` del teclado. Así mismo podemos volver a la herramienta de vista presionando la manita o la `tecla Q`. Si activamos la herramienta de rotación, con la `tecla E` podemos cambiar la dirección de la cámara. Tened en cuenta que tenemos tres rotaciones, una por cada dimensión: horizontal, vertical y profundidad:
+Si abrimos la jerarquía de objetos y hacemos doble clic en el objeto `Main Camera` nos posicionaremos sobre él. Utilizando las `flechas azul, roja y verde` podemos cambiar su posición. 
+
+Cuando movemos un objeto por la escena estamos haciendo uso de la herramienta de movimiento, representada por una cruz con flechas en el menú superior. Podemos activar esta herramienta presionando la `tecla W` del teclado. Así mismo podemos volver a la herramienta de vista presionando la manita o la `tecla Q`. Si activamos la herramienta de rotación, con la `tecla E` podemos cambiar la dirección de la cámara. Tened en cuenta que tenemos tres rotaciones, una por cada dimensión: horizontal, vertical y profundidad:
 
 ![]({{cdn}}/unity/Screenshot_5.png)
 
