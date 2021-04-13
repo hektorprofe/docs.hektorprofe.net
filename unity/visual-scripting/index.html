@@ -378,6 +378,27 @@ div.my-img{text-align:center;margin-top:20px}
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#el-buscador-de-unidades" title="El buscador de unidades" class="md-nav__link toc__link">
+    El buscador de unidades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-las-variables" title="Introducción a las variables" class="md-nav__link toc__link">
+    Introducción a las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos-de-entrada" title="Eventos de entrada" class="md-nav__link toc__link">
+    Eventos de entrada
+  </a>
+  
+</li>
+      
       
       
       
@@ -439,6 +460,27 @@ div.my-img{text-align:center;margin-top:20px}
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#el-buscador-de-unidades" title="El buscador de unidades" class="md-nav__link toc__link">
+    El buscador de unidades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-las-variables" title="Introducción a las variables" class="md-nav__link toc__link">
+    Introducción a las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos-de-entrada" title="Eventos de entrada" class="md-nav__link toc__link">
+    Eventos de entrada
+  </a>
+  
+</li>
+      
       
       
       
@@ -490,19 +532,18 @@ div.my-img{text-align:center;margin-top:20px}
 <p>En la <a href="https://docs.unity3d.com/Manual/ExecutionOrder.html">documentación de Unity</a> podemos encontrar un repaso de todos los eventos que suceden en un objeto desde que empieza su ciclo de vida hasta que termina. Vale la pena repasar esta clasificación aunque sea de forma general:</p>
 <ul>
 <li><strong>Inicialización</strong>: Se ejecutan una sola vez al crearse el objeto en la escena.</li>
-<li><strong>Físicas</strong>: Pueden ocurrir más de una vez por fotograma y recalcular las físicas.</li>
+<li><strong>Físicas</strong>: Pueden ocurrir más de una vez por fotograma y recalculan las físicas.</li>
 <li><strong>Evento de entrada</strong>: Capturan la interacción externa del usuario: teclado, mando, gestos, etc.</li>
-<li><strong>Lógica de juego</strong>: Ejecutado una vez por fotograma, define el comportamiento de los objetos.</li>
-<li><strong>Renderizado de escena</strong>: Se encarga de renderizar el resultado del videojuego por fotograma.</li>
+<li><strong>Lógica de juego</strong>: Ejecutados una vez por fotograma, aquí se define la interactividad.</li>
+<li><strong>Renderizado de escena</strong>: Encargados de renderizar el videojuego cada fotograma.</li>
 <li><strong>Gizmos</strong>: Para dibujar elementos flotantes de la interfaz en el diseño de la escena.</li>
-<li><strong>GUI</strong>: Para dibujar elementos flotantes de la interfaz de usuario en el juego.</li>
+<li><strong>GUI</strong>: Para dibujar elementos flotantes de la interfaz de usuario en el videojuego.</li>
 <li><strong>Fin de fotograma</strong>: Como su nombre indica gestionan el momento final del fotograma.</li>
 <li><strong>Pausa</strong>: Son los eventos que permiten controlar la pausa del videojuego.</li>
 <li><strong>Desmantelamiento</strong>: Encargados de la destrucción del objeto y su limpieza de la memoria.</li>
 </ul>
 <p>Según lo que acabamos de aprender, el evento <code>Start</code> (empezar) es de inicialización y se ejecuta una única vez al llamar el script, mientras que <code>Update</code> (actualizar) es de lógica de juego y se ejecuta una vez por fotograma.</p>
-<p>La idea es que si configuramos una acción y la enlazamos a un evento, ésta se ejecutará cuando ocurre el evento.</p>
-<p>Con eso en mente vamos a hacer clic derecho en el gráfico, escribimos <code>rotate</code> en el buscador y creamos un nodo de tipo <code>Transform:Rotate (X Angle, Y Angle, Z Angle)</code>:</p>
+<p>La idea es que si configuramos una acción y la enlazamos a un evento, ésta se ejecutará cuando ocurre el evento, así que con eso en mente vamos a hacer clic derecho en el gráfico, escribimos <code>rotate</code> en el buscador y creamos un nodo de tipo <code>Transform:Rotate (X Angle, Y Angle, Z Angle)</code>:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_74.png" /></p>
 <p>Los nodos del gráfico se denominan unidades y la magia, como podéis suponer, al conectar las unidades entre ellas, configurando el flujo del programa para que se ejecuten unas u otras.</p>
 <p>Si seleccionamos la unidad que hemos creado, veremos la información sobre su utilización en el inspector del gráfico:</p>
@@ -535,8 +576,32 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Como hemos visto en este pequeño experimento, en los videojuegos existe un "flujo" que podemos utilizar para conectar las unidades del gráfico.</p>
 <p>Este flujo no es más que el bucle de juego, un montón de instrucciones de código ejecutándose unas tras otras, aunque nosotros las veamos representadas gráficamente.</p>
 <p>A partir de la siguiente lección empieza el verdadero curso, descansad un poco y le damos caña.</p>
+<h2 id="el-buscador-de-unidades">El buscador de unidades<a class="headerlink" href="#el-buscador-de-unidades" title="Permanent link">&para;</a></h2>
+<p>Retomándolo donde lo dejamos en la lección anterior, quiero profundizar un poco en las unidades.</p>
+<p>Y es que cuando vamos a añadir un nodo en el gráfico, aparecen muchas categorías, cada una con infinidad de unidades disponibles:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_79.png" /></p>
+<p>Empecemos centrándonos en las primeras de la lista, pues hacen referencia a los componentes del <code>GameObject</code> donde se ha asignado la <code>Script Machine</code>. En nuestro caso el cubo tiene un <code>Transform</code>, los <code>Mesh Filter y Render</code>, un <code>Box Collider</code> y el propio <code>Script Machine</code>. Si queremos interactuar con cualquiera de ellos tenemos muchas unidades disponibles. Pero encima de todo también tenemos una categoría llamada <code>Game Object</code>, cuyas unidades nos permiten acceder y gestionar los <code>GameObjects</code> de la escena.</p>
+<p><img alt="" src="/cdn/unity/Screenshot_80.png" /></p>
+<p>Volviendo al principio encontramos otras categorías generales, colecciones, controles, eventos, lógica, matemáticas, etc.</p>
+<p>Existen más de 20.000 unidades y eso es porque deben cubrir cualquier acción programable. Es imposible saberlas todas de memoria y la idea es buscarlas y utilizarlas a medida que surja la necesidad. La gracia del <code>Visual Scripting</code>, es que tenemos a nuestra disposición un potente buscador de unidades y eso facilita la tarea a la hora de investigar.</p>
+<p>Por ejemplo, vamos a suponer que después de rotar un grado el eje Y en cada <code>Update</code>, queremos desplazar el cubo hacia arriba.</p>
+<p>Si movemos el cubo hacia arriba en la escena podemos observar que se modifica el eje Y del vector de posición en el componente <code>Transform</code>. Si abrimos el buscador de unidades y buscamos <code>transform translate</code>, encontraremos todas las unidades relacionadas con la traslación, la transformación que permite cambiar la posición:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_82.png" /></p>
+<p>Fijaros que aparece la misma unidad repetidas veces, esto se conoce como sobrecarga de un método, y sucede cuando tenemos diferentes formas de realizar una acción. En nuestro caso vamos a centrarnos en <code>Transform: Translate (X,Y,Z)</code> que simplemente toma un vector 3D con el valor a incrementar en cada eje:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_83.png" /></p>
+<p>Notaréis que por defecto esta unidad se muestra transparente, eso es porque no le llega ningún flujo de código y se considera inactiva.</p>
+<p>Podemos unir el flujo de salida en la rotación con la entrada de flujo de la traslación y activarla:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_84.png" /></p>
+<p>Esto se traduciría como: en cada <code>Update</code> ejecutar una rotación y luego una traslación. Vamos a indicar un número muy pequeño al eje Y, por ejemplo <code>0.1</code> y veamos el resultado:</p>
+<p><img alt="" src="/cdn/unity/Record_13.gif" /></p>
+<p>Como véis el cubo empieza a flotar hasta que desaparece. En cada fotograma estamos sumando 0.01 unidades del mundo a su posición Y (recordemos que una unidad del mundo equivale a los cuadrados del escenario), eso son 0.60 unidades de altura cada segundo suponiendo que el videojuego funciona a 60 FPS.</p>
+<p>En definitiva el flujo es la corriente vital del script gráfico y fluye a través de las unidades activándolas para ejecutar sus acciones. </p>
+<h2 id="introduccion-a-las-variables">Introducción a las variables<a class="headerlink" href="#introduccion-a-las-variables" title="Permanent link">&para;</a></h2>
+<p>Próximamente...</p>
+<h2 id="eventos-de-entrada">Eventos de entrada<a class="headerlink" href="#eventos-de-entrada" title="Permanent link">&para;</a></h2>
+<p>Próximamente...</p>
 <hr />
-<p><small class="edited"><i>Última edición: 13 de Abril de 2021</i></small></p>
+<p><small class="edited"><i>Última edición: 14 de Abril de 2021</i></small></p>
                 
                   
                 
