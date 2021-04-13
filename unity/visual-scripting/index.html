@@ -2,6 +2,11 @@
 <html lang="es" class="no-js">
   <head>
     
+    
+    
+    
+
+    
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -328,8 +333,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../sandbox-3d/" title="Sandbox 3D" class="md-nav__link">
-      Sandbox 3D
+    <a href="../sandbox-3d/" title="Sandbox 3D en Unity" class="md-nav__link">
+      Sandbox 3D en Unity
     </a>
   </li>
 
@@ -349,11 +354,11 @@ div.my-img{text-align:center;margin-top:20px}
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Visual Scripting
+        Visual Scripting en Unity
       </label>
     
-    <a href="./" title="Visual Scripting" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Visual Scripting
+    <a href="./" title="Visual Scripting en Unity" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Visual Scripting en Unity
     </a>
     
       
@@ -367,8 +372,8 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logica-de-programacion" title="Lógica de programación" class="md-nav__link toc__link">
-    Lógica de programación
+  <a href="#flujo-de-un-videojuego" title="Flujo de un videojuego" class="md-nav__link toc__link">
+    Flujo de un videojuego
   </a>
   
 </li>
@@ -402,12 +407,13 @@ div.my-img{text-align:center;margin-top:20px}
                 </div>
               </div>
             
+
             
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 
                   
                     <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
-                      <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?couponCode=266E0AAF1E3F0FAC358E" target="_blank">
+                      <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?couponCode=968E632EE0C0499DFB10" target="_blank">
                         <img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/>
                       </a>
                     </div>
@@ -427,8 +433,8 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#logica-de-programacion" title="Lógica de programación" class="md-nav__link toc__link">
-    Lógica de programación
+  <a href="#flujo-de-un-videojuego" title="Flujo de un videojuego" class="md-nav__link toc__link">
+    Flujo de un videojuego
   </a>
   
 </li>
@@ -451,8 +457,86 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="visual-scripting-en-unity">Visual Scripting en Unity<a class="headerlink" href="#visual-scripting-en-unity" title="Permanent link">&para;</a></h1>
-<p>En esta unidad vamos a aprender a desarrollar lógica de programación mediante el paquete <code>Visual Scripting</code> que viene integrado en Unity desde la versión 2021. Introduciremos poco a poco los diferentes elementos que componen esta tecnología mediante diferentes experimentos y pruebas.</p>
-<h2 id="logica-de-programacion">Lógica de programación<a class="headerlink" href="#logica-de-programacion" title="Permanent link">&para;</a></h2>
+<p>En esta unidad vamos a aprender a desarrollar lógica de programación mediante el paquete <code>Visual Scripting</code> que viene integrado en Unity desde la versión 2021. </p>
+<p>Introduciremos poco a poco los diferentes elementos que componen esta tecnología mediante sencillos experimentos y pruebas.</p>
+<h2 id="flujo-de-un-videojuego">Flujo de un videojuego<a class="headerlink" href="#flujo-de-un-videojuego" title="Permanent link">&para;</a></h2>
+<p>En este punto sabemos que los <code>GameObjects</code> se forman a base de <code>componentes</code>. Los componentes son en realidad códigos de programación que se añaden a los objetos de forma visual con el objetivo de implementar diferentes funcionalidades, como el <code>rigidbody</code> que controla las físicas o los <code>colliders</code> para las colisiones.</p>
+<p>Sin embargo para desarrollar un juego no basta con los componentes predeterminados, sino que es necesario crear tu propia lógica y eso se consigue creando unos componentes personalizados conocidos como <code>Scripts</code>, en español <code>Guiones</code>, que derivan de un código en lenguaje C# llamado <code>MonoBehaviour</code>.</p>
+<p>En otras palabras, en Unity, para añadir lógica personalizada a un videojuego es necesario saber el lenguaje C#. Pero no os preocupéis, porque en este curso no utilizaremos C# sino <code>Visual Scripting</code>, una interfaz que permite hacer algo parecido mediante diagramas y relaciones. </p>
+<p>Así que vamos a empezar creando una nueva escena <code>Basic (Built-in)</code> en nuestro proyecto <code>Sandbox 3D</code> que llamaremos <code>Experimentos</code>. En ella añadiremos un plano bastante grande (10,1,10) y un cubo, ambos reiniciando préviamente su componente <code>Transform</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_66.png" /></p>
+<p>Ahora vamos a iniciar con un primer experimento, cuyo propósito es entender qué es el flujo de un videojuego y cómo modificarlo para añadir dinamismo e interactividad.</p>
+<p>Empezaremos añadiendo un componente al cubo llamado <code>Script Machine</code> que significa literalmente <code>Máquina de guiones</code>: </p>
+<p><img alt="" src="/cdn/unity/Screenshot_67.png" /></p>
+<p>Como su nombre indica, el propósito de esta "máquina" es ejecutar <code>scripts</code> o guiones. Estos guiones, pueden definirse en la propia máquina, en cuyo caso se llaman <code>Embed scripts</code> o de forma externa en un recurso de tipo <code>Graph</code>, que en el contexto significa "guión gráfico". Si creamos un guión externo podemos reutilizarlo en diferentes máquinas, y si lo creamos embebido, se enlazará única y exclusivamente a la máquina actual:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_68.png" /></p>
+<p>Vamos a crear un guión reutilizable, por lo que haremos clic en la propiedad <code>Graph &gt; New</code>. Lo crearemos en un nuevo directorio llamado <code>Graphs</code> con el nombre <code>Rotante</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_69.png" /></p>
+<p>Un objeto puede tener tantas <code>Script Machines</code> como queramos, pero cada una puede ejecutar un único guión. Para ayudarnos a identificarlas pueden tener un título y una descripción.</p>
+<p><img alt="" src="/cdn/unity/Screenshot_70.png" /></p>
+<p>Una vez tenemos el guión creado, vamos a editarlo haciendo clic en <code>Edit Graph</code>. La primera vez que hagamos esto se instalará en el proyecto el paquete de <code>Visual Scripting</code>, y luego se desplegará una ventana llamada <code>Visual Scripting Graph</code>. Mi recomendación es añadir esta ventana a la parte inferior porque la vamos a estar utilizando mucho:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_71.png" /></p>
+<p>Esta ventana, cuyo propósito es diseñar los diagramas de flujo del videojuego, se puede maximizar y minimizar de diferentes formas:</p>
+<ul>
+<li>Haciendo clic en <code>Full Screen</code>.</li>
+<li>Haciendo doble clic en su interior.</li>
+<li>Con la combinación <code>Shift+Espacio</code>.</li>
+</ul>
+<p>En este punto tenemos un guión visual enlazado al cubo de la escena donde hay dos cajas, una llamada <code>Start</code> y otra <code>Update</code>, ambas con el nombre <code>Event</code> debajo y una flecha verde con un slot, en español <code>ranura</code>.</p>
+<p><img alt="" src="/cdn/unity/Screenshot_72.png" /></p>
+<p>Si ponemos en marcha el juego (Control+P) mientras tenemos esta ventana visible notaremos algo interesante, y es que la caja llamada <code>Update</code> se torna de otro color, lo cuál significa que ese evento se está ejecutando:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_73.png" /></p>
+<p>Y es que los videojuegos se basan en repetir un ciclo muchas veces por segundo para generar la ilusión de movimiento, es lo que se conoce como <code>Game Loop</code> o bucle de juego.</p>
+<p>En la <a href="https://docs.unity3d.com/Manual/ExecutionOrder.html">documentación de Unity</a> podemos encontrar un repaso de todos los eventos que suceden en un objeto desde que empieza su ciclo de vida hasta que termina. Vale la pena repasar esta clasificación aunque sea de forma general:</p>
+<ul>
+<li><strong>Inicialización</strong>: Se ejecutan una sola vez al crearse el objeto en la escena.</li>
+<li><strong>Físicas</strong>: Pueden ocurrir más de una vez por fotograma y recalcular las físicas.</li>
+<li><strong>Evento de entrada</strong>: Capturan la interacción externa del usuario: teclado, mando, gestos, etc.</li>
+<li><strong>Lógica de juego</strong>: Ejecutado una vez por fotograma, define el comportamiento de los objetos.</li>
+<li><strong>Renderizado de escena</strong>: Se encarga de renderizar el resultado del videojuego por fotograma.</li>
+<li><strong>Gizmos</strong>: Para dibujar elementos flotantes de la interfaz en el diseño de la escena.</li>
+<li><strong>GUI</strong>: Para dibujar elementos flotantes de la interfaz de usuario en el juego.</li>
+<li><strong>Fin de fotograma</strong>: Como su nombre indica gestionan el momento final del fotograma.</li>
+<li><strong>Pausa</strong>: Son los eventos que permiten controlar la pausa del videojuego.</li>
+<li><strong>Desmantelamiento</strong>: Encargados de la destrucción del objeto y su limpieza de la memoria.</li>
+</ul>
+<p>Según lo que acabamos de aprender, el evento <code>Start</code> (empezar) es de inicialización y se ejecuta una única vez al llamar el script, mientras que <code>Update</code> (actualizar) es de lógica de juego y se ejecuta una vez por fotograma.</p>
+<p>La idea es que si configuramos una acción y la enlazamos a un evento, ésta se ejecutará cuando ocurre el evento.</p>
+<p>Con eso en mente vamos a hacer clic derecho en el gráfico, escribimos <code>rotate</code> en el buscador y creamos un nodo de tipo <code>Transform:Rotate (X Angle, Y Angle, Z Angle)</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_74.png" /></p>
+<p>Los nodos del gráfico se denominan unidades y la magia, como podéis suponer, al conectar las unidades entre ellas, configurando el flujo del programa para que se ejecuten unas u otras.</p>
+<p>Si seleccionamos la unidad que hemos creado, veremos la información sobre su utilización en el inspector del gráfico:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_75.png" /></p>
+<p>Nos explica que este método aplica una rotación a los diferentes ejes X, Y, Z de un componente <code>Transform</code>. </p>
+<p>Además tiene unos inputs:</p>
+<ul>
+<li><code>Invoke</code>: Invocación, de tipo <code>Flow</code> (flujo), ejecutará el método de rotación.</li>
+<li><code>Target</code>: Objetivo, de tipo <code>Transform</code> (transformación), establece el componente sobre el que se ejecutará el método de rotación.</li>
+<li><code>X, Y, Z</code>: Ángulos de tipo <code>Float</code> (flotante), correspondiente a un número decimal con los grados que rotará el <code>GameObject</code> en cada eje.</li>
+</ul>
+<p>Y un output:</p>
+<ul>
+<li><code>Exit</code>: Salida, de tipo <code>Flow</code>, se llamará una vez el método de rotación ha sido invocado.</li>
+</ul>
+<p>Si seleccionamos el evento <code>Update</code> veremos que tiene una salida llamada <code>Trigger</code> (disparador) de tipo <code>Flow</code>, que concuerda con la entrada <code>Invoke</code> de la unidad de rotación, así que vamos a conectar ambas trazando una línea:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_76.png" /></p>
+<p>Si ejecutamos el juego (Control+P), veremos algo muy interesante:</p>
+<p><img alt="" src="/cdn/unity/Record_10.gif" /></p>
+<p>Esta animación nos muestra el flujo del videojuego, como el evento <code>Update</code> se está ejecutando en cada fotograma y su salida está fluyendo hasta la unidad de rotación. </p>
+<p>No está sucediendo nada porque los ángulos están establecidos a 0, pero si los cambiamos...</p>
+<p><img alt="" src="/cdn/unity/Record_11.gif" /></p>
+<p>Como véis el cubo se pone a girar.</p>
+<p>Lo que estamos haciendo es modificar una propiedad en tiempo de juego, generando así una ilusión de movimiento. De hecho podemos ver cómo la propiedad <code>Rotation</code> del componente <code>Transform</code> se está modificando automáticamente:</p>
+<p><img alt="" src="/cdn/unity/Record_12.gif" /></p>
+<p>Si en lugar de conectar el evento <code>Update</code>, conectamos la unidad de rotación al <code>Start</code>, ésta debería ejecutarse una única vez. Podemos borrar una relación desde uno de los extremos haciendo clic derecho:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_77.png" /></p>
+<p>Al probar el juego, si la rotación que hemos establecido es muy pequeña no vamos a notar ninguna diferencia, pero si ponemos por ejemplo 45 entonces veremos como el cubo empieza rotado:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_78.png" /></p>
+<p>Como hemos visto en este pequeño experimento, en los videojuegos existe un "flujo" que podemos utilizar para conectar las unidades del gráfico.</p>
+<p>Este flujo no es más que el bucle de juego, un montón de instrucciones de código ejecutándose unas tras otras, aunque nosotros las veamos representadas gráficamente.</p>
+<p>A partir de la siguiente lección empieza el verdadero curso, descansad un poco y le damos caña.</p>
+<hr />
+<p><small class="edited"><i>Última edición: 13 de Abril de 2021</i></small></p>
                 
                   
                 
@@ -475,7 +559,7 @@ div.my-img{text-align:center;margin-top:20px}
       
       <a
         href="../sandbox-3d/"
-        title="Sandbox 3D"
+        title="Sandbox 3D en Unity"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -487,7 +571,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Sandbox 3D
+            Sandbox 3D en Unity
           </span>
         </div>
       </a>
@@ -582,13 +666,13 @@ div.my-img{text-align:center;margin-top:20px}
     modalButtonOnly.setContent(`
     <div style="display:grid;grid-template-columns:32% 32% 32%;grid-column-gap: 1.33%;" id="supermodal">
       <div class="course">
-        <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?couponCode=266E0AAF1E3F0FAC358E" target="_blank"><img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+        <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?couponCode=968E632EE0C0499DFB10" target="_blank"><img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/></a>
       </div>
       <div class="course">
-        <a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?couponCode=DC947D53C7154BB1BB10" target="_blank"><img src="/cdn/assets/django.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+        <a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?couponCode=D997332D5840A8BA0008" target="_blank"><img src="/cdn/assets/django.png" style="width:100%;justify-self:center;align-self:center;"/></a>
       </div>
       <div class="course">
-        <a href="https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?couponCode=76E57A0B1FA3F4E30F80" target="_blank"><img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+        <a href="https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?couponCode=C32CEA7B9D567957186B" target="_blank"><img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/></a>
       </div>
     </div>`);
 
