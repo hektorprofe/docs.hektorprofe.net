@@ -3,7 +3,7 @@ description: Recopilación de apuntes de mi curso sobre Qt/PySide para crear int
 
 # Apuntes del curso de GUI con Qt/PySide
 
-Estos apuntes son un material de apoyo para los alumnos de <u>[mi curso de Qt/PySide en Udemy](https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?referralCode=9EAE0CB94440E8F97435)</u> publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
+Estos apuntes son un material de apoyo para los alumnos de mi curso de Qt/PySide en Udemy publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
 
 Los <u>[proyectos](/qt-pyside/desarrollo-proyectos/)</u> que enseño en el curso son de acceso exclusivo para alumnos.
 

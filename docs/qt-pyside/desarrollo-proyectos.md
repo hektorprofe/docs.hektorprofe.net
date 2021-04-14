@@ -13,8 +13,6 @@ Actualmente en el curso estoy enseñando a desarrollar los siguientes proyectos:
 * Tablero Kanban en CSV usando listas y un menú contextual
 * Calculadora generada dinámicamente
 
-Si quieres aprender a crearlos <u>[considera unirte a mi curso en Udemy](https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?referralCode=9EAE0CB94440E8F97435)</u>.
-
 <img src="{{cdn}}/pyside/proyectos/02.png" />
 
 <img src="{{cdn}}/pyside/proyectos/03.png" />

@@ -307,9 +307,10 @@ nav:
 
   - Apuntes de Unity:                    
     - Índice del archivo:                 'unity/index.md'
-    - Introducción a Unity:               'unity/introduccion-unity.md'
-    - Sandbox 3D:                         'unity/sandbox-3d.md'
-    - Visual Scripting:                   'unity/visual-scripting.md'
+    - Conceptos básicos:                  
+      - Introducción:               'unity/introduccion-unity.md'
+      - Sandbox 3D:                'unity/sandbox-3d.md'
+      - Visual Scripting:          'unity/visual-scripting.md'
 
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'
