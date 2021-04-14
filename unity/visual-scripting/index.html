@@ -319,10 +319,31 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2" checked>
+    
+    <label class="md-nav__link" for="nav-6-2">
+      Conceptos básicos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        Conceptos básicos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
 
   <li class="md-nav__item">
-    <a href="../introduccion-unity/" title="Introducción a Unity" class="md-nav__link">
-      Introducción a Unity
+    <a href="../introduccion-unity/" title="Introducción" class="md-nav__link">
+      Introducción
     </a>
   </li>
 
@@ -333,8 +354,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../sandbox-3d/" title="Sandbox 3D en Unity" class="md-nav__link">
-      Sandbox 3D en Unity
+    <a href="../sandbox-3d/" title="Sandbox 3D" class="md-nav__link">
+      Sandbox 3D
     </a>
   </li>
 
@@ -354,11 +375,11 @@ div.my-img{text-align:center;margin-top:20px}
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Visual Scripting en Unity
+        Visual Scripting
       </label>
     
-    <a href="./" title="Visual Scripting en Unity" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Visual Scripting en Unity
+    <a href="./" title="Visual Scripting" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Visual Scripting
     </a>
     
       
@@ -406,6 +427,20 @@ div.my-img{text-align:center;margin-top:20px}
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reutilizacion-de-scripts" title="Reutilización de scripts" class="md-nav__link toc__link">
+    Reutilización de scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grupos-y-superunidades" title="Grupos y superunidades" class="md-nav__link toc__link">
+    Grupos y superunidades
+  </a>
+  
+</li>
+      
       
       
       
@@ -414,6 +449,11 @@ div.my-img{text-align:center;margin-top:20px}
   
 </nav>
     
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -491,6 +531,20 @@ div.my-img{text-align:center;margin-top:20px}
         <li class="md-nav__item">
   <a href="#variables-de-objeto" title="Variables de objeto" class="md-nav__link toc__link">
     Variables de objeto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reutilizacion-de-scripts" title="Reutilización de scripts" class="md-nav__link toc__link">
+    Reutilización de scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grupos-y-superunidades" title="Grupos y superunidades" class="md-nav__link toc__link">
+    Grupos y superunidades
   </a>
   
 </li>
@@ -661,8 +715,91 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Pero vamos un paso más allá, en lugar de usar un literal booleano podemos utilizar como fuente la propia variable <code>activarMovimiento</code> negando su valor. Negar un valor lógico da como resultado el contrario y es una operación muy simple, podemos hacerlo mediante una unida <code>negate</code>:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_96.png" /></p>
 <p>Lo que acabmos de hacer nos permite alternar los valores <code>verdadero</code> y <code>falso</code> de la variable booleana cada vez que presionamos la tecla espacio, pudiendo controlar a voluntad el movimiento del cubo.</p>
-<p>Me gusta este experimento porque ilustra el funcionamiento de los videojuegos jugando con las variables y los eventos.</p>
+<p>Me gusta este experimento porque ilustra, aunque de forma sencilla, el funcionamiento de los videojuegos jugando con las variables y los eventos.</p>
 <h2 id="variables-de-objeto">Variables de objeto<a class="headerlink" href="#variables-de-objeto" title="Permanent link">&para;</a></h2>
+<p>En esta lección vamos a aborar el problema de trabajar con variables a nivel de gráfico y es que en un desarrollo óptimo un gráfico debería encargarse de una tarea y no mezclar acciones. Como decía Julio César, divida y vencerás.</p>
+<p>En nuestro caso hemos realizado diferentes acciones en el mismo gráfico así que vamos a dividir su contenido en tres:</p>
+<ul>
+<li><code>Controlador</code>: para activar o desactivar el movimiento.</li>
+<li><code>Rotacion</code>: para añadir la rotación al objeto.</li>
+<li><code>Traslacion</code>: para añadir la traslación al objeto.</li>
+</ul>
+<p>Podemos clonar <code>Assets/Graphs/Experimento</code> un par de veces y cambiar sus nombres:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_97.png" /></p>
+<p>Ahora configuraremos tres máquinas de guiones, una para cada gráfico. Podemos simplemente copiar el componente y pegarlo como nuevo dos veces y configurarlos así:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_98.png" /></p>
+<p>Ahora vamos a establecer el código de cada gráfico para hacerlos independientes entre ellos.</p>
+<p><strong>Controlador</strong>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_99.png" /></p>
+<p><strong>Rotación</strong>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_101.png" /></p>
+<p><strong>Traslación</strong>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_100.png" /></p>
+<p>Si probamos el videojuego notaremos que ya no funciona, pese a que el <code>Controlador</code> está funcionando y alterna correctamente la variable <code>Booleana</code>:</p>
+<p><img alt="" src="/cdn/unity/Record_15.gif" /></p>
+<p>¿Qué está sucediendo? ¿Por qué no funciona? ¿Recordáis que al principio de la lección os he dicho que íbamos a abordar un problema? Pues aquí tenemos el problema.</p>
+<p>La variable que tenemos en los gráficos, llamada <code>activarMovimiento</code>, en realidad no es una variable, sino tres variables diferentes con el mismo nombre. Cada una existiendo dentro del gráfico y de forma independiente de las demás.</p>
+<p>Por suerte para nosotros, si lo que necesitamos es que las gráficos manipulen una variable común, podemos crearla a nivel del objeto. </p>
+<p>Así que vamos a borrar las tres variables <code>activarMovimiento</code> y luego la vamos a añadir de nuevo pero esta vez a nivel de <code>Objeto</code> desde el componente <code>Variables</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_102.png" /></p>
+<p>Substituimos la variable a nivel de objeto en los tres gráficos, <u>teniendo en cuenta que ahora en el controlador debemos establecer el valor también a nivel de objeto</u>:</p>
+<p><strong>Controlador</strong>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_106.png" /></p>
+<p><strong>Rotación</strong>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_104.png" /></p>
+<p><strong>Traslación</strong>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_105.png" /></p>
+<p>Y si ahora probamos el juego, al utilizar una variable común del objeto, ya funcionará perfectamente:</p>
+<p><img alt="" src="/cdn/unity/Record_16.gif" /></p>
+<p>De la misma forma que una variable de gráfico no es común entre objetos, una de objetos no es común en la escena, ni una de escena en la aplicación.</p>
+<p>Así que como véis el ámbito de las variables es un concepto muy importante y no podéis descuidarlo porque sino, dependiendo de lo que intentéis hacer, no podréis acceder a su información.</p>
+<h2 id="reutilizacion-de-scripts">Reutilización de scripts<a class="headerlink" href="#reutilizacion-de-scripts" title="Permanent link">&para;</a></h2>
+<p>El objetivo de esta lección es reutilizar nuestros scripts gráficos en diferentes cubos pero logrando un comportamiento ligeramente distinto entre ellos mediante el uso de variables para controlar la velocidad de rotación y traslación.</p>
+<p>Así que vamos a crear un par de variables <code>Vector3</code> en el objeto llamadas <code>vectorRotacion</code> y <code>vectorTraslacion</code>, a las que asignaremos unos valores por defecto como los que estamos usando actualmente:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_107.png" /></p>
+<p>Y utilizaremos estas variables como origen de los datos para transformar el cubo. </p>
+<p>Por eso en lugar de la versión que establece de forma independiente los ejes, cambiaremos a <code>transform rotate eulers</code>, que toma como entrada un vector 3D, asignando su entrada al vector como la salida de nuestra variable <code>velocidadRotacion</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_109.png" /></p>
+<p>Y haremos exactamente lo mismo para la traslación, cambiando la unidad de transformación a una versión que tome un vector3 como entrada:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_111.png" /></p>
+<p>Ahora viene la parte divertida, vamos a clonar el cubo con diferentes colores y tamaños. En mi ejemplo he hecho uno naranja 3*3*3, uno azul 2*2*2 y uno rojo 1*1*1:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_112.png" /></p>
+<p>Si presionamos espacio los tres cubos empezarán a flotar, pero lo interesante es que podemos controla de forma independencia la velocidad de rotación y traslación de cada uno ajustando las variables que hemos creado:</p>
+<p><img alt="" src="/cdn/unity/Record_17.gif" /></p>
+<p>Como véis reutilizar scripts es la clave a la hora de impementar funcionalidades comunes en los objetos.</p>
+<p>Pero, ¿y si quisiéramos añadir una pequeña variación a uno de los tres cubos? Por ejemplo, que en lugar de mover el cubo rojo al presionar espacio, tengamos que presionar la tecla R?</p>
+<p>Para conseguir esta variación debemos crear una copia <code>embebida</code> del script <code>Controlador</code> en el cubo rojo y modificarla.</p>
+<p>Esto se consigue presionando el botón <code>Convert</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_113.png" /></p>
+<p>Al hacerlo el gráfico de los recursos <code>Assets/Graphs/Controlador</code> se copiará como un recurso embebido dentro del propio objeto y podremos editarlo a nuestro gusto, siendo éste independiente de los demás cubos:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_114.png" /></p>
+<p>Simplemente editaremos el gráfico y cambiaremos la tecla <code>Space</code> por la letra <code>R</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_115.png" /></p>
+<p>Sin más complicación ahora podremos controlar cuando se mueven los cubos naranja y azul con el espacio, y el rojo con la R:</p>
+<p><img alt="" src="/cdn/unity/Record_18.gif" /></p>
+<p>Con esto ya sabemos lo básico sobre reutilizar scripts gráficos y cómo sobreescribir comportamientos específicos.</p>
+<h2 id="grupos-y-superunidades">Grupos y superunidades<a class="headerlink" href="#grupos-y-superunidades" title="Permanent link">&para;</a></h2>
+<p>En esta última lección vamos a introducir brevemente el uso de los grupos y las superunidades, dos formas de organizar y reutilizar contenido en los scripts gráficos.</p>
+<p>Los grupos son una forma de gestionar conjuntos de unidades, se basa en envolver unas cuantas unidades con el ratón mientras presionamos con la tecla <code>Control</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_116.png" /></p>
+<p>Una vez tenemos un grupo podemos manipular en conjunto las unidades que lo forman, también podemos asignarle un nombre, una descripción y un color:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_117.png" /></p>
+<p>Crear grupos es una forma visual de organizar los scripts y comprobar de un vistazo su funcionamiento.</p>
+<p>Por otro lado, con el objetivo de simplificar y reutilizar los gráficos, las superunidades nos permiten agrupar varias unidades en una única maestra identificada con un nombre, vienen a substituir las funciones de código.</p>
+<p>Hagamos un ejemplo para ilustrar el funcionamiento.</p>
+<p>En el script <code>Controlador</code> podemos substituir todo el proceso de alternar la variable en una única <code>superunidad</code> llamada <code>alternarMovimiento</code>. Para crearla hacemos clic derecho y buscamos <code>superunit</code> en el navegador:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_118.png" /></p>
+<p>Podemos acceder a la superunidad haciendo doble clic en ella y dentro veremos que tiene un <code>input</code> y un <code>output</code>, ahí definiremos los datos que entran y salen de la superunidad.</p>
+<p>La entrada de nuestra superunidad corresponde al flujo que se genera al presionar una tecla, así que vamos a crear un disparador de entrada con el nombre <code>Flujo</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_119.png" /></p>
+<p>Tenemos que llevarnos las unidades de fuera a la superunidad y configurar el flujo de entrada:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_120.png" /></p>
+<p>Y desde conectar el flujo del evento a la superunidad:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_121.png" /></p>
+<p>Como en esta superunidad no tenemos un <code>output</code> de salida, ya la tenemos lista y si probamos el juego hará lo mismo pero habremos simplicado ligeramente el gráfico.</p>
+<p><img alt="" src="/cdn/unity/Record_19.gif" /></p>
+<p>A lo largo del curso trabajaremos activamente con los grupos y las superunidades.</p>
+<p>Sea como sea con esto acabamos el primer bloque donde hemos repasado los conceptos básicos del desarrollo y a partir de ahora toca crear videojuegos.</p>
 <hr />
 <p><small class="edited"><i>Última edición: 14 de Abril de 2021</i></small></p>
                 
@@ -687,7 +824,7 @@ div.my-img{text-align:center;margin-top:20px}
       
       <a
         href="../sandbox-3d/"
-        title="Sandbox 3D en Unity"
+        title="Sandbox 3D"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -699,7 +836,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Sandbox 3D en Unity
+            Sandbox 3D
           </span>
         </div>
       </a>
