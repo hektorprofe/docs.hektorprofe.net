@@ -372,29 +372,36 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-un-videojuego" title="Flujo de un videojuego" class="md-nav__link toc__link">
-    Flujo de un videojuego
+  <a href="#flujo-del-videojuego" title="Flujo del videojuego" class="md-nav__link toc__link">
+    Flujo del videojuego
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-buscador-de-unidades" title="El buscador de unidades" class="md-nav__link toc__link">
-    El buscador de unidades
+  <a href="#buscador-de-unidades" title="Buscador de unidades" class="md-nav__link toc__link">
+    Buscador de unidades
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-las-variables" title="Introducción a las variables" class="md-nav__link toc__link">
-    Introducción a las variables
+  <a href="#tipos-de-datos" title="Tipos de datos" class="md-nav__link toc__link">
+    Tipos de datos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#eventos-de-entrada" title="Eventos de entrada" class="md-nav__link toc__link">
-    Eventos de entrada
+  <a href="#uso-de-variables" title="Uso de variables" class="md-nav__link toc__link">
+    Uso de variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-objeto" title="Variables de objeto" class="md-nav__link toc__link">
+    Variables de objeto
   </a>
   
 </li>
@@ -454,29 +461,36 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-un-videojuego" title="Flujo de un videojuego" class="md-nav__link toc__link">
-    Flujo de un videojuego
+  <a href="#flujo-del-videojuego" title="Flujo del videojuego" class="md-nav__link toc__link">
+    Flujo del videojuego
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-buscador-de-unidades" title="El buscador de unidades" class="md-nav__link toc__link">
-    El buscador de unidades
+  <a href="#buscador-de-unidades" title="Buscador de unidades" class="md-nav__link toc__link">
+    Buscador de unidades
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-las-variables" title="Introducción a las variables" class="md-nav__link toc__link">
-    Introducción a las variables
+  <a href="#tipos-de-datos" title="Tipos de datos" class="md-nav__link toc__link">
+    Tipos de datos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#eventos-de-entrada" title="Eventos de entrada" class="md-nav__link toc__link">
-    Eventos de entrada
+  <a href="#uso-de-variables" title="Uso de variables" class="md-nav__link toc__link">
+    Uso de variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-objeto" title="Variables de objeto" class="md-nav__link toc__link">
+    Variables de objeto
   </a>
   
 </li>
@@ -500,8 +514,8 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 <h1 id="visual-scripting-en-unity">Visual Scripting en Unity<a class="headerlink" href="#visual-scripting-en-unity" title="Permanent link">&para;</a></h1>
 <p>En esta unidad vamos a aprender a desarrollar lógica de programación mediante el paquete <code>Visual Scripting</code> que viene integrado en Unity desde la versión 2021. </p>
-<p>Introduciremos poco a poco los diferentes elementos que componen esta tecnología mediante sencillos experimentos y pruebas.</p>
-<h2 id="flujo-de-un-videojuego">Flujo de un videojuego<a class="headerlink" href="#flujo-de-un-videojuego" title="Permanent link">&para;</a></h2>
+<p>Introduciremos poco a poco los diferentes elementos que componen esta tecnología a través de sencillos experimentos y pruebas.</p>
+<h2 id="flujo-del-videojuego">Flujo del videojuego<a class="headerlink" href="#flujo-del-videojuego" title="Permanent link">&para;</a></h2>
 <p>En este punto sabemos que los <code>GameObjects</code> se forman a base de <code>componentes</code>. Los componentes son en realidad códigos de programación que se añaden a los objetos de forma visual con el objetivo de implementar diferentes funcionalidades, como el <code>rigidbody</code> que controla las físicas o los <code>colliders</code> para las colisiones.</p>
 <p>Sin embargo para desarrollar un juego no basta con los componentes predeterminados, sino que es necesario crear tu propia lógica y eso se consigue creando unos componentes personalizados conocidos como <code>Scripts</code>, en español <code>Guiones</code>, que derivan de un código en lenguaje C# llamado <code>MonoBehaviour</code>.</p>
 <p>En otras palabras, en Unity, para añadir lógica personalizada a un videojuego es necesario saber el lenguaje C#. Pero no os preocupéis, porque en este curso no utilizaremos C# sino <code>Visual Scripting</code>, una interfaz que permite hacer algo parecido mediante diagramas y relaciones. </p>
@@ -512,19 +526,19 @@ div.my-img{text-align:center;margin-top:20px}
 <p><img alt="" src="/cdn/unity/Screenshot_67.png" /></p>
 <p>Como su nombre indica, el propósito de esta "máquina" es ejecutar <code>scripts</code> o guiones. Estos guiones, pueden definirse en la propia máquina, en cuyo caso se llaman <code>Embed scripts</code> o de forma externa en un recurso de tipo <code>Graph</code>, que en el contexto significa "guión gráfico". Si creamos un guión externo podemos reutilizarlo en diferentes máquinas, y si lo creamos embebido, se enlazará única y exclusivamente a la máquina actual:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_68.png" /></p>
-<p>Vamos a crear un guión reutilizable, por lo que haremos clic en la propiedad <code>Graph &gt; New</code>. Lo crearemos en un nuevo directorio llamado <code>Graphs</code> con el nombre <code>Rotante</code>:</p>
-<p><img alt="" src="/cdn/unity/Screenshot_69.png" /></p>
-<p>Un objeto puede tener tantas <code>Script Machines</code> como queramos, pero cada una puede ejecutar un único guión. Para ayudarnos a identificarlas pueden tener un título y una descripción.</p>
+<p>Vamos a crear un guión reutilizable, por lo que haremos clic en la propiedad <code>Graph &gt; New</code>. Lo haremos en un nuevo directorio llamado <code>Graphs</code> con el nombre <code>Experimento</code>. </p>
+<p>Un objeto puede tener múltiples <code>Script Machines</code> pero cada una puede ejecutar solo un guión. Establecer un nombre y una descripción a la máquina nos puede servir en el futuro:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_70.png" /></p>
 <p>Una vez tenemos el guión creado, vamos a editarlo haciendo clic en <code>Edit Graph</code>. La primera vez que hagamos esto se instalará en el proyecto el paquete de <code>Visual Scripting</code>, y luego se desplegará una ventana llamada <code>Visual Scripting Graph</code>. Mi recomendación es añadir esta ventana a la parte inferior porque la vamos a estar utilizando mucho:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_71.png" /></p>
-<p>Esta ventana, cuyo propósito es diseñar los diagramas de flujo del videojuego, se puede maximizar y minimizar de diferentes formas:</p>
+<p>Esta ventana, cuyo propósito es diseñar los diagramas de flujo del videojuego se puede maximizar y minimizar de diferentes formas:</p>
 <ul>
 <li>Haciendo clic en <code>Full Screen</code>.</li>
 <li>Haciendo doble clic en su interior.</li>
 <li>Con la combinación <code>Shift+Espacio</code>.</li>
 </ul>
-<p>En este punto tenemos un guión visual enlazado al cubo de la escena donde hay dos cajas, una llamada <code>Start</code> y otra <code>Update</code>, ambas con el nombre <code>Event</code> debajo y una flecha verde con un slot, en español <code>ranura</code>.</p>
+<p>Podemos movernos por el gráfico presionando la rueda del ratón y hacer zoom con el mismo botón manteniendo <code>Control</code>.</p>
+<p>Sea como sea en este punto tenemos un <code>visual script</code> (guión visual) enlazado al cubo de la escena, en el cuál encontramos dos cajas, una llamada <code>Start</code> y otra <code>Update</code>, ambas con el texto <code>Event</code> debajo y una flecha verde con un <code>slot</code>, en español <code>ranura</code>.</p>
 <p><img alt="" src="/cdn/unity/Screenshot_72.png" /></p>
 <p>Si ponemos en marcha el juego (Control+P) mientras tenemos esta ventana visible notaremos algo interesante, y es que la caja llamada <code>Update</code> se torna de otro color, lo cuál significa que ese evento se está ejecutando:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_73.png" /></p>
@@ -552,7 +566,7 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Además tiene unos inputs:</p>
 <ul>
 <li><code>Invoke</code>: Invocación, de tipo <code>Flow</code> (flujo), ejecutará el método de rotación.</li>
-<li><code>Target</code>: Objetivo, de tipo <code>Transform</code> (transformación), establece el componente sobre el que se ejecutará el método de rotación.</li>
+<li><code>Target</code>: Objetivo, de tipo <code>Transform</code> (transformación), establece el componente sobre el que se ejecutará el método de rotación. Por defecto el valor es <code>Self</code>, haciendo referencia al componente <code>Transform</code> del propio cubo.</li>
 <li><code>X, Y, Z</code>: Ángulos de tipo <code>Float</code> (flotante), correspondiente a un número decimal con los grados que rotará el <code>GameObject</code> en cada eje.</li>
 </ul>
 <p>Y un output:</p>
@@ -576,7 +590,7 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Como hemos visto en este pequeño experimento, en los videojuegos existe un "flujo" que podemos utilizar para conectar las unidades del gráfico.</p>
 <p>Este flujo no es más que el bucle de juego, un montón de instrucciones de código ejecutándose unas tras otras, aunque nosotros las veamos representadas gráficamente.</p>
 <p>A partir de la siguiente lección empieza el verdadero curso, descansad un poco y le damos caña.</p>
-<h2 id="el-buscador-de-unidades">El buscador de unidades<a class="headerlink" href="#el-buscador-de-unidades" title="Permanent link">&para;</a></h2>
+<h2 id="buscador-de-unidades">Buscador de unidades<a class="headerlink" href="#buscador-de-unidades" title="Permanent link">&para;</a></h2>
 <p>Retomándolo donde lo dejamos en la lección anterior, quiero profundizar un poco en las unidades.</p>
 <p>Y es que cuando vamos a añadir un nodo en el gráfico, aparecen muchas categorías, cada una con infinidad de unidades disponibles:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_79.png" /></p>
@@ -596,10 +610,59 @@ div.my-img{text-align:center;margin-top:20px}
 <p><img alt="" src="/cdn/unity/Record_13.gif" /></p>
 <p>Como véis el cubo empieza a flotar hasta que desaparece. En cada fotograma estamos sumando 0.01 unidades del mundo a su posición Y (recordemos que una unidad del mundo equivale a los cuadrados del escenario), eso son 0.60 unidades de altura cada segundo suponiendo que el videojuego funciona a 60 FPS.</p>
 <p>En definitiva el flujo es la corriente vital del script gráfico y fluye a través de las unidades activándolas para ejecutar sus acciones. </p>
-<h2 id="introduccion-a-las-variables">Introducción a las variables<a class="headerlink" href="#introduccion-a-las-variables" title="Permanent link">&para;</a></h2>
-<p>Próximamente...</p>
-<h2 id="eventos-de-entrada">Eventos de entrada<a class="headerlink" href="#eventos-de-entrada" title="Permanent link">&para;</a></h2>
-<p>Próximamente...</p>
+<h2 id="tipos-de-datos">Tipos de datos<a class="headerlink" href="#tipos-de-datos" title="Permanent link">&para;</a></h2>
+<p>En esta lección vamos a introducir el uso de datos, otro de esos conceptos súmamente importantes, tanto en el desarrollo de videojuegos como en cualquier programa.</p>
+<p>Vivimos en la era de la información, y esa información se representa digitalmente en forma de datos de diferentes tipos. Los tipos básicos que encontramos en Unity son:</p>
+<ul>
+<li>Los números enteros, llamados <code>integers</code>, no tienen parte decimal y pueden ser negativos.</li>
+<li>Los números decimales, llamados <code>floats</code>, tienen parte decimal y pueden ser negativos.</li>
+<li>Los valores lógicos, llamados <code>booleans</code>, representan la verdad/falsedad de una sentencia.</li>
+<li>Las cadenas de texto, llamadas <code>strings</code>, son para los caracteres y símbolos de escritura.</li>
+</ul>
+<p>Luego tenemos tipos de datos estructurados como los <code>vectores</code>, que son conjuntos de varios decimales, o los <code>GameObjects</code>, que representan estructuras complejas formadas por multitud de información de todo tipo.</p>
+<p>Por tanto, dependiendo de la información, deberemos utilizar unos tipos de datos u otros. Si queremos gestionar un número utilizaremos <code>integers</code> o <code>floats</code>, mientras que si necesitamos manipular un texto, utilizaremos <code>strings</code> y para almacenar el resultado de una sentencia lógica cuyo resultado sea verdadero o falso, haremos uso de los <code>booleans</code>.</p>
+<p>Vamos a realizar algunos experimentos visuales para entender mejor cómo trabajar con los datos.</p>
+<p>Cuando nuestro cubo se pone a dar vueltas y a flotar, lo hace porque hay un flujo desde el evento <code>Update</code> hasta las unidades de transformación.</p>
+<p>¿Qué ocurriría si condicionamos el flujo dependiendo de un valor lógico verdadeo o falso? Vamos a hacerlo:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_85.png" /></p>
+<p>Lo que hemos conseguido aquí es un controlador que nos permite activar o desactivar el flujo de las transformaciones mediante una condición lógica llamada <code>if</code>, esn español <code>si</code>:</p>
+<p><img alt="" src="/cdn/unity/Record_14.gif" /></p>
+<p>Vamos a mostrar en la consola un mensaje que nos diga si el cubo se mueve o no. Como un mensaje es una cadena de texto haremos uso del tipo <code>string</code> y lo pasaremos a una unidad que ejecute el método <code>Debug.Log</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_86.png" /></p>
+<p>Dependiendo del valor lógico ahora se muestra un mensaje u otro por la consola:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_87.png" /></p>
+<p>Como véis con los datos podemos añadir dinamismo y mostrar información, pero hay un problema... Los datos que estamos manejando en nuestro ejemplo son valores literales, y si bien podemos modificarlos desde el <code>Script Graph</code> mientras desarrollamos el juego, en el juego final no vamos a contar con esta herramienta.</p>
+<p>Si queremos manipular los datos de un videojuego necesitamos almacenarlos y ahí es donde entran en juego las variables, de las cuales hablaremos en la próxima lección.</p>
+<h2 id="uso-de-variables">Uso de variables<a class="headerlink" href="#uso-de-variables" title="Permanent link">&para;</a></h2>
+<p>Las variables son la quintaesencia de la programación, son algo tan básico e imprescindible que las llevamos utilizando durante todo el curso sin darnos cuenta.</p>
+<p>¿Recordáis las propiedades de los componentes? Pues son variables, almacenes de datos de un tipo determinado identificados con un nombre y cuyo valor, como su nombre indica, puede variar:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_88.png" /></p>
+<p>Solo en los componentes actuales del cubo encontramos docenas y docenas de variables. Desde el propio nombre del objeto cubo, que es una <code>string</code>, la casilla de activar o desactivar el objeto, que es la visualización de un dato lógico <code>boolean</code>, los vectores de posición, rotación y escalado formados por varios números que hacen referncia a los ejes X, Y, Z y un largo etcétera. </p>
+<p>En definitiva todos los valores que se pueden modificar son variables.</p>
+<p>Las variables existen dentro de lo que se conoce como <code>scopes</code>, en español ámbitos. Podemos observar esos ámbitos en el inspector del editor de gráficos:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_89.png" /></p>
+<p>Estos ámbitos pueden ser a nivel de gráfico, objeto, escena, aplicación y de guardado. El ámbito de gráfico es muy restrictivo, pues abarca únicamente el propio gráfico, mientras que las variables de guardado son accesibles desde cualquier lugar y además son persistentes. No vamos a entrar mucho en detalle porque estas cosas se aprenden mejor con la práctica.</p>
+<p>Por lo pronto vamos a crear una variable de gráfico para substituir el literal booleano que controla si se mueve o no el cubo. La vamos a llamar <code>activarMovimiento</code> y será de tipo <code>Boolean</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_90.png" /></p>
+<p>Los nombres de las variables deben ser autoexplicativos, sino acabaremos con un videojuego repleto de variables que no sabemos qué hacen. </p>
+<p>Algo interesante es que en <code>Visual Scripting</code> no hay restricciones respecto al nombre de las variables, pero igualmente os aconsejo utilizar alguna notación común y ceñiros a ella en el proyecto:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_91.png" /></p>
+<p>En cualquier caso ya tenemos una variable booleana que puede substituir al valor literal, vamos a arrastrarla al gráfico para utilizarla en lugar de éste:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_93.png" /></p>
+<p>A efectos prácticos es lo mismo, pero debemos considerar que el valor ahora existe en la memoria bajo el nombre <code>activarMovimiento</code> y eso nos permitirá interactuar con él desde otras unidades dentro del gráfico.</p>
+<p>Vamos a crear un evento para capturar el momento en que el usuario presiona la tecla <code>espacio</code> del teclado. Para ello buscaremos una unidad <code>on keyboard input</code>. </p>
+<p>Este evento es especial y no requiere un flujo previo, se iniciará al interactuar con la tecla que nosotros le digamos, ya sea al presionarla (Down), dejar de presionarla (Up) o mantenerla (Hold):</p>
+<p><img alt="" src="/cdn/unity/Screenshot_94.png" /></p>
+<p>Si conectamos a este evento, una unidad que sea capaz de cambiar el valor de la variable <code>activarMovimiento</code> deberíamos ser capaces de controlar cuando empieza a moverse le cubo.</p>
+<p>La unidad que nos interesa se llama <code>set graph variable</code>. Notad que la unidad de la variable arrastrada se llama <code>Get Variable</code>, pues <code>get</code> permite recuperar el valor, mientras que <code>set</code> permite establecerlo.</p>
+<p>Así que básicamente configuraremos el flujo y estableceremos la variable con un valor literal booleano:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_95.png" /></p>
+<p>Si probamos el juego, al presionar <code>ESPACIO</code> la variable cambiará su valor a verdadero y el cubo empezará a moverse.</p>
+<p>Pero vamos un paso más allá, en lugar de usar un literal booleano podemos utilizar como fuente la propia variable <code>activarMovimiento</code> negando su valor. Negar un valor lógico da como resultado el contrario y es una operación muy simple, podemos hacerlo mediante una unida <code>negate</code>:</p>
+<p><img alt="" src="/cdn/unity/Screenshot_96.png" /></p>
+<p>Lo que acabmos de hacer nos permite alternar los valores <code>verdadero</code> y <code>falso</code> de la variable booleana cada vez que presionamos la tecla espacio, pudiendo controlar a voluntad el movimiento del cubo.</p>
+<p>Me gusta este experimento porque ilustra el funcionamiento de los videojuegos jugando con las variables y los eventos.</p>
+<h2 id="variables-de-objeto">Variables de objeto<a class="headerlink" href="#variables-de-objeto" title="Permanent link">&para;</a></h2>
 <hr />
 <p><small class="edited"><i>Última edición: 14 de Abril de 2021</i></small></p>
                 
