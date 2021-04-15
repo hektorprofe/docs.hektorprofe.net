@@ -1602,7 +1602,7 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Ahora es tu turno de crear los templates de las otras tres páginas. El resultado final será el mismo, pero ahora podrás dejar bien limpio el fichero <strong>core/views.py</strong> y borrar todo el código que ya no necesites.</p>
 <h2 id="solucion">Solución<a class="headerlink" href="#solucion" title="Permanent link">&para;</a></h2>
 <p><code>core/templates/core/about.html</code></p>
-<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Web Personal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Web Personal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Portada<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1615,8 +1615,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Me llamo Héctor y me encanta Django!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-<code>core/templates/core/portfolio.html</code></p>
-<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Web Personal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<p><code>core/templates/core/portfolio.html</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Web Personal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Portada<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1629,8 +1629,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Algunos de mis trabajos.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-<code>core/templates/core/contact.html</code></p>
-<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Web Personal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<p><code>core/templates/core/contact.html</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Web Personal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Portada<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1649,7 +1649,7 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://youtube.com&quot;</span><span class="p">&gt;</span>Youtube<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div>
-<code>core/views.py</code></p>
+<p><code>core/views.py</code></p>
 <div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">HttpResponse</span>
 
     <span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
@@ -1663,11 +1663,9 @@ div.my-img{text-align:center;margin-top:20px}
 
     <span class="k">def</span> <span class="nf">contact</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;core/contact.html&quot;</span><span class="p">)</span>
-    <span class="err">```</span>
-<span class="err">`</span><span class="n">webpersonal</span><span class="o">/</span><span class="n">urls</span><span class="o">.</span><span class="n">py</span><span class="err">`</span>
-
-<span class="err">```</span><span class="n">python</span>
-<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</code></pre></div>
+<p><code>webpersonal/urls.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
 <span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">from</span> <span class="nn">core</span> <span class="kn">import</span> <span class="n">views</span>
 
@@ -1749,7 +1747,7 @@ div.my-img{text-align:center;margin-top:20px}
           <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
         </div>-->
         <div class="md-footer-copyright__highlight">
-          2018 - 2021 &copy; Héctor Costa Guzmán (<u
+          2015 - 2021 &copy; Héctor Costa Guzmán (<u
             ><a
               href="https://creativecommons.org/licenses/by/4.0/deed.es"
               target="_blank"
