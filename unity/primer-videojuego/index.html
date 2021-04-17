@@ -232,9 +232,7 @@ div.my-img{text-align:center;margin-top:20px}
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list" id="top__tabs">
         
@@ -280,182 +278,6 @@ div.my-img{text-align:center;margin-top:20px}
     
       
     
-        <!-- comprobación extra -->
-         
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
-    
-    <label class="md-nav__link" for="nav-6">
-      Apuntes de Unity sin programar
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Apuntes de Unity sin programar
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../" title="Índice del archivo" class="md-nav__link">
-      Índice del archivo
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
-    
-    <label class="md-nav__link" for="nav-6-2">
-      Conceptos básicos
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-2">
-        Conceptos básicos
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../introduccion-unity/" title="Introducción" class="md-nav__link">
-      Introducción
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../sandbox-3d/" title="Sandbox 3D" class="md-nav__link">
-      Sandbox 3D
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../visual-scripting/" title="Visual Scripting" class="md-nav__link">
-      Visual Scripting
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-            
-            
-            
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3" checked>
-    
-    <label class="md-nav__link" for="nav-6-3">
-      Primer videojuego
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-3">
-        Primer videojuego
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-            
-            
-            
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Primeros pasos
-      </label>
-    
-    <a href="./" title="Primeros pasos" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Primeros pasos
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preparando-el-proyecto" title="Preparando el proyecto" class="md-nav__link toc__link">
-    Preparando el proyecto
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
       
     
       
@@ -522,14 +344,31 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Llevo enseñando a crear videojuegos desde 2015 cuando empecé mi antiguo canal de Youtube, pero aún me cuesta encontrar uno que sea ideal para principiantes. Los videojuegos escalan en complejidad rápidamente y una funcionalidad a priori sencilla puede significar horas de trabajo.</p>
 <p>Estoy seguro de que si habéis llegado hasta aquí tenéis ilusión por seguir aprendiendo y no quiero que perdáis ese impulso, asi que nos vamos a centrar en crear algo sencillo pero divertido que nos deje con ganas de aprender más.</p>
 <h2 id="preparando-el-proyecto">Preparando el proyecto<a class="headerlink" href="#preparando-el-proyecto" title="Permanent link">&para;</a></h2>
-<p>Desde que existen los videojuegos hay una mecánica que se ha repetido hasta la saciedad y no es coincidencia, es porque es divertida. Me refiero a esquivar cosas: obstáculos, disparos, vehículos, paredes... Como es fácil de implementar nos viene como anillo al dedo.</p>
-<p>Antes de ponernos manos a la obra debemos ser conscientes de cuál es nuestro nivel y cuánto somos capaces de abarcar. Como desde el principio hemos trabajado en un entorno 3D ahora no tendría mucho sentido cambiar al 2D. Así que vamos a sacar el máximo partido a lo que sabemos hacer y a desarrollar el juego alrededor de eso.</p>
+<p>Desde que existen los videojuegos hay una mecánica que se ha repetido hasta la saciedad y no es coincidencia, eso es porque es divertida. Me refiero a esquivar cosas: obstáculos, disparos, vehículos, paredes... Como es fácil de implementar nos viene como anillo al dedo.</p>
+<p>Pero antes de ponernos manos a la obra debemos ser conscientes de cuál es nuestro nivel y cuánto somos capaces de abarcar. Como desde el principio hemos trabajado en un entorno 3D ahora no tendría mucho sentido cambiar al 2D. Así que vamos a sacar el máximo partido a lo que sabemos hacer y a desarrollar el juego alrededor de eso.</p>
 <!--
+first person camera con cinemachine: https://www.youtube.com/watch?v=5n_hmqHdijM
 
 utilizar pack de prototiping
 cielos chulos https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353
 jugar con la luz le da un toque genial
 yume para crear niveles más chulos
+
+
+
+
+1 cubo fino para una primera plataforma
+2 cilinro con camara al hombro para simular personaje
+3 implementar movimiento en direccion a donde miras y atrás
+4 detectar si caes al vacío y reiniciar juego
+5 obstaculo en el suelo para moverte a su alrededor
+6 obstaculo que gira/se mueve de un lado a otro y te impide el paso
+7 implementar mecanica de salto
+8 añadir multiples plataformas para saltar entre ellas
+9 añadir una meta, detectar colision contra la meta mostrar debug
+10 pasar a la siguiente escena al tocar la meta
+
+
 -->
 <hr />
 <p><small class="edited"><i>Última edición: 15 de Abril de 2021</i></small></p>
@@ -549,50 +388,6 @@ yume para crear niveles más chulos
       
         
 <footer class="md-footer">
-  
-  <div class="md-footer-nav">
-    <nav class="md-footer-nav__inner md-grid">
-      
-      <a
-        href="../visual-scripting/"
-        title="Visual Scripting"
-        class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-        rel="prev"
-      >
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-        </div>
-        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-          <span class="md-flex__ellipsis">
-            <span class="md-footer-nav__direction">
-              Anterior
-            </span>
-            Visual Scripting
-          </span>
-        </div>
-      </a>
-       
-      <a
-        href="../../escueladevideojuegos/"
-        title="Índice del archivo"
-        class="md-flex md-footer-nav__link md-footer-nav__link--next"
-        rel="next"
-      >
-        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-          <span class="md-flex__ellipsis">
-            <span class="md-footer-nav__direction">
-              Siguiente
-            </span>
-            Índice del archivo
-          </span>
-        </div>
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-        </div>
-      </a>
-      
-    </nav>
-  </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

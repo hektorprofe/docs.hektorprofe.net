@@ -457,42 +457,6 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
-            
-            
-            
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
-    
-    <label class="md-nav__link" for="nav-6-3">
-      Primer videojuego
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-3">
-        Primer videojuego
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../primer-videojuego/" title="Primeros pasos" class="md-nav__link">
-      Primeros pasos
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -744,8 +708,8 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Este evento es especial y no requiere un flujo previo, se iniciará al interactuar con la tecla que nosotros le digamos, ya sea al presionarla (Down), dejar de presionarla (Up) o mantenerla (Hold):</p>
 <p><img alt="" src="/cdn/unity/Screenshot_94.png" /></p>
 <p>Si conectamos a este evento, una unidad que sea capaz de cambiar el valor de la variable <code>activarMovimiento</code> deberíamos ser capaces de controlar cuando empieza a moverse le cubo.</p>
-<p>La unidad que nos interesa se llama <code>set graph variable</code>. Notad que la unidad de la variable arrastrada se llama <code>Get Variable</code>, pues <code>get</code> permite recuperar el valor, mientras que <code>set</code> permite establecerlo.</p>
-<p>Así que básicamente configuraremos el flujo y estableceremos la variable con un valor literal booleano:</p>
+<p>La unidad que nos interesa se llama <code>set graph variable</code>. Notad que la unidad de la variable arrastrada se llama <code>Get Variable</code>, pues <code>get</code> permite recuperar el valor, mientras que <code>set</code> permite establecerlo. </p>
+<p><strong>Podemos arrastrar la variable al gráfico manteniendo la tecla ALT</strong> para crear la unidad <code>SET</code> en lugar de <code>GET</code>, así que básicamente configuraremos el flujo y estableceremos la variable con un valor literal booleano:</p>
 <p><img alt="" src="/cdn/unity/Screenshot_95.png" /></p>
 <p>Si probamos el juego, al presionar <code>ESPACIO</code> la variable cambiará su valor a verdadero y el cubo empezará a moverse.</p>
 <p>Pero vamos un paso más allá, en lugar de usar un literal booleano podemos utilizar como fuente la propia variable <code>activarMovimiento</code> negando su valor. Negar un valor lógico da como resultado el contrario y es una operación muy simple, podemos hacerlo mediante una unida <code>negate</code>:</p>
@@ -878,8 +842,8 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
        
       <a
-        href="../primer-videojuego/"
-        title="Primeros pasos"
+        href="../../escueladevideojuegos/"
+        title="Índice del archivo"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -888,7 +852,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Primeros pasos
+            Índice del archivo
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">
