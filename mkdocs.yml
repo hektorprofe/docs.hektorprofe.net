@@ -305,12 +305,14 @@ nav:
     - Ejecutables en Windows:             'qt-pyside\ejecutables-windows.md' 
     - Desarrollo de proyectos:            'qt-pyside\desarrollo-proyectos.md' 
 
-  - Apuntes de Unity:                    
+  - Apuntes de Unity sin programar:                    
     - Índice del archivo:                 'unity/index.md'
     - Conceptos básicos:                  
-      - Introducción:               'unity/introduccion-unity.md'
-      - Sandbox 3D:                'unity/sandbox-3d.md'
-      - Visual Scripting:          'unity/visual-scripting.md'
+      - Introducción:                     'unity/introduccion-unity.md'
+      - Sandbox 3D:                       'unity/sandbox-3d.md'
+      - Visual Scripting:                 'unity/visual-scripting.md'
+    # - Primer videojuego:                  
+    #   - Empezando:                        'unity/primer-videojuego.md'
 
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'

@@ -7,7 +7,7 @@ Estos apuntes son un material de apoyo para los alumnos de mi curso de Qt/PySide
 
 Los <u>[proyectos](/qt-pyside/desarrollo-proyectos/)</u> que enseño en el curso son de acceso exclusivo para alumnos.
 
-Podéis navegar por estos apuntes utilizando el menú lateral.
+Podéis navegar por ellos utilizando el menú lateral.
 
 ___
 <small class="edited"><i>Última edición: 22 de Marzo de 2021</i></small>

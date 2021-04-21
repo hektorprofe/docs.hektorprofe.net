@@ -1,11 +1,11 @@
-title: Apuntes del curso de desarrollo de videojuegos | Curso Unity | Hektor Profe
-description: Recopilación de apuntes de mi curso sobre desarrollo de videojuegos en Unity sin programador con Visual Scripting.
+title: Apuntes desarrollo de videojuegos | Curso Unity sin programar | Hektor Profe
+description: Recopilación de apuntes de mi curso sobre desarrollo de videojuegos en Unity sin programar desde cero con Visual Scripting.
 
-# Apuntes del curso de Unity
+# Apuntes del curso de Unity sin programar
 
 Estos apuntes son un material de apoyo para los alumnos de mi futuro curso de Unity en Udemy publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
 
-Podéis navegar por estos apuntes utilizando el menú lateral.
+Podéis navegar por ellos utilizando el menú lateral.
 
 
 <!-- INDICE

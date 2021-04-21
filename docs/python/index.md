@@ -7,7 +7,7 @@ Estos apuntes son un material de apoyo para los alumnos de mi curso de Python en
 
 Los exámenes, ejercicios de codificación y soluciones son de acceso exclusivo para alumnos.
 
-Podéis navegar por estos apuntes utilizando el menú lateral.
+Podéis navegar por ellos utilizando el menú lateral.
 
 ___
 <small class="edited"><i>Última edición: 17 de Marzo de 2021</i></small>

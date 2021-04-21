@@ -1,4 +1,4 @@
-title: Introducción al motor | Curso Unity | Hektor Profe
+title: Introducción al motor | Curso Unity sin programar | Hektor Profe
 
 # Introducción al uso del motor
 
@@ -31,7 +31,11 @@ Por lo pronto vemos una paqueña escena a lo lejos. Si presionamos el botón `Pl
 
 Al presionar este botón entraremos en el modo de reproducción del juego y éste nos mostrará lo que ve la cámara de la escena.
 
-Lo primero que debéis recordad es que, cualquier cambio realizado en la escena durante el modo de reproducción, se revertirá al salir de él. Os aconsejo tintar la ventana durante este modo para nunca confundiros y luego perder el trabajo. A mi me gusta poner un color que se vea bien, como un azul chillón.
+Notad que cuando el videojueto se pone en marcha puede tardar una cantidad considerable de tiempo, podemos reducir prácticamente la totalidad del tiempo de precarga haciendo una sencilla configuración en el proyecto desde `Edit > Project Settings > Edit` y hacia abajo activamos la opción `Enter Play Mode Options` y `Reload Scene` (para más detalles de qué hacen estas opciones un [enlace](https://docs.unity3d.com/2021.1/Documentation/Manual/ConfigurableEnterPlayMode.html)):
+
+![]({{cdn}}/unity/Screenshot_151.png)
+
+Ahora, lo primero que debéis recordad es que, cualquier cambio realizado en la escena durante el modo de reproducción, se revertirá al salir de él. Os aconsejo tintar la ventana durante este modo para nunca confundiros y luego perder el trabajo. A mi me gusta poner un color que se vea bien, como un azul chillón.
 
 Para hacerlo vamos a salir del modo de reproducción, iremos a `Edit > Preferences > General > Playmode tint` y seleccionaremos nuestro color. Así al poner en marcha el juego, la interfaz se mostrará tintada, y creedme que este truco os ahorrará mucho tiempo:
 

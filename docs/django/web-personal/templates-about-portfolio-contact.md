@@ -6,6 +6,7 @@ description: Ahora es tu turno de crear los templates de las otras dos páginas.
 Ahora es tu turno de crear los templates de las otras tres páginas. El resultado final será el mismo, pero ahora podrás dejar bien limpio el fichero **core/views.py** y borrar todo el código que ya no necesites.
 
 ## Solución
+
 `core/templates/core/about.html`
 
 ```html 
@@ -22,6 +23,7 @@ Ahora es tu turno de crear los templates de las otras tres páginas. El resultad
 
 <p>Me llamo Héctor y me encanta Django!</p>
 ```
+
 `core/templates/core/portfolio.html`
 
 ```html
@@ -38,6 +40,7 @@ Ahora es tu turno de crear los templates de las otras tres páginas. El resultad
 
 <p>Algunos de mis trabajos.</p>
 ```
+
 `core/templates/core/contact.html`
 
 ```html
@@ -60,6 +63,7 @@ Ahora es tu turno de crear los templates de las otras tres páginas. El resultad
     <li><a href="https://youtube.com">Youtube</a></li>
 </ul>
 ```
+
 `core/views.py`
 
 ```python
@@ -76,7 +80,8 @@ Ahora es tu turno de crear los templates de las otras tres páginas. El resultad
 
     def contact(request):
         return render(request, "core/contact.html")
-    ```
+```
+
 `webpersonal/urls.py`
 
 ```python

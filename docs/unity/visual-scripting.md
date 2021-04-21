@@ -1,4 +1,4 @@
-title: Visual Scripting | Curso Unity | Hektor Profe
+title: Visual Scripting | Curso Unity sin programar | Hektor Profe
 
 # Visual Scripting en Unity
 
@@ -249,9 +249,9 @@ Este evento es especial y no requiere un flujo previo, se iniciará al interactu
 
 Si conectamos a este evento, una unidad que sea capaz de cambiar el valor de la variable `activarMovimiento` deberíamos ser capaces de controlar cuando empieza a moverse le cubo.
 
-La unidad que nos interesa se llama `set graph variable`. Notad que la unidad de la variable arrastrada se llama `Get Variable`, pues `get` permite recuperar el valor, mientras que `set` permite establecerlo.
+La unidad que nos interesa se llama `set graph variable`. Notad que la unidad de la variable arrastrada se llama `Get Variable`, pues `get` permite recuperar el valor, mientras que `set` permite establecerlo. 
 
-Así que básicamente configuraremos el flujo y estableceremos la variable con un valor literal booleano:
+**Podemos arrastrar la variable al gráfico manteniendo la tecla ALT** para crear la unidad `SET` en lugar de `GET`, así que básicamente configuraremos el flujo y estableceremos la variable con un valor literal booleano:
 
 ![]({{cdn}}/unity/Screenshot_95.png)
 
