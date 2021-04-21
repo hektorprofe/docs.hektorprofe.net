@@ -6,265 +6,610 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cursos, documentos y apuntes | Hektor Profe</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
-      rel="stylesheet"
-    />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" 
-      rel="stylesheet"> 
-    <style>
-      html,
-      body {
-        font-family: "Fira Code", monospace;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-        background-color: #191a1d;
-      }
-      main {
-        margin: 0;
-        padding: 15px 15px 9px 15px;
-        width: 928px;
-        margin: 0 auto;
-        font-size: 99%;
-        background: white;
-      }
-      ul {
-        list-style: none;
-        padding-left: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        margin-top: 6px;
-        padding-top: 0px;
-      }
-
-      li {
-        margin-bottom: 2px;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      a:link,
-      a:focus,
-      a:visited {
-        color: #2091bd;
-      }
-      a:hover {
-        color: #145f7c;
-        text-decoration: underline;
-      }
-
-      nav {
-        background-color: #191a1d;
-        padding: 0;
-        margin: 0;
-        /* box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1),
-          0 0.4rem 0.8rem rgba(0, 0, 0, 0.2); */
-        top: 0;
-        right: 0;
-        left: 0;
-      }
-      nav div {
-        width: 935px;
-        margin: 0 auto;
-        height: 3.5rem;
-      }
-      nav div img {
-        margin-top: 8px;
-        margin-left: 8px;
-      }
-
-      nav div .archivo {
-        color: white;
-        margin-left: 14px;
-        margin-right: 5px;
-        line-height: 56px;
-        vertical-align: top;
-        float: right;
-        font-size: 18px;
-      }
-
-      nav div .archivo a {
-        color: rgb(245, 245, 245);
-        text-decoration: none;
-      }
-
-      nav div .archivo a:hover {
-        color: #30a8d8;
-      }
-
-      .wrapper {
-        display: grid;
-        grid-template-columns: 48% 52%;
-        grid-gap: 25px;
-        color: #444;
-        text-align: left;
-      }
-
-
-      .one img {
-        box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1),
-          3px 3px 5px 0px rgba(0, 0, 0, 0.1);
-        }
-
-
-      @media (max-width: 949px) {
-        .wrapper {
-          grid-template-columns: 1fr;
-          grid-gap: 0px;
-        }
-        main {
-          width: 100%;
-        }
-
-        nav div {
-          width: 100%;
-          margin: 0 auto;
-          height: 3.5rem;
-        }
-
-        nav div .archivo {
-          margin-right: 15px;
-        }
-
-        .one,
-        .two {
-          padding-right: 30px;
-        }
-
-        .two {
-          margin-top: 20px;
-          padding-top: 0px;
-        }
-        
-      }
-
-      h2 {
-        font-family: 'Bebas Neue', cursive;
-        font-weight: 300;
-        font-size: 33px;
-        padding-top: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
-
-      @media (max-width: 380px) {
-        nav div .archivo {
-          display: none;
-        }
-      }
-
-      img.thumb {
-        vertical-align: top;
-        margin-right: 7px;
-      }
-
-      a {
-        outline: 0;
-      }
-
-    .audioMain {
-      margin: 20px auto 20px;
-      padding: 0px;
-      width: 958px;
-    }
-
-    @media (max-width: 949px) {
-      .audioMain {
-        width: 100%;
-      }
-    }
-    </style>
+    <link rel="stylesheet" href="/assets/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
   </head>
   <body>
     <header>
       <nav>
         <div>
-          <img
-            src="/assets/images/logo.png"
-            width="220px"
-            height="37.5px"
-            alt="Documentos | Hektor Profe"
-            title="Documentos | Hektor Profe"
-          />
+          <img src="/assets/images/logo.png" width="220px" height="37.5px" alt="Documentos | Hektor Profe" title="Documentos | Hektor Profe" />
           <span class="archivo"><a href="https://www.hektorprofe.net/">Portada</a></span>
         </div>
       </nav>
     </header>
+    <div class="audioMain">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1020248557&color=%23009dff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
     <main>
       <div class="wrapper">
-        <div class="one">
-          <img src="/cdn/assets/estudio.png" width="100%" />
+        <div class="one" id="app">
+          <div v-if="loading">
+            <div v-html="loading"></div>
           </div>
-        <div class="two">
-          <h2 style="margin-top:-2px;">ARCHIVO UDEMY</h2>
-          <ul>
-            <li>[<a href="/python/">Apuntes del curso: Maestro de Python 3</a>]</li>
-            <li>[<a href="/django/">Apuntes del curso: Django Web Framework</a>]</li>
-            <li>[<a href="/qt-pyside/">Apuntes del curso: Interfaces con Qt/PySide</a>]</li>
-          </ul>
-          <h2 style="margin-top:12px;">ARCHIVO ACADEMIA</h2>
-          <ul>
-            <li>
-              [<a href="/academia/python/introduccion/"
-              >Python: Cursillos, proyectos y tutorías</a>]
-            </li>
-            <li>
-              [<a
-                href="/academia/javascript/introduccion/"
-                >JavaScript: Cursillos, proyectos y tutorías</a>]
-            </li>
-          </ul>
-          <h2 style="margin-top:12px;">ARCHIVO GAMEDEV</h2>
-          <ul>
-            <li>
-              [<a
-                href="/escueladevideojuegos/academia-unity/"
-                >Unity: Cursillos, proyectos y tutorías</a
-              >]
-            </li>
-            <li>
-              [<a
-              href="/escueladevideojuegos/academia-gamemaker/"
-                >GameMaker: Cursillos, proyectos y tutorías</a
-              >]
-            </li>
-          </ul>
+          <div v-else>
+            <div class="search" style="margin-bottom:16.5px;">
+              <i>Nota: Buscador experimental de mi base de datos con 527 archivos.</i><br>
+              <input type="text" v-model="search" placeholder="Busca UNA palabra clave. Ejemplos: python, unity, curso, tutorial, apuntes, etc." style="font-family: 'Fira Code', monospace;border:2px solid rgba(0, 0, 0, 0.602); border-radius:4px; margin-top:5px;font-size:16.5px;padding:3px 5px;width:98.5%"/>
+            </div>
+            <div v-for="campo in filteredItems" style="padding:2.5px 0px;">
+              <img :src="types[campo[1]]" :alt="campo[0]" :title="campo[0]" width="24px;" style="box-shadow:none;vertical-align:top;margin-right:-4.5px;padding-right:0px;margin-top:0px;"/>
+              <span :class="['tag', slugify(campo[2])]">
+                {{ campo[2] }}
+              </span><span :class="['tag', slugify(campo[3])]" style="border:2px solid rgba(0, 0, 0, 0.685);padding:0px 3px">
+                {{ campo[3] }}
+              </span><span :class="['tag', 'blocky']" style="width:400px;text-align:left;text-transform:inherit;">
+                <a :href="campo[5]" target="_blank">{{ campo[4] }}</a>
+              </tr>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-
-    <div class="audioMain">
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1020248557&color=%23009dff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </div>
-
     <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "https://www.google-analytics.com/analytics.js",
-        "ga"
-      );
-      ga("create", "UA-124845547-1", "auto");
-      ga("send", "pageview");
+      (function (i, s, o, g, r, a, m) { i["GoogleAnalyticsObject"] = r; (i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments); }), (i[r].l = 1 * new Date()); (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]); a.async = 1; a.src = g; m.parentNode.insertBefore(a, m); })( window, document, "script", "https://www.google-analytics.com/analytics.js", "ga" );
+      function ready(callback){ if (document.readyState!='loading') callback(); else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback); else document.attachEvent('onreadystatechange', function(){if (document.readyState=='complete') callback();});}
+      function slugify(text){return text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '')}
+      ga("create", "UA-124845547-1", "auto"); ga("send", "pageview");
+      var types = {'txt':'/assets/images/text.png', 'vid':'/assets/images/video.png', 'mix':'/assets/images/mixed.png'}
+      var database = [
+        ['Apuntes', 'txt', 'Python 3', 'Datos', 'Tipo numérico', '/python/introduccion-informal/numeros'],
+        ['Apuntes', 'txt', 'Python 3', 'Datos', 'Tipo cadena', '/python/introduccion-informal/cadenas-de-texto'],
+        ['Apuntes', 'txt', 'Python 3', 'Datos', 'Tipo lista', '/python/introduccion-informal/listas'],
+        ['Apuntes', 'txt', 'Python 3', 'Datos', 'Tipo lógico', '/python/operadores-y-expresiones/el-tipo-logico'],
+        ['Apuntes', 'txt', 'Python 3', 'Expresiones', 'Operadores relacionales', '/python/operadores-y-expresiones/operadores-relacionales'],
+        ['Apuntes', 'txt', 'Python 3', 'Expresiones', 'Operadores lógicos', '/python/operadores-y-expresiones/operadores-logicos'],
+        ['Apuntes', 'txt', 'Python 3', 'Expresiones', 'Expresiones anidadas', '/python/operadores-y-expresiones/expresiones-anidadas'],
+        ['Apuntes', 'txt', 'Python 3', 'Expresiones', 'Operadores de asignación', '/python/operadores-y-expresiones/operadores-en-asignacion'],
+        ['Apuntes', 'txt', 'Python 3', 'Flujo', 'Condición if-elif-else', '/python/controlando-el-flujo/condiciones'],
+        ['Apuntes', 'txt', 'Python 3', 'Flujo', 'Bucles while y for', '/python/controlando-el-flujo/iteraciones'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Tipo tupla', '/python/colecciones-de-datos/tuplas'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Tipo conjunto', '/python/colecciones-de-datos/conjuntos'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Tipo diccionario', '/python/colecciones-de-datos/diccionarios'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Tipo pila', '/python/colecciones-de-datos/pilas'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Tipo cola', '/python/colecciones-de-datos/colas'],
+        ['Apuntes', 'txt', 'Python 3', 'Entradas', 'Entrada por teclado', '/python/introduccion-informal/lectura-por-teclado'],
+        ['Apuntes', 'txt', 'Python 3', 'Entradas', 'Entrada por script', '/python/entradas-y-salidas/entrada-por-script'],
+        ['Apuntes', 'txt', 'Python 3', 'Salidas', 'Salida por pantalla', '/python/entradas-y-salidas/salida-por-pantalla'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Definición', '/python/programacion-de-funciones/definicion-y-llamada'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Retorno de valores', '/python/programacion-de-funciones/retorno-de-valores'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Envío de valores', '/python/programacion-de-funciones/envio-de-valores'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Argumentos y parámetros', '/python/programacion-de-funciones/argumentos-y-parametros'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Paso por valor y referencia', '/python/programacion-de-funciones/paso-por-valor-y-referencia'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Argumentos indeterminados', '/python/programacion-de-funciones/argumentos-indeterminados'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Funciones recursivas', '/python/programacion-de-funciones/funciones-recursivas'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Funciones integradas', '/python/programacion-de-funciones/funciones-integradas'],
+        ['Apuntes', 'txt', 'Python 3', 'Errores', 'Gestión de errores', '/python/errores-y-excepciones/errores'],
+        ['Apuntes', 'txt', 'Python 3', 'Errores', 'Gestión de excepciones', '/python/errores-y-excepciones/excepciones'],
+        ['Apuntes', 'txt', 'Python 3', 'Errores', 'Excepciones múltiples', '/python/errores-y-excepciones/excepciones-multiples'],
+        ['Apuntes', 'txt', 'Python 3', 'Errores', 'Invocación de excepciones', '/python/errores-y-excepciones/invocacion-de-excepciones'],
+        ['Apuntes', 'txt', 'Python 3', 'Objetos', 'Primer contacto con los objetos', '/python/programacion-orientada-a-objetos/primer-contacto'],
+        ['Apuntes', 'txt', 'Python 3', 'Objetos', 'Clases y objetos', '/python/programacion-orientada-a-objetos/clases-y-objetos'],
+        ['Apuntes', 'txt', 'Python 3', 'Objetos', 'Atributos y métodos', '/python/programacion-orientada-a-objetos/atributos-y-metodos'],
+        ['Apuntes', 'txt', 'Python 3', 'Objetos', 'Objetos dentro de objetos', '/python/programacion-orientada-a-objetos/objetos-dentro-de-objetos'],
+        ['Apuntes', 'txt', 'Python 3', 'Objetos', 'Encapsulación', '/python/programacion-orientada-a-objetos/encapsulacion'],
+        ['Apuntes', 'txt', 'Python 3', 'Herencia', 'Herencia de clases', '/python/herencia-en-la-poo/herencia'],
+        ['Apuntes', 'txt', 'Python 3', 'Herencia', 'Copia de objetos', '/python/herencia-en-la-poo/copia-de-objetos'],
+        ['Apuntes', 'txt', 'Python 3', 'Herencia', 'Herencia múltiple', '/python/herencia-en-la-poo/herencia-multiple'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Métodos de las cadenas', '/python/metodos-de-las-colecciones/metodos-de-las-cadenas'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Métodos de las listas', '/python/metodos-de-las-colecciones/metodos-de-las-listas'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Métodos de los conjuntos', '/python/metodos-de-las-colecciones/metodos-de-los-conjuntos'],
+        ['Apuntes', 'txt', 'Python 3', 'Colecciones', 'Métodos de los diccionarios', '/python/metodos-de-las-colecciones/metodos-de-los-diccionarios'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Creación de módulos', '/python/modulos-y-paquetes/modulos'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Creación de paquetes', '/python/modulos-y-paquetes/paquetes'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Repaso de los módulos estándar', '/python/modulos-y-paquetes/modulos-estandar'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo collections de colecciones', '/python/modulos-y-paquetes/modulo-collections'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo datetime para fechas/horas', '/python/modulos-y-paquetes/modulo-datetime'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo math para matemáticas', '/python/modulos-y-paquetes/modulo-math'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo random para aleatoriedad', '/python/modulos-y-paquetes/modulo-random'],
+        ['Apuntes', 'mix', 'Python 3', 'Modulos', 'Módulo turtle para dibujo gráfico', '/academia/python/tutoriales/#introduccion-a-los-dibujos-graficos-con-turtle'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo io para manejar de ficheros', '/python/manejo-de-ficheros/ficheros-de-texto'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo csv para manejar de ficheros', '/python/manejo-de-ficheros/ficheros-csv'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo json para manejar de ficheros', '/python/manejo-de-ficheros/ficheros-json'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo pickle para manejar de ficheros', '/python/manejo-de-ficheros/modulo-pickle'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo regex para expresiones regulares', '/python/funcionalidades-avanzadas/expresiones-regulares'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo pydoc para documentación', '/python/documentacion-y-pruebas/pydoc'],
+        ['Apuntes', 'txt', 'Python 3', 'Modulos', 'Módulo unittest para pruebas', '/python/documentacion-y-pruebas/unittest'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Tk (Raíz)', '/python/interfaces-graficas-con-tkinter/widget-tk-raiz'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Frame (Marco)', '/python/interfaces-graficas-con-tkinter/widget-frame-marco'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Label (Etiqueta de texto)', '/python/interfaces-graficas-con-tkinter/widget-label-etiqueta-de-texto'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Entry (Texto corto)', '/python/interfaces-graficas-con-tkinter/widget-entry-texto-corto'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Text (Texto largo)', '/python/interfaces-graficas-con-tkinter/widget-text-texto-largo'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Button (Botón)', '/python/interfaces-graficas-con-tkinter/widget-button-boton'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Radiobutton (Radial)', '/python/interfaces-graficas-con-tkinter/widget-radiobutton-radial'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Checkbutton (Seleccionable)', '/python/interfaces-graficas-con-tkinter/widget-checkbutton-seleccionable'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Menu (Menú)', '/python/interfaces-graficas-con-tkinter/widget-menu'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/Tkinter', 'Componente Dialogs (Diálogos)', '/python/interfaces-graficas-con-tkinter/dialogs-dialogos'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Interfaces gráficas con PySide', '/qt-pyside/preparacion-previa'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Conceptos básicos de PySide', '/qt-pyside/conceptos-basicos'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Widgets de formularios', '/qt-pyside/widgets-formularios'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Formas de organización', '/qt-pyside/formas-organizacion'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Cuadros de diálogo', '/qt-pyside/cuadros-dialogo'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Ventana principal', '/qt-pyside/ventana-principal'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Control de subventanas', '/qt-pyside/control-subventanas'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Tematización de interfaces', '/qt-pyside/tematizacion'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Diseño de interfaces con Qt Designer', '/qt-pyside/interfaces-qt-designer'],
+        ['Apuntes', 'txt', 'Python 3', 'GUI/PySide', 'Ejecutables en Windows', '/qt-pyside/ejecutables-windows'],
+        ['Apuntes', 'txt', 'Python 3', 'SQLite3', 'Consultas SQL básicas', '/python/bases-de-datos-sqlite/consultas-sql-basicas'],
+        ['Apuntes', 'txt', 'Python 3', 'SQLite3', 'Claves SQL básicas', '/python/bases-de-datos-sqlite/claves-sql-basicas'],
+        ['Apuntes', 'txt', 'Python 3', 'SQLite3', 'Consultas SQL intermedias', '/python/bases-de-datos-sqlite/consultas-sql-intermedias'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Operadores encadenados', '/python/funcionalidades-avanzadas/operadores-encadenados'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Comprensión de listas', '/python/funcionalidades-avanzadas/comprension-de-listas'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Funciones decoradoras', '/python/funcionalidades-avanzadas/funciones-decoradoras'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Funciones generadoras', '/python/funcionalidades-avanzadas/funciones-generadoras'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Funciones lambda', '/python/funcionalidades-avanzadas/funciones-lambda'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Función filter', '/python/funcionalidades-avanzadas/funcion-filter'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Función map', '/python/funcionalidades-avanzadas/funcion-map'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Docstrings', '/python/documentacion-y-pruebas/docstrings'],
+        ['Apuntes', 'txt', 'Python 3', 'Funciones', 'Doctest', '/python/documentacion-y-pruebas/doctest'],
+        ['Apuntes', 'txt', 'Python 3', 'Distribucion', 'Setuptools', '/python/distribucion/setuptools'],
+        ['Apuntes', 'txt', 'Python 3', 'Distribucion', 'Ejecutables con Pyinstaller', '/python/distribucion/pyinstaller'],
+        ['Tutoriales','txt', 'Python 3', 'Distribucion ', 'Ejecutables con auto-py-to-exe', '/academia/python/tutoriales/#generar-ejecutables-utilizando-auto-py-to-exe'],
+        ['Apuntes', 'txt', 'Python 3', 'Proyecto', 'Editor de texto con tkinter', '/python/interfaces-graficas-con-tkinter/editor-de-texto'],
+        ['Cursos', 'mix', 'Python 3', 'Proyecto', 'Gestor de clientes en Python', '/academia/python/proyecto-gestor-clientes/'],
+        ['Tutoriales', 'txt', 'Python 3', 'Tutorial', 'Ejemplo de Test Driven Development', '/academia/python/tutoriales/#ejemplo-sencillo-de-test-driven-development-en-python'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Introducción a Python', '/academia/python/introduccion/'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', '¿Qué es Python?', '/academia/python/introduccion/#que-es-python'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Instalación de Python', '/academia/python/introduccion/#instalacion'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Configurando el entorno', '/academia/python/introduccion/#configurando-el-entorno'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Primer programa', '/academia/python/introduccion/#primer-programa'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Ejecución rápida', '/academia/python/introduccion/#ejecucion-rapida'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Linting y formateo', '/academia/python/introduccion/#linting-y-formateo'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Variables', '/academia/python/introduccion/#variables'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Tipos primitivos', '/academia/python/introduccion/#tipos-primitivos'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Tipado dinámico', '/academia/python/introduccion/#tipado-dinamico'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Listas', '/academia/python/introduccion/#listas'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Listas anidadas', '/academia/python/introduccion/#listas-anidadas'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Diccionarios', '/academia/python/introduccion/#diccionarios'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Funciones', '/academia/python/introduccion/#funciones'],
+        ['Cursos', 'mix', 'Python 3', 'Introduccion', 'Funciones con retorno', '/academia/python/introduccion/#funciones-con-retorno'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Fundamentos de POO para GUI', '/academia/python/poo-para-interfaces-graficas/'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Bucles infinitos', '/academia/python/poo-para-interfaces-graficas/#bucles-infinitos'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Menú interactivo', '/academia/python/poo-para-interfaces-graficas/#menu-interactivo'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Modularización del código', '/academia/python/poo-para-interfaces-graficas/#modularizacion-del-codigo'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Clases y objetos', '/academia/python/poo-para-interfaces-graficas/#clases-y-objetos'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Instancias de clase', '/academia/python/poo-para-interfaces-graficas/#instancias-de-clase'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Métodos de clase', '/academia/python/poo-para-interfaces-graficas/#metodos-de-clase'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Método constructor', '/academia/python/poo-para-interfaces-graficas/#metodo-constructor'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Método string', '/academia/python/poo-para-interfaces-graficas/#metodo-strings'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Herencia y mixins', '/academia/python/poo-para-interfaces-graficas/#herencia-y-mixins'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Herencia múltiple', '/academia/python/poo-para-interfaces-graficas/#herencia-multiple'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Extendiendo métodos', '/academia/python/poo-para-interfaces-graficas/#extendiendo-metodos'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Primer programa con Tkinter', '/academia/python/poo-para-interfaces-graficas/#primer-programa-con-tkinter'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Primer programa con WxPython', '/academia/python/poo-para-interfaces-graficas/#primer-programa-con-wxpython'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Historia de Qt, PyQt y PySide', '/academia/python/poo-para-interfaces-graficas/#historia-de-qt-pyqt-y-pyside'],
+        ['Cursos', 'mix', 'Python 3', 'Objetos', 'Primer programa con PySide', '/academia/python/poo-para-interfaces-graficas/#primer-programa-con-pyside'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Introducción al módulo analítico Numpy', '/academia/python/modulo-analitico-numpy/'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'La clase array de Numpy', '/academia/python/modulo-analitico-numpy/#la-clase-array-de-numpy'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Trabajando con NumPy en Jupyter', '/academia/python/modulo-analitico-numpy/#trabajando-con-jupyter'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Arrays pregenerados', '/academia/python/modulo-analitico-numpy/#arrays-pregenerados'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Operaciones básicas', 'academia/python/modulo-analitico-numpy/#operaciones-basicas'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Arrays de 1 dimensión', '/academia/python/modulo-analitico-numpy/#arrays-de-1-dimension'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Arrays de 2 dimensiones', '/academia/python/modulo-analitico-numpy/#arrays-de-2-dimensiones'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Arrays de >=3 dimensiones', '/academia/python/modulo-analitico-numpy/#arrays-de-3-dimensiones'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Arrays transpuestos', '/academia/python/modulo-analitico-numpy/#arrays-transpuestos'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Funciones universales', '/academia/python/modulo-analitico-numpy/#funciones-universales'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Funciones aleatorias', '/academia/python/modulo-analitico-numpy/#funciones-aleatorias'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Filtrado de arrays', '/academia/python/modulo-analitico-numpy/#filtrado-de-arrays'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Métodos internos', '/academia/python/modulo-analitico-numpy/#metodos-internos'],
+        ['Cursos', 'mix', 'Python 3', 'Numpy', 'Arrays y persistencia', '/academia/python/modulo-analitico-numpy/#arrays-y-persistencia'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Introducción al módulo Matplotlib', '/academia/python/modulo-grafico-matplotlib/'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Primer gráfico', '/academia/python/modulo-grafico-matplotlib/#primer-grafico'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Ejes y mapeados', '/academia/python/modulo-grafico-matplotlib/#ejes-y-mapeados'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Límites', '/academia/python/modulo-grafico-matplotlib/#limites'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Títulos, etiquetas y leyendas', '/academia/python/modulo-grafico-matplotlib/#titulos-etiquetas-y-leyendas'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Estilos de línea y marcadores', '/academia/python/modulo-grafico-matplotlib/#estilos-de-linea-y-marcadores'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Subgráficos', '/academia/python/modulo-grafico-matplotlib/#subgraficos'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Figuras', '/academia/python/modulo-grafico-matplotlib/#figuras'],
+        ['Cursos', 'mix', 'Python 3', 'Matplotlib', 'Tipos de gráficos', '/academia/python/modulo-grafico-matplotlib/#tipos-de-graficos'],
+        
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Introducción a Django Framework', '/academia/django/introduccion/'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', '¿Qué es Django?', '/academia/django/introduccion/#que-es-django'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Instalación con Pipenv', '/academia/django/introduccion/#instalacion-con-pipenv'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Creando el proyecto', '/academia/django/introduccion/#creando-el-proyecto'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Configuración básica', '/academia/django/introduccion/#configuracion-basica'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Apps en Django', '/academia/django/introduccion/#apps-en-django'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Modelos en Django', '/academia/django/introduccion/#modelos-en-django'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Administrador en Django', '/academia/django/introduccion/#administrador-en-django'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Shell en Django', '/academia/django/introduccion/#shell-en-django'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Vistas y urls en Django', '/academia/django/introduccion/#vistas-y-urls-en-django'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Variables de contexto', '/academia/django/introduccion/#variables-de-contexto'],
+        ['Cursos', 'mix', 'Django 2', 'Introduccion', 'Páginas dinámicas', '/academia/django/introduccion/#paginas-dinamicas'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Proyecto Web Personal', '/django/web-personal'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Creando el proyecto', '/django/web-personal/creando-proyecto/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Configurando el proyecto', '/django/web-personal/configurando-proyecto/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'App 1 [Core] Vistas', '/django/web-personal/app-core-vistas/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Extendiendo la App [Core]', '/django/web-personal/extendiendo-app-core/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Páginas portafolio y contacto', '/django/web-personal/paginas-portafolio-contacto/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Introducción a las plantillas', '/django/web-personal/introduccion-plantillas-templates/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Templates about, portfolio y contact', '/django/web-personal/templates-about-portfolio-contact/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Herencia en nuestras plantillas', '/django/web-personal/herencia-plantillas-templates/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Adaptar las plantillas con herencia', '/django/web-personal/adaptar-plantillas-herencia/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Template tag url', '/django/web-personal/template-tag-url/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Uniendo frontend con backend', '/django/web-personal/uniendo-frontend-backend/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Creando la cabecera dinámica', '/django/web-personal/creando-cabecera-dinamica/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Adaptar los demás templates', '/django/web-personal/adaptar-demas-templates/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Segunda App [Portfolio] Modelos', '/django/web-personal/app-portfolio-modelos/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Panel de administrador', '/django/web-personal/panel-administrador/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Personalizando el administrador (1)', '/django/web-personal/personalizando-panel-administrador-parte-1/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Patrón MVT: Modelo, Vista, Template', '/django/web-personal/patron-mvt-modelo-vista-template/'],
+        ['Apuntes', 'txt', 'Django 2', 'Principiante', 'Añadir enlace a los proyectos', '/django/web-personal/anadir-enlace-proyectos/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Proyecto Web Empresarial', '/django/web-empresarial'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Preparar la app [Core]', '/django/web-empresarial/preparar-app-core/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Organizando mejor nuestras URLs', '/django/web-empresarial/organizar-mejor-nuestras-urls/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Fusionar el Frontend y el Backend', '/django/web-empresarial/fusion-frontend-y-backend/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Resaltando la sección actual', '/django/web-empresarial/resaltar-seccion-actual/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Tercera App [Services] Modelo y admin', '/django/web-empresarial/app-services-modelo-admin/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Tercera App [Services] Vista y template', '/django/web-empresarial/app-services-vista-template/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Cuarta App [Blog] Relaciones', '/django/web-empresarial/app-blog-relaciones/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Personalizando el administrador (2)', '/django/web-empresarial/personalizando-panel-administrador-parte-2/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Creando las vistas del Blog (1)', '/django/web-empresarial/crear-vistas-blog-1/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Creando las vistas del Blog (2)', '/django/web-empresarial/crear-vistas-blog-2/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Quinta App [Social] Redes Sociales', '/django/web-empresarial/app-social-enlaces-redes/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Procesadores de contexto', '/django/web-empresarial/procesadores-contexto/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Sexta App [Pages] Gestor de Páginas', '/django/web-empresarial/app-pages-gestor-paginas/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Creando un Template Tag propio', '/django/web-empresarial/template-tags-propios/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Ordenación y edición de páginas', '/django/web-empresarial/ordenar-editar-paginas/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Personalizando el administrador (3)', '/django/web-empresarial/personalizando-panel-administrador-parte-3/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Séptima App [Contact] Formularios', '/django/web-empresarial/app-contact-formularios/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Procesado y validación', '/django/web-empresarial/formularios-procesado-validacion/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Fusionando el formulario', '/django/web-empresarial/fusion-formulario/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Enviando emails', '/django/web-empresarial/enviar-emails-prueba/'],
+        ['Apuntes', 'txt', 'Django 2', 'Intermedio', 'Personalizando el administrador (4)', '/django/web-empresarial/personalizando-panel-administrador-parte-4/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Proyecto Web Playground', '/django/web-playground'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Preparando la App [Core]', '/django/web-playground/preparar-app-core/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Class Based Views y TemplateView', '/django/web-playground/cbv-templateview/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Preparando la App [Pages]', '/django/web-playground/preparar-app-pages/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'DetailView y ListView', '/django/web-playground/cbv-listview-detailview/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Vistas CRUD con CBV: CreateView', '/django/web-playground/cbv-createview/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Vistas CRUD con CBV: UpdateView', '/django/web-playground/cbv-updateview/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Vistas CRUD con CBV: DeleteView', '/django/web-playground/cbv-deleteview/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Formularios para Modelos en CBV', '/django/web-playground/cbv-forms-models/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Creando un Mixin de identificación', '/django/web-playground/mixin-identificacion/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Usando decoradores de identificación', '/django/web-playground/decoradores-identificacion/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Octava App [Registration] Sesiones', '/django/web-playground/app-registration-sesiones/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Cerrando la sesión', '/django/web-playground/cerrar-sesion/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Registro con CBV', '/django/web-playground/cbv-registro/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Email obligatorio al registrarse', '/django/web-playground/email-registro-obligatorio/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Validando un email único', '/django/web-playground/validar-email-unico/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Restaurar contraseña', '/django/web-playground/restaurar-contrasena/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Creando un perfil de usuario', '/django/web-playground/crear-perfil-usuario/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Haciendo editable el perfil', '/django/web-playground/formulario-edicion-perfil/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Mejorando el formulario de perfil', '/django/web-playground/mejorando-formulario-perfil/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Opción de editar el email', '/django/web-playground/edicion-email/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Opción de editar la contraseña', '/django/web-playground/edicion-contrasena/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Introducción a las señales', '/django/web-playground/introduccion-senales-signals/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Introducción a las pruebas unitarias', '/django/web-playground/introduccion-pruebas-unitarias-unittest/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Optimizando el almacenamiento del avatar', '/django/web-playground/optimizar-almacenamiento-avatar/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Novena App [Profiles] Perfiles públicos', '/django/web-playground/app-profiles-perfiles-publicos/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Paginación de resultados en ListView', '/django/web-playground/paginacion-cbv-listview/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Décima App [Messenger] Análisis y diseño', '/django/web-playground/app-messenger-mensajeria/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Test Driven Development', '/django/web-playground/tdd-primeras-pruebas/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Mensajes asíncronos con JS', '/django/web-playground/mensajes-asincronos-javascript-1/'],
+        ['Apuntes', 'txt', 'Django 2', 'Avanzado', 'Programando conversaciones', '/django/web-playground/programando-conversaciones/'],
+        ['Apuntes', 'txt', 'Django 2', 'API Rest', 'Sistema de autenticación y registro', '/django/api-django-rest/sistema-autenticacion-registro/'],
+        ['Apuntes', 'txt', 'Django 2', 'API Rest', 'Sistema de películas y géneros', '/django/api-django-rest/sistema-peliculas-generos/'],
+        ['Apuntes', 'txt', 'Django 2', 'API Rest', 'Sistema de búsquedas y filtros', '/django/api-django-rest/sistema-busqueda-filtro/'],
+        ['Apuntes', 'txt', 'Django 2', 'API Rest', 'Sistema de perfiles de usuario', '/django/api-django-rest/sistema-perfiles-usuario/'],
+        ['Apuntes', 'txt', 'Django 2', 'API Rest', 'Sistema de películas de usuario', '/django/api-django-rest/sistema-peliculas-usuario/'],
+        ['Apuntes', 'txt', 'Django 2', 'Producción', 'Despliegue en producción', '/django/produccion'],
+        ['Apuntes', 'txt', 'Django 2', 'Producción', 'Entornos de producción', '/django/produccion/'],
+        ['Apuntes', 'txt', 'Django 2', 'Producción', 'Repositorios y controles de versiones', '/django/produccion/repositorios-controles-de-versiones/'],
+        ['Apuntes', 'txt', 'Django 2', 'Producción', 'Creando un repositorio en Github', '/django/produccion/creando-repositorio-github/'],
+        ['Apuntes', 'txt', 'Django 2', 'Producción', 'Desplegando un proyecto de prueba', '/django/produccion/desplegar-proyecto-prueba/'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Backend para API de películas', '/academia/django/api-rest-framework/'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Modelo de película y serializador ', '/academia/django/api-rest-framework/#modelo-de-pelicula-y-serializador'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Programando la viewset y las urls', '/academia/django/api-rest-framework/#programando-la-viewset-y-las-urls'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Instalación de las dependencias', '/academia/django/api-rest-framework/#instalacion-de-las-dependencias'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Interactuando usando cURL', '/academia/django/api-rest-framework/#interactuando-usando-curl'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Modelo de película favorita', '/academia/django/api-rest-framework/#modelo-de-pelicula-favorita'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Vista de película favorita', '/academia/django/api-rest-framework/#vista-de-pelicula-favorita'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Vista de películas favoritas', '/academia/django/api-rest-framework/#vista-de-peliculas-favoritas'],
+        ['Cursos', 'mix', 'Django 2', 'API Rest', 'Top de películas favoritas y filtros', '/academia/django/api-rest-framework/#top-de-peliculas-favoritas-y-filtros'],
+        ['Tutoriales', 'txt', 'Django 2', 'Tutorial', 'Django en entornos virtuales con Pipenv', '/academia/django/tutoriales/#utilizar-django-en-entornos-virtuales-con-pipenv'],
+        ['Tutoriales', 'txt', 'Django 2', 'Tutorial', 'Colorear sintaxis y autocompletar en VSC', '/academia/django/tutoriales/#colorear-sintaxis-y-autocompletar-en-visual-studio-code'],
+        ['Tutoriales', 'txt', 'Django 2', 'Tutorial', 'Filtrar modelo por un campo de formulario', '/academia/django/tutoriales/#filtrar-un-modelo-por-un-campo-utilizando-un-formulario'],
+        ['Tutoriales', 'txt', 'Django 2', 'Tutorial', 'Crear, editar y borrar instancias de modelo', '/academia/django/tutoriales/#crear-editar-y-borrar-instancias-de-modelos-con-formularios'],
+        ['Tutoriales', 'txt', 'Django 2', 'Tutorial', 'Mostrar gráficos generados con Matplotlib', '/academia/django/tutoriales/#mostrar-graficos-generados-con-matplotlib-en-django'],
+        ['Tutoriales', 'txt', 'Django 2', 'Tutorial', 'Implementar un sistema de autenticación', '/academia/django/tutoriales/#implementar-sistema-clasico-de-registro-login-y-logout'],
+        ['Tutoriales', 'txt', 'Django 2', 'Tutorial', 'Extender UserCreationForm para usar email', '/academia/django/tutoriales/#extender-el-usercreationform-para-registrarse-con-el-email'],
+        
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Introducción a JavaScript', '/academia/javascript/introduccion/'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', '¿Qué es JavaScript?', '/academia/javascript/introduccion/#que-es-javascript'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Primer contacto', '/academia/javascript/introduccion/#primer-contacto'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Configurando el entorno', '/academia/javascript/introduccion/#configurando-el-entorno'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Ejecución en el navegador', '/academia/javascript/introduccion/#ejecucion-en-el-navegador'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Separando el código', '/academia/javascript/introduccion/#separando-el-codigo'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Ejecución en Node', '/academia/javascript/introduccion/#ejecucion-en-nodejs'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Variables', '/academia/javascript/introduccion/#variables'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Constantes', '/academia/javascript/introduccion/#constantes'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Tipos primitivos', '/academia/javascript/introduccion/#tipos-primitivos'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Tipado dinámico', '/academia/javascript/introduccion/#tipado-dinamico'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', '¿Qué es un objeto?', '/academia/javascript/introduccion/#objetos'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Arreglos', '/academia/javascript/introduccion/#arreglos'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Funciones', '/academia/javascript/introduccion/#funciones'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Funciones con retorno', '/academia/javascript/introduccion/#funciones-con-retorno'],
+        ['Cursos', 'mix', 'JavaScript', 'Introduccion', 'Conversor de divisas vía API', '/academia/javascript/conversor-divisas/'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', '¿Qué es p5.js?', '/academia/javascript/biblioteca-p5js/'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Dibujando figuras', '/academia/javascript/biblioteca-p5js/#dibujando-figuras'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Colores y rellenos', '/academia/javascript/biblioteca-p5js/#colores-y-rellenos'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Variables internas', '/academia/javascript/biblioteca-p5js/#variables-internas'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Variables propias', '/academia/javascript/biblioteca-p5js/#variables-propias'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Objetos', '/academia/javascript/biblioteca-p5js/#objetos'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Valores mapeados', '/academia/javascript/biblioteca-p5js/#valores-mapeados'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Valores aleatorios', '/academia/javascript/biblioteca-p5js/#valores-aleatorios'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Expresiones lógicas', '/academia/javascript/biblioteca-p5js/#expresiones-logicas'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Condición if y else', '/academia/javascript/biblioteca-p5js/#condicion-if-else'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Bucles while y for', '/academia/javascript/biblioteca-p5js/#bucles-while-y-for'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Tablero de ajedrez', '/academia/javascript/biblioteca-p5js/#tablero-de-ajedrez'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Funciones', '/academia/javascript/biblioteca-p5js/#funciones'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Clases', '/academia/javascript/biblioteca-p5js/#clases'],
+        ['Cursos', 'mix', 'JavaScript', 'Gráficos p5', 'Arreglos', '/academia/javascript/biblioteca-p5js/#arreglos'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Introduccion', '/academia/javascript/nodejs/'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', '¿Qué es Node?', '/academia/javascript/nodejs/#que-es-nodejs'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Prompt de Node', '/academia/javascript/nodejs/#prompt-de-node'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Código no bloqueante', '/academia/javascript/nodejs/#codigo-no-bloqueante'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'El objeto global', '/academia/javascript/nodejs/#el-objeto-global'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Los módulos', '/academia/javascript/nodejs/#los-modulos'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Creando un módul', '/academia/javascript/nodejs/#creando-un-modulo'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Utilizando un módulo', '/academia/javascript/nodejs/#utilizando-un-modulo'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Exportación simplificada', '/academia/javascript/nodejs/#exportacion-simplificada'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Importación selectiva', '/academia/javascript/nodejs/#importacion-selectiva'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Documentación', '/academia/javascript/nodejs/#documentacion'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Módulo Path', '/academia/javascript/nodejs/#modulo-path'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Módulo OS', '/academia/javascript/nodejs/#modulo-os'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Módulo File System', '/academia/javascript/nodejs/#modulo-file-system'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Módulo Http', '/academia/javascript/nodejs/#modulo-http'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Simulando una API', '/academia/javascript/nodejs/#simulando-una-api'],
+        ['Cursos', 'mix', 'JavaScript', 'Node 10.24', 'Chat online y despliegue en Heroku', '/academia/javascript/chat-heroku/'],
+        ['Cursos', 'mix', 'JavaScript', 'Nuxt 2.4.0', 'Frontend para API de películas', '/academia/javascript/cliente-nuxt/'],
+        
+        ['Tutoriales', 'vid', 'Lenguaje C#', 'Introduccion', 'Conceptos básicos', 'https://www.youtube.com/watch?v=4jVmWWZZ4aY&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk'],
+        ['Tutoriales', 'vid', 'Lenguaje C#', 'Introduccion', 'Control de flujo', 'https://www.youtube.com/watch?v=M1xw_T-FfI4&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk'],
+        ['Tutoriales', 'vid', 'Lenguaje C#', 'Introduccion', 'Tipos compuestos', 'https://www.youtube.com/watch?v=dLFQkfskGEM&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk'],
+        ['Tutoriales', 'vid', 'Lenguaje C#', 'Introduccion', 'Estructuras', 'https://www.youtube.com/watch?v=AJhXOlmAQrM&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk'],
+        ['Tutoriales', 'vid', 'Lenguaje C#', 'Introduccion', 'Clases', 'https://www.youtube.com/watch?v=THDbo0HZIZU&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'GameObjects y scripts', 'https://www.youtube.com/watch?v=IZ4eiIf3DBY&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Componentes de GUI', 'https://www.youtube.com/watch?v=vTXKe1ooOnk&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Menús y cambio de escena', 'https://www.youtube.com/watch?v=-TobfKcKzhs&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Físicas y colisiones 2D', 'https://www.youtube.com/watch?v=znzLA0OapcU&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Sprites y movimiento 2D', 'https://www.youtube.com/watch?v=xfp4kpM3Asw&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Objetos dinámicos', 'https://www.youtube.com/watch?v=xAra3MrQ6iA&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Introducción al animador', 'https://www.youtube.com/watch?v=wvTQKPkWkZs&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Animaciones con sprites', 'https://www.youtube.com/watch?v=TxO8sR28TC0&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Reproductor de música', 'https://www.youtube.com/watch?v=XWY0STsGa1c&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Sistemas de partículas', 'https://www.youtube.com/watch?v=0iZLwPfviRU&list=PLiplYDjUMtthTOwbzd-FPZiBHNhwbNu5e'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Importar escenarios de Tiled', 'https://www.youtube.com/watch?v=7JdoF4Y-6Uk&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Pausa de juego con mensaje', 'https://www.youtube.com/watch?v=gxLwdADJqZo&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Información entre scripts', 'https://www.youtube.com/watch?v=u1dLdXBTBB8&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Guardar y cargar datos', 'https://www.youtube.com/watch?v=JH2HA6EJ56A&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Barra de vida simple', 'https://www.youtube.com/watch?v=LCHnFlCTHgg&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Guardar objetos en JSON', 'https://www.youtube.com/watch?v=3tzoxfajCU8&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Guardar listas en JSON', 'https://www.youtube.com/watch?v=MyvbFXwwLww&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Librerías reutilizables', 'https://www.youtube.com/watch?v=EZ4TJg4ku9Y&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Menú fácil pero resultón', 'https://www.youtube.com/watch?v=ttSfrh86BJo&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Objetos persistentes únicos', 'https://www.youtube.com/watch?v=RtCOomI_txo&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Mover objeto al puntero', 'https://www.youtube.com/watch?v=OY1wiLvjikk&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Tutoriales', 'vid', 'Unity 5.5', 'Tutorial', 'Enemigos que te persiguen', 'https://www.youtube.com/watch?v=G60le64vmM4&list=PLiplYDjUMtth5dFEDw_b9TRbS1TER9twf'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Tiles y escenario', 'https://www.youtube.com/watch?v=Y_PKWr_1rDw&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Animaciones y transiciones', 'https://www.youtube.com/watch?v=NQVMPeOfZpc&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Movimiento básico', 'https://www.youtube.com/watch?v=cT4cR9PQMg8&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Animaciones dinámicas', 'https://www.youtube.com/watch?v=J-4o-8rr_po&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Saltos y detalles', 'https://www.youtube.com/watch?v=ZRhWneXL3xo&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Fricción y plataformas', 'https://www.youtube.com/watch?v=QMQKGMsQQrg&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Plataformas móviles', 'https://www.youtube.com/watch?v=Yy-fyoEk1Ao&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Doble salto y pendientes', 'https://www.youtube.com/watch?v=K6qxV6txdzc&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Plataformas que caen', 'https://www.youtube.com/watch?v=stR7zhqsASg&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Cámara de seguimiento', 'https://www.youtube.com/watch?v=qHLfnHdpk7s&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Enemigos simples', 'https://www.youtube.com/watch?v=LS5zX7K7UGI&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Colisiones y enemigos', 'https://www.youtube.com/watch?v=NpbBCQu1Hpo&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.5', 'Plataformas', 'Saltos y retrocesos', 'https://www.youtube.com/watch?v=euY0rtadFV0&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP'],
+        ['Cursos', 'vid', 'Unity 5.6', 'Action RPG', 'Movimiento básico', 'https://www.youtube.com/watch?v=s81hQDAtvBE&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 5.6', 'Action RPG', 'Colisiones físicas', 'https://www.youtube.com/watch?v=BDmjvBa-X9w&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Puntos de teletransporte', 'https://www.youtube.com/watch?v=gG_goVY4uGs&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Detalles maestros', 'https://www.youtube.com/watch?v=0kQ5jeTHn6U&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Ataque con espada', 'https://www.youtube.com/watch?v=5dyV73JQzbI&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Objetos destruibles', ' https://www.youtube.com/watch?v=0LgCaEMCoz8&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Rayo con espada', 'https://www.youtube.com/watch?v=q1Yvu-KrvLA&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Enemigos con raycast', 'https://www.youtube.com/watch?v=wkYjVsQ40pk&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Ataques de enemigos', 'https://www.youtube.com/watch?v=vdg550ZmFes&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        ['Cursos', 'vid', 'Unity 2017.1', 'Action RPG', 'Vida de enemigos', 'https://www.youtube.com/watch?v=xp33f2WhfrA&list=PLiplYDjUMtthNlEmdbP7E6-ZaWTZKyAQ5'],
+        
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Presentación', 'https://www.youtube.com/watch?v=nrCiSd1UgGw&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Conceptos básicos de los videojuegos', 'https://www.youtube.com/watch?v=5voXzQ0Gr6M&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Instalación del programa', 'https://www.youtube.com/watch?v=jCDlrYNGZ5k&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Las Rooms, los Sprites y los Objetos', 'https://www.youtube.com/watch?v=8a2kLam_zIk&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Propiedades y Eventos de Objeto', 'https://www.youtube.com/watch?v=Koa0sBK06JM&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Animar un Sprite', 'https://www.youtube.com/watch?v=HBgp0rJyrjQ&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Fondo en movimiento y Sonidos', 'https://www.youtube.com/watch?v=jw58zg70Udo&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Dibujar Textos y Sprites', 'https://www.youtube.com/watch?v=guS-IMRZAFY&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'El Objeto Bomba', 'https://www.youtube.com/watch?v=XCX_9FpuxMg&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Colisiones entre Objetos que chocan', 'https://www.youtube.com/watch?v=gdmFbNNeGLI&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Crear el Objeto Explosión', 'https://www.youtube.com/watch?v=uE-jkGKx6Cs&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Hacer que el Avión Explote', 'https://www.youtube.com/watch?v=KbfjFqSLWPI&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Evento Step y rastro humo', 'https://www.youtube.com/watch?v=L8GGq8vxQso&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Cámara, Ventana, Views y Seguimiento', 'https://www.youtube.com/watch?v=oWQzGingznQ&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Crear un Marcador usando Variables', 'https://www.youtube.com/watch?v=8blwhXZk5Cs&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Condición de fin de juego y reinicio', 'https://www.youtube.com/watch?v=D3zx-AbnuVs&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Un contacto con el GML', 'https://www.youtube.com/watch?v=W4dMuZeezDM&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Alarmas y Aleatoriedad', 'https://www.youtube.com/watch?v=kX_j2OciGEA&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Principiante', 'Mejorar la experiencia final', 'https://www.youtube.com/watch?v=JTmo4zBZi9A&list=PLiplYDjUMtti9tZDyr1uuzdtM2J1QbFFo'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Variables y literales', 'https://www.youtube.com/watch?v=LGEoxuvY1s4&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Macros', 'https://www.youtube.com/watch?v=kz3oIdr3gjo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Operadores', 'https://www.youtube.com/watch?v=sINYicM-Khw&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Expresiones', 'https://www.youtube.com/watch?v=9qH_4Jo-r4Y&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Condiciones If y Switch', 'https://www.youtube.com/watch?v=lEyjet8ChQk&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Bucles Do, While, Repeat y For', 'https://www.youtube.com/watch?v=tzTudHYdFFo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Scripts (definición y manejo)', 'https://www.youtube.com/watch?v=jAX5q_vlMC8&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Funciones útiles', 'https://www.youtube.com/watch?v=0UwKRrXkAh8&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Objetos e instancias', 'https://www.youtube.com/watch?v=9LKt7rMs5Zo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Sprites y sus propiedades', 'https://www.youtube.com/watch?v=3ZYHKHs7xhQ&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Evento Step', 'https://www.youtube.com/watch?v=NY61bE2SCb0&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Evento Draw', 'https://www.youtube.com/watch?v=8ao3z_PJ7_w&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Evento Draw GUI', 'https://www.youtube.com/watch?v=1iS0ZNzVJvg&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Inputs por teclado y ratón', 'https://www.youtube.com/watch?v=yC2aig8z2iY&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Cambios de Room', 'https://www.youtube.com/watch?v=BaTGBtdKLBU&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Control de Alarmas', 'https://www.youtube.com/watch?v=AKLmmnYv66Y&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Control de Sonido', 'https://www.youtube.com/watch?v=Y4h26ebw20s&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Arreglos 1D (Vectores)', 'https://www.youtube.com/watch?v=oVoUdi-_iqQ&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Lenguaje GML', 'Arreglos 2D (Tablas)', 'https://www.youtube.com/watch?v=mD_QFDtzMHw&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Presentación', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Preparar recursos', 'https://www.youtube.com/watch?v=q0BqL9e8vLY&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Room y objetos base', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Movimiento', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Colisiones paredes', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Colisiones jugador', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Gestionar dificultad', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Marcador de puntos', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Sonidos', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Portada con menú', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Mejorar portada', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Arcade PONG', 'Retoques y distribución', 'https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Presentación', 'https://www.youtube.com/watch?v=58T2sHvBfQ0&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Movimiento básico', 'https://www.youtube.com/watch?v=EheRpKQoNO0&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Fondo, vista y cámara', 'https://www.youtube.com/watch?v=X5HSAPEZ0_w&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Colisiones y máscaras', 'https://www.youtube.com/watch?v=RZmrXiRjp9k&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Disparar desde el arma', 'https://www.youtube.com/watch?v=DsdlR26gHOs&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Estados y animaciones', 'https://www.youtube.com/watch?v=37HSwRs-Iis&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Estado de movimiento', 'https://www.youtube.com/watch?v=Lr8r212NAlk&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Estado de persecución', 'https://www.youtube.com/watch?v=g3nmIOzfkVU&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Estado de ataque', 'https://www.youtube.com/watch?v=jFq8ZlWQccA&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Ataques y colisiones', 'https://www.youtube.com/watch?v=CtE72yitsrU&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Gestionar las vidas', 'https://www.youtube.com/watch?v=KOsXNIfZSS4&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'HUD: Barra de vida y avatar', 'https://www.youtube.com/watch?v=ytsPG2SJiVY&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Barra de vida en enemigos', 'https://www.youtube.com/watch?v=C29pbnt1igE&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Fuego de disparo', 'https://www.youtube.com/watch?v=KZP58Tn5u0U&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Sustituir cursor por mirilla', 'https://www.youtube.com/watch?v=Gw5_pWdhD7g&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Láser en el arma', 'https://www.youtube.com/watch?v=C4aJPFLyS4A&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Música y sonidos', 'https://www.youtube.com/watch?v=F8B7fRQdRGM&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Escenario con tiles', 'https://www.youtube.com/watch?v=6WYUyqf0yR8&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Ajustes máscaras y profundidad', 'https://www.youtube.com/watch?v=UumLDqTdiuY&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Partículas efecto sangre', 'https://www.youtube.com/watch?v=ccx-eNte3b8&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Oscuridad con superfícies', 'https://www.youtube.com/watch?v=d_eMrqkN68M&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Gestor de niveles', 'https://www.youtube.com/watch?v=HzJfdt2jrOI&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'HUD: Marcador y nivel', 'https://www.youtube.com/watch?v=wFPcXbTt6NE&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Pausar con superfícies', 'https://www.youtube.com/watch?v=sucfgescCZo&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Shooter TDS', 'Golpe cuerpo a cuerpo', 'https://www.youtube.com/watch?v=K7jYG0Z5MZw&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Presentación', 'https://www.youtube.com/watch?v=fB1HSO5Fwuw&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Sprites y movimiento', 'https://www.youtube.com/watch?v=tInSBFqnT_E&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Máquina de estados', 'https://www.youtube.com/watch?v=0UzYP2oZDP0&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Estado de ataque', 'https://www.youtube.com/watch?v=MGQa0Q_zJBg&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Diseño del escenario', 'https://www.youtube.com/watch?v=CE-Jc2-ehyc&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Gestión de colisione', 'https://www.youtube.com/watch?v=n0VNChy95T8&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Teletransporte entre rooms', 'https://www.youtube.com/watch?v=eqifyCARgSY&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Diálogos y HUD con zona', 'https://www.youtube.com/watch?v=BzglJSf3x1k&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Hierbas atacables', 'https://www.youtube.com/watch?v=zYGUrTzbkgs&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Conejitos atacables', 'https://www.youtube.com/watch?v=0N8m3OyyHaI&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Enemigos goblin', 'https://www.youtube.com/watch?v=cg0PQuwLeXA&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Vida y reinicio de juego', 'https://www.youtube.com/watch?v=CkxDV6lwzks&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Cursos', 'vid', 'GAME MAKER 1.4', 'Action RPG', 'Sistema de guardado', 'https://www.youtube.com/watch?v=2PAIkcEREYc&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Beat Em Up', 'Controlando animaciones', 'https://www.youtube.com/watch?v=7vuoJSgVf7A&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Beat Em Up', 'Controlando movimientos', 'https://www.youtube.com/watch?v=Lg-V4Leoe7w&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Beat Em Up', 'Añadiendo enemigos', 'https://www.youtube.com/watch?v=clyteCzNICI&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Beat Em Up', 'Creando barra de vida', 'https://www.youtube.com/watch?v=6rkfj96Aa70&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Beat Em Up', 'Creando escenas', 'https://www.youtube.com/watch?v=wkkWSg2VbWs&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Transiciones', 'https://www.youtube.com/watch?v=JzeqX1ZcafA&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Manejo de objetos dinámicos', 'https://www.youtube.com/watch?v=eUU7A0ert68&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Disparo estilo Megaman', 'https://www.youtube.com/watch?v=RcciolMuxAI&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Colisiones perfectas', 'https://www.youtube.com/watch?v=jZXRVhdo7Ks&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Abrir puertas con llave', 'https://www.youtube.com/watch?v=COOH87x0qCc&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Ruleta de la suerte', 'https://www.youtube.com/watch?v=WXYff8Jd6Xs&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Importar sprites', 'https://www.youtube.com/watch?v=NVDo_NqHnXM&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Juegos de cartas', 'https://www.youtube.com/watch?v=yR6a6e3caMo&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Movimiento Pokemon', 'https://www.youtube.com/watch?v=7-dNyogjFqc&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Plataformas', 'https://www.youtube.com/watch?v=65vrwuVG0EA&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Uso de alarmas', 'https://www.youtube.com/watch?v=aQcq-h8LWXA&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Ficheros INI', 'https://www.youtube.com/watch?v=0WrH5NHsAFc&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        ['Tutoriales', 'vid', 'GAME MAKER 1.4', 'Tutorial', 'Adiós GameMaker, Hola Unity', 'https://www.youtube.com/watch?v=33_geruuE9k&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE'],
+        
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Configuración un servidor web', '/academia/gnu-linux/ubuntu-server-web/'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Registro en Digital Ocean', '/academia/gnu-linux/ubuntu-server-web/#registro-en-digital-ocean'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Creando un Droplet', '/academia/gnu-linux/ubuntu-server-web/#creando-un-droplet'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Primera conexión SSH', '/academia/gnu-linux/ubuntu-server-web/#primera-conexion-ssh'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Creando un usuario administrador', '/academia/gnu-linux/ubuntu-server-web/#creando-un-administrador'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Accediendo con clave SSH', '/academia/gnu-linux/ubuntu-server-web/#accediendo-con-clave-ssh'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Configurando un dominio', '/academia/gnu-linux/ubuntu-server-web/#configurando-un-dominio'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Primeros pasos con Nginx', '/academia/gnu-linux/ubuntu-server-web/#primeros-pasos-con-nginx'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Bloques de servidor', '/academia/gnu-linux/ubuntu-server-web/#bloques-de-servidor'],
+        ['Cursos', 'mix', 'Ubuntu Server', '18.04 LTS', 'Creando certificados SSL', '/academia/gnu-linux/ubuntu-server-web/#creando-certificados-ssl'],
+        ['Tutoriales', 'txt', 'Ubuntu Server', 'Nginx 1.17', 'Desplegar Django en el servidor', '/academia/django/tutoriales/#django-en-ubuntu-server-con-nginx-gunicorn-y-supervisor'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Programación con pseudocódigo', 'https://www.youtube.com/watch?v=SPIG14UV934&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Instalación de PseInt', 'https://www.youtube.com/watch?v=kXaJ1kdGmIk&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Primer programa', 'https://www.youtube.com/watch?v=BRFcYDXDdj4&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Estructura de un programa', 'https://www.youtube.com/watch?v=rC71WT49j8c&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Variables y tipos de datos', 'https://www.youtube.com/watch?v=5CLASPfh5q8&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Tipos de datos simples', 'https://www.youtube.com/watch?v=Ic0lid32efs&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Acciones secuenciales', 'https://www.youtube.com/watch?v=mTaX-4oHU_M&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Definición y asignación', 'https://www.youtube.com/watch?v=ncE7qR3P5hk&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Lectura y escritura', 'https://www.youtube.com/watch?v=ylKCK5494x4&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Expresiones', 'https://www.youtube.com/watch?v=JneEZ5Gbl5g&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Tipos de operadores', 'https://www.youtube.com/watch?v=P_cpMPfto_Q&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Expresiones anidadas', 'https://www.youtube.com/watch?v=GA8R4sUrtn4&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Operaciones con cadenas', 'https://www.youtube.com/watch?v=otr7-7kxuJU&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Las tablas de la verdad', 'https://www.youtube.com/watch?v=hNe6L2EaNdo&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Estructuras de control', 'https://www.youtube.com/watch?v=P6-4NXKMZXU&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Condiciones Si y Según', 'https://www.youtube.com/watch?v=iAuUp_LT3A0&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Bucle Mientras y Repetir', 'https://www.youtube.com/watch?v=ItN3OvtUU-M&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Bucle Para', 'https://www.youtube.com/watch?v=Qk7xEumeQAA&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Subprocesos', 'https://www.youtube.com/watch?v=VfUe8gnJq7g&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Procedimientos', 'https://www.youtube.com/watch?v=WtKIbpetXvI&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Funciones', 'https://www.youtube.com/watch?v=9RK0_LogXaM&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Funciones recursivas', 'https://www.youtube.com/watch?v=7Tg0cvrC6ek&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Arreglos y cadenas', 'https://www.youtube.com/watch?v=NHnR5zuNdYM&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Manejo de arreglos', 'https://www.youtube.com/watch?v=0dxybTukVWk&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Arreglos multi dimensionales', 'https://www.youtube.com/watch?v=NYD53_t_K44&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Búsqueda secuencial', 'https://www.youtube.com/watch?v=5KGA065gYQ8&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Funciones de cadenas', 'https://www.youtube.com/watch?v=WM3MPV5TGfs&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Algoritmos de ordenación', 'https://www.youtube.com/watch?v=3a72oGL0qVQ&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Ordenación por Selección', 'https://www.youtube.com/watch?v=TSaJYqOCIwM&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Ordenación por Inserción', 'https://www.youtube.com/watch?v=OCzo5unCIEM&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Ordenación por Burbuja', 'https://www.youtube.com/watch?v=3YssOb0JDTA&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Ordenación por Burbuja Bidireccional', 'https://www.youtube.com/watch?v=ssEmkHw3Ous&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Cursos', 'vid', 'Pseudocodigo', 'PSeInt 2014/09', 'Proyecto piedra, papel, tijeras', 'https://www.youtube.com/watch?v=Aguc57c2IWs&list=PLiplYDjUMtth8RvrndUPDVOMD20I4O2Wd'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Geometría', 'El eje de coordenadas', '/escueladevideojuegos/articulos/mejorar-la-jugabilidad-en-videojuegos-2d/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Geometría', 'Funciones, sistemas y puntos', '/escueladevideojuegos/articulos/funciones-sistemas-puntos-teoria-matematicas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Geometría', 'Ecuaciones lineales', '/escueladevideojuegos/articulos/lineas-ecuaciones-lineales-teoria-matematicas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Geometría', 'Colisiones entre líneas', '/escueladevideojuegos/articulos/deteccion-de-colisiones-entre-lineas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Geometría', 'Distancia entre dos puntos (2D y 3D)', '/escueladevideojuegos/articulos/distancia-entre-dos-puntos-teoria/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Geometría', 'Ecuaciones parábolas', '/escueladevideojuegos/articulos/parabolas-teoria/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Geometría', 'Ecuaciones círculos y esferas', '/escueladevideojuegos/articulos/circulos-y-esferas-teoria/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Recopilacion', 'Frameworks y librerías', '/escueladevideojuegos/articulos/frameworks-librerias-bibliotecas-recopilacion/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Recopilacion', 'Engines y motores', '/escueladevideojuegos/articulos/engines-motores-recopilacion-programas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Recopilacion', 'Editores de audio', '/escueladevideojuegos/articulos/audio-sfx-y-musica-recopilacion-de-programas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Recopilacion', 'Editores gráficos 2D', '/escueladevideojuegos/articulos/edicion-graficos-2d-recopilacion-programas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Recopilacion', 'Editores de mapas y fuentes', '/escueladevideojuegos/articulos/editores-de-mapas-y-generadores-de-fuentes-recopilacion-de-programas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Recopilacion', 'Editores de modelaje 3D', '/escueladevideojuegos/articulos/edicion-graficos-3d-recopilacion-programas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Articulo', '¿Qué son los videojuegos?', '/escueladevideojuegos/articulos/que-es-un-videojuego/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Articulo', '¿Cómo funcionan los videojuegos?', '/escueladevideojuegos/articulos/funciona-videojuego-fases-logicas/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Articulo', '¿Cómo se crean los videojuegos?', '/escueladevideojuegos/articulos/fases-del-desarrollo-de-videojuegos/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Articulo', '¿Cómo trabajar desarrollando videojuegos?', '/escueladevideojuegos/articulos/trabajar-en-el-mundo-de-los-videojuegos/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Articulo', '¿Qué es el Motion Blur?', '/escueladevideojuegos/articulos/que-es-el-motion-blur/'],
+        ['Apuntes', 'txt', 'Videojuegos', 'Articulo', '¿Cómo mejorar un videojuego?', '/escueladevideojuegos/articulos/mejorar-la-jugabilidad-en-videojuegos-2d/'],
+      ]
+      var loadingData = '<div style="text-align:center;">Cargando la base de datos de archivos<br><img src="/assets/images/loading.gif" style="box-shadow:none;margin-top:12px;margin-bottom:3px;"/></div>';
+      ready(function(){
+        var app = new Vue({
+          el: '#app', data: { search: '', loading: loadingData, items: database },
+          methods: { 
+            showDb: function() { this.loading = false }
+          },
+          computed: {
+            filteredItems() {
+              return this.items.filter(item => {
+                return item[0].toLowerCase().indexOf(this.search.toLowerCase()) > -1 || 
+                item[2].toLowerCase().indexOf(this.search.toLowerCase()) > -1 || 
+                item[3].toLowerCase().indexOf(this.search.toLowerCase()) > -1 || 
+                item[4].toLowerCase().indexOf(this.search.toLowerCase()) > -1
+              })
+            }
+          }
+        })
+        setTimeout(function () { app.showDb() }, 1500)
+      });
+
+              
     </script>
   </body>
 </html>

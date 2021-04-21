@@ -1,0 +1,129 @@
+html, body {
+font-family: "Fira Code", monospace;
+padding: 0;
+margin: 0;
+overflow-x: hidden;
+background-color: #191a1d; }
+
+main {
+margin: 0;
+padding: 15px 15px 9px 15px;
+width: 928px;
+margin: 0 auto;
+font-size: 99%;
+background: white; }
+
+ul {
+list-style: none;
+padding-left: 0;
+padding-bottom: 0;
+margin-bottom: 0;
+margin-top: 6px;
+padding-top: 0px; }
+
+li { margin-bottom: 2px; }
+a { text-decoration: none; }
+a:link,
+a:focus,
+a:visited { color: #2091bd; }
+a:hover { color: #12599c; text-decoration: underline; }
+
+nav {
+background-color: #191a1d;
+padding: 0;
+margin: 0;
+/* box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1),
+    0 0.4rem 0.8rem rgba(0, 0, 0, 0.2); */
+top: 0;
+right: 0;
+left: 0; }
+
+nav div {
+width: 935px;
+margin: 0 auto;
+height: 3.5rem; }
+
+nav div img {
+margin-top: 8px;
+margin-left: 8px; }
+
+nav div .archivo {
+color: white;
+margin-left: 14px;
+margin-right: 5px;
+line-height: 56px;
+vertical-align: top;
+float: right;
+font-size: 18px; }
+
+nav div .archivo a {
+color: rgb(245, 245, 245);
+text-decoration: none; }
+nav div .archivo a:hover {
+color: #3487e7; }
+
+.wrapper {
+display: grid;
+grid-template-columns: 100%;
+grid-gap: 25px;
+color: #444;
+text-align: left;}
+
+.one img { box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 3px 3px 5px 0px rgba(0, 0, 0, 0.1); }
+
+@media (max-width: 949px) { 
+    .wrapper { grid-template-columns: 1fr; grid-gap: 0px;}
+    main { width: 100%;}
+    nav div { width: 100%; margin: 0 auto; height: 3.5rem;}
+    nav div .archivo { margin-right: 15px;}
+    .one, .two { padding-right: 30px; }
+    .two { margin-top: 20px; padding-top: 0px; }
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    font-size: 33px;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+@media (max-width: 380px) {
+    nav div .archivo {
+        display: none; } }
+
+img.thumb {
+    vertical-align: top;
+    margin-right: 7px; }
+
+a { outline: 0; }
+
+.audioMain {
+    margin: 0px auto 20px;
+    padding: 0px;
+    width: 958px; }
+
+@media (max-width: 949px) {
+    .audioMain {
+    width: 100%; } }
+
+
+@media (max-width: 949px) { 
+    .blocky {padding:5px 0px 10px 0px!important; display:block !important;;border:none !important;font-size:18px !important;}
+}
+
+/* tags classes */
+.tag {width:135px;margin-right:5px;color:black;border-radius:2.5px;text-transform:uppercase;font-size:15.5px;padding:2px 3px;display:inline-block;text-align:center;}
+.python-3 { background-color: rgb(119, 176, 251); }
+.django-2 { background-color: rgb(111, 184, 109); }
+.javascript { background-color: rgb(245, 231, 35); }
+.lenguaje-c { background-color: #f1b3ee}
+.unity-55 { background-color: #cfcfcf}
+.unity-56 { background-color: #b8b8b8}
+.unity-20171 { background-color: #aaaaaa}
+.unity-2021 { background-color: #929292}
+.game-maker-14 { background-color: #61c89d}
+.videojuegos { background-color: #f891a3}
+.ubuntu-server { background-color: #ffbc40}
+.pseudocodigo { background-color: #ce9efb}
