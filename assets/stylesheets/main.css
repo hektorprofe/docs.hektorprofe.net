@@ -111,19 +111,19 @@ a { outline: 0; }
 
 @media (max-width: 949px) { 
     .blocky {padding:5px 0px 10px 0px!important; display:block !important;;border:none !important;font-size:18px !important;}
+    .date{display: none !important}
+    .search input {width: 96%!important}
 }
 
 /* tags classes */
 .tag {width:135px;margin-right:5px;color:black;border-radius:2.5px;text-transform:uppercase;font-size:15.5px;padding:2px 3px;display:inline-block;text-align:center;}
-.python-3 { background-color: rgb(119, 176, 251); }
-.django-2 { background-color: rgb(111, 184, 109); }
+.python { background-color: rgb(119, 176, 251); }
+.django { background-color: rgb(111, 184, 109); }
 .javascript { background-color: rgb(245, 231, 35); }
-.lenguaje-c { background-color: #f1b3ee}
-.unity-55 { background-color: #cfcfcf}
-.unity-56 { background-color: #b8b8b8}
-.unity-20171 { background-color: #aaaaaa}
-.unity-2021 { background-color: #929292}
-.game-maker-14 { background-color: #61c89d}
+.unity-5 { background-color: #cfcfcf}
+.unity-2017 { background-color: #8f8f8f}
+.unity-2021 { background-color: #5a5a5a;color:#fff}
+.game-maker { background-color: #61c89d}
 .videojuegos { background-color: #f891a3}
-.ubuntu-server { background-color: #ffbc40}
+.servidores { background-color: #ffbc40}
 .pseudocodigo { background-color: #ce9efb}
