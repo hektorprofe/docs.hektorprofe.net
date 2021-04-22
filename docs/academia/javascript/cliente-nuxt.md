@@ -13,7 +13,7 @@ El cliente nos ofrecerá tanto formularios de registro como de identificación y
 
 Por si fuera poco añadiremos también unas alertas <span style="font-weight:500">toast</span> asíncronas que quedan geniales.
 
-**Repositorio**: <a href="https://github.com/hektorprofe/spa-peliculas-nuxt-curso" target="_blank">https://github.com/hektorprofe/spa-peliculas-nuxt-curso</a>
+**Repositorio**: <a href="https://github.com/hektorprofe/curso-spa-peliculas-nuxt" target="_blank">https://github.com/hektorprofe/curso-spa-peliculas-nuxt</a>
 
 ## Creando nuestro proyecto
 

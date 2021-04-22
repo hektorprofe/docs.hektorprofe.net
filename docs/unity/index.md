@@ -1,40 +1,14 @@
-title: Apuntes desarrollo de videojuegos | Curso Unity sin programar | Hektor Profe
-description: Recopilación de apuntes de mi curso sobre desarrollo de videojuegos en Unity sin programar desde cero con Visual Scripting.
+title: Apuntes desarrollo de videojuegos | Curso Unity | Hektor Profe
+description: Recopilación de apuntes de mis cursos sobre desarrollo de videojuegos en Unity desde cero
 
-# Apuntes del curso de Unity sin programar
+# Apuntes para mis cursos de Unity
 
-Estos apuntes son un material de apoyo para los alumnos de mi futuro curso de Unity en Udemy publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
+Estos apuntes son un material de apoyo para mis futuros cursos de Unity publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
 
 Podéis navegar por ellos utilizando el menú lateral.
 
 
 <!-- INDICE
-# Primer contacto
-
-El objetivo de este bloque es familiarizarte con Unity y, aprender a moverte por la escena, a manipular objetos, moverlos, rotarlos, escalarlos... Qué son los recursos, los prefabs, los componentes y sus propiedades.
-
-## Presentación y preparación
-
-- Quién soy y qué aprenderás
-- Puesta a punto de Unity
-- FAQS
-
-## Introducción a Unity
-
-# Sandbox 3D (Empezando con Unity y Visual Scripting)
-
-En este bloque crearemos un sandbox tridimensional con elementos físicos, interacción entre los objetos, materiales, texturas, colisiones... E introduciremos la programación de la lógica mediante con Visual Scripting, la nueva funcionalidad nativa del motor desde 2021.
-
-## Escena base
-
-- Presentación
-  Para familiarizarnos con Unity se va a crear un pequeño escenario utilizando assets libres. Añadiré retos en medio de las lecciones. Veremos como crear un plano en el espacio, crear unas montañas, añadir unas casitas, cosas así sencillas (curso arpg, buscar assets libres)
-- TODO
-
-## Introducción a Visual Scripting
-
-- Presentación
-  Todo sobre VS con ejemplos utiles y sencillos
 
 ## Mecánicas y objetivos
 

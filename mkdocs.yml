@@ -42,7 +42,7 @@ extra:
 nav:
 
   - Menús: 
-    - 'cursos.md'
+    - 'buscador.md'
 
   - Academia de programación:
     - Índice del archivo:                 'academia/index.md'
@@ -306,13 +306,25 @@ nav:
     - Desarrollo de proyectos:            'qt-pyside\desarrollo-proyectos.md' 
 
   - Apuntes de Unity sin programar:                    
-    - Índice del archivo:                 'unity/index.md'
-    - Conceptos básicos:                  
-      - Introducción:                     'unity/introduccion-unity.md'
-      - Sandbox 3D:                       'unity/sandbox-3d.md'
-      - Visual Scripting:                 'unity/visual-scripting.md'
-    # - Primer videojuego:                  
-    #   - Empezando:                        'unity/primer-videojuego.md'
+    - Índice del archivo:                 'unity/index.md'               
+    - Introducción:                     
+      - Luces, cámaras y acción:          'unity/introduccion/luces-camaras-accion.md'
+      - Objetos, recursos y prefabs:      'unity/introduccion/objetos-recursos-prefabs.md'
+      - Componentes y propiedades:        'unity/introduccion/componentes-propiedades.md'
+    - Sandbox 3D:                       
+      - Creando el proyecto:              'unity/sandbox/creando-proyecto.md'
+      - Físicas y materiales:             'unity/sandbox/fisicas-materiales.md'
+      - Diseñando un circuito:            'unity/sandbox/disenando-circuito.md'
+      - Paquete Cinemachine:              'unity/sandbox/paquete-cinemachine.md'
+      - Generando un ejecutable:          'unity/sandbox/generando-ejecutable.md'
+    - Visual Scripting:                 
+      - Flujo del videojuego:             'unity/visual-scripting/flujo-videojuego.md'
+      - Buscador de unidades:             'unity/visual-scripting/buscador-unidades.md'
+      - Tipos de datos:                   'unity/visual-scripting/tipos-datos.md'
+      - Uso de variables:                 'unity/visual-scripting/uso-variables.md'
+      - Variables de objeto:              'unity/visual-scripting/variables-objeto.md'
+      - Reutilización de scripts:         'unity/visual-scripting/reutilizacion-scripts.md'
+      - Grupos y superunidades:           'unity/visual-scripting/grupos-superunidades.md'
 
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'
