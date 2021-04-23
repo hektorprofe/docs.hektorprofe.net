@@ -41,7 +41,9 @@
               </span><span :class="['tag', slugify(campo[3])]" style="border:2px solid rgba(0, 0, 0, 0.685);padding:0px 3px">
                 {{ campo[3] }}
               </span><span :class="['tag', 'blocky']" style="width:400px;text-align:left;text-transform:inherit;">
-                <a :href="campo[5]" target="_blank">{{ campo[4] }}</a></span><span :class="['date', 'tag']" style="float:right;text-align:right;">{{ campo[6] }}</span>
+                <a v-if="campo[5].startsWith('http')" :href="campo[5]" target="_blank">{{ campo[4] }}</a>
+                <a v-else :href="campo[5]">{{ campo[4] }}</a>
+              </span><span :class="['date', 'tag']" style="float:right;text-align:right;">{{ campo[6] }}</span>
             </div>
           </div>
         </div>
