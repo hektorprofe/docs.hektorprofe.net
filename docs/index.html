@@ -31,8 +31,8 @@
           </div>
           <div v-else>
             <div class="search" style="margin-bottom:16.5px;">
-              <i>Nota: Buscador experimental en base a 568 registros.</i><br>
-              <input type="text" v-model="search" placeholder="Busca UNA keyword. Ejemplos: python, unity, curso, tutorial, 2019, etc." style="font-family: 'Fira Code', monospace;border:2px solid rgba(0, 0, 0, 0.602); border-radius:4px; margin-top:5px;font-size:16.5px;padding:3px 5px;width:98.5%"/>
+              <i>Nota: Buscador experimental en base a 612 registros.</i><br>
+              <input type="text" v-model="search" placeholder="Busca UNA keyword. Ej: python, unity, curso, tutorial, 2019" style="font-family: 'Fira Code', monospace;border:2px solid rgba(0, 0, 0, 0.602); border-radius:4px; margin-top:5px;font-size:16.5px;padding:3px 5px;width:98.5%"/>
             </div>
             <div v-for="campo in filteredItems" style="padding:2.5px 0px;">
               <img :src="types[campo[1]]" :alt="campo[0]" :title="campo[0]" width="24px;" style="box-shadow:none;vertical-align:top;margin-right:-4.5px;padding-right:0px;margin-top:0px;"/>
@@ -41,7 +41,9 @@
               </span><span :class="['tag', slugify(campo[3])]" style="border:2px solid rgba(0, 0, 0, 0.685);padding:0px 3px">
                 {{ campo[3] }}
               </span><span :class="['tag', 'blocky']" style="width:400px;text-align:left;text-transform:inherit;">
-                <a :href="campo[5]" target="_blank">{{ campo[4] }}</a></span><span :class="['date', 'tag']" style="float:right;text-align:right;">{{ campo[6] }}</span>
+                <a v-if="campo[5].startsWith('http')" :href="campo[5]" target="_blank">{{ campo[4] }}</a>
+                <a v-else :href="campo[5]">{{ campo[4] }}</a>
+              </span><span :class="['date', 'tag']" style="float:right;text-align:right;">{{ campo[6] }}</span>
             </div>
           </div>
         </div>
@@ -111,7 +113,7 @@
         ['Cursos', 'mix', 'Servidores', 'Ubuntu Server', 'Primera conexión SSH', '/academia/gnu-linux/ubuntu-server-web/#primera-conexion-ssh','09/2019'],
         ['Cursos', 'mix', 'Servidores', 'Ubuntu Server', 'Creando un Droplet', '/academia/gnu-linux/ubuntu-server-web/#creando-un-droplet','09/2019'],
         ['Cursos', 'mix', 'Servidores', 'Ubuntu Server', 'Registro en Digital Ocean', '/academia/gnu-linux/ubuntu-server-web/#registro-en-digital-ocean','09/2019'],
-        ['Cursos', 'mix', 'Servidores', 'Ubuntu Server', 'Configuración un servidor web', '/academia/gnu-linux/ubuntu-server-web/','09/2019'],
+        ['Cursos', 'mix', 'Servidores', 'Ubuntu Server', 'Configuración de un servidor web', '/academia/gnu-linux/ubuntu-server-web/','09/2019'],
         ['Cursos', 'mix', 'JavaScript', 'Cliente API', 'Implementando un plugin de alertas', '/academia/javascript/cliente-nuxt/#implementando-un-plugin-de-alertas','08/2019'],
         ['Cursos', 'mix', 'JavaScript', 'Cliente API', 'Añadiendo el botón de acción', '/academia/javascript/cliente-nuxt/#anadiendo-el-boton-de-accion','08/2019'],
         ['Cursos', 'mix', 'JavaScript', 'Cliente API', 'Manejando las favoritas en el store', '/academia/javascript/cliente-nuxt/#manejando-las-favoritas-en-el-store','08/2019'],
@@ -148,7 +150,16 @@
         ['Cursos', 'mix', 'Django', 'Introduccion', 'Instalación con Pipenv', '/academia/django/introduccion/#instalacion-con-pipenv','07/2019'],
         ['Cursos', 'mix', 'Django', 'Introduccion', '¿Qué es Django?', '/academia/django/introduccion/#que-es-django','07/2019'],
         ['Cursos', 'mix', 'Django', 'Introduccion', 'Introducción a Django Framework', '/academia/django/introduccion/','07/2019'],
-        ['Cursos', 'mix', 'JavaScript', 'Node 10', 'Chat online y despliegue en Heroku', '/academia/javascript/chat-heroku/','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Realizando el despliegue', '/academia/javascript/chat-heroku/#realizando-el-despliegue','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Preparando el repositorio', '/academia/javascript/chat-heroku/#preparando-el-repositorio','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Puliendo el cliente', '/academia/javascript/chat-heroku/#puliendo-el-cliente','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Difundiendo el mensaje', '/academia/javascript/chat-heroku/#difundiendo-el-mensaje','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Mensajes al servidor', '/academia/javascript/chat-heroku/#mensajes-al-servidor','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Bienvenida al cliente', '/academia/javascript/chat-heroku/#bienvenida-al-cliente','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Conexiones al servidor', '/academia/javascript/chat-heroku/#conexiones-al-servidor','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Preparando el cliente', '/academia/javascript/chat-heroku/#preparando-el-cliente','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Preparando el servidor', '/academia/javascript/chat-heroku/#preparando-el-servidor','06/2019'],
+        ['Cursos', 'mix', 'JavaScript', 'Chat online', 'Proyecto chat con Node y Heroku', '/academia/javascript/chat-heroku/','06/2019'],
         ['Cursos', 'mix', 'JavaScript', 'Node 10', 'Simulando una API', '/academia/javascript/nodejs/#simulando-una-api','06/2019'],
         ['Cursos', 'mix', 'JavaScript', 'Node 10', 'Módulo Http', '/academia/javascript/nodejs/#modulo-http','06/2019'],
         ['Cursos', 'mix', 'JavaScript', 'Node 10', 'Módulo File System', '/academia/javascript/nodejs/#modulo-file-system','06/2019'],
@@ -387,6 +398,26 @@
         ['Cursos', 'vid', 'Unity 5', 'Plataformas', 'Movimiento básico', 'https://www.youtube.com/watch?v=cT4cR9PQMg8&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP','04/2017'],
         ['Cursos', 'vid', 'Unity 5', 'Plataformas', 'Animaciones y transiciones', 'https://www.youtube.com/watch?v=NQVMPeOfZpc&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP','04/2017'],
         ['Cursos', 'vid', 'Unity 5', 'Plataformas', 'Tiles y escenario', 'https://www.youtube.com/watch?v=Y_PKWr_1rDw&list=PLiplYDjUMtti5bWJ1Ugystr-vUg8B5EuP','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Exportación multiplataforma', 'https://www.youtube.com/watch?v=BH1ibQElbbE','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Guardar récord con PlayerPrefs', 'https://www.youtube.com/watch?v=34UMWWHOjlw','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Marcador de puntos', 'https://www.youtube.com/watch?v=maqZrl7M1Vk','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Efecto polvo con partículas', 'https://www.youtube.com/watch?v=qnPrRAcX6lM','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Dificultad progresiva', 'https://www.youtube.com/watch?v=op_lKvOTQaU','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Música y sonidos', 'https://www.youtube.com/watch?v=xGAWaH26VwE','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Reinicio de juego', 'https://www.youtube.com/watch?v=7F3wEyhsUVY','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Animación de muerte', 'https://www.youtube.com/watch?v=0HRcAg_8fXo','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Generador de enemigos', 'https://www.youtube.com/watch?v=_K4Rm8HXzTU','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Auto-destruir enemigos', 'https://www.youtube.com/watch?v=QKmj2eS6mvE','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Creando al enemigo', 'https://www.youtube.com/watch?v=0KV-gC8M07c','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Animación al saltar', 'https://www.youtube.com/watch?v=EfFGbiw7BXQ','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Animación al correr', 'https://www.youtube.com/watch?v=Zw-9DWyz46g','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Creando al jugador', 'https://www.youtube.com/watch?v=4us1sxofv-A','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Inicio de juego', 'https://www.youtube.com/watch?v=nbu1sno-MPY','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Efecto parallax', 'https://www.youtube.com/watch?v=8v489TBV5WQ','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Creando la escena', 'https://www.youtube.com/watch?v=8XesIhyLvzY','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Diseño multiplataforma', 'https://www.youtube.com/watch?v=J7d8WaYlM9Q','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Recursos', 'https://www.youtube.com/watch?v=DMqlexvLQgk','04/2017'],
+        ['Cursos', 'vid', 'Unity 5', 'Primer juego', 'Presentación', 'https://www.youtube.com/watch?v=jJnjntqNeYM','04/2017'],
         ['Tutoriales', 'vid', 'Unity 5', 'Lenguaje C#', 'Clases', 'https://www.youtube.com/watch?v=THDbo0HZIZU&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk','04/2017'],
         ['Tutoriales', 'vid', 'Unity 5', 'Lenguaje C#', 'Estructuras', 'https://www.youtube.com/watch?v=AJhXOlmAQrM&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk','04/2017'],
         ['Tutoriales', 'vid', 'Unity 5', 'Lenguaje C#', 'Tipos compuestos', 'https://www.youtube.com/watch?v=dLFQkfskGEM&list=PLiplYDjUMttgQZBUU4XG7UiUX19FRKtrk','04/2017'],
