@@ -30,8 +30,8 @@
             <div v-html="loading"></div>
           </div>
           <div v-else>
-            <div class="search" style="margin-bottom:16.5px;">
-              <i>Nota: Buscador experimental en base a 612 registros.</i><br>
+            <div class="search" style="margin-bottom: 16.5px;">
+              <i>Nota: Buscador experimental en base a 613 registros.</i><br>
               <input type="text" v-model="search" placeholder="Busca UNA keyword. Ej: python, unity, curso, tutorial, 2019" style="font-family: 'Fira Code', monospace;border:2px solid rgba(0, 0, 0, 0.602); border-radius:4px; margin-top:5px;font-size:16.5px;padding:3px 5px;width:98.5%"/>
             </div>
             <div v-for="campo in filteredItems" style="padding:2.5px 0px;">
@@ -57,6 +57,7 @@
       var types = {'txt':'/assets/images/text.png', 'vid':'/assets/images/video.png', 'mix':'/assets/images/mixed.png'}
       var database = [
 
+        
         ['Apuntes', 'txt', 'Unity 2021', 'Visual Script', 'Grupos y superunidades', '/unity/visual-scripting/grupos-superunidades/','04/2021'],
         ['Apuntes', 'txt', 'Unity 2021', 'Visual Script', 'Reutilización de scripts', '/unity/visual-scripting/reutilizacion-scripts/','04/2021'],
         ['Apuntes', 'txt', 'Unity 2021', 'Visual Script', 'Variables de objeto', '/unity/visual-scripting/variables-objeto/','04/2021'],
@@ -73,6 +74,7 @@
         ['Apuntes', 'txt', 'Unity 2021', 'Introducción', 'Objetos, recursos y prefabs', '/unity/introduccion/objetos-recursos-prefabs/','04/2021'],
         ['Apuntes', 'txt', 'Unity 2021', 'Introducción', 'Luces, cámara y acción', '/unity/introduccion/luces-camaras-accion/','04/2021'],
 
+        ['Apuntes', 'txt', 'Python', 'GUI/PySide', 'Proyectos con interfaces gráficas', '/qt-pyside/desarrollo-proyectos/','03/2021'],
         ['Apuntes', 'txt', 'Python', 'GUI/PySide', 'Ejecutables en Windows', '/qt-pyside/ejecutables-windows','03/2021'],
         ['Apuntes', 'txt', 'Python', 'GUI/PySide', 'Diseño de interfaces con Qt Designer', '/qt-pyside/interfaces-qt-designer','03/2021'],
         ['Apuntes', 'txt', 'Python', 'GUI/PySide', 'Tematización de interfaces', '/qt-pyside/tematizacion','03/2021'],
