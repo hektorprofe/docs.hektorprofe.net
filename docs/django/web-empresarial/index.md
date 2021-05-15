@@ -10,7 +10,7 @@ Empezamos el segundo proyecto del curso a lo largo del cual crearemos una web em
 Vamos a echar un vistazo al frontend que os he preparado, el cual podéis descargar en los recursos de esta lección y descomprimir en el directorio CursoDjango.
 
 !!! important "Demo de la Web Empresarial y recursos"
-    Puedes ver el proyecto final en el siguiente enlace: <u><a href="http://webempresa.pythonanywhere.com/" target="_blank">http://webempresa.pythonanywhere.com/</a></u>. Recuerda que sólo los <u><a href="https://www.udemy.com/curso-django-2-practico-desarrollo-web-python-3/?couponCode=DJANGO2" target="_blank">alumnos matriculados</a></u> pueden descargar los diseños frontend preparados para realizar el curso paso a paso.
+    Puedes ver el proyecto final en el siguiente enlace: <u><a href="http://webempresa.pythonanywhere.com/" target="_blank">http://webempresa.pythonanywhere.com/</a></u>. Recuerda que sólo los alumnos matriculados pueden descargar los diseños frontend preparados para realizar el curso paso a paso.
 
 Como podéis observar tenemos un frontend para una cafetería: **La Caffettiera, L'AUTENTICO CAFFÈ D'ITALIA**. Si navegais por las distintas páginas notaréis que se trata de un frontend bastante bien acabado, da la sensación de que no hay mucho que hacer, pero creedme que este proyecto nos servirá para aprender un montón.
 

@@ -12,7 +12,7 @@ De la misma forma que un ingeniero no puede crear el motor de un coche sin tener
 Para cada proyecto empezaremos echándole una ojeada a los diseños, identificaremos las funcionalidades que debemos implementar y finalmente les daremos vida paso a paso. Además también os enseñaré una demostración del proyecto final funcionando sobre Django para daros una visión objetiva de todo lo que haremos.
 
 !!! important "Demo de la Web Personal y recursos"
-    Puedes ver el proyecto final en el siguiente enlace: <u><a href="http://webpersonal.pythonanywhere.com/" target="_blank">https://webpersonal.pythonanywhere.com/</a></u>. Recuerda que sólo los <u><a href="https://www.udemy.com/curso-django-2-practico-desarrollo-web-python-3/?couponCode=DJANGO2" target="_blank">alumnos matriculados</a></u> pueden descargar los diseños frontend preparados para realizar el curso paso a paso.
+    Puedes ver el proyecto final en el siguiente enlace: <u><a href="http://webpersonal.pythonanywhere.com/" target="_blank">https://webpersonal.pythonanywhere.com/</a></u>. Recuerda que sólo los alumnos matriculados pueden descargar los diseños frontend preparados para realizar el curso paso a paso.
 
 Las webs personales son como tarjetas de presentación virtuales. Si analizamos la web podemos encontrar distintos elementos:
 
