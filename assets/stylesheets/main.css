@@ -108,6 +108,34 @@ a { outline: 0; }
     .audioMain {
     width: 100%; } }
 
+.destacados {
+    padding: 15px 15px 15px 15px;
+    width: 928px;
+    margin: 0 auto 25px auto;
+    font-size: 99%;
+    background: white; }
+
+.destacado {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    background-color: gray;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.363) 3px 3px 3px;
+}
+
+.inh{
+    color: rgb(44, 44, 44) !important;
+}
+
+.inh:hover span{
+    box-shadow: rgba(0, 0, 0, 0.774) 3px 3px 3px;
+}
+
+@media (max-width: 949px) {
+    .destacados {
+    width: 100%; } }
+
 
 @media (max-width: 949px) { 
     .blocky {padding:5px 0px 10px 0px!important; display:block !important;;border:none !important;font-size:18px !important;}
