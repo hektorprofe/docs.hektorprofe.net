@@ -293,19 +293,74 @@ nav:
   
   - Apuntes de PySide:
     - Índice del archivo:                 'qt-pyside/index.md'
-    - Preparación prévia:                 'qt-pyside\preparacion-previa.md'
-    - Conceptos básicos:                  'qt-pyside\conceptos-basicos.md'
-    - Widgets de formularios:             'qt-pyside\widgets-formularios.md'
-    - Formas de organización:             'qt-pyside\formas-organizacion.md'
-    - Cuadros de diálogo:                 'qt-pyside\cuadros-dialogo.md'
-    - Ventana principal:                  'qt-pyside\ventana-principal.md'
-    - Control de subventanas:             'qt-pyside\control-subventanas.md'
-    - Tematización:                       'qt-pyside\tematizacion.md'
-    - Interfaces con Qt Designer:         'qt-pyside\interfaces-qt-designer.md'
-    - Ejecutables en Windows:             'qt-pyside\ejecutables-windows.md' 
-    - Desarrollo de proyectos:            'qt-pyside\desarrollo-proyectos.md' 
+    - Preparación prévia:                 
+      - Introducción:                     'qt-pyside/preparacion-previa/index.md'
+      - Requisitos básicos:               'qt-pyside/preparacion-previa/requisitos-basicos.md'
+      - Instalación de Python:            'qt-pyside/preparacion-previa/instalacion-python.md'
+      - Extensiones de VSC:               'qt-pyside/preparacion-previa/extensiones-vsc.md'
+      - Instalación de PySide:            'qt-pyside/preparacion-previa/instalacion-pyside.md'
+    - Conceptos básicos:
+      - Introducción:                     'qt-pyside/conceptos-basicos/index.md'
+      - Qt, PySide y PyQt:                'qt-pyside/conceptos-basicos/qt-pyside-pyqt.md'
+      - Aplicación base (QApplication):   'qt-pyside/conceptos-basicos/aplicacion-base-qapplication.md'
+      - Superclases y subclases:          'qt-pyside/conceptos-basicos/superclases-subclases.md'
+      - Aplicación base usando POO:       'qt-pyside/conceptos-basicos/aplicacion-base-poo.md'
+      - Tamaño de los widgets (QSize):    'qt-pyside/conceptos-basicos/tamano-widgets-qsize.md'
+      - Señales (Signals y Slots):        'qt-pyside/conceptos-basicos/senales-receptos-signals-slots.md'
+      - Componentes manipulables:         'qt-pyside/conceptos-basicos/componentes-manipulables.md'   
+    - Widgets de formularios:
+      - Introducción:                     'qt-pyside/widgets-formularios/index.md'        
+      - Etiquetas (QLabel):               'qt-pyside/widgets-formularios/etiquetas-qlabel.md'  
+      - Casillas (QCheckBox):             'qt-pyside/widgets-formularios/casillas-qcheckbox.md'  
+      - Botón radial (QRadioButton):      'qt-pyside/widgets-formularios/botones-radiales-qradiobutton.md'  
+      - Desplegables (QComboBox):         'qt-pyside/widgets-formularios/desplegables-qcombobox.md'  
+      - Listas (QListWidget):             'qt-pyside/widgets-formularios/listas-qlistwidget.md'  
+      - Campos de texto (QLineEdit):      'qt-pyside/widgets-formularios/campos-de-texto-qlineedit.md'  
+      - Campos numéricos (QSpinBox):      'qt-pyside/widgets-formularios/campos-numericos-qspinbox.md'  
+    - Formas de organización:             
+      - Introducción:                     'qt-pyside/formas-organizacion/index.md'   
+      - Widget básico (QWidget):          'qt-pyside/formas-organizacion/widget-personalizado-qwidget.md'  
+      - Layout vertical y horizontal:     'qt-pyside/formas-organizacion/layout-basico-qvboxlayaout.md'  
+      - Layout en cuadrícula:             'qt-pyside/formas-organizacion/layout-cuadricula-qgridlayout.md'  
+      - Layout en formulario:             'qt-pyside/formas-organizacion/layout-formulario-qformlayout.md'  
+      - Layout apilado:                   'qt-pyside/formas-organizacion/layout-apilado-qstackedlayout.md'  
+      - Layout con pestañas:              'qt-pyside/formas-organizacion/layout-pestanas-qtabwidget.md'  
+    - Cuadros de diálogo:                 
+      - Introducción:                     'qt-pyside/cuadros-dialogo/index.md'
+      - Diálogos personalizados:          'qt-pyside/cuadros-dialogo/dialogos-personalizados.md' 
+      - Diálogos de mensajes:             'qt-pyside/cuadros-dialogo/dialogos-de-mensajes.md' 
+      - Diálogos predeterminados:         'qt-pyside/cuadros-dialogo/dialogos-predeterminados.md' 
+      - Activando las traducciones:       'qt-pyside/cuadros-dialogo/activando-traducciones.md' 
+      - Diálogos específicos:             'qt-pyside/cuadros-dialogo/dialogos-especificos.md' 
+    - Ventana principal:                  
+      - Introducción:                     'qt-pyside/ventana-principal/index.md'
+      - Barras de menú y estado:          'qt-pyside/ventana-principal/barras-menu-estado.md'
+      - Barra de herramientas:            'qt-pyside/ventana-principal/barra-herramientas.md'
+      - Docks flotantes:                  'qt-pyside/ventana-principal/docks-flotantes.md'
+    - Control de subventanas:             
+      - Introducción:                     'qt-pyside/control-subventanas/index.md'
+      - Creación de subventanas:          'qt-pyside/control-subventanas/creacion-manejo-subventanas.md'
+      - Subventanas persistentes:         'qt-pyside/control-subventanas/subventanas-persistentes.md'
+    - Tematización:                       
+      - Introducción:                     'qt-pyside/tematizacion/index.md'
+      - Estilos de aplicación:            'qt-pyside/tematizacion/estilos-aplicacion.md'   
+      - Paletas de colores:               'qt-pyside/tematizacion/paletas-colores-qpalette.md'
+      - Utilización de iconos:            'qt-pyside/tematizacion/utilizacion-de-iconos.md'
+      - QSS (Qt Style Sheets):            'qt-pyside/tematizacion/qss-qt-style-sheets.md'
+      - Cargando ficheros QSS:            'qt-pyside/tematizacion/cargando-ficheros-qss.md'
+    - Interfaces con Qt Designer:         
+      - Introducción:                     'qt-pyside/interfaces-qt-designer/index.md'
+      - Primer diseño en Qt Designer:     'qt-pyside/interfaces-qt-designer/primer-diseno-qt-designer.md'
+      - Usando diseños y recursos:        'qt-pyside/interfaces-qt-designer/usando-disenos-y-recursos.md'
+      - Añadiendo la lógica al diseño:    'qt-pyside/interfaces-qt-designer/anadiendo-logica-diseno.md'
+      - Gestión de múltiples diseños:     'qt-pyside/interfaces-qt-designer/gestion-multiples-disenos.md'
+    - Ejecutables en Windows:             
+      - Introducción:                     'qt-pyside/ejecutables-windows/index.md'
+      - Ejecutables auto-py-to-exe:       'qt-pyside/ejecutables-windows/ejecutabes-auto-py-to-exe.md'
+      - Comprensión del distribuible:     'qt-pyside/ejecutables-windows/comprension-distribuible.md'
+    - Desarrollo de proyectos:            'qt-pyside/desarrollo-proyectos/index.md'
 
-  - Apuntes de Unity sin programar:                    
+  - Apuntes de Unity:                    
     - Índice del archivo:                 'unity/index.md'               
     - Introducción:                     
       - Luces, cámaras y acción:          'unity/introduccion/luces-camaras-accion.md'

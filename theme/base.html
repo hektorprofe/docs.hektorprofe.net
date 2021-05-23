@@ -166,6 +166,12 @@ div.my-img{text-align:center;margin-top:20px}
                         <img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/>
                       </a>
                     </div>
+                  {% elif "tkinter" in page.canonical_url %}
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/?couponCode={{pyside_dc}}" target="_blank">
+                        <img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
                   {% else %}
                     <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
                       <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/?couponCode={{python_dc}}" target="_blank">
