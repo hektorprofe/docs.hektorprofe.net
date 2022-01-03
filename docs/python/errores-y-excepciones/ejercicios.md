@@ -70,7 +70,7 @@ Cuando tengas la función intenta añadir los siguiente valores a la lista **10,
 
 ## Soluciones
 
-Disponibles solo para los alumnos <u>[matriculados en el curso](https://www.udemy.com/course/python-3-al-completo-desde-cero/?referralCode=11428CACE5771408E4D5)</u>.
+Disponibles solo para los alumnos <u>[matriculados en el curso](https://www.hektorprofe.net/cupon/python)</u>.
     
 ___
 <small class="edited"><i>Última edición: 26 de Septiembre de 2018</i></small>

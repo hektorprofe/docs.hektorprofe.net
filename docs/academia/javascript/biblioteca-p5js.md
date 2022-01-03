@@ -3,9 +3,9 @@ description: Descubre el mundo de la programación desde cero a medida que la ap
 
 # Introducción a la biblioteca p5.js
 
-<div class="contenedor_youtube">
+<!-- <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/5A7rx6tmmYE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 
 ## ¿Qué es p5.js?
 

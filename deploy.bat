@@ -1,1 +1,1 @@
-pipenv run mkdocs gh-deploy
+pipenv run mkdocs gh-deploy --force

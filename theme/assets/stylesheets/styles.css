@@ -1,0 +1,45 @@
+.super-list, .featured { color: #191a1d !important; } 
+
+.tag {min-width:125px;color:black;border-radius:2.5px;font-size:14px;padding:2px 3px;display:inline-block;text-align:center;background-color: rgb(255, 255, 255);}
+.python { background-color: rgb(119, 176, 251); }
+.django { background-color: rgb(111, 184, 109); }
+.javascript { background-color: rgb(245, 231, 35); }
+.unity-5 { background-color: #cfcfcf}
+.unity-2017 { background-color: #8f8f8f}
+.unity-2021 { background-color: #5a5a5a;color:#fff}
+.game-maker { background-color: #61c89d}
+.videojuegos { background-color: #f891a3}
+.servidores { background-color: #ffbc40}
+.pseudocodigo { background-color: #ce9efb}
+
+.table>:not(caption)>*>* {
+    padding: .45rem .45em !important;
+    border-bottom-width: 0px !important;
+}
+
+@media(max-width:1399px) {
+    td.hide-in-xl{
+       display: none !important;
+    }
+}
+
+@media(max-width:1199px){
+    div.hide-in-lg{
+       display: none !important;
+    }
+    td.hide-in-xl{
+        display: table-cell !important;
+     }
+}
+
+@media(max-width:999px){
+    td.hide-in-xl{
+        display: none !important;
+     }
+}
+
+@media(max-width:767px){
+    th.hide-in-sm, td.hide-in-sm {
+       display: none !important;
+    }
+}

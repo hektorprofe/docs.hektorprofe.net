@@ -3,9 +3,9 @@ description: Vamos a crear un proyecto utilizando los conceptos básicos: variab
 
 # Proyecto gestor de clientes en Python
 
-<div class="contenedor_youtube">
+<!-- <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/LcGAfpQSkMU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 
 Vamos a crear un programa poniendo a prueba lo básico de Python que mostrará un menú con estas opciones:
 

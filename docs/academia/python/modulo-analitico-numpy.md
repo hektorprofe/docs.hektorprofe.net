@@ -3,9 +3,9 @@ description: Aprende a trabajar con los arrays de NumPy, un tipo de dato para ma
 
 # Introducción al módulo analítico NumPy
 
-<div class="contenedor_youtube">
+<!-- <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/tzeWOXeJM1I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 
 ## Configuración previa
 

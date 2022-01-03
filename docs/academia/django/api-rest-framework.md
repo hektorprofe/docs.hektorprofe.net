@@ -3,9 +3,9 @@ description: Desarrolla paso a paso una API con Python y Django Rest Framework p
 
 # Proyecto API con Django Rest Framework
 
-<div class="contenedor_youtube">
+<!-- <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/6tgobYpCFUw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 
 En este curso haremos uso de algunas apps de Django para implementar una API totalmente funcional utilizando autenticación con Token, muy útil para utilizar en todo tipo de clientes, desde web a aplicaciones móviles, ya que se basa sobre una capa de peticiones con respuestas JSON.
 

@@ -383,8 +383,6 @@ nav:
 
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'
-    - Academia Unity:                     'escueladevideojuegos/academia-unity.md'
-    - Academia GameMaker:                 'escueladevideojuegos/academia-gamemaker.md'
     - Artículos destacados:
       - ¿Qué son los videojuegos?:        'escueladevideojuegos/articulos/que-es-un-videojuego.md'
       - ¿Cómo funcionan?:                 'escueladevideojuegos/articulos/funciona-videojuego-fases-logicas.md'

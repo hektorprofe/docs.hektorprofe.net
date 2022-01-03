@@ -3,9 +3,9 @@ description: Aprende los conceptos básicos de este potente framework de Python 
 
 # Introducción a Django Framework
 
-<div class="contenedor_youtube">
+<!-- <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/cui_REKfGJA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 
 **Repositorio**: <a href="https://github.com/hektorprofe/curso-django-blog" target="_blank">https://github.com/hektorprofe/django-blog-curso</a>
 

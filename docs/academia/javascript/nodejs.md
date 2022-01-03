@@ -3,9 +3,9 @@ description: Aprende lo básico de Node, un entorno de ejecución JavaScript par
 
 # Introducción a Node.js
 
-<div class="contenedor_youtube">
+<!-- <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/aMn4gcJfJA0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 
 Si ya cuentas con conocimientos básicos de JavaScript para el frontend, no pierdes nada por dar una oportunidad a Node.js y alcanzar el siguiente nivel.
 
