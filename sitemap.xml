@@ -882,10 +882,6 @@
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/preparacion-previa/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/preparacion-previa/requisitos-basicos/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
@@ -899,10 +895,6 @@
             <changefreq>daily</changefreq>
             </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/preparacion-previa/instalacion-pyside/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/conceptos-basicos/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
@@ -934,10 +926,6 @@
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/widgets-formularios/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/widgets-formularios/etiquetas-qlabel/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
@@ -966,10 +954,6 @@
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/formas-organizacion/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/formas-organizacion/widget-personalizado-qwidget/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
@@ -994,10 +978,6 @@
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/cuadros-dialogo/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/cuadros-dialogo/dialogos-personalizados/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
@@ -1018,10 +998,6 @@
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/ventana-principal/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/ventana-principal/barras-menu-estado/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
@@ -1034,19 +1010,11 @@
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/control-subventanas/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/control-subventanas/creacion-manejo-subventanas/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/control-subventanas/subventanas-persistentes/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/tematizacion/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
@@ -1070,10 +1038,6 @@
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/interfaces-qt-designer/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/interfaces-qt-designer/primer-diseno-qt-designer/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
@@ -1087,10 +1051,6 @@
             <changefreq>daily</changefreq>
             </url><url>
             <loc>https://docs.hektorprofe.net/qt-pyside/interfaces-qt-designer/gestion-multiples-disenos/</loc>
-            <lastmod>2022-02-06</lastmod>
-            <changefreq>daily</changefreq>
-            </url><url>
-            <loc>https://docs.hektorprofe.net/qt-pyside/ejecutables-windows/</loc>
             <lastmod>2022-02-06</lastmod>
             <changefreq>daily</changefreq>
             </url><url>
