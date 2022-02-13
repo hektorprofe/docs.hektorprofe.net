@@ -350,6 +350,55 @@ nav:
       - Comprensión del distribuible:     'qt-pyside/ejecutables-windows/comprension-distribuible.md'
     - Desarrollo de proyectos:            'qt-pyside/desarrollo-proyectos/index.md'
 
+  - Apuntes de PyGame:                    
+    - Índice del archivo:                 'pygame/index.md'               
+    - Funciones de renderizado:
+      - Creación de la superficie:        'pygame/renderizado/creacion-superficie.md'
+      - Dibujando en la superficie:       'pygame/renderizado/dibujo-superficie.md'
+      - Blitting (copia) Imágenes:        'pygame/renderizado/blitting-imagenes.md'
+      - Blitting (copia) Textos:          'pygame/renderizado/blitting-textos.md'
+      - Transformación de superficie:     'pygame/renderizado/transformacion-superficie.md'
+      - Delta time y FPS:                 'pygame/renderizado/delta-time-fps.md'
+      - Iconos de ventana y bandeja:      'pygame/renderizado/icono-ventana-bandeja.md'               
+    - Control de eventos:
+      - Movimiento de ratón:              'pygame/eventos/movimiento-raton.md'
+      - Movimiento de teclado discreto:   'pygame/eventos/movimiento-teclado-discreto.md'
+      - Movimiento de teclado contínuo:   'pygame/eventos/movimiento-teclado-continuo.md'
+      - Movimiento limitado:              'pygame/eventos/movimiento-limitado.md'
+      - Detección de colisiones:          'pygame/eventos/deteccion-colisiones.md'
+      - Debugeando las colisiones:        'pygame/eventos/debug-colisiones.md'
+      - Máscaras de colisión:             'pygame/eventos/mascaras-colision.md'
+      - Debugeando las máscaras:          'pygame/eventos/debug-mascaras-colision.md'
+      - Efectos de sonido y música:       'pygame/eventos/efectos-sonido-musica.md'
+      - Modo ventana y fullscreen:        'pygame/eventos/modo-ventana-fullscreen.md'               
+    - Sprites y grupos:
+      - Repaso de clases:                 'pygame/sprites/clases.md'
+      - Repaso de herencia:               'pygame/sprites/herencia.md'
+      - Clase sprite y grupos:            'pygame/sprites/grupos.md'
+      - Actualización por fotograma:      'pygame/sprites/actualizacion-frame.md'
+      - Actualización por tiempo:         'pygame/sprites/actualizacion-time.md'
+      - Colisiones de sprites:            'pygame/sprites/colisiones.md'
+      - Colisiones de grupos:             'pygame/sprites/grupos-colision.md'
+      - Máscaras en sprites:              'pygame/sprites/mascaras-colision.md'
+      - Máscaras en grupos:               'pygame/sprites/mascaras-grupos-colision.md'
+      - Animaciones estáticas:            'pygame/sprites/animaciones-estaticas.md'
+      - Animaciones en movimiento:        'pygame/sprites/animaciones-movimiento.md'               
+    - Organización modular:
+      - Estructura de un proyecto:        'pygame/organizacion/estructura-proyecto.md'
+      - Estructura principal:             'pygame/organizacion/estructura-principal.md'
+      - Adaptando un ejemplo:             'pygame/organizacion/adaptar-ejemplo.md'            
+    - Escenas y GUI:
+      - Gestor de escenas:                'pygame/escenas-gui/gestor-escenas.md'
+      - Cambio de escena:                 'pygame/escenas-gui/cambio-escenas.md'
+      - Menú con flechas:                 'pygame/escenas-gui/menu-flechas.md'
+      - Menú clicable:                    'pygame/escenas-gui/menu-clicable.md'
+      - Botón animado:                    'pygame/escenas-gui/boton-animado.md'
+      - Múltiples botones:                'pygame/escenas-gui/multiples-botones.md'
+      - PyGame GUI:                       'pygame/escenas-gui/pygame-gui.md'
+      - Ejemplo de integración:           'pygame/escenas-gui/integracion.md'
+    - Creación de ejecutables:
+      - AutoPytoExe:                      'pygame/ejecutables/autopytoexe.md'
+
   - Apuntes de Unity:                    
     - Índice del archivo:                 'unity/index.md'               
     - Introducción:                     
@@ -370,6 +419,7 @@ nav:
       - Variables de objeto:              'unity/visual-scripting/variables-objeto.md'
       - Reutilización de scripts:         'unity/visual-scripting/reutilizacion-scripts.md'
       - Grupos y superunidades:           'unity/visual-scripting/grupos-superunidades.md'
+
 
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'
