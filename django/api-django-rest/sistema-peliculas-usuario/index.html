@@ -262,6 +262,8 @@ div.my-img{text-align:center;margin-top:20px}
         
           <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
         
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
       </ul>
     </div>
 </nav>
@@ -1566,6 +1568,8 @@ div.my-img{text-align:center;margin-top:20px}
     
       
     
+      
+    
   </ul>
 </nav>
 
@@ -1750,73 +1754,73 @@ pipenv run migrate
 <p>En este punto deberíamos ser capaces de acceder a <code>http://127.0.0.1:8000/api/userfilms/</code> y ver las películas del usuario identificado en el administrador. </p>
 <p>Como no hemos creado ninguna esa respuesta estará vacía, pero podemos crear una película de usuario de prueba haciendo una petición <code>POST</code>. </p>
 <p>Por ejemplo para añadir la información de la película de <strong>Apocalypse Now</strong>, cuyo <strong>uuid</strong> es <strong>d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02</strong> escribiremos lo siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>   <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;favorite&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
-    <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> 
-    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
-    <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Me encanta esta película...&quot;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w">   </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;favorite&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;review&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Me encanta esta película...&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Esto nos devolverá:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Saved&quot;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Saved&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Indicando que el registro de la película de usuario se ha guardado correctamente.</p>
 <p>Podemos consultar de nuevo la lista recargando el endpoint y ahora sí veremos la lista con las películas favoritas del usuario:</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;film&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;genres&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bélica&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;slug&quot;</span><span class="p">:</span> <span class="s2">&quot;belica&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Drama&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;slug&quot;</span><span class="p">:</span> <span class="s2">&quot;drama&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Misterio&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;slug&quot;</span><span class="p">:</span> <span class="s2">&quot;misterio&quot;</span>
-                <span class="p">}</span>
-            <span class="p">],</span>
-            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Apocalypse Now&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1979</span><span class="p">,</span>
-            <span class="nt">&quot;review_short&quot;</span><span class="p">:</span> <span class="s2">&quot;En 1969, durante la guerra de Vietnam, el coronel Kurtz (Marlon Brando), de las Fuerzas Especiales del Ejército de Estados Unidos, se ha vuelto loco y ahora manda a sus propias tropas de montañeses, dentro de la neutral Camboya, como un semidiós.&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;review_large&quot;</span><span class="p">:</span> <span class="s2">&quot;En 1969, durante la guerra de Vietnam, el coronel Kurtz (Marlon Brando), de las Fuerzas Especiales del Ejército de Estados Unidos, se ha vuelto loco y ahora manda a sus propias tropas de montañeses, dentro de la neutral Camboya, como un semidiós. \r\n\r\nEl coronel Lucas (Harrison Ford) y el general Corman (G. D. Spradlin), cada vez más preocupados por las operaciones de vigilancia de Kurtz, asignan al capitán de MACV-SOG Benjamin L. Willard (Martin Sheen) para que «ponga fin» a Kurtz «con extremo perjuicio» (asesinarlo).&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;trailer_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.youtube.com/watch?v=9l-ViOOFH-s&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;image_thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:8000/media/films/d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02/17.jpg&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;image_wallpaper&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:8000/media/films/d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02/17-1.jpg&quot;</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;favorite&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Me encanta esta película...&quot;</span>
-    <span class="p">}</span>
-<span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;film&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;genres&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bélica&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;belica&quot;</span><span class="w"></span>
+<span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Drama&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drama&quot;</span><span class="w"></span>
+<span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Misterio&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;misterio&quot;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Apocalypse Now&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1979</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;review_short&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;En 1969, durante la guerra de Vietnam, el coronel Kurtz (Marlon Brando), de las Fuerzas Especiales del Ejército de Estados Unidos, se ha vuelto loco y ahora manda a sus propias tropas de montañeses, dentro de la neutral Camboya, como un semidiós.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;review_large&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;En 1969, durante la guerra de Vietnam, el coronel Kurtz (Marlon Brando), de las Fuerzas Especiales del Ejército de Estados Unidos, se ha vuelto loco y ahora manda a sus propias tropas de montañeses, dentro de la neutral Camboya, como un semidiós. \r\n\r\nEl coronel Lucas (Harrison Ford) y el general Corman (G. D. Spradlin), cada vez más preocupados por las operaciones de vigilancia de Kurtz, asignan al capitán de MACV-SOG Benjamin L. Willard (Martin Sheen) para que «ponga fin» a Kurtz «con extremo perjuicio» (asesinarlo).&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;trailer_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.youtube.com/watch?v=9l-ViOOFH-s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;image_thumbnail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8000/media/films/d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02/17.jpg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;image_wallpaper&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8000/media/films/d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02/17-1.jpg&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;favorite&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;review&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Me encanta esta película...&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
 </code></pre></div>
 <p>Si queremos modificar la película de usuario basta con enviar de nuevo los campos deseados a la petición:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>   <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;favorite&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
-    <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
-    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Ya no me gusta esta película&quot;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w">   </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;favorite&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;review&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ya no me gusta esta película&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Pero si enviamos una petición sin estado, o con el estado en cero (que es de película no vista), la película de usuario se borrará de la base de datos:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span> 
-    <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Devolviendo:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Deleted&quot;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Deleted&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Evidentemente esto es solo mi forma de manejar toda la lógica, cada uno puede decidir como y cuando borrar los campos.</p>
 <h2 id="resenas-y-peliculas-favoritas">Reseñas y películas favoritas<a class="headerlink" href="#resenas-y-peliculas-favoritas" title="Permanent link">&para;</a></h2>
@@ -1873,20 +1877,20 @@ pipenv run migrate
                     <span class="s1">&#39;genres__name&#39;</span><span class="p">,</span> <span class="s1">&#39;favorites&#39;</span><span class="p">,</span> <span class="s1">&#39;average_note&#39;</span><span class="p">]</span>
 </code></pre></div>
 <p>Y si creamos una petición de película de usuario en <code>http://127.0.0.1:8000/api/userfilms/</code>, por ejemplo la de antes:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>   <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;favorite&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
-    <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> 
-    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
-    <span class="nt">&quot;review&quot;</span><span class="p">:</span> <span class="s2">&quot;Me encanta esta película...&quot;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w">   </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;favorite&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;review&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Me encanta esta película...&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Deberíamos ser capaces de ver la información de esta película en su viewset con la nota media y el número de favoritos <code>http://127.0.0.1:8000/api/films/d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02/</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span>
-    <span class="err">//</span> <span class="err">...</span>
-    <span class="nt">&quot;favorites&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;average_note&quot;</span><span class="p">:</span> <span class="mf">10.0</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d1d5acd7-5f76-4faa-aca7-fdb9cc88eb02&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;favorites&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;average_note&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>¡Perfecto! Ya tenemos el viewset de <code>UserFilm</code> casi listo y el proyecto acabado, solo falta un pequeñísimo detalle.</p>
 <h2 id="proteger-las-urls-con-interaccion-de-usuario">Proteger las urls con interacción de usuario<a class="headerlink" href="#proteger-las-urls-con-interaccion-de-usuario" title="Permanent link">&para;</a></h2>
@@ -1901,9 +1905,9 @@ pipenv run migrate
     <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">permissions</span><span class="o">.</span><span class="n">IsAuthenticated</span><span class="p">]</span> <span class="c1"># new</span>
 </code></pre></div>
 <p>Ahora al acceder sin estar autenticado a <code>http://127.0.0.1:8000/api/userfilms/</code> nos devolverá el siguiente error, pero en esta ocasión a nivel de API, evitando el fallo de código:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;Las credenciales de autenticación no se proveyeron.&quot;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Las credenciales de autenticación no se proveyeron.&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Y con esto acabamos este curso fallido de Django Rest Framework.</p>
 <p>Si os ha gustado este curso y aún no sois alumnos de mi curso de Django en Udemy <u><a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/?referralCode=4299F3A993394B53F7A1">considerad adquirirlo en este enlace</a></u>, en él explico todas las claves de este framework web.</p>
@@ -2052,7 +2056,7 @@ pipenv run migrate
       modalButtonOnly.close();
     });
 
-    app.initialize({version:"1.1.2",url:{base:"../../.."}})
+    app.initialize({version:"1.2.3",url:{base:"../../.."}})
     var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
     var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
     const mdMenuItems = document.querySelectorAll('.md-nav__link');
