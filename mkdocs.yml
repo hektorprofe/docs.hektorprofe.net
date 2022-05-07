@@ -350,13 +350,56 @@ nav:
       - Comprensión del distribuible:     'qt-pyside/ejecutables-windows/comprension-distribuible.md'
     - Desarrollo de proyectos:            'qt-pyside/desarrollo-proyectos/index.md'
 
+  - Apuntes C++:                    
+    - Índice del archivo:                 'cpp/index.md'               
+    - Entorno de desarrollo:              'cpp/01-entorno-desarrollo/index.md'
+    - Primeros pasos:                     'cpp/02-primeros-pasos/index.md'
+    - Tipos de datos:                     'cpp/03-tipos-de-datos/index.md'
+    - Modificadores:                      'cpp/04-modificadores/index.md'
+    - Control del flujo:                  'cpp/05-control-de-flujo/index.md'
+    - Arreglos clásicos:                  'cpp/06-arreglos-clasicos/index.md'
+    - Punteros y referencias:             
+      - Primeros pasos:                   'cpp/07-punteros-referencias/01-primeros-pasos.md'
+      - Nullptr, void* y ((void*)0):      'cpp/07-punteros-referencias/02-null-nullptr-void0.md'
+      - Punteros constantes:              'cpp/07-punteros-referencias/03-punteros-constantes.md'
+      - Arreglos y punteros:              'cpp/07-punteros-referencias/04-arreglos-punteros.md'           # con intercambio de punteros
+      - Aritmética de punteros:           'cpp/07-punteros-referencias/05-aritmetica-punteros.md'
+      - Gestión de la memoria:            'cpp/07-punteros-referencias/06-tipos-memoria-stack-heap.md' 
+      - Memoria dinámica (Heap):          'cpp/07-punteros-referencias/07-memoria-dinamica.md'            # hasta referencias
+      - Punteros y referencias:           'cpp/07-punteros-referencias/08-punteros-referencias.md'
+    - Cadenas de caracteres:              'cpp/08-cadenas-caracteres/index.md'
+    - Programación de funciones:          'cpp/09-funciones/index.md'
+    - Function templates:                 'cpp/10-function-templates/index.md'
+    - Programación de clases:             
+      - Primeros pasos:                   'cpp/11-clases/01-primeros-pasos.md'
+      - Funciones y clases amigas:        'cpp/11-clases/02-funciones-clases-amigas.md'
+      - Miembros estáticos:               'cpp/11-clases/03-miembros-estaticos.md'
+      - Sobrecarga de operadores:         'cpp/11-clases/04-sobrecarga-operadores.md'
+      - Herencia de clases:               'cpp/11-clases/05-herencia-clases.md'
+      - Polimorfismo de clases:           'cpp/11-clases/06-polimorfismo-clases.md'
+      - Class templates:                  'cpp/11-clases/07-class-templates.md'
+    - Punteros inteligentes:              'cpp/12-punteros-inteligentes/index.md'
+    - Manejo de excepciones:              'cpp/13-manejo-excepciones/index.md'
+    - Biblioteca STL:                     'cpp/14-biblioteca-stl/index.md'
+    - Miscelánea:                         
+      - Conversiones y overflows:         'cpp/30-miscelanea/01-conversiones-overflow.md'
+      - Operadores bit a bit:             'cpp/30-miscelanea/02-operadores-bit-a-bit.md'
+      - Enumeradores y alias:             'cpp/30-miscelanea/03-enumeradores-alias.md'
+      - Números aleatorios:               'cpp/30-miscelanea/04-numeros-aleatorios.md'
+      - Tiempo de ejecución:              'cpp/30-miscelanea/05-tiempo-ejecucion.md'
+      - Espacio de nombres:               'cpp/30-miscelanea/06-espacio-nombres.md'
+      - Compilación y vinculación:        'cpp/30-miscelanea/07-compilacion-vinculacion.md'
+      - Semánticas de movimiento:         'cpp/30-miscelanea/08-semanticas-movimiento.md'
+      - Funciones como entidades:         'cpp/30-miscelanea/09-funciones-entidades.md'  
+      - Novedades en C++20:               'cpp/30-miscelanea/90-novedades-cpp20.md'          
+
   - Apuntes de PyGame:                    
     - Índice del archivo:                 'pygame/index.md'               
     - Funciones de renderizado:
       - Creación de la superficie:        'pygame/renderizado/creacion-superficie.md'
       - Dibujando en la superficie:       'pygame/renderizado/dibujo-superficie.md'
-      - Blitting (copia) Imágenes:        'pygame/renderizado/blitting-imagenes.md'
-      - Blitting (copia) Textos:          'pygame/renderizado/blitting-textos.md'
+      - Blitting de Imágenes (copia):     'pygame/renderizado/blitting-imagenes.md'
+      - Blitting de Textos (copia):       'pygame/renderizado/blitting-textos.md'
       - Transformación de superficie:     'pygame/renderizado/transformacion-superficie.md'
       - Delta time y FPS:                 'pygame/renderizado/delta-time-fps.md'
       - Iconos de ventana y bandeja:      'pygame/renderizado/icono-ventana-bandeja.md'               
@@ -419,7 +462,6 @@ nav:
       - Variables de objeto:              'unity/visual-scripting/variables-objeto.md'
       - Reutilización de scripts:         'unity/visual-scripting/reutilizacion-scripts.md'
       - Grupos y superunidades:           'unity/visual-scripting/grupos-superunidades.md'
-
 
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'

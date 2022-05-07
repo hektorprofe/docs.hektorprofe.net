@@ -1,8 +1,14 @@
-mkdocs==1.0.4
-mkdocs-material==3.0.6
-mkdocs-markdownextradata-plugin==0.0.5
-pygments>=2.7.4
+mkdocs==1.2.3
+mkdocs-material
+mkdocs-markdownextradata-plugin
+pygments
 django-htmlmin
+
+# mkdocs==1.0.4
+# mkdocs-material==3.0.6
+# mkdocs-markdownextradata-plugin==0.0.5
+# pygments>=2.7.4
+# django-htmlmin
 
 # pip install rcssmin --install-option="--without-c-extensions"
 # pip install rjsmin --install-option="--without-c-extensions"
