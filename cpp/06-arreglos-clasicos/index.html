@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Resumen sobre el manejo de arrays en C++.">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/06-arreglos-clasicos/">
@@ -401,9 +401,45 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Arreglos clásicos
+      </label>
+    
     <a href="./" title="Arreglos clásicos" class="md-nav__link md-nav__link--active" id="md__active_link">
       Arreglos clásicos
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-y-acceso-sencuencial-de-arreglos" title="Definición y acceso sencuencial de arreglos" class="md-nav__link toc__link">
+    Definición y acceso sencuencial de arreglos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arreglos-multidimensionales-y-acceso-secuencial" title="Arreglos multidimensionales y acceso secuencial" class="md-nav__link toc__link">
+    Arreglos multidimensionales y acceso secuencial
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -418,11 +454,11 @@ div.my-img{text-align:center;margin-top:20px}
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
-      Punteros y referencias
+      Punteros y memoria
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
-        Punteros y referencias
+        Punteros y memoria
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -433,7 +469,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+    <a href="../07-punteros-memoria/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
       Primeros pasos
     </a>
   </li>
@@ -445,7 +481,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
+    <a href="../07-punteros-memoria/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
       Nullptr, void* y ((void*)0)
     </a>
   </li>
@@ -457,7 +493,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
+    <a href="../07-punteros-memoria/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
       Punteros constantes
     </a>
   </li>
@@ -469,7 +505,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
       Arreglos y punteros
     </a>
   </li>
@@ -481,7 +517,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
       Aritmética de punteros
     </a>
   </li>
@@ -493,7 +529,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
+    <a href="../07-punteros-memoria/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
       Gestión de la memoria
     </a>
   </li>
@@ -505,7 +541,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
+    <a href="../07-punteros-memoria/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
       Memoria dinámica (Heap)
     </a>
   </li>
@@ -517,7 +553,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
+    <a href="../07-punteros-memoria/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
       Punteros y referencias
     </a>
   </li>
@@ -898,6 +934,29 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-y-acceso-sencuencial-de-arreglos" title="Definición y acceso sencuencial de arreglos" class="md-nav__link toc__link">
+    Definición y acceso sencuencial de arreglos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arreglos-multidimensionales-y-acceso-secuencial" title="Arreglos multidimensionales y acceso secuencial" class="md-nav__link toc__link">
+    Arreglos multidimensionales y acceso secuencial
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -910,8 +969,82 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="arreglos-de-datos-clasicos-en-c">Arreglos de datos clásicos en C++<a class="headerlink" href="#arreglos-de-datos-clasicos-en-c" title="Permanent link">&para;</a></h1>
+<h2 id="definicion-y-acceso-sencuencial-de-arreglos">Definición y acceso sencuencial de arreglos<a class="headerlink" href="#definicion-y-acceso-sencuencial-de-arreglos" title="Permanent link">&para;</a></h2>
+<p>Un arreglo o array es una estructura que sirve para almacenar una sucesión de datos del mismo tipo, siendo por tanto homogénea y finita:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numeros</span><span class="p">[]{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>La lectura secuencial se puede realizar fácilmente mediante bucles <code>for</code>, ya sea con índices:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numeros</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>También podemos utilizar <code>std::size</code> para detectar el número de elementos automáticamente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">size</span><span class="p">(</span><span class="n">numeros</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numeros</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Rizando el rizo podemos sacar este número dividiendo el tamaño en bytes del arreglo entre el tamaño en bytes del tipo de dato de la primera posición:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">{</span><span class="k">sizeof</span><span class="p">(</span><span class="n">numeros</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">0</span><span class="p">])};</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numeros</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Otra forma de recorrer el arreglo es mediante el acceso a los elementos del rango:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">numeros</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Por cierto, nunca debemos asignar valores fuera del arreglo. Esto es curioso porque C++ nos permitirá hacerlo y lo que ocurrirá es que estaremos accediendo a una posición de memoria cualquiera, lo que conllevaría en el peor de los casos, si almacenamos una información, a destruir lo que haya y hacer que el programa deje de funcionar debido a la corrupción de datos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">numeros</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">999</span><span class="p">;</span><span class="w">  </span><span class="c1">// NO ESCRIBIR FUERA DE LOS LÍMITES</span>
+</code></pre></div>
+<h2 id="arreglos-multidimensionales-y-acceso-secuencial">Arreglos multidimensionales y acceso secuencial<a class="headerlink" href="#arreglos-multidimensionales-y-acceso-secuencial" title="Permanent link">&para;</a></h2>
+<p>Un arreglo multidimensional es un arreglo con otros arreglos anidados, de manera que se crea una estructura con múltiples dimensiones.</p>
+<p>La forma de trabajar con N dimensiones es mediante N índices para representar el acceso a cada nivel, como en este ejemplo sencillo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// tabla de números 3x3 con 9 elementos</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="c1">// primera fila</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="c1">// segunda fila</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w">  </span><span class="c1">// tercera fila</span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>La lectura podemos realizar cómodamente con diferentes índices y detectando la longitud de cada dimensión con <code>std::size</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">size</span><span class="p">(</span><span class="n">tabla</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">size</span><span class="p">(</span><span class="n">tabla</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tabla</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>0 0 0
+1 1 1
+2 2 2
+</code></pre></div>
+<p>Como curiosidad, podemos almacenar múltiples caracteres en un arreglo multidimensional de caracteres de manera que podamos almacenar cadenas de caracteres, pues no son más que arreglos de caracteres:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arreglo de caracteres con 10 posibles caracteres por elemento</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">textos</span><span class="p">[][</span><span class="mi">10</span><span class="p">]{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Hola&quot;</span><span class="p">},</span><span class="w">   </span><span class="c1">// primera cadena</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Adios&quot;</span><span class="p">},</span><span class="w">  </span><span class="c1">// segunda cadena</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Que tal&quot;</span><span class="p">}</span><span class="w"> </span><span class="c1">// tercera cadena</span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Como <code>std::cout</code> imprime todos los elementos de un arreglo de caracteres como un único elemento podemos imprimir los textos fácilmente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">size</span><span class="p">(</span><span class="n">frases</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">frases</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Hola
+Adios
+Que tal
+</code></pre></div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 
@@ -952,7 +1085,7 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
        
       <a
-        href="../07-punteros-referencias/01-primeros-pasos/"
+        href="../07-punteros-memoria/01-primeros-pasos/"
         title="Primeros pasos"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"

@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Repaso a los tipos de datos esenciales del lenguaje C++.">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/03-tipos-de-datos/">
@@ -365,9 +365,87 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tipos de datos
+      </label>
+    
     <a href="./" title="Tipos de datos" class="md-nav__link md-nav__link--active" id="md__active_link">
       Tipos de datos
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-numericos" title="Sistemas numéricos" class="md-nav__link toc__link">
+    Sistemas numéricos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-enteros-y-variables" title="Números enteros y variables" class="md-nav__link toc__link">
+    Números enteros y variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificadores-de-enteros" title="Modificadores de enteros" class="md-nav__link toc__link">
+    Modificadores de enteros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-fraccionarios" title="Números fraccionarios" class="md-nav__link toc__link">
+    Números fraccionarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valores-booleanos" title="Valores booleanos" class="md-nav__link toc__link">
+    Valores booleanos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteres-y-texto" title="Caracteres y texto" class="md-nav__link toc__link">
+    Caracteres y texto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-automatico" title="Tipo automático" class="md-nav__link toc__link">
+    Tipo automático
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambito-de-las-variables" title="Ámbito de las variables" class="md-nav__link toc__link">
+    Ámbito de las variables
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -418,11 +496,11 @@ div.my-img{text-align:center;margin-top:20px}
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
-      Punteros y referencias
+      Punteros y memoria
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
-        Punteros y referencias
+        Punteros y memoria
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -433,7 +511,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+    <a href="../07-punteros-memoria/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
       Primeros pasos
     </a>
   </li>
@@ -445,7 +523,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
+    <a href="../07-punteros-memoria/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
       Nullptr, void* y ((void*)0)
     </a>
   </li>
@@ -457,7 +535,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
+    <a href="../07-punteros-memoria/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
       Punteros constantes
     </a>
   </li>
@@ -469,7 +547,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
       Arreglos y punteros
     </a>
   </li>
@@ -481,7 +559,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
       Aritmética de punteros
     </a>
   </li>
@@ -493,7 +571,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
+    <a href="../07-punteros-memoria/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
       Gestión de la memoria
     </a>
   </li>
@@ -505,7 +583,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
+    <a href="../07-punteros-memoria/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
       Memoria dinámica (Heap)
     </a>
   </li>
@@ -517,7 +595,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
+    <a href="../07-punteros-memoria/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
       Punteros y referencias
     </a>
   </li>
@@ -898,6 +976,71 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-numericos" title="Sistemas numéricos" class="md-nav__link toc__link">
+    Sistemas numéricos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-enteros-y-variables" title="Números enteros y variables" class="md-nav__link toc__link">
+    Números enteros y variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificadores-de-enteros" title="Modificadores de enteros" class="md-nav__link toc__link">
+    Modificadores de enteros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-fraccionarios" title="Números fraccionarios" class="md-nav__link toc__link">
+    Números fraccionarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valores-booleanos" title="Valores booleanos" class="md-nav__link toc__link">
+    Valores booleanos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteres-y-texto" title="Caracteres y texto" class="md-nav__link toc__link">
+    Caracteres y texto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-automatico" title="Tipo automático" class="md-nav__link toc__link">
+    Tipo automático
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambito-de-las-variables" title="Ámbito de las variables" class="md-nav__link toc__link">
+    Ámbito de las variables
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -910,8 +1053,355 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="tipos-de-datos-en-c">Tipos de datos en C++<a class="headerlink" href="#tipos-de-datos-en-c" title="Permanent link">&para;</a></h1>
+<h2 id="sistemas-numericos">Sistemas numéricos<a class="headerlink" href="#sistemas-numericos" title="Permanent link">&para;</a></h2>
+<p>Uno de los datos esenciales que se manejan en programación son los números.</p>
+<p>Los números al igual que todos los demás datos se almacenan en la memoria en forma de sucesiones binarias de 0 y 1 llamadas bits. </p>
+<p><strong>Cada conjunto de 8 bits se denomina byte.</strong></p>
+<p>La fórmula para determinar cuantos dígitos se pueden representar con n bits es <code>0 ~ 2^n – 1</code>. Por ejemplo:</p>
+<ul>
+<li>1 bit <strong>0~2^1-1 = 0~1</strong> (2)</li>
+<li>2 bits <strong>0~2^2-1 = 0~3</strong> (4)</li>
+<li>3 bits <strong>0~2^3-1 = 0~7</strong> (8)</li>
+<li>4 bits <strong>0~2^4-1 = 0~15</strong> (16)</li>
+<li>8 bits (1 byte) <strong>0~2^8-1 = 0~255</strong> (256)</li>
+<li>16 bits (2 bytes) <strong>0~2^16-1 = 0~65.534</strong> (65.535)</li>
+<li>32 bits (4 bytes) <strong>0~2^32-1 = 0~4.294.967.295</strong> (4.294.967.296)</li>
+<li>64 bits (8 bytes) <strong>0~2^64-1 = 0~18.446.744.073.709.551.615</strong> (18.446.744.073.709.551.616)</li>
+</ul>
+<p>Todo esto sería utilizando la conversión binario-decimal de números conocida como base 10 (decimal), pero los números se pueden representar en diferentes bases, por ejemplo base 8 (octal), base 16 (hexadecimal)…</p>
+<p>Esta lista muestra la conversión de los números de 0 a 15 en binario, decimal y hexadecimal:</p>
+<div class="highlight"><pre><span></span><code>0000    00    0
+0001    01    1
+0010    02    2
+0011    03    3
+0100    04    4
+0101    05    5
+0110    06    6
+0111    07    7
+1000    08    8
+1001    09    9
+1010    10    A
+1011    11    B
+1100    12    C
+1101    13    D
+1110    14    E
+1111    15    F
+</code></pre></div>
+<p>En C++ para definir un número entero en base 10 podemos hacerlo en diferentes sistemas:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="w">          </span><span class="c1">// Base decimal</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mo">017</span><span class="p">;</span><span class="w">         </span><span class="c1">// Base octal</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0F</span><span class="p">;</span><span class="w">        </span><span class="c1">// Base hexadecimal</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b00001111</span><span class="p">;</span><span class="w">  </span><span class="c1">// Base binaria</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Numero decimal: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Numero octal a decimal: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Numero hexadecimal a decimal: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Numero binario a decimal: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><img alt="" src="/cdn/cpp/image-28.png" /></p>
+<p>En conclusión:</p>
+<ul>
+<li>En la memoria los datos se almacenan en grupos de bits con 0 y 1.</li>
+<li>Una sucesión agrupada de 8 bits en la memoria se denomina byte.</li>
+<li>Cuanto más grande es el rango de datos a representar más bits necesitamos.</li>
+<li>El sistema hexadecimal es una forma intuitiva de representar conjuntos de 16 bits.</li>
+</ul>
+<h2 id="numeros-enteros-y-variables">Números enteros y variables<a class="headerlink" href="#numeros-enteros-y-variables" title="Permanent link">&para;</a></h2>
+<p>Un número entero es un tipo de dato para representar números del sistema decimal. En C++ la palabra para definir un entero es <code>int</code> y ocupan generalmente 4 bytes en la memoria. Podemos consultar el tamaño de un entero en bytes mediante la función <code>sizeof</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Un número, y los demás tipos de datos, se pueden almacenar en la memoria del programa para manipularlos. Para ello se utilizan las variables, un espacio en la memoria que reservamos mediante un nombre y el tipo de dato que deseamos almacenar en ella:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span><span class="w">  </span><span class="c1">// Inicialización de una variable entera</span>
+</code></pre></div>
+<p>Una vez tenemos el espacio reservado podemos asignarle el valor:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span><span class="w">  </span><span class="c1">// Inicialización de una variable entera</span>
+<span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">  </span><span class="c1">// Asignación de un número a la variable</span>
+</code></pre></div>
+<p>Podemos realizar la inicialización y asignación en una única instrucción:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">  </span><span class="c1">// Inicialización y asignación</span>
+</code></pre></div>
+<p>Esto se puede realizar sin la igualdad mediante paréntesis o llaves:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">numero</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">  </span><span class="c1">// Inicialización con constructor C++17</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w">  </span><span class="c1">// Inicialización uniforme</span>
+</code></pre></div>
+<p>Por defecto un entero sin asignar tiene un valor de 0:</p>
+<p><img alt="" src="/cdn/cpp/image-29.png" /></p>
+<p>Ya que hablamos de asignaciones, podemos asignar múltiples variables en una única línea:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">{</span><span class="mi">100</span><span class="p">},</span><span class="w"> </span><span class="n">num2</span><span class="p">{</span><span class="mi">200</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Y también podemos asignar a una variable una operación a partir de otros datos, siempre y cuando el resultado sea del mismo tipo que asignamos, ya sea literalmente o mediante variables:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="p">{</span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">300</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Si intentamos asignar un valor mayor de 4 bytes o un número fraccionario (mediante una coma), dará error:</p>
+<p><img alt="" src="/cdn/cpp/image-30.png" /></p>
+<p><img alt="" src="/cdn/cpp/image-31.png" /></p>
+<p>Sin embargo sí es posible realizar una conversión de tipo fraccionario a entero con redondeo de medio decimal implícito mediante el operador <code>=</code>:</p>
+<p><img alt="" src="/cdn/cpp/image-32.png" /></p>
+<p>Todavía hay mucho que hablar sobre los números, seguiremos próximamente.</p>
+<h2 id="modificadores-de-enteros">Modificadores de enteros<a class="headerlink" href="#modificadores-de-enteros" title="Permanent link">&para;</a></h2>
+<p>En el lenguaje C++ encontramos una serie de funcionalidades conocidas como modificadores que permiten cambiar el funcionamiento de un tipo de dato.</p>
+<p>Por ejemplo, un modificador básico de los números enteros es la negación <code>–</code>, que nos permite cambiar el signo positivo de un número a un signo negativo:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">{</span><span class="mi">-99</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>¿Cómo puede ser esto? Pues porque los enteros <code>int</code> reciben un modificador implícito llamado signed que les indica que pueden ser positivos o negativos:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">{</span><span class="mi">-99</span><span class="p">};</span><span class="w">  </span><span class="c1">// Por defecto tienen signo</span>
+</code></pre></div>
+<p>Esto implica que también pueden no tener signo, lo cuál se indica mediante el modificador unsigned, y que en esta ocasión al intentar almacenar en él un negativo dará error:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">{</span><span class="mi">-99</span><span class="p">};</span><span class="w">  </span><span class="c1">// Entero sin signo negativo dará error</span>
+</code></pre></div>
+<p>¿Qué diferencia hay entre un entero con signo y uno sin signo?</p>
+<p>Ya sabéis que un entero int ocupa en memoria 4 bytes, eso son (4*8) 32 bits y por tanto podemos representar cualquier número en el rango <strong>(0~32^2-1) **de **[0, 4.294.967.295]</strong>.</p>
+<p>Pues bien, esto sería en el caso en que un número entero sea <code>unsigned</code>, porque si fuera <code>signed</code> en realidad tenemos que dividir el rango en dos partes, los números con signo negativo y los números con signo positivo. Por tanto tendríamos 2.147.483.648 negativos y la misma cantidad de positivos, contando el cero como un positivo y por tanto teniendo el rango de [-2.147.483.648, 2.147.483.647].</p>
+<p>En C++ existen dos constantes (una especie de variables no modificables por el usuario), que almacenan el número entero mínimo y máximo con signo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">INT_MIN</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">INT_MAX</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>También existen dos tipos que pueden utilizarse como modificadores llamados <code>short</code> y <code>long</code> para optimizar el uso de la memoria dependiendo del rango de números que necesitemos almacenar.</p>
+<p>En la web <a href="https://es.cppreference.com/w/cpp/language/types">https://es.cppreference.com/w/cpp/language/types</a> podemos consultar la siguiente tabla donde se muestran todas las combinaciones de <code>short</code>, <code>int</code>, <code>long</code> con y sin signo:</p>
+<p><img alt="" src="/cdn/cpp/image-33.png" /></p>
+<h2 id="numeros-fraccionarios">Números fraccionarios<a class="headerlink" href="#numeros-fraccionarios" title="Permanent link">&para;</a></h2>
+<p>Dejando de lado los números enteros, también podemos trabajar con números fraccionarios, cuyos tipos se conocen como tipos de punto flotante y encontramos esencialmente tres dependiendo de la precisión decimal que necesitemos:</p>
+<ul>
+<li><code>float</code>: 4 bytes y 7 dígitos de precisión, se indican con una <code>f</code> al final.</li>
+<li><code>double</code>: 8 bytes y 15 dígitos de precisión, son el tipo fraccionario por defecto.</li>
+<li><code>long double</code>: 16 bytes y precisión mayor que un double, se indican con una <code>L</code> al final.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 4 bytes</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 8 bytes</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 16 bytes</span>
+</code></pre></div>
+<p>La <strong>precisión</strong> es el número de dígitos decimales que se pueden representar detrás del punto:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">num1</span><span class="p">{</span><span class="mf">1.0011223344556677889f</span><span class="p">};</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">num2</span><span class="p">{</span><span class="mf">1.0011223344556677889</span><span class="p">};</span><span class="w"></span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">num3</span><span class="p">{</span><span class="mf">1.0011223344556677889L</span><span class="p">};</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.00112</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.00112</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.00112</span>
+</code></pre></div>
+<p>La función <code>std::cout</code> limita por defecto la precisión a 6 dígitos, podemos cambiarla importando la biblioteca <code>&lt;iomanip&gt;</code> y usando la función <code>std::setprecision</code> antes de mostrar el valor.</p>
+<p>Lo curioso del ejemplo es que los tipos <code>float</code> y <code>long double</code>, a partir de los 7 y 15 dígitos de precisión, rellenan la salida hasta los 20 dígitos con números aparentemente aleatorios:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setprecision</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.0011223554611206055</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.0011223344556678949</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.0011223344556677889</span>
+</code></pre></div>
+<p><img alt="" src="/cdn/cpp/image-36.png" /></p>
+<p>En realidad no son aleatorios, pero para entender la razón por la que sucede esto habría que remitirnos al estándar <a href="https://es.wikipedia.org/wiki/IEEE_754">IEEE 754</a> donde se explica el funcionamiento y gestión de los números en coma flotante, algo demasiado complejo como para explicarlo aquí.</p>
+<p>Cabe mencionar que a parte de la notación fija, los números fraccionarios también permiten la notación científica con exponentes, tanto positivos como negativos:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">num1</span><span class="p">{</span><span class="mf">123e6</span><span class="p">};</span><span class="w">  </span><span class="c1">// 123 * 10^6 =&gt; 123000000</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">num2</span><span class="p">{</span><span class="mf">123e-6</span><span class="p">};</span><span class="w"> </span><span class="c1">// 123 * 10^-6 =&gt; 0.000123</span>
+</code></pre></div>
+<p><img alt="" src="/cdn/cpp/image-37.png" /></p>
+<p>Un par de curiosidades para terminar.</p>
+<p>Ya vimos que dividir un número entero entre cero provoca un error que finaliza la ejecución:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// Error</span>
+</code></pre></div>
+<p>Sin embargo, si en lugar de cero usamos un fraccionario 0.0, nos devolverá algo llamado inf (infinito):</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// inf</span>
+</code></pre></div>
+<p>Según mis conocimientos una división entre cero es indeterminada y no infinita, pero al parecer esto responde al hecho de poder determinar el signo, pues si el dividendo es negativo lo que se devuelve es <code>-inf</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">-100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// -inf</span>
+</code></pre></div>
+<p>Por último, si dividimos 0 entre 0.0, el sistema devolverá <code>nan</code> (not a number), entendible ahora sí como un resultado indeterminado:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// nan</span>
+</code></pre></div>
+<p><img alt="" src="/cdn/cpp/image-38.png" /></p>
+<p>Para más información echad un vistazo a <a href="https://es.wikipedia.org/wiki/IEEE_754">https://es.wikipedia.org/wiki/IEEE_754</a>.</p>
+<h2 id="valores-booleanos">Valores booleanos<a class="headerlink" href="#valores-booleanos" title="Permanent link">&para;</a></h2>
+<p>Otro tipo de dato esencial en la programación es el que sirve para representar un valor lógico o racional con únicamente dos opciones: <strong>verdadero</strong> y <strong>falso</strong>.</p>
+<p>En C++ las palabras reservadas para estos valores son <code>true</code> y <code>false</code> respectivamente:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// Devuelve 1 al imprimirlo</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve 0 al imprimirlo</span>
+</code></pre></div>
+<p>Su tipo de dato recibe el nombre de bool:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">encendido</span><span class="p">{</span><span class="nb">false</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">encendido</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Utilizando el operador de negación ! podemos negar un booleano, siendo no verdadero igual a falso y no falso igual a verdero:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">encendido</span><span class="p">{</span><span class="nb">false</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">!</span><span class="n">encendido</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Este tipo ocupa 1 byte en la memoria:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Como ya sabemos 1 byte son 8 bits (2^8=256 posibilidades) mientras que para almacenar las dos posibilidades de un booleano sería suficiente con 1 bit (0 y 1), esto implica que este tipo no sea precisamente eficiente respecto al espacio que ocupa.</p>
+<p>Por último comentar dos opciones que nos permiten configurar la representación en la salida:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w">   </span><span class="c1">// Se imprimirán como true y false</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">noboolalpha</span><span class="p">;</span><span class="w">   </span><span class="c1">// Se imprimirán como 1 y 0</span>
+</code></pre></div>
+<h2 id="caracteres-y-texto">Caracteres y texto<a class="headerlink" href="#caracteres-y-texto" title="Permanent link">&para;</a></h2>
+<p>Otro tipo de dato esencial es el que suponen los símbolos de escritura, llamados caracteres.</p>
+<p>En C++ el tipo de dato para almacenar un carácter recibe el nombre de <code>char</code> y su tamaño en la memoria es de 1 byte, esto implica que puede almacenar hasta 256 posibilidades, cada una para un símbolo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Los caracteres que se pueden representar no son adrede, sino que se encuentran establecidos en el código ASCII <a href="https://en.cppreference.com/w/cpp/language/ascii">https://en.cppreference.com/w/cpp/language/ascii</a>:</p>
+<p><img alt="" src="/cdn/cpp/image-39.png" /></p>
+<p>Cada símbolo tiene un número entero asociado, a través del cuál podemos consultar el respectivo carácter:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">valor</span><span class="p">{</span><span class="mi">65</span><span class="p">};</span><span class="w"> </span><span class="c1">// Código ASCII del carácter &#39;A&#39;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Aunque más allá de trabajar con el número a nosotros nos interesará trabajar con los propios caracteres, definidos entre comilla simple:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">valor</span><span class="p">{</span><span class="sc">&#39;A&#39;</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Si nos fijamos en la tabla veremos que existen los caracteres en mayúscula y minúscula, eso es obvio dado que son símbolos distintos. Además también están representados los números naturales como caracteres de escritura, que no debemos de confundir con los tipos de datos numéricos.</p>
+<p>Por cierto, una curiosidad es que, si os fijáis los símbolos numéricos tienen un valor decimal menor que las mayúsculas y a su vez estas menor que las minúsculas. Eso explica porqué podemos comparar si un carácter es mayor que otro en función de su número en la tabla:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// Devuelve un 1 (true)</span>
+</code></pre></div>
+<p>Como <code>'a'</code> tiene un valor de 97 y <code>'A'</code> 65, al ser 97 mayor que 65 el sistema devuelve 1 en la comparación, haciendo referencia a que ésta es verdadera.</p>
+<p>ASCII es uno de los primeros sistemas de codificación para representar texto en las computadoras, el problema es que solo está pensado para representar texto en idioma inglés, por lo que símbolos específicos latinos y otras lenguas no funcionarán y resultarán en un mal funcionamiento del sistema de codificación:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">valor</span><span class="p">{</span><span class="sc">&#39;á&#39;</span><span class="p">};</span><span class="w"> </span><span class="c1">// Error</span>
+</code></pre></div>
+<p>En la actualidad un sistema de codificación más globalizado es el Unicode que incluye diferentes formas de codificación como UTF-8, UTF-16 y UTF-32.</p>
+<p>Si bien en C++ podemos trabajar con Unicode, esto es un tanto complejo, ya que estas tablas son muy extensas y además hay que configurar la salida de datos para decodificar los símbolos y todo esto también depende del sistema operativo.</p>
+<p>Por curiosidad, algo como almacenar y mostrar un carácter <code>'Ñ'</code> (cuyo código según la tabla Unicode es 00D1) en Windows 11 requeriría lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;clocale&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// Cambiar la localización del programa</span>
+<span class="w">  </span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L</span><span class="err">&#39;</span><span class="n">\u00D1</span><span class="err">&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Tipo wide char con soporte Unicode</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">wcout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w">       </span><span class="c1">// Salida wide char con soporte Unicode</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Cuyo resultado sería el siguiente:</p>
+<p><img alt="" src="/cdn/cpp/image-40.png" /></p>
+<p>¿Y cómo se almacena no solo un carácter sino varios para representar un texto? Pues los textos, conocidos como  <strong>cadenas de caracteres</strong>, son tradicionalmente <strong>arreglos</strong> (sucesiones) de múltiples caracteres, un tema que exploraré más adelante.</p>
+<h2 id="tipo-automatico">Tipo automático<a class="headerlink" href="#tipo-automatico" title="Permanent link">&para;</a></h2>
+<p>Siempre que definimos una variable debemos indicar el tipo de dato para almacenar el espacio necesario en la memoria, sin embargo desde C++11 podemos dejar al propio lenguaje deducir el tipo de dato a partir del valor literal asignado durante la definición.</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w">    </span><span class="c1">// int</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">var2</span><span class="w"> </span><span class="p">{</span><span class="mf">3.14</span><span class="p">};</span><span class="w">   </span><span class="c1">// double</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">var3</span><span class="w"> </span><span class="p">{</span><span class="mf">5.4f</span><span class="p">};</span><span class="w">   </span><span class="c1">// float</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">var4</span><span class="w"> </span><span class="p">{</span><span class="mf">21.5l</span><span class="p">};</span><span class="w">  </span><span class="c1">// long double</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">var5</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39;a&#39;</span><span class="p">};</span><span class="w">    </span><span class="c1">// char</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var4</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var5</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var5</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>También podemos indicar mediante sufijos si queremos números enteros con o sin signo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">var6</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">256u</span><span class="p">};</span><span class="w">   </span><span class="c1">// unsigned int</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">var7</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">256ul</span><span class="p">};</span><span class="w">  </span><span class="c1">// unsigned long</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">var8</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">256l</span><span class="n">l</span><span class="p">};</span><span class="w">  </span><span class="c1">// unsigned long long</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var6</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var6</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var7</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var7</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var8</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">var8</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; bytes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Este sería el resultado:</p>
+<p><img alt="" src="/cdn/cpp/image-42.png" /></p>
+<p>Cabe mencionar que si dejamos que el sistema defina el tipo y le asignamos un sufijo <code>unsigned</code>, si sobrescribimos el valor con un negativo, resultará en un funcionamiento no espero del dato:</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">10u</span><span class="p">};</span><span class="w"></span>
+<span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-21</span><span class="p">;</span><span class="w">  </span><span class="c1">// ¡Cuidado!</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><img alt="" src="/cdn/cpp/image-43.png" /></p>
+<p>También si establecemos un tipo como un carácter y luego lo sobrescribimos por algo como un flotante:</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">valor</span><span class="p">{</span><span class="sc">&#39;A&#39;</span><span class="p">};</span><span class="w"></span>
+<span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14f</span><span class="p">;</span><span class="w"> </span><span class="c1">// ¡Cuidado!</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>En este caso se devolvería lo siguiente:</p>
+<p><img alt="" src="/cdn/cpp/image-44.png" /></p>
+<p>En conclusión este tipo es muy cómodo, pero debemos tener cuidado con sus valores de sobreescritura.</p>
+<h2 id="ambito-de-las-variables">Ámbito de las variables<a class="headerlink" href="#ambito-de-las-variables" title="Permanent link">&para;</a></h2>
+<p>El ámbito de una variable es el espacio donde se encuentra accesible dentro del programa. Básicamente hay dos tipos de ámbito: <code>local</code> y <code>global</code>.</p>
+<p>Cuando se define una variable, ésta existe localmente dentro de su bloque <code>{}</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w">                   </span><span class="c1">// esta variable local</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// existe en este bloque</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// pero aquí no existe</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>La variable definida también será accesible por todos los bloques dentro de este bloque, diremos que su ámbito abarca el bloque de su definición y todos sus bloques anidados:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w"> </span><span class="c1">// esta variable de la función main</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// existe en este bloque</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// también existe en este</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Dado que la función <code>main</code> es un bloque, si creamos otra función, las variables de cada bloque no serán accesibles entre ellas, de hecho podrían tener el mismo nombre pues existen paralelamente en la memoria:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">hola</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">999</span><span class="p">};</span><span class="w">                  </span><span class="c1">// variable numero en la funcion hola</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// numero    99</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w">                   </span><span class="c1">// variable numero en la funcion main</span>
+<span class="w">    </span><span class="n">hola</span><span class="p">();</span><span class="w">                           </span><span class="c1">// ejecutamos la función</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// numero    10</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Sin embargo, si definimos una variable fuera de ambas funciones su ámbito se considerará <code>global</code> y podrá ser manipulable por ambas:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">345</span><span class="p">};</span><span class="w"> </span><span class="c1">// variable global</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">hola</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// numero    345</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">hola</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// numero    345</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Pese a todo, si una variable local tiene el mismo nombre que una variable global, tendrá prioridad dentro del bloque y la global dejará de ser accesible:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">345</span><span class="p">};</span><span class="w"> </span><span class="c1">// variable global</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">hola</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">999</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// numero    999</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">hola</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// numero    345</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 

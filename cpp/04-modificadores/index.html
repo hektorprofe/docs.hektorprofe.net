@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Repaso a los modificadores y especificadores basicos de C++.">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/04-modificadores/">
@@ -377,9 +377,59 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Modificadores
+      </label>
+    
     <a href="./" title="Modificadores" class="md-nav__link md-nav__link--active" id="md__active_link">
       Modificadores
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formateo-de-salida" title="Formateo de salida" class="md-nav__link toc__link">
+    Formateo de salida
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limites-numericos" title="Límites numéricos" class="md-nav__link toc__link">
+    Límites numéricos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-aritmeticas-en-tipos-integrales-menores-de-4-bytes" title="Operaciones aritméticas en tipos integrales menores de 4 bytes" class="md-nav__link toc__link">
+    Operaciones aritméticas en tipos integrales menores de 4 bytes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literales-constantes-expresiones-e-inicializaciones-constantes" title="Literales, constantes, expresiones e inicializaciones constantes" class="md-nav__link toc__link">
+    Literales, constantes, expresiones e inicializaciones constantes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -418,11 +468,11 @@ div.my-img{text-align:center;margin-top:20px}
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
-      Punteros y referencias
+      Punteros y memoria
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
-        Punteros y referencias
+        Punteros y memoria
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -433,7 +483,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+    <a href="../07-punteros-memoria/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
       Primeros pasos
     </a>
   </li>
@@ -445,7 +495,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
+    <a href="../07-punteros-memoria/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
       Nullptr, void* y ((void*)0)
     </a>
   </li>
@@ -457,7 +507,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
+    <a href="../07-punteros-memoria/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
       Punteros constantes
     </a>
   </li>
@@ -469,7 +519,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
       Arreglos y punteros
     </a>
   </li>
@@ -481,7 +531,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
       Aritmética de punteros
     </a>
   </li>
@@ -493,7 +543,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
+    <a href="../07-punteros-memoria/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
       Gestión de la memoria
     </a>
   </li>
@@ -505,7 +555,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
+    <a href="../07-punteros-memoria/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
       Memoria dinámica (Heap)
     </a>
   </li>
@@ -517,7 +567,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
+    <a href="../07-punteros-memoria/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
       Punteros y referencias
     </a>
   </li>
@@ -898,6 +948,43 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formateo-de-salida" title="Formateo de salida" class="md-nav__link toc__link">
+    Formateo de salida
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limites-numericos" title="Límites numéricos" class="md-nav__link toc__link">
+    Límites numéricos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-aritmeticas-en-tipos-integrales-menores-de-4-bytes" title="Operaciones aritméticas en tipos integrales menores de 4 bytes" class="md-nav__link toc__link">
+    Operaciones aritméticas en tipos integrales menores de 4 bytes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literales-constantes-expresiones-e-inicializaciones-constantes" title="Literales, constantes, expresiones e inicializaciones constantes" class="md-nav__link toc__link">
+    Literales, constantes, expresiones e inicializaciones constantes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -910,8 +997,148 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="modificadores-y-especificadores-en-c">Modificadores y especificadores en C++<a class="headerlink" href="#modificadores-y-especificadores-en-c" title="Permanent link">&para;</a></h1>
+<h2 id="formateo-de-salida">Formateo de salida<a class="headerlink" href="#formateo-de-salida" title="Permanent link">&para;</a></h2>
+<p>En estas tablas se encuentra un resumen de las funciones que modifican la salida del buffer de texto para realizar diferentes tareas en la información:</p>
+<p><img alt="" src="/cdn/cpp/image-45.png" /></p>
+<p><img alt="" src="/cdn/cpp/image-46.png" /></p>
+<p>Referencia de las funciones: <a href="https://es.cppreference.com/w/cpp/io/manip">https://es.cppreference.com/w/cpp/io/manip</a></p>
+<h2 id="limites-numericos">Límites numéricos<a class="headerlink" href="#limites-numericos" title="Permanent link">&para;</a></h2>
+<p>Nos permiten saber el mínimo y máximo representado en un tipo numérico:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Short is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">short</span><span class="o">&gt;::</span><span class="n">min</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">short</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Unsigned short is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">&gt;::</span><span class="n">min</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Int is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">min</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Unsigned int is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">min</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Long is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">min</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Float is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">min</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Lowest float is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">lowest</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Lowest double is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">lowest</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Lowest for long double is from &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">lowest</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Short is from -32768 to 32767
+Unsigned short is from 0 to 65535
+Int is from -2147483648 to 2147483647
+Unsigned int is from 0 to 4294967295
+Long is from -2147483648 to 2147483647
+Float is from 1.17549e-38 to 3.40282e+38
+Lowest for float is from -3.40282e+38 to 3.40282e+38
+Lowest for double is from -1.79769e+308 to 1.79769e+308
+Lowest for long double is from -1.18973e+4932 to 1.18973e+4932
+</code></pre></div>
+<p>Más información: <a href="https://es.cppreference.com/w/cpp/types/numeric_limits">https://es.cppreference.com/w/cpp/types/numeric_limits</a></p>
+<h2 id="operaciones-aritmeticas-en-tipos-integrales-menores-de-4-bytes">Operaciones aritméticas en tipos integrales menores de 4 bytes<a class="headerlink" href="#operaciones-aritmeticas-en-tipos-integrales-menores-de-4-bytes" title="Permanent link">&para;</a></h2>
+<p>Quiero documentar este caso porque me ha llamado la atención.</p>
+<p>En C++ los tipos menores de 4 bytes como <code>char</code> y <code>short int</code> no soportan operaciones aritméticas, sus tamaños son 1 y 2 bytes respectivamente:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">{</span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="n">num2</span><span class="p">{</span><span class="mi">20</span><span class="p">};</span><span class="w"></span>
+<span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="p">{</span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">};</span><span class="w"> </span><span class="c1">// Error</span>
+</code></pre></div>
+<p>Pero si intentamos mostrar directamente la suma de ambos sí funcionará:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">{</span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="n">num2</span><span class="p">{</span><span class="mi">20</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>¿Por qué funciona? Debido a la deducción automática del sistema al encontrar el tipo literal de salida:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">{</span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="n">num2</span><span class="p">{</span><span class="mi">20</span><span class="p">};</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">res</span><span class="p">{</span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">};</span><span class="w">  </span><span class="c1">// se deduce un tipo int</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>¿Pero por qué no podemos operar tipos menores de 4 bytes?</p>
+<p>Esto no es una característica del lenguaje sino una limitación de las arquitecturas de los procesadores que ejecutan el código. El tipo entero en C suele tener el tamaño estándar del registro de la CPU. Más silicio ocupa más espacio y más potencia, por lo que en muchos casos la aritmética solo se puede hacer en los tipos de datos de «tamaño natural». Aunque esto no es cierto en todos los casos, muchas arquitecturas todavía tienen esta limitación.</p>
+<p>Para una discusión completa sobre el tema: <a href="https://stackoverflow.com/a/24372323">https://stackoverflow.com/a/24372323</a></p>
+<h2 id="literales-constantes-expresiones-e-inicializaciones-constantes">Literales, constantes, expresiones e inicializaciones constantes<a class="headerlink" href="#literales-constantes-expresiones-e-inicializaciones-constantes" title="Permanent link">&para;</a></h2>
+<p>Hablemos un poco de sobre los datos y su representación.</p>
+<p>En primer lugar se conoce como un valor <strong>literal</strong> a un dato que no se encuentra almacenado en una variable pero se utiliza en el código:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// literal entero 1000</span>
+</code></pre></div>
+<p>Un valor literal ocupa la memoria en tiempo de ejecución del programa.</p>
+<p>Por otro lado una <strong>constante</strong> <code>const</code> es una variable con un valor fijo definido antes o durante la ejecución del programa. Se trata como una variable regular con la única excepción de que su valor no se puede cambiar:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">  </span><span class="c1">// error de compilación</span>
+</code></pre></div>
+<p>Una constante puede ser definida tanto en tiempo de compilación como ejecución:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* constante en tiempo de compilación*/</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">mase_base</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">10.5</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="cm">/* constante en tiempo de ejecución */</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">masa</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">masa</span><span class="p">;</span><span class="w">  </span><span class="c1">// lectura del valor constante</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">mase_base</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">masa</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Una constante en tiempo de compilación siempre será más rápida de gestionar que en tiempo de ejecución, pero a su vez es menos flexible.</p>
+<p>En cualquier caso también encontramos dos especificadores que extienden las definiciones constantes.</p>
+<p>Una <strong>expresión constante</strong> <code>constexpr</code> sirve para declarar que es posible evaluar una función o variable en tiempo de compilación. Obviamente estamos hablando de valores constantes evaluados en compilación cuyo valor no se puede modificar:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">alto</span><span class="p">{</span><span class="mi">5</span><span class="p">},</span><span class="w"> </span><span class="n">ancho</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w"></span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="p">{</span><span class="n">alto</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ancho</span><span class="p">};</span><span class="w">  </span><span class="c1">// esto funcionará</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">alto</span><span class="p">{</span><span class="mi">5</span><span class="p">},</span><span class="w"> </span><span class="n">ancho</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w"></span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="p">{</span><span class="n">alto</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ancho</span><span class="p">};</span><span class="w">  </span><span class="c1">// esto no funcionará</span>
+</code></pre></div>
+<p>El segundo ejemplo no funcionará porque una variable no constante puede cambiar su valor, implicando que el valor de la expresión constante cambiase con ello, así que no dejará compilarlo.</p>
+<p>Por último desde C++20 también es posible declarar <strong>inicializaciones constantes</strong> <code>constinit</code> cuyas variables sí pueden modificarse:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">constinit</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w">  </span><span class="c1">// definición en tiempo de ejecución</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// inicialmente siempre vale 100</span>
+
+<span class="w">    </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w">  </span><span class="c1">// podemos modificar la variable</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>También podemos inicializar a partir de una constante o una expresión constante:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CIEN</span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w"></span>
+<span class="k">constinit</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">{</span><span class="n">CIEN</span><span class="p">};</span><span class="w"> </span><span class="c1">// funcionará</span>
+
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">CIEN</span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w"></span>
+<span class="k">constinit</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">{</span><span class="n">CIEN</span><span class="p">};</span><span class="w"> </span><span class="c1">// funcionará</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">CIEN</span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w"></span>
+<span class="k">constinit</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">{</span><span class="n">CIEN</span><span class="p">};</span><span class="w"> </span><span class="c1">// no funcionará</span>
+</code></pre></div>
+<p>Para más información aquí dejo la respectiva documentación:</p>
+<ul>
+<li><code>const</code> <a href="https://en.cppreference.com/book/intro/constants">https://en.cppreference.com/book/intro/constants</a></li>
+<li><code>constexpr</code> <a href="https://es.cppreference.com/w/cpp/language/constexpr">https://es.cppreference.com/w/cpp/language/constexpr</a></li>
+<li><code>constinit</code> <a href="https://es.cppreference.com/w/cpp/language/constinit">https://es.cppreference.com/w/cpp/language/constinit</a></li>
+</ul>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 

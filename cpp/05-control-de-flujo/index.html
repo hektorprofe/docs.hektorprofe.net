@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Resumen de algunas características del control de flujo en C++.">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/05-control-de-flujo/">
@@ -389,9 +389,52 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Control del flujo
+      </label>
+    
     <a href="./" title="Control del flujo" class="md-nav__link md-nav__link--active" id="md__active_link">
       Control del flujo
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cortocircuitado-de-evaluaciones" title="Cortocircuitado de evaluaciones" class="md-nav__link toc__link">
+    Cortocircuitado de evaluaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializadores-en-if-switch-y-for" title="Inicializadores en if, switch y for" class="md-nav__link toc__link">
+    Inicializadores en if, switch y for
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bucles-for-utilizando-arreglos" title="Bucles for utilizando arreglos" class="md-nav__link toc__link">
+    Bucles for utilizando arreglos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -418,11 +461,11 @@ div.my-img{text-align:center;margin-top:20px}
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
-      Punteros y referencias
+      Punteros y memoria
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
-        Punteros y referencias
+        Punteros y memoria
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -433,7 +476,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+    <a href="../07-punteros-memoria/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
       Primeros pasos
     </a>
   </li>
@@ -445,7 +488,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
+    <a href="../07-punteros-memoria/02-null-nullptr-void0/" title="Nullptr, void* y ((void*)0)" class="md-nav__link">
       Nullptr, void* y ((void*)0)
     </a>
   </li>
@@ -457,7 +500,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
+    <a href="../07-punteros-memoria/03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
       Punteros constantes
     </a>
   </li>
@@ -469,7 +512,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/04-arreglos-punteros/" title="Arreglos y punteros" class="md-nav__link">
       Arreglos y punteros
     </a>
   </li>
@@ -481,7 +524,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
+    <a href="../07-punteros-memoria/05-aritmetica-punteros/" title="Aritmética de punteros" class="md-nav__link">
       Aritmética de punteros
     </a>
   </li>
@@ -493,7 +536,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
+    <a href="../07-punteros-memoria/06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
       Gestión de la memoria
     </a>
   </li>
@@ -505,7 +548,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
+    <a href="../07-punteros-memoria/07-memoria-dinamica/" title="Memoria dinámica (Heap)" class="md-nav__link">
       Memoria dinámica (Heap)
     </a>
   </li>
@@ -517,7 +560,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-punteros-referencias/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
+    <a href="../07-punteros-memoria/08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
       Punteros y referencias
     </a>
   </li>
@@ -898,6 +941,36 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cortocircuitado-de-evaluaciones" title="Cortocircuitado de evaluaciones" class="md-nav__link toc__link">
+    Cortocircuitado de evaluaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializadores-en-if-switch-y-for" title="Inicializadores en if, switch y for" class="md-nav__link toc__link">
+    Inicializadores en if, switch y for
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bucles-for-utilizando-arreglos" title="Bucles for utilizando arreglos" class="md-nav__link toc__link">
+    Bucles for utilizando arreglos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -910,8 +983,56 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="control-de-flujo-en-c">Control de flujo en C++<a class="headerlink" href="#control-de-flujo-en-c" title="Permanent link">&para;</a></h1>
+<h2 id="cortocircuitado-de-evaluaciones">Cortocircuitado de evaluaciones<a class="headerlink" href="#cortocircuitado-de-evaluaciones" title="Permanent link">&para;</a></h2>
+<p>Cuando tenemos múltiples condiciones unidades mediante operadores lógicos como <code>&amp;&amp;</code> (and) y <code>||</code> (or), podemos cortocircuitarlas para ahorrarnos la ejecución de las subsiguientes evaluaciones:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Cortocircuitado de and</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// el primer false ya no ejecuta las siguientes comprobaciones</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Cortocircuitado de or</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// el primer true ya no ejecuta las siguientes comprobaciones</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="inicializadores-en-if-switch-y-for">Inicializadores en if, switch y for<a class="headerlink" href="#inicializadores-en-if-switch-y-for" title="Permanent link">&para;</a></h2>
+<p>Una funcionalidad que me ha llamado la atención de C++ es que un bloque como <code>if</code> en la propia definición permite definir variables locales:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<p>La condición <code>switch</code> también acepta un inicializador:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">opcion</span><span class="p">{</span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w"> </span><span class="n">opcion</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Finalmente, un bucle <code>for</code> mediante rangos también permite esta funcionalidad:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">multiplicador</span><span class="p">{</span><span class="mi">5</span><span class="p">};</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">})</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">multiplicador</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="bucles-for-utilizando-arreglos">Bucles for utilizando arreglos<a class="headerlink" href="#bucles-for-utilizando-arreglos" title="Permanent link">&para;</a></h2>
+<p>Un bucle <code>for</code> clásico se basa en una definición, una condición y una instrucción de paso para ejecutar un bloque de instrucciones un número determinado de veces:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Desde C++11 es posible emular un típico <code>foreach</code> (de otros lenguajes) para recorrer los elementos de un arreglo, en cuyo caso no necesitamos una condición ni una instrucción de paso:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">valores</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">};</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">valores</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Podemos dejar al compilador deducir el tipo de dato del arreglo para que sea más cómodo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">})</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 

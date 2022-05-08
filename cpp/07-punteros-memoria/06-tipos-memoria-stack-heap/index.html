@@ -14,7 +14,7 @@
         <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
       
       
-        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/07-punteros-referencias/03-punteros-constantes/">
+        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/07-punteros-memoria/06-tipos-memoria-stack-heap/">
       
       
         <meta name="author" content="Héctor Costa Guzman">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Punteros constantes y a constantes | Apuntes lenguaje C++ | Hektor Profe</title>
+        <title>Gestión de la memoria (Stack y Heap) | Apuntes lenguaje C++ | Hektor Profe</title>
       
     
     <link rel="stylesheet" href="../../../assets/stylesheets/application.2.css">
@@ -109,7 +109,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#punteros-constantes-y-a-constantes-en-c" tabindex="1" class="md-skip">
+      <a href="#gestion-de-la-memoria-stack-y-heap-en-c" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -411,11 +411,11 @@ div.my-img{text-align:center;margin-top:20px}
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8" checked>
     
     <label class="md-nav__link" for="nav-6-8">
-      Punteros y referencias
+      Punteros y memoria
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
-        Punteros y referencias
+        Punteros y memoria
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -448,20 +448,11 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Punteros constantes" class="md-nav__link md-nav__link--active" id="md__active_link">
+  <li class="md-nav__item">
+    <a href="../03-punteros-constantes/" title="Punteros constantes" class="md-nav__link">
       Punteros constantes
     </a>
-    
   </li>
 
         
@@ -493,11 +484,20 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
+  
 
-  <li class="md-nav__item">
-    <a href="../06-tipos-memoria-stack-heap/" title="Gestión de la memoria" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Gestión de la memoria" class="md-nav__link md-nav__link--active" id="md__active_link">
       Gestión de la memoria
     </a>
+    
   </li>
 
         
@@ -911,7 +911,7 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <h1 id="punteros-constantes-y-a-constantes-en-c">Punteros constantes y a constantes en C++<a class="headerlink" href="#punteros-constantes-y-a-constantes-en-c" title="Permanent link">&para;</a></h1>
+                <h1 id="gestion-de-la-memoria-stack-y-heap-en-c">Gestión de la memoria (Stack y Heap) en C++<a class="headerlink" href="#gestion-de-la-memoria-stack-y-heap-en-c" title="Permanent link">&para;</a></h1>
 <hr />
 <p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
                 
@@ -935,8 +935,8 @@ div.my-img{text-align:center;margin-top:20px}
     <nav class="md-footer-nav__inner md-grid">
       
       <a
-        href="../02-null-nullptr-void0/"
-        title="Nullptr, void* y ((void*)0)"
+        href="../05-aritmetica-punteros/"
+        title="Aritmética de punteros"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -948,14 +948,14 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Nullptr, void* y ((void*)0)
+            Aritmética de punteros
           </span>
         </div>
       </a>
        
       <a
-        href="../04-arreglos-punteros/"
-        title="Arreglos y punteros"
+        href="../07-memoria-dinamica/"
+        title="Memoria dinámica (Heap)"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -964,7 +964,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Arreglos y punteros
+            Memoria dinámica (Heap)
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">
