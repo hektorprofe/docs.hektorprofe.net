@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Gestión de la memoria (Stack y Heap) | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/07-punteros-memoria/06-tipos-memoria-stack-heap/">
@@ -494,9 +494,45 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Gestión de la memoria
+      </label>
+    
     <a href="./" title="Gestión de la memoria" class="md-nav__link md-nav__link--active" id="md__active_link">
       Gestión de la memoria
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-stack-y-heap" title="Diferencias entre stack y heap" class="md-nav__link toc__link">
+    Diferencias entre stack y heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-utilizar-el-monton-y-la-pila" title="¿Cuándo utilizar el montón y la pila?" class="md-nav__link toc__link">
+    ¿Cuándo utilizar el montón y la pila?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,8 +555,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
-      Punteros y referencias
+    <a href="../08-referencias-arreglos/" title="Referencias y arreglos" class="md-nav__link">
+      Referencias y arreglos
     </a>
   </li>
 
@@ -900,6 +936,29 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-stack-y-heap" title="Diferencias entre stack y heap" class="md-nav__link toc__link">
+    Diferencias entre stack y heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-utilizar-el-monton-y-la-pila" title="¿Cuándo utilizar el montón y la pila?" class="md-nav__link toc__link">
+    ¿Cuándo utilizar el montón y la pila?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -912,8 +971,113 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="gestion-de-la-memoria-stack-y-heap-en-c">Gestión de la memoria (Stack y Heap) en C++<a class="headerlink" href="#gestion-de-la-memoria-stack-y-heap-en-c" title="Permanent link">&para;</a></h1>
+<p>Cuando ejecutamos un programa, nuestro sistema operativo le asigna un proceso con algo de memoria, llamada la <strong>memoria virtual</strong>, donde ejecutarse. Esa memoria virtual se divide en segmentos:</p>
+<p><img alt="" src="/cdn/cpp/image-50.png" /></p>
+<ul>
+<li>El <strong>segmento de texto</strong>, conocido como segmento de código, contiene las instrucciones ejecutables y es solo de lectura: <a href="https://en.wikipedia.org/wiki/Code_segment">https://en.wikipedia.org/wiki/Code_segment</a>.</li>
+<li>El <strong>segmento de datos</strong> contiene la inicialización de las variables estáticas, globales y estáticas locales: <a href="https://en.wikipedia.org/wiki/Data_segment">https://en.wikipedia.org/wiki/Data_segment</a>.</li>
+<li>El <strong>segmento heap</strong> (montón) contiene memoria reservada dinámicamente por el programador para almacenar variables temporales, se gestiona con las instrucciones <code>malloc</code>, <code>calloc</code>, <code>realloc</code> y <code>free</code>. Es un segmento compartido por todos los subprocesos, bibliotecas compartidas y módulos cargados dinámicamente en un proceso: <a href="https://en.wikipedia.org/wiki/Manual_memory_management">https://en.wikipedia.org/wiki/Manual_memory_management</a>.</li>
+<li>El <strong>segmento stack</strong> (pila), ubicado en la parte superior de la memoria, contiene la pila de llamadas (call stack). Se trata de una estructura <strong>LIFO</strong> (último en llegar primero en salir) donde se almacenan los argumentos pasados al programa, las cadenas del entorno, argumentos de las funciones, variables locales no inicializadas, además de almacenar el registro de llamada de funciones y el retorno: <a href="https://en.wikipedia.org/wiki/Stack-based_memory_allocation">https://en.wikipedia.org/wiki/Stack-based_memory_allocation</a>.</li>
+</ul>
+<h2 id="diferencias-entre-stack-y-heap">Diferencias entre stack y heap<a class="headerlink" href="#diferencias-entre-stack-y-heap" title="Permanent link">&para;</a></h2>
+<p>Los segmentos más interesantes para nosotros son el <strong>montón (heap)</strong> y la <strong>pila (stack)</strong>, así que voy a resumir sus diferencias clave en una tabla:</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Stack (pila)</th>
+<th>Heap (montón)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Estructura de datos</td>
+<td>Estructura de datos lineal.</td>
+<td>Estructura de datos jerárquica.</td>
+</tr>
+<tr>
+<td>Velocidad de acceso</td>
+<td>Acceso de alta velocidad.</td>
+<td>Más lento en comparación con la pila.</td>
+</tr>
+<tr>
+<td>Gestión del espacio</td>
+<td>Es un espacio administrado eficientemente por el sistema operativo para que la memoria nunca se fragmente.</td>
+<td>El espacio de pila no se usa de manera tan eficiente. La memoria puede fragmentarse como bloques de memoria asignados y liberados.</td>
+</tr>
+<tr>
+<td>Acceso</td>
+<td>Solo variables locales.</td>
+<td>Permite acceder a variables de forma global.</td>
+</tr>
+<tr>
+<td>Límite de tamaño</td>
+<td>El límite depende del sistema operativo.</td>
+<td>No tiene un límite específico.</td>
+</tr>
+<tr>
+<td>Redimensión</td>
+<td>Las variables no pueden cambiar de tamaño.</td>
+<td>Las variables pueden cambiar de tamaño.</td>
+</tr>
+<tr>
+<td>Asignación de memoria</td>
+<td>La memoria se asigna en un bloque contiguo.</td>
+<td>La memoria se asigna en cualquier orden aleatorio.</td>
+</tr>
+<tr>
+<td>Asignación y desasignación</td>
+<td>Se realiza automáticamente mediante instrucciones del compilador.</td>
+<td>Lo hace manualmente el programador.</td>
+</tr>
+<tr>
+<td>Desasignación</td>
+<td>No requiere desasignar variables.</td>
+<td>Se necesita una desasignación explícita.</td>
+</tr>
+<tr>
+<td>Coste</td>
+<td>Menor.</td>
+<td>Mayor.</td>
+</tr>
+<tr>
+<td>Implementación</td>
+<td>Matrices simples, memoria dinámica y basada en listas vinculadas.</td>
+<td>Matrices y árboles.</td>
+</tr>
+<tr>
+<td>Mayor problema</td>
+<td>Escasez de memoria.</td>
+<td>Fragmentación de la memoria.</td>
+</tr>
+<tr>
+<td>Localidad de referencia</td>
+<td>Instrucciones automáticas en tiempo de compilación.</td>
+<td>Adecuado.</td>
+</tr>
+<tr>
+<td>Flexibilidad</td>
+<td>Tamaño fijo.</td>
+<td>Redimensionable.</td>
+</tr>
+<tr>
+<td>Tiempo de acceso</td>
+<td>Más rápido.</td>
+<td>Más lento.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cuando-utilizar-el-monton-y-la-pila">¿Cuándo utilizar el montón y la pila?<a class="headerlink" href="#cuando-utilizar-el-monton-y-la-pila" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>El <strong>montón (heap)</strong> debe utilizarse cuando se necesita asignar un gran bloque de memoria. Por ejemplo crear una matriz de gran tamaño o una estructura demasiado grande para mantener una variable durante mucho tiempo.</p>
+</li>
+<li>
+<p>La <strong>pila (stack)</strong> es mejor utilizarla cuando se trabaja con variables relativamente pequeñas que solo se requieren mientras una función está viva, debido a que provee un acceso más fácil y rápido.</p>
+</li>
+</ul>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 

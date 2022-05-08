@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Primeros pasos con punteros | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/07-punteros-memoria/01-primeros-pasos/">
@@ -519,8 +519,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
-      Punteros y referencias
+    <a href="../08-referencias-arreglos/" title="Referencias y arreglos" class="md-nav__link">
+      Referencias y arreglos
     </a>
   </li>
 
@@ -912,8 +912,57 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="primeros-pasos-con-punteros-en-c">Primeros pasos con punteros en C++<a class="headerlink" href="#primeros-pasos-con-punteros-en-c" title="Permanent link">&para;</a></h1>
+<p>Siempre que definimos una variable, ésta ocupa un lugar de la memoria en base al tamaño del tipo de dato almacenado. Un puntero es un tipo de variable que almacena la dirección de la memoria de una variable y no el valor en sí mismo.</p>
+<p>Por defecto los punteros implícitamente reciben el valor de puntero nulo <code>nullptr</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_entero</span><span class="p">{};</span><span class="w">               </span><span class="c1">// direccion de memoria de un int</span>
+<span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p_fraccional</span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"> </span><span class="c1">// direccion de memoria de un double</span>
+</code></pre></div>
+<p>En sistemas de 32 bits los punteros ocupan 4 bytes, que en los de 64 bits ocupan 8 bytes.</p>
+<p>No podemos asignar un valor a un puntero, ni literal ni tampoco variable:</p>
+<div class="highlight"><pre><span></span><code><span class="n">p_entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error: No es una dirección en la memoria</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="p">{</span><span class="mf">3.1415</span><span class="p">};</span><span class="w"></span>
+<span class="n">p_fraccional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error: No es una dirección en la memoria</span>
+</code></pre></div>
+<p>Sin embargo, podemos asignar la dirección de memoria de una variable estableciendo el signo &amp; delante de la variable.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="p">{</span><span class="mf">3.1415</span><span class="p">};</span><span class="w"></span>
+<span class="n">p_fraccional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"> </span><span class="c1">// Esto sí funcionará</span>
+</code></pre></div>
+<p>Si mostramos el valor del puntero podremos observar una dirección de memoria:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_fraccional</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 0x9c70fff6a8</span>
+</code></pre></div>
+<p>Pero si indicamos que esa variable es un puntero mediante <code>*</code>, podremos acceder al valor que contiene:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_fraccional</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3.1415</span>
+</code></pre></div>
+<p>Si intentamos almacenar un tipo de dato que no concuerda con el tipo del puntero, la compilación fallará:</p>
+<div class="highlight"><pre><span></span><code><span class="n">p_entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w">  </span><span class="c1">// cannot convert &#39;double*&#39; to &#39;int*&#39; in assignment</span>
+</code></pre></div>
+<p>Algo interesante es que un puntero a un carácter constante se puede inicializar como una cadena:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p_texto</span><span class="p">{</span><span class="s">&quot;Hola mundo&quot;</span><span class="p">};</span><span class="w">  </span><span class="c1">// se expande a un arreglo de char</span>
+</code></pre></div>
+<p>Si intentamos mostrar el puntero, automáticamente imprimiremos el texto completo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_texto</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// Hola mundo</span>
+</code></pre></div>
+<p>¿Por qué sucede esto? Cuando la función <code>std::cout</code> detecta un puntero a un carácter lo interpreta como una <strong>C-String</strong> e intenta mostrar todos los caracteres que contiene. Dereferenciar el puntero devolverá el primer carácter del arreglo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_texto</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// H</span>
+</code></pre></div>
+<p>Como estos punteros a caracteres no requieren reservar una cantidad de espacio de antemano, son muy cómodos por ejemplo para almacenar un arreglo de cadenas, donde cada cadena es un puntero de caracteres:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p_lineas</span><span class="p">[]{</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Esto es una linea&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Segunda linea de un texto&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Aqui la tercera linea&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;La ultima linea es la cuarta&quot;</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Dos formas de recorrer y mostrar estas líneas fácilmente mediante un for serían:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Mediante el acceso a los elementos del rango</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">linea</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">p_lineas</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Mediante un for clásico con indices</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">size</span><span class="p">(</span><span class="n">p_lineas</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_lineas</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 

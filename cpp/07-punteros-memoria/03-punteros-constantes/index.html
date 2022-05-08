@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Punteros constantes y a constantes | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/07-punteros-memoria/03-punteros-constantes/">
@@ -458,9 +458,59 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Punteros constantes
+      </label>
+    
     <a href="./" title="Punteros constantes" class="md-nav__link md-nav__link--active" id="md__active_link">
       Punteros constantes
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#puntero-a-valor-constante" title="Puntero a valor constante" class="md-nav__link toc__link">
+    Puntero a valor constante
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntero-constante" title="Puntero constante" class="md-nav__link toc__link">
+    Puntero constante
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntero-constante-a-valor-constante" title="Puntero constante a valor constante" class="md-nav__link toc__link">
+    Puntero constante a valor constante
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-tipos" title="Resumen de tipos" class="md-nav__link toc__link">
+    Resumen de tipos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,8 +569,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
-      Punteros y referencias
+    <a href="../08-referencias-arreglos/" title="Referencias y arreglos" class="md-nav__link">
+      Referencias y arreglos
     </a>
   </li>
 
@@ -900,6 +950,43 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#puntero-a-valor-constante" title="Puntero a valor constante" class="md-nav__link toc__link">
+    Puntero a valor constante
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntero-constante" title="Puntero constante" class="md-nav__link toc__link">
+    Puntero constante
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntero-constante-a-valor-constante" title="Puntero constante a valor constante" class="md-nav__link toc__link">
+    Puntero constante a valor constante
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-tipos" title="Resumen de tipos" class="md-nav__link toc__link">
+    Resumen de tipos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -912,8 +999,106 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="punteros-constantes-y-a-constantes-en-c">Punteros constantes y a constantes en C++<a class="headerlink" href="#punteros-constantes-y-a-constantes-en-c" title="Permanent link">&para;</a></h1>
+<p>Aunque el título parece un juego de palabras, hay una gran diferencia entre estos conceptos así que vamos a explorarlos más a fondo.</p>
+<p>Lo primero que debemos recordar es que un  <strong>puntero</strong> permite trabajar tanto su dirección en la memoria como el valor que la posición almacena:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">1000</span><span class="p">};</span><span class="w"></span>
+
+<span class="c1">// cambiamos el valor a partir de la direccion de memoria</span>
+<span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numero</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1000</span>
+
+<span class="c1">// luego podemos asignar un valor a la direccion memoria</span>
+<span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 200</span>
+</code></pre></div>
+<h2 id="puntero-a-valor-constante">Puntero a valor constante<a class="headerlink" href="#puntero-a-valor-constante" title="Permanent link">&para;</a></h2>
+<p>Ahora bien, si es un puntero a un valor constante, no podremos modificar el valor directamente pero sí podremos cambiarlo mediante la dirección de memoria:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">1000</span><span class="p">};</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="o">&amp;</span><span class="n">numero</span><span class="p">};</span><span class="w">  </span><span class="c1">// puntero a un dato constante</span>
+
+<span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w">  </span><span class="c1">// Error: este puntero es solo de lectura</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">numero2</span><span class="p">{</span><span class="mi">2000</span><span class="p">};</span><span class="w"></span>
+<span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numero2</span><span class="p">;</span><span class="w">  </span><span class="c1">// cambiar la memoria sí funcionará</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 200</span>
+</code></pre></div>
+<p>De la misma forma, si modificamos el valor original de la variable también podremos cambiar el valor al que apunta el puntero:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">1000</span><span class="p">};</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="o">&amp;</span><span class="n">numero</span><span class="p">};</span><span class="w">  </span><span class="c1">// puntero a un dato constante</span>
+
+<span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3000</span><span class="p">;</span><span class="w">  </span><span class="c1">// cambiar el valor original funcionará</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3000</span>
+</code></pre></div>
+<p>Podemos entenderlo como que const se aplica al nombre de la variable. De hecho, no podemos crear un puntero no constante a una variable constante:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">1000</span><span class="p">};</span><span class="w"> </span><span class="c1">// variable constante</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="o">&amp;</span><span class="n">numero</span><span class="p">};</span><span class="w"> </span><span class="c1">// error, se requiere un puntero a un dato constante</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="o">&amp;</span><span class="n">numero</span><span class="p">};</span><span class="w">  </span><span class="c1">// si es constante sí funcionará</span>
+</code></pre></div>
+<h2 id="puntero-constante">Puntero constante<a class="headerlink" href="#puntero-constante" title="Permanent link">&para;</a></h2>
+<p>Ahora bien, ¿y si queremos que un puntero sea constante? Es decir, que su dirección de memoria no pueda cambiar. Entonces debemos indicar const delante del nombre del puntero y no del tipo de dato:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">1000</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p_numero</span><span class="p">{</span><span class="o">&amp;</span><span class="n">numero</span><span class="p">};</span><span class="w"> </span><span class="c1">// puntero constante a variable no constante</span>
+</code></pre></div>
+<p>En este caso la dirección de memoria es inalterable pero el valor se puede cambiar:</p>
+<h2 id="puntero-constante-a-valor-constante">Puntero constante a valor constante<a class="headerlink" href="#puntero-constante-a-valor-constante" title="Permanent link">&para;</a></h2>
+<p>Y esto nos lleva a una última posibilidad, un puntero constante a un valor constante, cuya dirección y valor sean inalterables:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">1000</span><span class="p">};</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p_numero</span><span class="p">{</span><span class="o">&amp;</span><span class="n">numero</span><span class="p">};</span><span class="w"> </span><span class="c1">// puntero constante a variable no constante</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">numero2</span><span class="p">{</span><span class="mi">2000</span><span class="p">};</span><span class="w"></span>
+<span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numero2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error, no se puede cambiar su dirección de memoria</span>
+<span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error, tampoco es posible cambiar su valor</span>
+</code></pre></div>
+<h2 id="resumen-de-tipos">Resumen de tipos<a class="headerlink" href="#resumen-de-tipos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Puntero (dirección modificable y valor modificable): </p>
+<p><code>&lt;tipo&gt; *puntero { &amp;variable }</code></p>
+</li>
+<li>
+<p>Puntero a constante (dirección modificable y valor no modificable): </p>
+<p><code>const &lt;tipo&gt; *puntero { &amp;variable }</code></p>
+</li>
+<li>
+<p>Puntero constante (dirección no modificable y valor modificable): </p>
+<p><code>&lt;tipo&gt; *const puntero { &amp;variable }</code></p>
+</li>
+<li>
+<p>Puntero constante a constante (dirección no modificable y valor no modificable): </p>
+<p><code>const &lt;tipo&gt; *const puntero { &amp;variable }</code></p>
+</li>
+</ul>
+<p>Para ilustrar un ejemplo de utilidad de esto retomemos la colección de líneas vista anteriormente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p_lineas</span><span class="p">[]{</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Esto es una linea&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Segunda linea de un texto&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Aqui la tercera linea&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;La ultima linea es la cuarta&quot;</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Aquí tenemos un puntero a un dato constante que es un array con múltiples líneas de texto. Esto indica que las líneas no son modificables al ser <strong>C-Strings</strong> de solo lectura con caracteres constantes:</p>
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">p_lineas</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// error al cambiar la E por una A</span>
+</code></pre></div>
+<p>Sin embargo sí es posible modificar toda una línea a partir del índice cuando se define una nueva <strong>C-String</strong>, tal como se especifica en la definición <code>const char</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">linea</span><span class="p">{</span><span class="s">&quot;Esta es mi nueva linea&quot;</span><span class="p">};</span><span class="w">  </span><span class="c1">// esta cadena es un puntero en la memoria</span>
+<span class="n">p_lineas</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linea</span><span class="p">;</span><span class="w"> </span><span class="c1">// podemos cambiar la línea a partir de la dirección de la linea</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">linea</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">p_lineas</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Sabiendo que un puntero también puede ser constante podemos evitar esta situación definiendo nuestro puntero de líneas como un <strong>puntero constante a un arreglo de caracteres constantes</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p_lineas</span><span class="p">[]{</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Esto es una linea&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Segunda linea de un texto&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;Aqui la tercera linea&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;La ultima linea es la cuarta&quot;</span><span class="p">};</span><span class="w"></span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">linea</span><span class="p">{</span><span class="s">&quot;Esta es mi nueva linea&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="n">p_lineas</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linea</span><span class="p">;</span><span class="w"> </span><span class="c1">// error, ahora la dirección es inmutable</span>
+</code></pre></div>
+<p>Los punteros son una de las características más potentes de C++, seguiré explorándolos próximamente.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 

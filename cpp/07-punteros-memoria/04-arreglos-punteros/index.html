@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Arreglos y punteros | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/07-punteros-memoria/04-arreglos-punteros/">
@@ -470,9 +470,38 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Arreglos y punteros
+      </label>
+    
     <a href="./" title="Arreglos y punteros" class="md-nav__link md-nav__link--active" id="md__active_link">
       Arreglos y punteros
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intercambio-de-arreglos-con-punteros" title="Intercambio de arreglos con punteros" class="md-nav__link toc__link">
+    Intercambio de arreglos con punteros
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,8 +548,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
-      Punteros y referencias
+    <a href="../08-referencias-arreglos/" title="Referencias y arreglos" class="md-nav__link">
+      Referencias y arreglos
     </a>
   </li>
 
@@ -900,6 +929,22 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intercambio-de-arreglos-con-punteros" title="Intercambio de arreglos con punteros" class="md-nav__link toc__link">
+    Intercambio de arreglos con punteros
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -912,8 +957,84 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="arreglos-y-punteros-en-c">Arreglos y punteros en C++<a class="headerlink" href="#arreglos-y-punteros-en-c" title="Permanent link">&para;</a></h1>
+<p>El nombre de un arreglo puede tratarse como un puntero a la primera posición del arreglo:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numeros</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numeros</span><span class="p">{</span><span class="n">numeros</span><span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Misma direccion de memoria: 0x87405ff6e0 == 0x87405ff6e0</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; == &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_numeros</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Mismo contenido del puntero: 11 == 11</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">numeros</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; == &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_numeros</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Mismo contenido en las posiciones: 33 == 33</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numeros</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; == &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_numeros</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Así mismo una diferencia importante es que no es posible conocer la longitud de un puntero a un arreglo, básicamente porque el compilador no sabe donde apunta hasta que no se pone en marcha el programa:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">size</span><span class="p">(</span><span class="n">numeros</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">   </span><span class="c1">// Funciona</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">size</span><span class="p">(</span><span class="n">p_numeros</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// No funciona</span>
+</code></pre></div>
+<p>Por último comentar que, si bien es posible, aunque no recomendable; asignar una dirección de memoria a un puntero a un arreglo</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">;</span><span class="w"></span>
+<span class="n">p_numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span><span class="w"> </span><span class="c1">// Funciona pero no es recomendable hacerlo...</span>
+</code></pre></div>
+<p>Esto no es posible con un arreglo en sí mismo, pues aunque también sea un puntero, es un tipo de puntero especial capaz de identificar su longitud (entre otras cosas), razón por la cuál podemos utilizar std::size y conseguir su tamaño:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">;</span><span class="w"></span>
+<span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numeros</span><span class="p">;</span><span class="w"> </span><span class="c1">// Esto no es posible porque es un puntero </span>
+</code></pre></div>
+<h2 id="intercambio-de-arreglos-con-punteros">Intercambio de arreglos con punteros<a class="headerlink" href="#intercambio-de-arreglos-con-punteros" title="Permanent link">&para;</a></h2>
+<p>Un requisito común es el de intercambiar un valor entre dos variables <code>a</code> y <code>b</code>, donde <code>a</code> valga <code>b</code> y <code>b</code> valga <code>a</code>.</p>
+<p>Para solucionarlo es muy común definir una variable temporal para «aguantar» una de las variables mientras asignamos el valor a la otra y no perder su valor:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// aguantamos el dato de &quot;a&quot; temporalmente</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">    </span><span class="c1">// asignamos en &quot;a&quot; el valor de &quot;b&quot;</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span><span class="w">  </span><span class="c1">// asignamos en &quot;b&quot; el valor de &quot;a&quot;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Ahora, si en lugar de intercambiar dos variables queremos intercambiar todos los elementos entre dos arreglos, utilizando este sistema, necesitaremos un arreglo temporal con el mismo número de elementos que los arreglos a intercambiar, realizando una escritura secuencial de sus valores para «aguantar» uno de los dos arreglos, luego una segunda escritura secuencial para modificar los valores del primer arreglo y una tercera escritura secuencial para asignar los valores del segundo arreglo:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">pares</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">impares</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">temporal</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"></span>
+
+<span class="c1">// Primera pasada para &quot;aguantar&quot; el primer arreglo en temporal</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">temporal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pares</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="c1">// Segunda pasada para copiar el segundo arreglo en el primero</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">pares</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">impares</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="c1">// Tercera pasada para copiar el arreglo temporal en el segundo</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">impares</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temporal</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<p>Si solo son 5 elementos pues tampoco pasa nada, pero si tenemos que realizar esto para miles de números, la cosa se pone fea porque son un montón de instrucciones.</p>
+<p>Este problema sería trivial en el caso de utilizar punteros a arreglos</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">pares</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">impares</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Definimos y guardamos los punteros</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_pares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pares</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_impares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">impares</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_temporal</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Intercambiamos los punteros y listo</span>
+<span class="n">p_temporal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_pares</span><span class="p">;</span><span class="w"></span>
+<span class="n">p_pares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_impares</span><span class="p">;</span><span class="w"></span>
+<span class="n">p_impares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_temporal</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Sabiendo el número de elementos en los arreglos podemos recorrer sus respectivos punteros intercambiados y trabajar con ellos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Pares: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Pares intercambiados con punteros</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_pares</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// Pares: 02468</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Impares: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Impares intercambiados con punteros</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_impares</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// Impares: 13579</span>
+</code></pre></div>
+<p>Este ejemplo es ilustrativo de cómo los punteros tienen aplicaciones que los arreglos en sí mismos no ofrecen.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 8 de Mayo de 2022</i></small></p>
                 
                   
                 

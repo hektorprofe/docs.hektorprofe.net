@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Memoria dinámica (Heap) | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/07-punteros-memoria/07-memoria-dinamica/">
@@ -506,9 +506,66 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Memoria dinámica (Heap)
+      </label>
+    
     <a href="./" title="Memoria dinámica (Heap)" class="md-nav__link md-nav__link--active" id="md__active_link">
       Memoria dinámica (Heap)
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reservar-y-liberar-memoria-dinamica" title="Reservar y liberar memoria dinámica" class="md-nav__link toc__link">
+    Reservar y liberar memoria dinámica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#punteros-colgantes-dangling-pointers" title="Punteros colgantes (dangling pointers)" class="md-nav__link toc__link">
+    Punteros colgantes (dangling pointers)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-al-reservar-la-memoria-dinamica" title="Error al reservar la memoria dinámica" class="md-nav__link toc__link">
+    Error al reservar la memoria dinámica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perdidas-de-memoria-memory-leaks" title="Pérdidas de memoria (memory leaks)" class="md-nav__link toc__link">
+    Pérdidas de memoria (memory leaks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arreglos-almacenados-dinamicamente" title="Arreglos almacenados dinámicamente" class="md-nav__link toc__link">
+    Arreglos almacenados dinámicamente
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,8 +576,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../08-punteros-referencias/" title="Punteros y referencias" class="md-nav__link">
-      Punteros y referencias
+    <a href="../08-referencias-arreglos/" title="Referencias y arreglos" class="md-nav__link">
+      Referencias y arreglos
     </a>
   </li>
 
@@ -900,6 +957,50 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reservar-y-liberar-memoria-dinamica" title="Reservar y liberar memoria dinámica" class="md-nav__link toc__link">
+    Reservar y liberar memoria dinámica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#punteros-colgantes-dangling-pointers" title="Punteros colgantes (dangling pointers)" class="md-nav__link toc__link">
+    Punteros colgantes (dangling pointers)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-al-reservar-la-memoria-dinamica" title="Error al reservar la memoria dinámica" class="md-nav__link toc__link">
+    Error al reservar la memoria dinámica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perdidas-de-memoria-memory-leaks" title="Pérdidas de memoria (memory leaks)" class="md-nav__link toc__link">
+    Pérdidas de memoria (memory leaks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arreglos-almacenados-dinamicamente" title="Arreglos almacenados dinámicamente" class="md-nav__link toc__link">
+    Arreglos almacenados dinámicamente
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -912,8 +1013,185 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="memoria-dinamica-heap-en-c">Memoria dinámica (Heap) en C++<a class="headerlink" href="#memoria-dinamica-heap-en-c" title="Permanent link">&para;</a></h1>
+<h2 id="reservar-y-liberar-memoria-dinamica">Reservar y liberar memoria dinámica<a class="headerlink" href="#reservar-y-liberar-memoria-dinamica" title="Permanent link">&para;</a></h2>
+<p>La asignación dinámica de la memoria hace referencia a reservar un espacio en el montón (heap) para almacenar una información. Esta forma requiere el uso de la palabra reservada new para establecer el tamaño deseado del puntero:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">;</span><span class="w">  </span><span class="c1">// Espacio reservado dinámicamente</span>
+<span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">55</span><span class="p">;</span><span class="w">  </span><span class="c1">// Asignación en el espacio dinámico</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 55</span>
+</code></pre></div>
+<p>La vida de los datos en el montón (heap) existe mientras el programador no los elimine manualmente de la memoria, por ello cuando no necesitemos más la información deberemos vaciar el espacio utilizando la palabra reservada <code>delete</code>, haciendo que el programa devuelva la memoria al sistema operativo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">delete</span><span class="w"> </span><span class="n">p_numero</span><span class="p">;</span><span class="w">  </span><span class="c1">// Vaciamos el espacio reservado</span>
+</code></pre></div>
+<p>También se sugiere que una vez vaciado el espacio le asignamos el puntero <code>nullptr</code> para indicar en el propio código un reseteo, eso nos indicará visualmente que debemos volver a reservar la memoria antes de utilizar el puntero:</p>
+<div class="highlight"><pre><span></span><code><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w">  </span><span class="c1">// Reiniciamos el puntero</span>
+</code></pre></div>
+<p>Por defecto el espacio reservado dinámicamente contiene información aleatoria, pero podemos asignar el valor directamente en la definición:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Reserva con asignación directa</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="kt">int</span><span class="p">(</span><span class="mi">55</span><span class="p">)};</span><span class="w">      </span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">55</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Reserva con asignación uniforme</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">55</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">55</span><span class="p">}};</span><span class="w"></span>
+</code></pre></div>
+<p>Por cierto, no debemos eliminar un puntero ya vaciado, podría pasar cualquier cosa en la memoria y dejar nuestro programa inservible:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ¡CUIDADO AQUÍ!</span>
+<span class="k">delete</span><span class="w"> </span><span class="n">p_numero</span><span class="p">;</span><span class="w"></span>
+<span class="k">delete</span><span class="w"> </span><span class="n">p_numero</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>En resumen:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Variable en la pila (stack) gestionada automáticamente</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Puntero reservado dinámicamente en el montón (heap)</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">55</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Debemos vaciar la memoria manualmente</span>
+<span class="k">delete</span><span class="w"> </span><span class="n">p_numero</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Y recomendablemente asignarle nullptr para dejar un aviso</span>
+<span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="punteros-colgantes-dangling-pointers">Punteros colgantes (dangling pointers)<a class="headerlink" href="#punteros-colgantes-dangling-pointers" title="Permanent link">&para;</a></h2>
+<p>Un puntero colgante es un puntero que no apunta a una dirección de memoria válida, por lo que al intentar dereferenciarlo y utilizarlo, resultará en un comportamiento indefinido.</p>
+<p>Esto es algo muy malo, pues se pueden generar situaciones imprevistas en el código y posiblemente un error de ejecución que termine con el programa bloqueado.</p>
+<p>Hay tres tipos de punteros colgantes:</p>
+<ul>
+<li>Punteros no inicializados.</li>
+<li>Punteros eliminados.</li>
+<li>Múltiples punteros apuntando a la misma dirección de memoria.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Puntero colgante por no inicialización</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">;</span><span class="w">  </span>
+
+<span class="c1">// Puntero colgante por eliminación</span>
+<span class="k">delete</span><span class="w"> </span><span class="n">p_numero</span><span class="p">;</span><span class="w">  </span>
+
+<span class="c1">// Dos punteros con la misma dirección de memoria</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptr1</span><span class="w"> </span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">}};</span><span class="w">  </span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptr2</span><span class="w"> </span><span class="p">{</span><span class="n">ptr1</span><span class="p">};</span><span class="w"></span>
+<span class="c1">// Vaciamos la memoria del primer puntero</span>
+<span class="k">delete</span><span class="w"> </span><span class="n">ptr1</span><span class="p">;</span><span class="w"> </span>
+
+<span class="n">ptr1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Puntero colgante por eliminación</span>
+<span class="n">ptr2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Puntero colgante por referencia a un puntero eliminado</span>
+</code></pre></div>
+<p>Para prevenir los punteros colgantes podemos podemos aplicar estas directrices:</p>
+<ul>
+<li>Inicializar siempre los punteros.</li>
+<li>Reiniciar los punteros después de eliminarlos con el valor <code>nullptr</code>.</li>
+<li>Comprar que un puntero no es <code>nullptr</code> antes de utilizarlo.</li>
+<li>En múltiples punteros con la misma dirección, asegurarnos de que la propiedad esté clara.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Inicialización para evitar un puntero colgante</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">55</span><span class="p">}};</span><span class="w">  </span>
+
+<span class="c1">// Reinicio de un puntero eliminado para evitar un puntero colgante</span>
+<span class="k">delete</span><span class="w"> </span><span class="n">p_numero</span><span class="p">;</span><span class="w">  </span>
+<span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Comprobación de un puntero nulo antes de utilizarlo</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p_numero</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Establecer la jerarquía de punteros maestro-esclavo</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_maestro</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">77</span><span class="p">}};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_esclavo</span><span class="p">{</span><span class="n">p_maestro</span><span class="p">};</span><span class="w"></span>
+<span class="n">p_maestro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Solo acceder al valor del esclavo si el maestro es válido</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p_maestro</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">p_esclavo</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="error-al-reservar-la-memoria-dinamica">Error al reservar la memoria dinámica<a class="headerlink" href="#error-al-reservar-la-memoria-dinamica" title="Permanent link">&para;</a></h2>
+<p>De vez en cuando, en raras ocasiones, la reserva de memoria dinámica puede fallar, por ejemplo cuando no hay suficiente memoria disponible.</p>
+<p>De forma predeterminada, cuando se utiliza el operador <code>new</code> para intentar asignar memoria y la función no puede hacerlo, se produce una excepción <code>bad_alloc</code>. Utilizando un bloque <code>try catch</code> podemos capturar la excepción y actuar en consecuencia:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">100000000000000</span><span class="p">]};</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error al reservar la memoria: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">what</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>También es posible utilizar un modificador <code>nothrow</code> como argumento para que en lugar de fallar se devuelva un puntero nulo. Esta constante <code>nothrow</code> es un valor de tipo <code>nothrow_t</code> con el único propósito de no lanzar la excepción <code>bad_alloc</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">numeros</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">nothrow</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">100000000000000</span><span class="p">]};</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Memoria reservada correctamente&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error al reservar la memoria&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="perdidas-de-memoria-memory-leaks">Pérdidas de memoria (memory leaks)<a class="headerlink" href="#perdidas-de-memoria-memory-leaks" title="Permanent link">&para;</a></h2>
+<p>Un <strong>memory leak</strong> es una situación que puede ocasionar la pérdida del acceso a la memoria que hemos almacenado dinámicamente en el montón (heap).</p>
+<p>Por ejemplo, si almacenamos una información en el montón y luego redireccionamos ese puntero a otra variable. En ese caso perderemos el acceso a la información original que seguirá almacenada en la memoria, es decir, habrá ocurrido un memory leak:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">66</span><span class="p">}};</span><span class="w"> </span><span class="c1">// Reservamos memoria dinámica con un numero</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">99</span><span class="p">};</span><span class="w">             </span><span class="c1">// Definimos otro número</span>
+<span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numero</span><span class="w"> </span><span class="p">;</span><span class="w">        </span><span class="c1">// Si redireccionamos el puntero al número</span>
+<span class="w">                            </span><span class="c1">// la dirección con el 66 en el heap sigue</span>
+<span class="w">                            </span><span class="c1">// existiendo pero hemos perdido su referencia,</span>
+<span class="w">                            </span><span class="c1">// por lo que ha ocurrido un memory leak</span>
+</code></pre></div>
+<p>Esto no ocurre solo al sobreescribir la dirección de una variable en la pila (stack), pasará lo mismo al definir una nueva variable en el montón (heap):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">66</span><span class="p">}};</span><span class="w"> </span><span class="c1">// Reservamos memoria dinámica</span>
+<span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">99</span><span class="p">};</span><span class="w">     </span><span class="c1">// Si redireccionamos el puntero</span>
+<span class="w">                            </span><span class="c1">// perderemos la dirección original de 66,</span>
+<span class="w">                            </span><span class="c1">// habrá ocurrido un memory leak</span>
+</code></pre></div>
+<p>Debemos prestar mucha atención a esto, sobretodo con las definiciones en bloques, pues fuera de ellos perderemos el acceso al puntero pero el valor seguirá existiendo en la memoria:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">66</span><span class="p">}};</span><span class="w">  </span><span class="c1">// Reservamos memoria en un bloque</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// En este punto fuera del bloque ya no podemos acceder al puntero,</span>
+<span class="w">    </span><span class="c1">// si no lo hemos eliminamos antes ocurrirá un memory leak</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Recordad siempre eliminar y reiniciar la memoria para garantizar espacio al sistema:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numero</span><span class="p">{</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span><span class="mi">66</span><span class="p">}};</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">p_numero</span><span class="p">;</span><span class="w">     </span><span class="c1">// Borrado</span>
+<span class="w">        </span><span class="n">p_numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w">  </span><span class="c1">// Y reinicio</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="arreglos-almacenados-dinamicamente">Arreglos almacenados dinámicamente<a class="headerlink" href="#arreglos-almacenados-dinamicamente" title="Permanent link">&para;</a></h2>
+<p>Se trata de arreglos que se reservan en el montón (heap) mediante el operador <code>new</code>. Permiten el uso de la constante <code>std::nothrow</code> para evitar el error en caso de no disponer de la memoria requerida.</p>
+<p>Podemos definir estos arreglos de distintas formas:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Definimos un tamaño para el arreglo</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Inicialización con sobrecarga creciente (los valores son basura)</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">nothrow</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="n">size</span><span class="p">];</span><span class="w"></span>
+
+<span class="c1">// Inicialización con sobrecarga no arrojadiza (los valores son 0)</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">nothrow</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="n">size</span><span class="p">]{};</span><span class="w"></span>
+
+<span class="c1">// Inicialización con asignación parcial (los demás valores son 0)</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">nothrow</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="n">size</span><span class="p">]{</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Recordemos que mediante <code>std::nothrow</code> el puntero será <code>nullptr</code> en caso de no haber reservado la memoria correctamente, podemos comprobarlo directamente sin la igualdad, ya que se tomará como <code>0</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p_numeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Si no es un puntero nulo podemos utilizarlo sin problema</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Para liberar la memoria de un arreglo dinámico debemos especificar los corchetes:</p>
+<div class="highlight"><pre><span></span><code><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">p_numeros</span><span class="p">;</span><span class="w"></span>
+<span class="n">p_numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Por último recordemos que estos arreglos al ser punteros no permiten la sintaxis del <code>for</code> con elementos porque no almacenan propiedades internas como su longitud:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">p_numeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// esto no funcionará</span>
+</code></pre></div>
+<p>En su lugar deberemos recorrerlos mediante índices o con la aritmética de punteros mediante la suma de posición con un clásico <code>for</code> a partir de la longitud almacenada anteriormente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p_numeros</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">      </span><span class="c1">// índices</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">p_numeros</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// aritmética</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small></p>
                 
                   
                 
@@ -954,8 +1232,8 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
        
       <a
-        href="../08-punteros-referencias/"
-        title="Punteros y referencias"
+        href="../08-referencias-arreglos/"
+        title="Referencias y arreglos"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -964,7 +1242,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Punteros y referencias
+            Referencias y arreglos
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">
