@@ -3,8 +3,6 @@ description: Repaso de algunos conceptos clave sobre el uso del lenguaje C++.
 
 # Primeros pasos en C++
 
-Breve repaso de algunos conceptos clave sobre el uso de este lenguaje de programación.
-
 ## Comentarios en C++
 
 Con el objetivo de que los programadores podamos explicar nuestro propio código existen los comentarios.

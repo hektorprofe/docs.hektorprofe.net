@@ -3,8 +3,6 @@ description: Instalación y configuración del entorno Visual Studio Code para p
 
 # Entorno de desarrollo en C++
 
-Empecemos con la instalación de los compiladores y la configuración del entorno Visual Studio Code para programar en C++.
-
 ## Compiladores C++ en Windows
 
 Empezamos la aventura instalando en Windows diferentes compiladores para código C++.

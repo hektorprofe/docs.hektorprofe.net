@@ -358,15 +358,15 @@ nav:
     - Modificadores:                      'cpp/04-modificadores/index.md'
     - Control del flujo:                  'cpp/05-control-de-flujo/index.md'
     - Arreglos clásicos:                  'cpp/06-arreglos-clasicos/index.md'
-    - Punteros y referencias:             
-      - Primeros pasos:                   'cpp/07-punteros-referencias/01-primeros-pasos.md'
-      - Nullptr, void* y ((void*)0):      'cpp/07-punteros-referencias/02-null-nullptr-void0.md'
-      - Punteros constantes:              'cpp/07-punteros-referencias/03-punteros-constantes.md'
-      - Arreglos y punteros:              'cpp/07-punteros-referencias/04-arreglos-punteros.md'           # con intercambio de punteros
-      - Aritmética de punteros:           'cpp/07-punteros-referencias/05-aritmetica-punteros.md'
-      - Gestión de la memoria:            'cpp/07-punteros-referencias/06-tipos-memoria-stack-heap.md' 
-      - Memoria dinámica (Heap):          'cpp/07-punteros-referencias/07-memoria-dinamica.md'            # hasta referencias
-      - Punteros y referencias:           'cpp/07-punteros-referencias/08-punteros-referencias.md'
+    - Punteros y memoria:             
+      - Primeros pasos:                   'cpp/07-punteros-memoria/01-primeros-pasos.md'
+      - Nullptr, void* y ((void*)0):      'cpp/07-punteros-memoria/02-null-nullptr-void0.md'
+      - Punteros constantes:              'cpp/07-punteros-memoria/03-punteros-constantes.md'
+      - Arreglos y punteros:              'cpp/07-punteros-memoria/04-arreglos-punteros.md'           # con intercambio de punteros
+      - Aritmética de punteros:           'cpp/07-punteros-memoria/05-aritmetica-punteros.md'
+      - Gestión de la memoria:            'cpp/07-punteros-memoria/06-tipos-memoria-stack-heap.md' 
+      - Memoria dinámica (Heap):          'cpp/07-punteros-memoria/07-memoria-dinamica.md'            # hasta referencias
+      - Referencias y arreglos:           'cpp/07-punteros-memoria/08-referencias-arreglos.md'
     - Cadenas de caracteres:              'cpp/08-cadenas-caracteres/index.md'
     - Programación de funciones:          'cpp/09-funciones/index.md'
     - Function templates:                 'cpp/10-function-templates/index.md'

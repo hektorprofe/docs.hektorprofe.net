@@ -1,7 +1,7 @@
 title: Novedades en C++20 | Apuntes lenguaje C++ | Hektor Profe
 description: 
 
-# Novedades en C++20 en C++
+# Novedades en C++20
 
 
 ___
