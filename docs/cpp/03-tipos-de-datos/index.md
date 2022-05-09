@@ -526,5 +526,91 @@ int main()
 }
 ```
 
+## Tipos de conversiones 
+
+Las **conversiones implícitas** son aquellas hechas por el compilador sin la intervención del propio programador. Se realizan al tipo mayor que interviene en la expresión, por ejemplo la operación entre un `int` y un `float` se almacenará en un `float` y entre un `double` y un `float` se almacenará en un `double`:
+
+```cpp
+auto num1 = 12 * 5.0f;
+std::cout << sizeof(num1) << std::endl; // float
+ 
+auto num2 = 12.0 * 5.0f;
+std::cout << sizeof(num2) << std::endl; // double
+```
+
+También es posible forzar una conversión implícita mediante el tipo de dato. Por ejemplo, una suma entre dos `double` en un `int`, almacenará el resultado truncando la parte fraccionaria:
+
+```cpp
+double num1 = 5.25, num2 = 10.5;
+int res = num1 + num2;
+std::cout << res << std::endl; // 15.75 -> 15
+```
+
+Por otra parte tenemos las **conversiones explícitas** indicadas por el programador. Tradicionalmente en C se indica el tipo resultante del dato justo delante:
+
+```cpp
+double num = 15.75;
+std::cout << (int)num << std::endl; // 15.75 -> 15
+```
+
+Este tipo de conversiones son inseguras y en C++ se recomienda utilizar la función `static_cast` haciendo uso de templates:
+
+```cpp
+double num = 15.75;
+std::cout << static_cast<int>(num) << std::endl; // 15.75 -> 15
+```
+
+La ventaja de usar `static_cast` es que si la conversión no es posible se lanzará un error que podría capturarse para actuar en consencuencia.
+
+Derivado de estas conversiones pueden ocurrir dos situaciones conocidas como **overflow** y **underflow**.
+
+## Overflows y underflows
+
+Cuando intentamos guardar en una variable un dato con un tamaño mayor del que ésta permite ocurre un **overflow** o desbordamiento superior. Por el contrario, si intentamos guardar un dato con un tamaño menor del que permite ocurre un **underflow** o desbordamiento inferior.
+
+En el siguiente ejemplo podemos observar cómo se comporta una variable `char` con un rango entre [0, 255] de posibilidades, cuando intentamos almacenar en ella un valor mayor que 255:
+
+```cpp
+#include <iostream>
+ 
+int main()
+{
+    unsigned char caracter{250}; // Rango char {0, 255}
+ 
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << caracter << "\t"
+                  << static_cast<int>(caracter) << std::endl;
+        caracter++;
+    }
+}
+```
+
+Lo que ocurre es ni más ni menos que un **overflow**, un reinicio a 0 para el 256 y así sucesivamente:
+
+![]({{cdn}}/cpp/image-61.png)
+
+El mismo caso pero por abajo ocurrirá a la inversa, un **underflow**, pasando de 0 a 255:
+
+```cpp
+#include <iostream>
+ 
+int main()
+{
+    unsigned char caracter{4}; // Rango char {0, 255}
+ 
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << caracter << "\t"
+                  << static_cast<int>(caracter) << std::endl;
+        caracter--;
+    }
+}
+```
+
+![]({{cdn}}/cpp/image-62.png)
+
+Es muy importante tener en cuenta esta situación en las conversiones entre tipo ya que en estos casos no ocurrirá un error y simplemente se tratará el desbordamiento como un reinicio del tamaño.
+
 ___
 <small class="edited"><i>Última edición: 08 de Mayo de 2022</i></small>
