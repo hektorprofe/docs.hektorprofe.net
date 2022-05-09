@@ -11,6 +11,7 @@
 .videojuegos { background-color: #f891a3}
 .servidores { background-color: #ffbc40}
 .pseudocodigo { background-color: #ce9efb}
+.cpp { background-color: #f0a00d}
 
 .table>:not(caption)>*>* {
     padding: .45rem .45em !important;

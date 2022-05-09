@@ -135,7 +135,7 @@
                         <div class="search mb-3 row" style="margin-bottom: 16.5px;">
                             <label for="fci" class="col-sm-3 col-form-label" style="font-weight: 600;">Filtro por keyword: </label>
                             <div class="col-sm-9">
-                                <input id="fci" class="form-control" type="text" v-model="search" placeholder="python, unity, curso, tutorial, 2019..." />
+                                <input id="fci" class="form-control" type="text" v-model="search" placeholder="python, cpp, unity, curso, tutorial, 2019..." />
                             </div>
                         </div>
                         <div class="table-responsive">
@@ -176,6 +176,50 @@
         ga("create", "UA-124845547-1", "auto"); ga("send", "pageview");
         var types = {'txt':'/assets/images/text.png', 'vid':'/assets/images/video.png', 'mix':'/assets/images/mixed.png'}
         var database = [
+          ['Apuntes', 'txt', 'Cpp', 'Miscelánea', 'Espacio de nombres en C++', '/cpp/30-miscelanea/05-espacio-nombres/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Miscelánea', 'Calcular tiempo de ejecución en C++', '/cpp/30-miscelanea/04-tiempo-ejecucion/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Miscelánea', 'Números aleatorios en C++', '/cpp/30-miscelanea/03-numeros-aleatorios/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Miscelánea', 'Enumeradores y alias en C++', '/cpp/30-miscelanea/02-enumeradores-alias/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Miscelánea', 'Operaciones bit a bit en C++', '/cpp/30-miscelanea/01-operadores-bit-a-bit/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Biblioteca STL', 'Resumen definiciones biblioteca STL de C++', '/cpp/14-biblioteca-stl/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Excepciones', 'Manejo de errores y excepciones en C++', '/cpp/13-manejo-excepciones/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Smart pointers', 'Uso de punteros inteligentes en C++', '/cpp/12-punteros-inteligentes/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Semánticas de movimiento en C++', '/cpp/11-clases/08-semanticas-movimiento/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Class templates en C++', '/cpp/11-clases/07-class-templates/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Polimorfismo de clases en C++', '/cpp/11-clases/06-polimorfismo-clases/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Herencia de clases en C++', '/cpp/11-clases/05-herencia-clases/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Sobrecarga de operadores en C++', '/cpp/11-clases/04-sobrecarga-operadores/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Miembros estáticos en C++', '/cpp/11-clases/03-miembros-estaticos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Funciones y clases amigas en C++', '/cpp/11-clases/02-funciones-clases-amigas/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Clases', 'Primeros pasos con las clases en C++', '/cpp/11-clases/01-primeros-pasos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Templates', 'Uso de functions templates en C++', '/cpp/10-function-templates/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Funciones', 'Funciones Inline (en línea) en C++', '/cpp/09-funciones/04-funciones-inline/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Funciones', 'Funciones Lambda (anónimas) en C++', '/cpp/09-funciones/03-funciones-lambda/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Funciones', 'Sobracarga de funciones en C++', '/cpp/09-funciones/02-sobrecarga-funciones/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Funciones', 'Primeros pasos con las funciones en C++', '/cpp/09-funciones/01-primeros-pasos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Cadenas', 'Manejo de C-Strings y std::strings en C++', '/cpp/08-cadenas-caracteres/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'Referencias y arreglos en C++', '/cpp/07-punteros-memoria/08-referencias-arreglos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'Memoria dinámica (Heap) en C++', '/cpp/07-punteros-memoria/07-memoria-dinamica/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'Gestión de la memoria en C++', '/cpp/07-punteros-memoria/06-tipos-memoria-stack-heap/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'Aritmética de punteros en C++', '/cpp/07-punteros-memoria/05-aritmetica-punteros/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'Relación entre arreglos y punteros en C++', '/cpp/07-punteros-memoria/04-arreglos-punteros/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'Punteros constantes y a constantes en C++', '/cpp/07-punteros-memoria/03-punteros-constantes/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'NULL, Nullptr, void* y ((void*)0) en C++', '/cpp/07-punteros-memoria/02-null-nullptr-void0/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Punteros', 'Primeros pasos con los punteros en C++', '/cpp/07-punteros-memoria/01-primeros-pasos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Arreglos', 'Manejo de arreglos clásicos en C++', '/cpp/06-arreglos-clasicos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Flujo', 'Cortocircuitado e inicializadores en C++', '/cpp/05-control-de-flujo/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Modificadores', 'Modificadores y especificadores en C++', '/cpp/04-modificadores/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Tipos de datos', 'Resumen de los tipos esenciales en C++', '/cpp/03-tipos-de-datos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Introducción', 'Primeros pasos con el lenguaje en C++', '/cpp/02-primeros-pasos/', '05/2022'],
+          ['Apuntes', 'txt', 'Cpp', 'Entorno', 'Configuración entorno de desarrollo en C++', '/cpp/01-entorno-desarrollo/', '05/2022'],
+
+          ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Condiciones usando el operador ternario', '/videoteca/2022/tutorial-python-006-operador-ternario/','01/2022'],
+          ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Tipos de datos esenciales en Python', '/videoteca/2022/tutorial-python-005-tipos-esenciales/','01/2022'],
+          ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Ejecutar scripts en VSC de forma relativa', '/videoteca/2022/tutorial-python-004-scripts-relativos-vsc/','01/2022'],
+          ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Cambiar la terminal por defecto de VSC', '/videoteca/2022/tutorial-python-003-cambiar-terminal-vsc/','01/2022'],
+          ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Ejecutar scripts en la terminal', '/videoteca/2022/tutorial-python-002-ejecutar-scripts-terminal/','01/2022'],
+          ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Añadir Python al PATH de Windows', '/videoteca/2022/tutorial-python-001-anadir-python-path-windows/','01/2022'],
+
           ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Condiciones usando el operador ternario', '/videoteca/2022/tutorial-python-006-operador-ternario/','01/2022'],
           ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Tipos de datos esenciales en Python', '/videoteca/2022/tutorial-python-005-tipos-esenciales/','01/2022'],
           ['Tutoriales', 'vid', 'Python', 'Tutorial', 'Ejecutar scripts en VSC de forma relativa', '/videoteca/2022/tutorial-python-004-scripts-relativos-vsc/','01/2022'],
