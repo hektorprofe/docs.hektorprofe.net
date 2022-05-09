@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Function templates | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/10-function-templates/">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Function templates | Apuntes lenguaje C++ | Hektor Profe</title>
+        <title>Function Templates | Apuntes lenguaje C++ | Hektor Profe</title>
       
     
     <link rel="stylesheet" href="../../assets/stylesheets/application.2.css">
@@ -536,10 +536,70 @@ div.my-img{text-align:center;margin-top:20px}
             
 
 
-  <li class="md-nav__item">
-    <a href="../09-funciones/" title="Programación de funciones" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+    
+    <label class="md-nav__link" for="nav-6-10">
       Programación de funciones
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-10">
+        Programación de funciones
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-funciones/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+      Primeros pasos
     </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-funciones/02-sobrecarga-funciones/" title="Sobrecarga de funciones" class="md-nav__link">
+      Sobrecarga de funciones
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-funciones/03-funciones-lambda/" title="Funciones Lambda" class="md-nav__link">
+      Funciones Lambda
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-funciones/04-funciones-inline/" title="Funciones Inline" class="md-nav__link">
+      Funciones Inline
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -557,9 +617,73 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
-    <a href="./" title="Function templates" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Function templates
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Function Templates
+      </label>
+    
+    <a href="./" title="Function Templates" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Function Templates
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-function-templates" title="Definición de Function Templates" class="md-nav__link toc__link">
+    Definición de Function Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especializacion-y-sobrecarga-de-templates" title="Especialización y sobrecarga de Templates" class="md-nav__link toc__link">
+    Especialización y sobrecarga de Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-parametros-y-retorno-en-templates" title="Tipos de parámetros y retorno en Templates" class="md-nav__link toc__link">
+    Tipos de parámetros y retorno en Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deduccion-del-tipo-de-retorno-en-templates" title="Deducción del tipo de retorno en Templates" class="md-nav__link toc__link">
+    Deducción del tipo de retorno en Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rasgos-de-tipado-en-templates" title="Rasgos de tipado en Templates" class="md-nav__link toc__link">
+    Rasgos de tipado en Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-restrictivos-en-templates" title="Conceptos restrictivos en Templates" class="md-nav__link toc__link">
+    Conceptos restrictivos en Templates
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -667,6 +791,18 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../11-clases/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
+      Semánticas de movimiento
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -733,19 +869,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/01-conversiones-overflow/" title="Conversiones y overflows" class="md-nav__link">
-      Conversiones y overflows
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/02-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
+    <a href="../30-miscelanea/01-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
       Operadores bit a bit
     </a>
   </li>
@@ -757,7 +881,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/03-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
+    <a href="../30-miscelanea/02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
       Enumeradores y alias
     </a>
   </li>
@@ -769,7 +893,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/04-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
+    <a href="../30-miscelanea/03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
       Números aleatorios
     </a>
   </li>
@@ -781,7 +905,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/05-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
+    <a href="../30-miscelanea/04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
       Tiempo de ejecución
     </a>
   </li>
@@ -793,56 +917,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/06-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
+    <a href="../30-miscelanea/05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
       Espacio de nombres
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/07-compilacion-vinculacion/" title="Compilación y vinculación" class="md-nav__link">
-      Compilación y vinculación
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
-      Semánticas de movimiento
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/09-funciones-entidades/" title="Funciones como entidades" class="md-nav__link">
-      Funciones como entidades
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/90-novedades-cpp20/" title="Novedades en C++20" class="md-nav__link">
-      Novedades en C++20
     </a>
   </li>
 
@@ -898,6 +974,57 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-function-templates" title="Definición de Function Templates" class="md-nav__link toc__link">
+    Definición de Function Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especializacion-y-sobrecarga-de-templates" title="Especialización y sobrecarga de Templates" class="md-nav__link toc__link">
+    Especialización y sobrecarga de Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-parametros-y-retorno-en-templates" title="Tipos de parámetros y retorno en Templates" class="md-nav__link toc__link">
+    Tipos de parámetros y retorno en Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deduccion-del-tipo-de-retorno-en-templates" title="Deducción del tipo de retorno en Templates" class="md-nav__link toc__link">
+    Deducción del tipo de retorno en Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rasgos-de-tipado-en-templates" title="Rasgos de tipado en Templates" class="md-nav__link toc__link">
+    Rasgos de tipado en Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-restrictivos-en-templates" title="Conceptos restrictivos en Templates" class="md-nav__link toc__link">
+    Conceptos restrictivos en Templates
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -909,9 +1036,190 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <h1 id="function-templates-en-c">Function templates en C++<a class="headerlink" href="#function-templates-en-c" title="Permanent link">&para;</a></h1>
+                <h1 id="function-templates-en-c">Function Templates en C++<a class="headerlink" href="#function-templates-en-c" title="Permanent link">&para;</a></h1>
+<h2 id="definicion-de-function-templates">Definición de Function Templates<a class="headerlink" href="#definicion-de-function-templates" title="Permanent link">&para;</a></h2>
+<p>Con el objetivo de reducir la sobrecarga de funciones existen los templates o plantillas, que permiten al propio compilador generar las sobrecargas pertinentes en base a las potenciales llamadas de la función.</p>
+<p>El siguiente código ilustra una función que devuelve el mayor de dos datos:</p>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Siempre que un mismo dos datos de un mismo tipo <code>T</code> permitan la expresión <code>a &gt; b</code>, el compilador generará la sobrecarga de la función de ese tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="n">y</span><span class="p">{</span><span class="mi">6</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_x</span><span class="p">{</span><span class="o">&amp;</span><span class="n">x</span><span class="p">},</span><span class="w"> </span><span class="o">*</span><span class="n">p_y</span><span class="p">{</span><span class="o">&amp;</span><span class="n">y</span><span class="p">};</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6.0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">        </span><span class="c1">// 6</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="mf">5.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">6.0f</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">      </span><span class="c1">// 6</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">            </span><span class="c1">// 6</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">          </span><span class="c1">// 0xc4771ff69c</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">p_x</span><span class="p">,</span><span class="w"> </span><span class="n">p_y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">        </span><span class="c1">// 0x7dcf5ffbbc</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mundo&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// Hola</span>
+</code></pre></div>
+<p>Como se puede apreciar, independientemente del tipo, sean estos enteros, double, float, punteros, referencias e incluso cadenas de texto (además de las conversiones de tipos implícitas), la misma plantilla nos sirve.</p>
+<p>No debemos olvidar que un valor y una referencia son equivalentes en los function templates y por ello el compilador no sabrá cuál elegir:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Definición con tipos por valor</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Definición con tipos por referencia</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">max</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">)</span><span class="w">  </span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Error, compilador confuso al no saber elegir cuál utilizar</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span>
+</code></pre></div>
+<p>En resumen:</p>
+<ul>
+<li>Los templates de función son planos y no código real de C++, consumidos por el compilador para generar el código pertinente en función de las llamadas que se hacen a la función.</li>
+<li>La función generada por el compilador se denomina instancia del template.</li>
+<li>Una instancia del templates se reutilizará de forma similar a la llamada de una función clásica en lugar de generarse duplicados.</li>
+</ul>
+<h2 id="especializacion-y-sobrecarga-de-templates">Especialización y sobrecarga de Templates<a class="headerlink" href="#especializacion-y-sobrecarga-de-templates" title="Permanent link">&para;</a></h2>
+<p>En algunas ocasiones es posible que necesitemos adaptar una de las sobrecargas generadas por el function template. Por ejemplo, al comprobar cual de dos cadenas <code>const char*</code> es mayor, nos devuelve la comparación lexicográfica pero nosotros queremos comparar las longitudes. En ese caso deberemos definir un template especializado para ese tipo de dato:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
+
+<span class="c1">// Template generalizado</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Especialización para puntero de carácter</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">max</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adios&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// Adios</span>
+</code></pre></div>
+<p>En este sentido, un comportamiento similar se puede conseguir mediante la sobrecarga de funciones.</p>
+<p>Una sobrecarga en crudo (raw) tendrá precedencia antes que cualquier instancia de template:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
+
+<span class="c1">// Template general</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Template general (T)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Sobrecarga en crudo para *char con preferencia</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">max</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sobrecarga en crudo (char*)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="n">y</span><span class="p">{</span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adios&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sobrecarga en crudo (char*) -&gt; Adios
+Template general (T) -&gt; 10
+Template general (T) -&gt; 0x494bdff6ac
+</code></pre></div>
+<p>Otra opción es una sobrecarga con templates, que tendrá precedencia antes que la función en crudo, por ejemplo para cualquier puntero:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
+
+<span class="c1">// Template general</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Template general (T)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Sobrecarga en crudo para *char con preferencia</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">max</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sobrecarga en crudo (char*)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Sobrecarga de template para punteros</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="n">max</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sobrecarga de template (T*)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="n">y</span><span class="p">{</span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adios&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sobrecarga en crudo (char*) -&gt; Adios
+Template general (T) -&gt; 10
+Sobrecarga de template (T*) -&gt; 0x8f107ff63c
+</code></pre></div>
+<h2 id="tipos-de-parametros-y-retorno-en-templates">Tipos de parámetros y retorno en Templates<a class="headerlink" href="#tipos-de-parametros-y-retorno-en-templates" title="Permanent link">&para;</a></h2>
+<p>Los templates de las funciones nos permiten jugar con diferentes tipos de parámetros, así como el tipo del valor de retorno que podemos pasar explícitamente a la plantilla:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Tipo de retorno con valor por defecto y tipos de los parámetros</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ReturnType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">P</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">ReturnType</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="mi">6</span><span class="p">},</span><span class="w"> </span><span class="n">b</span><span class="p">{</span><span class="mf">9.5</span><span class="p">};</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">    </span><span class="c1">// int</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// long</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// float</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// double</span>
+</code></pre></div>
+<h2 id="deduccion-del-tipo-de-retorno-en-templates">Deducción del tipo de retorno en Templates<a class="headerlink" href="#deduccion-del-tipo-de-retorno-en-templates" title="Permanent link">&para;</a></h2>
+<p>Para indicarle a un template que deduzca automáticamente el tipo de retorno se utiliza la función <code>decltype()</code>, que devolverá el tipo resultante de una expresión evaluada:</p>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">P</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="n">b</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">       </span><span class="c1">// int</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="p">);</span><span class="w">     </span><span class="c1">// double</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mf">4.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">7.0f</span><span class="p">);</span><span class="w"> </span><span class="c1">// float</span>
+</code></pre></div>
+<p>Esto se puede simplificar creando una definición con resultado <code>auto</code> y parámetros auto sin plantilla, que C++ interpretará como que debe generar el template automáticamente para los tipos llamados:</p>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">b</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">       </span><span class="c1">// int</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="p">);</span><span class="w">     </span><span class="c1">// double</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mf">4.0f</span><span class="p">,</span><span class="w"> </span><span class="mf">7.0f</span><span class="p">);</span><span class="w"> </span><span class="c1">// float</span>
+</code></pre></div>
+<h2 id="rasgos-de-tipado-en-templates">Rasgos de tipado en Templates<a class="headerlink" href="#rasgos-de-tipado-en-templates" title="Permanent link">&para;</a></h2>
+<p>Si necesitamos realizar una aserción de tipo en nuestros templates para impedir que una función se ejecute con un tipo de dato específico, podemos usar un los <code>&lt;type_traits&gt;</code> para generar una excepción en el caso de que el tipo no concuerdo con lo esperado:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;type_traits&gt;</span><span class="cp"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">imprimir</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// static_assert(std::is_integral&lt;T&gt;::value, &quot;Error...&quot;);</span>
+<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_integral_v</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Error, solo enteros&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Numero : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">imprimir</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w">            </span><span class="c1">// funciona</span>
+<span class="n">imprimir</span><span class="p">(</span><span class="mf">5.4</span><span class="p">);</span><span class="w">          </span><span class="c1">// error</span>
+<span class="n">imprimir</span><span class="p">(</span><span class="s">&quot;Hola mundo&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// error</span>
+</code></pre></div>
+<p>La lista completa de <strong>type traits</strong> la podemos encontrar en al documentación: <a href="https://en.cppreference.com/w/cpp/header/type_traits">https://en.cppreference.com/w/cpp/header/type_traits</a></p>
+<h2 id="conceptos-restrictivos-en-templates">Conceptos restrictivos en Templates<a class="headerlink" href="#conceptos-restrictivos-en-templates" title="Permanent link">&para;</a></h2>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small></p>
                 
                   
                 
@@ -933,8 +1241,8 @@ div.my-img{text-align:center;margin-top:20px}
     <nav class="md-footer-nav__inner md-grid">
       
       <a
-        href="../09-funciones/"
-        title="Programación de funciones"
+        href="../09-funciones/04-funciones-inline/"
+        title="Funciones Inline"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -946,7 +1254,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Programación de funciones
+            Funciones Inline
           </span>
         </div>
       </a>

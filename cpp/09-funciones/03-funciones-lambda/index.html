@@ -11,10 +11,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Funciones Lambda (anónimas) | Apuntes lenguaje C++">
       
       
-        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/30-miscelanea/02-operadores-bit-a-bit/">
+        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/09-funciones/03-funciones-lambda/">
       
       
         <meta name="author" content="Héctor Costa Guzman">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Operadores bit a bit | Apuntes lenguaje C++ | Hektor Profe</title>
+        <title>Funciones Lambda (anónimas) | Apuntes lenguaje C++ | Hektor Profe</title>
       
     
     <link rel="stylesheet" href="../../../assets/stylesheets/application.2.css">
@@ -109,7 +109,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#operadores-bit-a-bit-en-c" tabindex="1" class="md-skip">
+      <a href="#funciones-lambda-anonimas-en-c" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -535,10 +535,31 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10" checked>
+    
+    <label class="md-nav__link" for="nav-6-10">
+      Programación de funciones
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-10">
+        Programación de funciones
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
 
   <li class="md-nav__item">
-    <a href="../../09-funciones/" title="Programación de funciones" class="md-nav__link">
-      Programación de funciones
+    <a href="../01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+      Primeros pasos
     </a>
   </li>
 
@@ -549,8 +570,58 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../10-function-templates/" title="Function templates" class="md-nav__link">
-      Function templates
+    <a href="../02-sobrecarga-funciones/" title="Sobrecarga de funciones" class="md-nav__link">
+      Sobrecarga de funciones
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Funciones Lambda" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Funciones Lambda
+    </a>
+    
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../04-funciones-inline/" title="Funciones Inline" class="md-nav__link">
+      Funciones Inline
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../10-function-templates/" title="Function Templates" class="md-nav__link">
+      Function Templates
     </a>
   </li>
 
@@ -658,6 +729,18 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../11-clases/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
+      Semánticas de movimiento
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -703,12 +786,10 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-16" type="checkbox" id="nav-6-16" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-16" type="checkbox" id="nav-6-16">
     
     <label class="md-nav__link" for="nav-6-16">
       Miscelánea
@@ -726,30 +807,9 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../01-conversiones-overflow/" title="Conversiones y overflows" class="md-nav__link">
-      Conversiones y overflows
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Operadores bit a bit" class="md-nav__link md-nav__link--active" id="md__active_link">
+    <a href="../../30-miscelanea/01-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
       Operadores bit a bit
     </a>
-    
   </li>
 
         
@@ -759,7 +819,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../03-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
+    <a href="../../30-miscelanea/02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
       Enumeradores y alias
     </a>
   </li>
@@ -771,7 +831,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../04-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
+    <a href="../../30-miscelanea/03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
       Números aleatorios
     </a>
   </li>
@@ -783,7 +843,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../05-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
+    <a href="../../30-miscelanea/04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
       Tiempo de ejecución
     </a>
   </li>
@@ -795,56 +855,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../06-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
+    <a href="../../30-miscelanea/05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
       Espacio de nombres
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../07-compilacion-vinculacion/" title="Compilación y vinculación" class="md-nav__link">
-      Compilación y vinculación
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
-      Semánticas de movimiento
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../09-funciones-entidades/" title="Funciones como entidades" class="md-nav__link">
-      Funciones como entidades
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../90-novedades-cpp20/" title="Novedades en C++20" class="md-nav__link">
-      Novedades en C++20
     </a>
   </li>
 
@@ -911,9 +923,53 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <h1 id="operadores-bit-a-bit-en-c">Operadores bit a bit en C++<a class="headerlink" href="#operadores-bit-a-bit-en-c" title="Permanent link">&para;</a></h1>
+                <h1 id="funciones-lambda-anonimas-en-c">Funciones Lambda (anónimas) en C++<a class="headerlink" href="#funciones-lambda-anonimas-en-c" title="Permanent link">&para;</a></h1>
+<p>Una función <strong>Lambda o anónima</strong> es una función sin nombre, definida y utilizada in-situ. Su estructura es muy interesante:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Definición básica y uso</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">hola</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hola mundo!&quot;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="n">hola</span><span class="p">();</span><span class="w"> </span><span class="c1">// Hola mundo!</span>
+</code></pre></div>
+<p>Puedes aceptar parámetros, pudiendo enviarse explícitamente después de la definición a forma de llamada:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Uso directo con parámetros</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">[](</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="p">}(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// 9</span>
+</code></pre></div>
+<p>También permiten la captura de valores enlistados justo al principio de la definición:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Captura por valor en lista</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="n">b</span><span class="p">{</span><span class="mi">15</span><span class="p">};</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a+b: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="n">suma</span><span class="p">();</span><span class="w"> </span><span class="c1">// a+b: 25</span>
+</code></pre></div>
+<p>También se puede capturar los valores por referencia:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Captura por referencia en lista</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">{</span><span class="mi">25</span><span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;&amp;c ex: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">imprimir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">c</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;&amp;c in: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// 0x3e6ddffb9c</span>
+<span class="n">imprimir</span><span class="p">();</span><span class="w"> </span><span class="c1">// 0x3e6ddffb9c</span>
+</code></pre></div>
+<p>Podemos enviar a la función <strong>Lambda</strong> todo el contexto de variables definidas por valor con el operador <code>=</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Captura de todo el contexto por valor</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">imprimir_contexto_valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](){</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;&amp;a in: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;b in: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;c in: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;&amp;a ex: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;b ex: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;c ex: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="n">imprimir_contexto_valor</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&amp;a ex: 0x3e6ddffbc0, &amp;b ex: 0x3e6ddffbb8, &amp;c ex: 0x3e6ddffb9c
+&amp;a in: 0x3e6ddffb70, &amp;b in: 0x3e6ddffb78, &amp;c in: 0x3e6ddffb80
+</code></pre></div>
+<p>O por referencia mediante el operador <code>&amp;</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Captura de todo el contexto por referencia</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">imprimir_contexto_referencia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;&amp;a in: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;b in: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;c in: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;&amp;a ex: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;b ex: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &amp;c ex: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="n">imprimir_contexto_referencia</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&amp;a ex: 0xac75bff670, &amp;b ex: 0xac75bff668, &amp;c ex: 0xac75bff64c
+&amp;a in: 0xac75bff670, &amp;b in: 0xac75bff668, &amp;c in: 0xac75bff64c
+</code></pre></div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small></p>
                 
                   
                 
@@ -935,8 +991,8 @@ div.my-img{text-align:center;margin-top:20px}
     <nav class="md-footer-nav__inner md-grid">
       
       <a
-        href="../01-conversiones-overflow/"
-        title="Conversiones y overflows"
+        href="../02-sobrecarga-funciones/"
+        title="Sobrecarga de funciones"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -948,14 +1004,14 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Conversiones y overflows
+            Sobrecarga de funciones
           </span>
         </div>
       </a>
        
       <a
-        href="../03-enumeradores-alias/"
-        title="Enumeradores y alias"
+        href="../04-funciones-inline/"
+        title="Funciones Inline"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -964,7 +1020,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Enumeradores y alias
+            Funciones Inline
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">

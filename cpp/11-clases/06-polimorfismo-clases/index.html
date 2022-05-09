@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Polimorfismo de clases | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/11-clases/06-polimorfismo-clases/">
@@ -536,9 +536,28 @@ div.my-img{text-align:center;margin-top:20px}
             
 
 
-  <li class="md-nav__item">
-    <a href="../../09-funciones/" title="Programación de funciones" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+    
+    <label class="md-nav__link" for="nav-6-10">
       Programación de funciones
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-10">
+        Programación de funciones
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+      Primeros pasos
     </a>
   </li>
 
@@ -549,8 +568,49 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../10-function-templates/" title="Function templates" class="md-nav__link">
-      Function templates
+    <a href="../../09-funciones/02-sobrecarga-funciones/" title="Sobrecarga de funciones" class="md-nav__link">
+      Sobrecarga de funciones
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/03-funciones-lambda/" title="Funciones Lambda" class="md-nav__link">
+      Funciones Lambda
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/04-funciones-inline/" title="Funciones Inline" class="md-nav__link">
+      Funciones Inline
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../10-function-templates/" title="Function Templates" class="md-nav__link">
+      Function Templates
     </a>
   </li>
 
@@ -650,9 +710,129 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Polimorfismo de clases
+      </label>
+    
     <a href="./" title="Polimorfismo de clases" class="md-nav__link md-nav__link--active" id="md__active_link">
       Polimorfismo de clases
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enlace-dinamico-con-funciones-virtuales" title="Enlace dinámico con funciones virtuales" class="md-nav__link toc__link">
+    Enlace dinámico con funciones virtuales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos-polimorficos-en-arreglos" title="Objetos polimórficos en arreglos" class="md-nav__link toc__link">
+    Objetos polimórficos en arreglos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificador-override-en-funciones-virtuales" title="Especificador override en funciones virtuales" class="md-nav__link toc__link">
+    Especificador override en funciones virtuales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miembros-estaticos-en-clases-polimorficas" title="Miembros estáticos en clases polimórficas" class="md-nav__link toc__link">
+    Miembros estáticos en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificador-final-en-la-herencia" title="Especificador final en la herencia" class="md-nav__link toc__link">
+    Especificador final en la herencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificadores-de-acceso-en-clases-polimorficas" title="Especificadores de acceso en clases polimórficas" class="md-nav__link toc__link">
+    Especificadores de acceso en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificadores-de-acceso-en-clases-no-polimorficas" title="Especificadores de acceso en clases no polimórficas" class="md-nav__link toc__link">
+    Especificadores de acceso en clases no polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-virtuales-con-argumentos-por-defecto-en-clases-polimorficas" title="Funciones virtuales con argumentos por defecto en clases polimórficas" class="md-nav__link toc__link">
+    Funciones virtuales con argumentos por defecto en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destructores-virtuales-en-clases-polimorficas" title="Destructores virtuales en clases polimórficas" class="md-nav__link toc__link">
+    Destructores virtuales en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversiones-dinamicas-para-llamar-funciones-no-polimorficas" title="Conversiones dinámicas para llamar funciones no polimórficas" class="md-nav__link toc__link">
+    Conversiones dinámicas para llamar funciones no polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llamar-funciones-virtuales-polimorficas-desde-constructores-y-destructores" title="Llamar funciones virtuales (polimórficas) desde constructores y destructores" class="md-nav__link toc__link">
+    Llamar funciones virtuales (polimórficas) desde constructores y destructores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-typeid" title="Operador typeid()" class="md-nav__link toc__link">
+    Operador typeid()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-virtuales-puras-y-clases-abstractas" title="Funciones virtuales puras y clases abstractas" class="md-nav__link toc__link">
+    Funciones virtuales puras y clases abstractas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clases-abstractas-como-interfaces" title="Clases abstractas como interfaces" class="md-nav__link toc__link">
+    Clases abstractas como interfaces
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -665,6 +845,18 @@ div.my-img{text-align:center;margin-top:20px}
   <li class="md-nav__item">
     <a href="../07-class-templates/" title="Class templates" class="md-nav__link">
       Class templates
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
+      Semánticas de movimiento
     </a>
   </li>
 
@@ -735,19 +927,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/01-conversiones-overflow/" title="Conversiones y overflows" class="md-nav__link">
-      Conversiones y overflows
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/02-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
+    <a href="../../30-miscelanea/01-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
       Operadores bit a bit
     </a>
   </li>
@@ -759,7 +939,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/03-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
+    <a href="../../30-miscelanea/02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
       Enumeradores y alias
     </a>
   </li>
@@ -771,7 +951,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/04-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
+    <a href="../../30-miscelanea/03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
       Números aleatorios
     </a>
   </li>
@@ -783,7 +963,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/05-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
+    <a href="../../30-miscelanea/04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
       Tiempo de ejecución
     </a>
   </li>
@@ -795,56 +975,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/06-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
+    <a href="../../30-miscelanea/05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
       Espacio de nombres
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/07-compilacion-vinculacion/" title="Compilación y vinculación" class="md-nav__link">
-      Compilación y vinculación
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
-      Semánticas de movimiento
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/09-funciones-entidades/" title="Funciones como entidades" class="md-nav__link">
-      Funciones como entidades
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/90-novedades-cpp20/" title="Novedades en C++20" class="md-nav__link">
-      Novedades en C++20
     </a>
   </li>
 
@@ -900,6 +1032,113 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enlace-dinamico-con-funciones-virtuales" title="Enlace dinámico con funciones virtuales" class="md-nav__link toc__link">
+    Enlace dinámico con funciones virtuales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos-polimorficos-en-arreglos" title="Objetos polimórficos en arreglos" class="md-nav__link toc__link">
+    Objetos polimórficos en arreglos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificador-override-en-funciones-virtuales" title="Especificador override en funciones virtuales" class="md-nav__link toc__link">
+    Especificador override en funciones virtuales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miembros-estaticos-en-clases-polimorficas" title="Miembros estáticos en clases polimórficas" class="md-nav__link toc__link">
+    Miembros estáticos en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificador-final-en-la-herencia" title="Especificador final en la herencia" class="md-nav__link toc__link">
+    Especificador final en la herencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificadores-de-acceso-en-clases-polimorficas" title="Especificadores de acceso en clases polimórficas" class="md-nav__link toc__link">
+    Especificadores de acceso en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificadores-de-acceso-en-clases-no-polimorficas" title="Especificadores de acceso en clases no polimórficas" class="md-nav__link toc__link">
+    Especificadores de acceso en clases no polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-virtuales-con-argumentos-por-defecto-en-clases-polimorficas" title="Funciones virtuales con argumentos por defecto en clases polimórficas" class="md-nav__link toc__link">
+    Funciones virtuales con argumentos por defecto en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destructores-virtuales-en-clases-polimorficas" title="Destructores virtuales en clases polimórficas" class="md-nav__link toc__link">
+    Destructores virtuales en clases polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversiones-dinamicas-para-llamar-funciones-no-polimorficas" title="Conversiones dinámicas para llamar funciones no polimórficas" class="md-nav__link toc__link">
+    Conversiones dinámicas para llamar funciones no polimórficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llamar-funciones-virtuales-polimorficas-desde-constructores-y-destructores" title="Llamar funciones virtuales (polimórficas) desde constructores y destructores" class="md-nav__link toc__link">
+    Llamar funciones virtuales (polimórficas) desde constructores y destructores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-typeid" title="Operador typeid()" class="md-nav__link toc__link">
+    Operador typeid()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-virtuales-puras-y-clases-abstractas" title="Funciones virtuales puras y clases abstractas" class="md-nav__link toc__link">
+    Funciones virtuales puras y clases abstractas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clases-abstractas-como-interfaces" title="Clases abstractas como interfaces" class="md-nav__link toc__link">
+    Clases abstractas como interfaces
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -912,8 +1151,792 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="polimorfismo-de-clases-en-c">Polimorfismo de clases en C++<a class="headerlink" href="#polimorfismo-de-clases-en-c" title="Permanent link">&para;</a></h1>
+<p>El <strong>polimorfismo</strong> es la capacidad de manejar distintas clases heredadas de una clase base de la misma forma. Este ejemplo simplificado muestra un posible resultado a implementar polimorfismo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Tenemos tres punteros con formas heredadas de Shape</span>
+<span class="n">Shape</span><span class="w"> </span><span class="o">*</span><span class="n">shape1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Circle</span><span class="p">;</span><span class="w"></span>
+<span class="n">Shape</span><span class="w"> </span><span class="o">*</span><span class="n">shape2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">;</span><span class="w"></span>
+<span class="n">Shape</span><span class="w"> </span><span class="o">*</span><span class="n">shape3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Oval</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Una función que toma una Shape de cualquier tipo derivado</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw_shape</span><span class="p">(</span><span class="n">Shape</span><span class="o">*</span><span class="w"> </span><span class="n">shape_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">shape_ptr</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>La función <code>draw_shape</code> utiliza el polimorfismo de clases para llamar al método <code>draw()</code> que tiene cualquier <code>Shape</code>, independientemente que su implementación sea distinta en cada caso. Gracias a los punteros y la gestión por referencia esto es posible.</p>
+<h2 id="enlace-dinamico-con-funciones-virtuales">Enlace dinámico con funciones virtuales<a class="headerlink" href="#enlace-dinamico-con-funciones-virtuales" title="Permanent link">&para;</a></h2>
+<p>Una <strong>función virtual</strong> es una función miembro que se declara dentro de una clase base y es redefinida (anulada) por una clase derivada. Cuando se hace referencia a un objeto de clase derivada mediante un puntero o una referencia a la clase base, se puede llamar a una función virtual para ese objeto y ejecutar la versión de la función de la clase derivada:</p>
+<ul>
+<li>Las funciones virtuales garantizan que se llame a la función correcta para un objeto, independientemente del tipo de referencia (o puntero) utilizado para la llamada a la función.</li>
+<li>Se utilizan principalmente para lograr <strong>el polimorfismo en tiempo de ejecución</strong>.</li>
+<li>Las funciones se declaran con una palabra clave <code>virtual</code> en la clase base.</li>
+<li>La resolución de la llamada a la función se realiza en tiempo de ejecución.</li>
+</ul>
+<p><strong>Reglas para funciones virtuales</strong></p>
+<ol>
+<li>Las funciones virtuales no pueden ser estáticas.
+Una función virtual puede ser una función amiga de otra clase.</li>
+<li>Se debe acceder a las funciones virtuales utilizando el puntero o la referencia del tipo de clase base para lograr el polimorfismo en tiempo de ejecución.</li>
+<li>El prototipo de funciones virtuales debe ser el mismo en la base, así como en la clase derivada.</li>
+<li>Siempre se definen en la clase base y se anulan en una clase derivada. No es obligatorio que la clase derivada anule (o redefina la función virtual), en ese caso se utiliza la versión de la base.</li>
+<li>Una clase puede tener un destructor virtual, pero no puede tener un constructor virtual. Para construir un objeto, un constructor necesita el tipo exacto del objeto que a crea y no se puede tener un puntero a un constructor (el objeto aún no existe).</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Shape</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Shape</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Shape</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">)</span><span class="w"> </span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">description</span><span class="p">(</span><span class="n">description</span><span class="p">){};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Función virtual a implementar en clase derivada</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Dibujando &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">{</span><span class="s">&quot;&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Circle</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Shape</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Circle</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Circle</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">Shape</span><span class="p">(</span><span class="n">description</span><span class="p">),</span><span class="w"> </span><span class="n">radius</span><span class="p">(</span><span class="n">radius</span><span class="p">){};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Implementación de la función virtual</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Dibujando &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">description</span><span class="w"></span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; con radio &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">{};</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="nf">shape</span><span class="p">(</span><span class="s">&quot;Forma&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Circle</span><span class="w"> </span><span class="nf">circulo</span><span class="p">(</span><span class="s">&quot;Circulo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4.5</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">shape</span><span class="p">.</span><span class="n">draw</span><span class="p">();</span><span class="w">   </span><span class="c1">// Dibujando Forma</span>
+<span class="w">    </span><span class="n">circulo</span><span class="p">.</span><span class="n">draw</span><span class="p">();</span><span class="w"> </span><span class="c1">// Dibujando Circulo con radio 4.5</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Ahora que tenemos un método virtual en la clase derivada podemos crear una función que simplemente reciba un puntero o referencia de una instancia de <code>Shape</code> o sus clases derivadas y ejecutar su método <code>draw()</code> sin preocuparnos por su tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Funciones que llaman a una base o sus derivadas</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw_shape_puntero</span><span class="p">(</span><span class="n">Shape</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw_shape_referencia</span><span class="p">(</span><span class="n">Shape</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="nf">shape</span><span class="p">(</span><span class="s">&quot;Forma&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Circle</span><span class="w"> </span><span class="nf">circulo</span><span class="p">(</span><span class="s">&quot;Circulo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4.5</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">draw_shape_puntero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">shape</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">draw_shape_referencia</span><span class="p">(</span><span class="n">shape</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">draw_shape_puntero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">circulo</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">draw_shape_referencia</span><span class="p">(</span><span class="n">circulo</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Dibujando Forma
+Dibujando Forma
+Dibujando Circulo con radio 4.5
+Dibujando Circulo con radio 4.5
+</code></pre></div>
+<h2 id="objetos-polimorficos-en-arreglos">Objetos polimórficos en arreglos<a class="headerlink" href="#objetos-polimorficos-en-arreglos" title="Permanent link">&para;</a></h2>
+<p>Es posible manejar secuencialmente objetos de una clase base y sus derivadas. La forma simple pero que más espacio cuesta en la memoria es mediante la copia de los objetos o a partir de las referencias.</p>
+<p>Vamos a suponer una nueva clase derivada <code>Square</code> (cuadrado) para tener algo más con lo que jugar:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Square</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Shape</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Square</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Square</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">side</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">Shape</span><span class="p">(</span><span class="n">description</span><span class="p">),</span><span class="w"> </span><span class="n">side</span><span class="p">(</span><span class="n">side</span><span class="p">){};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Implementación de la función virtual</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Dibujando &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">description</span><span class="w"></span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; con costado &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">side</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">side</span><span class="p">{};</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Array con diferentes formas</span>
+<span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shapes</span><span class="p">[]{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Shape</span><span class="p">(</span><span class="s">&quot;Forma&quot;</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="n">Circle</span><span class="p">(</span><span class="s">&quot;Circulo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4.5</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="n">Square</span><span class="p">(</span><span class="s">&quot;Cuadrado&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// for (Shape s : shapes)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Shape</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">shapes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// (&amp;s)-&gt;draw(); </span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Dibujando Forma
+Dibujando Circulo
+Dibujando Cuadrado
+</code></pre></div>
+<p>Como podemos observar esta forma no nos funciona del todo bien. Eso es debido a que el tipo <code>Shape</code> del <code>for</code> establece la función llamada, esa es la razón por la que al llamar a <code>draw()</code> se ejecuta la forma de la clase base <code>Shape</code>.</p>
+<p>Para lograr que las funciones se ejecuten desde las clases derivadas una forma de hacerlo sería con <strong>punteros inteligentes</strong>. Estos punteros saben la clase del dato almacenado y nos permitirán en conjunto al tipo <code>auto</code> llamar al <code>draw()</code> específico de las clases derivadas:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Arreglo de punteros inteligentes</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shapes</span><span class="p">[]{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Forma&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Circle</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Circulo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4.5</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Square</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Cuadrado&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Con smart pointers detectamos el tipo automáticamente</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">shapes</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Dibujando Forma
+Dibujando Circulo con radio 4.5
+Dibujando Cuadrado con costado 3
+</code></pre></div>
+<p>Trataré el tema de los punteros inteligentes en profundidad próximamente.</p>
+<h2 id="especificador-override-en-funciones-virtuales">Especificador override en funciones virtuales<a class="headerlink" href="#especificador-override-en-funciones-virtuales" title="Permanent link">&para;</a></h2>
+<p>Puede ser que mientras estamos definiendo los métodos de la clase base en las derivadas tengamos un despiste y en lugar de referirnos a un método por su nombre lo llamemos distinto, por ejemplo en lugar de <code>draw</code> pongamos por error <code>draW</code>. Esto generará un método nuevo que no substituirá al original.</p>
+<p>Para evitar esta situación, podemos establecer el especificador <code>override</code> como una buena práctica en todos los métodos de las derivadas que estén implementados sobre un método <code>virtual</code>, de esa manera el propio editor o compilador nos avisará de que tengamos cuidado, pues ese método no se encuentra en la clase base:</p>
+<p><img alt="" src="/cdn/cpp/image-60.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado al sobrescribir funciones virtuales sobrecargadas</p>
+<p>Debemos tener cuidado con esta cláusula cuando utilizamos sobrecarga de las funciones (más de una implementación) porque en ese caso, <strong>si sobrescribimos una sobrecarga de la función virtual en una clase base todas las demás serán ocultadas</strong> y no tendrás otra opción que sobrescribirlas explícitamente para que estén disponibles en las demás clases descendientes.</p>
+</div>
+<h2 id="miembros-estaticos-en-clases-polimorficas">Miembros estáticos en clases polimórficas<a class="headerlink" href="#miembros-estaticos-en-clases-polimorficas" title="Permanent link">&para;</a></h2>
+<p>Recordemos que un miembro estático era un miembro especial a nivel de clase y no de instancia, común para todas las instancias de la clase. ¿Cómo se comportan estos miembros en clases heredades polimórficas? Hagamos un experimento partiendo de una nueva clase <code>Rect</code> que hereda de <code>Square</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Rect</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Square</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Rect</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Rect</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">side</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">Square</span><span class="p">(</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">side</span><span class="p">),</span><span class="w"> </span><span class="n">height</span><span class="p">(</span><span class="n">height</span><span class="p">){};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Implementación de la función virtual</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Dibujando &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">description</span><span class="w"></span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; con ancho &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">side</span><span class="w"></span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; y alto &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">{};</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Ahora vamos a añadir un miembro estático llamado contador para llevar un conteo del número de instancias tanto en <code>Base</code>, como <code>Square</code> y <code>Rect</code> que incrementaremos en sus respectivos consuctores:</p>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Constructor forma</span>
+<span class="n">Shape</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">description</span><span class="p">(</span><span class="n">description</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Constructor cuadrado</span>
+<span class="n">Square</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">side</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">Shape</span><span class="p">(</span><span class="n">description</span><span class="p">),</span><span class="w"> </span><span class="n">side</span><span class="p">(</span><span class="n">side</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Constructor rectángulo</span>
+<span class="n">Rect</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">side</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">Square</span><span class="p">(</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">side</span><span class="p">),</span><span class="w"> </span><span class="n">height</span><span class="p">(</span><span class="n">height</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Inicializaremos los contadores de las tres clases antes de la función <code>main</code> y consultaremos sus valores después de crear unas cuantas instancias:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Shape</span><span class="o">::</span><span class="n">contador</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">Square</span><span class="o">::</span><span class="n">contador</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">Rect</span><span class="o">::</span><span class="n">contador</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Arreglo de punteros inteligentes</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shapes</span><span class="p">[]{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Forma 1&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Forma 2&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Forma 3&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Square</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Cuadrado 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Square</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Cuadrado 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Rect</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Rectangulo 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Rect</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Rectangulo 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Rect</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Rectangulo 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Consultamos los contadores</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;N formas: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Shape</span><span class="o">::</span><span class="n">contador</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;N cuadrados: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Square</span><span class="o">::</span><span class="n">contador</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;N rectangulos: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Rect</span><span class="o">::</span><span class="n">contador</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>N formas: 8
+N cuadrados: 5
+N rectangulos: 3
+</code></pre></div>
+<p>Lo que podemos observar es que:</p>
+<ul>
+<li>El contador de la clase base <code>Shape</code> se incrementa al crear una instancia de su clase y también de cualquiera de sus clases derivadas. Un total de 8 para 3 formas, 2 cuadrados y 3 rectángulos.</li>
+<li>El contador de la clase derivada <code>Square</code> se incrementa al crear una instancia de su clase y también de cualquiera de sus clases derivadas. Un total de 5 para 2 cuadrados y 3 rectángulos.</li>
+<li>El contador de la clase derivada <code>Rect</code> se incrementa al crear una instancia de su clase para un total de 3 rectángulos.</li>
+</ul>
+<p>En conclusión los miembros estáticos en el polimorfismo son comunes en las clases base.</p>
+<h2 id="especificador-final-en-la-herencia">Especificador final en la herencia<a class="headerlink" href="#especificador-final-en-la-herencia" title="Permanent link">&para;</a></h2>
+<p>Si en algún momento queremos impedir que una clase derivada pueda sobrescribir un método de su clase base podemos utilizar el especificador <code>final</code> para evitarlo, el editor o compilador nos avisará de que no es posible hacerlo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Square</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Shape</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">draw</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// Final</span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Rect</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Square</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">draw</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// Error</span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Esta cláusula también se puede aplicar a la propia clase para impedir que pueda tener clases derivadas:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Square</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{};</span><span class="w"> </span><span class="c1">// Final</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Rect</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Square</span><span class="w"> </span><span class="p">{};</span><span class="w"> </span><span class="c1">// Error</span>
+</code></pre></div>
+<h2 id="especificadores-de-acceso-en-clases-polimorficas">Especificadores de acceso en clases polimórficas<a class="headerlink" href="#especificadores-de-acceso-en-clases-polimorficas" title="Permanent link">&para;</a></h2>
+<p>Supongamos que tenemos una clase base <code>A</code> con dos métodos, uno público y uno privado. Y una clase derivada de <code>A</code> llamada <code>B</code> en cuyos métodos heredados cambiamos los especificadores de acceso, siendo el que era público privado, y el privado público:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">foo</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;foo() de A() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">bar</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bar() de A() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">bar</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bar() de B() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">foo</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;foo() de B() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>En este contexto, a partir de un puntero de clase base, podemos llamar a un <strong>método virtual polimórfico privado</strong> en la clase derivada, pero no a uno que sea público en la clase derivada y privado en la base:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="n">a</span><span class="o">-&gt;</span><span class="n">foo</span><span class="p">();</span><span class="w"> </span><span class="c1">// foo() de B() llamada</span>
+<span class="n">a</span><span class="o">-&gt;</span><span class="n">bar</span><span class="p">();</span><span class="w"> </span><span class="c1">// Error, bar() es privada</span>
+</code></pre></div>
+<p>Por contra, un puntero de la clase derivada tendrá solo acceso a los miembros virtuales públicos, como es de esperar:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">bar</span><span class="p">();</span><span class="w"> </span><span class="c1">// bar() de B() llamada</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">foo</span><span class="p">();</span><span class="w"> </span><span class="c1">// Error, bar() es privada</span>
+</code></pre></div>
+<h2 id="especificadores-de-acceso-en-clases-no-polimorficas">Especificadores de acceso en clases no polimórficas<a class="headerlink" href="#especificadores-de-acceso-en-clases-no-polimorficas" title="Permanent link">&para;</a></h2>
+<p>En cuanto al funcionamiento anterior pero en clases no polimórficas (no virtuales) obtendremos el resultado esperado para cada tipo del puntero:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">foo</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;foo() de A() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">bar</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bar() de A() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">bar</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bar() de B() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">foo</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;foo() de B() llamada&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>A partir de un puntero de clase base no podemos llamar a un <strong>método privado</strong> en la instancia de la clase derivada, pero sí a uno que sea público en la clase derivada y privado en la base:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="n">a</span><span class="o">-&gt;</span><span class="n">bar</span><span class="p">();</span><span class="w"> </span><span class="c1">// Error, bar() es privada</span>
+<span class="n">a</span><span class="o">-&gt;</span><span class="n">foo</span><span class="p">();</span><span class="w"> </span><span class="c1">// foo() de A() llamada</span>
+</code></pre></div>
+<p>En un puntero de <code>B</code> a una instancia de <code>B</code>, tendremos acceso a los métodos públicos de la clase <code>B</code>, como es lógico:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">bar</span><span class="p">();</span><span class="w"> </span><span class="c1">// bar() de B() llamada</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">foo</span><span class="p">();</span><span class="w"> </span><span class="c1">// Error, foo() es privada</span>
+</code></pre></div>
+<p>En definitiva no ocurre la sobreescritura, solo se esconden los métodos privados de la clase base.</p>
+<h2 id="funciones-virtuales-con-argumentos-por-defecto-en-clases-polimorficas">Funciones virtuales con argumentos por defecto en clases polimórficas<a class="headerlink" href="#funciones-virtuales-con-argumentos-por-defecto-en-clases-polimorficas" title="Permanent link">&para;</a></h2>
+<p>Es mejor evitar el uso de argumentos por defecto en la polimorfia, pues los resultados dependen del tipo de dato. Por ejemplo en una instancia de <code>A</code>, si almacenamos una instancia de <code>B</code> (derivada de <code>A</code>), los argumentos por defecto serán los de <code>A</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">b</span><span class="p">.</span><span class="n">plus</span><span class="p">();</span><span class="w"> </span><span class="c1">// 20</span>
+
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">plus</span><span class="p">();</span><span class="w"> </span><span class="c1">// 10 ???</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Esto hace que esta funcionalidad sea tendiente a crear confusiones y por eso es mejor no llevarla a cabo.</p>
+<h2 id="destructores-virtuales-en-clases-polimorficas">Destructores virtuales en clases polimórficas<a class="headerlink" href="#destructores-virtuales-en-clases-polimorficas" title="Permanent link">&para;</a></h2>
+<p>El tema de los destructores es interesante, pues de forma parecida a los constructores en clases heredadas, se ejecutan de forma inversa en toda su rama hereditaria:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructor A&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="o">~</span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destructor A&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructor B&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="o">~</span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destructor B&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">B</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructor C&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="o">~</span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destructor C&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Constructor A
+Constructor B
+Constructor C
+Destructor C
+Destructor B
+Destructor A
+</code></pre></div>
+<p>Esto tiene un pequeño inconveniente y es que si manejamos memoria dinámica para almacenar un objeto de clase base <code>A</code> y en él establecemos una referencia a un objeto de clase <code>C</code>, los destructores de <code>B</code> y <code>C</code> nunca se ejecutarán y ocurrirá una fuga de memoria:</p>
+<div class="highlight"><pre><span></span><code><span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Constructor A
+Constructor B
+Constructor C
+Destructor C
+    &lt;----- ¿Y los destructores A y C?
+</code></pre></div>
+<p>Para solucionar este problema haremos que los destructores heredados sean virtuales, activando así la polimorfia:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructor A&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destructor A&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructor B&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destructor B&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">B</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructor C&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destructor C&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Constructor A
+Constructor B
+Constructor C
+Destructor C
+Destructor B
+Destructor A
+</code></pre></div>
+<p>Recordemos que las <strong>funciones virtuales</strong> garantizan que se llame a la función correcta para un objeto, independientemente del tipo de referencia (o puntero) utilizado para la llamada a la función.</p>
+<p>De hecho, como un puntero inteligente es consciente de su tipo no haría falta declarar los destructores virtuales:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Un smart pointer no requiere los destructores virtuales</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">C</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Constructor A
+Constructor B
+Constructor C
+Destructor C
+Destructor B
+Destructor A
+</code></pre></div>
+<h2 id="conversiones-dinamicas-para-llamar-funciones-no-polimorficas">Conversiones dinámicas para llamar funciones no polimórficas<a class="headerlink" href="#conversiones-dinamicas-para-llamar-funciones-no-polimorficas" title="Permanent link">&para;</a></h2>
+<p>En algunas ocasiones quizá nos interese tener funciones no polimórficas en nuestras clases derivadas. Si tenemos un puntero de clase base podemos utilizar la función <code>dynamic_cast&lt;&gt;()</code> para intentar transformar el puntero a un tipo derivado y poder acceder a la función no polimórfica. Esto funcionará si es posible la conversión al tipo derivado o fallará dando lugar a un puntero nulo.</p>
+<p>En el siguiente ejemplo partimos de una clase base <code>A</code> y dos clases derivadas de ella: <code>B</code> y <code>C</code>. La clase <code>B</code> tiene un método <code>especial()</code> no polimórfico (no virtual en la clase base), mientras que la clase <code>C</code> no lo tiene:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">especial</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Especial B: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Vamos a implementar dos funciones sobrecargadas que tomen un puntero o referencia de la clase base <code>A</code> para intentar hacer la conversión dinámica al puntero <code>B</code> y ejecutar cuando sea posible el método especial que únicamente tiene esa clase:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Conversión de tipo por puntero para funcion no polimorfica</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">ejecutar_especial</span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Casting de *A -&gt; *B&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="n">b_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">B</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="n">a_ptr</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">b_ptr</span><span class="o">-&gt;</span><span class="n">especial</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Casting no posible&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Conversión de tipo por referencia para funcion no polimorfica</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">ejecutar_especial</span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Casting de &amp;A -&gt; *B&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="n">b_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">B</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a_ptr</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b_ptr</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">b_ptr</span><span class="o">-&gt;</span><span class="n">especial</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Casting no posible&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Si partimos de una instancia de la clase derivada <code>B</code> en un puntero o referencia de clase base <code>A</code> y los enviamos a la función, ambos casos deberían funcionar:</p>
+<div class="highlight"><pre><span></span><code><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">();</span><span class="w"></span>
+<span class="n">ejecutar_especial</span><span class="p">(</span><span class="n">a1</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Casting de *A -&gt; *B</span>
+<span class="c1">// Especial B</span>
+
+<span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">ejecutar_especial</span><span class="p">(</span><span class="n">a2</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Casting de &amp;A -&gt; *B</span>
+<span class="c1">// Especial B</span>
+</code></pre></div>
+<p>Por contra veremos que no es posible realizar la conversión dinámica mediante una instancia de clase derivada <code>C</code>, eso nos impedirá llamar la función especial porque realmente esta clase no la tiene:</p>
+<div class="highlight"><pre><span></span><code><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="p">();</span><span class="w"></span>
+<span class="n">ejecutar_especial</span><span class="p">(</span><span class="n">a3</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Casting no posible</span>
+</code></pre></div>
+<p>Abusar de las conversiones en clases heredadas se considera un mal diseño, si hay demasiadas llamadas a funciones no polimórficas lo mejor es hacerlas polimórficas desde el principio:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Mismo ejemplo usando funciones virtuales polimórficas</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">especial</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Especial: No implementada &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">especial</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Especial B: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ejecutar_especial</span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a_ptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a_ptr</span><span class="o">-&gt;</span><span class="n">especial</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">ejecutar_especial</span><span class="p">(</span><span class="n">a1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">ejecutar_especial</span><span class="p">(</span><span class="n">a2</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Especial B: 
+Especial: No implementada 
+</code></pre></div>
+<h2 id="llamar-funciones-virtuales-polimorficas-desde-constructores-y-destructores">Llamar funciones virtuales (polimórficas) desde constructores y destructores<a class="headerlink" href="#llamar-funciones-virtuales-polimorficas-desde-constructores-y-destructores" title="Permanent link">&para;</a></h2>
+<p>Supongamos una clase <code>Base</code> y una clase <code>Derivada</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Para usar polimorfia hacemos...</span>
+<span class="n">Base</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derivada</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Si repasamos el orden de llamada de constructores y destructores es el siguiente:</p>
+<ul>
+<li>Constructor Base</li>
+<li>Constructor Derivada<ul>
+<li>Uso del objeto construido</li>
+</ul>
+</li>
+<li>Destructor Derivada</li>
+<li>Destructor Base</li>
+</ul>
+<p>Ahora que hemos considerado este orden, supongamos que llamamos una función <code>virtual</code> para una instancia <code>Derivada</code> pero desde el constructor <code>Base</code> (usando polimorfismo). Si hacemos eso, el objeto <code>Derivada</code> (la especialización) todavía no se habrá construido, por lo que no se llamará desde la especialización, sino desde la clase <code>Base</code>.</p>
+<p>Por tanto, llamar a una función virtual desde un constructor o destructor no arrojará resultados polimórficos. La llamada nunca llegará a una clase derivada más específica que la que tiene el propio constructor o destructor. En otras palabras, se obtendrán lo que se conoce como resultados de vínculo estático (llamadas a funciones no virtuales/polimórficas).</p>
+<div class="admonition warning">
+<p class="admonition-title">Recordatorio</p>
+<p>Nunca hay que llamar funciones virtuales desde constructores ni destructores.</p>
+</div>
+<h2 id="operador-typeid">Operador typeid()<a class="headerlink" href="#operador-typeid" title="Permanent link">&para;</a></h2>
+<p>A través de esta funcionalidad podemos conseguir información sobre la clase de una instancia polimórfica y actuar en consecuencia si lo necesitamos:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">B</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">C</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+<span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">a</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1A</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">b</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1B</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">c</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1C</span>
+
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">p_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="n">p_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">*</span><span class="n">p_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">typeid</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">B</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;b es de clase B&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">p_a</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// P1A</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">p_b</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// P1B</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">p_c</span><span class="p">).</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// P1C</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">typeid</span><span class="p">(</span><span class="o">*</span><span class="n">p_c</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">typeid</span><span class="p">(</span><span class="n">C</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;p_a es de clase *A&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">(</span><span class="n">p_a</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">(</span><span class="n">p_b</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="p">(</span><span class="n">p_c</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="funciones-virtuales-puras-y-clases-abstractas">Funciones virtuales puras y clases abstractas<a class="headerlink" href="#funciones-virtuales-puras-y-clases-abstractas" title="Permanent link">&para;</a></h2>
+<p>A veces, la implementación de las funciones no se puede proporcionar en una clase base porque no conocemos la implementación. Esa clase se llama <strong>clase abstracta</strong>.</p>
+<p>Por ejemplo, supongamos que <code>Shape</code> sea una clase base. No podemos proporcionar la implementación de la función <code>draw()</code> de <code>Shape</code> porque en sí misma no puede ser dibujada, por lo que cada clase derivada tendrá que tener la implementación de <code>draw()</code> obligatoriamente. Del mismo modo una clase <code>Animal</code> no tiene implementación de <code>move()</code> (asumiendo que todos los animales se mueven), pero todos los animales deben saber cómo moverse. No podemos crear objetos de clases abstractas.</p>
+<p>Una <strong>función virtual pura</strong> (o función abstracta) en C++ es una función virtual para la cual podemos tener una implementación, pero debemos anular esa función en la clase derivada, de lo contrario la clase derivada también se convertirá en clase abstracta.</p>
+<p>Una función virtual pura se declara asignando <code>0</code> en la declaración:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Clase abstracta</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Test</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span>
+<span class="w">    </span><span class="c1">// Miembros de la clase</span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Función virtual pura</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">show</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">   </span><span class="cm">/* Otros miembros */</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Se implementa por clases que se derivan de una <strong>clase abstracta</strong>. A continuación se muestra un ejemplo para ilustrar el funcionamiento:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Base</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">fun</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Esta clase hereda de Base e implementa la funcion fun()</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Derived</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Base</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">fun</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;fun() called&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Base</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error, no se permite instanciar clases abstracta</span>
+
+<span class="w">    </span><span class="n">Derived</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">fun</span><span class="p">();</span><span class="w"> </span><span class="c1">// fun() called</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="clases-abstractas-como-interfaces">Clases abstractas como interfaces<a class="headerlink" href="#clases-abstractas-como-interfaces" title="Permanent link">&para;</a></h2>
+<p>Una <strong>clase abstracta con únicamente funciones virtuales puras y sin variables miembros</strong>  puede ser utilizada como lo que se conoce como <strong>modelo interfaz</strong>.</p>
+<p>Una interfaz es una especificación de algo que será completamente implementado en una clase derivada, aunque la especificación en sí misma resida en la clase abstracta:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="c1">// Interfaz ultra mega simple</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Base</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">saludar</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Implementación de una clase derivada</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Derivada</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Base</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">saludar</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hola mundo!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Derivada</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">saludar</span><span class="p">();</span><span class="w"> </span><span class="c1">// Hola mundo!</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Con esto terminamos el tema dedicado a la polimorfia en C++.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small></p>
                 
                   
                 

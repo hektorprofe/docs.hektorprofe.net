@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Class templates | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/11-clases/07-class-templates/">
@@ -536,9 +536,28 @@ div.my-img{text-align:center;margin-top:20px}
             
 
 
-  <li class="md-nav__item">
-    <a href="../../09-funciones/" title="Programación de funciones" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+    
+    <label class="md-nav__link" for="nav-6-10">
       Programación de funciones
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-10">
+        Programación de funciones
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+      Primeros pasos
     </a>
   </li>
 
@@ -549,8 +568,49 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../10-function-templates/" title="Function templates" class="md-nav__link">
-      Function templates
+    <a href="../../09-funciones/02-sobrecarga-funciones/" title="Sobrecarga de funciones" class="md-nav__link">
+      Sobrecarga de funciones
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/03-funciones-lambda/" title="Funciones Lambda" class="md-nav__link">
+      Funciones Lambda
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/04-funciones-inline/" title="Funciones Inline" class="md-nav__link">
+      Funciones Inline
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../10-function-templates/" title="Function Templates" class="md-nav__link">
+      Function Templates
     </a>
   </li>
 
@@ -662,10 +722,72 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Class templates
+      </label>
+    
     <a href="./" title="Class templates" class="md-nav__link md-nav__link--active" id="md__active_link">
       Class templates
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-de-un-class-template" title="Declaración de un class template" class="md-nav__link toc__link">
+    Declaración de un class template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-una-instancia-de-class-template" title="Creación de una instancia de class template" class="md-nav__link toc__link">
+    Creación de una instancia de class template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-miembros-fuera-del-template" title="Definición de miembros fuera del template" class="md-nav__link toc__link">
+    Definición de miembros fuera del template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-de-clase-con-multiples-parametros" title="Templates de clase con múltiples parámetros" class="md-nav__link toc__link">
+    Templates de clase con múltiples parámetros
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
+      Semánticas de movimiento
+    </a>
   </li>
 
         
@@ -735,19 +857,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/01-conversiones-overflow/" title="Conversiones y overflows" class="md-nav__link">
-      Conversiones y overflows
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/02-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
+    <a href="../../30-miscelanea/01-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
       Operadores bit a bit
     </a>
   </li>
@@ -759,7 +869,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/03-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
+    <a href="../../30-miscelanea/02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
       Enumeradores y alias
     </a>
   </li>
@@ -771,7 +881,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/04-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
+    <a href="../../30-miscelanea/03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
       Números aleatorios
     </a>
   </li>
@@ -783,7 +893,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/05-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
+    <a href="../../30-miscelanea/04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
       Tiempo de ejecución
     </a>
   </li>
@@ -795,56 +905,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/06-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
+    <a href="../../30-miscelanea/05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
       Espacio de nombres
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/07-compilacion-vinculacion/" title="Compilación y vinculación" class="md-nav__link">
-      Compilación y vinculación
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
-      Semánticas de movimiento
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/09-funciones-entidades/" title="Funciones como entidades" class="md-nav__link">
-      Funciones como entidades
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/90-novedades-cpp20/" title="Novedades en C++20" class="md-nav__link">
-      Novedades en C++20
     </a>
   </li>
 
@@ -900,6 +962,43 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-de-un-class-template" title="Declaración de un class template" class="md-nav__link toc__link">
+    Declaración de un class template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-una-instancia-de-class-template" title="Creación de una instancia de class template" class="md-nav__link toc__link">
+    Creación de una instancia de class template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-miembros-fuera-del-template" title="Definición de miembros fuera del template" class="md-nav__link toc__link">
+    Definición de miembros fuera del template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-de-clase-con-multiples-parametros" title="Templates de clase con múltiples parámetros" class="md-nav__link toc__link">
+    Templates de clase con múltiples parámetros
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -912,8 +1011,217 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="class-templates-en-c">Class templates en C++<a class="headerlink" href="#class-templates-en-c" title="Permanent link">&para;</a></h1>
+<p>Como ya sabemos los templates permiten escribir programas genéricos. Una forma de implementarlos es mediante funciones, pero también podemos hacerlo utilizando clases. Con un solo template de clase podemos trabajar con múltiples tipos de datos.</p>
+<h2 id="declaracion-de-un-class-template">Declaración de un class template<a class="headerlink" href="#declaracion-de-un-class-template" title="Permanent link">&para;</a></h2>
+<p>La estructura básica es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">className</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">var</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">functionName</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>En esta cabecera, <code>T</code> es un argumento que substituirá al tipo de dato utilizado. Dentro del cuerpo de la clase, tenemos una variable miembro <code>var</code> y una función miembro <code>functionName</code>, ambas del tipo <code>T</code>.</p>
+<h2 id="creacion-de-una-instancia-de-class-template">Creación de una instancia de class template<a class="headerlink" href="#creacion-de-una-instancia-de-class-template" title="Permanent link">&para;</a></h2>
+<p>Con la anterior estructura podemos crear objetos de diferente tipo utilizando la sintaxis:</p>
+<div class="highlight"><pre><span></span><code><span class="n">className</span><span class="o">&lt;</span><span class="n">dataType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classObject</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">className</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classObject</span><span class="p">;</span><span class="w"></span>
+<span class="n">className</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classObject</span><span class="p">;</span><span class="w"></span>
+<span class="n">className</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classObject</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>En el siguiente ejemplo vamos a crear una plantilla de clase con un <strong>getter</strong> que nos permitirá mostrar diferentes tipos de datos:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Numero</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Variable de tipo T</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Numero</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">// Constructor</span>
+
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">getNum</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Creamos un objeto de tipo entero</span>
+<span class="w">    </span><span class="n">Numero</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numeroInt</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Creamos un objeto de tipo double</span>
+<span class="w">    </span><span class="n">Numero</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numeroDouble</span><span class="p">(</span><span class="mf">3.14</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int Numero = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numeroInt</span><span class="p">.</span><span class="n">getNum</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;double Numero = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">numeroDouble</span><span class="p">.</span><span class="n">getNum</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="definicion-de-miembros-fuera-del-template">Definición de miembros fuera del template<a class="headerlink" href="#definicion-de-miembros-fuera-del-template" title="Permanent link">&para;</a></h2>
+<p>Si necesitamos separar la declaración y la definición de una función (cabecera y fuente) podemos hacerlo fácilmente:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Declaración de la clase</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Numero</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Prototipo de la función</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">getnum</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Definición de la función</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">Numero</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">getNum</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>En el siguiente ejemplo implementaremos una clase <code>Calculadora</code> separando la declaración y la definición, pero esta vez en el mismo fichero de cabeceras <code>calculadora.h</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#ifndef CALCULADORA_H</span>
+<span class="cp">#define CALCULADORA_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="c1">// Declaración</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Calculadora</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Calculadora</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">num1</span><span class="p">(</span><span class="n">n1</span><span class="p">),</span><span class="w"> </span><span class="n">num2</span><span class="p">(</span><span class="n">n2</span><span class="p">){};</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">operaciones</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">suma</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">resta</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">producto</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">division</span><span class="p">();</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Definición</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">Calculadora</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">operaciones</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Numeros: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; y &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; + &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">suma</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">resta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; * &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">producto</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; / &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">division</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">Calculadora</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">suma</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">Calculadora</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">resta</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">Calculadora</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">producto</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="n">Calculadora</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">division</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</code></pre></div>
+<p>Para utilizarlo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;calculadora.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Calculadora</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">intCalc</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Calculadora</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">floatCalc</span><span class="p">(</span><span class="mf">1.6</span><span class="p">,</span><span class="w"> </span><span class="mf">2.6</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Operaciones enteras&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">intCalc</span><span class="p">.</span><span class="n">operaciones</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"></span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Operaciones flotantes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">floatCalc</span><span class="p">.</span><span class="n">operaciones</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Operaciones enteras
+Numeros: 3 y 2
+3 + 2 = 5
+3 - 2 = 1
+3 * 2 = 6
+3 / 2 = 1
+
+Operaciones flotantes
+Numeros: 1.6 y 2.6
+1.6 + 2.6 = 4.2
+1.6 - 2.6 = -1
+1.6 * 2.6 = 4.16
+1.6 / 2.6 = 0.615385
+</code></pre></div>
+<h2 id="templates-de-clase-con-multiples-parametros">Templates de clase con múltiples parámetros<a class="headerlink" href="#templates-de-clase-con-multiples-parametros" title="Permanent link">&para;</a></h2>
+<p>En algunas ocasiones quizá necesitamos jugar con tipos distintos de parámetros, en esos casos definiremos diferentes <code>typename</code> donde estaría cada tipo distinto de dato. Incluso podemos establecer tipos de datos por defecto:</p>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">U</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ClassName</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">member1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">U</span><span class="w"> </span><span class="n">member2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">V</span><span class="w"> </span><span class="n">member3</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>En el siguiente ejemplo podemos ver cómo construir objetos con miembros de distintos tipos:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="c1">// Template de clase con parámetros múltiples y por defecto</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">U</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ClassTemplate</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">var1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">U</span><span class="w"> </span><span class="n">var2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">V</span><span class="w"> </span><span class="n">var3</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">ClassTemplate</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="n">v2</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="n">v3</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">var1</span><span class="p">(</span><span class="n">v1</span><span class="p">),</span><span class="w"> </span><span class="n">var2</span><span class="p">(</span><span class="n">v2</span><span class="p">),</span><span class="w"> </span><span class="n">var3</span><span class="p">(</span><span class="n">v3</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">print</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;var1 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;var2 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;var3 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">var3</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Objeto con int, double y char</span>
+<span class="w">    </span><span class="n">ClassTemplate</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obj1</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.5</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;H&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Valores obj1&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">obj1</span><span class="p">.</span><span class="n">print</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Objeto con float, char y bool</span>
+<span class="w">    </span><span class="n">ClassTemplate</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obj2</span><span class="p">(</span><span class="mf">6.3f</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;m&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Valores obj2&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">obj2</span><span class="p">.</span><span class="n">print</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Valores obj1
+var1 = 5
+var2 = 5.5
+var3 = H
+
+Valores obj2
+var1 = 6.3
+var2 = m
+var3 = false
+</code></pre></div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small></p>
                 
                   
                 
@@ -954,8 +1262,8 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
        
       <a
-        href="../../12-punteros-inteligentes/"
-        title="Punteros inteligentes"
+        href="../08-semanticas-movimiento/"
+        title="Semánticas de movimiento"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -964,7 +1272,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Punteros inteligentes
+            Semánticas de movimiento
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">

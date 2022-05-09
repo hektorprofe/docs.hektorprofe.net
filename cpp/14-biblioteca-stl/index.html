@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="iblioteca STL | Apuntes lenguaje C++">
       
       
         <link rel="canonical" href="https://docs.hektorprofe.net/cpp/14-biblioteca-stl/">
@@ -536,9 +536,28 @@ div.my-img{text-align:center;margin-top:20px}
             
 
 
-  <li class="md-nav__item">
-    <a href="../09-funciones/" title="Programación de funciones" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+    
+    <label class="md-nav__link" for="nav-6-10">
       Programación de funciones
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-10">
+        Programación de funciones
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-funciones/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+      Primeros pasos
     </a>
   </li>
 
@@ -549,8 +568,49 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../10-function-templates/" title="Function templates" class="md-nav__link">
-      Function templates
+    <a href="../09-funciones/02-sobrecarga-funciones/" title="Sobrecarga de funciones" class="md-nav__link">
+      Sobrecarga de funciones
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-funciones/03-funciones-lambda/" title="Funciones Lambda" class="md-nav__link">
+      Funciones Lambda
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-funciones/04-funciones-inline/" title="Funciones Inline" class="md-nav__link">
+      Funciones Inline
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../10-function-templates/" title="Function Templates" class="md-nav__link">
+      Function Templates
     </a>
   </li>
 
@@ -658,6 +718,18 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../11-clases/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
+      Semánticas de movimiento
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -701,9 +773,284 @@ div.my-img{text-align:center;margin-top:20px}
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Biblioteca STL
+      </label>
+    
     <a href="./" title="Biblioteca STL" class="md-nav__link md-nav__link--active" id="md__active_link">
       Biblioteca STL
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primeros-contenedores" title="Primeros contenedores" class="md-nav__link toc__link">
+    Primeros contenedores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdvector" title="std::vector" class="md-nav__link toc__link">
+    std::vector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdarray" title="std::array" class="md-nav__link toc__link">
+    std::array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteradores" title="Iteradores" class="md-nav__link toc__link">
+    Iteradores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdbegin-y-stdend" title="std::begin y std::end" class="md-nav__link toc__link">
+    std::begin y std::end
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-de-contenedores" title="Clasificación de contenedores" class="md-nav__link toc__link">
+    Clasificación de contenedores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores-secuenciales" title="Contenedores secuenciales" class="md-nav__link toc__link">
+    Contenedores secuenciales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stddeque-double-ended-queue" title="std::deque (double ended queue)" class="md-nav__link toc__link">
+    std::deque (double ended queue)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdforward_list" title="std::forward_list" class="md-nav__link toc__link">
+    std::forward_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdlist" title="std::list" class="md-nav__link toc__link">
+    std::list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdarray_1" title="std::array" class="md-nav__link toc__link">
+    std::array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores-asociativos" title="Contenedores asociativos" class="md-nav__link toc__link">
+    Contenedores asociativos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdpair" title="std::pair" class="md-nav__link toc__link">
+    std::pair
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdset" title="std::set" class="md-nav__link toc__link">
+    std::set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmap" title="std::map" class="md-nav__link toc__link">
+    std::map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmultiset-y-stdmultimap" title="std::multiset y std::multimap" class="md-nav__link toc__link">
+    std::multiset y std::multimap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdunordered_set-y-stdunordered_map" title="std::unordered_set y std::unordered_map" class="md-nav__link toc__link">
+    std::unordered_set y std::unordered_map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores-adaptadores" title="Contenedores adaptadores" class="md-nav__link toc__link">
+    Contenedores adaptadores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdstack" title="std::stack" class="md-nav__link toc__link">
+    std::stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdqueue" title="std::queue" class="md-nav__link toc__link">
+    std::queue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdpriority_queue" title="std::priority_queue" class="md-nav__link toc__link">
+    std::priority_queue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-de-algoritmos" title="Clasificación de algoritmos" class="md-nav__link toc__link">
+    Clasificación de algoritmos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-legado" title="Algoritmos de legado" class="md-nav__link toc__link">
+    Algoritmos de legado
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdall_of-stdany_of-y-stdnone_of" title="std::all_of, std::any_of y std::none_of" class="md-nav__link toc__link">
+    std::all_of, std::any_of y std::none_of
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdfor_each" title="std::for_each" class="md-nav__link toc__link">
+    std::for_each
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmax_element-y-stdmin_element" title="std::max_element y std::min_element" class="md-nav__link toc__link">
+    std::max_element y std::min_element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdfind-y-stdfind_if" title="std::find y std::find_if" class="md-nav__link toc__link">
+    std::find y std::find_if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdcopy-y-stdcopy_if" title="std::copy y std::copy_if" class="md-nav__link toc__link">
+    std::copy y std::copy_if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdsort" title="std::sort" class="md-nav__link toc__link">
+    std::sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdtransform" title="std::transform" class="md-nav__link toc__link">
+    std::transform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-rangos" title="Algoritmos de rangos" class="md-nav__link toc__link">
+    Algoritmos de rangos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -733,19 +1080,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/01-conversiones-overflow/" title="Conversiones y overflows" class="md-nav__link">
-      Conversiones y overflows
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/02-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
+    <a href="../30-miscelanea/01-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
       Operadores bit a bit
     </a>
   </li>
@@ -757,7 +1092,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/03-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
+    <a href="../30-miscelanea/02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
       Enumeradores y alias
     </a>
   </li>
@@ -769,7 +1104,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/04-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
+    <a href="../30-miscelanea/03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
       Números aleatorios
     </a>
   </li>
@@ -781,7 +1116,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/05-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
+    <a href="../30-miscelanea/04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
       Tiempo de ejecución
     </a>
   </li>
@@ -793,56 +1128,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../30-miscelanea/06-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
+    <a href="../30-miscelanea/05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
       Espacio de nombres
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/07-compilacion-vinculacion/" title="Compilación y vinculación" class="md-nav__link">
-      Compilación y vinculación
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
-      Semánticas de movimiento
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/09-funciones-entidades/" title="Funciones como entidades" class="md-nav__link">
-      Funciones como entidades
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../30-miscelanea/90-novedades-cpp20/" title="Novedades en C++20" class="md-nav__link">
-      Novedades en C++20
     </a>
   </li>
 
@@ -898,6 +1185,268 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primeros-contenedores" title="Primeros contenedores" class="md-nav__link toc__link">
+    Primeros contenedores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdvector" title="std::vector" class="md-nav__link toc__link">
+    std::vector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdarray" title="std::array" class="md-nav__link toc__link">
+    std::array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteradores" title="Iteradores" class="md-nav__link toc__link">
+    Iteradores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdbegin-y-stdend" title="std::begin y std::end" class="md-nav__link toc__link">
+    std::begin y std::end
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-de-contenedores" title="Clasificación de contenedores" class="md-nav__link toc__link">
+    Clasificación de contenedores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores-secuenciales" title="Contenedores secuenciales" class="md-nav__link toc__link">
+    Contenedores secuenciales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stddeque-double-ended-queue" title="std::deque (double ended queue)" class="md-nav__link toc__link">
+    std::deque (double ended queue)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdforward_list" title="std::forward_list" class="md-nav__link toc__link">
+    std::forward_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdlist" title="std::list" class="md-nav__link toc__link">
+    std::list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdarray_1" title="std::array" class="md-nav__link toc__link">
+    std::array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores-asociativos" title="Contenedores asociativos" class="md-nav__link toc__link">
+    Contenedores asociativos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdpair" title="std::pair" class="md-nav__link toc__link">
+    std::pair
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdset" title="std::set" class="md-nav__link toc__link">
+    std::set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmap" title="std::map" class="md-nav__link toc__link">
+    std::map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmultiset-y-stdmultimap" title="std::multiset y std::multimap" class="md-nav__link toc__link">
+    std::multiset y std::multimap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdunordered_set-y-stdunordered_map" title="std::unordered_set y std::unordered_map" class="md-nav__link toc__link">
+    std::unordered_set y std::unordered_map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores-adaptadores" title="Contenedores adaptadores" class="md-nav__link toc__link">
+    Contenedores adaptadores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdstack" title="std::stack" class="md-nav__link toc__link">
+    std::stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdqueue" title="std::queue" class="md-nav__link toc__link">
+    std::queue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdpriority_queue" title="std::priority_queue" class="md-nav__link toc__link">
+    std::priority_queue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion-de-algoritmos" title="Clasificación de algoritmos" class="md-nav__link toc__link">
+    Clasificación de algoritmos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-legado" title="Algoritmos de legado" class="md-nav__link toc__link">
+    Algoritmos de legado
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdall_of-stdany_of-y-stdnone_of" title="std::all_of, std::any_of y std::none_of" class="md-nav__link toc__link">
+    std::all_of, std::any_of y std::none_of
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdfor_each" title="std::for_each" class="md-nav__link toc__link">
+    std::for_each
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmax_element-y-stdmin_element" title="std::max_element y std::min_element" class="md-nav__link toc__link">
+    std::max_element y std::min_element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdfind-y-stdfind_if" title="std::find y std::find_if" class="md-nav__link toc__link">
+    std::find y std::find_if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdcopy-y-stdcopy_if" title="std::copy y std::copy_if" class="md-nav__link toc__link">
+    std::copy y std::copy_if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdsort" title="std::sort" class="md-nav__link toc__link">
+    std::sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdtransform" title="std::transform" class="md-nav__link toc__link">
+    std::transform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-rangos" title="Algoritmos de rangos" class="md-nav__link toc__link">
+    Algoritmos de rangos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -910,8 +1459,866 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="biblioteca-stl-en-c">Biblioteca STL en C++<a class="headerlink" href="#biblioteca-stl-en-c" title="Permanent link">&para;</a></h1>
+<p>La <strong>Standard Template Library</strong> contiene un conjunto de contenedores, algoritmos e iteradores ya implementados listos para utilizarlos. Por ejemplo:</p>
+<ul>
+<li><strong>Contenedores</strong>: vector, array, lista, deque, queue, stack.</li>
+<li><strong>Algoritmos</strong>: sorting, finding, copying, filling, generating, transforming.</li>
+<li><strong>Iteratores</strong>: input, output, forward, bidirectional, random access, contiguous.</li>
+</ul>
+<p>A continuación repasaremos algunas de las definiciones más comunes.</p>
+<h2 id="primeros-contenedores">Primeros contenedores<a class="headerlink" href="#primeros-contenedores" title="Permanent link">&para;</a></h2>
+<h3 id="stdvector">std::vector<a class="headerlink" href="#stdvector" title="Permanent link">&para;</a></h3>
+<p>Este contenedor permite almacenar datos de forma contigua en la memoria y provee distintas funciones parea manipular la información:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="c1">// Función para imprimir un vector por referencia</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">print_vec</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vec</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">{};</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="o">++</span><span class="n">i</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Función para imprimir un arreglo por puntero</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">print_raw_array</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data = &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(){</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Construcción de vectores</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec_str</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;The&quot;</span><span class="p">,</span><span class="s">&quot;sky&quot;</span><span class="p">,</span><span class="s">&quot;is&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="s">&quot;my&quot;</span><span class="p">,</span><span class="s">&quot;friend&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;vec1[1]  : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vec_str</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">vec_str</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;------&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Un vector vacío no tiene contenido</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints1 : &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints1</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints3</span><span class="p">{</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">44</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints2 : &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints3 : &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints3</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Vector de 22 items inicializados a 55</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints4</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints4 : &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints4</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// La inicialización uniforme no funcionará</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints5</span><span class="p">{</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints5 : &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints5</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Acceso a los elementos</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Accessing elements in a vector: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;vec_str[2] : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vec_str</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;vec_str.at(3) : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vec_str</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;vec_str.front() : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vec_str</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;vec_str.back() : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vec_str</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Uso del método data()</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;using raw array : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_raw_array</span><span class="p">(</span><span class="n">vec_str</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">vec_str</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Añadir y borrar items</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Adding and removing stuff : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints1 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Inserción de item al final</span>
+<span class="w">    </span><span class="n">ints1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ints1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ints1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ints1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints1 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Borrado de item al final</span>
+<span class="w">    </span><span class="n">ints1</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints1 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_vec</span><span class="p">(</span><span class="n">ints1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>int_array4 : 500 500 
+vec1[1]  : sky
+The sky is blue my friend 
+------
+ints1 : 
+ints2 : 1 2 3 4 
+ints3 : 11 22 33 44 
+ints4 : 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 
+ints5 : 20 55 
+
+Accessing elements in a vector: 
+vec_str[2] : is
+vec_str.at(3) : blue
+vec_str.front() : The
+vec_str.back() : friend
+using raw array :
+data = The sky is blue my friend
+
+Adding and removing stuff :
+ints1 :
+ints1 : 100 200 300 500
+ints1 : 100 200 300
+</code></pre></div>
+<h3 id="stdarray">std::array<a class="headerlink" href="#stdarray" title="Permanent link">&para;</a></h3>
+<p>Esta estructura permite almacenar datos en un contenedor de tamaño fijo. Algunas funciones son parecidas a las del tipo vector:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;experimental/array&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span><span class="cp"></span>
+
+<span class="c1">// El segundo argumento debe ser el tamaño</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="kt">size_t</span><span class="w"> </span><span class="n">Size</span><span class="o">&gt;</span><span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="n">print_array</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">Size</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">{};</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="o">++</span><span class="n">i</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">print_raw_array</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;data = &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(){</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Por defecto se inicializan con basura</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">int_array1</span><span class="p">;</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Contendrá 1,2,0</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">int_array2</span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="w"> </span><span class="p">};</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Contendrá 0 0 0</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">int_array3</span><span class="p">{};</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// El compilador deduce el tipo std::array&lt;int,2&gt;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="w"> </span><span class="n">int_array4</span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="w"> </span><span class="p">};</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Error de compilación si se inicializan demasiados ítems</span>
+<span class="w">    </span><span class="c1">// std::array&lt;int, 3&gt; int_array5{1,2,3,4,5}; </span>
+
+<span class="w">    </span><span class="c1">// Deducción automática mediante auto (experimental)</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">int_array6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">experimental</span><span class="o">::</span><span class="n">make_array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array1 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_array</span><span class="p">(</span><span class="n">int_array1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array2 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_array</span><span class="p">(</span><span class="n">int_array2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array3 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_array</span><span class="p">(</span><span class="n">int_array3</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array4 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_array</span><span class="p">(</span><span class="n">int_array4</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array6 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_array</span><span class="p">(</span><span class="n">int_array6</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Añadir y borrar ítems</span>
+<span class="w">    </span><span class="c1">// No se pueden añadir ítems, solo en la inicialización</span>
+<span class="w">    </span><span class="c1">// Se puede rellenar todo el array con el mismo ítem</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Filling the array : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">int_array1</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">321</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">int_array4</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array1 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_array</span><span class="p">(</span><span class="n">int_array1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array4 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_array</span><span class="p">(</span><span class="n">int_array4</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Acceso a los elementos</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Accessing elements in an array: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array2[0] : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">int_array2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array2.at(1) : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">int_array2</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array2.front() : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">int_array2</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;int_array2.back() : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">int_array2</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//Método data()</span>
+<span class="w">    </span><span class="n">print_raw_array</span><span class="p">(</span><span class="n">int_array2</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="n">int_array2</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>int_array1 : 32758 -1558290560 433 
+int_array2 : 1 2 0 
+int_array3 : 0 0 0 
+int_array4 : 1 2 
+int_array6 : 1 2 3 4 5 
+
+Filling the array : 
+int_array1 : 321 321 321 
+int_array4 : 500 500 
+
+Accessing elements in an array:
+int_array2[0] : 1
+int_array2.at(1) : 2
+int_array2.front() : 1
+int_array2.back() : 0
+data = 1 2 0
+</code></pre></div>
+<h2 id="iteradores">Iteradores<a class="headerlink" href="#iteradores" title="Permanent link">&para;</a></h2>
+<p>Un iterador es una forma de atravesar secuencialmente un contenedor de una forma unificada, independientemente de la estructura interna del contenedor. Cada contenedor en C++ normalmente define una estructura genérica para trabajar con iteradores.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span><span class="cp"></span>
+
+<span class="c1">// Función para imprimir una colección mediante iteradores</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">print_collection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">collection</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collection</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; [&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">collection</span><span class="p">.</span><span class="n">end</span><span class="p">()){</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="o">++</span><span class="n">it</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(){</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Creamos un par de contenedores</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints1</span><span class="p">{</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">44</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints2</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">400</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Iniciamos unos iteradores para los contenedores</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">it_begin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ints1</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">it_end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ints1</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Realizamos algunas comparaciones entre ellos</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;first elt : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it_begin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;it == end_it : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">it_begin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">it_end</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Vamos incrementando el iterador inicial</span>
+<span class="w">    </span><span class="o">++</span><span class="n">it_begin</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;second elt : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it_begin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;it == end_it : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">it_begin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">it_end</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="o">++</span><span class="n">it_begin</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;third elt : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it_begin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;it == end_it : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">it_begin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">it_end</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="o">++</span><span class="n">it_begin</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;fourth elt : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it_begin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;it == end_it : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">it_begin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">it_end</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Eventualmente el iterador inicial y final serán iguales</span>
+<span class="w">    </span><span class="o">++</span><span class="n">it_begin</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;junk elt : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it_begin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;it == end_it : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">it_begin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">it_end</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Impresión de los ítems mediante iteradores</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--------&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints1 : &quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_collection</span><span class="p">(</span><span class="n">ints1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ints2 :&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_collection</span><span class="p">(</span><span class="n">ints2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>first elt : 11
+it == end_it : false
+second elt : 22
+it == end_it : false
+third elt : 33
+it == end_it : false
+fourth elt : 44
+it == end_it : false
+junk elt : 0
+it == end_it : true
+--------
+ints1 :  [ 11 22 33 44]
+ints2 : [ 100 200 300 400]
+</code></pre></div>
+<p>Los iteradores dan bastante juego, ya que podemos utilizar un iterador invertido para recorrer los elementos desde el final hasta le principio:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Definimos un contenedor vector con 10 numeros</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Creamos un iterador invertido</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">reverse_iterator</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">rbegin</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Probamos a modificar el iterador inverso (último elemento)</span>
+<span class="w">    </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Recorremos todos los elementos hasta el último</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Numbers : [&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">rend</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="o">++</span><span class="n">it</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; ] &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--------&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w">    </span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Numbers : [ 34 9 8 7 6 5 4 3 2 1 ] 
+</code></pre></div>
+<p>Como vemos un iterador por defecto es mutable, podemos modificar los elementos. Podemos crear iteradores constantes:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="c1">// Función para imprimir un contenedor con iteradores</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">print_collection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">collection</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collection</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; [&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">collection</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="o">++</span><span class="n">it</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="p">{</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w"> </span><span class="mi">66</span><span class="p">,</span><span class="w"> </span><span class="mi">77</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Iterador no constante modidicable</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="o">++</span><span class="n">it</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;numbers : &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_collection</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;-------&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Iterador constante</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">const_iterator</span><span class="w"> </span><span class="n">c_it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">cbegin</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">c_it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">cbegin</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">c_it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">*</span><span class="n">c_it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error, iterador no modidicable</span>
+<span class="w">        </span><span class="o">++</span><span class="n">c_it</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Iterador constante invertido</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">crbegin</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">const_reverse_iterator</span><span class="w"> </span><span class="n">it1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">crbegin</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">crend</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">*</span><span class="n">it1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error, iterador no modidicable</span>
+<span class="w">        </span><span class="o">++</span><span class="n">it1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Para más información sobre los iteradores y sus categorías aquí está la documentación:</p>
+<ul>
+<li><a href="https://en.cppreference.com/w/cpp/iterator/iterator">https://en.cppreference.com/w/cpp/iterator/iterator</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/iterator/iterator_tags">https://en.cppreference.com/w/cpp/iterator/iterator_tags</a></li>
+</ul>
+<h3 id="stdbegin-y-stdend">std::begin y std::end<a class="headerlink" href="#stdbegin-y-stdend" title="Permanent link">&para;</a></h3>
+<p>Estas dos definiciones son template functions que retornan el iterador inicial y final respectivamente para un contenedor pasado como parámetro.</p>
+<p>Son funciones útiles cuando quieres que un iterador codificado funcione también con arrays de C clásicos. Los arrays de C soportan punteros y los punteros cumplen los requisitos para los iteradores de acceso aleatorio.</p>
+<p>El requisito para el argumento del template es que la colección pasado debe permitir estos iteradores de inicio y fin:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Begin y end en un contenedor de tipo vector</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vic</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Vector container: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vic</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">vic</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Begin y end en un arreglo de C</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">vi</span><span class="p">[]{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Array de C: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">begin</span><span class="p">(</span><span class="n">vi</span><span class="p">);</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">vi</span><span class="p">);</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Vector container: 1 2 3 4 5 6 7 8 9
+Array de C: 1 2 3 4 5 6 7 8 9
+</code></pre></div>
+<h2 id="clasificacion-de-contenedores">Clasificación de contenedores<a class="headerlink" href="#clasificacion-de-contenedores" title="Permanent link">&para;</a></h2>
+<p>Los contenedores nos permiten almacenar elementos de distintas formas.</p>
+<ul>
+<li><strong>Contenedores secuenciales</strong> donde los elementos se almacenan secuencialmente:<ul>
+<li><code>std::deque</code></li>
+<li><code>std::forward_list</code></li>
+<li><code>std::list</code></li>
+<li><code>std::vector</code> (muy rápido para búsquedas por índice <code>[]</code>)</li>
+<li><code>std::array</code></li>
+</ul>
+</li>
+<li><strong>Contenedores asociativos</strong> donde los elementos se almacenan por clave:<ul>
+<li><code>std::pair</code></li>
+<li><code>std::set</code> (muy rápido para buscar elementos)</li>
+<li><code>std::map</code></li>
+<li><code>std::multiset</code> y <code>std::multimap</code></li>
+</ul>
+</li>
+<li><strong>Contenedores adaptadores</strong> especializados en diferentes propósitos:<ul>
+<li><code>std::stack</code></li>
+<li><code>std::queue</code></li>
+<li><code>std::priority_queue</code></li>
+</ul>
+</li>
+</ul>
+<p>En la documentación se puede encontrar la lista completa de contenedores: <a href="https://en.cppreference.com/w/cpp/container">https://en.cppreference.com/w/cpp/container</a></p>
+<h2 id="contenedores-secuenciales">Contenedores secuenciales<a class="headerlink" href="#contenedores-secuenciales" title="Permanent link">&para;</a></h2>
+<h3 id="stddeque-double-ended-queue">std::deque (double ended queue)<a class="headerlink" href="#stddeque-double-ended-queue" title="Permanent link">&para;</a></h3>
+<p>Esta estructura, al igual que los vectores y listas, soporta el acceso de operadores aleatorios como <code>[]</code>. Sin embargo, los elementos no se almacenan de forma contigua en la memoria, sino que se organizan alrededor de las inserciones y borrados a ambos lados de la estructura:</p>
+<ul>
+<li>Son muy rápidas.</li>
+<li>No requieren copia de elementos ni movimientos.</li>
+<li>Nunca invalidan punteros ni referencias a otros elementos de la colección.</li>
+<li>En definitiva, si se necesitan inserciones y borrados a ambos lados de un contenedor (principio y fin), esta estructura es una buena elección.</li>
+</ul>
+<h3 id="stdforward_list">std::forward_list<a class="headerlink" href="#stdforward_list" title="Permanent link">&para;</a></h3>
+<p>Este contenedor se implementa como una única lista enlazada en la memoria:</p>
+<div class="highlight"><pre><span></span><code>item1 --&gt; item2 --&gt; item3 --&gt; item4 
+</code></pre></div>
+<p>Donde cada nodo apunta al siguiente elemento:</p>
+<ul>
+<li>Los elementos pueden almacenarse de forma no contigua en la memoria, esto hace que la localización en la memoria no sea muy buena y pone las cosas difíciles a la optimización de la CPU, por ejemplo para realizar inversiones.</li>
+<li>No provee acceso aleatorio a los elementos <code>[]</code>.</li>
+<li>Solo tiene iteradores hacia adelante (no invertidos), así que no se puede recorrer a la inversa.</li>
+</ul>
+<h3 id="stdlist">std::list<a class="headerlink" href="#stdlist" title="Permanent link">&para;</a></h3>
+<p>Este contenedor se implementa como una doble lista enlazada en la memoria.</p>
+<div class="highlight"><pre><span></span><code>item1 --&gt; item2 --&gt; item3 --&gt; item4 
+      &lt;--       &lt;--       &lt;--
+</code></pre></div>
+<p>Donde cada nodo apunta al elemento anterior y elemento siguiente:</p>
+<ul>
+<li>Los elementos pueden no almacenarse contiguamente en la memoria, por lo que la localización de memoria es bastante mala y como pasaba con la forward list, no es demasiado óptima para recorrerse de forma inversa.</li>
+<li>Tampoco provee operadores de acceso aleatorio como <code>[]</code>.</li>
+<li>Al tener dos punteros (anterior y siguiente elemento) provee iteradores adelante y hacia atrás.</li>
+</ul>
+<h3 id="stdarray_1">std::array<a class="headerlink" href="#stdarray_1" title="Permanent link">&para;</a></h3>
+<p>Este contenedor es de tamaño fijo y los elementos se almacenan de forma contigua en la memoria:</p>
+<ul>
+<li>El tamaño se especifica durante la creación del objeto como un parámetro de template.</li>
+<li>Es bueno para reforzar colecciones de tamaño fijo.</li>
+<li>Es bueno para reemplazar el uso de los arrays crudos dadas sus limitaciones, como la de no poder recorrerlos.</li>
+</ul>
+<h2 id="contenedores-asociativos">Contenedores asociativos<a class="headerlink" href="#contenedores-asociativos" title="Permanent link">&para;</a></h2>
+<h3 id="stdpair">std::pair<a class="headerlink" href="#stdpair" title="Permanent link">&para;</a></h3>
+<p>Este contenedor se utiliza para almacenar dos componentes de una única entidad y provee facilidades para manipularlos a través de su primer y segundo miembro. Es muy simple y se utiliza en conjunto con otros contenedores, por ejemplo un vector de pares.</p>
+<h3 id="stdset">std::set<a class="headerlink" href="#stdset" title="Permanent link">&para;</a></h3>
+<p>Este contenedor que ordena los elementos en su interior sin importar como se inserten:</p>
+<ul>
+<li>Impone una condición en os elementos que se pueden almacenar: deben proveer alguna forma de compararse a otros elementos.</li>
+<li>Internamente se utiliza el <code>operator&lt;</code> para ordenar los elementos, por lo que sus tipos deben implementar ese operador.</li>
+<li>Al ser elementos ordenados, encontrarlos en el conjunto es muy rápido, similar a como buscamos las palabras de un diccionario.</li>
+<li>Es posible personalizar como se ordenan los elementos implementando el operator&lt; en los tipos almacenados o especificando un callback que le explique como debe compararlos.</li>
+<li>El <code>callback</code> puede ser un puntero a una función, un funtor o una función lambda.</li>
+<li>Este tipo no permite la duplicidad de elementos, si se intenta añadir un elemento duplicado se ignorará.</li>
+<li>Para decidir si dos elementos son duplicados, este contenedor no utiliza el <code>operator==</code>, en su lugar se utiliza <code>operator&lt;</code>. Dos elementos <code>x</code> e <code>y</code> son equivalentes si <code>!(x &lt; y) &amp;&amp; !(y &lt; x)</code>.</li>
+</ul>
+<h3 id="stdmap">std::map<a class="headerlink" href="#stdmap" title="Permanent link">&para;</a></h3>
+<p>Este contenedor sirve para almacenar valores pares (clave-valor):</p>
+<ul>
+<li>Los elementos se almacenan en claves que van incrementando por defecto.</li>
+<li>No permite la duplicidad de claves, pero si de valores.</li>
+<li>Las búsquedas por clave son muy rápidas debido a que automáticamente ordena los elementos cuando los añades al contenedor.</li>
+<li><code>std::set</code> y <code>std:map</code> comparten la propiedad de no almacenar duplicados y que los elementos se ordenen automáticamente.</li>
+</ul>
+<h3 id="stdmultiset-y-stdmultimap">std::multiset y std::multimap<a class="headerlink" href="#stdmultiset-y-stdmultimap" title="Permanent link">&para;</a></h3>
+<p>Estos dos contenedores son variantes de <code>std::set</code> y <code>std::map</code> respectivamente cuyo propósito es poder almacenar duplicidades:</p>
+<ul>
+<li>Siguen siendo ordenados, por lo que el <code>operator&lt;</code> en las entidades almacenadas importa.</li>
+<li>El resto de métodos son similares a sus estructuras básicas.</li>
+</ul>
+<h3 id="stdunordered_set-y-stdunordered_map">std::unordered_set y std::unordered_map<a class="headerlink" href="#stdunordered_set-y-stdunordered_map" title="Permanent link">&para;</a></h3>
+<p>Tal como su nombre indica, son otras dos variantes de <code>std::set</code> y <code>std::map</code> que se especialización en no ordenar los elementos de ninguna forma útil como contenedores:</p>
+<ul>
+<li><em>sí mismo internamente utilizan lo que conoce como un **hash map*</em> para ordenar los elementos, lo que hace algunas operaciones mucho más rápidas que sus estructuras básicas.</li>
+<li>Es posible proveerlos de un hash map personalizado para controlar cómo ordenar los elementos.</li>
+<li>Independientemente de cual de los dos se utilice son contenedores extremadamente rápidos.</li>
+</ul>
+<h2 id="contenedores-adaptadores">Contenedores adaptadores<a class="headerlink" href="#contenedores-adaptadores" title="Permanent link">&para;</a></h2>
+<h3 id="stdstack">std::stack<a class="headerlink" href="#stdstack" title="Permanent link">&para;</a></h3>
+<p>La estructura stack (pila) no es propiamente un contenedor, es una interfaz construida sobre diferentes contenedores (<code>vector</code>, <code>list</code>, <code>deque</code>…) que permite una serie de operaciones determinadas:</p>
+<ul>
+<li>Un stack funcina como una estructura <strong>LIFO</strong> (Last In First Out).</li>
+<li>Para implementar la semántica LIFO, un stack requiere que el contenedor subyacente soporte los métodos <code>back()</code>, <code>push_back()</code> y <code>pop_back()</code>. De ahí que <code>std::vector</code>, <code>std::list</code> y <code>std::deque</code> sean candidatos.</li>
+<li>Podemos acceder a los elementos de la parte superior de la pila con <code>top()</code> y podemos sacarlos mediante <code>pop()</code>. Hay que tener en cuenta que <code>pop()</code> no devuelve el valor sino que remueve el elemento y deja al siguiente encima. Algo que puede suceder hasta que la pila se vacía.</li>
+<li>Disponen del método <code>size()</code> para consultar cuantos elementos hay en la colección.</li>
+</ul>
+<h3 id="stdqueue">std::queue<a class="headerlink" href="#stdqueue" title="Permanent link">&para;</a></h3>
+<p>La estructura queue (cola) es otra interfaz para contenedores que implementa la semántica <strong>FIFO</strong> (First In First Out), donde el primer elemento en entrar es el primer elemento en salir:</p>
+<ul>
+<li>Es una adaptación por encima de los contenedores secuenciales que soportan las siguientes métodos:<ul>
+<li><code>back()</code>: para recuperar el último elemento.</li>
+<li><code>front()</code>: para recuperar el primer elemento.</li>
+<li><code>push_back()</code>: para añadir elementos al final del contenedor.</li>
+<li><code>pop_front()</code>: para remover el primer elemento.</li>
+</ul>
+</li>
+<li>Los contenedores <code>std::deque</code> y <code>std::list</code> son candidatos para su uso. Por otro lado <code>std::vector</code> no es compatible al no implementar el método <code>pop_front()</code>.</li>
+</ul>
+<h3 id="stdpriority_queue">std::priority_queue<a class="headerlink" href="#stdpriority_queue" title="Permanent link">&para;</a></h3>
+<p>Esta interfaz de contenedor adaptador funciona como una cola, pero el primer elemento en salir es siempre el que tiene una mayor prioridad. La prioridad se decide mediante el método de comparación de los tipos almacenados, por defecto <code>std::less&lt;&gt;</code>.</p>
+<ul>
+<li>La adaptación del contenedor secuencial requiere que soporte los métodos:<ul>
+<li><code>front()</code>: para recuperar el primer elemento.</li>
+<li><code>push_back()</code>: para añadir elementos al final del contenedor.</li>
+<li><code>pop_front()</code>: para remover el primer elemento.</li>
+</ul>
+</li>
+<li>Los contenedores <code>std::deque</code> y <code>std::vector</code> son candidatos para su uso. Por otro lado <code>std::list</code> no es compatible al no implementar un iterador de acceso aleatorio.</li>
+<li>Algunos de los métodos más útiles implementados por la cola de prioridad son:<ul>
+<li><code>top()</code>: para recuperar el elemento con mayor prioridad (lectura).</li>
+<li><code>push()</code>: para añadir elementos.</li>
+<li><code>pop()</code>: para remover elementos (el de mayor prioridad).</li>
+</ul>
+</li>
+<li>Podemos controlar la forma de ordenación cambiando el método comparador por defecto <code>std::less&lt;&gt;</code> a través de la sobrecarga del operator&lt; en los tipos almacenados o especificando un comprador personalizado al crear la <code>std::priority_queue</code>.</li>
+</ul>
+<h2 id="clasificacion-de-algoritmos">Clasificación de algoritmos<a class="headerlink" href="#clasificacion-de-algoritmos" title="Permanent link">&para;</a></h2>
+<p>La biblioteca de algoritmos define funciones para una variedad de propósitos (por ejemplo, buscar, clasificar, contar, manipular) que operan en rangos de elementos. Un rango se define como [first, last), donde last se refiere al elemento después del último elemento a inspeccionar o modificar y está excluido del rango. Tenemos dos categorías:</p>
+<ul>
+<li><strong>Algoritmos de legado</strong>: para trabajar con pares de iteradores.</li>
+<li><strong>Algoritmos de rangos</strong>: para trabajar directamente con contenedores (C++20).</li>
+</ul>
+<p>La lista completa de algoritmos podemos encontrarla en la documentación: <a href="https://en.cppreference.com/w/cpp/algorithm">https://en.cppreference.com/w/cpp/algorithm</a></p>
+<h2 id="algoritmos-de-legado">Algoritmos de legado<a class="headerlink" href="#algoritmos-de-legado" title="Permanent link">&para;</a></h2>
+<h3 id="stdall_of-stdany_of-y-stdnone_of">std::all_of, std::any_of y std::none_of<a class="headerlink" href="#stdall_of-stdany_of-y-stdnone_of" title="Permanent link">&para;</a></h3>
+<p>Estos algoritmos comprueban si un predicado es true para todos, alguno o ninguno de de los elementos en un rango:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;numeric&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">partial_sum</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Among the numbers: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">all_of</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;All numbers are even</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">none_of</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">modulus</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span>
+<span class="w">                                                     </span><span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="o">::</span><span class="n">_1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;None of them are odd</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">DivisibleBy</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">DivisibleBy</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">d</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="p">()(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">any_of</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="n">DivisibleBy</span><span class="p">(</span><span class="mi">7</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;At least one number is divisible by 7</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Among the numbers: 2 4 6 8 10 12 14 16 18 20 
+All numbers are even
+None of them are odd
+At least one number is divisible by 7
+</code></pre></div>
+<h3 id="stdfor_each">std::for_each<a class="headerlink" href="#stdfor_each" title="Permanent link">&para;</a></h3>
+<p>Aplica una función a un rango de elementos:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">Suma</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">267</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">print</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;antes:&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">for_each</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="n">print</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">for_each</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">){</span><span class="w"> </span><span class="n">n</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// llama a Suma::operator() para cada miembro</span>
+<span class="w">    </span><span class="n">Suma</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">for_each</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">Suma</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;despues: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">for_each</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="n">print</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;suma: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">suma</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>antes: 3 4 2 8 15 267
+despues:  4 5 3 9 16 268
+suma: 305
+</code></pre></div>
+<h3 id="stdmax_element-y-stdmin_element">std::max_element y std::min_element<a class="headerlink" href="#stdmax_element-y-stdmin_element" title="Permanent link">&para;</a></h3>
+<p>Devuelven el elemento más grande y más pequeño de un rango:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">abs_compare</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">-14</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">result1</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">max_element</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;max element at: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">result1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">max_element</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">abs_compare</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;max element (absolute) at: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">result1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">min_element</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;min element at: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">result2</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>max element at: 5
+max element (absolute) at: 2
+min element at: 2
+</code></pre></div>
+<h3 id="stdfind-y-stdfind_if">std::find y std::find_if<a class="headerlink" href="#stdfind-y-stdfind_if" title="Permanent link">&para;</a></h3>
+<p>Encuentra el primer elemento que satisfaga los criterios específicos:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">resultado1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">begin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="w"> </span><span class="n">n1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">resultado2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">begin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resultado1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;v contiene: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;v no contiene: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resultado2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;v contiene: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;v no contiene: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// búsqueda con función lambda condicional</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">impar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">impar_n_posicion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">find_if</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">begin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="w"> </span><span class="n">impar</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">impar_n_posicion</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">end</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;v contiene por lo menos un impar: &quot;</span><span class="w"></span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">impar_n_posicion</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;v no contiene ningun impar&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>v contiene: 3
+v no contiene: 5
+v contiene por lo menos un impar: 1
+</code></pre></div>
+<h3 id="stdcopy-y-stdcopy_if">std::copy y std::copy_if<a class="headerlink" href="#stdcopy-y-stdcopy_if" title="Permanent link">&para;</a></h3>
+<p>Copia un rango de elementos a una nueva ubicación:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;numeric&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">from_vector</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">iota</span><span class="p">(</span><span class="n">from_vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">from_vector</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Nota: iota rellena el rango [first, last) con valores</span>
+<span class="w">    </span><span class="c1">// crecientes de forma secuencial, comenzando con value </span>
+<span class="w">    </span><span class="c1">// y repetitivamente evaluando ++value.</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">to_vector</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">from_vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">from_vector</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"></span>
+<span class="w">              </span><span class="n">std</span><span class="o">::</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">to_vector</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// o de manera alterna,</span>
+<span class="w">    </span><span class="c1">// std::vector&lt;int&gt; to_vector(from_vector.size());</span>
+<span class="w">    </span><span class="c1">// std::copy(from_vector.begin(), from_vector.end(), to_vector.begin());</span>
+<span class="w">    </span><span class="c1">// cualquier manera es equivalente a</span>
+<span class="w">    </span><span class="c1">// std::vector&lt;int&gt; to_vector = from_vector;</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;to_vector contiene: &quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">to_vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">to_vector</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"></span>
+<span class="w">              </span><span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;los nones en to_vector son: &quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">copy_if</span><span class="p">(</span><span class="n">to_vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">to_vector</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                 </span><span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">                 </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>to_vector contiene: 0 1 2 3 4 5 6 7 8 9 
+los nones en to_vector son: 1 3 5 7 9
+</code></pre></div>
+<h3 id="stdsort">std::sort<a class="headerlink" href="#stdsort" title="Permanent link">&para;</a></h3>
+<p>Ordena un intervalo en orden ascendente:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>0 1 2 3 4 5 6 7 8 9
+9 8 7 6 5 4 3 2 1 0
+</code></pre></div>
+<h3 id="stdtransform">std::transform<a class="headerlink" href="#stdtransform" title="Permanent link">&para;</a></h3>
+<p>Aplica una función a un rango de elementos:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cctype&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">(</span><span class="s">&quot;hola&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Primera transformación de minúsculas a minúsculas</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                   </span><span class="p">[](</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">toupper</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ordinals</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Segunda transformación de caracteres a números ordinales</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">ordinals</span><span class="p">),</span><span class="w"></span>
+<span class="w">                   </span><span class="p">[](</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;:&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">ord</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ordinals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ord</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Tercera transformación de adición (suma valor + valor)</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">ordinals</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">ordinals</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span><span class="w"> </span><span class="n">ordinals</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                   </span><span class="n">ordinals</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">plus</span><span class="o">&lt;&gt;</span><span class="p">{});</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">ord</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ordinals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ord</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>HOLA: 72 79 76 65
+144 158 152 130
+</code></pre></div>
+<h2 id="algoritmos-de-rangos">Algoritmos de rangos<a class="headerlink" href="#algoritmos-de-rangos" title="Permanent link">&para;</a></h2>
+<p>Estos son exclusivos de C++20, la lista completa se puede encontrar en <a href="https://es.cppreference.com/w/cpp/ranges">https://es.cppreference.com/w/cpp/ranges</a>.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small></p>
                 
                   
                 
@@ -952,8 +2359,8 @@ div.my-img{text-align:center;margin-top:20px}
       </a>
        
       <a
-        href="../30-miscelanea/01-conversiones-overflow/"
-        title="Conversiones y overflows"
+        href="../30-miscelanea/01-operadores-bit-a-bit/"
+        title="Operadores bit a bit"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -962,7 +2369,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Conversiones y overflows
+            Operadores bit a bit
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">

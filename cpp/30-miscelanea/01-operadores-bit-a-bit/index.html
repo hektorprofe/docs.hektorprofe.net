@@ -11,10 +11,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Funciones y clases amigas | Apuntes lenguaje C++">
+        <meta name="description" content="Operadores bit a bit | Apuntes lenguaje C++">
       
       
-        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/11-clases/02-funciones-clases-amigas/">
+        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/30-miscelanea/01-operadores-bit-a-bit/">
       
       
         <meta name="author" content="Héctor Costa Guzman">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Funciones y clases amigas | Apuntes lenguaje C++ | Hektor Profe</title>
+        <title>Operadores bit a bit | Apuntes lenguaje C++ | Hektor Profe</title>
       
     
     <link rel="stylesheet" href="../../../assets/stylesheets/application.2.css">
@@ -109,7 +109,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#funciones-y-clases-amigas-en-c" tabindex="1" class="md-skip">
+      <a href="#operadores-bit-a-bit-en-c" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -619,12 +619,10 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-12" type="checkbox" id="nav-6-12" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-12" type="checkbox" id="nav-6-12">
     
     <label class="md-nav__link" for="nav-6-12">
       Programación de clases
@@ -642,7 +640,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+    <a href="../../11-clases/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
       Primeros pasos
     </a>
   </li>
@@ -652,56 +650,11 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Funciones y clases amigas
-      </label>
-    
-    <a href="./" title="Funciones y clases amigas" class="md-nav__link md-nav__link--active" id="md__active_link">
+  <li class="md-nav__item">
+    <a href="../../11-clases/02-funciones-clases-amigas/" title="Funciones y clases amigas" class="md-nav__link">
       Funciones y clases amigas
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#funciones-amigas" title="Funciones amigas" class="md-nav__link toc__link">
-    Funciones amigas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clases-amigas" title="Clases amigas" class="md-nav__link toc__link">
-    Clases amigas
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -711,7 +664,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../03-miembros-estaticos/" title="Miembros estáticos" class="md-nav__link">
+    <a href="../../11-clases/03-miembros-estaticos/" title="Miembros estáticos" class="md-nav__link">
       Miembros estáticos
     </a>
   </li>
@@ -723,7 +676,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../04-sobrecarga-operadores/" title="Sobrecarga de operadores" class="md-nav__link">
+    <a href="../../11-clases/04-sobrecarga-operadores/" title="Sobrecarga de operadores" class="md-nav__link">
       Sobrecarga de operadores
     </a>
   </li>
@@ -735,7 +688,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../05-herencia-clases/" title="Herencia de clases" class="md-nav__link">
+    <a href="../../11-clases/05-herencia-clases/" title="Herencia de clases" class="md-nav__link">
       Herencia de clases
     </a>
   </li>
@@ -747,7 +700,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../06-polimorfismo-clases/" title="Polimorfismo de clases" class="md-nav__link">
+    <a href="../../11-clases/06-polimorfismo-clases/" title="Polimorfismo de clases" class="md-nav__link">
       Polimorfismo de clases
     </a>
   </li>
@@ -759,7 +712,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../07-class-templates/" title="Class templates" class="md-nav__link">
+    <a href="../../11-clases/07-class-templates/" title="Class templates" class="md-nav__link">
       Class templates
     </a>
   </li>
@@ -771,7 +724,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
+    <a href="../../11-clases/08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
       Semánticas de movimiento
     </a>
   </li>
@@ -822,10 +775,12 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-16" type="checkbox" id="nav-6-16">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-16" type="checkbox" id="nav-6-16" checked>
     
     <label class="md-nav__link" for="nav-6-16">
       Miscelánea
@@ -841,11 +796,63 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../30-miscelanea/01-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Operadores bit a bit
+      </label>
+    
+    <a href="./" title="Operadores bit a bit" class="md-nav__link md-nav__link--active" id="md__active_link">
       Operadores bit a bit
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cambio-de-bit" title="Cambio de bit" class="md-nav__link toc__link">
+    Cambio de bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-logicos" title="Operadores lógicos" class="md-nav__link toc__link">
+    Operadores lógicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mascaras" title="Máscaras" class="md-nav__link toc__link">
+    Máscaras
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -855,7 +862,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
+    <a href="../02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
       Enumeradores y alias
     </a>
   </li>
@@ -867,7 +874,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
+    <a href="../03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
       Números aleatorios
     </a>
   </li>
@@ -879,7 +886,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
+    <a href="../04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
       Tiempo de ejecución
     </a>
   </li>
@@ -891,7 +898,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../30-miscelanea/05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
+    <a href="../05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
       Espacio de nombres
     </a>
   </li>
@@ -952,15 +959,22 @@ div.my-img{text-align:center;margin-top:20px}
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#funciones-amigas" title="Funciones amigas" class="md-nav__link toc__link">
-    Funciones amigas
+  <a href="#cambio-de-bit" title="Cambio de bit" class="md-nav__link toc__link">
+    Cambio de bit
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clases-amigas" title="Clases amigas" class="md-nav__link toc__link">
-    Clases amigas
+  <a href="#operadores-logicos" title="Operadores lógicos" class="md-nav__link toc__link">
+    Operadores lógicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mascaras" title="Máscaras" class="md-nav__link toc__link">
+    Máscaras
   </a>
   
 </li>
@@ -982,150 +996,118 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <h1 id="funciones-y-clases-amigas-en-c">Funciones y clases amigas en C++<a class="headerlink" href="#funciones-y-clases-amigas-en-c" title="Permanent link">&para;</a></h1>
-<h2 id="funciones-amigas">Funciones amigas<a class="headerlink" href="#funciones-amigas" title="Permanent link">&para;</a></h2>
-<p>Una función amiga es una función externa de una clase que es capaz de acceder a los miembros privados de la misma. Para conseguirlo se declaran en la propia clase con la cláusula <code>friend</code>.</p>
-<p>Si una función no es amiga no podremos hacer lo siguiente:</p>
+                <h1 id="operadores-bit-a-bit-en-c">Operadores bit a bit en C++<a class="headerlink" href="#operadores-bit-a-bit-en-c" title="Permanent link">&para;</a></h1>
+<p>Las operaciones bit a bit permiten manejar la información a nivel de hardware.</p>
+<p>La biblioteca <code>&lt;bitset&gt;</code> nos ofrece un conjunto de funcionalidades para trabajar con bits, por ejemplo para hacer conversiones entre enteros y binarios:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">Punto</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="k">private</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">{},</span><span class="w"> </span><span class="n">y</span><span class="p">{};</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Punto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="c1">// Error al no tener acceso a los miembros</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;) &quot;</span><span class="w"></span>
-<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bitset&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w">    </span>
-<span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="n">p1</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">{</span><span class="mi">15</span><span class="p">};</span><span class="w"> </span><span class="c1">// 15 en binario es 1111</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bits</span><span class="p">(</span><span class="s">&quot;1111&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1111 en decimal es 15</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bits</span><span class="p">.</span><span class="n">to_ulong</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>Si la marcamos como amiga tendremos acceso a sus miembros:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">Punto</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="k">private</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">{},</span><span class="w"> </span><span class="n">y</span><span class="p">{};</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Punto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">print</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="p">);</span><span class="w"> </span><span class="c1">// ¡Soy amiga!</span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="c1">// Ahora funcionará porque somos amigos de la clase</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;) &quot;</span><span class="w"></span>
-<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w">    </span>
-<span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="n">p1</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span><span class="w">  </span><span class="c1">// (5, 4) [0x8d725ff700]</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<h2 id="cambio-de-bit">Cambio de bit<a class="headerlink" href="#cambio-de-bit" title="Permanent link">&para;</a></h2>
+<p>Una de las operaciones binarias básicas es el cambio de bit, el cuál implica un corrimiento de bits ya sea a la izquierda o a la derecha.</p>
+<p>Por ejemplo, tomando el binario 01111 (15) un <strong>corrimiento a la izquierda</strong> implicaría daría como resultado el número 11110 (30). Este corrimiento se realiza con el operador binario <code>&lt;&lt;</code>, que en asignación quedaría <code>&lt;&lt;=</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">bits</span><span class="w"> </span><span class="o">&lt;&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Corrimiento 1 bit izquierda, 01111 (15) -&gt; 11110 (30)</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bits</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bits</span><span class="p">.</span><span class="n">to_ulong</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-<p>Consideraciones acerca de las funciones amigas:</p>
+<p>Así mismo el <strong>corrimiento a la derecha</strong> sería <code>&gt;&gt;</code>, en asignación <code>&gt;&gt;=</code>. Partiendo por ejemplo de 11110 (30), correr a la derecha 1 bit daría como resultado 01111 (15):</p>
+<div class="highlight"><pre><span></span><code><span class="n">bits</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Corrimiento 1 bit derecha, 11110 (30) -&gt; 01111 (15)</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bits</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bits</span><span class="p">.</span><span class="n">to_ulong</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>El cambio de bit implica se resume en estas tres reglas:</p>
 <ul>
-<li>Debe declararse primero en la clase y no importa donde esté definida mientras lo esté.</li>
-<li>La clase determinará quién es amigo a través de la declaración.</li>
-<li>No importa si se declara en la parte pública o privada.</li>
-<li>Pueden tenerse múltiples funciones amigas y <strong>sobrecargarlas</strong> si es necesario.</li>
-<li>Las funciones amigas no son funciones miembro.</li>
-<li>Las funciones amigas no tienen acceso al puntero <code>this</code>.</li>
+<li>Hacia la izquierda multiplica el número por <code>2^n</code>.</li>
+<li>Hacia la derecha divide el número entre <code>2^n</code>.</li>
+<li>Esto no se cumplirá si se pierde un 1 a la izquierda o derecha.</li>
 </ul>
-<h2 id="clases-amigas">Clases amigas<a class="headerlink" href="#clases-amigas" title="Permanent link">&para;</a></h2>
-<p>De forma similar al funcionamiento de las funciones amigas, una clase no tiene por defecto acceso a los miembros de otra.</p>
-<p>Supongamos el siguiente ejemplo donde tenemos una clase <code>Perro</code> y una clase <code>Gato</code>, donde la clase <code>Gato</code> tiene un puntero a un objeto de tipo <code>Perro</code> llamado <code>*amigoPerruno</code>. Si bien podemos establecer el puntero mediante el método del gato <code>setAmigoPerruno()</code>, cuando queramos comprobar los miembros del perro no podremos hacerlo porque las clases <code>Perro</code> y <code>Gato</code> no son amigas por defecto:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<p>Ambos operadores también pueden utilizarse con números enteros:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2^1 = 2 -&gt; 100*2 = 200</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2^1 = 2 -&gt; 100/2 = 50</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Perro</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Perro</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">nombre</span><span class="p">(</span><span class="n">nombre</span><span class="p">),</span><span class="w"> </span><span class="n">edad</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2^2 = 4 -&gt; 100*3 = 300</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2^2 = 4 -&gt; 100/3 = 33</span>
 
-<span class="k">private</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">Gato</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">Gato</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">nombre</span><span class="p">(</span><span class="n">nombre</span><span class="p">),</span><span class="w"> </span><span class="n">edad</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">setAmigoPerruno</span><span class="p">(</span><span class="n">Perro</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">amigoPerruno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">amigo</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">amigoPerruno</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="c1">// No podemos acceder a los miembros del perro</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">nombre</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; es amigo de &quot;</span><span class="w"></span>
-<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">amigoPerruno</span><span class="o">-&gt;</span><span class="n">nombre</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="k">else</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">nombre</span><span class="w"> </span>
-<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; no tiene amigos&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="k">private</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">Perro</span><span class="w"> </span><span class="o">*</span><span class="n">amigoPerruno</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2^3 = 8 -&gt; 100*8 = 800</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2^3 = 8 -&gt; 100/8 = 12.5 (12)</span>
 </code></pre></div>
-<p>Si establecemos que <code>Gato</code> es amigo de <code>Perro</code> en la declaración de la clase:</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Perro</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Establecemos que Gato es una clase amigui</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Gato</span><span class="p">;</span><span class="w"></span>
+<h2 id="operadores-logicos">Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Permanent link">&para;</a></h2>
+<p>Otra forma de operar los bits es mediante los operadores lógicos bit a bit <code>&amp;</code> (AND), <code>|</code> (OR), <code>~</code>(NOT) y <code>^</code> (XOR), con sus variantes en asignación <code>&amp;=</code>, <code>|=</code> y <code>^=</code>.</p>
+<p>El resultado de las operaciones lógicas entre dos bits se ilustra en la siguiente tabla:</p>
+<p><img alt="" src="/cdn/cpp/image-63.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">16</span><span class="o">&gt;</span><span class="w"> </span><span class="n">b1</span><span class="p">(</span><span class="s">&quot;10101010&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 170</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">16</span><span class="o">&gt;</span><span class="w"> </span><span class="n">b2</span><span class="p">(</span><span class="s">&quot;01010101&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 85</span>
 
-<span class="w">    </span><span class="n">Perro</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">nombre</span><span class="p">(</span><span class="n">nombre</span><span class="p">),</span><span class="w"> </span><span class="n">edad</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-
-<span class="k">private</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b2</span><span class="p">).</span><span class="n">to_ulong</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 255</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b2</span><span class="p">).</span><span class="n">to_ulong</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0 </span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b2</span><span class="p">).</span><span class="n">to_ulong</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 255</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">b1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">b1</span><span class="p">).</span><span class="n">to_ulong</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 65365</span>
 </code></pre></div>
-<p>Entonces podremos hacer algo como esto:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Perro</span><span class="w"> </span><span class="n">perro</span><span class="p">(</span><span class="s">&quot;Ronnie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">Gato</span><span class="w"> </span><span class="n">gato</span><span class="p">(</span><span class="s">&quot;Sky&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">gato</span><span class="p">.</span><span class="n">setAmigoPerruno</span><span class="p">(</span><span class="o">&amp;</span><span class="n">perro</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">gato</span><span class="p">.</span><span class="n">amigos</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">Gato</span><span class="w"> </span><span class="n">gatoSolitario</span><span class="p">(</span><span class="s">&quot;Nick&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">gatoSolitario</span><span class="p">.</span><span class="n">amigos</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<p><img alt="" src="/cdn/cpp/image-64.png" /></p>
+<h2 id="mascaras">Máscaras<a class="headerlink" href="#mascaras" title="Permanent link">&para;</a></h2>
+<p>Una utilidad de los operadores bit a bit es para trabajar mediante máscaras. Una máscara es una secuencia de bits, por ejemplo un byte (8 bits), la cuál podemos aplicar a otro byte para realizar en él distintas operaciones:</p>
+<ul>
+<li>Establecer posiciones de bit.</li>
+<li>Reiniciar posiciones de bit.</li>
+<li>Comprobar posiciones de bit.</li>
+<li>Alternar posiciones de bit.</li>
+</ul>
+<p>Empecemos definiendo unas cuantas máscaras para realizar algunas operaciones:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_1</span><span class="p">(</span><span class="s">&quot;00000001&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_2</span><span class="p">(</span><span class="s">&quot;00000010&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_3</span><span class="p">(</span><span class="s">&quot;00000100&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 4</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_4</span><span class="p">(</span><span class="s">&quot;00001000&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 8</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_5</span><span class="p">(</span><span class="s">&quot;00010000&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 16</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_6</span><span class="p">(</span><span class="s">&quot;00100000&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 32</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_7</span><span class="p">(</span><span class="s">&quot;01000000&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 64</span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask_bit_8</span><span class="p">(</span><span class="s">&quot;10000000&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 128</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>Sky es amigo de Ronnie
-Nick no tiene amigos
+<p>Supongamos que empezamos con un byte con todos los bits apagados (en 0):</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;00000000&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0</span>
 </code></pre></div>
+<p>Si queremos <strong>establecer</strong> bits (1) podemos aplicar máscaras con: <code>|= mascara</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">byte</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">mask_bit_1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">mask_bit_3</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">mask_bit_6</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 00100101 (37)</span>
+</code></pre></div>
+<p>Si queremos <strong>reiniciar</strong> bits (0) podemos aplicar máscaras con: <code>&amp;= (~mascara)</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">byte</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="n">mask_bit_1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">mask_bit_3</span><span class="p">);</span><span class="w"> </span><span class="c1">//~mask_bit_1 &amp; ~mask_bit_3</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 00100000 (32)</span>
+</code></pre></div>
+<p>Para <strong>comprobar</strong> el si un se encuentra activado (1) o desactivado (0) podemos aplicar la máscara: <code>(&amp; mascara) &gt;&gt; posicion</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bit 1: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">((</span><span class="n">byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">mask_bit_1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 00000000</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bit 6: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">((</span><span class="n">byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">mask_bit_6</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 00000001</span>
+</code></pre></div>
+<p>Esto es un poco incómodo así que podemos hacer una igualidad a 1 y activar la visualización de binario a booleano:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bit 1: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(((</span><span class="n">byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">mask_bit_1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;bit 6: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(((</span><span class="n">byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">mask_bit_6</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Por último podemos <strong>alternar</strong> los bits (0 a 1 y 1 a 0) mediante el operador <strong>xor</strong>: <code>^mascara</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">byte</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="p">(</span><span class="n">mask_bit_1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">mask_bit_2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">mask_bit_3</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">mask_bit_6</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">noboolalpha</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="c1">// 00000111 (7)</span>
+</code></pre></div>
+<p>Un ejemplo práctico del uso de las máscaras es para trabajar con colores hexadecimales.</p>
+<p>Todos los colores hexadecimales pueden generarse a partir de la suma de los tres colores básicos en el patrón RGB rojo <code>0xFF0000</code>, verde <code>0x00FF00</code> y azul <code>0x0000FF</code>.</p>
+<p>Si definimos estos tres valores como máscaras podemos saber la conversión de hexadecimal a entero para cualquier color RGB:</p>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">red_mask</span><span class="p">{</span><span class="mh">0xFF0000</span><span class="p">};</span><span class="w"> </span><span class="c1">// primer byte</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green_mask</span><span class="p">{</span><span class="mh">0x00FF00</span><span class="p">};</span><span class="w"> </span><span class="c1">// segundo byte</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">blue_mask</span><span class="p">{</span><span class="mh">0x0000FF</span><span class="p">};</span><span class="w"> </span><span class="c1">// tercer byte</span>
+</code></pre></div>
+<p>Para ello deberemos aplicar las máscaras al principio de cada byte de un color RGB (0, 8, 16):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">color</span><span class="p">{</span><span class="mh">0xFF12EF</span><span class="p">};</span><span class="w"> </span><span class="c1">// color RGBA cualquiera</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Rojo: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">((</span><span class="n">color</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">red_mask</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">   </span><span class="c1">// 255</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Verde: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">((</span><span class="n">color</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">green_mask</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 18</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Azul: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">((</span><span class="n">color</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">blue_mask</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">   </span><span class="c1">// 239</span>
+</code></pre></div>
+<p>Como curiosidad el color RGB <strong>(255, 18, 239)</strong> o <strong>#FF12EF</strong> es este:</p>
+<p><img alt="" src="/cdn/cpp/image-65.png" /></p>
 <hr />
 <p><small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small></p>
                 
@@ -1149,8 +1131,8 @@ Nick no tiene amigos
     <nav class="md-footer-nav__inner md-grid">
       
       <a
-        href="../01-primeros-pasos/"
-        title="Primeros pasos"
+        href="../../14-biblioteca-stl/"
+        title="Biblioteca STL"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -1162,14 +1144,14 @@ Nick no tiene amigos
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Primeros pasos
+            Biblioteca STL
           </span>
         </div>
       </a>
        
       <a
-        href="../03-miembros-estaticos/"
-        title="Miembros estáticos"
+        href="../02-enumeradores-alias/"
+        title="Enumeradores y alias"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -1178,7 +1160,7 @@ Nick no tiene amigos
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Miembros estáticos
+            Enumeradores y alias
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">

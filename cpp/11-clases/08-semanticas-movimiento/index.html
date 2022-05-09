@@ -11,10 +11,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+        <meta name="description" content="Semánticas de movimiento | Apuntes lenguaje C++">
       
       
-        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/30-miscelanea/09-funciones-entidades/">
+        <link rel="canonical" href="https://docs.hektorprofe.net/cpp/11-clases/08-semanticas-movimiento/">
       
       
         <meta name="author" content="Héctor Costa Guzman">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Funciones como entidades | Apuntes lenguaje C++ | Hektor Profe</title>
+        <title>Semánticas de movimiento | Apuntes lenguaje C++ | Hektor Profe</title>
       
     
     <link rel="stylesheet" href="../../../assets/stylesheets/application.2.css">
@@ -109,7 +109,7 @@ div.my-img{text-align:center;margin-top:20px}
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#funciones-como-entidades-en-c" tabindex="1" class="md-skip">
+      <a href="#semanticas-de-movimiento-en-c" tabindex="1" class="md-skip">
         Saltar a contenido
       </a>
     
@@ -536,33 +536,95 @@ div.my-img{text-align:center;margin-top:20px}
             
 
 
-  <li class="md-nav__item">
-    <a href="../../09-funciones/" title="Programación de funciones" class="md-nav__link">
-      Programación de funciones
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../../10-function-templates/" title="Function templates" class="md-nav__link">
-      Function templates
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-12" type="checkbox" id="nav-6-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+    
+    <label class="md-nav__link" for="nav-6-10">
+      Programación de funciones
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-10">
+        Programación de funciones
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+      Primeros pasos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/02-sobrecarga-funciones/" title="Sobrecarga de funciones" class="md-nav__link">
+      Sobrecarga de funciones
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/03-funciones-lambda/" title="Funciones Lambda" class="md-nav__link">
+      Funciones Lambda
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../09-funciones/04-funciones-inline/" title="Funciones Inline" class="md-nav__link">
+      Funciones Inline
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../10-function-templates/" title="Function Templates" class="md-nav__link">
+      Function Templates
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-12" type="checkbox" id="nav-6-12" checked>
     
     <label class="md-nav__link" for="nav-6-12">
       Programación de clases
@@ -580,7 +642,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../11-clases/01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
+    <a href="../01-primeros-pasos/" title="Primeros pasos" class="md-nav__link">
       Primeros pasos
     </a>
   </li>
@@ -592,7 +654,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../11-clases/02-funciones-clases-amigas/" title="Funciones y clases amigas" class="md-nav__link">
+    <a href="../02-funciones-clases-amigas/" title="Funciones y clases amigas" class="md-nav__link">
       Funciones y clases amigas
     </a>
   </li>
@@ -604,7 +666,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../11-clases/03-miembros-estaticos/" title="Miembros estáticos" class="md-nav__link">
+    <a href="../03-miembros-estaticos/" title="Miembros estáticos" class="md-nav__link">
       Miembros estáticos
     </a>
   </li>
@@ -616,7 +678,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../11-clases/04-sobrecarga-operadores/" title="Sobrecarga de operadores" class="md-nav__link">
+    <a href="../04-sobrecarga-operadores/" title="Sobrecarga de operadores" class="md-nav__link">
       Sobrecarga de operadores
     </a>
   </li>
@@ -628,7 +690,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../11-clases/05-herencia-clases/" title="Herencia de clases" class="md-nav__link">
+    <a href="../05-herencia-clases/" title="Herencia de clases" class="md-nav__link">
       Herencia de clases
     </a>
   </li>
@@ -640,7 +702,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../11-clases/06-polimorfismo-clases/" title="Polimorfismo de clases" class="md-nav__link">
+    <a href="../06-polimorfismo-clases/" title="Polimorfismo de clases" class="md-nav__link">
       Polimorfismo de clases
     </a>
   </li>
@@ -652,9 +714,94 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../../11-clases/07-class-templates/" title="Class templates" class="md-nav__link">
+    <a href="../07-class-templates/" title="Class templates" class="md-nav__link">
       Class templates
     </a>
+  </li>
+
+        
+            
+            
+            
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Semánticas de movimiento
+      </label>
+    
+    <a href="./" title="Semánticas de movimiento" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Semánticas de movimiento
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#semanticas-de-movimiento" title="Semánticas de movimiento" class="md-nav__link toc__link">
+    Semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lvalues-y-rvalues" title="Lvalues y rvalues" class="md-nav__link toc__link">
+    Lvalues y rvalues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia-rvalue-en-las-semanticas-de-movimiento" title="Referencia rvalue en las semánticas de movimiento" class="md-nav__link toc__link">
+    Referencia rvalue en las semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-utilizar-semanticas-de-movimiento" title="Cuando utilizar semánticas de movimiento" class="md-nav__link toc__link">
+    Cuando utilizar semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-no-utilizar-semanticas-de-movimiento" title="Cuando no utilizar semánticas de movimiento" class="md-nav__link toc__link">
+    Cuando no utilizar semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-conclusion" title="En conclusión" class="md-nav__link toc__link">
+    En conclusión
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -703,12 +850,10 @@ div.my-img{text-align:center;margin-top:20px}
             
             
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-16" type="checkbox" id="nav-6-16" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-16" type="checkbox" id="nav-6-16">
     
     <label class="md-nav__link" for="nav-6-16">
       Miscelánea
@@ -726,19 +871,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../01-conversiones-overflow/" title="Conversiones y overflows" class="md-nav__link">
-      Conversiones y overflows
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../02-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
+    <a href="../../30-miscelanea/01-operadores-bit-a-bit/" title="Operadores bit a bit" class="md-nav__link">
       Operadores bit a bit
     </a>
   </li>
@@ -750,7 +883,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../03-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
+    <a href="../../30-miscelanea/02-enumeradores-alias/" title="Enumeradores y alias" class="md-nav__link">
       Enumeradores y alias
     </a>
   </li>
@@ -762,7 +895,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../04-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
+    <a href="../../30-miscelanea/03-numeros-aleatorios/" title="Números aleatorios" class="md-nav__link">
       Números aleatorios
     </a>
   </li>
@@ -774,7 +907,7 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../05-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
+    <a href="../../30-miscelanea/04-tiempo-ejecucion/" title="Tiempo de ejecución" class="md-nav__link">
       Tiempo de ejecución
     </a>
   </li>
@@ -786,65 +919,8 @@ div.my-img{text-align:center;margin-top:20px}
 
 
   <li class="md-nav__item">
-    <a href="../06-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
+    <a href="../../30-miscelanea/05-espacio-nombres/" title="Espacio de nombres" class="md-nav__link">
       Espacio de nombres
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../07-compilacion-vinculacion/" title="Compilación y vinculación" class="md-nav__link">
-      Compilación y vinculación
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../08-semanticas-movimiento/" title="Semánticas de movimiento" class="md-nav__link">
-      Semánticas de movimiento
-    </a>
-  </li>
-
-        
-            
-            
-            
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Funciones como entidades" class="md-nav__link md-nav__link--active" id="md__active_link">
-      Funciones como entidades
-    </a>
-    
-  </li>
-
-        
-            
-            
-            
-
-
-  <li class="md-nav__item">
-    <a href="../90-novedades-cpp20/" title="Novedades en C++20" class="md-nav__link">
-      Novedades en C++20
     </a>
   </li>
 
@@ -900,6 +976,57 @@ div.my-img{text-align:center;margin-top:20px}
     
   
   
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#semanticas-de-movimiento" title="Semánticas de movimiento" class="md-nav__link toc__link">
+    Semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lvalues-y-rvalues" title="Lvalues y rvalues" class="md-nav__link toc__link">
+    Lvalues y rvalues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia-rvalue-en-las-semanticas-de-movimiento" title="Referencia rvalue en las semánticas de movimiento" class="md-nav__link toc__link">
+    Referencia rvalue en las semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-utilizar-semanticas-de-movimiento" title="Cuando utilizar semánticas de movimiento" class="md-nav__link toc__link">
+    Cuando utilizar semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-no-utilizar-semanticas-de-movimiento" title="Cuando no utilizar semánticas de movimiento" class="md-nav__link toc__link">
+    Cuando no utilizar semánticas de movimiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-conclusion" title="En conclusión" class="md-nav__link toc__link">
+    En conclusión
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -911,9 +1038,117 @@ div.my-img{text-align:center;margin-top:20px}
               
                 
                 
-                <h1 id="funciones-como-entidades-en-c">Funciones como entidades en C++<a class="headerlink" href="#funciones-como-entidades-en-c" title="Permanent link">&para;</a></h1>
+                <h1 id="semanticas-de-movimiento-en-c">Semánticas de movimiento en C++<a class="headerlink" href="#semanticas-de-movimiento-en-c" title="Permanent link">&para;</a></h1>
+<p>A pesar de que C++ moderno puede desarrollar aplicaciones muy rápidas y eficientes, durante muchos años, una de sus debilidades fue la creación de objetos temporales. </p>
+<p>El estándar C++98 definió algunas técnicas de optimización del compilador, como <strong>Copy Elision</strong> y <strong>Return Value Optimization</strong>, que resolvieron parcialmente este problema, pero el verdadero cambio fue la semántica de movimiento introducida en C++11.</p>
+<h2 id="semanticas-de-movimiento">Semánticas de movimiento<a class="headerlink" href="#semanticas-de-movimiento" title="Permanent link">&para;</a></h2>
+<p>Para entender las semánticas de movimiento primero echemos un vistazo a la semántica de copia. En general todas las clases de C++ pueden copiarse mediante uno de estos tres métodos:</p>
+<p><strong>Copia de constructor</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">T</span><span class="w"> </span><span class="n">t1</span><span class="p">;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="nf">t2</span><span class="p">(</span><span class="n">t1</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Copia con operador de asignación</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">T</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span><span class="p">;</span><span class="w"></span>
+<span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t1</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Movimiento de constructor (C++11)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">T</span><span class="w"> </span><span class="n">t1</span><span class="p">;</span><span class="w"></span>
+<span class="n">T</span><span class="w"> </span><span class="nf">t2</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">t1</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Movimiento con operador de asignación (C++11)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">T</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span><span class="p">;</span><span class="w"></span>
+<span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">t1</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>En general las semánticas nos permiten tomar un objeto del contexto actual y pasarlo a otro, evitando la copia del original cuando éste no sigue siendo necesario. Si queremos mover objetos, necesitamos utilizar la función <code>std::move</code>.</p>
+<p>Cabe mencionar dos cuestiones relacionadas con los anteriores ejemplos:</p>
+<ul>
+<li>¿Qué ocurre con la variable <code>t1</code> después del movimiento? De acuerdo con el funcionamiento estándar de una variable en C++, después de moverla será válida pero no tendrá un estado específico. Eso significa que solo puede ejecutar operaciones que no necesiten precondiciones (como asignarle un <code>new object</code>).</li>
+<li>¿Cómo funciona <code>std::move</code>? Pues la verdad es que esta función no mueve nada. Para saber qué sucede realmente debemos aprender qué son los <code>l</code> (left) y <code>r</code> (right) <code>values</code>.</li>
+</ul>
+<h2 id="lvalues-y-rvalues">Lvalues y rvalues<a class="headerlink" href="#lvalues-y-rvalues" title="Permanent link">&para;</a></h2>
+<p>En C++, a diferencia de C, una variable puede declararse como una referencia. Antes de C++11 una referencia podía apuntar únicamente a un <code>lvalue</code> (algo cuya dirección se puede tomar).</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">counterRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">counter</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Desde C++11 la referencia puede apuntar al <code>lvalue</code> o al <code>rvalue</code>. La referencia <code>rvalue</code> es básicamente una referencia a un objeto temporal (el lado derecho de una expresión de asignación):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">counterRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="referencia-rvalue-en-las-semanticas-de-movimiento">Referencia rvalue en las semánticas de movimiento<a class="headerlink" href="#referencia-rvalue-en-las-semanticas-de-movimiento" title="Permanent link">&para;</a></h2>
+<p>Como he mencionado anteriormente, hay 4 formas de copiar/mover. Sus declaraciones son las siguientes:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Class</span><span class="w"> </span><span class="n">Punto</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//Copia de constructor</span>
+<span class="w">    </span><span class="n">Punto</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">punto</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Copia con operador de asignación</span>
+<span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">punto</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Movimiento de constructor </span>
+<span class="w">    </span><span class="n">Punto</span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">punto</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Movimiento con operador de asignación</span>
+<span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">punto</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Como podemos observar, las operaciones de copia toman la referencia <code>lvalue</code> mientras que las operaciones de movimiento toman la referencia <code>rvalue</code>, por lo que el objeto se copia o se mueve dependiendo del tipo de referencia. Esto es precisamente lo que hace <code>std::move</code>, convertir la referencia <code>lvalue</code> en la referencia <code>rvalue</code>.</p>
+<h2 id="cuando-utilizar-semanticas-de-movimiento">Cuando utilizar semánticas de movimiento<a class="headerlink" href="#cuando-utilizar-semanticas-de-movimiento" title="Permanent link">&para;</a></h2>
+<p>Cuando un método toma un <code>rvalue</code> como parámetro, podemos pasar la referencia <code>rvalue</code> (la referencia temporal del objeto) y también el objeto temporal en sí: <code>100</code>, <code>temp</code>, <code>Punto()</code>.</p>
+<p>Es una buena práctica crear sobrecargas de los métodos tomando <code>lvalues</code> y <code>rvalues</code>, como por ejemplo implementan algunos de los contenedores STL en el método <code>push_back()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">push_back</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">obj</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">push_back</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">obj</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Nos permite crear copias (si el objeto todavía se necesita en ese contexto) o moverlo (si ya no se necesita):</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Punto</span><span class="o">&gt;</span><span class="w"> </span><span class="n">puntos</span><span class="p">;</span><span class="w"></span>
+<span class="n">Punto</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">puntos</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">punto1</span><span class="p">);</span><span class="w">            </span><span class="c1">// lvalue</span>
+<span class="n">puntos</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">punto2</span><span class="p">));</span><span class="w"> </span><span class="c1">// rvalue</span>
+</code></pre></div>
+<p>Este es el uso típico de las semánticas de movimiento.</p>
+<h2 id="cuando-no-utilizar-semanticas-de-movimiento">Cuando no utilizar semánticas de movimiento<a class="headerlink" href="#cuando-no-utilizar-semanticas-de-movimiento" title="Permanent link">&para;</a></h2>
+<p>Un error común es utilizar <code>std::move</code> cuando la variable local es retornada por una función:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getNumeros</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">numeros</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNumeros</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<p>En este caso se crean 2 objetos:</p>
+<ol>
+<li>La variable local <code>numeros</code> dentro de la función <code>getNumeros</code> (objeto temporal).</li>
+<li>El objeto del lado izquierdo donde se llama <code>getNumeros</code>, este objeto el cual se crea mediante el constructor <code>std::move</code>.</li>
+</ol>
+<p>El problema aquí es que el compilador por defecto utiliza una técnica de optimización llamada <strong>RVO</strong> (Optimización del Valor de Retorno), con el objetivo de evitar copias en objetos temporales.</p>
+<p>Si borramos <code>std::move</code> del código, sin <strong>RVO</strong> se crean en su lugar 3 objetos:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getNumeros</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">numeros</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNumeros</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>La variable local <code>numeros</code> dentro de la función <code>getNumeros</code> (objeto temporal).</li>
+<li>El objeto del lado derecho donde se llama <code>getNumeros</code> (objeto temporal).</li>
+<li>El objeto del lado izquierdo donde se llama <code>getNumeros</code>.</li>
+</ol>
+<p>Con <strong>RVO</strong> solo se creará 1 objeto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getNumeros</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNumeros</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<h2 id="en-conclusion">En conclusión<a class="headerlink" href="#en-conclusion" title="Permanent link">&para;</a></h2>
+<div class="admonition hint">
+<p>Las semánticas de movimiento son una poderosa técnica para ayudarnos a evitar copias innecesarias, pero para sacar el máximo provecho debemos recordar que los compiladores modernos optimizan el código en algunos casos y pueden hacerlo mejor que utilizar <code>std::move</code>.</p>
+</div>
 <hr />
-<p><small class="edited"><i>Última edición: 07 de Mayo de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small></p>
                 
                   
                 
@@ -935,8 +1170,8 @@ div.my-img{text-align:center;margin-top:20px}
     <nav class="md-footer-nav__inner md-grid">
       
       <a
-        href="../08-semanticas-movimiento/"
-        title="Semánticas de movimiento"
+        href="../07-class-templates/"
+        title="Class templates"
         class="md-flex md-footer-nav__link md-footer-nav__link--prev"
         rel="prev"
       >
@@ -948,14 +1183,14 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Anterior
             </span>
-            Semánticas de movimiento
+            Class templates
           </span>
         </div>
       </a>
        
       <a
-        href="../90-novedades-cpp20/"
-        title="Novedades en C++20"
+        href="../../12-punteros-inteligentes/"
+        title="Punteros inteligentes"
         class="md-flex md-footer-nav__link md-footer-nav__link--next"
         rel="next"
       >
@@ -964,7 +1199,7 @@ div.my-img{text-align:center;margin-top:20px}
             <span class="md-footer-nav__direction">
               Siguiente
             </span>
-            Novedades en C++20
+            Punteros inteligentes
           </span>
         </div>
         <div class="md-flex__cell md-flex__cell--shrink">
