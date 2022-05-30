@@ -1021,8 +1021,72 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 <h1 id="gestor-de-escenas">Gestor de escenas<a class="headerlink" href="#gestor-de-escenas" title="Permanent link">&para;</a></h1>
 <p>PyGame no ofrece una forma de manejar diferentes escenas, así que os voy a enseñar a desarrollar vuestro propio gestor de escenas.</p>
-<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;scenes.py&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">pygame</span> <span class="k">as</span> <span class="nn">pg</span>
+<p><code>settings.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">CAPTION</span> <span class="o">=</span> <span class="s2">&quot;My videogame&quot;</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">720</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">FPS</span> <span class="o">=</span> <span class="mi">60</span>
+</code></pre></div>
+<p><code>entities.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span> <span class="k">as</span> <span class="nn">pg</span>
+
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">boy_down</span> <span class="o">=</span> <span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;res/images/boy/down_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">boy_up</span> <span class="o">=</span> <span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;res/images/boy/up_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">boy_left</span> <span class="o">=</span> <span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;res/images/boy/left_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">boy_right</span> <span class="o">=</span> <span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;res/images/boy/right_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">animation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">boy_down</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">animation_speed</span> <span class="o">=</span> <span class="mi">6</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">Vector2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_speed</span> <span class="o">=</span> <span class="mi">175</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vertical_speed</span> <span class="o">=</span> <span class="mi">100</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">get_pressed</span><span class="p">()</span>
+
+        <span class="n">prev_position</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">animation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">boy_left</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_speed</span> <span class="o">*</span> <span class="n">dt</span>
+        <span class="k">elif</span> <span class="n">keys</span><span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">K_RIGHT</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">animation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">boy_right</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">horizontal_speed</span> <span class="o">*</span> <span class="n">dt</span>
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">K_UP</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">animation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">boy_up</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertical_speed</span> <span class="o">*</span> <span class="n">dt</span>
+        <span class="k">elif</span> <span class="n">keys</span><span class="p">[</span><span class="n">pg</span><span class="o">.</span><span class="n">K_DOWN</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">animation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">boy_down</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertical_speed</span> <span class="o">*</span> <span class="n">dt</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">==</span> <span class="n">prev_position</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">animation_speed</span> <span class="o">*</span> <span class="n">dt</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span><span class="p">)]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p><code>scenes.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span> <span class="k">as</span> <span class="nn">pg</span>
 <span class="kn">from</span> <span class="nn">settings</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">entities</span> <span class="kn">import</span> <span class="n">Player</span>
 
@@ -1057,10 +1121,9 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">display</span><span class="p">):</span>
         <span class="n">display</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">common_group</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">display</span><span class="p">)</span>
-
-
-<span class="sd">&quot;&quot;&quot;main.py&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">settings</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>
+<p><code>main.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">settings</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">entities</span> <span class="kn">import</span> <span class="n">Player</span>
 <span class="kn">from</span> <span class="nn">scenes</span> <span class="kn">import</span> <span class="n">MainScene</span>
 
@@ -1094,6 +1157,11 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">()</span>
     <span class="n">game</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
+<p><strong>Adjuntos</strong></p>
+<ul>
+<li><a href="/cdn/pygame/grass.png">grass.png</a></li>
+<li><a href="/cdn/pygame/boy.zip">boy.zip</a></li>
+</ul>
 <hr />
 <p><small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small></p>
                 

@@ -1020,8 +1020,8 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="adaptando-un-ejemplo">Adaptando un ejemplo<a class="headerlink" href="#adaptando-un-ejemplo" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;player.py&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">pygame</span> <span class="k">as</span> <span class="nn">pg</span>
+<p><code>player.py</code>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span> <span class="k">as</span> <span class="nn">pg</span>
 
 <span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -1077,9 +1077,9 @@ div.my-img{text-align:center;margin-top:20px}
         <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">animation_sprite</span><span class="p">)]</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
-
-<span class="sd">&quot;&quot;&quot;main.py&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+</code></pre></div></p>
+<p><code>main.py</code>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">pygame</span> <span class="k">as</span> <span class="nn">pg</span>
 
 <span class="kn">from</span> <span class="nn">settings</span> <span class="kn">import</span> <span class="o">*</span>
@@ -1112,7 +1112,12 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">()</span>
     <span class="n">game</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</code></pre></div>
+</code></pre></div></p>
+<p><strong>Adjuntos</strong></p>
+<ul>
+<li><a href="/cdn/pygame/grass.png">grass.png</a></li>
+<li><a href="/cdn/pygame/boy.zip">boy.zip</a></li>
+</ul>
 <hr />
 <p><small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small></p>
                 
