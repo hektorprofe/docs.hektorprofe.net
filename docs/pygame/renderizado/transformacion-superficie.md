@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Transformación de superficies
 
+![]({{cdn}}/pygame/005.png)
+
 ```python
 import sys
 import pygame as pg
@@ -39,6 +41,10 @@ while 1:
 
     pg.display.update()
 ```
+
+**Adjuntos**
+
+* [dino.png]({{cdn}}/pygame/dino.png)
 
 
 ___

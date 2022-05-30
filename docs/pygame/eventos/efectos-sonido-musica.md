@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Efectos de sonido y música
 
+<div class='embed-container'><iframe width="560" height="315" src="/cdn/pygame/015.mp4" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 ```python
 import sys
 import random
@@ -87,7 +89,14 @@ while 1:
 
 ```
 
+**Adjuntos**
 
+* [dino.png]({{cdn}}/pygame/dino.png)
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [star.png]({{cdn}}/pygame/star.png)
+
+* [jungle.ogg]({{cdn}}/pygame/jungle.ogg)
+* [star.wav]({{cdn}}/pygame/star.wav)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

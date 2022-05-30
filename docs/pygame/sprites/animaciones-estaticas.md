@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Animaciones estáticas
 
+![]({{cdn}}/pygame/022.gif)
+
 ```python
 import sys
 import pygame as pg
@@ -76,7 +78,10 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
 
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [boxer.zip]({{cdn}}/pygame/boxer.zip)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

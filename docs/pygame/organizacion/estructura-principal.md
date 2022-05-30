@@ -3,17 +3,24 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Estructura principal
 
-```python
-"""requirements.txt"""
-pygame==2.1.2
+`requirements.txt`
 
-"""settings.py"""
+```python
+pygame==2.1.2
+```
+
+`settings.py`
+
+```python
 CAPTION = "My videogame"
 WIDTH = 720
 HEIGHT = 400
 FPS = 60
+```
 
-""" main.py """
+`main.py`
+
+```python
 import sys
 import pygame as pg
 

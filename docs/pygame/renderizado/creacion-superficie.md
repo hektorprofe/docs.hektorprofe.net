@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Creación de la superficie
 
+![]({{cdn}}/pygame/001.png)
+
 ```python
 import sys
 import pygame as pg

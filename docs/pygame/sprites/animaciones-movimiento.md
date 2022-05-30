@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Animaciones en movimiento
 
+![]({{cdn}}/pygame/023.gif)
+
 ```python
 import sys
 import pygame as pg
@@ -90,6 +92,10 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
+
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [boy.zip]({{cdn}}/pygame/boy.zip)
 
 
 ___

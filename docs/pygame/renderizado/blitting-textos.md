@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Blitting de Textos (copia)
 
+![]({{cdn}}/pygame/004.png)
+
 ```python
 import sys
 import pygame as pg
@@ -38,6 +40,10 @@ while 1:
 
     pg.display.update()
 ```
+
+**Adjuntos**
+
+* [04B03.ttf]({{cdn}}/pygame/04B03.ttf)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

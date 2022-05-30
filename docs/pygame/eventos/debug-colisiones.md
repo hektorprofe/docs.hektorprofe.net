@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Debugeando las colisiones
 
+![]({{cdn}}/pygame/012.gif)
+
 ```python
 import sys
 import random
@@ -61,6 +63,11 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
+
+* [dino.png]({{cdn}}/pygame/dino.png)
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [star.png]({{cdn}}/pygame/star.png)
 
 
 ___

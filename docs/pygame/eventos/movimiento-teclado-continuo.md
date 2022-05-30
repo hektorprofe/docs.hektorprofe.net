@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Movimiento de teclado contínuo
 
+![]({{cdn}}/pygame/009.gif)
+
 ```python
 import sys
 import pygame as pg
@@ -40,6 +42,10 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
+
+* [dino.png]({{cdn}}/pygame/dino.png)
+* [grass.png]({{cdn}}/pygame/grass.png)
 
 
 ___

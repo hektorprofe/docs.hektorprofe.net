@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Modo ventana y fullscreen
 
+![]({{cdn}}/pygame/016.png)
+
 ```python
 import sys
 import random
@@ -87,7 +89,14 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
 
+* [dino.png]({{cdn}}/pygame/dino.png)
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [star.png]({{cdn}}/pygame/star.png)
+
+* [jungle.ogg]({{cdn}}/pygame/jungle.ogg)
+* [star.wav]({{cdn}}/pygame/star.wav)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

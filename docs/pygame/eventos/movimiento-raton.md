@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Movimiento de ratón
 
+![]({{cdn}}/pygame/007.gif)
+
 ```python
 import sys
 import pygame as pg
@@ -30,9 +32,12 @@ while 1:
     display.blit(dino_image, dino_rect)
 
     pg.display.update()
-
 ```
 
+**Adjuntos**
+
+* [dino.png]({{cdn}}/pygame/dino.png)
+* [grass.png]({{cdn}}/pygame/grass.png)
 
 
 ___

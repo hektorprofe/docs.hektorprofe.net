@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Iconos de ventana y bandeja
 
+![]({{cdn}}/pygame/006.png)
+
 ```python
 import os
 import ctypes
@@ -28,6 +30,10 @@ while 1:
         if event.type == pg.QUIT:
             sys.exit()
 ```
+
+**Adjuntos**
+
+* [python.png]({{cdn}}/pygame/python.png)
 
 
 ___

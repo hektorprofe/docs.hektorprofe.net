@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Actualización por fotograma
 
+![]({{cdn}}/pygame/018.gif)
+
 ```python
 import sys
 import random
@@ -58,7 +60,10 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
 
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [mushroom.png]({{cdn}}/pygame/mushroom.png)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

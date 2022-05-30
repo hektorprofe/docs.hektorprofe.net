@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Máscaras en grupos
 
+![]({{cdn}}/pygame/021.gif)
+
 ```python
 import sys
 import random
@@ -80,6 +82,11 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
+
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [mushroom.png]({{cdn}}/pygame/mushroom.png)
+* [rock.png]({{cdn}}/pygame/rock.png)
 
 
 ___

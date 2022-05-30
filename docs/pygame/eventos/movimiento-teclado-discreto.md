@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Movimiento de teclado discreto
 
+![]({{cdn}}/pygame/008.gif)
+
 ```python
 import sys
 import pygame as pg
@@ -36,7 +38,10 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
 
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [dino.png]({{cdn}}/pygame/dino.png)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

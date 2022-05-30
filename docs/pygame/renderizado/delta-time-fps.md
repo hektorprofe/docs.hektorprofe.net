@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Delta time y FPS
 
+![]({{cdn}}/pygame/006.gif)
+
 ```python
 import sys
 import pygame as pg

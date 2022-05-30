@@ -3,6 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Colisiones de sprites
 
+![]({{cdn}}/pygame/020.gif)
+
 ```python
 import sys
 import random
@@ -87,7 +89,11 @@ while 1:
     pg.display.update()
 ```
 
+**Adjuntos**
 
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [mushroom.png]({{cdn}}/pygame/mushroom.png)
+* [rock.png]({{cdn}}/pygame/rock.png)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

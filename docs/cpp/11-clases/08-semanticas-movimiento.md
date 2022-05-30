@@ -159,5 +159,6 @@ auto numeros = getNumeros();
 
 !!! hint ""
     Las semánticas de movimiento son una poderosa técnica para ayudarnos a evitar copias innecesarias, pero para sacar el máximo provecho debemos recordar que los compiladores modernos optimizan el código en algunos casos y pueden hacerlo mejor que utilizar `std::move`.
+
 ___
 <small class="edited"><i>Última edición: 09 de Mayo de 2022</i></small>

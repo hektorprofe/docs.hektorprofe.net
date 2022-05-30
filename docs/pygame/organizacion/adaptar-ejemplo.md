@@ -3,8 +3,8 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Adaptando un ejemplo
 
+`player.py`
 ```python
-"""player.py"""
 import pygame as pg
 
 class Player(pg.sprite.Sprite):
@@ -61,8 +61,10 @@ class Player(pg.sprite.Sprite):
         self.image = self.animation[int(self.animation_sprite)]
 
         self.rect = int(self.position.x), int(self.position.y)
+```
 
-"""main.py"""
+`main.py`
+```python
 import sys
 import pygame as pg
 
@@ -98,7 +100,10 @@ if __name__ == '__main__':
     game.run()
 ```
 
+**Adjuntos**
 
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [boy.zip]({{cdn}}/pygame/boy.zip)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

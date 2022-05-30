@@ -3,8 +3,13 @@ description: Apuntes del curso de desarrollo de videojuegos con PyGame en Python
 
 # Cambio de escena
 
+![]({{cdn}}/pygame/024.gif)
+
+Continuación de la lección anterior:
+
+`scenes.py`
+
 ```python
-"""scenes.py"""
 class MenuScene(Scene):
     def __init__(self, game):
         super().__init__(game)
@@ -31,8 +36,10 @@ class MainScene(Scene):
             if event.type == pg.KEYDOWN:
                 if event.key == pg.K_ESCAPE:
                     self.game.change_scene(MenuScene(self.game))
+```
 
-"""main.py"""
+`main.py`
+```python
 from scenes import MenuScene
 
 class Game:
@@ -40,6 +47,11 @@ class Game:
         # ...
         self.scene = MenuScene(self)
 ```
+
+**Adjuntos**
+
+* [grass.png]({{cdn}}/pygame/grass.png)
+* [boy.zip]({{cdn}}/pygame/boy.zip)
 
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>
