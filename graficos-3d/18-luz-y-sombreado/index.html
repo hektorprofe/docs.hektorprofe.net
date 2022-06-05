@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  <head>
+    
+    
+    
+    
+
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+      
+      
+        <link rel="canonical" href="https://docs.hektorprofe.net/graficos-3d/18-luz-y-sombreado/">
+      
+      
+        <meta name="author" content="Héctor Costa Guzman">
+      
+      <link rel="shortcut icon" href="/favicon.ico">
+    
+    
+      
+        <title>Luz y sombreado | Programación de gráficos 3D | Hektor Profe</title>
+      
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/application.2.css">
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    
+    <link rel="stylesheet" href="/assets/stylesheets/tingle.min.css">
+<style>
+@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("/assets/fonts/specimen/MaterialIcons-Regular.woff2") format("woff2"),url("/assets/fonts/specimen/MaterialIcons-Regular.woff") format("woff"),url("/assets/fonts/specimen/MaterialIcons-Regular.ttf") format("truetype")}
+[data-md-color-primary="grey"] .md-header { background-color: #191A1D }
+[data-md-color-primary="grey"] .md-tabs { background-color: #222831 }
+.md-footer-nav { background-color: #222831; }
+.md-footer-meta { background-color: #191A1D }
+html [data-md-color-primary="grey"] .md-nav--primary .md-nav__title--site { background-color: #191A1D; }
+.mini{ display: none; } .maxi{ display: block; }
+.embed-container { position: relative; padding-bottom: 56.25%;height: 0; overflow: hidden; max-width: 100%; height: auto; margin-bottom: 0; } 
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.md-nav__link:focus, .md-nav__link:hover { color: #018dc5; }
+.headerlink{ color: #018dc5 !important; }
+.md-footer-links__highlight a{ color: #777 !important; }
+.md-footer-links__highlight a:hover{ color: #ddd !important; }
+.visible{ display: inherit !important; }
+/*.md-tabs { display: none !important; }*/
+.nav__btn, .nav__logo{ transition: 0.3s; }
+.nav__btn:hover{ color: #aaa; }
+.nav__logo:hover{ opacity:.7; }
+.nav__logo {max-width: 225px !important; }
+img:not([src]){visibility:hidden;}
+img.click{opacity: 0.96;box-shadow:rgb(79, 82, 92) -4px 4px}
+img.click:hover{opacity: 1;box-shadow:rgb(10, 172, 237) -4px 4px}
+.button { background-color: #36bf2d; border: none; color: white !important; padding: 20px 0px; text-align: center; text-decoration: none; display: block; font-size: 97%; width: 100%; font-weight: bold;}
+.button:hover { background-color: #4CAF50; color: white; }
+.animated.delay-1dot5s {animation-delay: 1.5s;}
+.md-icon--search { display:inline-block!important}
+a.headerlink{ display: none !important; }
+small.edited { display: block; text-align: right; }
+#cookie-bar { padding: 1.8rem 1.25rem !important; background: #191A1D  !important; box-shadow:rgba(0, 0, 0, 0.2) 4px 4px 8px 8px; }
+#cookie-bar-prompt-logo{ display: none !important; }
+div.my-img{text-align:center;margin-top:20px}
+@media (max-width: 76.1875em){ .mini{ display: block; } .maxi{ display: none;} /*.md-nav__link[for="nav-1"] { display: none; }*/ }
+@media (min-width: 1599.9px){ .md-header-nav__button.md-logo img { height: 37.5px !important; width: 220px; } }
+@media (min-width: 1999.9px){ .md-header-nav__button.md-logo img { height: 40px !important; width: 240px; } }
+/* Rectificación footer en paginas pequeñas de altura */
+@media (max-width: 1599.8px){ .md-container {height: calc(100% - 48px)} }
+@media (min-width: 1599.9px){ .md-container {height: calc(100% - 53px)} }
+@media (min-width: 1999.9px){ .md-container {height: calc(100% - 58px)} }
+@media only screen and (max-width: 959.9px) { .nav__logo { display: block !important; }} 
+@media only screen and (min-width: 960px) and (max-width: 76.1875em) { .nav__logo { display: block !important; }} 
+@media only screen and (min-width: 76.1875em) { .nav__logo { display: none !important; } } 
+@media only screen and (max-width: 76.1875em) { .md-sidebar--primary { left: -26.2rem;; width: 26.2rem; }  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary { -webkit-transform: translateX(26.2rem); transform: translateX(26.2rem); } [dir="rtl"] [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary { -webkit-transform: translateX(-26.2rem); transform: translateX(-26.2rem); } }
+@media (min-width: 1219.9px){ #home__btn { display: none !important; } #cursos__btn{ color: white !important; } [data-md-color-primary="grey"] .md-nav__link--active{ color: rgba(0, 0, 0, 0.87); text-decoration: underline !important; } }
+@media (min-width: 467.9px){ #discord__btn{ display: inline-block !important; } }
+@media only screen and (min-width: 60em){ .md-search__input { background-color: rgb(53, 54, 56); } .md-search__input:hover { background-color: rgb(84, 87, 93); color: white; }}
+@media (max-width: 1219.9px){ .md-header-nav__title{ padding: 0 1rem; } .nav__btn {display:none;} }
+@media (max-width: 875.9px){ #cookie-bar-button{ margin-top: 20px !important; }}
+@media (max-width: 719.9px){ #cookie-bar { padding: 3.25rem 1.25rem; }}
+@media (max-width: 512.9px){ #cookie-bar { padding: 2rem 1.25rem; }}
+
+.tingle-modal { font-size:18px !important;}
+.tingle-modal-box{ width: 80%; max-width: 1100px; }
+.tingle-btn--danger{ background: darkorange !important; }
+.tingle-modal-box__content { padding: 3rem 2rem 3rem 3rem;}
+@media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
+@media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
+
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
+</style>
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="grey">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#luz-y-sombreado" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <!-- https://fontawesome.com/v4.7.0/ -->
+          <a 
+            class="nav__btn" 
+            href="https://www.hektorprofe.net/" 
+            style="margin-left:0em;" 
+            title="Cursos de Hektor Profe">
+            Cursos
+          </a>
+          <a 
+            class="nav__btn" 
+            href="https://docs.hektorprofe.net/" 
+            style="margin-left:1.4em;" 
+            title="Documentos de Hektor Profe">
+            Documentos
+          </a>
+          <a 
+            class="nav__btn" 
+            href="https://www.hektorprofe.net/portafolio/" 
+            style="margin-left:1.4em;" 
+            title="Portafolio de Hektor Profe">
+            Portafolio
+          </a>
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
+        </div>
+        <style>
+          .md-sidebar[data-md-state="lock"] {
+            top: 0rem !important;
+          }
+          .md-tabs {
+            display: none !important;
+          }
+          .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
+            display: none;
+          }
+          .image {
+            text-align: center;
+            margin-top: 25px;
+          }
+          .contenedor_youtube {
+            position: relative !important;
+            padding-bottom: 56.25% !important; /*panorámico*/
+            padding-top: 0px !important;
+            height: 0 !important;
+            margin-top: -20px;
+            margin-bottom: 25px;
+          }
+          .contenedor_youtube iframe {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+          }
+        </style>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container" style="padding-top: 0px !important;">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list" id="top__tabs">
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+      </ul>
+    </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container" style="padding-top: 8px !important;">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap" id="md__sidebar__scroll">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title" for="__drawer" style="padding:0 !important;max-height:5.5rem;"></label>
+  
+  <ul class="md-nav__list" id="main__list" data-md-scrollfix>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+        <!-- comprobación extra -->
+         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Apuntes de Gráficos 3D
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Apuntes de Gráficos 3D
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Índice del archivo" class="md-nav__link">
+      Índice del archivo
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../01-configuracion-previa/" title="Configuración previa" class="md-nav__link">
+      Configuración previa
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../02-buffer-de-color/" title="Buffer de color" class="md-nav__link">
+      Buffer de color
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../03-vectores-y-puntos/" title="Vectores y puntos" class="md-nav__link">
+      Vectores y puntos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../04-proyeccion-de-puntos/" title="Proyección de puntos" class="md-nav__link">
+      Proyección de puntos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../05-transformaciones-lineales/" title="Transformaciones lineales" class="md-nav__link">
+      Transformaciones lineales
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../06-triangulos-vertices-mallas/" title="Triángulos, vértices y mallas" class="md-nav__link">
+      Triángulos, vértices y mallas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../07-rasterizacion-de-lineas/" title="Rasterización de líneas" class="md-nav__link">
+      Rasterización de líneas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../08-mallas-en-memoria-dinamica/" title="Mallas en memoria dinámica" class="md-nav__link">
+      Mallas en memoria dinámica
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-ficheros-con-modelos-obj/" title="Ficheros con modelos OBJ" class="md-nav__link">
+      Ficheros con modelos OBJ
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../10-operaciones-con-vectores/" title="Operaciones con vectores" class="md-nav__link">
+      Operaciones con vectores
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../11-back-face-culling/" title="Back-face Culling" class="md-nav__link">
+      Back-face Culling
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../12-rasterizacion-de-triangulos/" title="Rasterización de triángulos" class="md-nav__link">
+      Rasterización de triángulos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../13-interfaz-dear-imgui/" title="Interfaz Dear ImGui" class="md-nav__link">
+      Interfaz Dear ImGui
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../14-ordenar-caras-por-profundidad/" title="Ordenar caras por profundidad" class="md-nav__link">
+      Ordenar caras por profundidad
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../15-operaciones-con-matrices/" title="Operaciones con matrices" class="md-nav__link">
+      Operaciones con matrices
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../16-matrices-de-transformacion-3d/" title="Matrices de transformación 3D" class="md-nav__link">
+      Matrices de transformación 3D
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../17-matriz-de-proyeccion/" title="Matriz de proyección" class="md-nav__link">
+      Matriz de proyección
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Luz y sombreado
+      </label>
+    
+    <a href="./" title="Luz y sombreado" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Luz y sombreado
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sombreado-plano" title="Sombreado plano" class="md-nav__link toc__link">
+    Sombreado plano
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sombreado-suavizado" title="Sombreado suavizado" class="md-nav__link toc__link">
+    Sombreado suavizado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valores-verticales-invertidos" title="Valores verticales invertidos" class="md-nav__link toc__link">
+    Valores verticales invertidos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../19-migracion-a-visual-studio/" title="Migración a Visual Studio" class="md-nav__link">
+      Migración a Visual Studio
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../20-mapeado-de-texturas/" title="Mapeado de texturas" class="md-nav__link">
+      Mapeado de texturas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../21-interpolacion-de-perspectiva/" title="Interpolación de perspectiva" class="md-nav__link">
+      Interpolación de perspectiva
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../22-decodificacion-de-ficheros-png/" title="Decodificación de ficheros PNG" class="md-nav__link">
+      Decodificación de ficheros PNG
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../23-ficheros-obj-con-texturas/" title="Ficheros OBJ con texturas" class="md-nav__link">
+      Ficheros OBJ con texturas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../24-profundidad-con-z-buffer/" title="Profundidad con Z-Buffer" class="md-nav__link">
+      Profundidad con Z-Buffer
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../25-matriz-de-vista-y-camara/" title="Matriz de vista y cámaras" class="md-nav__link">
+      Matriz de vista y cámaras
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../26-renderizado-y-debug-separado/" title="Renderizado y debug separado" class="md-nav__link">
+      Renderizado y debug separado
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../27-clipping/" title="Clipping" class="md-nav__link">
+      Clipping
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../28-multiples-mallas/" title="Múltiples mallas" class="md-nav__link">
+      Múltiples mallas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+</nav>
+
+                  </div>
+                </div>
+              </div>
+            
+
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                
+                  
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.hektorprofe.net/cupon/python" target="_blank">
+                        <img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  
+                
+
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sombreado-plano" title="Sombreado plano" class="md-nav__link toc__link">
+    Sombreado plano
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sombreado-suavizado" title="Sombreado suavizado" class="md-nav__link toc__link">
+    Sombreado suavizado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valores-verticales-invertidos" title="Valores verticales invertidos" class="md-nav__link toc__link">
+    Valores verticales invertidos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="luz-y-sombreado">Luz y sombreado<a class="headerlink" href="#luz-y-sombreado" title="Permanent link">&para;</a></h1>
+<p>Los objetos en la realidad no se perciben simplemente como entidades de colores sólidos sino que les afectan la iluminación y las sombras del entorno:</p>
+<p><img alt="" src="/cdn/graficos3d/image-73.png" /></p>
+<p>Por una parte tenemos la incedencia de la propia luz en el objeto y por otro la sombra proyectada por éste sobre una superficie. Voy a enfocarme en una posible implementación de la primera.</p>
+<p>Podemos entender la luz como un vector con una dirección:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#ifndef LIGHT_H</span>
+<span class="cp">#define LIGHT_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vector.h&quot;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Light</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">direction</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</code></pre></div>
+<p>Dependiendo de cómo se proyecta la luz encontramos distintos tipos:</p>
+<p><img alt="" src="/cdn/graficos3d/image-74.png" /></p>
+<p>Lo que voy a implementar es el tipo más simple, una <strong>fuente global de luz direccional</strong> que afectará a todos los objetos por igual. Esta luz no tiene una posición específica, sino que es más bien como un sol gigantesco que ilumina todo en una dirección.</p>
+<p>Lo siguiente que debemos plantearnos es cómo afectará esta fuente de luz a los objetos y cómo cambiará el rasterizado de sus caras. Para ello haremos uso de diferentes algoritmos de iluminación.</p>
+<h2 id="sombreado-plano">Sombreado plano<a class="headerlink" href="#sombreado-plano" title="Permanent link">&para;</a></h2>
+<p>Uno los algoritmos más sencillos de implementar se conoce como <strong>sombreado plano</strong> (<em>flat shading</em>). Éste dice que dependiendo de la alineación que hay entre el rayo proyectado por la luz y la cara de la malla, más o menos brillante u oscuro será el color de esa cara. En otras palabras, si la <code>normal</code> de la cara está completamente alineada con la dirección de la luz estará completamente iluminada.</p>
+<p><img alt="" src="/cdn/graficos3d/image-75.png" /> </p>
+<p>El siguiente método <code>ApplyIntensity</code> nos permitirá graduar un color en un porcentaje para determinar el color de la cara iluminada:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Light</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">direction</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">ApplyIntensity</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">percentageFactor</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF000000</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x00FF0000</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">percentageFactor</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0000FF00</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">percentageFactor</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x000000FF</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">percentageFactor</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">newColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x00FF0000</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0000FF00</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x000000FF</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">newColor</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Haciendo uso de operadores bit a bit y máscaras extraemos la porción de cada color <code>ARGB</code> y aplicamos el factor de porcentaje (en tanto por uno). Luego generamos el nuevo color extrayendo, nuevamente con máscaras, cada porción y sumándolas.</p>
+<p>Vamos a crear una fuente de luz en <code>window.h</code> que por proyecte desde un poco por delante de la profundidad de la pantalla <code>{0,0,1}</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;light.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/* Light settings */</span><span class="w"></span>
+<span class="n">Light</span><span class="w"> </span><span class="n">light</span><span class="p">{.</span><span class="n">direction</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span><span class="w"></span>
+</code></pre></div>
+<p><img alt="" src="/cdn/graficos3d/image-76.png" /> </p>
+<p>Ahora, para visualizar mejor la iluminación cambiaremos los colores de las caras del <code>mock</code> cube a blanco:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">uint32_t</span><span class="w"> </span><span class="n">meshColors</span><span class="p">[]</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="mh">0xFFFFFFFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Justo después de proyectar el color vamos a llamar a un nueo método de <code>Triangle</code> llamado <code>ApplyFlatShading()</code> para recalcular el color del triángulo en función del ángulo de la luz:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*** Apply projections and lighting for all face vertices ***/</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="cm">/** Apply flat shading ***/</span><span class="w"></span>
+<span class="n">triangles</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">ApplyFlatShading</span><span class="p">(</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">light</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Este método hará uso de la <code>normal</code>, algo que estamos calculando dentro del método <code>ApplyCulling</code> que no siempre se ejecutará, recodemos que podemos desactivarlo. </p>
+<p>Tendremos que externalizar la parte del cálculo de la normal y almacenarla como miembro del triángulo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Vector3</span><span class="w"> </span><span class="n">normal</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">CalculateNormal</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Get the vector substracion B-A and C - A and normalize &#39;em</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">vectorAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">vectorAC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">vectorAB</span><span class="p">.</span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">vectorAC</span><span class="p">.</span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Compute the face normal (corss product) and normalize it</span>
+<span class="w">    </span><span class="c1">// Using our left-handed system (z grows inside the monitor)</span>
+<span class="w">    </span><span class="c1">// So we apply have to appky the order: AB x AC</span>
+<span class="w">    </span><span class="n">normal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vectorAB</span><span class="p">.</span><span class="n">CrossProduct</span><span class="p">(</span><span class="n">vectorAC</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">normal</span><span class="p">.</span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ApplyCulling</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">cameraPosition</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Find the vector betweenn a triangle point and camera origin</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">cameraRay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Calculate how aligned the camera ray is with the face normal</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">dotNormalCamera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">cameraRay</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Test the dotNormalCamera and render the triangle if is &gt;0</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">culling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">dotNormalCamera</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Lo llamaremos antes de ejecutar el culling:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*** Calculate the normal ***/</span><span class="w"></span>
+<span class="n">triangles</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">CalculateNormal</span><span class="p">();</span><span class="w"></span>
+
+<span class="cm">/*** Back Face Culling Algorithm ***/</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">enableBackfaceCulling</span><span class="p">)</span><span class="w"></span>
+<span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p>El método para recalcular el color, con una copia de seguridad del color inicial para poder realizar los subsiguientes cambios de iluminación quedará:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">uint32_t</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">originalColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w">  </span><span class="c1">// original color backup</span>
+
+<span class="c1">// Constructor con copia de seguridad del color</span>
+<span class="n">Triangle</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="n">color</span><span class="p">),</span><span class="w"> </span><span class="n">shadedColor</span><span class="p">(</span><span class="n">color</span><span class="p">){};</span><span class="w">  </span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;light.h&quot;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Triangle</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">ApplyFlatShading</span><span class="p">(</span><span class="n">Light</span><span class="w"> </span><span class="n">light</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Calculate shading intensity based in how aligned is</span>
+<span class="w">        </span><span class="c1">// the normal vector and the vector of the light ray</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">lightIntensityFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">light</span><span class="p">.</span><span class="n">direction</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Light</span><span class="o">::</span><span class="n">ApplyIntensity</span><span class="p">(</span><span class="n">originalColor</span><span class="p">,</span><span class="w"> </span><span class="n">lightIntensityFactor</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<p>Si probamos el resultado observaremos algo interesante:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-24.gif" /></p>
+<p>Si bien estamos aplicando correctamente el sombreado, parece que lo tenemos negado y en lugar de proyectar luz está proyectando oscuridad, de ahí que si la alineación entre el vector de la luz y la normal de la cara es total se vea completamente oscuro.</p>
+<p>Esto es debido a que el ángulo hay que calcularlo al revés, de la normal hacia el vector de la luz. ¿La razón? La luz se refleja en dirección contraria, así que vamos a negar el producto escalar:</p>
+<p><img alt="" src="/cdn/graficos3d/image-77.png" /> </p>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">lightIntensityFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">normal</span><span class="p">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">light</span><span class="p">.</span><span class="n">direction</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Ahora sí, aquí tenemos el sombreado funcionando:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-25.gif" /></p>
+<p>Sin embargo debemos asegurarnos de que el valor del producto escalar se encuentra entre <code>0</code> y <code>1</code>, por lo que tendremos que recortarlo, lo que en inglés se denomina <code>clamp</code> o restricción. </p>
+<p>Si el factor es menor que <code>0</code>, será <code>0</code>. Si es mayor que <code>1</code>, será <code>1</code>. Así nos aseguraremos de que el recoloreado es el correcto:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Clamp percentageFactor between 0 and 1</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">percentageFactor</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">percentageFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">percentageFactor</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">percentageFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="sombreado-suavizado">Sombreado suavizado<a class="headerlink" href="#sombreado-suavizado" title="Permanent link">&para;</a></h2>
+<p>Hemos visto como el sombreado plano se programa sobre los triángulos en base a su normal, de manera que una cara tendrá un color.</p>
+<p>Existen otros algoritmos de sombreado más avanzados, como los de sombreado suavizado. Uno de los más famosos es el <a href="https://es.wikipedia.org/wiki/Sombreado_Gouraud"><strong>Sombreado Gouraud</strong></a>.</p>
+<p>Esta técnica se basa en la interpolación de la luz no para la normal de la cara, sino para cada píxel de la cara en función de los colores en las las normales de los vértices:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-26.gif" /></p>
+<p>Cuantos más polígonos tenga el modelo, mayor será el suavizado de la sombra:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-27.gif" /></p>
+<p>Comparado con el algoritmo de sombreado plano es mucho más trabajoso para la CPU así que no lo vamos a implementar, pero vale la pena comentarlo.</p>
+<h2 id="valores-verticales-invertidos">Valores verticales invertidos<a class="headerlink" href="#valores-verticales-invertidos" title="Permanent link">&para;</a></h2>
+<p>En este punto, si cambiamos nuestro <em>mock</em> cube por el modelo <strong>cube.obj</strong> debería funcionarnos todo correctamente:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mesh</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;assets/cube.obj&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p><img alt="" src="/cdn/graficos3d/image-78.png" /></p>
+<p>Pero si cargamos el cono, aunque se rasterice bien, veremos que está volteado verticalmente:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mesh</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;assets/cone.obj&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p><img alt="" src="/cdn/graficos3d/image-79.png" /></p>
+<p>El problema radica en que, en nuestro sistema hemos considerado que la <code>Y</code> crece hacia abajo, en el color buffer, siendo <code>(0,0)</code> la esquina superior izquierda. Sin embargo, en los modelos de blender la <code>Y</code> crece hacia arriba.</p>
+<p>Así que tendremos que invertir los valores de <code>Y</code> proyectados en la pantalla, antes de trasladarlos:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Invert the y values to account the flipped screen y coord</span>
+<span class="n">triangles</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">projectedVertices</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">y</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><img alt="" src="/cdn/graficos3d/image-80.png" /></p>
+<p>Esta era también la razón por la que la luz superior del cubo no funcionaba bien, pero ahora si se renderizará correctamente.</p>
+<hr />
+<p><small class="edited"><i>Última edición: 05 de Junio de 2022</i></small></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-nav">
+    <nav class="md-footer-nav__inner md-grid">
+      
+      <a
+        href="../17-matriz-de-proyeccion/"
+        title="Matriz de proyección"
+        class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+        rel="prev"
+      >
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+        </div>
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+          <span class="md-flex__ellipsis">
+            <span class="md-footer-nav__direction">
+              Anterior
+            </span>
+            Matriz de proyección
+          </span>
+        </div>
+      </a>
+       
+      <a
+        href="../19-migracion-a-visual-studio/"
+        title="Migración a Visual Studio"
+        class="md-flex md-footer-nav__link md-footer-nav__link--next"
+        rel="next"
+      >
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+          <span class="md-flex__ellipsis">
+            <span class="md-footer-nav__direction">
+              Siguiente
+            </span>
+            Migración a Visual Studio
+          </span>
+        </div>
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+        </div>
+      </a>
+      
+    </nav>
+  </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        <!--<div class="md-footer-links__highlight">
+          <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
+        </div>-->
+        <div class="md-footer-copyright__highlight">
+          2015 - 2022 &copy; Héctor Costa Guzmán (<u
+            ><a
+              href="https://creativecommons.org/licenses/by/4.0/deed.es"
+              target="_blank"
+              rel="nofollow"
+              >Licencia CC BY 4.0</a
+            ></u
+          >)
+        </div>
+      </div>
+       
+<style>.md-footer-social__link {transition: 0.3s;}</style>
+<div class="md-footer-social" style="font-size: 2.5rem; margin-top: -6px!important; padding: 0px!important; margin-bottom: -6px; overflow: hidden!important;">
+  <a href="https://github.com/hcosta" title="Github" target="_blank" class="md-footer-social__link fa fa-github-square"></a>
+  <a href="https://www.youtube.com/c/HektorProfe" title="Youtube" target="_blank" class="md-footer-social__link fa fa-youtube-square"></a>
+  &nbsp;
+</div>
+ 
+    </div>
+  </div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
+    ga("create", "UA-124845547-1", "auto");
+    ga("send", "pageview");
+  </script>
+</footer>
+      
+      <a id="anchorID" href="https://www.hektorprofe.net/" target="_blank"></a>
+    </div>
+  <script type='text/javascript' src="/assets/javascripts/application.a26c1c21.js"></script>
+  <script src="/assets/javascripts/tingle.min.js"></script>
+  <script type='text/javascript'>
+    var modalButtonOnly = new tingle.modal({
+        closeMethods: [],
+        footer: true,
+        stickyFooter: true
+    });
+    var btn5 = document.querySelector('.js-tingle-modal-5');
+
+    // set content
+    modalButtonOnly.setContent(`
+    <div style="display:grid;grid-template-columns:32% 32% 32%;grid-column-gap: 1.33%;" id="supermodal">
+      <div class="course">
+        <a href="https://www.hektorprofe.net/cupon/python" target="_blank"><img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+      </div>
+      <div class="course">
+        <a href="https://www.hektorprofe.net/cupon/django" target="_blank"><img src="/cdn/assets/django.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+      </div>
+      <div class="course">
+        <a href="https://www.hektorprofe.net/cupon/pyside" target="_blank"><img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+      </div>
+    </div>`);
+
+    modalButtonOnly.addFooterBtn('Cerrar', 'tingle-btn tingle-btn--default tingle-btn--pull-right', function(){
+      modalButtonOnly.close();
+    });
+
+    app.initialize({version:"1.2.3",url:{base:"../.."}})
+    var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
+    var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
+    const mdMenuItems = document.querySelectorAll('.md-nav__link');
+    function doNav(){ document.getElementById("main__list").innerHTML = '<li class="md-nav__item"><a class="md-nav__link" href="/cursos/">Cursos</a></li><li class="md-nav__item"><a class="md-nav__link" href="/blog/">Blog</a></li>';}
+    for (i = 0; i < mdMenuItems.length; i++) {  var item = mdMenuItems[i]; var htmlstring = item.innerHTML; htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/,''); if (htmlstring == 'Servidor de encuentro') { item.parentNode.removeChild(item);continue; }  if (htmlstring == 'Política de Cookies') { item.parentNode.removeChild(item);continue; } if (htmlstring == 'Buscador') { item.parentNode.removeChild(item); continue; } }
+    try { var topPos = document.querySelector('#md__active_link').offsetTop; document.querySelector('#md__sidebar__scroll').scrollTop = topPos - 60; } catch (err) {}
+  </script>
+  </body>
+</html>

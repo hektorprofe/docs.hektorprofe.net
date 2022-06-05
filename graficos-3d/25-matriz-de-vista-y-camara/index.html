@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  <head>
+    
+    
+    
+    
+
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Web de apuntes de programación de Hector Costa Guzman.">
+      
+      
+        <link rel="canonical" href="https://docs.hektorprofe.net/graficos-3d/25-matriz-de-vista-y-camara/">
+      
+      
+        <meta name="author" content="Héctor Costa Guzman">
+      
+      <link rel="shortcut icon" href="/favicon.ico">
+    
+    
+      
+        <title>Matriz de vista y cámaras | Programación de gráficos 3D | Hektor Profe</title>
+      
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/application.2.css">
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    
+    <link rel="stylesheet" href="/assets/stylesheets/tingle.min.css">
+<style>
+@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("/assets/fonts/specimen/MaterialIcons-Regular.woff2") format("woff2"),url("/assets/fonts/specimen/MaterialIcons-Regular.woff") format("woff"),url("/assets/fonts/specimen/MaterialIcons-Regular.ttf") format("truetype")}
+[data-md-color-primary="grey"] .md-header { background-color: #191A1D }
+[data-md-color-primary="grey"] .md-tabs { background-color: #222831 }
+.md-footer-nav { background-color: #222831; }
+.md-footer-meta { background-color: #191A1D }
+html [data-md-color-primary="grey"] .md-nav--primary .md-nav__title--site { background-color: #191A1D; }
+.mini{ display: none; } .maxi{ display: block; }
+.embed-container { position: relative; padding-bottom: 56.25%;height: 0; overflow: hidden; max-width: 100%; height: auto; margin-bottom: 0; } 
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.md-nav__link:focus, .md-nav__link:hover { color: #018dc5; }
+.headerlink{ color: #018dc5 !important; }
+.md-footer-links__highlight a{ color: #777 !important; }
+.md-footer-links__highlight a:hover{ color: #ddd !important; }
+.visible{ display: inherit !important; }
+/*.md-tabs { display: none !important; }*/
+.nav__btn, .nav__logo{ transition: 0.3s; }
+.nav__btn:hover{ color: #aaa; }
+.nav__logo:hover{ opacity:.7; }
+.nav__logo {max-width: 225px !important; }
+img:not([src]){visibility:hidden;}
+img.click{opacity: 0.96;box-shadow:rgb(79, 82, 92) -4px 4px}
+img.click:hover{opacity: 1;box-shadow:rgb(10, 172, 237) -4px 4px}
+.button { background-color: #36bf2d; border: none; color: white !important; padding: 20px 0px; text-align: center; text-decoration: none; display: block; font-size: 97%; width: 100%; font-weight: bold;}
+.button:hover { background-color: #4CAF50; color: white; }
+.animated.delay-1dot5s {animation-delay: 1.5s;}
+.md-icon--search { display:inline-block!important}
+a.headerlink{ display: none !important; }
+small.edited { display: block; text-align: right; }
+#cookie-bar { padding: 1.8rem 1.25rem !important; background: #191A1D  !important; box-shadow:rgba(0, 0, 0, 0.2) 4px 4px 8px 8px; }
+#cookie-bar-prompt-logo{ display: none !important; }
+div.my-img{text-align:center;margin-top:20px}
+@media (max-width: 76.1875em){ .mini{ display: block; } .maxi{ display: none;} /*.md-nav__link[for="nav-1"] { display: none; }*/ }
+@media (min-width: 1599.9px){ .md-header-nav__button.md-logo img { height: 37.5px !important; width: 220px; } }
+@media (min-width: 1999.9px){ .md-header-nav__button.md-logo img { height: 40px !important; width: 240px; } }
+/* Rectificación footer en paginas pequeñas de altura */
+@media (max-width: 1599.8px){ .md-container {height: calc(100% - 48px)} }
+@media (min-width: 1599.9px){ .md-container {height: calc(100% - 53px)} }
+@media (min-width: 1999.9px){ .md-container {height: calc(100% - 58px)} }
+@media only screen and (max-width: 959.9px) { .nav__logo { display: block !important; }} 
+@media only screen and (min-width: 960px) and (max-width: 76.1875em) { .nav__logo { display: block !important; }} 
+@media only screen and (min-width: 76.1875em) { .nav__logo { display: none !important; } } 
+@media only screen and (max-width: 76.1875em) { .md-sidebar--primary { left: -26.2rem;; width: 26.2rem; }  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary { -webkit-transform: translateX(26.2rem); transform: translateX(26.2rem); } [dir="rtl"] [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary { -webkit-transform: translateX(-26.2rem); transform: translateX(-26.2rem); } }
+@media (min-width: 1219.9px){ #home__btn { display: none !important; } #cursos__btn{ color: white !important; } [data-md-color-primary="grey"] .md-nav__link--active{ color: rgba(0, 0, 0, 0.87); text-decoration: underline !important; } }
+@media (min-width: 467.9px){ #discord__btn{ display: inline-block !important; } }
+@media only screen and (min-width: 60em){ .md-search__input { background-color: rgb(53, 54, 56); } .md-search__input:hover { background-color: rgb(84, 87, 93); color: white; }}
+@media (max-width: 1219.9px){ .md-header-nav__title{ padding: 0 1rem; } .nav__btn {display:none;} }
+@media (max-width: 875.9px){ #cookie-bar-button{ margin-top: 20px !important; }}
+@media (max-width: 719.9px){ #cookie-bar { padding: 3.25rem 1.25rem; }}
+@media (max-width: 512.9px){ #cookie-bar { padding: 2rem 1.25rem; }}
+
+.tingle-modal { font-size:18px !important;}
+.tingle-modal-box{ width: 80%; max-width: 1100px; }
+.tingle-btn--danger{ background: darkorange !important; }
+.tingle-modal-box__content { padding: 3rem 2rem 3rem 3rem;}
+@media (max-width: 540px){ .tingle-modal-box{ width: auto; } }
+@media (max-width: 849px){ #supermodal{ grid-template-columns:100% !important; }}
+
+.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 275px - 60px)}
+@media (max-width: 1999.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 246px - 60px);margin-right:-1px;}}
+@media (max-width: 1599.9px){.md-sidebar--secondary .md-sidebar__scrollwrap {max-height: calc(100% - 222px - 60px)}}
+
+</style>
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="grey">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#matriz-de-vista-y-camaras" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header
+  class="md-header"
+  data-md-component="header"
+  style="position: inherit !important"
+>
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="/"
+          title="Hektor Profe"
+          class="md-header-nav__button md-logo"
+          style="font-size: 0px"
+        >
+          <img
+            src="/assets/images/logo.png"
+            width="200px"
+            height="35px"
+            style="margin-top: -5px"
+            alt="Hektor Profe"
+            title="Hektor Profe"
+          />
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+          style="text-align: right"
+        >
+          <!-- https://fontawesome.com/v4.7.0/ -->
+          <a 
+            class="nav__btn" 
+            href="https://www.hektorprofe.net/" 
+            style="margin-left:0em;" 
+            title="Cursos de Hektor Profe">
+            Cursos
+          </a>
+          <a 
+            class="nav__btn" 
+            href="https://docs.hektorprofe.net/" 
+            style="margin-left:1.4em;" 
+            title="Documentos de Hektor Profe">
+            Documentos
+          </a>
+          <a 
+            class="nav__btn" 
+            href="https://www.hektorprofe.net/portafolio/" 
+            style="margin-left:1.4em;" 
+            title="Portafolio de Hektor Profe">
+            Portafolio
+          </a>
+          <a href="/"
+            ><img
+              class="nav__logo"
+              src="/assets/images/logo.png"
+              width="200px"
+              height="35px"
+              style="margin: 6px auto 0"
+              alt="Hektor Profe"
+              title="Hektor Profe"
+          /></a>
+        </div>
+        <style>
+          .md-sidebar[data-md-state="lock"] {
+            top: 0rem !important;
+          }
+          .md-tabs {
+            display: none !important;
+          }
+          .hde {
+            display: inline-block;
+          }
+          .admonition.note > .superfences-tabs > label:hover,
+          .headerlink {
+            color: #018dc5 !important;
+          }
+          .admonition.info {
+            font-size: 100%;
+          }
+          .admonition.info label {
+            font-size: 91%;
+          }
+          .admonition.note > .admonition-title {
+            display: none;
+          }
+          .image {
+            text-align: center;
+            margin-top: 25px;
+          }
+          .contenedor_youtube {
+            position: relative !important;
+            padding-bottom: 56.25% !important; /*panorámico*/
+            padding-top: 0px !important;
+            height: 0 !important;
+            margin-top: -20px;
+            margin-bottom: 25px;
+          }
+          .contenedor_youtube iframe {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+          }
+        </style>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container" style="padding-top: 0px !important;">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list" id="top__tabs">
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+          <li class="md-tabs__item"><a href="javascript://" class="md-tabs__link">&nbsp;</a></li>
+        
+      </ul>
+    </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container" style="padding-top: 8px !important;">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap" id="md__sidebar__scroll">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title" for="__drawer" style="padding:0 !important;max-height:5.5rem;"></label>
+  
+  <ul class="md-nav__list" id="main__list" data-md-scrollfix>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+        <!-- comprobación extra -->
+         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Apuntes de Gráficos 3D
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Apuntes de Gráficos 3D
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Índice del archivo" class="md-nav__link">
+      Índice del archivo
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../01-configuracion-previa/" title="Configuración previa" class="md-nav__link">
+      Configuración previa
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../02-buffer-de-color/" title="Buffer de color" class="md-nav__link">
+      Buffer de color
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../03-vectores-y-puntos/" title="Vectores y puntos" class="md-nav__link">
+      Vectores y puntos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../04-proyeccion-de-puntos/" title="Proyección de puntos" class="md-nav__link">
+      Proyección de puntos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../05-transformaciones-lineales/" title="Transformaciones lineales" class="md-nav__link">
+      Transformaciones lineales
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../06-triangulos-vertices-mallas/" title="Triángulos, vértices y mallas" class="md-nav__link">
+      Triángulos, vértices y mallas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../07-rasterizacion-de-lineas/" title="Rasterización de líneas" class="md-nav__link">
+      Rasterización de líneas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../08-mallas-en-memoria-dinamica/" title="Mallas en memoria dinámica" class="md-nav__link">
+      Mallas en memoria dinámica
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../09-ficheros-con-modelos-obj/" title="Ficheros con modelos OBJ" class="md-nav__link">
+      Ficheros con modelos OBJ
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../10-operaciones-con-vectores/" title="Operaciones con vectores" class="md-nav__link">
+      Operaciones con vectores
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../11-back-face-culling/" title="Back-face Culling" class="md-nav__link">
+      Back-face Culling
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../12-rasterizacion-de-triangulos/" title="Rasterización de triángulos" class="md-nav__link">
+      Rasterización de triángulos
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../13-interfaz-dear-imgui/" title="Interfaz Dear ImGui" class="md-nav__link">
+      Interfaz Dear ImGui
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../14-ordenar-caras-por-profundidad/" title="Ordenar caras por profundidad" class="md-nav__link">
+      Ordenar caras por profundidad
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../15-operaciones-con-matrices/" title="Operaciones con matrices" class="md-nav__link">
+      Operaciones con matrices
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../16-matrices-de-transformacion-3d/" title="Matrices de transformación 3D" class="md-nav__link">
+      Matrices de transformación 3D
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../17-matriz-de-proyeccion/" title="Matriz de proyección" class="md-nav__link">
+      Matriz de proyección
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../18-luz-y-sombreado/" title="Luz y sombreado" class="md-nav__link">
+      Luz y sombreado
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../19-migracion-a-visual-studio/" title="Migración a Visual Studio" class="md-nav__link">
+      Migración a Visual Studio
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../20-mapeado-de-texturas/" title="Mapeado de texturas" class="md-nav__link">
+      Mapeado de texturas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../21-interpolacion-de-perspectiva/" title="Interpolación de perspectiva" class="md-nav__link">
+      Interpolación de perspectiva
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../22-decodificacion-de-ficheros-png/" title="Decodificación de ficheros PNG" class="md-nav__link">
+      Decodificación de ficheros PNG
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../23-ficheros-obj-con-texturas/" title="Ficheros OBJ con texturas" class="md-nav__link">
+      Ficheros OBJ con texturas
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../24-profundidad-con-z-buffer/" title="Profundidad con Z-Buffer" class="md-nav__link">
+      Profundidad con Z-Buffer
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Matriz de vista y cámaras
+      </label>
+    
+    <a href="./" title="Matriz de vista y cámaras" class="md-nav__link md-nav__link--active" id="md__active_link">
+      Matriz de vista y cámaras
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#camara-look-at" title="Cámara Look-at" class="md-nav__link toc__link">
+    Cámara Look-at
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-delta-time" title="Variable Delta-time" class="md-nav__link toc__link">
+    Variable Delta-time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camara-fps" title="Cámara FPS" class="md-nav__link toc__link">
+    Cámara FPS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../26-renderizado-y-debug-separado/" title="Renderizado y debug separado" class="md-nav__link">
+      Renderizado y debug separado
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../27-clipping/" title="Clipping" class="md-nav__link">
+      Clipping
+    </a>
+  </li>
+
+        
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../28-multiples-mallas/" title="Múltiples mallas" class="md-nav__link">
+      Múltiples mallas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+</nav>
+
+                  </div>
+                </div>
+              </div>
+            
+
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                
+                  
+                    <div class="course-offer" style="margin-bottom:25px;padding:0px 10px;">
+                      <a href="https://www.hektorprofe.net/cupon/python" target="_blank">
+                        <img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/>
+                      </a>
+                    </div>
+                  
+                
+
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#camara-look-at" title="Cámara Look-at" class="md-nav__link toc__link">
+    Cámara Look-at
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-delta-time" title="Variable Delta-time" class="md-nav__link toc__link">
+    Variable Delta-time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camara-fps" title="Cámara FPS" class="md-nav__link toc__link">
+    Cámara FPS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="matriz-de-vista-y-camaras">Matriz de vista y cámaras<a class="headerlink" href="#matriz-de-vista-y-camaras" title="Permanent link">&para;</a></h1>
+<p>Este proyecto está prácticamente acabado a falta de implementar una cámara en condiciones para navegar por la escena y la implementación del <em>clipping</em>.</p>
+<p>Actualmente estamos manejando dos transformaciones muy importantes mediante dos matrices, una de mundo y otra de proyección. La primera sitúa un objeto en el mundo tridimensional y la segunda transforma ese espacio 3D a uno 2D para visualizarlo en la pantalla. Sin embargo, nuestra idea actual de una cámara, el lugar desde el que estamos observando, es el origen del mundo 3D <code>(0,0,0)</code> y lo que hacemos es llevarnos el <code>mesh</code> al fondo para visualizarlo.</p>
+<p>Evidentemente esto no es lo que realmente nos interesa, lo ideal es contar con una cámara de verdad que pueda moverse por la escena y visualizar el conjunto del mundo desde su posición: </p>
+<p><img alt="" src="/cdn/graficos3d/image-128.png" /></p>
+<p>Para conseguir este propósito introduciremos lo que se denomina una <strong>matriz de vista</strong> (<em>view matrix</em>), una transformación que ejecutaremos para establecer el punto de vista desde un lugar concreto. El resultado ya no será el espacio del mundo (<em>world space</em>) sino el espacio de la vista (<em>view space</em>).</p>
+<p>En conjunto si repasamos el ciclo de transformaciones tendremos diferentes espacios:</p>
+<ol>
+<li>
+<p>En primer lugar los vértices se encuentran en el <strong>espacio del modelo</strong>, también llamado sistema de coordenadas local y vienen dadas por el propio modelo al crearlo:</p>
+<p><img alt="" src="/cdn/graficos3d/image-129.png" /></p>
+</li>
+<li>
+<p>A continuación realizamos la transformación de los vértices al <strong>espacio del mundo</strong> multiplicando el espacio del modelo por la matriz de mundo:</p>
+<p><img alt="" src="/cdn/graficos3d/image-130.png" /></p>
+</li>
+<li>
+<p>El siguiente paso será aplicar la transformación de los vértices al <strong>espacio de la vista</strong> multiplicando el espacio del mundo por la matriz de vista:</p>
+<p><img alt="" src="/cdn/graficos3d/image-127.png" /></p>
+</li>
+<li>
+<p>Finalmente aplicaremos la transformación de proyección al <strong>espacio de la  pantalla</strong> (<em>screen space</em>) multiplicando el espacio de vista por la matriz de proyección:</p>
+<p><img alt="" src="/cdn/graficos3d/image-131.png" /></p>
+</li>
+</ol>
+<p>Dependiendo del tipo de cámara que vayamos a implementar aplicaremos una matriz de vista distinta. Por ejemplo, una <strong><em>Look-at Camera</em></strong> es la que mira hacia un lugar concreto, mientras que una cámara de tipo <strong><em>FPS Camera</em></strong> incorpora libertad de movimiento en el espacio.</p>
+<p>Empecemos por la cámara hacia un lugar concreto.</p>
+<h2 id="camara-look-at">Cámara Look-at<a class="headerlink" href="#camara-look-at" title="Permanent link">&para;</a></h2>
+<p>Una de las formas de implementar  una <code>view matrix</code> es mediante una función <code>lookAt</code> que retornará una matriz <code>4x4</code> utilizada para multiplicar los vértices y convertirlos al <code>view space</code>.</p>
+<p>Para establecer la posición y orientación de la cámara en el espacio, se necesita dos puntos:</p>
+<ul>
+<li>El de la posición de la cámara en el espacio (<code>eye point</code> o punto del ojo).</li>
+<li>El de la posición hacia donde está mirando la cámara (<code>target point</code> o punto objetivo).</li>
+</ul>
+<p>La transformación <code>lookAt</code> es la responsable de devolver la matriz de la vista (<code>MatrixView</code>) y consta consta de dos transformaciones:</p>
+<ol>
+<li>Primero la <strong>traslación</strong> de toda la escena de forma inversa desde la posición del ojo de la cámara hacia el origen (<code>MatrixTranslation</code>).</li>
+<li>Luego la <strong>rotación</strong> de la escena con la orientación revertida (<code>MatrixRotation</code>), de manera que la cámara esté posicionada en el origen y mirando al eje <code>Z</code> positivo (por utilizar un sistema basado en la regla de la mano izquierda).</li>
+</ol>
+<p>La <strong>matriz de la vista</strong> será por tanto la combinación de la <strong>matriz de rotación</strong> y la <strong>matriz de traslación</strong>:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Orange}&space;View}}&space;=&space;M_{R}&space;*&space;M_{T}" /></p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Orange}&space;View}}&space;=&space;\begin{bmatrix}r_{11}&space;&&space;r_{12}&space;&&space;r_{13}&space;&&space;0&space;\\r_{21}&space;&&space;r_{22}&space;&&space;r_{23}&space;&&space;0&space;\\r_{31}&space;&&space;r_{32}&space;&&space;r_{33}&space;&&space;0&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}*\begin{bmatrix}1&space;&&space;0&space;&&space;0&space;&&space;t_{x}&space;\\0&space;&&space;1&space;&&space;0&space;&&space;t_{y}&space;\\0&space;&&space;0&space;&&space;1&space;&&space;t_{z}&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;" /></p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Orange}&space;View}}&space;=&space;\begin{bmatrix}r_{11}&space;&&space;r_{12}&space;&&space;r_{13}&space;&&space;(r_{11}t_{x}&space;&plus;&space;r_{12}t_{y}&space;&plus;&space;r_{13}t_{z})&space;\\r_{21}&space;&&space;r_{22}&space;&&space;r_{23}&space;&&space;(r_{21}t_{x}&space;&plus;&space;r_{22}t_{y}&space;&plus;&space;r_{23}t_{z})&space;\\r_{31}&space;&&space;r_{32}&space;&&space;r_{33}&space;&&space;(r_{31}t_{x}&space;&plus;&space;r_{32}t_{y}&space;&plus;&space;r_{33}t_{z})&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}" /></p>
+<p>Ahora debemos determinar cuáles son los elementos a aplicar en ambas matrices, así que vamos a diseccionar las dos transformaciones.</p>
+<p>La <strong>matriz de traslación</strong> es sencilla, solo tenemos que mover la posición de la cámara al origen:</p>
+<p><img alt="" src="/cdn/graficos3d/image-132.png" /></p>
+<p>Substituiremos la cuarta columna la matriz de traslación <code>MT</code> por la posición del ojo negado (el sistema está basado en la regla de la mano izquierda):</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{DarkGreen}&space;T}}&space;=&space;\begin{bmatrix}1&space;&&space;0&space;&&space;0&space;&&space;{\color{Blue}&space;-&space;eye}_{x}&space;\\0&space;&&space;1&space;&&space;0&space;&&space;{\color{Blue}&space;-&space;eye}_{y}&space;\\0&space;&&space;0&space;&&space;1&space;&&space;{\color{Blue}&space;-&space;eye}_{z}&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}"/></p>
+<p>La <strong>matriz de rotación</strong> es algo más compleja, debemos empezar computando los vectores <code>(Z adelante, X derecha, Y arriba)</code> de la cámara respecto a donde está mirando:</p>
+<p><img alt="" src="/cdn/graficos3d/image-133.png" /></p>
+<p>Estos tres vectores <code>(x, y, z)</code> los utilizaremos para construir la matriz de rotación <code>MR</code>:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Magenta}&space;R}}&space;=&space;\begin{bmatrix}{\color{Red}&space;x}_{x}&space;&&space;{\color{DarkGreen}&space;y}_{x}&space;&&space;{\color{Cyan}&space;z}_{x}&space;&&space;0&space;\\{\color{Red}&space;x}_{y}&space;&&space;{\color{DarkGreen}&space;y}_{y}&space;&&space;{\color{Cyan}&space;z}_{y}&space;&&space;0&space;\\{\color{Red}&space;x}_{z}&space;&&space;{\color{DarkGreen}&space;y}_{z}&space;&&space;{\color{Cyan}&space;z}_{z}&space;&&space;0&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}" /></p>
+<p>Sin emargo esta matriz debe estar invertida. ¿Por qué? Si por ejemplo suponemos que la cámara se encuentra por encima de la escena, toda la escena deberá encontrarse rotada hacia abajo. Si se encuentra a la izquierda de la escena, toda la escena deberá encontrarse rotada hacia la izquierda, lo contrario. Por esa razón debemos computar la matriz inversa:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Magenta}&space;R}}&space;=&space;\begin{bmatrix}{\color{Red}&space;x}_{x}&space;&&space;{\color{DarkGreen}&space;y}_{x}&space;&&space;{\color{Cyan}&space;z}_{x}&space;&&space;0&space;\\{\color{Red}&space;x}_{y}&space;&&space;{\color{DarkGreen}&space;y}_{y}&space;&&space;{\color{Cyan}&space;z}_{y}&space;&&space;0&space;\\{\color{Red}&space;x}_{z}&space;&&space;{\color{DarkGreen}&space;y}_{z}&space;&&space;{\color{Cyan}&space;z}_{z}&space;&&space;0&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}^{-1}" /></p>
+<p>El inverso de un número es aquel que multiplicado por el propio número da como resultado <code>1</code>:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}N&space;*&space;\frac{1}{N}&space;=&space;1"/></p>
+<p>Con una matriz el concepto es el mismo, solo que en lugar de <code>1</code>, multiplicar una matriz por su inversa dará como resultado la <strong>matriz de identidad</strong>:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M&space;*&space;M^{-1}&space;=&space;I" /></p>
+<p>En la programación gráfica, si tenemos una matriz que rota un elemento por un cierto ángulo, hacer la inversa de esa matriz de rotación hará justo lo contrario, rotar de nuevo el elemento a la posición inicial, es decir, deshacer la operación.</p>
+<p>Como decía encontrar la inversa de una matriz es algo bastante tedioso, pero por suerte para nosotros hay un caso donde se simplifica y justamente es el que tenemos en la matriz de rotación <code>MR</code>.</p>
+<p>Cuando una <strong>matriz es ortogonal</strong>, cada fila tiene una longitud de <code>1</code> (necesitaremos normalizar los valores) y los valores son mútuamente perpendiculares (podemos invertirlos), para invertirla sólo tenemos que encontrar su <strong>matriz transpuesta</strong>, que consiste en intercambiar los filas y las columnas:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Magenta}&space;R}}&space;=&space;\begin{bmatrix}{\color{Red}&space;x}_{x}&space;&&space;{\color{DarkGreen}&space;y}_{x}&space;&&space;{\color{Cyan}&space;z}_{x}&space;&&space;0&space;\\{\color{Red}&space;x}_{y}&space;&&space;{\color{DarkGreen}&space;y}_{y}&space;&&space;{\color{Cyan}&space;z}_{y}&space;&&space;0&space;\\{\color{Red}&space;x}_{z}&space;&&space;{\color{DarkGreen}&space;y}_{z}&space;&&space;{\color{Cyan}&space;z}_{z}&space;&&space;0&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}^{T}&space;=&space;\begin{bmatrix}{\color{Red}&space;x}_{x}&space;&&space;{\color{Red}&space;x}_{y}&space;&&space;{\color{Red}&space;x}_{z}&space;&&space;0&space;\\{\color{DarkGreen}&space;y}_{x}&space;&&space;{\color{DarkGreen}&space;y}_{y}&space;&&space;{\color{DarkGreen}&space;y}_{z}&space;&&space;0&space;\\{\color{Cyan}&space;z}_{x}&space;&&space;{\color{Cyan}&space;z}_{y}&space;&&space;{\color{Cyan}&space;z}_{z}&space;&&space;0&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}" /></p>
+<p>Así pues, al aplicar todos los valores la <strong>matriz de la vista</strong> quedará:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Orange}&space;View}}&space;=&space;\begin{bmatrix}{\color{Red}&space;x}_{x}&space;&&space;{\color{Red}&space;x}_{y}&space;&&space;{\color{Red}&space;x}_{z}&space;&&space;0&space;\\{\color{DarkGreen}&space;y}_{x}&space;&&space;{\color{DarkGreen}&space;y}_{y}&space;&&space;{\color{DarkGreen}&space;y}_{z}&space;&&space;0&space;\\{\color{Cyan}&space;z}_{x}&space;&&space;{\color{Cyan}&space;z}_{y}&space;&&space;{\color{Cyan}&space;z}_{z}&space;&&space;0&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}*&space;&space;&space;\begin{bmatrix}1&space;&&space;0&space;&&space;0&space;&&space;{\color{Blue}&space;-&space;eye}_{x}&space;\\0&space;&&space;1&space;&&space;0&space;&&space;{\color{Blue}&space;-&space;eye}_{y}&space;\\0&space;&&space;0&space;&&space;1&space;&&space;{\color{Blue}&space;-&space;eye}_{z}&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1&space;\\\end{bmatrix}&space;&space;" /></p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Orange}View}}=\begin{bmatrix}{\color{Red}&space;x}_{x}&&{\color{Red}&space;x}_{y}&&{\color{Red}&space;x}_{z}&&(-{\color{Red}&space;x}_{x}&space;{\color{Blue}eye}_{x}&space;-{\color{Red}&space;x}_{y}{\color{Blue}eye}_{y}&space;-&space;{\color{Red}&space;x}_{z}{\color{Blue}eye}_{z}&space;)\\{\color{DarkGreen}&space;y}_{x}&&{\color{DarkGreen}&space;y}_{y}&&{\color{DarkGreen}&space;y}_{z}&&(-{\color{DarkGreen}&space;y}_{x}&space;{\color{Blue}eye}_{x}&space;-{\color{DarkGreen}&space;y}_{y}{\color{Blue}eye}_{y}&space;-&space;{\color{DarkGreen}&space;y}_{z}{\color{Blue}eye}_{z}&space;)\\{\color{Cyan}&space;z}_{x}&&{\color{Cyan}&space;z}_{y}&&{\color{Cyan}&space;z}_{z}&&(-{\color{Cyan}&space;z}_{x}&space;{\color{Blue}eye}_{x}&space;-{\color{Cyan}&space;z}_{y}{\color{Blue}eye}_{y}&space;-&space;{\color{Cyan}&space;z}_{z}{\color{Blue}eye}_{z}&space;)\\0&&1&&0&&1\\\end{bmatrix}"></p>
+<p>Lo cual se puede simplificar mediante <strong>productos escalares</strong>, en la forma final de nuestra <strong>matriz de la vista</strong> para una cámara <code>lookAt</code>:</p>
+<p><img src="https://latex.codecogs.com/png.image?\dpi{150}\bg{white}M_{{\color{Orange}View}}=\begin{bmatrix}{\color{Red}x}_{x}&&{\color{Red}x}_{y}&&{\color{Red}x}_{z}&&-dot(-{\color{Red}x},&space;{\color{Blue}eye})\\{\color{DarkGreen}y}_{x}&&{\color{DarkGreen}y}_{y}&&{\color{DarkGreen}y}_{z}&&-dot(-{\color{DarkGreen}y},&space;{\color{Blue}eye})\\{\color{Cyan}z}_{x}&&{\color{Cyan}z}_{y}&&{\color{Cyan}z}_{z}&&-dot(-{\color{Cyan}z},&space;{\color{Blue}eye})\\0&&1&&0&&1\\\end{bmatrix}"/></p>
+<p>Ahora que tenemos la matriz podemos al fin codificar el método <code>LookAt</code> en la clase <code>Matrix4</code>:</p>
+<p><img alt="" src="/cdn/graficos3d/image-134.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">Matrix4</span><span class="w"> </span><span class="nf">LookAt</span><span class="p">(</span><span class="n">Vector3</span><span class="w"> </span><span class="n">eye</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">up</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Forward (z) vector in new coordinate system</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">eye</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Right (x) vector in new coordinate system</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">up</span><span class="p">.</span><span class="n">CrossProduct</span><span class="p">(</span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Up (y) vector in new coordinate system</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="p">.</span><span class="n">CrossProduct</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Normalize the vectors</span>
+<span class="w">    </span><span class="n">x</span><span class="p">.</span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">y</span><span class="p">.</span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">z</span><span class="p">.</span><span class="n">Normalize</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// | x.x   x.y   x.z   -dot(x.eye) |</span>
+<span class="w">    </span><span class="c1">// | y.x   y.y   y.z   -dot(y.eye) |</span>
+<span class="w">    </span><span class="c1">// | z.x   z.y   z.z   -dot(z.eye) |</span>
+<span class="w">    </span><span class="c1">// |   0     0     0             1 |</span>
+
+<span class="w">    </span><span class="n">Matrix4</span><span class="w"> </span><span class="n">viewMatrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="p">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">eye</span><span class="p">)</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="p">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">eye</span><span class="p">)</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="n">z</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">.</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">z</span><span class="p">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">eye</span><span class="p">)</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w">                  </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">}};</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">viewMatrix</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Básicamente buscamos los vectores del nuevo sistema de coordenadas y los normalizamos porque solo nos interesa su dirección (teniendo en cuenta que nuestro sistema funciona con la regla de la mano izquierda). Luego construimos la <strong>matriz de la vista</strong> mediante los vectores y el ojo.</p>
+<p>En este punto vamos a modificar el funcionamiento del programa, a partir de ahora ya no tendremos un <code>Vector3</code> simulando una cámara con el punto origen, sino que la cámara constituirá su propia clase <code>camera.h</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#ifndef CAMERA_H</span>
+<span class="cp">#define CAMERA_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vector.h&quot;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Camera</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">position</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</code></pre></div>
+<p>De esta cámara crearemos una instancia en <code>window.h</code>, conservaremos el array actual todo a cero para usarlo de interfaz para el slider:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;camera.h&quot;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Window</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* Camera settings */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">Camera</span><span class="w"> </span><span class="n">camera</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Como ya no utilizaremos <code>cameraPosition</code> le actualizaremos el valor debajo de la interfaz:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Update Camera Position</span>
+<span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+</code></pre></div>
+<p>Ahora tenemos que adaptar el <code>mesh</code>, empezando por el método <code>SetTranslation</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Mesh::SetTranslation</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">translation</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Con rectificación de origen</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">translation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">translation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">translation</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">translation</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Luego en <code>Mesh::Update</code> modificamos el método <code>ApplyCulling</code> para que ahora reciba un puntero a la cámara:</p>
+<div class="highlight"><pre><span></span><code><span class="n">triangles</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">ApplyCulling</span><span class="p">(</span><span class="o">&amp;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Este método cambiará un poco su lógica respecto a la primera versión, pues ahora asumiremos siempre el punto origen <code>(0,0,0)</code> para calcular el <code>cameraRay</code> (teniendo en cuenta que esto es antes de aplicar la transformación del espacio de la vista):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ApplyCulling</span><span class="p">(</span><span class="n">Camera</span><span class="w"> </span><span class="o">*</span><span class="n">camera</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Setup up the origin 0,0,0 to calculate the initial cameraRay</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Find the vector between a triangle point and camera origin</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">cameraRay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">origin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Calculate how aligned the camera ray is with the face normal</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">dotNormalCamera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">normal</span><span class="p">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">cameraRay</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Test the dotNormalCamera and render the triangle if is &gt;0</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">culling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">dotNormalCamera</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Ahora, justo al principio de cada <code>mesh.Update</code> vamos a crear la matriz <code>viewMatrix</code> de tipo <code>lookAt</code>, por ahora hacia un punto harcodeado.</p>
+<p>No es necesaria crear esta matriz en cada ciclo, podemos definirla globalmente en la ventana:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* Camera settings */</span><span class="w"></span>
+<span class="n">Matrix4</span><span class="w"> </span><span class="n">viewMatrix</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="n">Camera</span><span class="w"> </span><span class="n">camera</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Pero sí que la iremos recalculando en el <code>Update</code>  porque si cambia su posición o dirección, todo cambiará :</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Mesh::Update</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Create a hardcoded target point and the up direction vector</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">upDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Calculate the view matrix for each frame</span>
+<span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">viewMatrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Matrix4</span><span class="o">::</span><span class="n">LookAt</span><span class="p">(</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">upDirection</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Justo después de aplicar la transformación de mundo haremos lo propio con la matriz de la vista:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*** Apply world transformation and view transformation for all face vertices ***/</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// World transformation to get the world space</span>
+<span class="w">    </span><span class="n">triangles</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">WorldVertexTransform</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="p">,</span><span class="w"> </span><span class="n">rotation</span><span class="p">,</span><span class="w"> </span><span class="n">translation</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// View transformation to get the view space (aka camera space) </span>
+<span class="w">    </span><span class="n">triangles</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">ViewVertexTransform</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">viewMatrix</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>La implementación será muy sencilla en <code>Triangle</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ViewVertexTransform</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">vertexIndex</span><span class="p">,</span><span class="w"> </span><span class="n">Matrix4</span><span class="w"> </span><span class="n">viewMatrix</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Multiply the view matrix by the original vector to transform the scene to camera space</span>
+<span class="w">    </span><span class="n">Vector4</span><span class="w"> </span><span class="n">transformedVertex</span><span class="p">{</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="n">vertexIndex</span><span class="p">]</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">transformedVertex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transformedVertex</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">viewMatrix</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">vertices</span><span class="p">[</span><span class="n">vertexIndex</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transformedVertex</span><span class="p">.</span><span class="n">ToVector3</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>En este punto ya lo tendremos, pero antes de ejecutar el resultado recordemos que por defecto el modelo se encuentra en el origen <code>(0,0,0)</code>. Como hemos establecido nuestra cámara también en <code>(0,0,0)</code> al estar el modelo cortando la cámara es posible que el programa se bloquee o muy muy lento (si la profundidad respecto al ojo tiende a 0 el tamaño resultante es infinito).</p>
+<p>Para solucionarlo, primero vamos a rectificar que se reste la cámara de la posición del mesh (ya no nos hace falta):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Mesh::SetTranslation</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">translation</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Con rectificación de origen</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">translation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">translation</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">translation</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">translation</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Y simplemente estableceremos la posición del modelo inicialmente a una profundidad de 4 o 5 en <code>window.h</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* Model settings */</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">modelTranslation</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>El resultado será el mismo que teníamos antes de utilizar la cámara:</p>
+<p><img alt="" src="/cdn/graficos3d/image-135.png" /></p>
+<p>A simple vista no parece una gran mejora pero si actualizamos en cada fotograma el vector <code>target</code> a donde se encuentra el modelo y añadimos un pequeño cambio en la posición de la cámara:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Mesh::Update</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Create a hardcoded target point and the up direction vector</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">modelTranslation</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span>
+<span class="w">        </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">modelTranslation</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span>
+<span class="w">        </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">modelTranslation</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Add a slight movement to the camera to the right</span>
+<span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Quedará claro que hemos conseguido algo súmamente importante:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-38.gif" /> </p>
+<p>Ya podemos renderizar el escenario desde cualquier posición mirando a un punto concreto.</p>
+<h2 id="variable-delta-time">Variable Delta-time<a class="headerlink" href="#variable-delta-time" title="Permanent link">&para;</a></h2>
+<p>Actualmente estamos realizando un ligero cambio en la posición de la cámara en cada fotograma para simular que ésta se aleja del modelo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span><span class="w"></span>
+<span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span><span class="w"></span>
+<span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>El problema de estos valores es que afectan en función de los fotogramas. Cuanto mayor sea la tasa de FPS más rápido cambiará la posición de cámara porque los valores se incrementarán/decrementarán más veces.</p>
+<p>Esto es lo que se conoce como movimiento en función de los fotogramas y si podiéramos asegurar que la tasa de FPS es completamente estable no sería un problema. Pero el caso es que eso dista mucho de la realidad, pues los FPS son tendientes a cambiar dependiendo de lo ocupado que se encuentre el procesador, incluso pueden variar por la potencia del propio procesar.</p>
+<p>La solución es realizar el movimiento en función del tiempo, pues esa unidad es común independientemente de los FPS y para ello se almacena en una variable conocida como <code>deltaTime</code> la diferencia de tiempo en el que se ejecuta un fotograma y el siguiente. Usando como factor esa cantidad, que por ejemplo a <code>60</code> FPS sería <code>1/60 = 0.016</code>, podemos establecer un movimiento más preciso en función del tiempo como por ejemplo "X distancia por segundo" y funcionará para cualquier tasa de FPS que tengamos.</p>
+<p>Lo que generalmente haríamos es calcular la diferencia de <code>SDL_GetTicks()</code> respecto a otra variable almacenada en el anterior fotogorama. Sin embargo al haber implementado la interfaz <code>Dear ImGui</code> esa información nos la calcula la biblioteca automáticamente y la encontramos en <code>ImGui::GetIO().DeltaTime</code>.</p>
+<p>Si el acceso nos parece demasiado largo podemos definir una variable <code>float deltaTime</code> en <code>window.h</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Window</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* DeltaTime*/</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Y establecerla con ese valor en cada fotograma:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// DeltaTime saving</span>
+<span class="n">deltaTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ImGui</span><span class="o">::</span><span class="n">GetIO</span><span class="p">().</span><span class="n">DeltaTime</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Solo tendremos que utilizarla donde precisemos, por ejemplo al alejar la cámara, ahora utilizando una cantidad de distancia por segundo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">window</span><span class="o">-&gt;</span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Ahora independientemente de si tenemos 5 FPS:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-39.gif" /> </p>
+<p>O 300 FPS:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-40.gif" /> </p>
+<p>La velocidad de movimiento siempre será 1 unidad del mundo por segundo.</p>
+<h2 id="camara-fps">Cámara FPS<a class="headerlink" href="#camara-fps" title="Permanent link">&para;</a></h2>
+<p>Para implementar una cámara libre tipo <code>FPS</code> que podamos mover a voluntad en el sistema, necesitamos considerar las diferencias respecto a una cámara <code>lookAt</code>:</p>
+<ol>
+<li>Para empezar, como la cámara no tendrá un objetivo sino que apuntará hacia donde nosotros queramos, necesitaremos un <strong>vector con la dirección</strong> a parte de la posición. </li>
+<li>Si podemos mover la cámara hacia adelante y atrás eso necesitamos un <strong>vector de velocidad de velocidad adelante</strong> para el eje <code>Z</code>, otro para moverla a la izquierda y a la derecha que podemos llamar <strong>vector de velocidad lateral</strong> para el eje <code>X</code> y uno para el eje <code>Y</code> para mover el <strong>vector de velocidad vertical</strong> hacia arriba y abajo. </li>
+<li>Finalmente para rotar la cámara tanto horizontalmente como verticalmente necesitaremos <strong>diferentes ángulos</strong> conocidos como <code>yaw</code> y <code>pitch</code>, los cuales se basan en congelar un eje y realizar la rotación en el espacio a su alrededor:
+    <img alt="" src="/cdn/graficos3d/image-136.png" /></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Camera</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">position</span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">direction</span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">forwardVelocity</span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">sideVelocity</span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">verticalVelocity</span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">2</span><span class="p">]{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="c1">// y,p</span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Para ayudarme a debugear la información añadiré algunos unos campos para los ángulos en la interfaz:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ImGui</span><span class="o">::</span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Ángulos cámara (yaw,pitch,roll)&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">SliderFloat2</span><span class="p">(</span><span class="s">&quot;Angles&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Posición ratón (X,Y)&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">SliderInt2</span><span class="p">(</span><span class="s">&quot;Mouse&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mousePosition</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Además definiré un kit de variables para controlar la posición del ratón, si ha ocurrido un click y el lugar, etc:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Window</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* Camera and mouse settings */</span><span class="w"></span>
+<span class="w">    </span><span class="n">Camera</span><span class="w"> </span><span class="n">camera</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">Matrix4</span><span class="w"> </span><span class="n">viewMatrix</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">mouseClicked</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mousePosition</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mouseClickPosition</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Empezaremos por la rotación <code>yaw</code> y <code>pitch</code>, capturando los eventos <code>SDL_MOUSEBUTTONDOWN</code>, <code>SDL_MOUSEBUTTONUP</code> y <code>SDL_MOUSEMOTION</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Window::ProcessInput</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Update mouse positions for debugging</span>
+<span class="w">    </span><span class="n">SDL_GetMouseState</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mousePosition</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mousePosition</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">SDL_PollEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ImGui_ImplSDL2_ProcessEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEBUTTONDOWN</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">mouseClicked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Save current click position</span>
+<span class="w">            </span><span class="c1">// SDL_GetMouseState(&amp;mouseClickPosition[0], &amp;mouseClickPosition[1]);</span>
+<span class="w">            </span><span class="c1">// SDL_SetRelativeMouseMode(SDL_TRUE);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEBUTTONUP</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">mouseClicked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// SDL_SetRelativeMouseMode(SDL_FALSE);</span>
+<span class="w">            </span><span class="c1">// Reset current click position</span>
+<span class="w">            </span><span class="c1">// SDL_WarpMouseInWindow(window, mouseClickPosition[0], mouseClickPosition[1]);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEMOTION</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mouseClicked</span><span class="p">){</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// Rotation per second in radians</span>
+<span class="w">                </span><span class="kt">float</span><span class="w"> </span><span class="n">mouseSensitivity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.075</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="n">motion</span><span class="p">.</span><span class="n">xrel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mouseSensitivity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="n">motion</span><span class="p">.</span><span class="n">yrel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mouseSensitivity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">;</span><span class="w"> </span>
+<span class="w">                </span><span class="c1">// Clamp the pitch between values close to -90º and 90º (-PI/2 and PI/2) to avoid flipping</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="n">M_PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.05</span><span class="p">))</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">M_PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">M_PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.05</span><span class="p">))</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M_PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Básicamente incrementaremos los ángulos <code>yaw</code> y <code>pìtch</code> en función del movimiento del ratón en los ejes horizontal y vertical respectivamente. Cuando empiece el clic y finalice controlaremos una variable booleana <code>mouseClicked</code> y guardaremos la posición del click en la pantalla. Mientras el ratón está presionado podremos modificar los ángulos moviendo el ratón.</p>
+<p>Con esto tenemos los ángulos de rotación y debemos crear la matriz de la vista para nuestra cámara FPS. Reutilizaremos el método Matrix::LookAt pero adaptando el vector objetivo <code>target</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Mesh::Update</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//// FPS CAMERA VIEW MATRIX WITHOUT HARDCODED TARGET</span>
+<span class="w">    </span><span class="c1">// Create an initial target vector forward the z-axis</span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span><span class="w">  </span>
+<span class="w">    </span><span class="c1">// Calculate yaw rotation matrix and set the direction</span>
+<span class="w">    </span><span class="n">Matrix4</span><span class="w"> </span><span class="n">cameraYawRotationMatrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Matrix4</span><span class="o">::</span><span class="n">RotationYMatrix</span><span class="p">(</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Matrix4</span><span class="w"> </span><span class="n">cameraPitchRotationMatrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Matrix4</span><span class="o">::</span><span class="n">RotationXMatrix</span><span class="p">(</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">yawPitch</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cameraPitchRotationMatrix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cameraYawRotationMatrix</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Offset the camera position in the direction where the camera is pointing at</span>
+<span class="w">    </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">direction</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">upDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Calculate the view matrix for each frame</span>
+<span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">viewMatrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Matrix4</span><span class="o">::</span><span class="n">LookAt</span><span class="p">(</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">upDirection</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Esta parte tiene más miga pero no es tan difícil, empezaremos con un <code>Vector3</code> básico para el objetivo. Es importante que tenga una profundidad <code>Z</code> mayor o igual a 1 porque eso implica que nuestro objetivo <code>target</code> estará inicialmente hacia adelante de la cámara (si el sistema utilizará la regla de la mano derecha deberíamos cambiar el número a <code>-1</code>).</p>
+<p>Luego generaremos dos matrices de rotación, la del ángulo <code>yaw</code> a partir de nuestro método <code>Matrix4::RotationYMatrix</code> y la del ángulo <code>pitch</code> a partir del método <code>Matrix4::RotationXMatrix</code> y los multiplicaremos por el <code>target</code> para conseguir la dirección de cámara. </p>
+<p>Una vez tengamos la cámara mirando a la dirección ya rotada en <code>X</code> e <code>Y</code> calcularemos la posición del <code>target</code> simplemente como el offset entre la posición de la cámara y su dirección. Con el <code>target</code> listo calcularemos la matriz de la vista con <code>LookAt</code> y ya estará, podremos rotar la vista mientras h hacemos clic en la ventana:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-41.gif" /> </p>
+<p>La segunda parte de la cámara FPS es añadir el movimiento en función de las velocidades en el eje <code>Z</code> y <code>X</code>, para lo cuál he optado por un sistema en torno a la instrucción <code>SDL_GetKeyboardState</code> que genera un mapa de todas las teclas presionadas justo después de procesar el <code>while</code> de los eventos:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Process the WASD movement with a keyState map</span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">keystate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SDL_GetKeyboardState</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Calculate the forwardVelocity for the z axis and increment it</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">zMovement</span><span class="p">{</span><span class="w"> </span><span class="n">keystate</span><span class="p">[</span><span class="n">SDL_SCANCODE_W</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">keystate</span><span class="p">[</span><span class="n">SDL_SCANCODE_S</span><span class="p">]</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">zMovement</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">camera</span><span class="p">.</span><span class="n">forwardVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">direction</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">forwardVelocity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">zMovement</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Calculate the sideVelocity for the x axis and increment it</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">xMovement</span><span class="p">{</span><span class="w"> </span><span class="n">keystate</span><span class="p">[</span><span class="n">SDL_SCANCODE_A</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">keystate</span><span class="p">[</span><span class="n">SDL_SCANCODE_D</span><span class="p">]</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">xMovement</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Vector3</span><span class="w"> </span><span class="n">vectorLeft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">direction</span><span class="p">.</span><span class="n">CrossProduct</span><span class="p">({</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="n">camera</span><span class="p">.</span><span class="n">sideVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vectorLeft</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">sideVelocity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">xMovement</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Calculate the verticalVelocity for the y axis and increment it</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">yMovement</span><span class="p">{</span><span class="w"> </span><span class="n">keystate</span><span class="p">[</span><span class="n">SDL_SCANCODE_E</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">keystate</span><span class="p">[</span><span class="n">SDL_SCANCODE_Q</span><span class="p">]</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">yMovement</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">camera</span><span class="p">.</span><span class="n">verticalVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">verticalVelocity</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">yMovement</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Set the result moving positions into the camera interface</span>
+<span class="w">    </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">cameraPosition</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Primero detectamos si hay movimiento en el eje <code>Z</code>, de manera que tengamos almacenado un factor <code>-1, 0, 1</code>. Si ese factor es distinto de 0 significa que hay que mover la cámara en el eje <code>Z</code>. Ese eje es el de la propia dirección de la cámara <code>camera.direction</code>, solo debemos multiplicar esa dirección por una cantidad de movimiento y tendremos la <code>forwardVelocity</code> para incrementar <code>camera.position</code>.</p>
+<p>Luego haremos exactamente lo mismo para el eje <code>X</code>, pero deberemos calcular al  principio un vector para el eje <code>X</code> de la cámara. Eso es tan fácil como hacer el producto vectorial entre la dirección a la que mira la cámara y un vector genérico hacia arriba <code>{0,1,0}</code>. Este vector en el eje <code>X</code> llamado <code>vectorLeft</code> marcará la dirección y lo multiplicaremos por la cantidad a movernos en ese eje para luego sumarla a la posición:</p>
+<p><img alt="" src="/cdn/graficos3d/image-42.png" /></p>
+<p>En cuanto al eje <code>Y</code>es el más sencillo, tan solo debemos aplicar un <code>VectorUp</code> genérico con la respectiva velocidad.</p>
+<p>Luego actualizamos los valores de la interfaz de la cámara <code>cameraPosition</code> con la nueva posición que hemos calculado en <code>camera.position</code>:</p>
+<p><img alt="" src="/cdn/graficos3d/anim-42.gif" /> </p>
+<p>Con esto he finalizado el desarrollo de la cámara FPS utilizando teclas <code>WASD</code> y apuntando con dirección del ratón.</p>
+<hr />
+<p><small class="edited"><i>Última edición: 05 de Junio de 2022</i></small></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-nav">
+    <nav class="md-footer-nav__inner md-grid">
+      
+      <a
+        href="../24-profundidad-con-z-buffer/"
+        title="Profundidad con Z-Buffer"
+        class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+        rel="prev"
+      >
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+        </div>
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+          <span class="md-flex__ellipsis">
+            <span class="md-footer-nav__direction">
+              Anterior
+            </span>
+            Profundidad con Z-Buffer
+          </span>
+        </div>
+      </a>
+       
+      <a
+        href="../26-renderizado-y-debug-separado/"
+        title="Renderizado y debug separado"
+        class="md-flex md-footer-nav__link md-footer-nav__link--next"
+        rel="next"
+      >
+        <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+          <span class="md-flex__ellipsis">
+            <span class="md-footer-nav__direction">
+              Siguiente
+            </span>
+            Renderizado y debug separado
+          </span>
+        </div>
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+        </div>
+      </a>
+      
+    </nav>
+  </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        <!--<div class="md-footer-links__highlight">
+          <a href="/comunidad/">Comunidad</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/sobre-mi/">Sobre mí</a>
+        </div>-->
+        <div class="md-footer-copyright__highlight">
+          2015 - 2022 &copy; Héctor Costa Guzmán (<u
+            ><a
+              href="https://creativecommons.org/licenses/by/4.0/deed.es"
+              target="_blank"
+              rel="nofollow"
+              >Licencia CC BY 4.0</a
+            ></u
+          >)
+        </div>
+      </div>
+       
+<style>.md-footer-social__link {transition: 0.3s;}</style>
+<div class="md-footer-social" style="font-size: 2.5rem; margin-top: -6px!important; padding: 0px!important; margin-bottom: -6px; overflow: hidden!important;">
+  <a href="https://github.com/hcosta" title="Github" target="_blank" class="md-footer-social__link fa fa-github-square"></a>
+  <a href="https://www.youtube.com/c/HektorProfe" title="Youtube" target="_blank" class="md-footer-social__link fa fa-youtube-square"></a>
+  &nbsp;
+</div>
+ 
+    </div>
+  </div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
+    ga("create", "UA-124845547-1", "auto");
+    ga("send", "pageview");
+  </script>
+</footer>
+      
+      <a id="anchorID" href="https://www.hektorprofe.net/" target="_blank"></a>
+    </div>
+  <script type='text/javascript' src="/assets/javascripts/application.a26c1c21.js"></script>
+  <script src="/assets/javascripts/tingle.min.js"></script>
+  <script type='text/javascript'>
+    var modalButtonOnly = new tingle.modal({
+        closeMethods: [],
+        footer: true,
+        stickyFooter: true
+    });
+    var btn5 = document.querySelector('.js-tingle-modal-5');
+
+    // set content
+    modalButtonOnly.setContent(`
+    <div style="display:grid;grid-template-columns:32% 32% 32%;grid-column-gap: 1.33%;" id="supermodal">
+      <div class="course">
+        <a href="https://www.hektorprofe.net/cupon/python" target="_blank"><img src="/cdn/assets/python.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+      </div>
+      <div class="course">
+        <a href="https://www.hektorprofe.net/cupon/django" target="_blank"><img src="/cdn/assets/django.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+      </div>
+      <div class="course">
+        <a href="https://www.hektorprofe.net/cupon/pyside" target="_blank"><img src="/cdn/assets/pyside.png" style="width:100%;justify-self:center;align-self:center;"/></a>
+      </div>
+    </div>`);
+
+    modalButtonOnly.addFooterBtn('Cerrar', 'tingle-btn tingle-btn--default tingle-btn--pull-right', function(){
+      modalButtonOnly.close();
+    });
+
+    app.initialize({version:"1.2.3",url:{base:"../.."}})
+    var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t[o]=n[o])}return t},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};!function(t,e){"object"===("undefined"==typeof exports?"undefined":_typeof(exports))&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.LazyLoad=e()}(this,function(){"use strict";function t(t,e,n){var o=e._settings;!n&&i(t)||(C(o.callback_enter,t),R.indexOf(t.tagName)>-1&&(N(t,e),I(t,o.class_loading)),E(t,e),a(t),C(o.callback_set,t))}var e={elements_selector:"img",container:document,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",class_loading:"loading",class_loaded:"loaded",class_error:"error",load_delay:0,callback_load:null,callback_error:null,callback_set:null,callback_enter:null,callback_finish:null,to_webp:!1},n=function(t){return _extends({},e,t)},o=function(t,e){return t.getAttribute("data-"+e)},r=function(t,e,n){var o="data-"+e;null!==n?t.setAttribute(o,n):t.removeAttribute(o)},a=function(t){return r(t,"was-processed","true")},i=function(t){return"true"===o(t,"was-processed")},s=function(t,e){return r(t,"ll-timeout",e)},c=function(t){return o(t,"ll-timeout")},l=function(t){return t.filter(function(t){return!i(t)})},u=function(t,e){return t.filter(function(t){return t!==e})},d=function(t,e){var n,o=new t(e);try{n=new CustomEvent("LazyLoad::Initialized",{detail:{instance:o}})}catch(t){(n=document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized",!1,!1,{instance:o})}window.dispatchEvent(n)},f=function(t,e){return e?t.replace(/\.(jpe?g|png)/gi,".webp"):t},_="undefined"!=typeof window,v=_&&!("onscroll"in window)||/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),g=_&&"IntersectionObserver"in window,h=_&&"classList"in document.createElement("p"),b=_&&function(){var t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}(),m=function(t,e,n,r){for(var a,i=0;a=t.children[i];i+=1)if("SOURCE"===a.tagName){var s=o(a,n);p(a,e,s,r)}},p=function(t,e,n,o){n&&t.setAttribute(e,f(n,o))},y=function(t,e){var n=b&&e.to_webp,r=o(t,e.data_src),a=o(t,e.data_bg);if(r){var i=f(r,n);t.style.backgroundImage='url("'+i+'")'}if(a){var s=f(a,n);t.style.backgroundImage=s}},w={IMG:function(t,e){var n=b&&e.to_webp,r=e.data_srcset,a=t.parentNode;a&&"PICTURE"===a.tagName&&m(a,"srcset",r,n);var i=o(t,e.data_sizes);p(t,"sizes",i);var s=o(t,r);p(t,"srcset",s,n);var c=o(t,e.data_src);p(t,"src",c,n)},IFRAME:function(t,e){var n=o(t,e.data_src);p(t,"src",n)},VIDEO:function(t,e){var n=e.data_src,r=o(t,n);m(t,"src",n),p(t,"src",r),t.load()}},E=function(t,e){var n=e._settings,o=t.tagName,r=w[o];if(r)return r(t,n),e._updateLoadingCount(1),void(e._elements=u(e._elements,t));y(t,n)},I=function(t,e){h?t.classList.add(e):t.className+=(t.className?" ":"")+e},L=function(t,e){h?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")},C=function(t,e){t&&t(e)},O=function(t,e,n){t.addEventListener(e,n)},k=function(t,e,n){t.removeEventListener(e,n)},x=function(t,e,n){O(t,"load",e),O(t,"loadeddata",e),O(t,"error",n)},A=function(t,e,n){k(t,"load",e),k(t,"loadeddata",e),k(t,"error",n)},z=function(t,e,n){var o=n._settings,r=e?o.class_loaded:o.class_error,a=e?o.callback_load:o.callback_error,i=t.target;L(i,o.class_loading),I(i,r),C(a,i),n._updateLoadingCount(-1)},N=function(t,e){var n=function n(r){z(r,!0,e),A(t,n,o)},o=function o(r){z(r,!1,e),A(t,n,o)};x(t,n,o)},R=["IMG","IFRAME","VIDEO"],S=function(e,n,o){t(e,o),n.unobserve(e)},M=function(t){var e=c(t);e&&(clearTimeout(e),s(t,null))},j=function(t,e,n){var o=n._settings.load_delay,r=c(t);r||(r=setTimeout(function(){S(t,e,n),M(t)},o),s(t,r))},D=function(t){return t.isIntersecting||t.intersectionRatio>0},T=function(t){return{root:t.container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}},U=function(t,e){this._settings=n(t),this._setObserver(),this._loadingCount=0,this.update(e)};return U.prototype={_manageIntersection:function(t){var e=this._observer,n=this._settings.load_delay,o=t.target;n?D(t)?j(o,e,this):M(o):D(t)&&S(o,e,this)},_onIntersection:function(t){t.forEach(this._manageIntersection.bind(this))},_setObserver:function(){g&&(this._observer=new IntersectionObserver(this._onIntersection.bind(this),T(this._settings)))},_updateLoadingCount:function(t){this._loadingCount+=t,0===this._elements.length&&0===this._loadingCount&&C(this._settings.callback_finish)},update:function(t){var e=this,n=this._settings,o=t||n.container.querySelectorAll(n.elements_selector);this._elements=l(Array.prototype.slice.call(o)),!v&&this._observer?this._elements.forEach(function(t){e._observer.observe(t)}):this.loadAll()},destroy:function(){var t=this;this._observer&&(this._elements.forEach(function(e){t._observer.unobserve(e)}),this._observer=null),this._elements=null,this._settings=null},load:function(e,n){t(e,this,n)},loadAll:function(){var t=this;this._elements.forEach(function(e){t.load(e)})}},_&&function(t,e){if(e)if(e.length)for(var n,o=0;n=e[o];o+=1)d(t,n);else d(t,e)}(U,window.lazyLoadOptions),U});
+    var myLazyLoad = new LazyLoad({elements_selector: ".lazy"});
+    const mdMenuItems = document.querySelectorAll('.md-nav__link');
+    function doNav(){ document.getElementById("main__list").innerHTML = '<li class="md-nav__item"><a class="md-nav__link" href="/cursos/">Cursos</a></li><li class="md-nav__item"><a class="md-nav__link" href="/blog/">Blog</a></li>';}
+    for (i = 0; i < mdMenuItems.length; i++) {  var item = mdMenuItems[i]; var htmlstring = item.innerHTML; htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/,''); if (htmlstring == 'Servidor de encuentro') { item.parentNode.removeChild(item);continue; }  if (htmlstring == 'Política de Cookies') { item.parentNode.removeChild(item);continue; } if (htmlstring == 'Buscador') { item.parentNode.removeChild(item); continue; } }
+    try { var topPos = document.querySelector('#md__active_link').offsetTop; document.querySelector('#md__sidebar__scroll').scrollTop = topPos - 60; } catch (err) {}
+  </script>
+  </body>
+</html>
