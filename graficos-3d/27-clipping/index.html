@@ -1440,8 +1440,8 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Repasando el <em>rendering pipeline</em> de mi sistema:</p>
 <ol>
 <li><strong>Model space</strong>: El modelo empieza en su propio espacio codificado tal como se ha creado en un programa de modelado.</li>
-<li><strong>World space</strong>: Le aplicamos la transformación de mundo para ubicarlo en nuestro espacio 3D.</li>
-<li><strong>View space</strong>: Le aplicamos la transformación de la vista para visualizarlo desde nuestra cámara. </li>
+<li><strong>World space</strong>: Aplicamos la transformación de mundo para ubicarlo en nuestro espacio 3D.</li>
+<li><strong>View space</strong>: Aplicamos la transformación de la vista para visualizarlo desde nuestra cámara. </li>
 <li><strong>Back-face culling</strong>: Mediante el cálculo de las normales determinamos qué triángulos no son visibles por la cámara y les hacemos un <em>bypass</em>.</li>
 <li><strong>Frustum clipping</strong>: Realizamos el descarte y recorte de los triángulos para cada plano del <em>frustum</em> regenerando los triángulos mediante la interpolación de los vértices y coordenadas.</li>
 <li><strong>Projection</strong>: Aplicamos la matriz de proyección para transformar el espacio 3D a 2D. </li>
