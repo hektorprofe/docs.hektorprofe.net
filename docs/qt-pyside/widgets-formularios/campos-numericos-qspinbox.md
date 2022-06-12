@@ -2,6 +2,8 @@ title: Campos numéricos QSpinBox y QDoubleSpinBox | Curso Qt/PySide | Hektor Pr
 
 # Campos numéricos QSpinBox y QDoubleSpinBox
 
+<img src="{{cdn}}/pyside/12.png">
+
 A diferencia de los campos de texto, los numéricos fuerzan al usuario a escribir números y proveen métodos para su control. Encontramos para almacenar enteros y decimales, empecemos por los enteros:
 
 ```python
@@ -52,6 +54,8 @@ En ambos widgets podemos establecer un valor por defecto con el método `setValu
 numero.setValue(3.14)
 print(numero.value())
 ```
+
+<img src="{{cdn}}/pyside/11.png">
 
 Con esto acabamos el repaso de los widgets básicos para formularios.
 

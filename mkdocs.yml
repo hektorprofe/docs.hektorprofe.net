@@ -45,26 +45,23 @@ nav:
     - 'buscador.md'
 
   - Academia de programación:
-    - Índice del archivo:                 'academia/index.md'
-    - Lenguaje Python:
-      - Introducción a Python:            'academia/python/introduccion.md'
-      - POO para interfaces gráficas:     'academia/python/poo-para-interfaces-graficas.md'
-      - Proyecto gestor de clientes:      'academia/python/proyecto-gestor-clientes.md'
-      - Tutoriales sobre Python:          'academia/python/tutoriales.md'
-      - Módulo analítico NumPy:           'academia/python/modulo-analitico-numpy.md'
-      - Módulo gráfico Matplotlib:        'academia/python/modulo-grafico-matplotlib.md'
-      - Introducción a Django:            'academia/django/introduccion.md'
-      - Proyecto API con DRF:             'academia/django/api-rest-framework.md'
-      - Tutoriales sobre Django:          'academia/django/tutoriales.md'
-    - Lenguaje JavaScript:
-      - Introducción a JavaScript:        'academia/javascript/introduccion.md'
-      - Proyecto conversor vía API:       'academia/javascript/conversor-divisas.md'
-      - Introducción a P5.js:             'academia/javascript/biblioteca-p5js.md'
-      - Introducción a Node.js:           'academia/javascript/nodejs.md'  
-      - Proyecto chat online:             'academia/javascript/chat-heroku.md'
-      - Proyecto cliente Nuxt.js:         'academia/javascript/cliente-nuxt.md'    
-    - GNU/Linux:
-      - Configurar Ubuntu Server:         'academia/gnu-linux/ubuntu-server-web.md'
+    - Índice del archivo:               'academia/index.md'
+    - Python para principiantes:        'academia/python/introduccion.md'
+    - Python para interfaces gráficas:  'academia/python/poo-para-interfaces-graficas.md'
+    - Gestor de clientes con Python:    'academia/python/proyecto-gestor-clientes.md'
+    - Más tutoriales sobre Python:      'academia/python/tutoriales.md'
+    - Módulo analítico NumPy:           'academia/python/modulo-analitico-numpy.md'
+    - Módulo gráfico Matplotlib:        'academia/python/modulo-grafico-matplotlib.md'
+    - Django para principiantes:        'academia/django/introduccion.md'
+    - Server API pelis en Django Rest:  'academia/django/api-rest-framework.md'
+    - Más tutoriales sobre Django:      'academia/django/tutoriales.md'
+    - JavaScript para principiantes:    'academia/javascript/introduccion.md'
+    - Conversor de divisas en JS:       'academia/javascript/conversor-divisas.md'
+    - Introducción a P5.js:             'academia/javascript/biblioteca-p5js.md'
+    - Introducción a Node.js:           'academia/javascript/nodejs.md'  
+    - Chat online con Node.js:          'academia/javascript/chat-heroku.md'
+    - Cliente API pelis en Nuxt.js:     'academia/javascript/cliente-nuxt.md'    
+    - Configurar Ubuntu Server:         'academia/gnu-linux/ubuntu-server-web.md'
 
   - Apuntes de Python:                    
     - Índice del archivo:                 'python/index.md'
@@ -442,6 +439,37 @@ nav:
     - Creación de ejecutables:
       - AutoPytoExe:                      'pygame/ejecutables/autopytoexe.md'
 
+  - Apuntes de Gráficos 3D:                    
+    - Índice del archivo:                 'graficos-3d/index.md'  
+    - Configuración previa:               'graficos-3d/01-configuracion-previa/index.md' 
+    - Buffer de color:                    'graficos-3d/02-buffer-de-color/index.md' 
+    - Vectores y puntos:                  'graficos-3d/03-vectores-y-puntos/index.md' 
+    - Proyección de puntos:               'graficos-3d/04-proyeccion-de-puntos/index.md' 
+    - Transformaciones lineales:          'graficos-3d/05-transformaciones-lineales/index.md' 
+    - Triángulos, vértices y mallas:      'graficos-3d/06-triangulos-vertices-mallas/index.md' 
+    - Rasterización de líneas:            'graficos-3d/07-rasterizacion-de-lineas/index.md' 
+    - Mallas en memoria dinámica:         'graficos-3d/08-mallas-en-memoria-dinamica/index.md' 
+    - Ficheros con modelos OBJ:           'graficos-3d/09-ficheros-con-modelos-obj/index.md' 
+    - Operaciones con vectores:           'graficos-3d/10-operaciones-con-vectores/index.md' 
+    - Back-face Culling:                  'graficos-3d/11-back-face-culling/index.md' 
+    - Rasterización de triángulos:        'graficos-3d/12-rasterizacion-de-triangulos/index.md' 
+    - Interfaz Dear ImGui:                'graficos-3d/13-interfaz-dear-imgui/index.md' 
+    - Ordenar caras por profundidad:      'graficos-3d/14-ordenar-caras-por-profundidad/index.md' 
+    - Operaciones con matrices:           'graficos-3d/15-operaciones-con-matrices/index.md' 
+    - Matrices de transformación 3D:      'graficos-3d/16-matrices-de-transformacion-3d/index.md' 
+    - Matriz de proyección:               'graficos-3d/17-matriz-de-proyeccion/index.md' 
+    - Luz y sombreado:                    'graficos-3d/18-luz-y-sombreado/index.md' 
+    - Migración a Visual Studio:          'graficos-3d/19-migracion-a-visual-studio/index.md' 
+    - Mapeado de texturas:                'graficos-3d/20-mapeado-de-texturas/index.md' 
+    - Interpolación de perspectiva:       'graficos-3d/21-interpolacion-de-perspectiva/index.md' 
+    - Decodificación de ficheros PNG:     'graficos-3d/22-decodificacion-de-ficheros-png/index.md' 
+    - Ficheros OBJ con texturas:          'graficos-3d/23-ficheros-obj-con-texturas/index.md' 
+    - Profundidad con Z-Buffer:           'graficos-3d/24-profundidad-con-z-buffer/index.md' 
+    - Matriz de vista y cámaras:          'graficos-3d/25-matriz-de-vista-y-camara/index.md' 
+    - Renderizado y debug separado:       'graficos-3d/26-renderizado-y-debug-separado/index.md' 
+    - Clipping:                           'graficos-3d/27-clipping/index.md' 
+    - Múltiples mallas:                   'graficos-3d/28-multiples-mallas/index.md' 
+
   - Apuntes de Unity:                    
     - Índice del archivo:                 'unity/index.md'               
     - Introducción:                     
@@ -465,6 +493,8 @@ nav:
 
   - Escuela de Videojuegos:
     - Índice del archivo:                 'escueladevideojuegos/index.md'
+    - Academia de Unity Engine:           'escueladevideojuegos/academia-unity.md'
+    - "Academia de GM: Studio":           'escueladevideojuegos/academia-gamemaker.md'
     - Artículos destacados:
       - ¿Qué son los videojuegos?:        'escueladevideojuegos/articulos/que-es-un-videojuego.md'
       - ¿Cómo funcionan?:                 'escueladevideojuegos/articulos/funciona-videojuego-fases-logicas.md'

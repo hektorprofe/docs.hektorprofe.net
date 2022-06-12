@@ -2,6 +2,8 @@ title: Layouts básicos QVBoxLayout y QHBoxLayout | Curso Qt/PySide | Hektor Pro
 
 # Layouts básicos QVBoxLayout y QHBoxLayout
 
+<img src="{{cdn}}/pyside/14.png">
+
 Existen dos tipos de disposición básica para organizar elementos vertical u horizontalmente.
 
 Empecemos por el primer tipo:

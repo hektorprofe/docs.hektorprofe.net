@@ -2,6 +2,8 @@ title: Barra de herramientas QToolBar | Curso Qt/PySide | Hektor Profe
 
 # Barra de herramientas QToolBar
 
+<img src="{{cdn}}/pyside/26.png">
+
 Las barras de herramientas son otros componentes estandar para ejecutar funcionalidades de los programas. A diferencia de los menús estas barras son más flexibles y generalmente presentan las opciones de forma visual mediante iconos:
 
 ```python

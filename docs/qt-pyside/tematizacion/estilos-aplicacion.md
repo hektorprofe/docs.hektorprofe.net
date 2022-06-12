@@ -2,6 +2,8 @@ title: Estilos de aplicación | Curso Qt/PySide | Hektor Profe
 
 # Estilos de aplicación
 
+<img src="{{cdn}}/pyside/30.png">
+
 Los estilos modifican la estética de los componentes. Por defecto Qt aplica estilos específicos para cada plataforma para integrar la aplicación visualmente, esa es la razón por la que el mismo programa se verá diferente en Windows, Linux y Mac.
 
 Los estilos se pueden personaliar para no hacerlos dependientes de la plataforma y de hecho el propio Qt tiene un tema llamado **Fusion** que provee una estética multiplataforma y moderna.

@@ -2,6 +2,8 @@ title: Botones radiales QRadioButton | Curso Qt/PySide | Hektor Profe
 
 # Botones radiales QRadioButton
 
+<img src="{{cdn}}/pyside/07.png">
+
 Muy parecidas a las casillas son los botones radiales, sin embargo estos solo pueden marcarse o desmarcarse, no tienen estado neutro:
 
 ```python

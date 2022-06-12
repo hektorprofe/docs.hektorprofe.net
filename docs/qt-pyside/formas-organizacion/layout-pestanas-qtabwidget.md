@@ -2,6 +2,8 @@ title: Layout con pestañas QTabWidget | Curso Qt/PySide | Hektor Profe
 
 # Layout con pestañas QTabWidget
 
+<img src="{{cdn}}/pyside/19.gif">
+
 El último tipo de disposición que veremos es con pestañas utilizando un `QTabWidget`, se trata de una variante del apilado con un control más visual. Esta variante sí hereda de la clase `QWidget` y por tanto no requiere un dummy widget:
 
 ```python

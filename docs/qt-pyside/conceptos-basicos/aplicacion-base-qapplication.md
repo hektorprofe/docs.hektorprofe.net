@@ -2,6 +2,8 @@ title: Primera aplicación QApplication | Curso Qt/PySide | Hektor Profe
 
 # Primera aplicación QApplication
 
+<img src="{{cdn}}/pyside/01.png">
+
 Estructura básica de un programa en PySide usando el componente base de Qt llamado `QWidget`, un widget vacío:
 
 ```python

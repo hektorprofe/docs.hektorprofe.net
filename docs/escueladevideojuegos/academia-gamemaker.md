@@ -1,16 +1,20 @@
 title: Academia de GameMaker | Escuela de videojuegos | Hektor Profe
 Slug: academia-gamemaker
 
-!!! error "Programa descatalogado"
-    Estos tutoriales se realizaron con GameMaker: Studio 1.4 y por desgracia esta versión ya no se puede descargar desde la web oficial porque está descatalogada en pos de GameMaker: Studio 2.
+# Academia GM: Studio | Escuela de videojuegos
 
-## Tu primer videojuego
+!!! error "Programa descatalogado"
+    Estos tutoriales se realizaron con GameMaker: Studio 1.4 y por desgracia esta versión ya no se puede descargar desde la web oficial porque está descatalogada en pos de GameMaker: Studio 2. 
+    
+    **Copia de seguridad**: Buenas noticias, me han compartido <u><a href="https://drive.google.com/file/d/1CyGFbzr5G5CEX3DCdhXirZ-W0vOeFKYO/view" target="_blank">una copia del programa en este enlace de Google Drive</a></u>.
+
+## Tu Primer Videojuego
 
 <div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-primer-juego-gamemaker.jpg"/></div>
 
 Bienvenido al primer peldaño de tu aprendizaje en este magnífico mundo de la creación de videojuegos. Este curso está planteado como una toma de contacto con GameMaker: Studio 1.4. El objetivo es crear un juego sin programar ni una línea de código, sólo arrastrando componentes y dibujando nosotros mismos todo a mano. Se trata de manejar una avioneta arriba y abajo para esquivar una serie de bombas que nos aparecerán por el cielo y así llegar lo más lejos posible. Un apasionante viaje descubriendo de forma progresiva las distintas acciones lógicas que esconden los videojuegos.
 
-|  Lección  | Ver en Youtube |
+|  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
 |  01 |  [Presentación](https://www.youtube.com/watch?v=nrCiSd1UgGw&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
 |  02 |  [Conceptos básicos de los videojuegos](https://www.youtube.com/watch?v=5voXzQ0Gr6M&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
@@ -32,7 +36,7 @@ Bienvenido al primer peldaño de tu aprendizaje en este magnífico mundo de la c
 |  18 |  [Alarmas y Aleatoriedad](https://www.youtube.com/watch?v=kX_j2OciGEA&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
 |  19 |  [Mejorar la experiencia final](https://www.youtube.com/watch?v=JTmo4zBZi9A&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
 
-## El lenguaje GML
+## El Lenguaje GML
 
 <div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-gml-gamemaker.jpg"/></div>
 
@@ -41,7 +45,7 @@ Ahora que ya sabes cómo funciona un juego es hora de dar un paso adelante y exp
 !!! info "Recursos"
     Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1hhrzeWCL78JQMQOO6GM-EE9Yt69CLr5r" target="_blank">02_El lenguaje GML.zip</a>
 
-|  Lección  | Ver en Youtube |
+|  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
 |  01 |  [Variables y Literales](https://www.youtube.com/watch?v=LGEoxuvY1s4&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
 |  02 |  [Macros](https://www.youtube.com/watch?v=kz3oIdr3gjo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
@@ -60,10 +64,8 @@ Ahora que ya sabes cómo funciona un juego es hora de dar un paso adelante y exp
 |  15 |  [Cambios de Room](https://www.youtube.com/watch?v=BaTGBtdKLBU&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
 |  16 |  [Control de Alarmas](https://www.youtube.com/watch?v=AKLmmnYv66Y&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
 |  17 |  [Control de Sonido](https://www.youtube.com/watch?v=Y4h26ebw20s&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  18 |  [EXTRA: Arreglos 1D](https://www.youtube.com/watch?v=oVoUdi-_iqQ&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  19 |  [EXTRA: Arreglos 2D (Tablas)](https://www.youtube.com/watch?v=mD_QFDtzMHw&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
 
-## Juego PONG
+## Juego Arcade PONG
 
 <div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-pong-gamemaker.jpg"/></div>
 
@@ -72,7 +74,7 @@ Después de aprender los conceptos fundamentales del GML, ¿qué mejor manera de
 !!! info "Recursos"
     Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1wk4GjMrJ6XFvMow84jYjELBZxRcueIsh" target="_blank">03_Juego Pong.zip</a>
 
-|  Lección  | Ver en Youtube |
+|  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
 |  01 |  [Presentación](https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
 |  02 |  [Preparar recursos](https://www.youtube.com/watch?v=q0BqL9e8vLY&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
@@ -87,7 +89,7 @@ Después de aprender los conceptos fundamentales del GML, ¿qué mejor manera de
 |  11 |  [Mejorar portada](https://www.youtube.com/watch?v=ROEuZkA6pcU&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
 |  12 |  [Retoques y distribución](https://www.youtube.com/watch?v=QgxQr8D89oM&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
 
-## Nueve minijuegos
+## Nueve Mini Juegos
 
 <div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-9-juegos-gamemaker.jpg"/></div>
 
@@ -96,7 +98,7 @@ Ya has creado tu primer videojuego completo y tienes conocimientos de lógica de
 !!! info "Recursos"
     Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1Io1QfCfAPy_wWFHG613YSovZ1ZpFg8dC" target="_blank">04_Nueve minijuegos.zip</a>
 
-|  Lección  | Ver en Youtube |
+|  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
 |  01 |  [Breakout](https://www.youtube.com/watch?v=Q5nWKVP5iJ4&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
 |  02 |  [Plataformas](https://www.youtube.com/watch?v=laq930_oewU&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
@@ -117,7 +119,7 @@ Después de mucho esfuerzo puedo traeros una nueva serie. Esta vez se trata de e
 !!! info "Recursos"
     Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1lB8Kl3jPfW1CqWJe7qw-j4V3SwRxcncq" target="_blank">05_Juego shooter TDS.zip</a>
 
-|  Lección  | Ver en Youtube |
+|  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
 |  01 |  [Presentación](https://www.youtube.com/watch?v=58T2sHvBfQ0&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
 |  02 |  [Movimiento básico](https://www.youtube.com/watch?v=EheRpKQoNO0&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
@@ -154,7 +156,7 @@ Después del TDS el listón estaba muy alto, pero lo hemos vuelto a superar con 
 !!! info "Recursos"
     Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1X5-xqcbKCOZoXwYbBt5OAmaB0LiFvlXC" target="_blank">06_Juego ARPG.zip</a>
 
-|  Lección  | Ver en Youtube |
+|  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
 |  01 |  [Presentación](https://www.youtube.com/watch?v=fB1HSO5Fwuw&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
 |  02 |  [Sprites y movimiento](https://www.youtube.com/watch?v=tInSBFqnT_E&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
@@ -179,59 +181,13 @@ Después del TDS el listón estaba muy alto, pero lo hemos vuelto a superar con 
 !!! info "Recursos"
     Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1c5b2uOXoduameCiDzrQ_k-1RXLrJ_lTy" target="_blank">07_Juego Beatem Up.zip</a>
 
-|  Lección  | Ver en Youtube | 
+|  Lección  | Ver en Odysee | 
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
 |  01 |  [Controlando Animaciones](https://www.youtube.com/watch?v=7vuoJSgVf7A&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
 |  02 |  [Controlando Movimientos](https://www.youtube.com/watch?v=Lg-V4Leoe7w&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
 |  03 |  [Añadiendo Enemigos](https://www.youtube.com/watch?v=clyteCzNICI&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
 |  04 |  [Creando Barra de Vida](https://www.youtube.com/watch?v=6rkfj96Aa70&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
 |  05 |  [Creando Escenas](https://www.youtube.com/watch?v=wkkWSg2VbWs&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
-
-## Tutoriales y consejos
-
-<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-tutoriales-gamemaker.jpg"/></div>
-
-A parte de mis series y cursos también he publicado un montón de tutoriales sobre GameMaker: Studio 1.4 tratando todo tipo de temas. Desde un tutorial de descarga e instalación, métodos para crear transiciones entre rooms, manejo de colisiones y objetos dinámicos, cómo simular disparos de Megaman X, cómo crear juegos de cartas en GameMaker, un montón de consejos y mucho más.
-
-!!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1tUcXrQJJXlNofZPIwMhNyRTN669zFrFk" target="_blank">08_Tutoriales y consejos.zip</a>
-
-|  Lección  | Ver en Youtube |
-|  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Guía de descarga de GameMaker (obsoleto)](https://www.youtube.com/watch?v=wfURa6rEn6U&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  02 |  [Creando transiciones 1](https://www.youtube.com/watch?v=JzeqX1ZcafA&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  03 |  [Creando transiciones 2](https://www.youtube.com/watch?v=pdIPQ6e0bfA&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  04 |  [Creando transiciones 3](https://www.youtube.com/watch?v=EV6W75PMA10&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  05 |  [Manejo de objetos dinámicos](https://www.youtube.com/watch?v=eUU7A0ert68&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  06 |  [Disparo estilo Megaman X](https://www.youtube.com/watch?v=RcciolMuxAI&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  07 |  [Colisiones perfectas](https://www.youtube.com/watch?v=jZXRVhdo7Ks&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  08 |  [Abrir puertas con llaves](https://www.youtube.com/watch?v=COOH87x0qCc&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  09 |  [Ruleta de la suerte](https://www.youtube.com/watch?v=WXYff8Jd6Xs&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  10 |  [Importando Sprites fácilmente](https://www.youtube.com/watch?v=NVDo_NqHnXM&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  11 |  [Introducción a los juegos de cartas](https://www.youtube.com/watch?v=yR6a6e3caMo&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  12 |  [Movimiento Pokemon Rojo/Azul](https://www.youtube.com/watch?v=7-dNyogjFqc&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  13 |  [Consejo 1: Reposiciona](https://www.youtube.com/watch?v=Df_JdiRGrJI&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  14 |  [Consejo 2: Colisiones](https://www.youtube.com/watch?v=cLyTgF4hfho&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  15 |  [Consejo 3: Plataformas](https://www.youtube.com/watch?v=65vrwuVG0EA&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  16 |  [Consejo 4: Alarmas](https://www.youtube.com/watch?v=aQcq-h8LWXA&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  17 |  [Consejo 5: Ficheros .ini](https://www.youtube.com/watch?v=0WrH5NHsAFc&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-|  18 |  [Adiós GameMaker, Hola Unity](https://www.youtube.com/watch?v=33_geruuE9k&list=PLiplYDjUMttj8eOW9jg4SyhNmAaai4hSE)|
-
-## Módulo Android
-
-<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-android-gamemaker.jpg"/></div>
-
-Selección de 4 vídeo tutoriales extra enfocados en la creación de juegos para el sistema Android con GameMaker: Studio 1.4. Trataremos los temas fundamentales como la configuración del módulo y la exportación de los juegos, cómo añadir publicidad con anuncios de Google Admob, cómo manejar estadísticas con Google Analytics, y la creación de unos controles táctiles con Virtual Keys para tus videojuegos.
-
-!!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=165U55M2etFXuuor2SnMqszSPwkZNXENM" target="_blank">09_Modulo Android.zip</a>
-
-|  Lección  | Ver en Youtube |
-|  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Configuración y Exportación](https://www.youtube.com/watch?v=CupF7ODjdfY&list=PLiplYDjUMttjj7gctwjFbfr3MkIwM6zkU) |
-|  02 |  [Publicidad e Ingresos](https://www.youtube.com/watch?v=RXxkNn02_Mk&list=PLiplYDjUMttjj7gctwjFbfr3MkIwM6zkU) |
-|  03 |  [Analíticas y Tráfico](https://www.youtube.com/watch?v=6wSdPOhT1Kg&list=PLiplYDjUMttjj7gctwjFbfr3MkIwM6zkU) |
-|  04 |  [Controles Táctiles](https://www.youtube.com/watch?v=j2L9tWaTA7k&list=PLiplYDjUMttjj7gctwjFbfr3MkIwM6zkU) |
 
 <style>
 @media (max-width: 1219.9px){

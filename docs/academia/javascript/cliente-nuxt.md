@@ -3,9 +3,9 @@ description: Desarrolla un cliente web sobre la API creada con Django para gesti
 
 # Cliente con Nuxt.js para API con DRF
 
-<!-- <div class="contenedor_youtube">
-  <iframe width="838" height="470" src="https://www.youtube.com/embed/CgXjkh9AM08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> -->
+<div class="contenedor_youtube">
+  <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/-Curso--Nuxt/7fc3b9c60da78d642b2316545a998c1ad9f0b9b1?r=3icueB68NV3UEFHyqs2QRfzRUeABmHDU" allowfullscreen></iframe>
+</div>
 
 Este curso es una continuación del <u><a href="/academia/django/api-rest-framework/">Proyecto API con DRF</a></u>, en el que utilizando un framework JavaScript llamado Nuxt.js (basado en Vue.js), os enseñaré a crear un cliente web SPA.
 

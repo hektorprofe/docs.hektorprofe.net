@@ -2,6 +2,8 @@ title: Diálogos personalizados QDialog | Curso Qt/PySide | Hektor Profe
 
 # Diálogos personalizados QDialog
 
+<img src="{{cdn}}/pyside/20.png">
+
 Todos los diálogos parten de la clase `QDialog` y están pensados para mostrar o pedir información al usuario en una nueva ventana temporal. Al estar pensados para aparecer de forma emergente, los diálogos requieren una acción desencadenante para aparecer.
 
 Vamos a partir de un diálogo vacío para ver su funcionamiento:

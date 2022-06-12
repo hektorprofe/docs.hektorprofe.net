@@ -2,6 +2,8 @@ title: Listas QListWidget | Curso Qt/PySide | Hektor Profe
 
 # Listas QListWidget
 
+<img src="{{cdn}}/pyside/09.png">
+
 Las listas son muy parecidas a los desplegables pero aquí las opciones no están ocultas ni hay ninguna activa por defecto. En lugar de índices manejan un tipo de valor llamado `QItem` y la señal de cambio aquí es `currentItemChanged`:
 
 ```python

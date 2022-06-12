@@ -2,6 +2,8 @@ title: Componentes manipulables | Curso Qt/PySide | Hektor Profe
 
 # Componentes manipulables
 
+<img src="{{cdn}}/pyside/04.gif">
+
 Para acabar esta introducción vamos a ver cómo manipular un widget.
 
 Si deseamos acceder a un widget desde un método es tan sencillo como almacenar un acceso a ese widget en la propia instancia, es decir, usar un atributo de clase:

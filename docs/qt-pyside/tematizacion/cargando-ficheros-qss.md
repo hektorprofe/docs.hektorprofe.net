@@ -2,6 +2,8 @@ title: Cargando ficheros QSS | Curso Qt/PySide | Hektor Profe
 
 # Cargando ficheros QSS
 
+<img src="{{cdn}}/pyside/34.png">
+
 En esta última lección vamos a cargar ficheros QSS para no tener que escribir el código en el propio programa. He preparado un buen puñado de estilos que he encontrado por Internet, os los adjunto en los recursos, sentíos libres de utilizarlos respetando las directrices de cada creador, cuya fuente encontraréis en la cabecera de cada fichero.
 
 Tengo un programa ya preparado para empezar a trabajar:

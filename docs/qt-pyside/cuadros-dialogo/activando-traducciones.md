@@ -2,6 +2,8 @@ title: Activando las traducciones | Curso Qt/PySide | Hektor Profe
 
 # Activando las traducciones
 
+<img src="{{cdn}}/pyside/23.png">
+
 Traducir los diálogos predeterminados a mano hace que se pierda su simplicidad, por eso es recomendable activar las traducciones. Esto implica que hay que distribuir los ficheros de traducción junto a los ejecutables, pero eso es algo que veremos más adelante.
 
 Para activar la localización al idioma del sistema operativo debemos traducir la aplicación de la siguiente forma:

@@ -3,9 +3,9 @@ description: Aprende lo fundamental de este poderoso lenguaje utilizado tanto pa
 
 # Introducción a JavaScript
 
-<!-- <div class="contenedor_youtube">
-  <iframe width="838" height="470" src="https://www.youtube.com/embed/ONHuYw2QbfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> -->
+<div class="contenedor_youtube">
+  <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/-Curso--JavaScript-para-principiantes/95740f48927a8cb7d76849b8867cf1db0c0fceb0?r=3icueB68NV3UEFHyqs2QRfzRUeABmHDU" allowfullscreen></iframe>
+</div>
 
 Si te interesa aprender este lenguaje pero no sabes muy bien por dónde empezar, en este pequeño curso comparto contigo los primeros pasos que debes seguir para configurar tu entorno de desarrollo, crear tus primeros scripts y los tipos de datos básicos del lenguaje.
 

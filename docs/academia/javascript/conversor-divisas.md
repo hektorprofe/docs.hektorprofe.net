@@ -3,9 +3,9 @@ description: Aprende lo básico de Node, un entorno de ejecución JavaScript par
 
 # Conversor de divisas vía API
 
-<!-- <div class="contenedor_youtube">
-  <iframe width="838" height="470" src="https://www.youtube.com/embed/Av5GKTgrr8E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> -->
+<div class="contenedor_youtube">
+  <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/-Curso--Conversor-de-divisas/d3141d747d2d35007073bf8f2bfdb83f4fde6683?r=3icueB68NV3UEFHyqs2QRfzRUeABmHDU" allowfullscreen></iframe>
+</div>
 
 **Repositorio**: <a href="https://github.com/hektorprofe/curso-conversor-divisas" target="_blank">https://github.com/hektorprofe/curso-conversor-divisas</a>
 

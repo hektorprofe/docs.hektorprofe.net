@@ -2,6 +2,8 @@ title: Tamaño de los widgets QSize | Curso Qt/PySide | Hektor Profe
 
 # Tamaño de los widgets QSize
  
+<img src="{{cdn}}/pyside/03.png">
+
 En Qt existe un objeto llamado `QSize` que podemos asignar a los widgets para controlar su tamaño. Toma un ancho y un alto en píxeles y se puede establecer como tamaño mínimo, máximo o fijo para un widget:
 
 ```python

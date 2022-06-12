@@ -3,9 +3,9 @@ description: Aprende lo básico de Node, un entorno de ejecución JavaScript par
 
 # Introducción a Node.js
 
-<!-- <div class="contenedor_youtube">
-  <iframe width="838" height="470" src="https://www.youtube.com/embed/aMn4gcJfJA0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> -->
+<div class="contenedor_youtube">
+  <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/-Curso--Nodejs-para-principiantes/b880f0334e2261dc792615d1bb172eb7680d2242?r=3icueB68NV3UEFHyqs2QRfzRUeABmHDU" allowfullscreen></iframe>
+</div>
 
 Si ya cuentas con conocimientos básicos de JavaScript para el frontend, no pierdes nada por dar una oportunidad a Node.js y alcanzar el siguiente nivel.
 

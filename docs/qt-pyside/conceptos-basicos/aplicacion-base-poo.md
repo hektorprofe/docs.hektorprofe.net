@@ -2,6 +2,8 @@ title: Primera aplicación usando POO | Curso Qt/PySide | Hektor Profe
 
 # Primera aplicación usando POO
 
+<img src="{{cdn}}/pyside/02.png">
+
 ```python
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 import sys

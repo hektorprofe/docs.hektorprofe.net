@@ -2,6 +2,8 @@ title: Layout apilado QStackedLayout | Curso Qt/PySide | Hektor Profe
 
 # Layout apilado QStackedLayout
 
+<img src="{{cdn}}/pyside/18.gif">
+
 Otra disposición que da mucho juego es apilar los widgets usando un `QStackedLayout`:
 
 ```python

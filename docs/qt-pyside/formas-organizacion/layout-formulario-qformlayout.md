@@ -2,6 +2,8 @@ title: Layout en formulario QFormLayout | Curso Qt/PySide | Hektor Profe
 
 # Layout en formulario QFormLayout
 
+<img src="{{cdn}}/pyside/17.png">
+
 Si lo que necesitamos es una estructura para manejar un formulario podemos usar un `QFormLayout` que nos permite añadir etiquetas y widgets en fila de una forma más cómoda que las cuadrículas:
 
 ```python

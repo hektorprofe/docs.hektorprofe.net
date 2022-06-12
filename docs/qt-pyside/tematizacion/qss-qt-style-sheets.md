@@ -2,6 +2,8 @@ title: QSS: Qt Style Sheets | Curso Qt/PySide | Hektor Profe
 
 # QSS: Qt Style Sheets
 
+<img src="{{cdn}}/pyside/33.png">
+
 Lo último que veremos sobre tematización son las hojas de estilo de Qt, o abreviadas QSS.
 
 Si sabéis algo de programación web seguro que os suena el lenguaje `CSS`, pues `QSS` es una forma de añadir estilo a los widgets utilizando prácticamente la misma sintaxis.

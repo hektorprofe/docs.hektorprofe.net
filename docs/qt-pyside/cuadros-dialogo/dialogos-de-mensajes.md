@@ -2,6 +2,8 @@ title: Diálogos de mensaje QMessageBox | Curso Qt/PySide | Hektor Profe
 
 # Diálogos de mensaje QMessageBox
 
+<img src="{{cdn}}/pyside/21.png">
+
 Si lo que deseamos en enviar un mensaje al usuario tenemos a nuestra disposición una clase llamada `QMessageBox` que simplifica la personalización de un `QDialog`. Básicamente podemos hacer todo lo de la anterior lección sin crear nuestra propia clase heredada y además podemos usar iconos predeterminados:
 
 ```python

@@ -12,6 +12,7 @@
 .servidores { background-color: #ffbc40}
 .pseudocodigo { background-color: #ce9efb}
 .cpp { background-color: #f0a00d}
+.grficos-3d { background-color: #ed4d4d !important}
 
 .table>:not(caption)>*>* {
     padding: .45rem .45em !important;

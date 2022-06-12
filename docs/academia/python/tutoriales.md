@@ -345,10 +345,11 @@ Espera:
 
 
 ## Introducción a los dibujos gráficos con Turtle
-<br>
+
+<!--<br>
 <div class="contenedor_youtube">
   <iframe width="838" height="470" src="https://www.youtube.com/embed/f0Y--fvUfs8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div>-->
 
 **Repositorio**: <a href="https://github.com/hektorprofe/curso-python-turtle" target="_blank">https://github.com/hektorprofe/curso-python-turtle</a>
 

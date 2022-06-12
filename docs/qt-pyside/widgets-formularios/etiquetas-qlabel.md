@@ -2,6 +2,8 @@ title: Etiquetas QLabel | Curso Qt/PySide | Hektor Profe
 
 # Etiquetas QLabel
 
+<img src="{{cdn}}/pyside/05.png">
+
 Empezamos este tour con las etiquetas, uno de los widgets más sencillos de Qt. Se trata de una pieza de texto que se puede posicionar en nuestra aplicación. Podemos asignar el texto al crearlas o mediante su método `setText()`:
 
 ```python

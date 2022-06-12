@@ -3,9 +3,9 @@ description: Aprende a configurar tu propio servidor Ubuntu Server para desplega
 
 # Configurar Ubuntu Server para servicios web
 
-<!-- <div class="contenedor_youtube">
-  <iframe width="838" height="470" src="https://www.youtube.com/embed/8lrncaVmbMk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> -->
+<div class="contenedor_youtube">
+  <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/-Curso--Ubuntu-Server-b%C3%A1sico/2b53b43cefdd68ed78c3d01ff27309bf2663b1e3?r=3icueB68NV3UEFHyqs2QRfzRUeABmHDU" allowfullscreen></iframe>
+</div>
 
 ## Bienvenida
 

@@ -3,9 +3,9 @@ description: Aprende los conceptos básicos para empezar a crear interfaces grá
 
 # Fundamentos de POO para interfaces gráficas
 
-<!-- <div class="contenedor_youtube">
-  <iframe width="838" height="470" src="https://www.youtube.com/embed/HrdBO6lDldw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> -->
+<div class="contenedor_youtube">
+  <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/-Curso--Fundamentos-para-interfaces/3263da2d39089aeadba1d8d4c9dc93ddfff9b37b?r=3icueB68NV3UEFHyqs2QRfzRUeABmHDU" allowfullscreen></iframe>
+</div>
 
 Dentro de la programación existe una especialidad enfocada al desarrollo de programas utilizando interfaces gráficas de usuario, también conocidas como Graphic User Interfaces o GUI.
 

@@ -2,6 +2,8 @@ title: Diálogos predeterminados QMessageBox | Curso Qt/PySide | Hektor Profe
 
 # Diálogos predeterminados QMessageBox
 
+<img src="{{cdn}}/pyside/22.png">
+
 Por suerte no necesitamos crear diálogos todo el tiempo, Qt incluye diálogos predeterminados para realiar diferentes tareas:
 
 ## Mensaje de cuestión QMessageBox.question

@@ -2,6 +2,8 @@ title: Subventanas persistentes | Curso Qt/PySide | Hektor Profe
 
 # Subventanas persistentes
 
+<img src="{{cdn}}/pyside/29.gif">
+
 En este punto es importante dejar claro que cada vez que presionamos el botón "mostrar subventana" se crea una nueva subventana que sobreescribe a la anterior, esto podemos comprobarlo generando un número aleatorio en la etiqueta:
 
 ```python

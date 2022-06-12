@@ -2,6 +2,8 @@ title: Widget personalizado QWidget | Curso Qt/PySide | Hektor Profe
 
 # Widget personalizado QWidget
 
+<img src="{{cdn}}/pyside/13.png">
+
 Hasta ahora hemos trabajado ejemplos muy sencillos en una ventana principal con un solo widget, pero ahora vamos a dar un paso adelante y a implementar varios widgets en el mismo espacio. Si vamos a utilizar varios widgets necesitamos organizarlos y precisamente para eso existen los layouts, que se traducirían en español como disposiciones.
 
 Hace un tiempo encontré una forma excelente de ilustrar el funcionamiento de los layouts. Consiste en crear una clase base con un fondo coloreado, así veremos exactamente el espacio que ocupan los layouts de una forma muy visual.

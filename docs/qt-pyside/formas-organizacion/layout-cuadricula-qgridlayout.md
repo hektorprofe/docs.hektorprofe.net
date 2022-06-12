@@ -2,6 +2,8 @@ title: Layout en cuadrícula QGridLayout | Curso Qt/PySide | Hektor Profe
 
 # Layout en cuadrícula QGridLayout
 
+<img src="{{cdn}}/pyside/16.png">
+
 El layout en cuadrícula se basa en crear un único layout compuesto de filas y columnas. Primero se crea la cuadrícula y luego se rellena cada hueco o celda haciendo referencia a ella con índices que empiezan valiendo cero:
 
 ```python

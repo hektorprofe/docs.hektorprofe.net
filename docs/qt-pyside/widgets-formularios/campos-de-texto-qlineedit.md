@@ -2,6 +2,8 @@ title: Campos de texto QLineEdit | Curso Qt/PySide | Hektor Profe
 
 # Campos de texto QLineEdit
 
+<img src="{{cdn}}/pyside/10.png">
+
 Los campos de texto son los widgets que permiten capturar contenido escrito por el usuario:
 
 ```python

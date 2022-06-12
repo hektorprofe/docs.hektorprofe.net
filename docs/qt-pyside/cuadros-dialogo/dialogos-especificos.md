@@ -2,6 +2,8 @@ title: Diálogos específicos | Curso Qt/PySide | Hektor Profe
 
 # Diálogos específicos
 
+<img src="{{cdn}}/pyside/24.png">
+
 Vamos a acabar esta unidad viendo otros ejemplos de diálogos para usos específicos. Es importante tener en cuenta que es necesario activar las traducciones o los textos aparecerán en inglés.
 
 ## Diálogos de fichero QFileDialog

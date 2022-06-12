@@ -2,6 +2,8 @@ title: Docks flotantes QDockWidget | Curso Qt/PySide | Hektor Profe
 
 # Docks flotantes QDockWidget
 
+<img src="{{cdn}}/pyside/27.gif">
+
 El último componente que nos falta ver de las ventanas principales son los docks floatantes.
 
 Los docks son contenedores flotantes que se pueden posicionar a los lados de la ventana, desacoplarlos e incluso cerrarlos.

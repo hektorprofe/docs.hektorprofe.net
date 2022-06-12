@@ -2,6 +2,8 @@ title: Creación de subventanas | Curso Qt/PySide | Hektor Profe
 
 # Creación de subventanas
 
+<img src="{{cdn}}/pyside/28.png">
+
 En esta lección vamos a ver cómo manejar ventanas secundarias. Para ello partiremos del siguiente programa:
 
 ```python

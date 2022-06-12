@@ -78,7 +78,5 @@ Concretamente dentro de `pygame_gui/data` encontraremos un montón de fuentes qu
 
 Al hacerlo el tamaño del directorio pasará de 47MB a 21MB, que comprimidos en un ZIP o 7ZIP baja a 11MB u 8MB respectivamente.
 
-Con esto llegamos al final del bloque introductorio. Ya hemos aprendido las bases de PyGame y seguro se os ocurren algunos videojuegos para empezar a experimentar. Por mi parte a partir de ahora os enseñaré lógica de videojuegos y técnicas de programación para desarrollar todo tipos de géneros 2D.
-
 ___
 <small class="edited"><i>Última edición: 13 de Febrero de 2022</i></small>

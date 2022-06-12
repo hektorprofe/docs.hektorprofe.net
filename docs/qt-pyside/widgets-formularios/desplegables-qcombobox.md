@@ -2,6 +2,8 @@ title: Desplegables QComboBox | Curso Qt/PySide | Hektor Profe
 
 # Desplegables QComboBox
 
+<img src="{{cdn}}/pyside/08.png">
+
 Los desplegables son listas de opciones de las cuales se pueden selecciona una única opción.
 
 Para añadir opciones se utiliza su método `addItems`:

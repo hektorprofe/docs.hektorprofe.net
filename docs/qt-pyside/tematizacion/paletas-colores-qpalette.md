@@ -2,6 +2,8 @@ title: Paletas de colores (QPalette) | Curso Qt/PySide | Hektor Profe
 
 # Paletas de colores (QPalette)
 
+<img src="{{cdn}}/pyside/31.png">
+
 La selección de colores que utiliza Qt para dibujar los componentes se maneja en paletas.
 
 Vamos a experimentar con la paleta de colores de la aplicación de la lección anterior:

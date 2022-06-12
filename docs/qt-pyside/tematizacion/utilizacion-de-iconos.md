@@ -2,6 +2,8 @@ title: Utilización de iconos | Curso Qt/PySide | Hektor Profe
 
 # Utilización de iconos
 
+<img src="{{cdn}}/pyside/32.png">
+
 Anteriormente ya hemos utilizado algunos iconos cargándolos como recursos externos, pero Qt incluye un set de iconos predeterminados. Podemos hacer uso de ellos de la siguiente forma:
 
 ```python

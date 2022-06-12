@@ -2,6 +2,8 @@ title: Barras de menú, estado y acciones QAction | Curso Qt/PySide | Hektor Pro
 
 # Barras de menú, estado y acciones QAction
 
+<img src="{{cdn}}/pyside/25.gif">
+
 Un menú es un componente estandar que se puede configurar en las ventanas principales `QMainWindow`.
 
 Se ubican en la parte superior de la ventana o pantalla y permiten a los usuarios acceder a las funcionalidades de las aplicaciones. Hay menús estandarizados como los de `Fichero, Edición y Ayuda`, cada uno con sus propias jerarquías y árboles de funciones. También ofrecen accesos directos y otras opciones de accesiblidad:

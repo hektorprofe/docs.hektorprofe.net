@@ -2,6 +2,8 @@ title: Casillas QCheckBox | Curso Qt/PySide | Hektor Profe
 
 # Casillas QCheckBox
 
+<img src="{{cdn}}/pyside/06.png">
+
 Seguimos el tour viendo las casillas de verificación o checkboxes:
 
 ```python
