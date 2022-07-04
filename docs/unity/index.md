@@ -3,7 +3,7 @@ description: Recopilación de apuntes de mis cursos sobre desarrollo de videojue
 
 # Apuntes para mis cursos de Unity
 
-Estos apuntes son un material de apoyo para mis futuros cursos de Unity publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
+Estos apuntes son publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
 
 Podéis navegar por ellos utilizando el menú lateral.
 

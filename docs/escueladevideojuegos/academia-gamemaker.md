@@ -16,25 +16,25 @@ Bienvenido al primer peldaño de tu aprendizaje en este magnífico mundo de la c
 
 |  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Presentación](https://www.youtube.com/watch?v=nrCiSd1UgGw&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  02 |  [Conceptos básicos de los videojuegos](https://www.youtube.com/watch?v=5voXzQ0Gr6M&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  03 |  [Instalación del programa](https://www.youtube.com/watch?v=okp1bIYmcT8&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  04 |  [Las Rooms, los Sprites y los Objetos](https://www.youtube.com/watch?v=8a2kLam_zIk&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  05 |  [Propiedades y Eventos de Objeto](https://www.youtube.com/watch?v=Koa0sBK06JM&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  06 |  [Animar un Sprite](https://www.youtube.com/watch?v=HBgp0rJyrjQ&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  07 |  [Fondo en movimiento y Sonidos](https://www.youtube.com/watch?v=jw58zg70Udo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  08 |  [Dibujar Textos y Sprites](https://www.youtube.com/watch?v=guS-IMRZAFY&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  09 |  [El Objeto Bomba](https://www.youtube.com/watch?v=XCX_9FpuxMg&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  10 |  [Colisiones entre Objetos que chocan](https://www.youtube.com/watch?v=gdmFbNNeGLI&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  11 |  [Crear el Objeto Explosión](https://www.youtube.com/watch?v=uE-jkGKx6Cs&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  12 |  [Hacer que el Avión Explote](https://www.youtube.com/watch?v=KbfjFqSLWPI&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  13 |  [Evento Step y rastro humo](https://www.youtube.com/watch?v=L8GGq8vxQso&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  14 |  [Cámara, Ventana, Views, Ports y Seguimiento](https://www.youtube.com/watch?v=oWQzGingznQ&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  15 |  [Crear un Marcador usando Variables](https://www.youtube.com/watch?v=8blwhXZk5Cs&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  16 |  [Condición de fin de juego y reinicio](https://www.youtube.com/watch?v=D3zx-AbnuVs&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  17 |  [Un contacto con el GML](https://www.youtube.com/watch?v=W4dMuZeezDM&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  18 |  [Alarmas y Aleatoriedad](https://www.youtube.com/watch?v=kX_j2OciGEA&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  19 |  [Mejorar la experiencia final](https://www.youtube.com/watch?v=JTmo4zBZi9A&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
+|  01 |  [Presentación](https://odysee.com/@hektor:3/GMS_TPJ_C01:d)|
+|  02 |  [Conceptos básicos de los videojuegos](https://odysee.com/@hektor:3/GMS_TPJ_C02:9)|
+|  03 |  [Instalación del programa](https://odysee.com/@hektor:3/GMS_TPJ_C03:6)|
+|  04 |  [Las Rooms, los Sprites y los Objetos](https://odysee.com/@hektor:3/GMS_TPJ_C04:b)|
+|  05 |  [Propiedades y Eventos de Objeto](https://odysee.com/@hektor:3/GMS_TPJ_C05:b)|
+|  06 |  [Animar un Sprite](https://odysee.com/@hektor:3/GMS_TPJ_C06:3)|
+|  07 |  [Fondo en movimiento y Sonidos](https://odysee.com/@hektor:3/GMS_TPJ_C07:b)|
+|  08 |  [Dibujar Textos y Sprites](https://odysee.com/@hektor:3/GMS_TPJ_C08:5)|
+|  09 |  [El Objeto Bomba](https://odysee.com/@hektor:3/GMS_TPJ_C09:d)|
+|  10 |  [Colisiones entre Objetos que chocan](https://odysee.com/@hektor:3/GMS_TPJ_C10:3)|
+|  11 |  [Crear el Objeto Explosión](https://odysee.com/@hektor:3/GMS_TPJ_C11:0)|
+|  12 |  [Hacer que el Avión Explote](https://odysee.com/@hektor:3/GMS_TPJ_C12:2)|
+|  13 |  [Evento Step y rastro humo](https://odysee.com/@hektor:3/GMS_TPJ_C13:c)|
+|  14 |  [Cámara, Ventana, Views, Ports y Seguimiento](https://odysee.com/@hektor:3/GMS_TPJ_C14:a)|
+|  15 |  [Crear un Marcador usando Variables](https://odysee.com/@hektor:3/GMS_TPJ_C15:5)|
+|  16 |  [Condición de fin de juego y reinicio](https://odysee.com/@hektor:3/GMS_TPJ_C16:4)|
+|  17 |  [Un contacto con el GML](https://odysee.com/@hektor:3/GMS_TPJ_C17:d)|
+|  18 |  [Alarmas y Aleatoriedad](https://odysee.com/@hektor:3/GMS_TPJ_C18:3)|
+|  19 |  [Mejorar la experiencia final](https://odysee.com/@hektor:3/GMS_TPJ_C19:9)|
 
 ## El Lenguaje GML
 
@@ -47,68 +47,68 @@ Ahora que ya sabes cómo funciona un juego es hora de dar un paso adelante y exp
 
 |  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Variables y Literales](https://www.youtube.com/watch?v=LGEoxuvY1s4&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  02 |  [Macros](https://www.youtube.com/watch?v=kz3oIdr3gjo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  03 |  [Operadores](https://www.youtube.com/watch?v=sINYicM-Khw&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  04 |  [Expresiones](https://www.youtube.com/watch?v=9qH_4Jo-r4Y&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  05 |  [Condiciones If y Switch](https://www.youtube.com/watch?v=lEyjet8ChQk&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  06 |  [Bucles Do, While, Repeat y For](https://www.youtube.com/watch?v=tzTudHYdFFo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  07 |  [Scripts (definición y manejo)](https://www.youtube.com/watch?v=jAX5q_vlMC8&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  08 |  [Funciones útiles](https://www.youtube.com/watch?v=0UwKRrXkAh8&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  09 |  [Objetos e instancias](https://www.youtube.com/watch?v=9LKt7rMs5Zo&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  10 |  [Sprites y sus propiedades](https://www.youtube.com/watch?v=3ZYHKHs7xhQ&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  11 |  [Evento Step](https://www.youtube.com/watch?v=NY61bE2SCb0&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  12 |  [Evento Draw](https://www.youtube.com/watch?v=8ao3z_PJ7_w&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  13 |  [Evento Draw GUI](https://www.youtube.com/watch?v=1iS0ZNzVJvg&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  14 |  [Inputs por teclado y ratón](https://www.youtube.com/watch?v=yC2aig8z2iY&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  15 |  [Cambios de Room](https://www.youtube.com/watch?v=BaTGBtdKLBU&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  16 |  [Control de Alarmas](https://www.youtube.com/watch?v=AKLmmnYv66Y&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
-|  17 |  [Control de Sonido](https://www.youtube.com/watch?v=Y4h26ebw20s&list=PLiplYDjUMttgtrPIFw6w4KSdswnmgpYHn)|
+|  01 |  [Variables y Literales](https://odysee.com/@hektor:3/GMS_GML_C01:2)|
+|  02 |  [Macros](https://odysee.com/@hektor:3/GMS_GML_C02:b)|
+|  03 |  [Operadores](https://odysee.com/@hektor:3/GMS_GML_C03:c)|
+|  04 |  [Expresiones](https://odysee.com/@hektor:3/GMS_GML_C04:5)|
+|  05 |  [Condiciones If y Switch](https://odysee.com/@hektor:3/GMS_GML_C05:9)|
+|  06 |  [Bucles Do, While, Repeat y For](https://odysee.com/@hektor:3/GMS_GML_C06:d)|
+|  07 |  [Scripts (definición y manejo)](https://odysee.com/@hektor:3/GMS_GML_C07:3)|
+|  08 |  [Funciones útiles](https://odysee.com/@hektor:3/GMS_GML_C08:a)|
+|  09 |  [Objetos e instancias](https://odysee.com/@hektor:3/GMS_GML_C09:4)|
+|  10 |  [Sprites y sus propiedades](https://odysee.com/@hektor:3/GMS_GML_C10:8)|
+|  11 |  [Evento Step](https://odysee.com/@hektor:3/GMS_GML_C11:8)|
+|  12 |  [Evento Draw](https://odysee.com/@hektor:3/GMS_GML_C12:b)|
+|  13 |  [Evento Draw GUI](https://odysee.com/@hektor:3/GMS_GML_C13:7)|
+|  14 |  [Inputs por teclado y ratón](https://odysee.com/@hektor:3/GMS_GML_C14:b)|
+|  15 |  [Cambios de Room](https://odysee.com/@hektor:3/GMS_GML_C15:4)|
+|  16 |  [Control de Alarmas](https://odysee.com/@hektor:3/GMS_GML_C16:d)|
+|  17 |  [Control de Sonido](https://odysee.com/@hektor:3/GMS_GML_C17:3)|
 
-## Juego Arcade PONG
-
-<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-pong-gamemaker.jpg"/></div>
-
-Después de aprender los conceptos fundamentales del GML, ¿qué mejor manera de ponerlos en práctica que creando un videojuego? ¿Y qué mejor videojuego que el clásico PONG, el primer videojuego de la historia? Pues sí, PONG será tu primer videojuego completo. Desde el menú hasta los modos de juego, con sonidos e incluso una inteligencia artifical. ¿Creías que este juego era demasiado sencillo? Pues no, es el mejor para aprender la lógica de los videojuegos y te lo voy a demostrar paso a paso. Agárrate que vienen curvas.
-
-!!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1wk4GjMrJ6XFvMow84jYjELBZxRcueIsh" target="_blank">03_Juego Pong.zip</a>
-
-|  Lección  | Ver en Odysee |
-|  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Presentación](https://www.youtube.com/watch?v=MBEul-sKOSQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  02 |  [Preparar recursos](https://www.youtube.com/watch?v=q0BqL9e8vLY&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  03 |  [Room y objetos base](https://www.youtube.com/watch?v=_wZourt4dT4&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  04 |  [Movimiento](https://www.youtube.com/watch?v=lsr9AboQioY&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  05 |  [Colisiones paredes](https://www.youtube.com/watch?v=75A8oeulK-s&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  06 |  [Colisiones jugador](https://www.youtube.com/watch?v=VPlucAptisM&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  07 |  [Gestionar dificultad](https://www.youtube.com/watch?v=7Rpo4pkabBs&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  08 |  [Marcador de puntos](https://www.youtube.com/watch?v=sa36qq6bjeQ&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  09 |  [Sonidos](https://www.youtube.com/watch?v=dgRVq2EAokY&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  10 |  [Portada con menú](https://www.youtube.com/watch?v=UZQnebfI9F8&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  11 |  [Mejorar portada](https://www.youtube.com/watch?v=ROEuZkA6pcU&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-|  12 |  [Retoques y distribución](https://www.youtube.com/watch?v=QgxQr8D89oM&list=PLiplYDjUMtti0vQz-E6BN9WuhJxtKdwCG)|
-
-## Nueve Mini Juegos
+## Serie de Minijuegos
 
 <div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-9-juegos-gamemaker.jpg"/></div>
 
-Ya has creado tu primer videojuego completo y tienes conocimientos de lógica de videojuegos. Ahora te planteo una serie de videotalleres preparados para que aprendas a programar las mecánicas de 9 juegos diferentes. Empezando por otro clásico retro, el rompe bloques, pasando por un plataformas simple, un horizontal runner de saltar, un vertical shooter de naves, el clásico Flappy Bird, un juego de coches y derrapes e incluso el siempre eterno Snake. Sin duda todo lo que necesitas para aprender lógica de videojuegos 2D lo encontrarás en esta cuarta sección.
+Ya has creado tu primer videojuego completo y tienes conocimientos de lógica de videojuegos en GML. Ahora te planteo una serie de videotalleres preparados para que aprendas a programar las mecánicas de 9 juegos diferentes. Empezando por un clásico retro, el rompe bloques, pasando por un plataformas simple, un horizontal runner de saltar, un vertical shooter de naves, el clásico Flappy Bird, un juego de coches y derrapes e incluso el siempre eterno Snake. Sin duda todo lo que necesitas para aprender lógica de videojuegos 2D lo encontrarás en esta cuarta sección.
 
 !!! info "Recursos"
     Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1Io1QfCfAPy_wWFHG613YSovZ1ZpFg8dC" target="_blank">04_Nueve minijuegos.zip</a>
 
 |  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Breakout](https://www.youtube.com/watch?v=Q5nWKVP5iJ4&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  02 |  [Plataformas](https://www.youtube.com/watch?v=laq930_oewU&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  03 |  [Horizontal Runner](https://www.youtube.com/watch?v=oTTw9CiMAGg&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  04 |  [Vertical Shooter](https://www.youtube.com/watch?v=WGEmPoyTe10&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  05 |  [Defender la base](https://www.youtube.com/watch?v=qFQHW9INF0I&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  06 |  [Flappy Planes](https://www.youtube.com/watch?v=61TNs1fAyus&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  07 |  [Buscar Parejas](https://www.youtube.com/watch?v=HG8sC74vv4M&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  08 |  [Carreras de coches](https://www.youtube.com/watch?v=8Lz2kJoWOHA&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
-|  09 |  [Snake](https://www.youtube.com/watch?v=mIgdqd6f248&list=PLiplYDjUMtthHSzhe9-xDzwnlSnYxDBME)|
+|  01 |  [Breakout](https://odysee.com/@hektor:3/GMS_Minijuegos_C01:6)|
+|  02 |  [Plataformas](https://odysee.com/@hektor:3/GMS_Minijuegos_C02:9)|
+|  03 |  [Horizontal Runner](https://odysee.com/@hektor:3/GMS_Minijuegos_C03:0)|
+|  04 |  [Vertical Shooter](https://odysee.com/@hektor:3/GMS_Minijuegos_C04:8)|
+|  05 |  [Defender la base](https://odysee.com/@hektor:3/GMS_Minijuegos_C05:1)|
+|  06 |  [Flappy Planes](https://odysee.com/@hektor:3/GMS_Minijuegos_C06:d)|
+|  07 |  [Buscar Parejas](https://odysee.com/@hektor:3/GMS_Minijuegos_C07:7)|
+|  08 |  [Carreras de coches](https://odysee.com/@hektor:3/GMS_Minijuegos_C08:4)|
+|  09 |  [Snake](https://odysee.com/@hektor:3/GMS_Minijuegos_C09:0)|
+
+## Juego Arcade PONG
+
+<div style="text-align:center;margin-top:25px"><img class="lazy" data-src="{{cdn}}/images/curso-pong-gamemaker.jpg"/></div>
+
+Después de aprender los conceptos fundamentales del GML y practicar con algunos minijuegos, ¿qué mejor manera de ponerlos en práctica que creando uno completoo? ¿Y qué mejor videojuego que el clásico PONG, el primero de la historia? Desde el menú hasta los modos de juego, con sonidos e incluso una inteligencia artifical. ¿Creías que este juego era demasiado sencillo? Pues no, es el mejor para profundizar en la lógica de los videojuegos y te lo voy a demostrar paso a paso. Agárrate que vienen curvas.
+
+!!! info "Recursos"
+    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1wk4GjMrJ6XFvMow84jYjELBZxRcueIsh" target="_blank">03_Juego Pong.zip</a>
+
+|  Lección  | Ver en Odysee |
+|  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
+|  01 |  [Presentación](https://odysee.com/@hektor:3/GMS_Pong_C01:2)|
+|  02 |  [Preparar recursos](https://odysee.com/@hektor:3/GMS_Pong_C02:a)|
+|  03 |  [Room y objetos base](https://odysee.com/@hektor:3/GMS_Pong_C03:b)|
+|  04 |  [Movimiento](https://odysee.com/@hektor:3/GMS_Pong_C04:3)|
+|  05 |  [Colisiones paredes](https://odysee.com/@hektor:3/GMS_Pong_C05:e)|
+|  06 |  [Colisiones jugador](https://odysee.com/@hektor:3/GMS_Pong_C06:9)|
+|  07 |  [Gestionar dificultad](https://odysee.com/@hektor:3/GMS_Pong_C07:4)|
+|  08 |  [Marcador de puntos](https://odysee.com/@hektor:3/GMS_Pong_C08:1)|
+|  09 |  [Añadir los sonidos](https://odysee.com/@hektor:3/GMS_Pong_C09:1)|
+|  10 |  [Portada con menú](https://odysee.com/@hektor:3/GMS_Pong_C10:7)|
+|  11 |  [Mejorar portada](https://odysee.com/@hektor:3/GMS_Pong_C11:1)|
+|  12 |  [Retoques y distribución](https://odysee.com/@hektor:3/GMS_Pong_C12:8)|
 
 ## Juego Shooter TDS
 
@@ -121,31 +121,31 @@ Después de mucho esfuerzo puedo traeros una nueva serie. Esta vez se trata de e
 
 |  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Presentación](https://www.youtube.com/watch?v=58T2sHvBfQ0&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  02 |  [Movimiento básico](https://www.youtube.com/watch?v=EheRpKQoNO0&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  03 |  [Fondo, vista y cámara](https://www.youtube.com/watch?v=X5HSAPEZ0_w&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  04 |  [Colisiones y máscaras](https://www.youtube.com/watch?v=RZmrXiRjp9k&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  05 |  [Disparar desde el arma](https://www.youtube.com/watch?v=DsdlR26gHOs&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  06 |  [Estados y animaciones](https://www.youtube.com/watch?v=37HSwRs-Iis&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  07 |  [Estado de movimiento](https://www.youtube.com/watch?v=Lr8r212NAlk&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  08 |  [Estado de persecución](https://www.youtube.com/watch?v=g3nmIOzfkVU&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  09 |  [Estado de ataque](https://www.youtube.com/watch?v=jFq8ZlWQccA&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  10 |  [Ataques y colisiones](https://www.youtube.com/watch?v=CtE72yitsrU&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  11 |  [Gestionar las vidas](https://www.youtube.com/watch?v=KOsXNIfZSS4&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  12 |  [HUD Barra de vida y avatar](https://www.youtube.com/watch?v=ytsPG2SJiVY&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  13 |  [Barra de vida en enemigos](https://www.youtube.com/watch?v=C29pbnt1igE&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  14 |  [Fuego de disparo](https://www.youtube.com/watch?v=KZP58Tn5u0U&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  15 |  [Sustituir cursor por mirilla](https://www.youtube.com/watch?v=Gw5_pWdhD7g&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  16 |  [Láser en el Arma](https://www.youtube.com/watch?v=C4aJPFLyS4A&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  17 |  [Música y Sonidos](https://www.youtube.com/watch?v=F8B7fRQdRGM&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  18 |  [Escenario con Tiles](https://www.youtube.com/watch?v=6WYUyqf0yR8&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  19 |  [Ajustes máscaras y profundidad](https://www.youtube.com/watch?v=UumLDqTdiuY&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  20 |  [Partículas efecto Sangre](https://www.youtube.com/watch?v=ccx-eNte3b8&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  21 |  [Oscuridad con Superfícies](https://www.youtube.com/watch?v=d_eMrqkN68M&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  22 |  [Gestor de Niveles con Pilas y User Events](https://www.youtube.com/watch?v=HzJfdt2jrOI&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  23 |  [HUD: Marcador y Nivel](https://www.youtube.com/watch?v=wFPcXbTt6NE&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  24 |  [Pausar con Superfícies](https://www.youtube.com/watch?v=sucfgescCZo&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
-|  25 |  [Golpe cuerpo a cuerpo](https://www.youtube.com/watch?v=K7jYG0Z5MZw&list=PLiplYDjUMtthKOauoGbgO4fk4_n7tlbZ8)|
+|  01 |  [Presentación](https://odysee.com/@hektor:3/GMS_TDS_C01:b)|
+|  02 |  [Movimiento básico](https://odysee.com/@hektor:3/GMS_TDS_C02:7)|
+|  03 |  [Fondo, vista y cámara](https://odysee.com/@hektor:3/GMS_TDS_C03:6)|
+|  04 |  [Colisiones y máscaras](https://odysee.com/@hektor:3/GMS_TDS_C04:a)|
+|  05 |  [Disparar desde el arma](https://odysee.com/@hektor:3/GMS_TDS_C05:8)|
+|  06 |  [Estados y animaciones](https://odysee.com/@hektor:3/GMS_TDS_C06:3)|
+|  07 |  [Estado de movimiento](https://odysee.com/@hektor:3/GMS_TDS_C07:0)|
+|  08 |  [Estado de persecución](https://odysee.com/@hektor:3/GMS_TDS_C08:2)|
+|  09 |  [Estado de ataque](https://odysee.com/@hektor:3/GMS_TDS_C09:b)|
+|  10 |  [Ataques y colisiones](https://odysee.com/@hektor:3/GMS_TDS_C10:1)|
+|  11 |  [Gestionar las vidas](https://odysee.com/@hektor:3/GMS_TDS_C11:e)|
+|  12 |  [HUD Barra de vida y avatar](https://odysee.com/@hektor:3/GMS_TDS_C12:2)|
+|  13 |  [Barra de vida en enemigos](https://odysee.com/@hektor:3/GMS_TDS_C13:0)|
+|  14 |  [Fuego de disparo](https://odysee.com/@hektor:3/GMS_TDS_C14:4)|
+|  15 |  [Sustituir cursor por mirilla](https://odysee.com/@hektor:3/GMS_TDS_C15:3)|
+|  16 |  [Láser en el Arma](https://odysee.com/@hektor:3/GMS_TDS_C16:f)|
+|  17 |  [Música y Sonidos](https://odysee.com/@hektor:3/GMS_TDS_C17:1)|
+|  18 |  [Escenario con Tiles](https://odysee.com/@hektor:3/GMS_TDS_C18:0)|
+|  19 |  [Ajustes máscaras y profundidad](https://odysee.com/@hektor:3/GMS_TDS_C19:c)|
+|  20 |  [Partículas efecto Sangre](https://odysee.com/@hektor:3/GMS_TDS_C20:1)|
+|  21 |  [Oscuridad con Superfícies](https://odysee.com/@hektor:3/GMS_TDS_C021:1)|
+|  22 |  [Gestor de Niveles con Pilas y User Events](https://odysee.com/@hektor:3/GMS_TDS_C22:2)|
+|  23 |  [HUD: Marcador y Nivel](https://odysee.com/@hektor:3/GMS_TDS_C23:9)|
+|  24 |  [Pausar con Superfícies](https://odysee.com/@hektor:3/GMS_TDS_C24:3)|
+|  25 |  [Golpe cuerpo a cuerpo](https://odysee.com/@hektor:3/GMS_TDS_C25:8)|
 
 ## Juego Action RPG
 
@@ -158,19 +158,19 @@ Después del TDS el listón estaba muy alto, pero lo hemos vuelto a superar con 
 
 |  Lección  | Ver en Odysee |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Presentación](https://www.youtube.com/watch?v=fB1HSO5Fwuw&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  02 |  [Sprites y movimiento](https://www.youtube.com/watch?v=tInSBFqnT_E&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  03 |  [Máquina de estados](https://www.youtube.com/watch?v=0UzYP2oZDP0&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  04 |  [Estado de ataque](https://www.youtube.com/watch?v=MGQa0Q_zJBg&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  05 |  [Diseño de escenario](https://www.youtube.com/watch?v=CE-Jc2-ehyc&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  06 |  [Gestión de colisiones y debug](https://www.youtube.com/watch?v=n0VNChy95T8&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  07 |  [Teletransporte entre rooms](https://www.youtube.com/watch?v=eqifyCARgSY&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  08 |  [Diálogos y HUD con zona](https://www.youtube.com/watch?v=BzglJSf3x1k&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  09 |  [Hierbas atacables](https://www.youtube.com/watch?v=zYGUrTzbkgs&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  10 |  [Conejitos atacables](https://www.youtube.com/watch?v=0N8m3OyyHaI&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  11 |  [Enemigos goblin atacables](https://www.youtube.com/watch?v=cg0PQuwLeXA&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  12 |  [Corazones, vidas y reinicio de juego](https://www.youtube.com/watch?v=CkxDV6lwzks&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
-|  13 |  [Sistema de guardado en INI y NPC](https://www.youtube.com/watch?v=2PAIkcEREYc&list=PLiplYDjUMtthKfNr0gx_e5W8cb7uQdZwJ)|
+|  01 |  [Presentación](https://odysee.com/@hektor:3/GMS_ARPG_C01:8)|
+|  02 |  [Sprites y movimiento](https://odysee.com/@hektor:3/GMS_ARPG_C02:3)|
+|  03 |  [Máquina de estados](https://odysee.com/@hektor:3/GMS_ARPG_C03:e)|
+|  04 |  [Estado de ataque](https://odysee.com/@hektor:3/GMS_ARPG_C04:7)|
+|  05 |  [Diseño de escenario](https://odysee.com/@hektor:3/GMS_ARPG_C05:7)|
+|  06 |  [Gestión de colisiones y debug](https://odysee.com/@hektor:3/GMS_ARPG_C06:2)|
+|  07 |  [Teletransporte entre rooms](https://odysee.com/@hektor:3/GMS_ARPG_C07:b)|
+|  08 |  [Diálogos y HUD con zona](https://odysee.com/@hektor:3/GMS_ARPG_C08:a)|
+|  09 |  [Hierbas atacables](https://odysee.com/@hektor:3/GMS_ARPG_C09:8)|
+|  10 |  [Conejitos atacables](https://odysee.com/@hektor:3/GMS_ARPG_C10:b)|
+|  11 |  [Enemigos goblin atacables](https://odysee.com/@hektor:3/GMS_ARPG_C11:a)|
+|  12 |  [Corazones, vidas y reinicio de juego](https://odysee.com/@hektor:3/GMS_ARPG_C12:7)|
+|  13 |  [Sistema de guardado en INI y NPC](https://odysee.com/@hektor:3/GMS_ARPG_C13:c)|
 
 ## Juego Beat'em Up
 
@@ -183,11 +183,11 @@ Después del TDS el listón estaba muy alto, pero lo hemos vuelto a superar con 
 
 |  Lección  | Ver en Odysee | 
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Controlando Animaciones](https://www.youtube.com/watch?v=7vuoJSgVf7A&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
-|  02 |  [Controlando Movimientos](https://www.youtube.com/watch?v=Lg-V4Leoe7w&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
-|  03 |  [Añadiendo Enemigos](https://www.youtube.com/watch?v=clyteCzNICI&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
-|  04 |  [Creando Barra de Vida](https://www.youtube.com/watch?v=6rkfj96Aa70&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
-|  05 |  [Creando Escenas](https://www.youtube.com/watch?v=wkkWSg2VbWs&list=PLiplYDjUMtthkY440n-pWCf5anHYQUc_o)|
+|  01 |  [Control de Animaciones](https://odysee.com/@hektor:3/GMS_BEMUP_C01:a)|
+|  02 |  [Control de Movimientos](https://odysee.com/@hektor:3/GMS_BEMUP_C02:f)|
+|  03 |  [Añadiendo los Enemigos](https://odysee.com/@hektor:3/GMS_BEMUP_C03:b)|
+|  04 |  [Creando la Barra de Vida](https://odysee.com/@hektor:3/GMS_BEMUP_C04:1)|
+|  05 |  [Creando las Escenas](https://odysee.com/@hektor:3/GMS_BEMUP_C05:b)|
 
 <style>
 @media (max-width: 1219.9px){

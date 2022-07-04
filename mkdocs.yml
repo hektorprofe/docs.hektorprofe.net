@@ -469,6 +469,14 @@ nav:
     - Renderizado y debug separado:       'graficos-3d/26-renderizado-y-debug-separado/index.md' 
     - Clipping:                           'graficos-3d/27-clipping/index.md' 
     - Múltiples mallas:                   'graficos-3d/28-multiples-mallas/index.md' 
+  
+  - Apuntes de OpenGL:                    
+    - Índice del archivo:                 'opengl/index.md'  
+    - Primeros pasos:                     'opengl/01-primeros-pasos.md'  
+    - Gráficos primitivos:                'opengl/02-graficos-primitivos.md'  
+    - Tortuga y fractales:                'opengl/03-programando-una-tortuga.md'  
+    - Trabajando con mallas:              'opengl/04-trabajando-con-mallas.md'
+    - Dibujando el espacio 3D:            'opengl/05-dibujando-el-espacio-3d.md'
 
   - Apuntes de Unity:                    
     - Índice del archivo:                 'unity/index.md'               

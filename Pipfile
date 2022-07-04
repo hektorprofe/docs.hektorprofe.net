@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-mkdocs = "*"
+mkdocs = "==1.2.3"
 mkdocs-material = "*"
 mkdocs-markdownextradata-plugin = "*"
 django-htmlmin = "*"
@@ -13,4 +13,4 @@ Pygments = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.9"

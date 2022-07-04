@@ -3,6 +3,8 @@ description: Recopilación de apuntes sobre Desarrollo de Videojuegos en PyGame.
 
 # Apuntes Desarrollo de Videojuegos con PyGame
 
+![]({{cdn}}/pygame/023.gif)
+
 Estos apuntes son publicados bajo una [Licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Si decides utilizarlos o compartirlos asegúrate de cumplir las normas de atribución.
 
 Podéis navegar por ellos utilizando el menú lateral.

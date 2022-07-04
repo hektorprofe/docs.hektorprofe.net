@@ -16,11 +16,11 @@ En esta pequeña serie repasaremos los fundamentos de la programación en C\# , 
 
 |  Lección  | Ver en Odysse |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01   | [Primer contacto](https://odysee.com/@hektor:3/Repaso-1) |
-|  02   | [El control de flujo](https://odysee.com/@hektor:3/Unity_Repaso_C02) |
-|  03   | [Los tipos compuestos](https://odysee.com/@hektor:3/Unity_Repaso_C03) |
-|  04   | [Las estructuras](https://odysee.com/@hektor:3/Unity_Repaso_C04) |
-|  05   | [Las clases](https://odysee.com/@hektor:3/Unity_Repaso_C05) |
+|  01   | [Primer contacto](https://odysee.com/@hektor:3/Repaso-1:8) |
+|  02   | [El control de flujo](https://odysee.com/@hektor:3/Unity_Repaso_C02:3) |
+|  03   | [Los tipos compuestos](https://odysee.com/@hektor:3/Unity_Repaso_C03:a) |
+|  04   | [Las estructuras](https://odysee.com/@hektor:3/Unity_Repaso_C04:3) |
+|  05   | [Las clases](https://odysee.com/@hektor:3/Unity_Repaso_C05:7) |
 
 
 ## Conceptos básicos
@@ -32,20 +32,20 @@ Ahora en Escuela de Videojuegos puedes aprender a utilizar este poderoso program
 Si ya cuentas con conocimientos de programación orientada a objetos y te interesa el tema esta es tu serie introductoria. ¡Aprendamos juntos desde cero!    
 
 !!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=189xuYNVVB_azZwgmIFqS1zV5SWLCjTku" target="_blank">02_Tutoriales basicos.zip</a>
+    Puedes descargar todos los recursos de la sección aquí: <u><a href="https://drive.google.com/open?id=189xuYNVVB_azZwgmIFqS1zV5SWLCjTku" target="_blank">02_Tutoriales basicos.zip</a></u>
 
 |  Lección  | Ver en Odysse |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Instalación, GameObjects y Scripts](https://odysee.com/@hektor:3/Unity_Fundamentos_C01) |
-|  02 |  [Componentes de GUI](https://odysee.com/@hektor:3/Unity_Fundamentos_C02) |
-|  03 |  [Menús y Cambios de Escena](https://odysee.com/@hektor:3/Unity_Fundamentos_C03) |
-|  04 |  [Físicas y Colisiones 2D](https://odysee.com/@hektor:3/Unity_Fundamentos_C04) |
-|  05 |  [Sprites y Movimiento 2D](https://odysee.com/@hektor:3/Unity_Fundamentos_C05) |
-|  06 |  [Objetos Dinámicos](https://odysee.com/@hektor:3/Unity_Fundamentos_C06) |
-|  07 |  [Introducción al Animador](https://odysee.com/@hektor:3/Unity_Fundamentos_C07) |
-|  08 |  [Animaciones con Sprites](https://odysee.com/@hektor:3/Unity_Fundamentos_C08) |
-|  09 |  [Reproductor de Música](https://odysee.com/@hektor:3/Unity_Fundamentos_C09) |
-|  10 |  [Sistemas de partículas](https://odysee.com/@hektor:3/Unity_Fundamentos_C010) |
+|  01 |  [Instalación, GameObjects y Scripts](https://odysee.com/@hektor:3/Unity_Fundamentos_C01:c) |
+|  02 |  [Componentes de GUI](https://odysee.com/@hektor:3/Unity_Fundamentos_C02:b) |
+|  03 |  [Menús y Cambios de Escena](https://odysee.com/@hektor:3/Unity_Fundamentos_C03:5) |
+|  04 |  [Físicas y Colisiones 2D](https://odysee.com/@hektor:3/Unity_Fundamentos_C04:4) |
+|  05 |  [Sprites y Movimiento 2D](https://odysee.com/@hektor:3/Unity_Fundamentos_C05:1) |
+|  06 |  [Objetos Dinámicos](https://odysee.com/@hektor:3/Unity_Fundamentos_C06:8) |
+|  07 |  [Introducción al Animador](https://odysee.com/@hektor:3/Unity_Fundamentos_C07:d) |
+|  08 |  [Animaciones con Sprites](https://odysee.com/@hektor:3/Unity_Fundamentos_C08:6) |
+|  09 |  [Reproductor de Música](https://odysee.com/@hektor:3/Unity_Fundamentos_C09:d) |
+|  10 |  [Sistemas de partículas](https://odysee.com/@hektor:3/Unity_Fundamentos_C10:2) |
 
 
 ## Primer videojuego 2D
@@ -65,28 +65,28 @@ C\#.
     Mi nuevo <a href="https://www.hektorprofe.net/cupon/unity" target="_blank" style="text-decoration:underline">Curso de Introducción a Unity</a> en Udemy incluye un remake mejorado de esta serie con buenas prácticas y componentes reutilizables (a fecha Noviembre de 2021).
 
 !!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero: <a href="https://drive.google.com/file/d/1TSzB35zu5FrY032IKKno03bgVbBGm8B8/view" target="_blank">03_Juego completo.zip</a>
+    Puedes descargar todos los recursos de la sección aquí: <u><a href="https://drive.google.com/file/d/1TSzB35zu5FrY032IKKno03bgVbBGm8B8/view" target="_blank">03_Juego completo.zip</a></u>
 
 |  Lección  | Ver en Odysse |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Diseño multiplataforma](https://odysee.com/@hektor:3/Unity_PrimerJuego_C01_Diseno-multiplataforma)|
-|  02 |  [Creando la escena](https://odysee.com/@hektor:3/Unity_PrimerJuego_C02-Crear-Escena)|
-|  03 |  [Efecto parallax](https://odysee.com/@hektor:3/Unity_PrimerJuego_C03)|
-|  04 |  [Inicio de juego](https://odysee.com/@hektor:3/Unity_PrimerJuego_C04)|
-|  05 |  [Creando al jugador](https://odysee.com/@hektor:3/Unity_PrimerJuego_C05-Protagonista)|
-|  06 |  [Animación al correr](https://odysee.com/@hektor:3/Unity_PrimerJuego_C06)|
-|  07 |  [Animación al saltar](https://odysee.com/@hektor:3/Unity_PrimerJuego_C07)|
-|  08 |  [Creando al enemigo](https://odysee.com/@hektor:3/Unity_PrimerJuego_C08)|
-|  09 |  [Auto-destruir enemigos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C09)|
-|  10 |  [Generador de enemigos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C10)|
-|  11 |  [Animación de muerte](https://odysee.com/@hektor:3/Unity_PrimerJuego_C11)|
-|  12 |  [Reinicio de juego](https://odysee.com/@hektor:3/Unity_PrimerJuego_C12)|
-|  13 |  [Música y sonidos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C13)|
-|  14 |  [Dificultad progresiva](https://odysee.com/@hektor:3/Unity_PrimerJuego_C14)|
-|  15 |  [Efecto polvo con partículas](https://odysee.com/@hektor:3/Unity_PrimerJuego_C15)|
-|  16 |  [Marcador de puntos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C16)|
-|  17 |  [Guardar récord con PlayerPrefs](https://odysee.com/@hektor:3/Unity_PrimerJuego_C17)|
-|  18 |  [Exportación multiplataforma](https://odysee.com/@hektor:3/Unity_PrimerJuego_C18)|
+|  01 |  [Diseño multiplataforma](https://odysee.com/@hektor:3/Unity_PrimerJuego_C01_Diseno-multiplataforma:a)|
+|  02 |  [Creando la escena](https://odysee.com/@hektor:3/Unity_PrimerJuego_C02-Crear-Escena:d)|
+|  03 |  [Efecto parallax](https://odysee.com/@hektor:3/Unity_PrimerJuego_C03:3)|
+|  04 |  [Inicio de juego](https://odysee.com/@hektor:3/Unity_PrimerJuego_C04:f)|
+|  05 |  [Creando al jugador](https://odysee.com/@hektor:3/Unity_PrimerJuego_C05-Protagonista:0)|
+|  06 |  [Animación al correr](https://odysee.com/@hektor:3/Unity_PrimerJuego_C06:7)|
+|  07 |  [Animación al saltar](https://odysee.com/@hektor:3/Unity_PrimerJuego_C07:6)|
+|  08 |  [Creando al enemigo](https://odysee.com/@hektor:3/Unity_PrimerJuego_C08:b)|
+|  09 |  [Auto-destruir enemigos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C09:3)|
+|  10 |  [Generador de enemigos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C10:1)|
+|  11 |  [Animación de muerte](https://odysee.com/@hektor:3/Unity_PrimerJuego_C11:4)|
+|  12 |  [Reinicio de juego](https://odysee.com/@hektor:3/Unity_PrimerJuego_C12:0)|
+|  13 |  [Música y sonidos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C13:2)|
+|  14 |  [Dificultad progresiva](https://odysee.com/@hektor:3/Unity_PrimerJuego_C14:d)|
+|  15 |  [Efecto polvo con partículas](https://odysee.com/@hektor:3/Unity_PrimerJuego_C15:f)|
+|  16 |  [Marcador de puntos](https://odysee.com/@hektor:3/Unity_PrimerJuego_C16:a)|
+|  17 |  [Guardar récord con PlayerPrefs](https://odysee.com/@hektor:3/Unity_PrimerJuego_C17-Record:6)|
+|  18 |  [Exportación multiplataforma](https://odysee.com/@hektor:3/Unity_PrimerJuego_C18:b)|
 
 ## Juego de plataformas 2D
 
@@ -98,24 +98,24 @@ en el entorno y en el personaje, y también añadiremos unos enemigos
 simples.
 
 !!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1g6Pytql6h1gFt5WiMpdrV23jvrY2shtU" target="_blank">04_Juego plataformas.zip</a>
+    Puedes descargar todos los recursos de la sección aquí: <u><a href="https://drive.google.com/open?id=1g6Pytql6h1gFt5WiMpdrV23jvrY2shtU" target="_blank">04_Juego plataformas.zip</a></u>
 
 |  Lección  | Ver en Odysse |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Tiles y Escenario](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C01)|
-|  02 |  [Animaciones y Transiciones](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C02)|
-|  03 |  [Movimiento Básico](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C03)|
-|  04 |  [Animaciones Dinámicas](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C04)|
-|  05 |  [Saltos y Detalles](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C05)|
-|  06 |  [Fricción y Plataformas Unidireccionales](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C06)|
-|  07 |  [Plataformas Móviles (Parte 1)](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C07)|
-|  08 |  [Plataformas Móviles (Parte 2)](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C08)|
-|  09 |  [Doble salto y pendientes](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C09)|
-|  10 |  [Plataformas que caen](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C10)|
-|  11 |  [Cámara de seguimiento](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C11)|
-|  12 |  [Enemigos simples](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C12)|
-|  13 |  [Colisiones contra enemigos](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C13)|
-|  14 |  [Saltos y retrocesos contra enemigos](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C14)|
+|  01 |  [Tiles y Escenario](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C01:d)|
+|  02 |  [Animaciones y Transiciones](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C02:a)|
+|  03 |  [Movimiento Básico](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C03:b)|
+|  04 |  [Animaciones Dinámicas](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C04:e)|
+|  05 |  [Saltos y Detalles](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C05:9)|
+|  06 |  [Fricción y Plataformas Unidireccionales](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C06:6)|
+|  07 |  [Plataformas Móviles (Parte 1)](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C07:f)|
+|  08 |  [Plataformas Móviles (Parte 2)](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C08:a)|
+|  09 |  [Doble salto y pendientes](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C09:b)|
+|  10 |  [Plataformas que caen](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C10:6)|
+|  11 |  [Cámara de seguimiento](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C11_9)|
+|  12 |  [Enemigos simples](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C12:1)|
+|  13 |  [Colisiones contra enemigos](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C13:d)|
+|  14 |  [Saltos y retrocesos contra enemigos](https://odysee.com/@hektor:3/Unity_JuegoPlataformas_C14:f)|
 
 ## Tutoriales intermedios
 
@@ -130,24 +130,24 @@ IA simple... Prepárate para aumentar drásticamente tu abanico de
 conocimientos.
 
 !!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/open?id=1jtL3CkzbG2tFSfAo0F2gmBVRy7QS1MLf" target="_blank">05_Tutoriales intermedios.zip</a>
+    Puedes descargar todos los recursos de la sección aquí: <u><a href="https://drive.google.com/open?id=1jtL3CkzbG2tFSfAo0F2gmBVRy7QS1MLf" target="_blank">05_Tutoriales intermedios.zip</a></u>
 
 |  Lección  | Ver en Odysse |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Diseñar y exportar escenarios 2D de Tiled a Unity](https://odysee.com/@hektor:3/Unity_Tutorial_C01)|
-|  02 |  [Pausa de juego fácil con mensaje](https://odysee.com/@hektor:3/Unity_Tutorial_C02)|
-|  03 |  [Acceder a variables y funciones entre Scripts](https://odysee.com/@hektor:3/Unity_Tutorial_C03)|
-|  04 |  [Guardar y cargar datos simples con PlayerPrefs](https://odysee.com/@hektor:3/Unity_Tutorial_C04)|
-|  05 |  [Barra de vida simple (1/2) Preparando el canvas](https://odysee.com/@hektor:3/Unity_Tutorial_C05)|
-|  06 |  [Barra de vida simple (2/2) Agregando funcionalidad](https://odysee.com/@hektor:3/Unity_Tutorial_C06)|
-|  07 |  [Guardar objetos en ficheros JSON (1/2) Serializar Objetos](https://odysee.com/@hektor:3/Unity_Tutorial_C07)|
-|  08 |  [Guardar objetos en ficheros JSON (2/2) Serializar Listas](https://odysee.com/@hektor:3/Unity_Tutorial_C08)|
-|  09 |  [Crea tus librerías de código C\# reutilizable](https://odysee.com/@hektor:3/Unity_Tutorial_C09)|
-|  10 |  [Menú fácil pero resultón](https://odysee.com/@hektor:3/Unity_Tutorial_C10)|
-|  11 |  [Objetos persistentes pero únicos (Singleton)](https://odysee.com/@hektor:3/Unity_Tutorial_C11)|
-|  12 |  [Mover objeto hasta el puntero al hacer clic](https://odysee.com/@hektor:3/Unity_Tutorial_C12)|
-|  13 |  [Enemigos que te persiguen (IA Simple)](https://odysee.com/@hektor:3/Unity_Tutorial_C13)|
-|  14 |  [Postal de Navidad animada con Tweening](https://odysee.com/@hektor:3/Unity_Tutorial_C14)|
+|  01 |  [Diseñar y exportar escenarios 2D de Tiled a Unity](https://odysee.com/@hektor:3/Unity_Tutorial_C01:f)|
+|  02 |  [Pausa de juego fácil con mensaje](https://odysee.com/@hektor:3/Unity_Tutorial_C02:2)|
+|  03 |  [Acceder a variables y funciones entre Scripts](https://odysee.com/@hektor:3/Unity_Tutorial_C03:b)|
+|  04 |  [Guardar y cargar datos simples con PlayerPrefs](https://odysee.com/@hektor:3/Unity_Tutorial_C04:6)|
+|  05 |  [Barra de vida simple (1/2) Preparando el canvas](https://odysee.com/@hektor:3/Unity_Tutorial_C05:3)|
+|  06 |  [Barra de vida simple (2/2) Agregando funcionalidad](https://odysee.com/@hektor:3/Unity_Tutorial_C06:1)|
+|  07 |  [Guardar objetos en ficheros JSON (1/2) Serializar Objetos](https://odysee.com/@hektor:3/Unity_Tutorial_C07:7)|
+|  08 |  [Guardar objetos en ficheros JSON (2/2) Serializar Listas](https://odysee.com/@hektor:3/Unity_Tutorial_C08:7)|
+|  09 |  [Crea tus librerías de código C\# reutilizable](https://odysee.com/@hektor:3/Unity_Tutorial_C09:5)|
+|  10 |  [Menú fácil pero resultón](https://odysee.com/@hektor:3/Unity_Tutorial_C10:4)|
+|  11 |  [Objetos persistentes pero únicos (Singleton)](https://odysee.com/@hektor:3/Unity_Tutorial_C11:8)|
+|  12 |  [Mover objeto hasta el puntero al hacer clic](https://odysee.com/@hektor:3/Unity_Tutorial_C12:5)|
+|  13 |  [Enemigos que te persiguen (IA Simple)](https://odysee.com/@hektor:3/Unity_Tutorial_C13:4)|
+|  14 |  [Postal de Navidad animada con Tweening](https://odysee.com/@hektor:3/Unity_Tutorial_C14:4)|
 
 ## Juego RPG 2D estilo Zelda
 
@@ -160,19 +160,19 @@ hacer gracias a los [assets gratuitos](https://opengameart.org/content/zelda-lik
 que encontré en OpenGameArt, sin duda todo un hallazgo.
 
 !!! info "Recursos"
-    Puedes descargar todos los recursos de la sección en este fichero comprimido: <a href="https://drive.google.com/file/d/1xTTNxrDZP093LvjYfVYwJnSUOP2xf-rn/view?usp=sharing" target="_blank">06_Juego rpg.zip</a>
+    Puedes descargar todos los recursos de la sección aquí: <u><a href="https://drive.google.com/file/d/1xTTNxrDZP093LvjYfVYwJnSUOP2xf-rn/view?usp=sharing" target="_blank">06_Juego rpg.zip</a></u>
 
 |  Lección  | Ver en Odysse |
 |  ---- | -----------------------------------------------------------------------------------------------------------------------------------|
-|  01 |  [Movimiento básico](https://odysee.com/@hektor:3/Unity_JuegoRPG_C01)|
-|  02 |  [Colisiones Físicas](https://odysee.com/@hektor:3/Unity_JuegoRPG_C02)|
-|  03 |  [Puntos de Teletransporte](https://odysee.com/@hektor:3/Unity_JuegoRPG_C03)|
-|  04 |  [Detalles Maestros](https://odysee.com/@hektor:3/Unity_JuegoRPG_C04)|
-|  05 |  [Ataque con Espada](https://odysee.com/@hektor:3/Unity_JuegoRPG_C05)|
-|  06 |  [Objetos Destruibles](https://odysee.com/@hektor:3/Unity_JuegoRPG_C06)|
-|  07 |  [Rayo con Espada](https://odysee.com/@hektor:3/Unity_JuegoRPG_C07)|
-|  08 |  [Enemigos con Raycast](https://odysee.com/@hektor:3/Unity_JuegoRPG_C08)|
-|  09 |  [Ataques Enemigos](https://odysee.com/@hektor:3/Unity_JuegoRPG_C09)|
+|  01 |  [Movimiento básico](https://odysee.com/@hektor:3/Unity_JuegoRPG_C01:1)|
+|  02 |  [Colisiones Físicas](https://odysee.com/@hektor:3/Unity_JuegoRPG_C02:b)|
+|  03 |  [Puntos de Teletransporte](https://odysee.com/@hektor:3/Unity_JuegoRPG_C03:7)|
+|  04 |  [Detalles Maestros](https://odysee.com/@hektor:3/Unity_JuegoRPG_C04:0)|
+|  05 |  [Ataque con Espada](https://odysee.com/@hektor:3/Unity_JuegoRPG_C05:4)|
+|  06 |  [Objetos Destruibles](https://odysee.com/@hektor:3/Unity_JuegoRPG_C06:8)|
+|  07 |  [Rayo con Espada](https://odysee.com/@hektor:3/Unity_JuegoRPG_C07:1)|
+|  08 |  [Enemigos con Raycast](https://odysee.com/@hektor:3/Unity_JuegoRPG_C08:0)|
+|  09 |  [Ataques Enemigos](https://odysee.com/@hektor:3/Unity_JuegoRPG_C09:9)|
 
 <style>
 .admonition.error {
