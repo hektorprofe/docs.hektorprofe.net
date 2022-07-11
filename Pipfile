@@ -9,8 +9,3 @@ mkdocs-material = "*"
 mkdocs-markdownextradata-plugin = "*"
 django-htmlmin = "*"
 Pygments = "*"
-
-[dev-packages]
-
-[requires]
-python_version = "3.9"
