@@ -593,6 +593,8 @@ class MainWindow(Tk, CenterWidgetMixin): # edited
         self.center() # new
 ```
 
+## GUI (2): Widgets de la interfaz
+
 Mixins a parte, vamos a utilizar el método `build` para construir y configurar todos los widgets de la ventana principal. Si queremos comunicar alguno con otro método queramos comunicar con otros métodos lo haremos en atributos de clase.
 
 Ahora, para mostrar los clientes podemos utilizar algo como una tabla. El widget extendido `Treeview` del subpaquete `ttk` sirve para eso así que vamos a utilizarlo:
@@ -674,7 +676,7 @@ Para terminar la interfaz base, necesitamos exportar como atributo de clase el `
 self.treeview = treeview
 ```
 
-## GUI (2): Diálogo de borrado
+## GUI (3): Diálogo de borrado
 
 Ahora hay que programar los botones de acción, empezaremos por el de **borrar** ya es el más sencillo y lo implementaremos sobre un cuadro de diálogo por defecto:
 
@@ -700,7 +702,7 @@ Lo llamamos al presionar el botón:
 Button(frame, text="Borrar", command=self.delete).grid(row=1, column=2)
 ```
 
-## GUI (3): Subventana de creación
+## GUI (4): Subventana de creación
 
 En cuanto a las opciones de `crear` y `modificar` son más complejas, tendremos que programar nuestras propias ventanas secundarias con sus campos de texto, botones y validaciones.
 
@@ -761,6 +763,8 @@ Button(frame, text="Crear", command=self.create_client_window).grid(row=1, colum
 def create_client_window(self):
     CreateClientWindow(self)
 ```
+
+## GUI (5): Validación de campos
 
 La interfaz de la subventana de creación está lista, ahora vamos a configurar las validaciones en los campos antes de recuperar la información y añadir el nuevo cliente a la tabla:
 
@@ -831,7 +835,7 @@ def create_client(self):
 
 Listo, vamos a por la subventana de modificación.
 
-## GUI (4): Subventana de modificación
+## GUI (6): Subventana de modificación
 
 Para modificar un cliente vamos a reutilizar en gran parte lo que tenemos en la subventana de creación, la ventaja es que ahora no necesitamos aplicar validación al campo DNI porque éste no es editable, por lo que lo desactivaremos.
 
@@ -925,7 +929,7 @@ def update_client(self):
 
 Perfecto, lo tenemos todo preparado a falta de sincronizar los cambios de la tabla en el fichero.
 
-## GUI (5): Sincronización de datos
+## GUI (7): Sincronización de datos
 
 Para volcar los datos de la tabla al fichero CSV, solo tenemos que enlazar los momentos de creación, actualización y borrado a los métodos de la clase `Clientes` de nuestro módulo `database`. Es decir, a parte de modificar los cambios en la `treeview` visualmente, también haremos lo propio en la clase `db.Clientes`.
 
