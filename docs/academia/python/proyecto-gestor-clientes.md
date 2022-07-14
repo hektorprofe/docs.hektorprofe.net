@@ -446,33 +446,68 @@ def borrar(dni):
 
 Listo, el programa ya debería sincronizar automáticamente los cambios realizados en la memoria también en el fichero CSV.
 
-Sin embargo los tests de `database.py` ya no funcionarán:
+Sin embargo los `tests` de `database.py`...
 
 ```bash
 pytest -v
 ```
+
+Nos están modificando la información original del fichero y esto no puede ser.
 
 Los arreglamos en la próxima lección.
 
 ## Arreglando las pruebas unitarias
 
-El problema que tenemos es que el fichero `clientes.csv` no se encuentra. Esto no es algo malo, se debe a que las pruebas se ejecutan en su propio paquete y la verdad es que esto nos viene bien para tener dos ficheros independientes, uno para las pruebas y otro para el programa.
+El problema que tenemos es que las pruebas modifican la base de datos del fichero `clientes.csv`. Esto es un fallo importante porque perderemos los datos cada vez que ejecutemos las pruebas, tenemos que conseguir manejar dos ficheros CSV independientes, uno para las pruebas y otro para el programa.
 
-Solo debemos asegurarnos de que existe otro `clientes.csv` en el paquete `tests` que podemos crear inicialmente vacío:
+Para ello vamos a crear un fichero de configuración con una constante que contendrá la localización del CSV:
 
-`gestor/tests/clientes.csv`
+`gestor/config.py`
 
-```txt
-
+```py
+import sys
+DATABASE_PATH = 'clientes.csv'
 ```
 
-Con esto las pruebas deberían funcionar pasar bien:
+Simplemente substituiremos la ruta en crudo por esta constante:
+
+`gestor/database.py`
+
+```py
+class Clientes:
+    lista = []
+    with open(config.DATABASE_PATH, newline="\n") as fichero: # ...
+
+    @staticmethod
+    def guardar():
+        with open(config.DATABASE_PATH, "w", newline="\n") as fichero: # ...
+```
+
+El truco consistirá en definir una constante diferente si trabajamos con las pruebas y eso podemos saberlo analizando el primer argumento del script:
+
+`gestor/config.py`
+
+```py
+import sys
+DATABASE_PATH = 'clientes.csv'
+
+if 'pytest' in sys.argv[0]:
+    DATABASE_PATH = 'tests/clientes_test.csv'
+```
+
+Con esto las pruebas deberían ir a buscar ese nuevo fichero, que no existirá:
 
 ```bash
 pytest -v
 ```
 
-De hecho podemos añadir alguna prueba más para analizar el contenido del fichero para asegurarnos de que los cambios se estan escribiendo:
+Solo tenemos que crearlo:
+
+`gestor/tests/clientes_tests.csv`
+
+Y ya tendremos dos ficheros diferentes.
+
+Para redondearlo podemos añadir una prueba para confirmar que el contenido del fichero cambia al realizar modificaciones y asegurarnos de que la persistencia funciona correctamente:
 
 ```python
 import csv
@@ -483,7 +518,7 @@ def test_escritura_csv(self):
     db.Clientes.modificar('28Z', 'Mariana', 'Pérez')
 
     dni, nombre, apellido = None, None, None
-    with open("clientes.csv", newline="\n") as fichero:
+    with open(config.DATABASE_PATH, newline="\n") as fichero:
         reader = csv.reader(fichero, delimiter=";")
         dni, nombre, apellido = next(reader)  # Primera línea del iterador
 
@@ -492,7 +527,7 @@ def test_escritura_csv(self):
     self.assertEqual(apellido, 'Pérez')
 ```
 
-Si el fichero funciona bien todas las pruebas deberían pasar:
+Si etodo está correcto las pruebas deberían pasar:
 
 ```bash
 pytest -v
