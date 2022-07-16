@@ -1112,19 +1112,19 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="w">        </span><span class="n">ImGui_ImplSDL2_ProcessEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEBUTTONDOWN</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_MOUSEBUTTONDOWN</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="n">mouseClicked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="c1">// Save current click position</span>
 <span class="w">            </span><span class="c1">// SDL_GetMouseState(&amp;mouseClickPosition[0], &amp;mouseClickPosition[1]);</span>
 <span class="w">            </span><span class="c1">// SDL_SetRelativeMouseMode(SDL_TRUE);</span>
 <span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEBUTTONUP</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_MOUSEBUTTONUP</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="n">mouseClicked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="c1">// SDL_SetRelativeMouseMode(SDL_FALSE);</span>
 <span class="w">            </span><span class="c1">// Reset current click position</span>
 <span class="w">            </span><span class="c1">// SDL_WarpMouseInWindow(window, mouseClickPosition[0], mouseClickPosition[1]);</span>
 <span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEMOTION</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_MOUSEMOTION</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mouseClicked</span><span class="p">){</span><span class="w"></span>
 <span class="w">                </span><span class="c1">// Rotation per second in radians</span>
 <span class="w">                </span><span class="kt">float</span><span class="w"> </span><span class="n">mouseSensitivity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.075</span><span class="p">;</span><span class="w"></span>

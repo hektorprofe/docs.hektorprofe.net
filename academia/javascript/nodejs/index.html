@@ -928,44 +928,44 @@ div.my-img{text-align:center;margin-top:20px}
 </code></pre></div>
 <p>Al ejecutarlo accederemos al Prompt de Node, una línea de comandos que nos permite ejecutar diferentes instrucciones en lenguaje JavaScript. </p>
 <p>Podemos realizar algunas operaciones al vuelo:</p>
-<div class="highlight"><pre><span></span><code><span class="mf">2</span> <span class="o">+</span> <span class="mf">2</span>
-<span class="mf">5</span> <span class="o">*</span> <span class="mf">5</span>
+<div class="highlight"><pre><span></span><code><span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="w"></span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"></span>
 </code></pre></div>
 <p>Declarar variables y operarlas:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span>
-<span class="nx">b</span> <span class="o">=</span> <span class="mf">5</span>
+<div class="highlight"><pre><span></span><code><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"></span>
+<span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"></span>
 
-<span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+<span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"></span>
 </code></pre></div>
 <p>Y no sólo podemos usar tipos primitivos, también podemos declarar un arreglo y manipularlo:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">palabras</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;casa&#39;</span><span class="p">,</span> <span class="s1">&#39;ordenador&#39;</span><span class="p">,</span> <span class="s1">&#39;coche&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="nx">palabras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;casa&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ordenador&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;coche&#39;</span><span class="p">]</span><span class="w"></span>
 
-<span class="nx">palabras</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span>
-<span class="nx">palabras</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+<span class="nx">palabras</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"></span>
+<span class="nx">palabras</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"></span>
 </code></pre></div>
 <p>Incluso una función:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">saludar</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">)</span> <span class="p">}</span>
-<span class="nx">saludar</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="nx">saludar</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Algo que vale la pena comentar, es que si bien cuando ejecutamos JavaScript en el navegador contamos con una ventana para interactuar con ella y conseguir información de la ejecución, aquí no es el caso:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">window</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="w"></span>
 </code></pre></div>
 <p>Lo que tenemos en Node es un proceso, al que podemos hacer referencia con:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">process</span>
+<div class="highlight"><pre><span></span><code><span class="nx">process</span><span class="w"></span>
 </code></pre></div>
 <p>Este proceso es un objeto con mucha informacion sobra la ejecución y lo podemos consultar desde nuestros programas:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">process</span><span class="p">.</span><span class="nx">pid</span>
-<span class="nx">process</span><span class="p">.</span><span class="nx">env</span>
+<div class="highlight"><pre><span></span><code><span class="nx">process</span><span class="p">.</span><span class="nx">pid</span><span class="w"></span>
+<span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="w"></span>
 </code></pre></div>
 <p>De hecho también contiene un método para salir del intérprete:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Pero aunque el Prompt esté bien para hacer algunas pruebas no sirve para crear programas, eso se hace en scripts y hablaremos de ellos en la siguiente lección.</p>
 <h2 id="codigo-no-bloqueante">Código no bloqueante<a class="headerlink" href="#codigo-no-bloqueante" title="Permanent link">&para;</a></h2>
 <p>Antes de comenzar os recomiendo instalar una extensión llamada Code Runner en Visual Studio Code, con ella podéis ejecutar los scripts de Node con una simple combinación de teclas Control+Alt+N. Si decidís utilizarla activad la opción <strong>RunInTerminal</strong> para utilizar la terminal del sistema en lugar de la que viene en Visual Studio Code, eso os ahorrará problemas.</p>
 <p>Dicho esto, en el curso para principiantes ya vimos que es posible pasar como argumento un fichero o script con código JavaScript a Node para ejecutar las instrucciones que contiene, hágámoslo de nuevo:</p>
 <p><code>curso-node/hola.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Para ejecutarlo podemos hacer desde la propia terminal de VSC o con Control+Alt+N si habéis instalado Code Runner:</p>
 <div class="highlight"><pre><span></span><code>node hola.js
@@ -973,9 +973,9 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Como cabría esperar se muestra nuestro saludo por pantalla.</p>
 <p>Ahora bien, ¿y si quisiéramos que se muestre el saludo 2 segundos después de  ejecutar el programa?</p>
 <p>JavaScript cuenta con una instrucción llamada <strong>setTimeout</strong> que permite establecer una especie de temporizador. Recibe dos argumentos, el primero es una función callback con el código a ejecutar y el otro son los milisegundos que debe esperar antes de ejecutar el código:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
-<span class="p">},</span> <span class="mf">2000</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">},</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Si lo ejecutamos veremos que efectivamente se espera 2 segundos y entonces muestra el mensaje.</p>
 <p>En otros lenguajes esto sería equivalente a poner a "dormir" el script durante unos segundos, por ejemplo en Python se hace así:</p>
@@ -985,11 +985,11 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Ahora bien, mirad lo que ocurre si escribimos otra instrucción después del <strong>timeout</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">);</span>
-<span class="p">},</span> <span class="mf">2000</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">},</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;mundo&#39;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;mundo&#39;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Lo que ocurre es que el código fuera del <strong>timeout</strong> se llama inmediatamente, no se bloquea la ejecución.</p>
 <p>En cambio la misma lógica en Python sí es bloqueante, es como si se parase completamente el programa durante esos 2 segundos:</p>
@@ -1007,44 +1007,44 @@ div.my-img{text-align:center;margin-top:20px}
 <h2 id="el-objeto-global">El objeto global<a class="headerlink" href="#el-objeto-global" title="Permanent link">&para;</a></h2>
 <p>Cuando llamamos una instrucción como <strong>console.log()</strong>:</p>
 <p><code>app.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></p>
 <p>Estamos haciendo referencia a un objeto llamado <strong>console</strong> y a su método <strong>log()</strong>. Lo interesante es que este objeto es accesible desde cualquier lugar, es lo que se conoce como un objeto global porque forma parte del ámbito global de un programa en Node.</p>
 <p>Hay muchos objetos y funciones que forman parte del ámbito global, como por ejemplo las funciones para controlar temporizadores:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">()</span>
-<span class="nx">clearTimeout</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">()</span><span class="w"></span>
+<span class="nx">clearTimeout</span><span class="p">()</span><span class="w"></span>
 
-<span class="nx">setInterval</span><span class="p">()</span>
-<span class="nx">clearInterval</span><span class="p">()</span>
+<span class="nx">setInterval</span><span class="p">()</span><span class="w"></span>
+<span class="nx">clearInterval</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Un par muy interesante son también <strong>__filename</strong> y <strong>__dirname</strong> que almacenan el nombre del fichero y su localización:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">__filename</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">__filename</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Pero la verdad es que estos dos objetos no son exactamente globales sino que se mapean en los ficheros al ejecutarse, como si fueran una configuración extra. </p>
 <p>Sea como sea cuando utilizamos JavaScript en el navegador, estos objetos forman parte de la ventana, el objeto <strong>window</strong>, pero en Node no tenemos ventana, sino que como vimos tenemos un proceso:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">process</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">process</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Este proceso almacena la información de la ejecución, pero en él no encontraremos las definiciones globales. Éstas se encuentran específicamente en otro objeto, el objeto <strong>global</strong>, cuyo contenido se añade al script al ejecutarse:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">global</span><span class="p">.</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">)</span>
-<span class="nb">global</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="nb">global</span><span class="p">.</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">global</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Usando esta lógica podríamos hacer un programa estructurando el código en diferentes ficheros y enviar datos entre ellos añadiéndolos al objeto global:</p>
 <p><code>datos.js</code>
-<div class="highlight"><pre><span></span><code><span class="nb">global</span><span class="p">.</span><span class="nx">test</span> <span class="o">=</span> <span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">global</span><span class="p">.</span><span class="nx">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
 <p>Para cargar el fichero <strong>datos.js</strong> en nuestra <strong>app.js</strong>, utilizaríamos la función <strong>require</strong> que también forma parte del ámbito global:</p>
 <p><code>app.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./datos&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./datos&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">global</span><span class="p">.</span><span class="nx">test</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">global</span><span class="p">.</span><span class="nx">test</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Esto implica varias cosas, pero la más importante es que los datos globales se pueden volver a modificar, no están protegidos o mejor dicho, encapsulados:</p>
 <p><code>app.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./datos&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./datos&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="nb">global</span><span class="p">.</span><span class="nx">test</span> <span class="o">=</span> <span class="s2">&quot;Adiós mundo&quot;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">global</span><span class="p">.</span><span class="nx">test</span><span class="p">);</span>
+<span class="nb">global</span><span class="p">.</span><span class="nx">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Adiós mundo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">global</span><span class="p">.</span><span class="nx">test</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>La verdad es que usar variables globales es una mala práctica, no sólo en Node sino en todos los lenguajes. Hacen el código más difícil de entender, depurar, testear, mantener y reutilizar. Os dejaré <a href="https://softwareengineering.stackexchange.com/questions/148108/">un hilo en Stack Overflow</a> donde podéis profundizar al respecto.</p>
 <p>Así que todo esto nos lleva a la cuestión obvia, si no debemos utilizar <strong>global</strong> para comunicar las definiciones entre ficheros, ¿cómo lo hacemos? Pues con los módulos.</p>
@@ -1053,7 +1053,7 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Node se basa en este concepto para organizar su código, de manera que cada fichero se considera un módulo en sí mismo cuyo ámbito es el propio fichero. Es decir, las definiciones que contiene están aisladas de los demás ficheros.</p>
 <p>Mirad:</p>
 <p><code>app.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Este objeto <strong>module</strong> tiene varias propiedades, como su identificador único, padres, hijos, el path, etc. Pero no os preocupéis por estos campos, la clave que debéis entender aquí es que el objeto <strong>module</strong> existe dentro del fichero y contiene la información para que éste pueda interactuar con otros módulos.</p>
 <p>Así pues el contenido de cada módulo es privado por defecto y la única forma de acceder desde otro módulo es exportándolo para hacerlo público.</p>
@@ -1061,69 +1061,69 @@ div.my-img{text-align:center;margin-top:20px}
 <h2 id="creando-un-modulo">Creando un módulo<a class="headerlink" href="#creando-un-modulo" title="Permanent link">&para;</a></h2>
 <p>Vamos a crear un módulo muy simple con una función que salude a un nombre que le enviamos:</p>
 <p><code>messages.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">hello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">hello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">name</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <p>Por defecto la función <strong>hello</strong> es privada, tenemos que exportarla para que sea accesible desde otros módulos. Lo haremos así:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">hello</span> <span class="o">=</span> <span class="nx">hello</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hello</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>Con esto tenemos el módulo listo.</p>
 <h2 id="utilizando-un-modulo">Utilizando un módulo<a class="headerlink" href="#utilizando-un-modulo" title="Permanent link">&para;</a></h2>
 <p>Para utilizar la función <strong>hello</strong> en nuestra aplicación tenemos que cargar el módulo con el <strong>require</strong> y almacenarlo en algún lugar, normalmente una constante con el mismo nombre y desde ella hacer uso de sus funciones:</p>
 <p><code>app.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./messages&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">messages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./messages&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">messages</span><span class="p">.</span><span class="nx">hello</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">)</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">hello</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></p>
 <p>Sin embargo normalmente un módulo contendrá más de una definición:</p>
 <p><code>messages.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">hello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">hello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">name</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="kd">function</span> <span class="nx">bye</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Adiós &quot;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">bye</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Adiós &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">name</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="kd">var</span> <span class="nx">number</span> <span class="o">=</span> <span class="mf">12345</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12345</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
 <p>Para poder utilizarlas también tendremos que añadirlas al export:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">hello</span> <span class="o">=</span> <span class="nx">hello</span><span class="p">;</span>
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">bye</span> <span class="o">=</span> <span class="nx">bye</span><span class="p">;</span>
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">number</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hello</span><span class="p">;</span><span class="w"></span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">bye</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bye</span><span class="p">;</span><span class="w"></span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>Y las utilizaremos de la misma forma:</p>
 <p><code>app.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./messages&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">messages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./messages&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">messages</span><span class="p">.</span><span class="nx">hello</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">);</span>
-<span class="nx">messages</span><span class="p">.</span><span class="nx">bye</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">messages</span><span class="p">.</span><span class="nx">number</span><span class="p">);</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">hello</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">bye</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">messages</span><span class="p">.</span><span class="nx">number</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>¿Entonces tenemos que exportar todas las definiciones por separado? Así es, pero podemos hacer un truco para ahorrarnos un poco de código.</p>
 <h2 id="exportacion-simplificada">Exportación simplificada<a class="headerlink" href="#exportacion-simplificada" title="Permanent link">&para;</a></h2>
 <p>Si queremos exportar todo el contenido de una vez podemos definir el contenido del módulo como un objeto:</p>
 <p><code>messages.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">number</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span>
-    <span class="nx">hello</span><span class="o">:</span> <span class="nx">hello</span><span class="p">,</span>
-    <span class="nx">bye</span><span class="o">:</span> <span class="nx">bye</span><span class="p">,</span>
-<span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">number</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">hello</span><span class="o">:</span><span class="w"> </span><span class="nx">hello</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">bye</span><span class="o">:</span><span class="w"> </span><span class="nx">bye</span><span class="p">,</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </code></pre></div></p>
 <p>Es lo mismo pero por lo menos hemos reducido algo de código.</p>
 <h2 id="importacion-selectiva">Importación selectiva<a class="headerlink" href="#importacion-selectiva" title="Permanent link">&para;</a></h2>
 <p>Por último algo que debéis de haber notado es que al cargar un módulo estamos importando todas sus definiciones, esto no es muy interesante, sobretodo si tenemos módulos con muchas definiciones. Para solventarlo podemos requerir explícitamente las definciones que queremos.</p>
 <p>La sintaxis para hacerlo sería la siguiente:</p>
 <p><code>app.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">hello</span><span class="p">,</span> <span class="nx">bye</span><span class="p">,</span> <span class="nx">number</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./lib&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">hello</span><span class="p">,</span><span class="w"> </span><span class="nx">bye</span><span class="p">,</span><span class="w"> </span><span class="nx">number</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./lib&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>La contraparte es que ya no tenemos un objeto con el módulo completo, sino cada definición lista para usarla:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">hello</span><span class="p">,</span> <span class="nx">bye</span><span class="p">,</span> <span class="nx">number</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./messages&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">hello</span><span class="p">,</span><span class="w"> </span><span class="nx">bye</span><span class="p">,</span><span class="w"> </span><span class="nx">number</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./messages&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">hello</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">)</span>
-<span class="nx">bye</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>
+<span class="nx">hello</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="nx">bye</span><span class="p">(</span><span class="s2">&quot;Héctor&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Creo que con esto ya sabéis suficiente sobre cómo crear vuestros propios módulos. En la siguiente sección veremos algunos de los que vienen integrados en el núcleo de Node.</p>
 <h2 id="documentacion">Documentación<a class="headerlink" href="#documentacion" title="Permanent link">&para;</a></h2>
@@ -1134,52 +1134,52 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Vamos a empezar este breve repaso con el módulo <strong>path</strong>, es básico porque provee varias utilidades para trabajar con ficheros y directorios.</p>
 <p>Tal como indican en la documentación podemos cargarlo de esta forma con el require:</p>
 <p><code>app_path.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Fijaros que al cargar un módulo interno no especificamos con un punto y una barra la localización específica sino directamente con su nombre.</p>
 <p>Así que tenemos un objeto constante con el módulo <strong>path</strong> que incluye un puñado de métodos interesantes para trabajar con rutas.</p>
 <p>Uno de esos métodos extremadamente útil es <strong>parse()</strong>. </p>
 <p>¿Recordáis que teníamos un objeto global llamado __filename?</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">__filename</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">__filename</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Este contiene la ruta exacta del fichero dentro del disco duro.</p>
 <p>Pues lo que hace <strong>parse()</strong> es extraer toda la información de una ruta y la almacena en un objeto bien organizado, fijaros:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">pathObj</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">__filename</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pathObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">__filename</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pathObj</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pathObj</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Hemos transformado una simple cadena con una ruta al script actual en un objeto que contiene la raíz, el directorio contenedor, el nombre base del fichero, su extensión y su nombre simple, todo de forma automática. Consultar una de las propiedades sería tan fácil como referirnos a ella:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pathObj</span><span class="p">.</span><span class="nx">base</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pathObj</span><span class="p">.</span><span class="nx">base</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Os animo a estudiar los ejemplos de la documentación, ya que es la mejor forma de aprender y descubrir las utilidades disponibles.</p>
 <h2 id="modulo-os">Módulo OS<a class="headerlink" href="#modulo-os" title="Permanent link">&para;</a></h2>
 <p>Otro módulo muy interesante es <strong>OS</strong> centrado en proporcionar información del sistema operativo:</p>
 <p><code>app_os.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">os</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Algunos métodos que podemos consultar:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Nombre de la máquina -&gt; &quot;</span> <span class="o">+</span> <span class="nx">os</span><span class="p">.</span><span class="nx">hostname</span><span class="p">());</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Arquitectura -&gt; &quot;</span> <span class="o">+</span> <span class="nx">os</span><span class="p">.</span><span class="nx">arch</span><span class="p">());</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Plataforma -&gt; &quot;</span> <span class="o">+</span> <span class="nx">os</span><span class="p">.</span><span class="nx">platform</span><span class="p">());</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Memoria total (Bytes) -&gt; &quot;</span> <span class="o">+</span> <span class="nx">os</span><span class="p">.</span><span class="nx">totalmem</span><span class="p">());</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Nombre de la máquina -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">hostname</span><span class="p">());</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Arquitectura -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">arch</span><span class="p">());</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Plataforma -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">platform</span><span class="p">());</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Memoria total (Bytes) -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">totalmem</span><span class="p">());</span><span class="w"></span>
 </code></pre></div>
 <p>Así conseguiremos la cantidad de bytes, si queremos saber los mega bytes deberíamos dividir dos veces entre 1024:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">megaBytes</span> <span class="o">=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">totalmem</span><span class="p">()</span> <span class="o">/</span> <span class="mf">1024</span> <span class="o">/</span> <span class="mf">1024</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Memoria total (Mega Bytes) -&gt; &quot;</span> <span class="o">+</span> <span class="nx">megaBytes</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">megaBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">totalmem</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1024</span><span class="p">;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Memoria total (Mega Bytes) -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">megaBytes</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Para redondear el decimal podemos usar el método <strong>toFixed</strong> de los números indicando cero decimales:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">megabytes</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">totalmem</span><span class="p">()</span> <span class="o">/</span> <span class="mf">1024</span> <span class="o">/</span> <span class="mf">1024</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>  <span class="c1">// Number no requerido</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Memoria total (Mega Bytes) -&gt; &quot;</span> <span class="o">+</span> <span class="nx">megaBytes</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">megabytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">totalmem</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1024</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Number no requerido</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Memoria total (Mega Bytes) -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">megaBytes</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Por cierto, desde ECMA Script 6 se pueden usar los template strings para introducir variables en las cadenas, es mucho más fácil que ir escribiendo comillas dobles todo el rato:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Memoria total (Mega Bytes) -&gt; </span><span class="si">${</span><span class="nx">megaBytes</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Memoria total (Mega Bytes) -&gt; </span><span class="si">${</span><span class="nx">megaBytes</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Vosotros mismos experimentad con los demás métodos del módulo para aprender más.</p>
 <h2 id="modulo-file-system">Módulo File System<a class="headerlink" href="#modulo-file-system" title="Permanent link">&para;</a></h2>
 <p>En esta lección os voy a enseñar cómo trabajar con ficheros en Node utilizando el módulo File System.</p>
 <p>En este módulo tenemos un montón de métodos para manejar ficheros y directorios, vamos a ver los más esenciales para empezar a trabajar, luego cada uno puede profundizar más por su cuenta dependiendo de lo que desee hacer.</p>
 <p><code>app_fs.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Lo primero que notaréis es que los métodos de este módulo se presentan en dos formas, la normal y otra con un Sync al final. Eso es porque están disponibles de forma no bloqueante por defecto (asíncrona) o bloqueante (síncrona). </p>
 <p>¿Recordáis la función <strong>setTimeout</strong>? Pues con los métodos asíncronos pasa lo mismo, se ejecutan sin bloquear el resto del programa.</p>
@@ -1188,37 +1188,37 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Aún así vamos a realizar un ejemplo de código que lea el contenido de un directorio de ambas formas para que entendáis la diferencia con la práctica.</p>
 <p>Para leer el contenido de un directorio, es decir los ficheros que hay dentro se utiliza el método <strong>readdir</strong>, éste devuelve un arreglo con los ficheros.</p>
 <p>Hagámoslo primero de forma bloqueante:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readdirSync</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">files</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readdirSync</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">files</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fin del progama&quot;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fin del progama&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Como véis obtenemos el arreglo con los ficheros. Si quiséramos recorrerlos uno a uno podríamos usar el método <strong>forEach</strong> de las colecciones tal como expliqué en el curso del conversor de divisas:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readdirSync</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">);</span>
-<span class="nx">files</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">file</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readdirSync</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">files</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">file</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora vamos a la versión asíncrona, su peculiaridad es que su resultado se devuelve a una función callback de retorno que se llamará cuando se haya ejecutado el método, exactamente igual como funciona el <strong>setTimeout</strong> pero sin el temporizador, con la diferencia que la función requiere un parámetro para almacenar posibles errores si no se lee bien el directorio, y otro con los ficheros encontrados:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// const files = fs.readdirSync(&#39;./&#39;);</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// const files = fs.readdirSync(&#39;./&#39;);</span><span class="w"></span>
 
-<span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">files</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">file</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-    <span class="p">});</span>
-<span class="p">});</span>
+<span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">files</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">files</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">file</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div>
 <p>Si lo ejecutamos devolverá el mismo resultado, pero lo interesante es que veremos el mensaje <strong>Fin del programa</strong> antes de que se lea el contenido del directorio. </p>
 <p>Una mejor implementación de este código haciendo uso del error sería uso de una condición <strong>if</strong> (sí en español) para comprobar si <strong>err</strong> tiene algún valor y en caso contrario, si todo está correcto, usar la contra condición <strong>else</strong> (sino en español) y mostrar los ficheros:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Ocurrió un error&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">file</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-        <span class="p">});</span>
-    <span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">files</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Ocurrió un error&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">files</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">file</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div>
 <p>Si provocamos manualmente un fallo, por ejemplo poniendo un directorio que no existe, veremos como nos muestra el fallo que ha ocurrido.</p>
 <p>Sea como sea con este ejemplo seguro que os queda un poco más clara la diferencia entre código bloqueante y código no bloqueante que hemos venido comentando desde el principio del curso.</p>
@@ -1228,31 +1228,31 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Este módulo es cosa fina y para entender bien como funciona os sugiero estudiar antes el protocolo Http en relación a la gestión de las peticiones, los mensajes, las cabeceras y sus respuestas. Os voy a dejar <a href="https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto#Descripci%C3%B3n">un enlace a la wikipedia</a> donde se explica en detalle su funcionamiento.</p>
 <p>Pero a lo que vamos, ¿qué es un servicio? Un servicio es un programa que está en marcha permentemente esperando para responder diferentes peticiones de clientes a través de la red informática, también se les llama servidores.</p>
 <p><code>app_http.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>El módulo <strong>http</strong> incluye un método para crear un servidor http que escucha las peticiones que le llegan desde un puerto de la red del sistema y responde con contenido HTML a esas peticiones, es decir, responde con páginas web que el cliente puede visualizar.</p>
 <p>Para crear nuestro servidor lo haremos así:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>En este punto tenemos todo lo necesario en el objeto server, pero no lo tenemos escuchando todavía las peticiones, debemos indicarle que empiece a escuchar peticiones en algún puerto libre:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span><span class="w"></span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Servidor HTTP iniciado&quot;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Escuchando el puerto 3000&quot;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Servidor HTTP iniciado&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Escuchando el puerto 3000&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Ya tenemos nuestro servidor web escuchando el puerto 3000, pero sólo escucha, todavía no procesa ninguna petición. </p>
 <p>Vamos a hacer algo interesante, programar un evento. Los eventos son momentos que ocurren en los servicios y podemos detectarlos. Un momento importante es por ejemplo cuando se conecta un cliente al servidor. </p>
 <p>Para definir un evento se utiliza el método <strong>on</strong> y el nombre del evento que queremos programar, en nuestro caso será <strong>connection</strong>. </p>
 <p>Como en todas las tareas asíncronas, ésta llamará una función callback cuando se conecte un cliente, y en este caso le pasará un objeto de tipo <strong>socket</strong> que contiene información sobre la conexión activa entre el servidor y el cliente conectado:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span><span class="w"></span>
 
-<span class="nx">server</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Nueva conexión en el puerto 3000&quot;</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">);</span>
-<span class="p">});</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Nueva conexión en el puerto 3000&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Si ponemos en marcha el servidor y hacemos una petición al puerto 3000, veremos que nos muestra por pantalla que ha ocurrido el evento. Una forma rápida de hacerlo es desde el navegador, o también podemos usar la herramienta <strong>curl</strong> que tienen todos los sitemas operativos, dividiendo cómodamente la terminal en dos:</p>
 <div class="highlight"><pre><span></span><code>curl <span class="m">127</span>.0.0.1:3000
@@ -1261,11 +1261,11 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Veremos cómo hacerlo en la siguiente lección.</p>
 <h2 id="peticiones-y-respuestas">Peticiones y respuestas<a class="headerlink" href="#peticiones-y-respuestas" title="Permanent link">&para;</a></h2>
 <p>Para poder manejar peticiones y respuestas, el método <strong>createServer</strong> permite definir una función callback que nos provee de dos objetos, uno llamado <strong>request</strong> (petición) y otro <strong>response</strong> (respuesta):</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Fijaros qué ocurre si hacemos ahora diferentes peticiones con curl:</p>
 <div class="highlight"><pre><span></span><code>curl <span class="m">127</span>.0.0.1:3000
@@ -1279,25 +1279,25 @@ Petición a la URL /blog
 </code></pre></div>
 <p>¿Véis por donde van los tiros?</p>
 <p>El problema es que estas conexiones siguen en marcha, por eso curl sigue funcionando hasta que finaliza automáticamente al cabo de un rato. Para cerrar la respuesta debemos llamar a su método <strong>end</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">request</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>En este punto sólo nos falta hacer una cosa, identificar las diferentes URL que el cliente necesita y responderle un contenido diferente en cada caso.</p>
 <p>Usando el condicional <strong>if</strong> podemos hacerlo de forma bastante rudimentaria:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Bienvenido a Hektor Profe&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="s2">&quot;/blog&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Este es el blog de Hektor Profe&quot;</span><span class="p">);</span>
-    <span class="p">}</span> 
-    <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Bienvenido a Hektor Profe&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;/blog&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Este es el blog de Hektor Profe&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div>
 <p>Si volvemos a hacer las peticiones, esta vez nos devolverá los contenidos que nosotros estamos escribiendo en las respuestas:</p>
 <div class="highlight"><pre><span></span><code>curl <span class="m">127</span>.0.0.1:3000
@@ -1308,69 +1308,69 @@ curl <span class="m">127</span>.0.0.1:3000/blog
 http://127.0.0.1:3000/blog
 </code></pre></div>
 <p>Y si en lugar de enviar texto plano enviamos etiquetas HTML tendremos hecha toda la magia:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Petición a la URL -&gt; </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="sb">`</span>
 <span class="sb">            &lt;h1&gt;Hektor Profe&lt;/h1&gt;</span>
 <span class="sb">            &lt;h3&gt;Portada&lt;/h3&gt;</span>
 <span class="sb">            &lt;p&gt;Esto es un texto de mi portada...&lt;p&gt;</span>
 <span class="sb">            &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;</span>
-<span class="sb">        `</span><span class="p">);</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="s2">&quot;/blog&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="sb">`</span>
+<span class="sb">        `</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;/blog&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="sb">`</span>
 <span class="sb">            &lt;h1&gt;Hektor Profe&lt;/h1&gt;</span>
 <span class="sb">            &lt;h3&gt;Blog&lt;/h3&gt;</span>
 <span class="sb">            &lt;p&gt;Esto es una noticia de mi blog...&lt;p&gt;</span>
 <span class="sb">            &lt;a href=&quot;/&quot;&gt;Portada&lt;/a&gt;</span>
-<span class="sb">        `</span><span class="p">);</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">});</span>
+<span class="sb">        `</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div>
 <p>¿Qué os parece? Evidentemente no es la mejor forma de programar un web backend, pero hemos conseguido un prototipo funcional de una web en muy poco tiempo.</p>
 <h2 id="simulando-una-api">Simulando una API<a class="headerlink" href="#simulando-una-api" title="Permanent link">&para;</a></h2>
 <p>No me quiero despedir sin antes hacer un interesante y revelador experimento. ¿Recordáis el proyecto del conversor de divisas? Pues os quiero mostrar como crear un prototipo muy muy sencillo simulando una API JSON de ese estilo usando lo que sabemos del módulo http.</p>
 <p>Podríamos usar la siguiente base:</p>
 <p><code>app_api.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="s2">&quot;/api/divisas&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// Supondremos que tenemos los datos de un fichero o base de datos</span>
-        <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">});</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;/api/divisas&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Supondremos que tenemos los datos de un fichero o base de datos</span><span class="w"></span>
+<span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Vamos a tomar los valores tal cual los devuelve la API de <em>exchangeratesapi</em> <a href="https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY">en este enlace</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">values</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;base&quot;</span><span class="o">:</span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rates&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;USD&quot;</span><span class="o">:</span><span class="mf">1.1199</span><span class="p">,</span>
-        <span class="s2">&quot;JPY&quot;</span><span class="o">:</span><span class="mf">124.13</span><span class="p">,</span>
-        <span class="s2">&quot;GBP&quot;</span><span class="o">:</span><span class="mf">0.8547</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;base&quot;</span><span class="o">:</span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;rates&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;USD&quot;</span><span class="o">:</span><span class="mf">1.1199</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;JPY&quot;</span><span class="o">:</span><span class="mf">124.13</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;GBP&quot;</span><span class="o">:</span><span class="mf">0.8547</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora vamos a escribir el resultado en la respuesta, pero necesitamos transformar este objeto a formato JSON que es el que utilizan las API. </p>
 <p>Pues hacer esto es tan fácil como usar la librería JSON de JavaScript y su método stringify de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">values</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;base&quot;</span><span class="o">:</span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rates&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;USD&quot;</span><span class="o">:</span><span class="mf">1.1199</span><span class="p">,</span>
-        <span class="s2">&quot;JPY&quot;</span><span class="o">:</span><span class="mf">124.13</span><span class="p">,</span>
-        <span class="s2">&quot;GBP&quot;</span><span class="o">:</span><span class="mf">0.8547</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;base&quot;</span><span class="o">:</span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;rates&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;USD&quot;</span><span class="o">:</span><span class="mf">1.1199</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;JPY&quot;</span><span class="o">:</span><span class="mf">124.13</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;GBP&quot;</span><span class="o">:</span><span class="mf">0.8547</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">values</span><span class="p">));</span>
-<span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">values</span><span class="p">));</span><span class="w"></span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>Con esto podemos hacer la petición a la url <strong>/api/divisas</strong> y tendremos exactamente lo mismo que nos ofrece la API real:</p>
 <div class="highlight"><pre><span></span><code>http://127.0.0.1:3000/api/divisas

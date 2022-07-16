@@ -760,25 +760,25 @@ div.my-img{text-align:center;margin-top:20px}
 <h2 id="preparando-el-servidor">Preparando el servidor<a class="headerlink" href="#preparando-el-servidor" title="Permanent link">&para;</a></h2>
 <p>Vamos a empezar con este proyecto creando por ejemplo una carpeta <strong>Chat-Node</strong>, no le pongáis espacios ni caracteres especiales porque la vamos a iniciar como proyecto con Node, separad los espacios con guiones si lo necesitáis.</p>
 <p>Dentro iniciamos un proyecto para trabajar con dependencias, todo por defecto excepto el main que podemos llamar <strong>server.js</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">npm</span> <span class="nx">init</span>
+<div class="highlight"><pre><span></span><code><span class="nx">npm</span><span class="w"> </span><span class="nx">init</span><span class="w"></span>
 </code></pre></div>
 <p>Para este proyecto vamos a empezar a utilizar el módulo Express, así podremos servir los ficheros estáticos del frontend junto al backend fácilmente. Podemos instalarlo en un momento haciendo:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">s</span> <span class="nx">express</span>
+<div class="highlight"><pre><span></span><code><span class="nx">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">s</span><span class="w"> </span><span class="nx">express</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora en nuestro <strong>server.js</strong> creamos iniciamos nuestro servidor HTTP con express:</p>
 <p><code>server.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;express&quot;</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;express&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">()</span><span class="w"></span>
 
-<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Servidor listo en http://127.0.0.1:3000&quot;</span><span class="p">)</span>
-<span class="p">})</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Servidor listo en http://127.0.0.1:3000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>En este punto os recomiendo instalar Nodemon, es un pequeño demonio que reiniciará automáticamente nuestro servicio de Node al detectar un cambio:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">nodemon</span>
+<div class="highlight"><pre><span></span><code><span class="nx">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">g</span><span class="w"> </span><span class="nx">nodemon</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora para poner en marcha el servidor lo haremos con:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">nodemon</span> <span class="nx">server</span><span class="p">.</span><span class="nx">js</span>
+<div class="highlight"><pre><span></span><code><span class="nx">nodemon</span><span class="w"> </span><span class="nx">server</span><span class="p">.</span><span class="nx">js</span><span class="w"></span>
 </code></pre></div>
 <p>Si guardáis el fichero <strong>server.js</strong> veréis que el servidor se reinicia automáticamente.</p>
 <p>¿Muy práctico verdad?</p>
@@ -823,27 +823,27 @@ div.my-img{text-align:center;margin-top:20px}
 </code></pre></div></p>
 <p>Bien, con esto ya lo tenemos.</p>
 <p>Ahora tenemos que servir los ficheros estáticos con Express, para hacerlo haremos lo siguiente en nuestro servidor:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="k">static</span><span class="p">(</span><span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/public&#39;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="k">static</span><span class="p">(</span><span class="nx">__dirname</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/public&#39;</span><span class="p">))</span><span class="w"></span>
 </code></pre></div>
 <p>Con esto ya podemos poner en marcha el servidor y si accedemos veremos como se carga la pantalla inicial de nuestro chat.</p>
 <h2 id="conexiones-al-servidor">Conexiones al servidor<a class="headerlink" href="#conexiones-al-servidor" title="Permanent link">&para;</a></h2>
 <p>Para que manejar conversaciones en tiempo real entre un servidor y sus clientes a través de la red necesitamos utilizar sockets. </p>
 <p>Manejar sockets suele ser una tarea bastante tediosa, pero por suerte para nosotros hay una tecnología llamada web sockets que nos facilitará mucho la vida. Para utilizarla en JavaScript podemos hacr uso de la biblioteca Socket.IO.</p>
 <p>Tendremos que implementarla en ambos lados de nuestra aplicación, vamos a empezar por el servidor:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">s</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">io</span>
+<div class="highlight"><pre><span></span><code><span class="nx">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">s</span><span class="w"> </span><span class="nx">socket</span><span class="p">.</span><span class="nx">io</span><span class="w"></span>
 </code></pre></div>
 <p>Para utilizar el módulo en el servidor tendremos que iniciar un servicio http paralelo en nuestra app y cargarlo en la biblioteca <strong>justo después de crear nuestra app</strong>: </p>
 <p><code>server.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">).</span><span class="nx">Server</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;socket.io&#39;</span><span class="p">)(</span><span class="nx">http</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">).</span><span class="nx">Server</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;socket.io&#39;</span><span class="p">)(</span><span class="nx">http</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></p>
 <p>Para capturar las conexiones al servidor definiremos un evento <strong>connection</strong> que recuperará el socket abierto entre el servidor y el cliente:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Usuario conectado&#39;</span><span class="p">,</span> <span class="nx">socket</span><span class="p">)</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Usuario conectado&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">socket</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div>
 <p>Y ahora muy importante, en lugar de poner en marcha el servidor Express directamente, usaremos el que hemos redefinido en <strong>http</strong> que es donde tenemos socket.io funcionando:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </code></pre></div>
 <p>Con esto ya estamos escuchando los web sockets, pero no podemos probarlos hasta programar alguna prueba en el cliente web. </p>
 <p>Así que vamos a cargar la biblioteca socket.io en el frontend que se añade automáticamente como recurso del servidor:</p>
@@ -852,72 +852,72 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/socket.io/socket.io.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> 
 </code></pre></div></p>
 <p>Con la biblioteca cargada el primer paso es conectar el cliente al server:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">io</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Si cargamos de nuevo la página HTML veremos como ya nos aparece en el servidor el mensaje de <strong>Usuario conectado</strong>.</p>
 <h2 id="bienvenida-al-cliente">Bienvenida al cliente<a class="headerlink" href="#bienvenida-al-cliente" title="Permanent link">&para;</a></h2>
 <p>Sabemos que se ha conectado un cliente, vamos a enviarle una señal de vuelta para darle la bienvenida al servidor:</p>
 <p><code>server.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Usuario conectado&#39;</span><span class="p">)</span>
-<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;bienvenida&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Usuario conectado&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;bienvenida&#39;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora en el cliente vamos a detectar ese evento llamado <strong>bienvenida</strong> y al llamarse mostraremos la bienvenida en el chat:</p>
 <p><code>public/index.html</code>
-<div class="highlight"><pre><span></span><code><span class="c1">// Cuando jQuery se haya cargado</span>
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
+<div class="highlight"><pre><span></span><code><span class="c1">// Cuando jQuery se haya cargado</span><span class="w"></span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 
-  <span class="c1">// Capturamos la señal de bienvenida y saludamos al usuario</span>
-  <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;bienvenida&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#chat&quot;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">empty</span><span class="p">()</span>
-      <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;h3&gt;Bienvenido al chat de Hektor Profe&lt;/h3&gt;&quot;</span><span class="p">)</span>
-  <span class="p">})</span>
+<span class="w">  </span><span class="c1">// Capturamos la señal de bienvenida y saludamos al usuario</span><span class="w"></span>
+<span class="w">  </span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;bienvenida&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#chat&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">empty</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;h3&gt;Bienvenido al chat de Hektor Profe&lt;/h3&gt;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
 
-<span class="p">})</span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>¡Listo!</p>
 <h2 id="mensajes-al-servidor">Mensajes al servidor<a class="headerlink" href="#mensajes-al-servidor" title="Permanent link">&para;</a></h2>
 <p>El siguiente paso es que el cliente pueda enviar mensajes al servidor. </p>
 <p>Para hacerlo debemos emitir un mensaje del cliente hacia el servidor, pero no vamos a emitirlo a cualquier sitio sino a un evento llamado por ejemplo <strong>nuevo_mensaje</strong>:</p>
 <p><code>server.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;nuevo_mensaje&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;nuevo_mensaje&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>De vuelta al cliente vamos a detectar cuando se envía el formulario, recuperaremos los datos y los emitiremos al servidor en una pequeña estructura que representará un mensaje:</p>
 <p><code>public/index.html</code>
-<div class="highlight"><pre><span></span><code><span class="c1">// Capturamos el clic en el botón de enviar</span>
-<span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
-  <span class="c1">// Desactivamos el formulario para enviarlo con JS</span>
-  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> 
-  <span class="c1">// Creamos un objeto con el mensaje</span>
-  <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(),</span> 
-    <span class="nx">content</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
-  <span class="p">}</span>
-  <span class="c1">// Lo emitimos</span>
-  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;nuevo_mensaje&quot;</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Capturamos el clic en el botón de enviar</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Desactivamos el formulario para enviarlo con JS</span><span class="w"></span>
+<span class="w">  </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span><span class="w"> </span>
+<span class="w">  </span><span class="c1">// Creamos un objeto con el mensaje</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(),</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Lo emitimos</span><span class="w"></span>
+<span class="w">  </span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;nuevo_mensaje&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>Si enviamos un mensaje veréis que aparece en el servidor el objeto que lo contiene.</p>
 <h2 id="difundiendo-el-mensaje">Difundiendo el mensaje<a class="headerlink" href="#difundiendo-el-mensaje" title="Permanent link">&para;</a></h2>
 <p>Nuestro servidor ya recibe los mensajes, ahora tenemos que difundirlos a los clientes conectados para mostrarlos en el chat, esto es lo que se conoce como hacer un "broadcast" del mensaje.</p>
 <p>Para hacer una difusión global lo haremos a nivel del servidor y no del socket del cliente con un evento que podemos llamar <strong>difundir_mensaje</strong>:</p>
 <p><code>server.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;nuevo_mensaje&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// Dinfundimos el mensaje a todos los clientes</span>
-  <span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;difundir_mensaje&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;nuevo_mensaje&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Dinfundimos el mensaje a todos los clientes</span><span class="w"></span>
+<span class="w">  </span><span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;difundir_mensaje&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora tenemos que capturar este evento en el cliente, recuperar el objeto message recibido y mostrarlo:</p>
 <p><code>public/index.html</code>
-<div class="highlight"><pre><span></span><code><span class="c1">// Recuperamos el mensaje y lo añadimos al HTML</span>
-<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;difundir_mensaje&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#chat&quot;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Recuperamos el mensaje y lo añadimos al HTML</span><span class="w"></span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;difundir_mensaje&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#chat&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="sb">`</span>
 <span class="sb">      &lt;b&gt;</span><span class="si">${</span><span class="nx">message</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">&lt;/b&gt;</span>
-<span class="sb">      </span><span class="si">${</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="si">}</span><span class="sb">&lt;br&gt;`</span><span class="p">)</span>
-<span class="p">})</span>
+<span class="sb">      </span><span class="si">${</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="si">}</span><span class="sb">&lt;br&gt;`</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>¡Listo! Por increíble que parezca con esto tenemos un protitpo completamente funcional, probad a abrir varias ventanas y hablar con diferentes nombres.</p>
 <p>Sin embargo no quiero dejar el chat como está, creo que es una buena oportunidad para analizar algunos problemas que existen a niel de cliente y solucionarlos.</p>
@@ -926,49 +926,49 @@ div.my-img{text-align:center;margin-top:20px}
 <p>El primer problema que salta a la vista es que no tenemos un sistema de autenticación, así que cualquier puede cambiar su nombre para hacerse pasar por otra persona.</p>
 <p>Arreglar esto de forma óptima conllevaría manejar una base de datos o fichero de registros, con usuario y contraseñas encriptadas. Es demasiado trabajo para un curso de nivel intermedio, así que vamos a simplemente a bloquear el campo de nombre para que no se pueda editar una vez envías el primer mensaje:</p>
 <p><code>public/index.html</code>
-<div class="highlight"><pre><span></span><code><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;nuevo_mensaje&quot;</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>        <span class="c1">// Lo emitimos</span>
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span><span class="s2">&quot;disabled&quot;</span><span class="p">)</span>  <span class="c1">// Desactivamos el nombre</span>
+<div class="highlight"><pre><span></span><code><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;nuevo_mensaje&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="w">        </span><span class="c1">// Lo emitimos</span><span class="w"></span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span><span class="s2">&quot;disabled&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Desactivamos el nombre</span><span class="w"></span>
 </code></pre></div></p>
 <p>Algo más que podemos hacer inmediatamente después de enviar el mensaje es borrar el mensaje para que el usuario tenga que escribirlo uno nuevo y no pueda "spamear" el mismo todo el rato:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">).</span><span class="nx">focus</span><span class="p">()</span>  <span class="c1">// Borramos el mensaje y lo seleccionamos</span>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">).</span><span class="nx">focus</span><span class="p">()</span><span class="w">  </span><span class="c1">// Borramos el mensaje y lo seleccionamos</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora, creo que sería importante validar el usuario y el mensaje para que por lo menos ambos tengan un caracter de longitud, así evitaremos que se envíen mensajes vacíos o nombres vacíos:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Lo emitimos al servidor si cumple las condiciones</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span> <span class="o">&amp;&amp;</span> <span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;nuevo_mensaje&quot;</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>  <span class="c1">// Lo emitimos</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span><span class="s2">&quot;disabled&quot;</span><span class="p">)</span> <span class="c1">// Desactivamos el nombre</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">).</span><span class="nx">focus</span><span class="p">()</span>  <span class="c1">// Borramos el mensaje y lo seleccionamos</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Lo emitimos al servidor si cumple las condiciones</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;nuevo_mensaje&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="w">  </span><span class="c1">// Lo emitimos</span><span class="w"></span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;disabled&quot;</span><span class="p">,</span><span class="s2">&quot;disabled&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Desactivamos el nombre</span><span class="w"></span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">).</span><span class="nx">focus</span><span class="p">()</span><span class="w">  </span><span class="c1">// Borramos el mensaje y lo seleccionamos</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Sin embargo esto no funcionará si alguien introduce un espacio porque lo tomaré como un carácter invisible. </p>
 <p>Para solucionar esta situación podemos hacer utilizar el método <strong>trim()</strong> en los valores recuperados, eso borrará los espacios al principio y al final del nombre y el mensaje:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Creamos un objeto con el mensaje</span>
-<span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">().</span><span class="nx">trim</span><span class="p">(),</span> 
-  <span class="nx">content</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">().</span><span class="nx">trim</span><span class="p">()</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Creamos un objeto con el mensaje</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#username&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">().</span><span class="nx">trim</span><span class="p">(),</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#content&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">().</span><span class="nx">trim</span><span class="p">()</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Vamos bien, pero seguimos teniendo un problema importantísimo. Si un usuario envía un mensaje con tag HTML, este se inyectará en el chat, probad a inyectar una alerta dentro de un tag script:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span><span class="o">&lt;</span><span class="err">/script&gt;</span><span class="w"></span>
 </code></pre></div>
 <p>Esto es una brecha de seguridad considerable que deja la puerta abierta a inyectar código en otros usuarios y creedme que eso es muy malo. ¿Os imagináis que alguien os carga una librería remota de JavaScript? Han habido casos en que se han inyectado librerías para minear criptomonedas de esta forma en páginas web, haciendo que todos los clientes que visitaban la web inyectada minearan para beneficio del hacker que inyectó su librería en el código. </p>
 <p>Por suerte podemos evitar esto de una forma muy sencilla, sólo tenemos que asegurar el contenido del mensaje transformando las flechas de los tags en caracteres. Para ello vamos a crear una función que asegure una cadena:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Función para prevenir inyección de tags</span>
-<span class="kd">function</span> <span class="nx">special</span><span class="p">(</span><span class="nx">str</span><span class="p">){</span> 
-  <span class="c1">// gi =&gt; Reemplazo global case-insensitive</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/gi</span><span class="p">,</span> <span class="s1">&#39;&amp;lt;&#39;</span><span class="p">)</span> <span class="c1">// importante usar comillas simples</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&gt;/gi</span><span class="p">,</span> <span class="s1">&#39;&amp;gt;&#39;</span><span class="p">)</span> <span class="c1">// en las expresiones regulares</span>
-  <span class="k">return</span> <span class="nx">str</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Función para prevenir inyección de tags</span><span class="w"></span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">special</span><span class="p">(</span><span class="nx">str</span><span class="p">){</span><span class="w"> </span>
+<span class="w">  </span><span class="c1">// gi =&gt; Reemplazo global case-insensitive</span><span class="w"></span>
+<span class="w">  </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/gi</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&amp;lt;&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// importante usar comillas simples</span><span class="w"></span>
+<span class="w">  </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&gt;/gi</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&amp;gt;&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// en las expresiones regulares</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">str</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Y la utilizamos para asegurar los campos antes de añadirlos en el chat:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#chat&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#chat&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="sb">`</span>
 <span class="sb">    &lt;b&gt;</span><span class="si">${</span><span class="nx">special</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span><span class="si">}</span><span class="sb">&lt;/b&gt;</span>
-<span class="sb">    </span><span class="si">${</span><span class="nx">special</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">)</span><span class="si">}</span><span class="sb">&lt;br&gt;`</span><span class="p">)</span>
+<span class="sb">    </span><span class="si">${</span><span class="nx">special</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">)</span><span class="si">}</span><span class="sb">&lt;br&gt;`</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Si ahora intentamos enviar un script o cualquier tag HTML:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span><span class="o">&lt;</span><span class="err">/script&gt;</span><span class="w"></span>
 </code></pre></div>
 <p>Se nos muestra la cadena en crudo, así que problema resuelto y podemos dar por concluido nuestro chat online.</p>
 <p>En la siguiente sección del curso os enseñaré a desplegar el chat en la nube usando Heroku sin coste para que podáis probar el proyecto con vuestros amigos.</p>
@@ -1024,10 +1024,10 @@ git config --global user.name <span class="s2">&quot;Héctor Costa&quot;</span>
 <p>Básicamente nos dice que falló la asignación al puerto 3000, ¿sabéis poqué? Cuando hemos definido el <strong>Procfile</strong> hemos indicado que el servicio es del tipo <strong>web</strong>, eso le obliga a Heroku a ejecutarlo en el puerto 80. Sin embargo la solución no es tan fácil como cambiar el puerto al 80 y ya está. </p>
 <p>Heroku internamente asigna un puerto dinámico al servicio web y lo mapea automáticamente al 80 del servidor.</p>
 <p>Ese puerto dinámico es el que tenemos que recuperar del proceso y asignarlo, podemos hacerlo así:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Asignar el puerto que Heroku maneja y si no existe el 3000 manualmente</span>
-<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mf">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Servidor listo en http://127.0.0.1:&quot;</span> <span class="o">+</span> <span class="nx">server</span><span class="p">.</span><span class="nx">address</span><span class="p">().</span><span class="nx">port</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Asignar el puerto que Heroku maneja y si no existe el 3000 manualmente</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Servidor listo en http://127.0.0.1:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">server</span><span class="p">.</span><span class="nx">address</span><span class="p">().</span><span class="nx">port</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora hacemos un commit, confirmamos y publicamos los cambios.</p>
 <p>Si todo ha ido bien deberíamos ser capaces de acceder desde la URL normal, que mapea el puerto 80 automáticamente, a nuestro chat web:</p>

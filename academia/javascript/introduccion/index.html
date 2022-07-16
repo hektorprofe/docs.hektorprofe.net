@@ -925,29 +925,29 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Como ya sabemos para ejecutar Javascript sólo necesitamos un navegador. Chrome por ejemplo integra un entorno de ejecución en tiempo real donde podemos hacer algunas pruebas.</p>
 <p>Para abrirlo tenemos que acceder a la <strong>Consola</strong> de las <strong>Herramientas para desarrolladores</strong>, o haciendo clic derecho <strong>Inspeccionar</strong> en medio de una página.</p>
 <p>Probad lo siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Con esa instrucción podemos mostrar un mensaje en la consola, es el típico print de todos los lenguajes.</p>
 <p>También podemos sumar dos números, como si fuera una calculadora:</p>
-<div class="highlight"><pre><span></span><code><span class="mf">2</span> <span class="o">+</span> <span class="mf">2</span>
+<div class="highlight"><pre><span></span><code><span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="w"></span>
 </code></pre></div>
 <p>O interactuar con el navegador introduciendo este comando:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Como bien comentamos en la lección anterior, Javascript se creó para añadir interactividad en las páginas web, ¿pero esto qué significa? </p>
 <p>Si conocéis HTML sabréis que este lenguaje describe una estructura utilizando marcas. Estas marcas crean jerarquías que el navegador transforma en una estructura dinámica y viva con la que podemos interactuar, esa estructura se denomina DOM, Document Object Model o árbol de componentes. </p>
 <p>Vamos a experimentar un poco con algunas instrucciones que nos permiten interactuar con el DOM del documento actual:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;Nuevo título&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Nuevo título&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>No siempre es tan fácil modificar los componentes del documento…</p>
-<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">body</span> <span class="o">=</span> <span class="s2">&quot;Algo&quot;</span> <span class="c1">// Esto no funcionará</span>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Algo&quot;</span><span class="w"> </span><span class="c1">// Esto no funcionará</span><span class="w"></span>
 </code></pre></div>
 <p>Eso es debido a que la estructura del body es más compleja que el título:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;Que tal&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Que tal&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Obviamente podemos poner contenido en lenguaje HTML:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;&lt;h1&gt;Cabecera de primer nivel&lt;/h1&gt;&quot;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="s2">&quot;&lt;p&gt;Esto es un parágrafo...&lt;/p&gt;&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;h1&gt;Cabecera de primer nivel&lt;/h1&gt;&quot;</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;&lt;p&gt;Esto es un parágrafo...&lt;/p&gt;&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Vamos a dejarlo por ahora porque tampoco quiero abrumaros, además estoy seguro de que con esto ya empezáis a haceros una idea de lo que JavaScript nos permite hacer.</p>
 <h2 id="configurando-el-entorno">Configurando el entorno<a class="headerlink" href="#configurando-el-entorno" title="Permanent link">&para;</a></h2>
@@ -996,15 +996,15 @@ div.my-img{text-align:center;margin-top:20px}
 <p><code>index.html</code>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola mundo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div></p>
 <p>Es importante comentar que hay un caso excepcional donde sí se está bien definir un bloque script en la cabecera antes del body, relacionado con la carga de recursos y librerías de terceros, pero de eso ya hablaremos más adelante.</p>
 <p>Por ahora vamos a intentar ejecutar algo simple:</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="c1">// Esto es un comentario</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Esto es un comentario</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Si volvemos al navegador ya nos debería aparecer el mensaje en la consola del inspector.</p>
@@ -1012,8 +1012,8 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Organizar el código es fundamental para crear aplicaciones escalables y bien ordenadas, de ahí que no sea necesario escribir todo nuestro código en el propio HTML, podemos escribirlo en sus propios ficheros y cargarlos como si fueran librerías de código.</p>
 <p>Vamos a crear un fichero <strong>index.js</strong> en nuestro proyecto y dentro escribiremos el código javascript sin las etiquetas:</p>
 <p><code>index.js</code> 
-<div class="highlight"><pre><span></span><code><span class="c1">// Esto es un comentario</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Esto es un comentario</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora podemos cambiar lo que teníamos antes y cargar este fichero con su contenido de la siguiente forma:</p>
 <p><code>index.html</code>
@@ -1034,14 +1034,14 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Tradicionalmente en JavaScript se utiliza la palabra reservada <strong>var</strong> para declarar una variable, pero desde ES6 también se puede usar <strong>let</strong>. Su diferencia radica en los ámbitos que abarcan: <strong>var</strong> afecta al ámbito de la función y <strong>let</strong> al bloque, no quiero entrar en detalles para no liaros, si tenéis curiosidad así que os dejaré <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let">un enlace</a> donde se explican en detalle.</p>
 <p>Sea como sea vamos a crear una variable en el <strong>index.js</strong> usando <strong>let</strong> para irnos acostumbrando:</p>
 <p><code>index.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">nombre</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Al ejecutarse este código veremos que el resultado es <strong>undefined</strong>, no definido. Esto nos indica que no tiene un valor asignado, así que vamos a darle uno. Podemos hacerlo inicializando la variable durante la declaración:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s1">&#39;Héctor&#39;</span><span class="p">;</span>  <span class="c1">// tipo texto =&gt; cadena de caracteres =&gt; string</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Héctor&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// tipo texto =&gt; cadena de caracteres =&gt; string</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Las cadenas son un tipo de datos pueden declararse de varias formas, normalmente limitando el texto entre comillas simples o dobles.</p>
 <p>Así que hemos declarado una variable llamada nombre que contiene información de tipo texto.</p>
@@ -1051,39 +1051,39 @@ div.my-img{text-align:center;margin-top:20px}
 <li>No pueden comenzar con un número.</li>
 <li>No pueden contener espacios ni guiones, aunque sí guiones bajos, pero por convención es recomendable usar la notación camel case:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">primerApellido</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">segundoApellido</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">primerApellido</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">segundoApellido</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <ol>
 <li>Deberían tener nombres descriptivos que den información contextual. Por ejemplo, nombres como a, b, x… no nos dan ninguna información y eso puede llevarnos a confusiones.</li>
 <li>Son case sensitive, es decir, las mayúsculas y minúsculas afectan directamente a la singularidad de las variables. Por ejemplo, no es lo mismo primerApellido que PrimerApellido, son dos variables diferentes. </li>
 <li>Por último, si bien se pueden declarar múltiples variables en una línea separándolas por comas:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">primerApellido</span> <span class="o">=</span> <span class="s1">&#39;Costa&#39;</span><span class="p">,</span> <span class="nx">segundoApellido</span> <span class="o">=</span> <span class="s1">&#39;Guzmán&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">primerApellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">segundoApellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Guzmán&#39;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>Es más recomendable hacerlo en dos para mejorar la legilibilidad:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">primerApellido</span> <span class="o">=</span> <span class="s1">&#39;Costa&#39;</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">segundoApellido</span> <span class="o">=</span> <span class="s1">&#39;Guzmán&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">primerApellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">segundoApellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Guzmán&#39;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h2 id="constantes">Constantes<a class="headerlink" href="#constantes" title="Permanent link">&para;</a></h2>
 <p>Ya hemos visto lo que es una variable, pero lo que le da sentido al nombre es su capacidad de cambiar de valor en cualquier momento, es decir, de tener un valor variable.</p>
 <p>Tomemos una variable numérica llamada número con un valor de 50:</p>
 <p><code>index.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numero</span> <span class="o">=</span> <span class="mf">50</span><span class="p">;</span> <span class="c1">// tipo número</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span><span class="w"> </span><span class="c1">// tipo número</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora supongamos que en un determinado momento necesitamos cambiar el 50 por otro número,, sería tan fácil como asignarlo con el igual, pero esta vez no necesitamos declarar la variable, sólo modificar el valor:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numero</span> <span class="o">=</span> <span class="mf">50</span><span class="p">;</span>
-<span class="nx">numero</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span><span class="w"></span>
+<span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora bien, quizá en algún momento nos gustaría proteger el valor inicial de una variable para que no se pueda editar. Para lograr esa funcionalidad haríamos uso de las constantes:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">numero</span> <span class="o">=</span> <span class="mf">50</span><span class="p">;</span>
-<span class="nx">numero</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span><span class="w"></span>
+<span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Al ejecutarse este código veremos un error en la consola <strong>TypeError: Assignment to constant variable</strong>. Tal como su nombre indica, un valor constante no puede cambiar, de ahí que de el error.</p>
 <h2 id="tipos-primitivos">Tipos primitivos<a class="headerlink" href="#tipos-primitivos" title="Permanent link">&para;</a></h2>
@@ -1104,21 +1104,21 @@ div.my-img{text-align:center;margin-top:20px}
 </ul>
 <p>El sentido de los tipos cadenas y número es implícito, pues sirven para almacenar información de ese tipo:</p>
 <p><code>index.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s1">&#39;Héctor&#39;</span><span class="p">;</span> <span class="c1">// literal cadena</span>
-<span class="kd">let</span> <span class="nx">edad</span> <span class="o">=</span> <span class="mf">30</span><span class="p">;</span> <span class="c1">// literal número</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Héctor&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// literal cadena</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span><span class="w"> </span><span class="c1">// literal número</span><span class="w"></span>
 </code></pre></div></p>
 <p>El tipo booleano o lógico podemos entenderlo como el sentido afirmativo o negativo de una sentencia. Únicamente puede tener dos valores true o false (verdadero o falso), que por cierto son palabras reservadas:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">llevoGafas</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// literal booleano</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">llevoGafas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// literal booleano</span><span class="w"></span>
 </code></pre></div>
 <p>El tipo indefinido ya lo vimos anteriormente, es el valor que tiene por defecto una variable no inicializada, que también se puede asignar:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">apellido</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">apellido</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>Por último el tipo nulo se utiliza para establecer un valor vacío en una variable, es decir, limpiar el valor pero dejando rastro de que la variable sí tuvo un valor anteriormente:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">apellido</span> <span class="o">=</span> <span class="s1">&#39;Costa&#39;</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">apellido</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">apellido</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">apellido</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Y es que tenemos que entender que no es lo mismo el concepto de vacío que de indefinido. En el primero se entiende que ha habido o que habrá un valor, mientras que el otro indica que todavía no se ha asignado nada.</p>
 <p>En cualquier caso es una cosa que os iréis topando con la práctica, así que no os preocupéis demasiado por ello.</p>
@@ -1130,27 +1130,27 @@ div.my-img{text-align:center;margin-top:20px}
 <li>Dinámico</li>
 </ul>
 <p>En los lenguajes estáticos, cuando declaramos una variable es necesario especificar el tipo que tiene y ese tipo es inalterable:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">String</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s1">&#39;Héctor&#39;</span><span class="p">;</span> <span class="c1">// java</span>
+<div class="highlight"><pre><span></span><code><span class="nb">String</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Héctor&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// java</span><span class="w"></span>
 </code></pre></div>
 <p>En cambio en lenguajes como JavaScript, no es necesario establecer un tipo y además puede cambiar en cualquier momento, eso es porque viene determinado en tiempo de ejecución por el valor asignado a la variable:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s1">&#39;Héctor&#39;</span><span class="p">;</span> <span class="c1">// javascript</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Héctor&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// javascript</span><span class="w"></span>
 </code></pre></div>
 <p>Podemos ver esto en acción desde la consola del navegador haciendo uso del operador <strong>typeof</strong>. Éste nos permite saber el tipo de una variable:</p>
-<div class="highlight"><pre><span></span><code><span class="ow">typeof</span> <span class="nx">nombre</span>
+<div class="highlight"><pre><span></span><code><span class="ow">typeof</span><span class="w"> </span><span class="nx">nombre</span><span class="w"></span>
 
-<span class="o">&gt;</span> <span class="s2">&quot;string&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Como vemos inicialmente la variable nombre es de tipo string, pero si le asignamos un número cambiará:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">nombre</span> <span class="o">=</span> <span class="mf">10</span>
-<span class="ow">typeof</span> <span class="nx">nombre</span>
+<div class="highlight"><pre><span></span><code><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"></span>
+<span class="ow">typeof</span><span class="w"> </span><span class="nx">nombre</span><span class="w"></span>
 
-<span class="o">&gt;</span> <span class="s2">&quot;number&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Algo interesante es que Javascript a diferencia de otros lenguajes no distingue explícitamente entre números enteros y flotantes como pasa en otros lenguajes. Si establecemos el valor…</p>
-<div class="highlight"><pre><span></span><code><span class="nx">nombre</span> <span class="o">=</span> <span class="mf">10.5</span>
-<span class="ow">typeof</span> <span class="nx">nombre</span>
+<div class="highlight"><pre><span></span><code><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.5</span><span class="w"></span>
+<span class="ow">typeof</span><span class="w"> </span><span class="nx">nombre</span><span class="w"></span>
 
-<span class="o">&gt;</span> <span class="s2">&quot;number&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Seguiremos teniendo un tipo number. </p>
 <p>Por cierto, notad que los decimales se escriben con un punto y no una coma, eso como siempre digo es "de facto" en casi todos los lenguajes, pues en inglés se escriben de esa forma.</p>
@@ -1169,74 +1169,74 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Vamos a trasladar este concepto a código.</p>
 <p>Partamos de la base que tenemos tres variables para representar esas propiedades de una persona:</p>
 <p><code>index.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s1">&#39;Héctor&#39;</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">apellido</span> <span class="o">=</span> <span class="s1">&#39;Costa&#39;</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">edad</span> <span class="o">=</span> <span class="mf">30</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Héctor&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
 <p>Necesitamos una forma de trabajar con las tres variables en conjunto, es decir, un objeto. Lo haremos con la siguiente sintaxis:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">persona</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="p">};</span>
+<span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <p>Las llaves indican que vamos a definir un objeto, cuyo contenido se declara en pares clave-valor.</p>
 <p>Cada clave es como el nombre de la variable pero para la propiedad del objeto y seguido de dos puntos vendría el valor:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">persona</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">nombre</span><span class="o">:</span> <span class="s1">&#39;Héctor&#39;</span><span class="p">,</span>
-  <span class="nx">apellido</span><span class="o">:</span> <span class="s1">&#39;Costa&#39;</span><span class="p">,</span>
-  <span class="nx">edad</span><span class="o">:</span> <span class="mf">30</span><span class="p">;</span>
-<span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Héctor&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">apellido</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Costa&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Como podremos observar en la consola, el objeto persona está formado por las tres propiedades.</p>
 <p>Hay dos formas de trabajar con las propiedades de un objeto. Por ejemplo, si queremos modificar el contenido de una propiedad podemos usar:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Notación con punto</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Notación con punto</span><span class="w"></span>
 
-<span class="nx">persona</span><span class="p">.</span><span class="nx">nombre</span> <span class="o">=</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span>
+<span class="nx">persona</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Daniel&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>O también:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Notación con corchetes</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Notación con corchetes</span><span class="w"></span>
 
-<span class="nx">persona</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Javier&#39;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]);</span>
+<span class="nx">persona</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Javier&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]);</span><span class="w"></span>
 </code></pre></div>
 <p>La notación con corchetes tiene la ventaja de que puede ser dinámica, es decir, podemos definir en una variable una cadena con el nombre de la propiedad que queremos manipular:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">propiedad</span> <span class="o">=</span> <span class="s1">&#39;nombre&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">propiedad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;nombre&#39;</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">persona</span><span class="p">[</span><span class="nx">propiedad</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Fernando&#39;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">[</span><span class="nx">propiedad</span><span class="p">]);</span>
+<span class="nx">persona</span><span class="p">[</span><span class="nx">propiedad</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Fernando&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona</span><span class="p">[</span><span class="nx">propiedad</span><span class="p">]);</span><span class="w"></span>
 </code></pre></div>
 <p>Quizá os parece algo confuso y no lo veis mucha utilidad, pero estoy seguro que dentro de un tiempo  recordaréis este truco y os hará un buen servicio.</p>
 <h2 id="arreglos">Arreglos<a class="headerlink" href="#arreglos" title="Permanent link">&para;</a></h2>
 <p>Cuando trabajamos con datos, a menudo necesitamos lidiar con más de uno a la vez. Eso lo conseguimos  en conjuntos llamados arreglos, arrays en inglés.</p>
 <p>Dentro de un arreglo podemos definir varios elementos, ya sean literales u objetos. Por ejemplo, un arreglo de nombres:</p>
 <p><code>index.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Héctor&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Javier&#39;</span><span class="p">];</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Héctor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Daniel&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Javier&#39;</span><span class="p">];</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>Si observamos la consola veremos que cada elemento dentro del array tiene un índice numérico. Este índice representa la posición del elemento en el arreglo, y el primer elemento siempre concuerda con el índice cero. De hecho utilizando estos índices podemos mostrar un solo elemento del arreglo:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w"></span>
 </code></pre></div>
 <p>Como ya comentamos, JavaScript es un lenguaje dinámico que permite a las variables cambiar de tipo al vuelo. Lo mismo ocurre con los arreglos y su longitud, el número de elementos que contienen es dinámico, permitiéndonos añadir elementos de forma muy sencilla:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">nombres</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Juanito&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">nombres</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Juanito&#39;</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Además no estamos limitados a añadir elementos del mismo tipo, podemos mezclar cualquier tipo de dato, incluso objetos dentro de un arreglo:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">nombres</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">999</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">nombres</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">999</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>¿Pero qué tipo de dato es un arreglo?</p>
-<div class="highlight"><pre><span></span><code><span class="ow">typeof</span> <span class="nx">nombres</span>
+<div class="highlight"><pre><span></span><code><span class="ow">typeof</span><span class="w"> </span><span class="nx">nombres</span><span class="w"></span>
 
-<span class="o">&gt;</span> <span class="s2">&quot;object&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>¿Os esperábais un tipo array? Pues no, es un tipo de objeto que ya viene creado en JavaScript, y lo bueno es que contiene un montón de propiedades por defecto, las cuales podemos ver en el editor VSCode poniendo un puntito tras el arreglo.</p>
 <p>Una de ellas es tremendamente útil y nos permite saber la longitud del arreglo, es decir, el número de elementos que contiene:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombres</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>En una futura sección trataremos más en profundidad el tema de los arreglos y cómo trabajar con todas esas propiedades que contienen.</p>
 <h2 id="funciones">Funciones<a class="headerlink" href="#funciones" title="Permanent link">&para;</a></h2>
@@ -1244,86 +1244,86 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Las funciones son uno de los tipos de bloque de código fundamentales en la programación. Son esencialmente una serie de instrucciones reutilizables que realizan una determinada tarea o cálculo sobre unos valores. </p>
 <p>Se entiende mucho mejor en la práctica, así que vamos a crear una para su funcionamiento:</p>
 <p><code>index.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">saludar</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <p>No es necesario finalizar el bloque de la función con punto coma.</p>
 <p>Una vez la tenemos definida la podemos ejecutar haciendo referencia a su nombre:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>Los paréntesis es lo que indica que queremos ejecutar la función, sino los ponemos simplemente haríamos referencia a ella. </p>
 <p>Podemos ejecutarla tantas veces como queramos:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">();</span>
-<span class="nx">saludar</span><span class="p">();</span>
-<span class="nx">saludar</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">();</span><span class="w"></span>
+<span class="nx">saludar</span><span class="p">();</span><span class="w"></span>
+<span class="nx">saludar</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>Tal como tenemos nuestra función no es muy útil, sólo imprime un mensaje, vamos a transformarla en algo más interesante.</p>
 <p>Las funciones pueden recibir datos, datos que pueden manipularse dentro de la función para realizar diferentes tareas. Es precisamente el hecho de que una función puede recibir datos lo que las hace tan versátiles y uno de los conceptos claves de la programación.</p>
 <p>Por ejemplo podríamos recibir un nombre y saludarlo. Para hacerlo es muy sencillo, sólo tenemos que definir un parámetro de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola mundo&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>El parámetro nombre se comportará como una variable que únicamente existirá dentro de la función, así que podemos hacer uso de ella:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola &#39;</span> <span class="o">+</span> <span class="nx">nombre</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora para enviar el nombre, deberemos pasar el valor durante la llamada de la función como si fuera una variable o literal:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Héctor&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Héctor&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>En este punto es importante hacer una aclaración. Los valores que enviamos a una función se llaman argumentos, pero durante la definición nos referimos a ellos como parámetros.</p>
 <p>Sea como sea con este cambio hemos transformado la función en algo dinámico que tiene comportamientos distintos dependiendo del nombre que le pasemos:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Daniel&#39;</span><span class="p">);</span>
-<span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Javier&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Daniel&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Javier&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>¿Y si quisiéramos enviar un segundo argumento con el apellido? Pues deberíamos añadir un segundo parámetro en la definición:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">apellido</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola &#39;</span> <span class="o">+</span> <span class="nx">nombre</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">apellido</span><span class="p">);</span>  <span class="c1">// es mejorable</span>
-<span class="p">}</span> 
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellido</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hola &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">apellido</span><span class="p">);</span><span class="w">  </span><span class="c1">// es mejorable</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 <p>Y al ejecutarlo enviar ese segundo argumento:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Héctor&#39;</span><span class="p">,</span> <span class="s1">&#39;Costa&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Héctor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Costa&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Por cierto, ¿qué valor creéis que tiene el parámetro apellido si no lo enviamos?</p>
-<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Héctor&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">saludar</span><span class="p">(</span><span class="s1">&#39;Héctor&#39;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Pues tiene el valor <strong>undefined</strong>, como si fuera una variable no inicializada en el ámbito de la función.</p>
 <h2 id="funciones-con-retorno">Funciones con retorno<a class="headerlink" href="#funciones-con-retorno" title="Permanent link">&para;</a></h2>
 <p>Como os expliqué, las funciones pueden recibir argumentos y manejar sus valores como parámetros:</p>
 <p><code>index.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">doblar</span><span class="p">(</span><span class="nx">numero</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="o">*</span><span class="mf">2</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">doblar</span><span class="p">(</span><span class="nx">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="o">*</span><span class="mf">2</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <p>El problema es que sólo existen dentro de su propio bloque, por lo que no podemos acceder a esa información desde el exterior:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">&gt;</span> <span class="nx">Uncaught</span> <span class="ne">ReferenceError</span><span class="o">:</span> <span class="nx">numero</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">defined</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nx">Uncaught</span><span class="w"> </span><span class="ne">ReferenceError</span><span class="o">:</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">defined</span><span class="w"></span>
 </code></pre></div>
 <p>Si en lugar de mostrar el doble del número quisiéramos devolver ese valor al exterior para seguir trabajando con él, entonces necesitaremos usar el retorno de valores:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">doblar</span><span class="p">(</span><span class="nx">numero</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">numero</span><span class="o">*</span><span class="mf">2</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">doblar</span><span class="p">(</span><span class="nx">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">numero</span><span class="o">*</span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>En este momento veremos que no se muestra nada, tendríamos que ponerlo en un <strong>console.log()</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
 <p>Sin embargo la utilidad más común es almacenar el valor en una variable para poder seguir trabajando con ella:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numero</span> <span class="o">=</span> <span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>De esta forma habremos devuelto un cálculo interno de la función al exterior.</p>
 <p>Por cierto, imaginaros que queremos el doble del doble del doble de un número. ¿Cómo podríamos hacerlo? Pues fácil, llamando de forma anidada la función 3 veces:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numero</span> <span class="o">=</span> <span class="nx">doblar</span><span class="p">(</span><span class="nx">doblar</span><span class="p">(</span><span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">)));</span>  <span class="c1">// 5 -&gt; 10 -&gt; 20 -&gt; 40</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">doblar</span><span class="p">(</span><span class="nx">doblar</span><span class="p">(</span><span class="nx">doblar</span><span class="p">(</span><span class="mf">5</span><span class="p">)));</span><span class="w">  </span><span class="c1">// 5 -&gt; 10 -&gt; 20 -&gt; 40</span><span class="w"></span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>No importa si no acabáis de entenderlo, era un ejemplo para liaros un poco. </p>
 <p>Lo que debéis recordar es que las funciones son un conjunto de instrucciones reutilizables identificadas con un nombre, que tienen como objetivo realizar una tarea o un cálculo y que pueden comunicarse con el exterior recibiendo y retornando datos.</p>

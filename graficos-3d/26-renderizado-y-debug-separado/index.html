@@ -858,7 +858,7 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="n">ImGui</span><span class="o">::</span><span class="n">End</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora podemos utilizar esto como condición para poder rotar la vista:</p>
-<div class="highlight"><pre><span></span><code><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEMOTION</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">case</span><span class="w"> </span><span class="no">SDL_MOUSEMOTION</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// Process rotation only if...</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mouseClicked</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">rendererActive</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
@@ -884,7 +884,7 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="n">rendererDragged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ImGui</span><span class="o">::</span><span class="n">IsItemHovered</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>Luego lo utilizamos de condición como ya hicimos antes:</p>
-<div class="highlight"><pre><span></span><code><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEMOTION</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">case</span><span class="w"> </span><span class="no">SDL_MOUSEMOTION</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// Process rotation only if...</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mouseClicked</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">rendererActive</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="o">!</span><span class="n">rendererDragged</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
@@ -895,7 +895,7 @@ div.my-img{text-align:center;margin-top:20px}
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">keystate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SDL_GetKeyboardState</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Un último detalle que me gustaría implementar es la posibilidad de que la rueda de ratón pueda hacer zoom como pasa en editores como Unity. Tengo la costumbre de hacerlo y me sale de forma natural así que la voy a añadir a modo de incremento y decremento en el eje <code>z</code> de la cámara:</p>
-<div class="highlight"><pre><span></span><code><span class="k">case</span><span class="w"> </span><span class="nl">SDL_MOUSEWHEEL</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">case</span><span class="w"> </span><span class="no">SDL_MOUSEWHEEL</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rendererActive</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="o">!</span><span class="n">rendererDragged</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="c1">// Scroll up</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">wheel</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>

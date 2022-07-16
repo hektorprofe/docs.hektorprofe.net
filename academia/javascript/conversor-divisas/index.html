@@ -870,26 +870,26 @@ div.my-img{text-align:center;margin-top:20px}
 <li>Crearemos un script para establecer los valores iniciales de los inputs usando el método <strong>forEach</strong> que tienen los arrays en JavaScript:</li>
 </ul>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">inputs</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.valor&quot;</span><span class="p">);</span>
-<span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="nx">mostrarValor</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>           <span class="c1">// mostramos el valor</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">);</span>  <span class="c1">// mostramos el cambio</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.valor&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarValor</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w">           </span><span class="c1">// mostramos el valor</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">);</span><span class="w">  </span><span class="c1">// mostramos el cambio</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li>La función puede ser anónima, sin tener nombre:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Incluso se puede simplificar a una función flecha:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">input</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">input</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Como vemos nos sobra un paréntesis:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Finalmente trasladamos el código JavaScript a un fichero <strong>scripts.js</strong> separado y lo cargamos justo antes de cerrar el body:</li>
@@ -901,9 +901,9 @@ div.my-img{text-align:center;margin-top:20px}
 <li>Establecemos el valor inicial de cada input en su valor de cambio:</li>
 </ul>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li>En este punto veremos que en Chrome solo podemos subir y bajar enteros, añadiremos un paso decimal a los inputs:</li>
@@ -924,9 +924,9 @@ div.my-img{text-align:center;margin-top:20px}
   <span class="na">step</span><span class="o">=</span><span class="s">&quot;0.25&quot;</span> <span class="na">onChange</span><span class="o">=</span><span class="s">&quot;valorCambiado(this)&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div></p>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">valorModificado</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">valorModificado</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li>Lo añadiremos a todos los inputs.</li>
@@ -941,32 +941,32 @@ div.my-img{text-align:center;margin-top:20px}
 </li>
 </ul>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">);</span><span class="w"></span>
 </code></pre></div></p>
 <ul>
 <li>Para realizar los cálculos en los inputs tendremos que volver a recorrerlos y establecer sus valores:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">valorCambiado</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">factor</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span>
-  <span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">*</span> <span class="nx">factor</span><span class="p">;</span>
-  <span class="p">})</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">valorCambiado</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">factor</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Con esto ya tenemos el conversor funcionando, auque os quiero comentar algo que debemos evitar y eso es repetir variables como nombres de parámetros. Aunque en nuestro caso no ha pasado nada, podría darse la situación en que os surjan problemas, así que os recomiendo que en lugar de usar el nombre input dentro de la función valorCambiado, pongáis otro, por ejemplo "campo", ya que esos representan todos los diferentes "campos" y no sólo el que ha cambiado:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">valorCambiado</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">factor</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span>
-  <span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">campo</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">campo</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="p">(</span><span class="nx">campo</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">*</span> <span class="nx">factor</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
-  <span class="p">})</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">valorCambiado</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">campo</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">campo</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">campo</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">factor</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Ya sólo nos falta hacer que los valores de cambio se tomen de la API automáticamente, pero antes dejadme mostraros como redondear con JavaScript nuestro resultado a dos decimales:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nx">campo</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="p">(</span><span class="nx">campo</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">*</span> <span class="nx">factor</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">campo</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">campo</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">factor</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <ul>
 <li>Por cierto, está divertido usar la tecla arriba y abajo en los campos para ver como se van actualizando nuestras conversiones.</li>
@@ -977,18 +977,18 @@ div.my-img{text-align:center;margin-top:20px}
 <p>La estructura básica de una petición con fetch es siempre la misma, por lo que no es necesario memorizarla, basta con entender qué hace.</p>
 <p>Vamos a hacer nuestra petición al cargar el script:</p>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY&#39;</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span> 
-  <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
-<span class="p">})</span> 
-<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span> 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<span class="p">})</span>
-<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span> 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span> 
-<span class="p">})</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span><span class="w"></span>
+<span class="p">})</span><span class="w"> </span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span><span class="w"> </span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>La lógica siempre es:</p>
 <ul>
@@ -1003,52 +1003,52 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Antes de continuar vamos a hacer un inciso para transformar la petición <strong>fetch</strong> a funciones flecha para simplicar el código, ya que generalmente se deja todo más simple.</p>
 <p>Primero borremos las funciones:</p>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span> 
-  <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
-<span class="p">})</span>
-<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span> 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<span class="p">})</span>
-<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span> 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span> 
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span><span class="w"> </span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora, algo muy interesante que se puede hacer con las funciones flecha es devolver un resultado directo sin necesidad de abrir un bloque, fijaros:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> 
-  <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
-<span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Como lo que se devuelve es una sola instrucción implícita, podemos incluso no devolver nada y mostrar algo directamente por pantalla:</p>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
-<span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Este código tan simple que hemos conseguido suele escribirse en tres líneas substituyendo la variable response por una r:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY&#39;</span><span class="p">;</span>
-<span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">r</span> <span class="p">=&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
-  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span><span class="w"></span>
 </code></pre></div>
 <p>Esta es la forma más simplificada posible de <strong>fetch()</strong>, pero tened en cuenta que en el momento que necesitemos más de una instrucción en las funciones flecha tendremos que crear un bloque con llaves obligatoriamente.</p>
 <h2 id="accediendo-a-los-datos">Accediendo a los datos<a class="headerlink" href="#accediendo-a-los-datos" title="Permanent link">&para;</a></h2>
 <p>Muy bien tenemos los valores de la API listos para manipularlos en datos JSON. JSON es el acrónimo de <strong>JavaScript Object Notation</strong>, así que en realidad lo que tenemos son objetos con sus propiedades que podemos consultar de la forma como os enseñé en mi curso de JavaScript para principiantes.</p>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">);</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">);</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>En un nivel más de profundidad tenemos los datos que necesitamos:</p>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">GBP</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">USD</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">JPY</span><span class="p">);</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">GBP</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">USD</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">JPY</span><span class="p">);</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div>
 <p>Ahora tenemos que tirar de nuestro ingenio e idear una forma de establecer los valores en los campos... ¿Cómo podríamos hacerlo?</p>
 <p>¿Cada divisa tiene un código en mayúsculas verdad? USD, GBP, JPY</p>
@@ -1061,14 +1061,14 @@ data-clave=&quot;JPY&quot;
 <p>En el caso del euro no lo necesitamos porque siempre se toma como base 1 euro al hacer las conversiones. </p>
 <p>Ahora simplemente tenemos que hacer referencia a los inputs a partir de esa id y asignarles su nuevo valor de cambio:</p>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#USD&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">USD</span><span class="p">;</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#GBP&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">GBP</span><span class="p">;</span>  
-  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#JPY&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">JPY</span><span class="p">;</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#USD&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">USD</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#GBP&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">GBP</span><span class="p">;</span><span class="w">  </span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#JPY&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">JPY</span><span class="p">;</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>Después de hacer este ajuste veremos que todo parece funcionar perfectamente, pero hay un problema. ¿Recordáis que os comenté que <strong>fetch</strong> funciona con promesas asíncronas? Eso signica que sabemos cuando realizamos la petición y confiamos en la promesa de que se procese la información al recibirse la respuesta, pero de mientras el proceso queda en un limbo temporal. </p>
 <p>Ese tiempo es suficiente para que nuestra web muestre los valores de cambio que tenemos establecidos manualmente en los inputs en lugar de los que se cargan de la API.</p>
@@ -1076,26 +1076,26 @@ data-clave=&quot;JPY&quot;
 <h2 id="el-detalle-final">El detalle final<a class="headerlink" href="#el-detalle-final" title="Permanent link">&para;</a></h2>
 <p>Para evitar el problema inherente de usar las promesas tendremos que establecer los valores de cambio en los inputs justo después de recibirlos dentro del <strong>fetch()</strong>:</p>
 <p><code>scripts.js</code>
-<div class="highlight"><pre><span></span><code><span class="c1">// Nos llevamos esto arriba del todo para reutiliarlo</span>
-<span class="kd">let</span> <span class="nx">inputs</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.valor&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Nos llevamos esto arriba del todo para reutiliarlo</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.valor&quot;</span><span class="p">);</span><span class="w"></span>
 
-<span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY&#39;</span><span class="p">;</span>
-<span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">r</span> <span class="p">=&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#USD&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">USD</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#GBP&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">GBP</span><span class="p">;</span>  
-    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#JPY&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">JPY</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#USD&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">USD</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#GBP&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">GBP</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#JPY&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">rates</span><span class="p">.</span><span class="nx">JPY</span><span class="p">;</span><span class="w"></span>
 
-    <span class="c1">// Recorremos y establecemos los valores aquí en lugar de abajo</span>
-    <span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span>
-    <span class="p">});</span>
-  <span class="p">})</span>
-  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span>
+<span class="w">    </span><span class="c1">// Recorremos y establecemos los valores aquí en lugar de abajo</span><span class="w"></span>
+<span class="w">    </span><span class="nx">inputs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">input</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">cambio</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span><span class="w"></span>
 </code></pre></div></p>
 <p>Con esto podemos borrar el dataset data-cambio de todos los inputs exceputando el del euro, ya que es el único que debe tener un valor manual de 1 porque no se recibe de la API.</p>
 <p><code>index.html</code>

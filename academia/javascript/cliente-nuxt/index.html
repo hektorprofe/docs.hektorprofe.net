@@ -921,13 +921,13 @@ npm run dev
 <p>Implementar el funcionamiento del menú desplegable sería muy tedioso, pero gracias a Vue podemos implementar su funcionamiento en un santiamén. </p>
 <p>Para forzar que se muestre el menú superior al presionar el botón en dispositivos móviles necesitamos forzar su visualización con CSS, ya que éste se esconde automáticamente.</p>
 <p>Podríamos crear una variable en el componente llamada <em>isActive</em>, por defecto le daremos false indicando que el menú estará plegado:</p>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
- <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-   <span class="k">return</span> <span class="p">{</span>
-     <span class="nx">isActive</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-   <span class="p">}</span>
- <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="nx">isActive</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Cuando hagamos clic en la hamburguesa haremos un toggle, cambiando el valor con un evento clic:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navbar-burger&quot;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;isActive = !isActive&quot;</span><span class="p">&gt;</span>
@@ -970,13 +970,13 @@ npm run dev
 <p>Lo primero que podemos hacer es cambiarle el nombre, en lugar de <strong>Card.vue</strong> podríamos llamarla <strong>Peli.vue</strong>.</p>
 <p>Obviamente al cambiarle el nombre dejará de funcionar, tendremos que adaptarlo al importarlo:</p>
 <p><code>pages/index.vue</code>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">Peli</span> <span class="kr">from</span> <span class="s1">&#39;~/components/Peli&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Peli</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;~/components/Peli&#39;</span><span class="w"></span>
 
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">Peli</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Peli</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <p>Y al usarlo:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">Peli</span>
@@ -997,7 +997,7 @@ npm run dev
 <span class="w">         </span><span class="err">&#39;id&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;El</span><span class="w"> </span><span class="err">Padri</span><span class="kc">n</span><span class="err">o&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;</span><span class="kc">fa</span><span class="err">vori</span><span class="kc">t</span><span class="err">os&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">3</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="err">&#39;image</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="err">//m.media</span><span class="mi">-</span><span class="err">amazo</span><span class="kc">n</span><span class="err">.com/images/M/MV</span><span class="mi">5</span><span class="err">BM</span><span class="mi">2</span><span class="err">MyNjYxNmU</span><span class="kc">t</span><span class="err">YTAwNi</span><span class="mi">00</span><span class="err">MTYxLWJmNWY</span><span class="kc">t</span><span class="err">YzZlODY</span><span class="mi">3</span><span class="err">ZTk</span><span class="mi">3</span><span class="err">OTFlXkEyXkFqcGdeQXVyNzkwMjQ</span><span class="mi">5</span><span class="err">NzM@._V</span><span class="mi">1</span><span class="err">_UY</span><span class="mi">268</span><span class="err">_CR</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">182</span><span class="p">,</span><span class="mi">268</span><span class="err">_AL_.jpg&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="err">&#39;image</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR3,0,182,268_AL_.jpg&#39;,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;es</span><span class="kc">tren</span><span class="err">o&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">1972</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;resume</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;The</span><span class="w"> </span><span class="err">agi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">pa</span><span class="kc">tr</span><span class="err">iarch</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="w"> </span><span class="err">orga</span><span class="kc">n</span><span class="err">ized</span><span class="w"> </span><span class="err">crime</span><span class="w"> </span><span class="err">dy</span><span class="kc">nast</span><span class="err">y</span><span class="w"> </span><span class="kc">transfers</span><span class="w"> </span><span class="err">co</span><span class="kc">ntr</span><span class="err">ol</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="err">cla</span><span class="kc">n</span><span class="err">des</span><span class="kc">t</span><span class="err">i</span><span class="kc">ne</span><span class="w"> </span><span class="err">empire</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="err">reluc</span><span class="kc">tant</span><span class="w"> </span><span class="err">so</span><span class="kc">n</span><span class="err">.&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">       </span><span class="p">},</span><span class="w"></span>
@@ -1005,7 +1005,7 @@ npm run dev
 <span class="w">         </span><span class="err">&#39;id&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;El</span><span class="w"> </span><span class="err">Padri</span><span class="kc">n</span><span class="err">o</span><span class="p">:</span><span class="w"> </span><span class="err">Par</span><span class="kc">te</span><span class="w"> </span><span class="mi">2</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;</span><span class="kc">fa</span><span class="err">vori</span><span class="kc">t</span><span class="err">os&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">1</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="err">&#39;image</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="err">//m.media</span><span class="mi">-</span><span class="err">amazo</span><span class="kc">n</span><span class="err">.com/images/M/MV</span><span class="mi">5</span><span class="err">BMWMwMGQzZTI</span><span class="kc">t</span><span class="err">Y</span><span class="mi">2</span><span class="err">JlNC</span><span class="mi">00</span><span class="err">OWZiLWIyMDc</span><span class="kc">t</span><span class="err">NDk</span><span class="mi">2</span><span class="err">ZDQ</span><span class="mi">2</span><span class="err">YjRjMWQ</span><span class="mi">0</span><span class="err">XkEyXkFqcGdeQXVyNzkwMjQ</span><span class="mi">5</span><span class="err">NzM@._V</span><span class="mi">1</span><span class="err">_UY</span><span class="mi">268</span><span class="err">_CR</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">182</span><span class="p">,</span><span class="mi">268</span><span class="err">_AL_.jpg&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="err">&#39;image</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR3,0,182,268_AL_.jpg&#39;,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;es</span><span class="kc">tren</span><span class="err">o&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">1974</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;resume</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;The</span><span class="w"> </span><span class="err">early</span><span class="w"> </span><span class="err">li</span><span class="kc">fe</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">career</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">Vi</span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">Corleo</span><span class="kc">ne</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="mi">1920</span><span class="err">s</span><span class="w"> </span><span class="err">New</span><span class="w"> </span><span class="err">York</span><span class="w"> </span><span class="err">Ci</span><span class="kc">t</span><span class="err">y</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">por</span><span class="kc">tra</span><span class="err">yed</span><span class="p">,</span><span class="w"> </span><span class="err">while</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="err">so</span><span class="kc">n</span><span class="p">,</span><span class="w"> </span><span class="err">Michael</span><span class="p">,</span><span class="w"> </span><span class="err">expa</span><span class="kc">n</span><span class="err">ds</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="kc">t</span><span class="err">igh</span><span class="kc">tens</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="err">grip</span><span class="w"> </span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">fa</span><span class="err">mily</span><span class="w"> </span><span class="err">crime</span><span class="w"> </span><span class="err">sy</span><span class="kc">n</span><span class="err">dica</span><span class="kc">te</span><span class="err">.&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">       </span><span class="p">},</span><span class="w"></span>
@@ -1013,7 +1013,7 @@ npm run dev
 <span class="w">         </span><span class="err">&#39;id&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;El</span><span class="w"> </span><span class="err">Padri</span><span class="kc">n</span><span class="err">o</span><span class="p">:</span><span class="w"> </span><span class="err">Par</span><span class="kc">te</span><span class="w"> </span><span class="mi">3</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;</span><span class="kc">fa</span><span class="err">vori</span><span class="kc">t</span><span class="err">os&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">0</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="err">&#39;image</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="err">//m.media</span><span class="mi">-</span><span class="err">amazo</span><span class="kc">n</span><span class="err">.com/images/M/MV</span><span class="mi">5</span><span class="err">BNTc</span><span class="mi">1</span><span class="err">YjhiNzk</span><span class="kc">t</span><span class="err">MjEyNS</span><span class="mi">00</span><span class="err">YmNhLWExYjI</span><span class="kc">t</span><span class="err">ZDhkNWJjZjYxOWZiXkEyXkFqcGdeQXVyNzkwMjQ</span><span class="mi">5</span><span class="err">NzM@._V</span><span class="mi">1</span><span class="err">_UX</span><span class="mi">182</span><span class="err">_CR</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">182</span><span class="p">,</span><span class="mi">268</span><span class="err">_AL_.jpg&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="err">&#39;image</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//m.media-amazon.com/images/M/MV5BNTc1YjhiNzktMjEyNS00YmNhLWExYjItZDhkNWJjZjYxOWZiXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;es</span><span class="kc">tren</span><span class="err">o&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">1990</span><span class="err">&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">         </span><span class="err">&#39;resume</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;I</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">mids</span><span class="kc">t</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="kc">tr</span><span class="err">yi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">legi</span><span class="kc">t</span><span class="err">imize</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="err">busi</span><span class="kc">ness</span><span class="w"> </span><span class="err">deali</span><span class="kc">n</span><span class="err">gs</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="err">New</span><span class="w"> </span><span class="err">York</span><span class="w"> </span><span class="err">Ci</span><span class="kc">t</span><span class="err">y</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">I</span><span class="kc">tal</span><span class="err">y</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="mi">1979</span><span class="p">,</span><span class="w"> </span><span class="err">agi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">Ma</span><span class="kc">f</span><span class="err">ia</span><span class="w"> </span><span class="err">Do</span><span class="kc">n</span><span class="w"> </span><span class="err">Michael</span><span class="w"> </span><span class="err">Corleo</span><span class="kc">ne</span><span class="w"> </span><span class="err">seeks</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">avow</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="err">si</span><span class="kc">ns</span><span class="p">,</span><span class="w"> </span><span class="err">while</span><span class="w"> </span><span class="kc">ta</span><span class="err">ki</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="kc">ne</span><span class="err">phew</span><span class="w"> </span><span class="err">Vi</span><span class="kc">n</span><span class="err">ce</span><span class="kc">nt</span><span class="w"> </span><span class="err">Ma</span><span class="kc">n</span><span class="err">ci</span><span class="kc">n</span><span class="err">i</span><span class="w"> </span><span class="err">u</span><span class="kc">n</span><span class="err">der</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="err">wi</span><span class="kc">n</span><span class="err">g.&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">       </span><span class="p">}</span><span class="w"></span>
@@ -1030,13 +1030,13 @@ npm run dev
 </code></pre></div>
 <p>Usando el v-for repetimos el componente para cada película que guardamos en peli. El v-for requiere indicar una :key única para identificar cada componente, le podemos asignar la id de la película. Por último podemos enviar una propiedad con todo el objeto peli al componente.</p>
 <p>Con esto veremos que se crean 3 cajas, pero sin contenido. Lo que debemos hacer es adaptar el componente para extraer los datos de la propiedad peli y hacer uso de ellos:</p>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
- <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
-   <span class="nx">peli</span><span class="o">:</span> <span class="p">{</span>
-     <span class="nx">type</span><span class="o">:</span> <span class="nb">Object</span>
-   <span class="p">}</span>
- <span class="p">},</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nx">peli</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nb">Object</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>La estructura de la película es algo más tediosa de programar porque requiere código de Bulma, os voy a facilitar un template básico para no liarnos demasiado:</p>
 <p><code>components/Peli.vue</code>
@@ -1073,11 +1073,11 @@ npm run dev
 <p>La idea es que al hacer clic en la película nos aparezca el resumen en este componente emergente. Esto podría parecer un gran trabajo, pero como cada peli es una instancia del mismo componente es muy fácil de implementar. </p>
 <p>Primero necesitamos una variable para controlar si mostrar o no una ventana modal:</p>
 <p><code>components/Peli.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="nx">isModalActive</span><span class="o">:</span> <span class="kc">false</span>
-  <span class="p">};</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">isModalActive</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora siguiendo el ejemplo de la <a href="https://buefy.org/documentation/modal/">documentación</a> de Buefy os facilito el código de la modal, que podemos poner justo debajo del footer de la peli o donde queráis, ya que a fin de cuentas emergerá por encima de todo lo demás:</p>
 <div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Modal para el resumen y año de estreno --&gt;</span>
@@ -1106,18 +1106,18 @@ npm run dev
 <h2 id="axios-y-primera-peticion">Axios y primera petición<a class="headerlink" href="#axios-y-primera-peticion" title="Permanent link">&para;</a></h2>
 <p>Axios es un cliente http basado en promesas que nos permitirá interactuar fácilmente con la api, para hacerlo deberemos configurar la ruta raíz en el fichero <strong>nuxt.config.js</strong>:</p>
 <p><code>nuxt.config.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">axios</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">baseURL</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:8844/api/v1&quot;</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">axios</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">baseURL</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:8844/api/v1&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div></p>
 <p>Para cargar las películas en la portada de nuestra página vamos a utilizar el método asyncData de Nuxt.js. En él importamos el módulo axios y realizaremos la petición:</p>
 <p><code>pages/index.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">asyncData</span> <span class="p">({</span> <span class="nx">$axios</span> <span class="p">})</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/&#39;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
-  <span class="p">})</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">asyncData</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">$axios</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora si tenemos funcionando la API que enseñé a crear en mi otro curso y cargamos la página veremos que nos da un error cuando axios hace la petición, en la consola podremos leer:</p>
 <div class="highlight"><pre><span></span><code>Access to XMLHttpRequest at &#39;http://127.0.0.1:8844/api/v1/peliculas/&#39;
@@ -1151,28 +1151,28 @@ resource.
 <h2 id="cargando-las-peliculas">Cargando las películas<a class="headerlink" href="#cargando-las-peliculas" title="Permanent link">&para;</a></h2>
 <p>Ahora que tenemos la información sólo tenemos que sustituir los datos de prueba por los que recibimos. Lo haremos borrando el array 'pelis' de data y devolviendo el nuevo 'data' asíncrono en el método asyncData de Nuxt.js:</p>
 <p><code>pages/index.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">asyncData</span> <span class="p">({</span> <span class="nx">$axios</span> <span class="p">})</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/&#39;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="s1">&#39;pelis&#39;</span><span class="o">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
-    <span class="p">}</span>
-  <span class="p">})</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">asyncData</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">$axios</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;pelis&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <p>Con esto tenemos la magia hecha y al cargar la página ya nos aparecerán las películas en la portada cargadas a través de la API.</p>
 <p>Si quisiéramos que aparezcan las películas ordenadas de más a menos favoritos, podríamos cambiar la query de axios añadiendo el filtro programado en DRF:</p>
-<div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/?ordering=-favoritos&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">return</span><span class="w"> </span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/?ordering=-favoritos&#39;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h2 id="buscador-de-peliculas-por-titulo">Buscador de películas por título<a class="headerlink" href="#buscador-de-peliculas-por-titulo" title="Permanent link">&para;</a></h2>
 <p>Lo último que nos falta en la portada sería añadir un pequeño buscador por título. La API que creamos cuenta un sistema de búsqueda así que podríamos hacer uso de él.</p>
 <p>Vamos a empezar creando una variable reactiva para controlar un input de texto:</p>
 <p><code>pages/index.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="nx">searchText</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
-  <span class="p">};</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">searchText</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div></p>
 <p>El formulario que manejará esta parte tendrá in input con un v-model que enlazará esta variable, y además un par de botones para buscar y reiniciar el filtro, podéis copiarlo tal cual:</p>
 <div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Empieza la parte de la búsqueda --&gt;</span>
@@ -1197,23 +1197,23 @@ resource.
 <span class="cm">&lt;!-- Fin de la búsqueda --&gt;</span>
 </code></pre></div>
 <p>Ahora crearemos los dos métodos que se encargarán de hacer la petición, así como desactivar el input, algo importante sobretodo en dispositivos móviles para esconder el teclado virtual:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">search</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">pelis</span> <span class="o">=</span> <span class="p">[]</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#searchInput&#39;</span><span class="p">).</span><span class="nx">blur</span><span class="p">()</span>  <span class="c1">// esconder teclado</span>
-  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">params</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s1">&#39;search&#39;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">searchText</span><span class="p">,</span>
-      <span class="s1">&#39;ordering&#39;</span><span class="o">:</span> <span class="s1">&#39;-favoritos&#39;</span>
-    <span class="p">}</span>
-  <span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">pelis</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
-  <span class="p">})</span>
-<span class="p">},</span>
-<span class="nx">clear</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">searchText</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">search</span><span class="p">()</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">search</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">pelis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#searchInput&#39;</span><span class="p">).</span><span class="nx">blur</span><span class="p">()</span><span class="w">  </span><span class="c1">// esconder teclado</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/peliculas/&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;search&#39;</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">searchText</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;ordering&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;-favoritos&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">pelis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="nx">clear</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">searchText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">search</span><span class="p">()</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Con esto tendremos el sistema de búsqueda implementado.</p>
 <h2 id="manejando-la-autenticacion">Manejando la autenticación<a class="headerlink" href="#manejando-la-autenticacion" title="Permanent link">&para;</a></h2>
@@ -1255,10 +1255,10 @@ resource.
 <span class="p">&lt;/</span><span class="nt">b-modal</span><span class="p">&gt;</span>
 </code></pre></div></p>
 <p>Hace uso de tres variables reactivas, dos cadenas con un email y un password (al que podemos dar datos de prueba para ahorrarnos tiempo), y también otra variable para controlar si se muestra o no:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">isLoginActive</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><span class="nx">isLoginActive</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 
-<span class="nx">loginEmail</span><span class="o">:</span> <span class="s1">&#39;test@test.com&#39;</span><span class="p">,</span>
-<span class="nx">loginPassword</span><span class="o">:</span> <span class="s1">&#39;TEST1234A&#39;</span><span class="p">,</span>
+<span class="nx">loginEmail</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;test@test.com&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">loginPassword</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;TEST1234A&#39;</span><span class="p">,</span><span class="w"></span>
 </code></pre></div>
 <p>Como podéis suponer esta variable la modificaremos al hacer clic en el botón de Acceder:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button is-light&quot;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;isLoginActive=true&quot;</span><span class="p">&gt;</span>
@@ -1266,22 +1266,22 @@ resource.
 <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Lo siguiente es capturar el momento que se envía el formulario y en lugar de hacer una petición automática ejecutar un método para gestionar la petición, por ejemplo 'login':</p>
-<div class="highlight"><pre><span></span><code><span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">login</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/auth/login/&#39;</span><span class="p">,</span> <span class="p">{</span>
-      <span class="nx">email</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span><span class="p">,</span>
-      <span class="nx">password</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">loginPassword</span>
-    <span class="p">})</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span>
-      <span class="p">}</span>
-    <span class="p">})</span>
-    <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-    <span class="p">})</span>
-  <span class="p">}</span>
- <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">login</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/auth/login/&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">loginPassword</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span><span class="w"></span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Para prevenir el envío automático y llamar al método lo haremos así:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">v-on:submit</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;login&quot;</span><span class="p">&gt;</span>
@@ -1302,52 +1302,52 @@ resource.
 <p>Hay dos estados que vamos a manejar en nuestra aplicación, el primero es el token y el segundo un "nombre" de usuario. En realidad no será el nombre, simplemente extraemos la primera parte del email.</p>
 <p>Para añadir nuestros los dos estados lo haremos así:</p>
 <p><code>store/index.js</code>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span>
-  <span class="nx">token</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-  <span class="nx">user</span><span class="o">:</span> <span class="kc">null</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span><span class="w"></span>
+<span class="w">  </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>Justo debajo necesitamos crear un par de mutaciones para establecer sus valores:</p>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">mutations</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">saveUser</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">user</span><span class="p">){</span>
-    <span class="nx">state</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span>
-  <span class="p">},</span>
-  <span class="nx">saveToken</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">token</span><span class="p">){</span>
-    <span class="nx">state</span><span class="p">.</span><span class="nx">token</span> <span class="o">=</span> <span class="nx">token</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">mutations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">saveUser</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">state</span><span class="p">.</span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nx">saveToken</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">token</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">token</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Una vez lo tengamos podemos empezar a trabajar con nuestro Store. </p>
 <p>Justo en el momento del login almacenaremos los valores si recibimos correctamente el token de la API, también esconderemos la ventana modal del formulario de login:</p>
 <p><code>layouts/default.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">login</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/auth/login/&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">email</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span><span class="p">,</span>
-    <span class="nx">password</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">loginPassword</span>
-  <span class="p">})</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveToken&#39;</span><span class="p">,</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveUser&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">])</span>
-      <span class="c1">// Reiniciamos los campos</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">loginPassword</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-      <span class="c1">// Escondemos la modal</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">isLoginActive</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">})</span>
-  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span>
-  <span class="p">})</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">login</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/auth/login/&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">loginPassword</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveToken&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveUser&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">])</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Reiniciamos los campos</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">loginEmail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">loginPassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Escondemos la modal</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">isLoginActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span><span class="w"></span>
+<span class="w">  </span><span class="p">})</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div></p>
 <p>Con esto deberíamos ser capaces de identificarnos al hacer login, el problema es que no podemos saber si realmente estamos identificados o no. Bueno, sí que podemos, debugeando el valor de nuestros estados en medio del código o usando la extensión <a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=es">Vue Devtools</a> de Chrome, bastante recomendable para estos casos.</p>
 <p>Una forma interesante de acceder a los estados es usar un valor computado, esto evita algunos errores sobretodo usando apps universales con SSR.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">user</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">computed</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div>
 <p>Con esto podemos consultar el nombre del usuario autenticado en todo momento y alternar algunas opciones en el menú superior:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;!user&quot;</span><span class="p">&gt;</span>
@@ -1364,10 +1364,10 @@ resource.
 <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Ya sólo nos faltaría crear el método para hacer el Logout, cuyo propósito sería simplemente establecer los estados a null:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">logout</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveToken&#39;</span><span class="p">,</span> <span class="kc">null</span><span class="p">)</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveUser&#39;</span><span class="p">,</span> <span class="kc">null</span><span class="p">)</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">logout</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveToken&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveUser&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <h2 id="manejando-el-registro">Manejando el registro<a class="headerlink" href="#manejando-el-registro" title="Permanent link">&para;</a></h2>
 <p>Como podéis suponer el proceso de registro no será muy diferente al de autenticación. Necesitaremos pasar un email y dos contraseñas repetidas. Si es correcto directamente se devolverá el token y haremos el login.</p>
@@ -1417,11 +1417,11 @@ resource.
 <span class="p">&lt;/</span><span class="nt">b-modal</span><span class="p">&gt;</span>
 </code></pre></div></p>
 <p>Ésta hará uso de las siguientes variables:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">isRegisterActive</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><span class="nx">isRegisterActive</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 
-<span class="nx">registerEmail</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-<span class="nx">registerPassword1</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-<span class="nx">registerPassword2</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="nx">registerEmail</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">registerPassword1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">registerPassword2</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"></span>
 </code></pre></div>
 <p>Y se abrirá al hacer clic en el botón de registro del menú superior:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;!user&quot;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;isRegisterActive=true&quot;</span><span class="p">&gt;</span>
@@ -1429,28 +1429,28 @@ resource.
 <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Al completar el formulario llamaremos al método register():</p>
-<div class="highlight"><pre><span></span><code><span class="nx">register</span><span class="p">()</span> <span class="p">{</span>
- <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/auth/registration/&#39;</span><span class="p">,</span> <span class="p">{</span>
-   <span class="nx">email</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">registerEmail</span><span class="p">,</span>
-   <span class="nx">password1</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">registerPassword1</span><span class="p">,</span>
-   <span class="nx">password2</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">registerPassword2</span>
- <span class="p">})</span>
- <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-   <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span>
-     <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveToken&#39;</span><span class="p">,</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span>
-     <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveUser&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">registerEmail</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">])</span>
-     <span class="c1">// Reiniciamos los campos</span>
-     <span class="k">this</span><span class="p">.</span><span class="nx">registerEmail</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-     <span class="k">this</span><span class="p">.</span><span class="nx">registerPassword1</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-     <span class="k">this</span><span class="p">.</span><span class="nx">registerPassword2</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-     <span class="c1">// Escondemos la modal</span>
-     <span class="k">this</span><span class="p">.</span><span class="nx">isRegisterActive</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-   <span class="p">}</span>
- <span class="p">})</span>
- <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-   <span class="nx">alert</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span>
- <span class="p">})</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">register</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/auth/registration/&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">registerEmail</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="nx">password1</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">registerPassword1</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="nx">password2</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">registerPassword2</span><span class="w"></span>
+<span class="w"> </span><span class="p">})</span><span class="w"></span>
+<span class="w"> </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveToken&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;saveUser&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">registerEmail</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">])</span><span class="w"></span>
+<span class="w">     </span><span class="c1">// Reiniciamos los campos</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="p">.</span><span class="nx">registerEmail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="p">.</span><span class="nx">registerPassword1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="p">.</span><span class="nx">registerPassword2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">     </span><span class="c1">// Escondemos la modal</span><span class="w"></span>
+<span class="w">     </span><span class="k">this</span><span class="p">.</span><span class="nx">isRegisterActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">})</span><span class="w"></span>
+<span class="w"> </span><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nx">alert</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span><span class="w"></span>
+<span class="w"> </span><span class="p">})</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div>
 <p>Con esto ya debería funcionar el formulario y cuando el usuario se registre accederá automáticamente al establecerse su token y usuario en el store.</p>
 <p>En caso de que algo no funcione, como estamos mostrando los fallos que nos devuelve la API podremos verlo en un alert, cuyo idioma nos aparecerán automáticamente en el que tenga configurado Django, ¡es genial!</p>
@@ -1474,37 +1474,37 @@ resource.
 </code></pre></div></p>
 <p>Otra opción importante es que no se pueda visitar esta página si  no estamos autenticados. </p>
 <p>Para manejar la situación usaremos el fetch, un método que se ejecuta antes de montar la página y que está indicado para gestionar el store. En él podemos comprobar si hay un usuario y si no redireccionar a otra página:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">fetch</span> <span class="p">({</span> <span class="nx">store</span><span class="p">,</span> <span class="nx">redirect</span> <span class="p">})</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">store</span><span class="p">,</span><span class="w"> </span><span class="nx">redirect</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div>
 <p>Si intentamos visitar <em>/favoritas</em> sin iniciar sesión seremos redirigidos automáticamente a la portada.</p>
 <p>Por supuesto también tenemos que tener en cuenta que al cerrar la sesión se redireccione a la portada, así que modificaremos el logout() para hacerlo, esta vez usando el módulo <em>$router</em> de Nuxt.js:</p>
 <p><code>layouts/default.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">logout</span><span class="p">()</span> <span class="p">{</span>
-  <span class="p">...</span>
-  <span class="c1">// Redireccionamos a la portada al salir</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">replace</span><span class="p">({</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">})</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">logout</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Redireccionamos a la portada al salir</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">replace</span><span class="p">({</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="p">})</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <p>El siguiente paso será recuperar las pelis favoritas del usuario al cargar la página, para ello necesitaremos consultar la API pasando el token de autenticación:</p>
 <p><code>pages/favoritas.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">asyncData</span> <span class="p">({</span> <span class="nx">store</span><span class="p">,</span> <span class="nx">$axios</span> <span class="p">})</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/favoritas/&#39;</span><span class="p">,</span> <span class="p">{</span>
-      <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s1">&#39;Authorization&#39;</span><span class="o">:</span> <span class="sb">`Token </span><span class="si">${</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
-      <span class="p">}</span>
-    <span class="p">})</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;favoritas&#39;</span><span class="o">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
-      <span class="p">}</span>
-    <span class="p">})</span>
-  <span class="p">}</span>
-<span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nx">asyncData</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">store</span><span class="p">,</span><span class="w"> </span><span class="nx">$axios</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">$axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/favoritas/&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Token </span><span class="si">${</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;favoritas&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
 </code></pre></div></p>
 <p>Si inspeccionamos las peticiones veremos si se está llamando correctamente a la API.</p>
 <p>Sólo tenemos que copiar literalmente la visualización de películas de la portada a esta página y debería funcionar:</p>
@@ -1524,43 +1524,43 @@ resource.
 <p>Lo mejor de todo es que podemos editar el componente Card para modificar la estructura de todas las películas de la web, tanto de la portada como las de nuestro perfil.</p>
 <p>Por cierto, un detalle muy útil sería redireccionar al usuario a sus pelis favoritas cuando se identifique, es fácil usando el módulo <em>$router</em> de Nuxt.js: </p>
 <p><code>layouts/default.vue</code>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span>
-    <span class="p">...</span>
-    <span class="c1">// Redireccionamos a las pelis favoritas</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">replace</span><span class="p">({</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/favoritas&#39;</span> <span class="p">})</span>
-  <span class="p">}</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">key</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Redireccionamos a las pelis favoritas</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">replace</span><span class="p">({</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/favoritas&#39;</span><span class="w"> </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="manejando-las-favoritas-en-el-store">Manejando las favoritas en el store<a class="headerlink" href="#manejando-las-favoritas-en-el-store" title="Permanent link">&para;</a></h2>
 <p>Vamos a hacer que el usuario pueda marcar y desmarcar películas como favoritas, sin embargo antes necesitamos controlar en todo momento las películas que ya son favoritas, por ejemplo teniendo la lista en el store.</p>
 <p>No necesitamos guardar toda la información, nos bastaría con un array que contenga sólo los id:</p>
 <p><code>store/index.js</code>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span>
-  <span class="p">...</span>
-  <span class="nx">favIds</span><span class="o">:</span> <span class="p">[]</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="w">  </span><span class="nx">favIds</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>Para manejarlo podemos crear una mutación llamada <em>toggleFavorite</em> que añada o borre un id a la lista:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">toggleFavorite</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">id</span><span class="p">){</span>
-  <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">!==</span> <span class="o">-</span><span class="mf">1</span><span class="p">)</span> <span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="mf">1</span><span class="p">)</span>
-  <span class="k">else</span> <span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">toggleFavorite</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="p">){</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">index</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>El momento perfecto para añadirlas en el store es al acceder al visitar la página de pelis favoritas, pero sólo si el arregla está vacío será necesario agregarlas:</p>
 <p><code>pages/favoritas.js</code>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// Añadimos los ids de las pelis favoritas al store</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">fav</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;toggleFavorite&#39;</span><span class="p">,</span> <span class="nx">fav</span><span class="p">.</span><span class="nx">pelicula</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="s1">&#39;favoritas&#39;</span><span class="o">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span>
-  <span class="p">}</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Añadimos los ids de las pelis favoritas al store</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">favIds</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">fav</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;toggleFavorite&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">fav</span><span class="p">.</span><span class="nx">pelicula</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;favoritas&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div></p>
 <p>Comprobando el store con la extensión de Vue podemos ver cómo se ejecuta un commit cada vez que se añade una peli a favoritos.</p>
 <p>Con esto ya podemos controlar los cambios en la memoria de la aplicación, no nos costaría mucho añadir una clase activa al botón si la peli actual forma parte de la lista en el store:</p>
@@ -1576,33 +1576,33 @@ resource.
 <p>Vamos a hacer que funcione ese botón para manejar las películas favoritas.</p>
 <p>Lo primero será crear un método para manejar la petición autenticada y establecer o borrar el favorito:</p>
 <p><code>components/Peli.vue</code>
-<div class="highlight"><pre><span></span><code><span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">toggleFavorite</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// Si estamos identificados... que lo deberíamos</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$axios</span>
-        <span class="p">.</span><span class="nx">post</span><span class="p">(</span>
-          <span class="s2">&quot;/favorita/&quot;</span><span class="p">,</span>
-          <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">peli</span><span class="p">.</span><span class="nx">id</span> <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-              <span class="nx">Authorization</span><span class="o">:</span> <span class="sb">`Token </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
-            <span class="p">}</span>
-          <span class="p">}</span>
-        <span class="p">)</span>
-        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
-          <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&quot;toggleFavorite&quot;</span><span class="p">,</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-          <span class="p">}</span>
-        <span class="p">})</span>
-        <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span>
-          <span class="nx">alert</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
-        <span class="p">});</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Necesitas identificarte para marcar pelis favoritas&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">toggleFavorite</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Si estamos identificados... que lo deberíamos</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$axios</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;/favorita/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">peli</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="sb">`Token </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&quot;toggleFavorite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">})</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nx">alert</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Necesitas identificarte para marcar pelis favoritas&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span>
   <span class="na">class</span><span class="o">=</span><span class="s">&quot;button is-light card-footer-item&quot;</span>
@@ -1612,16 +1612,16 @@ resource.
 <span class="p">&gt;</span>
 </code></pre></div>
 <p>Sólo nos faltaría sumar o restar al número de favoritos dependiendo del resultado:</p>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&quot;toggleFavorite&quot;</span><span class="p">,</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">favorita</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">peli</span><span class="p">.</span><span class="nx">favoritos</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">peli</span><span class="p">.</span><span class="nx">favoritos</span> <span class="o">-=</span> <span class="mf">1</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s2">&quot;toggleFavorite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">favorita</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">peli</span><span class="p">.</span><span class="nx">favoritos</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">peli</span><span class="p">.</span><span class="nx">favoritos</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
 </code></pre></div>
 <p>Como podéis observar trabajar con componentes nos ahorra mucho trabajo.</p>
 <h2 id="implementando-un-plugin-de-alertas">Implementando un plugin de alertas<a class="headerlink" href="#implementando-un-plugin-de-alertas" title="Permanent link">&para;</a></h2>
@@ -1633,26 +1633,26 @@ resource.
 </code></pre></div>
 <p>Ahora vamos a crear un plugin para poder utilizarlo en nuestra app:</p>
 <p><code>plugins/toast.js</code>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="k">import</span> <span class="nx">Toasted</span> <span class="kr">from</span> <span class="s1">&#39;vue-toasted&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span><span class="w"></span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Toasted</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue-toasted&#39;</span><span class="p">;</span><span class="w"></span>
 
-<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;top-center&#39;</span><span class="p">,</span>
-  <span class="nx">duration</span><span class="o">:</span> <span class="mf">4000</span><span class="p">,</span>  <span class="c1">// milisegundos de vida</span>
-<span class="p">}</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;top-center&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="mf">4000</span><span class="p">,</span><span class="w">  </span><span class="c1">// milisegundos de vida</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Toasted</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Toasted</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></p>
 <p>Para activar el plugin, y dado que sólo funcionará en el lado del cliente lo haremos así en:</p>
 <p><code>nuxt.config.js</code>
-<div class="highlight"><pre><span></span><code><span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
-  <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;~/plugins/toast&#39;</span><span class="p">,</span> <span class="nx">ssr</span><span class="o">:</span> <span class="kc">false</span><span class="p">},</span>
-<span class="p">],</span>
+<div class="highlight"><pre><span></span><code><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;~/plugins/toast&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">ssr</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">},</span><span class="w"></span>
+<span class="p">],</span><span class="w"></span>
 </code></pre></div></p>
 <p>Ahora sólo tenemos que hacer uso de la librería sustituyendo los alerts de los errores, por ejemplo del registro y el login:</p>
 <p><code>layouts/default.vue</code>
-<div class="highlight"><pre><span></span><code><span class="c1">// alert(Object.values(error.response.data))</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">$toasted</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// alert(Object.values(error.response.data))</span><span class="w"></span>
+<span class="k">this</span><span class="p">.</span><span class="nx">$toasted</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span><span class="w"></span>
 </code></pre></div></p>
 <p>El resultado es simplemente genial.</p>
 <p>Hay varias opciones, para mostrar mensajes satisfactorios, errores y más, echad una ojeada a la <a href="https://github.com/shakee93/vue-toasted#usage">documentación de vue-toasted</a> para aprender más.</p>
