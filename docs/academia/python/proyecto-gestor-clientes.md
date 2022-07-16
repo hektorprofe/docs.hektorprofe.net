@@ -565,6 +565,8 @@ if __name__ == "__main__":
     app.mainloop()
 ```
 
+## GUI (2): Mixin para centrar widgets
+
 Antes de continuar vamos a tomarnos un momento para invertir en calidad de vida y es que cuando se abre una ventana de tkinter no se posiciona automáticamente en el centro de la pantalla, por lo menos en MAC OS, que es el sistema que utilizo actualmente.
 
 Os voy a enseñar una forma genial de solucionar este problema mediante el uso de un mixin. Un **mixin** es una clase que contiene una o varias definiciones. Por sí mismos los mixins no tienen utilidad, pero al heredarlos en otra clase conseguiremos su funcionalidad y eso es precisamente lo que vamos a hacer, un mixin para centrar un widget en la pantalla (en nuestro caso la ventana principal):
@@ -593,7 +595,7 @@ class MainWindow(Tk, CenterWidgetMixin): # edited
         self.center() # new
 ```
 
-## GUI (2): Widgets de la interfaz
+## GUI (3): Widget Treeview
 
 Mixins a parte, vamos a utilizar el método `build` para construir y configurar todos los widgets de la ventana principal. Si queremos comunicar alguno con otro método queramos comunicar con otros métodos lo haremos en atributos de clase.
 
@@ -676,7 +678,7 @@ Para terminar la interfaz base, necesitamos exportar como atributo de clase el `
 self.treeview = treeview
 ```
 
-## GUI (3): Diálogo de borrado
+## GUI (4): Diálogo de borrado
 
 Ahora hay que programar los botones de acción, empezaremos por el de **borrar** ya es el más sencillo y lo implementaremos sobre un cuadro de diálogo por defecto:
 
@@ -702,7 +704,7 @@ Lo llamamos al presionar el botón:
 Button(frame, text="Borrar", command=self.delete).grid(row=1, column=2)
 ```
 
-## GUI (4): Subventana de creación
+## GUI (5): Subventana de creación
 
 En cuanto a las opciones de `crear` y `modificar` son más complejas, tendremos que programar nuestras propias ventanas secundarias con sus campos de texto, botones y validaciones.
 
@@ -764,7 +766,7 @@ def create_client_window(self):
     CreateClientWindow(self)
 ```
 
-## GUI (5): Validación de campos
+## GUI (6): Validación en tiempo real
 
 La interfaz de la subventana de creación está lista, ahora vamos a configurar las validaciones en los campos antes de recuperar la información y añadir el nuevo cliente a la tabla:
 
@@ -791,6 +793,8 @@ def validate(self, event, index):
         else (valor.isalpha() and len(valor) >= 2 and len(valor) <= 30)
     event.widget.configure({"bg": "Green" if valido else "Red"})
 ```
+
+## GUI (7): Manejando el botón crear
 
 Para controlar las validaciones y activar o desactivar el botón de creación utilizaremos una lista con booleanos que cambiaremos en tiempo real en las validaciones:
 
@@ -835,7 +839,7 @@ def create_client(self):
 
 Listo, vamos a por la subventana de modificación.
 
-## GUI (6): Subventana de modificación
+## GUI (8): Subventana de modificación
 
 Para modificar un cliente vamos a reutilizar en gran parte lo que tenemos en la subventana de creación, la ventaja es que ahora no necesitamos aplicar validación al campo DNI porque éste no es editable, por lo que lo desactivaremos.
 
@@ -929,7 +933,7 @@ def update_client(self):
 
 Perfecto, lo tenemos todo preparado a falta de sincronizar los cambios de la tabla en el fichero.
 
-## GUI (7): Sincronización de datos
+## GUI (9): Sincronización de datos
 
 Para volcar los datos de la tabla al fichero CSV, solo tenemos que enlazar los momentos de creación, actualización y borrado a los métodos de la clase `Clientes` de nuestro módulo `database`. Es decir, a parte de modificar los cambios en la `treeview` visualmente, también haremos lo propio en la clase `db.Clientes`.
 
@@ -975,7 +979,7 @@ def update_client(self):
 
 Con esto hemos terminado la interfaz pero todavía nos falta un pequeño detalle...
 
-## Modo interfaz y modo terminal
+## GUI (10): Modo terminal e interfaz
 
 Cuando empezamos a crear la interfaz os comenté que no era necesario descartar el programa para la terminal, sino que podíamos implementar ambos.
 
