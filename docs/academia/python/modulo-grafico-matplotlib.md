@@ -486,8 +486,6 @@ fig = plt.figure(figsize=(3, 4), dpi=100)
 
 Una vez tengamos los gráficos podemos guardarlos abriéndolos con doble clic y usando el botón de exportar que soporta **png**, **svg** y **pdf**.
 
-Si os interesa añadir subgráficos en figuras también se puede hacerlo, os dejaré [un enlace con un notebook](https://nbviewer.jupyter.org/github/hcosta/curso-python-udemy/blob/master/Fase%205%20-%20Modulos%20externos/Tema%2018%20-%20Matplotlib/10%20-%20Subgraficos%20en%20figuras.ipynb) donde explico el proceso con un par de ejemplos.
-
 ## Tipos de gráficos
 
 Esta última lección es una galería donde veremos diferentes tipos de gráficos que nos ofrece **matplotlib**. En esencia se utilizan igual que el gráfico lineal así que no entraremos en detalles, pero igualmente os dejaré los códigos y enlaces a la documentación de cada tipo por si queréis aprender más.
