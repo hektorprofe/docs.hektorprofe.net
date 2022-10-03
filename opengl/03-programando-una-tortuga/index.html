@@ -456,6 +456,18 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../06-transformaciones-afines/" title="Transformaciones afines" class="md-nav__link">
+      Transformaciones afines
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -549,9 +561,9 @@ div.my-img{text-align:center;margin-top:20px}
                 
                 
                 <h1 id="programando-una-tortuga-con-opengl">Programando una tortuga con OpenGL<a class="headerlink" href="#programando-una-tortuga-con-opengl" title="Permanent link">&para;</a></h1>
-<p>Unas de las prácticas más interesantes que he tenido el placer de realizar con el fin de aprender OpenGL ha sido crear mi propia tortuga y dibujar fractales con ellas. </p>
+<p>Unas de las prácticas más interesantes que he tenido el placer de realizar con el fin de aprender OpenGL ha sido crear mi propia tortuga y dibujar fractales con ellas.</p>
 <p><strong>Turtle</strong> es un módulo de Python para dibujar primitivas que también se puede encontrar como entorno aislado en <a href="https://pythonturtle.org/">https://pythonturtle.org/</a>.</p>
-<p>La tortuga es esencialmente una pluma para dibujar sobre un lienzo mediante instrucciones. Implementa diferentes funciones para avanzar hacia adelante, rotar sobre si misma, cambiar el color, levantar la pluma, etc. </p>
+<p>La tortuga es esencialmente una pluma para dibujar sobre un lienzo mediante instrucciones. Implementa diferentes funciones para avanzar hacia adelante, rotar sobre si misma, cambiar el color, levantar la pluma, etc.</p>
 <p>Es una forma genial de aprender a programar visualmente y crear un programa que sirva para ello es una de las mejores prácticas posibles.</p>
 <h2 id="estructura-basica">Estructura básica<a class="headerlink" href="#estructura-basica" title="Permanent link">&para;</a></h2>
 <p>Vamos a empezar con un proyecto ya preparado con una ventana de <code>600x600</code> y mismo tamaño de espacio ortográfico pero de <code>-300</code> a <code>300</code> en cada eje, esto nos permitirá partir con la tortuga en el origen <code>(0,0)</code>:</p>
@@ -689,7 +701,7 @@ div.my-img{text-align:center;margin-top:20px}
 <p>Para rotar la tortuga en nuestro espacio lo que tenemos que hacer es aplicar la rotación sobre el eje <code>z</code>. Este eje representa la profundidad y apunta directamente hacia nosotros como saliendo de la pantalla, sería la flecha azul en la figura de la avisón.</p>
 <p>La rotación es una transformación lineal que explico en detalle en <a href="https://docs.hektorprofe.net/graficos-3d/05-transformaciones-lineales/#rotacion-de-vectores">mis apuntes sobre gráficos 3D</a>. Me limitaré a recuperar la fórmula, si queréis más detalles echad un vistazo a mis apuntes:</p>
 <p><img alt="" src="/cdn/opengl/img14.png" /></p>
-<p>Sería perfecto que la propia clase <code>Vector3</code> tenga un método para rotar sobre su eje <code>z</code> un cierto ángulo, que por cierto debe ser aplicado en radianos, por lo que realizaremos una conversión al ángulo con grados enviado: </p>
+<p>Sería perfecto que la propia clase <code>Vector3</code> tenga un método para rotar sobre su eje <code>z</code> un cierto ángulo, que por cierto debe ser aplicado en radianos, por lo que realizaremos una conversión al ángulo con grados enviado:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Vector3</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">RotateZ</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
         <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>  <span class="c1"># ángulo a radianos</span>
@@ -712,7 +724,7 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="n">Turtle</span><span class="o">.</span><span class="n">Forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="/cdn/opengl/img15.png" /></p>
-<p>Bien, pero ¿notáis algo extraño? Bueno, al rotar estamos haciéndolo en sentido antihorario. ¿Por qué sucede esto? OpenGL se implementa sobre la conocida regla de la mano izquierda, donde el eje <code>z</code> aumenta  hacia adentro de la pantalla (esto también lo explico más en detalle en <a href="https://docs.hektorprofe.net/graficos-3d/04-proyeccion-de-puntos/#regla-de-la-mano">mis apuntes</a> sobre gráficos 3D):</p>
+<p>Bien, pero ¿notáis algo extraño? Bueno, al rotar estamos haciéndolo en sentido antihorario. ¿Por qué sucede esto? OpenGL se implementa sobre la conocida regla de la mano izquierda, donde el eje <code>z</code> aumenta hacia adentro de la pantalla (esto también lo explico más en detalle en <a href="https://docs.hektorprofe.net/graficos-3d/04-proyeccion-de-puntos/#regla-de-la-mano">mis apuntes</a> sobre gráficos 3D):</p>
 <p><img alt="" src="/cdn/opengl/img16.png" /></p>
 <p>En cualquier caso si queremos obtener el efecto contrario para rotar en sentido horario tendremos que negar el ángulo de rotación, tan sencillo como hacer:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
@@ -1030,7 +1042,7 @@ Resultado:  F[+F]F[+F[+F]F]F[+F]F[+F[+F]F[+F[+F]F]F[+F]F]F[+F]F[+F[+F]F]F[+F]F
 <p><img alt="" src="/cdn/opengl/anim18.gif" /></p>
 <p>Por ahora dejamos los fractales, si queréis más información sobre el triángulo de Sierpiński podéis la tenéis en la <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle">Wikipedia</a>.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 12 de Junio de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 3 de Octubre de 2022</i></small></p>
                 
                   
                 

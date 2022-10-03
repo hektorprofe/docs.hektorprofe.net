@@ -456,6 +456,18 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../06-transformaciones-afines/" title="Transformaciones afines" class="md-nav__link">
+      Transformaciones afines
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -683,7 +695,7 @@ div.my-img{text-align:center;margin-top:20px}
 <p><img alt="" src="/cdn/opengl/img01.png" /></p>
 <h2 id="conceptos-basicos-de-opengl">Conceptos básicos de OpenGL<a class="headerlink" href="#conceptos-basicos-de-opengl" title="Permanent link">&para;</a></h2>
 <p>OpenGL es una API gráfica para utilizar la GPU con el objetivo de realizar cálculos de renderizado en tiempo real y devolverlos al buffer de la memoria de vídeo de la máquina.</p>
-<p>Las llamadas ocurren a bajo nivel y se pueden utilizar para programar sistemas gráficos y motores de videojuegos. </p>
+<p>Las llamadas ocurren a bajo nivel y se pueden utilizar para programar sistemas gráficos y motores de videojuegos.</p>
 <p>Si comparamos el código para dibujar un simple rectángulo con PyGame:</p>
 <div class="highlight"><pre><span></span><code><span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">blue</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 </code></pre></div>
@@ -761,9 +773,9 @@ div.my-img{text-align:center;margin-top:20px}
 <p><img alt="" src="/cdn/opengl/img02.png" /></p>
 <p>Puntos importantes a comentar, antes de iniciar el bucle creamos una configuración del espacio de dibujo:</p>
 <ul>
-<li>Establecemos el modo matriz a <code>GL_PROJECTION</code>, eso hará que las posteriores operaciones de matriz se apliquen como proyecciones en el espacio de imagen (2D). </li>
-<li>Establecemos la matriz de identidad, que pese a no ser necesario es una buena práctica. Recordemos que las transformaciones se realizan multiplicando matrices, establecer inicialmente la matriz de identidad equivale a establecer el número <code>1</code>. </li>
-<li>Finalmente configuramos el espacio ortográfico 2D con un tamaño de 600x400 píxeles. </li>
+<li>Establecemos el modo matriz a <code>GL_PROJECTION</code>, eso hará que las posteriores operaciones de matriz se apliquen como proyecciones en el espacio de imagen (2D).</li>
+<li>Establecemos la matriz de identidad, que pese a no ser necesario es una buena práctica. Recordemos que las transformaciones se realizan multiplicando matrices, establecer inicialmente la matriz de identidad equivale a establecer el número <code>1</code>.</li>
+<li>Finalmente configuramos el espacio ortográfico 2D con un tamaño de 600x400 píxeles.</li>
 </ul>
 <p>Durante el bucle gráfico, en cada iteración:</p>
 <ul>
@@ -922,7 +934,7 @@ div.my-img{text-align:center;margin-top:20px}
 <p><img alt="" src="/cdn/opengl/img06.png" /></p>
 <p>Como vemos OpenGL nos permite adaptar el eje de coordenadas de la forma como mejor nos convenga.</p>
 <hr />
-<p><small class="edited"><i>Última edición: 12 de Junio de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 3 de Octubre de 2022</i></small></p>
                 
                   
                 

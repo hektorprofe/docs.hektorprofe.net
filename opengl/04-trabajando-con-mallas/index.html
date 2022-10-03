@@ -449,6 +449,18 @@ div.my-img{text-align:center;margin-top:20px}
   </li>
 
         
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../06-transformaciones-afines/" title="Transformaciones afines" class="md-nav__link">
+      Transformaciones afines
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -537,7 +549,7 @@ div.my-img{text-align:center;margin-top:20px}
                 <h1 id="trabajando-con-mallas-con-opengl">Trabajando con mallas con OpenGL<a class="headerlink" href="#trabajando-con-mallas-con-opengl" title="Permanent link">&para;</a></h1>
 <p>Las mallas son conjuntos de primitivas (triángulos o quads) conocidos como caras que permiten modelar formas en el espacio. Cuantas más caras tenga el modelo más nivel de detalle representará:</p>
 <p><img alt="" src="/cdn/opengl/img32.png" /></p>
-<p>Con el objetivo de optimizar el espacio, como muchas caras comparten vértices, todos estos vértices se definen en un array conocido como <strong>Vertex Array</strong>. A partir de los índices de esos vértices se crea otro array, "Triangle Array** o <strong>Quad Array</strong> dependiendo del tipo de cara, que enumera conjuntos de <code>3</code> o <code>4</code> vértices para reconstruir las primitivas.</p>
+<p>Con el objetivo de optimizar el espacio, como muchas caras comparten vértices, todos estos vértices se definen en un array conocido como <strong>Vertex Array</strong>. A partir de los índices de esos vértices se crea otro array, "Triangle Array** o **Quad Array** dependiendo del tipo de cara, que enumera conjuntos de <code>3</code> o <code>4</code> vértices para reconstruir las primitivas.</p>
 <p>Cada vértice y tambien las propias caras en su centro, tienen un vector llamado <strong>normal</strong>. Este vector se encuentra normalizado en un rango de <code>-1</code> a <code>1</code> y representa la dirección hacia donde "miran" los vértices y la cara:</p>
 <p><img alt="" src="/cdn/opengl/img33.png" /></p>
 <p>La normal es muy importante porque permite <a href="https://docs.hektorprofe.net/graficos-3d/11-back-face-culling/">descartar el renderizado</a> de las caras no visibles por la cámara (<em>back-face culling</em>), así como añadir efectos de <a href="https://docs.hektorprofe.net/graficos-3d/18-luz-y-sombreado/">luz y sombra</a> a las texturas en función del ángulo formado por la normal y la dirección del foco de luz.</p>
@@ -652,7 +664,7 @@ div.my-img{text-align:center;margin-top:20px}
         <span class="n">glRotatef</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="/cdn/opengl/img37.png" /></p>
-<p>Al aplicar la proyección en perspectiva inevitablemente tendremos en cuenta la profundidad de los elementos. Como OpenGL está dibujando el cubo en el origen del espacio <code>(0,0,0)</code> lo que estamos viendo es solo su cara trasera después de rotarlo ligeramente. </p>
+<p>Al aplicar la proyección en perspectiva inevitablemente tendremos en cuenta la profundidad de los elementos. Como OpenGL está dibujando el cubo en el origen del espacio <code>(0,0,0)</code> lo que estamos viendo es solo su cara trasera después de rotarlo ligeramente.</p>
 <p>Si <strong>después de rotarlo</strong> trasladamos los vértices al fondo restando algo de profundidad y los centramos un poco deberíamos percibirlo proyectado con perspectiva:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">PrepareRender</span><span class="p">():</span>
@@ -727,7 +739,7 @@ div.my-img{text-align:center;margin-top:20px}
         <span class="bp">self</span><span class="o">.</span><span class="n">cube</span><span class="o">.</span><span class="n">Debug</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="" src="/cdn/opengl/anim21.gif" /></p>
-<p>Fijaros que se dibujan también los vértices traseros, eso es porque no hay un buffer de profundidad activado por defecto. Podemos activar el de pruebas mediante <code>glEnable(GL_DEPTH_TEST)</code>: </p>
+<p>Fijaros que se dibujan también los vértices traseros, eso es porque no hay un buffer de profundidad activado por defecto. Podemos activar el de pruebas mediante <code>glEnable(GL_DEPTH_TEST)</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GLUtils</span><span class="p">:</span>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">InitRender</span><span class="p">():</span>
@@ -811,7 +823,7 @@ div.my-img{text-align:center;margin-top:20px}
     <span class="n">app</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="" src="/cdn/opengl/anim22.gif" /></p>
-<p>Vamos a probar otros modelos, quizá tenemos que hacer algunos ajustes a la traslación. </p>
+<p>Vamos a probar otros modelos, quizá tenemos que hacer algunos ajustes a la traslación.</p>
 <p>Por ejemplo el <code>donut.obj</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GLUtils</span><span class="p">:</span>
     <span class="nd">@staticmethod</span>
@@ -864,7 +876,7 @@ div.my-img{text-align:center;margin-top:20px}
 </code></pre></div>
 <p><img alt="" src="/cdn/opengl/anim24.gif" /></p>
 <hr />
-<p><small class="edited"><i>Última edición: 12 de Junio de 2022</i></small></p>
+<p><small class="edited"><i>Última edición: 3 de Octubre de 2022</i></small></p>
                 
                   
                 
