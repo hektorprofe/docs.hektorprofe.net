@@ -194,7 +194,6 @@
     <script>
         function ready(callback){ if (document.readyState!='loading') callback(); else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback); else document.attachEvent('onreadystatechange', function(){if (document.readyState=='complete') callback();});}
         function slugify(text){return text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '')}
-        ga("create", "UA-124845547-1", "auto"); ga("send", "pageview");
         var types = {'txt':'/assets/images/text.png', 'vid':'/assets/images/video.png', 'mix':'/assets/images/mixed.png'}
         var database = [
           ['Apuntes', 'txt', 'Python', 'OpenGL', 'Renderizado con shaders', '/opengl/07-renderizado-con-shaders/', '10/2022'],
